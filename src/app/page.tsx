@@ -1,12 +1,13 @@
 import { lerCatalogo } from '@/lib/catalogo';
-import { formatarData } from '@/lib/produtos';
+import { formatarData, produtosVisiveis } from '@/lib/produtos';
 import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
 
 export const revalidate = 3600; // o preço envelhece: revalida de hora em hora
 
 export default function Home() {
-  const { produtos, metadata } = lerCatalogo();
+  const { produtos: todos, metadata } = lerCatalogo();
+  const produtos = produtosVisiveis(todos);
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">

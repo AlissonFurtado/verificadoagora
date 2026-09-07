@@ -51,7 +51,7 @@ aplicadas:
 |---|---|
 | Router | **App Router** (`src/app/`), como nos outros projetos. Migrado enquanto só existia uma página |
 | Chaves do JSON | **Sem acento** (`preco_atual`, `avaliacao`, `descricao`) |
-| Deploy | **Vercel pela integração com o GitHub** — `git push` na `main` publica. A Action `.github/workflows/deploy.yml` foi removida: era redundante e pedia três segredos que não existem |
+| Deploy | **Vercel pela integração com o GitHub** — `git push` na `main` publica. A Action `deploy.yml` foi removida: era redundante e pedia três segredos que não existem. A Action que sobrou (`conferir-precos.yml`) não publica site nenhum, só mexe no catálogo |
 | Backend | **Não tem, e não vai ter.** O próprio padrão diz que landing de afiliados não precisa de Express nem Postgres |
 
 Estrutura:
@@ -64,9 +64,12 @@ src/app/
   vitrine.tsx           ← 'use client': só o filtro de categoria
   icon.tsx              ← favicon gerado (next/og, runtime edge)
   opengraph-image.tsx   ← capa do link gerada (next/og, runtime edge)
+  oauth/meli/page.tsx   ← retorno do login do Meli: só mostra o code na tela
 src/lib/
   produtos.ts           ← tipos e formatação. Sem fs: roda no cliente também
   catalogo.ts           ← lerCatalogo(), único lugar que toca o disco
+  meli.ts               ← API do Mercado Livre. Único lugar que fala com o Meli
+scripts/                ← o robô de preços (TypeScript, roda com tsx)
 data/produtos.json
 ```
 
@@ -101,7 +104,8 @@ produto** — não existe painel, não existe CMS. A página lê do disco no bui
 Cada produto: `id` (número, único e estável), `nome`, `categoria`,
 `preco_original`, `preco_atual`, `desconto_percentual` (inteiro),
 `preco_no_pix` (booleano), `avaliacao`, `link_afiliado`, `cupom`, `descricao`,
-`imagem`, `plataforma`, `data_adicionado`, `verificado_em`.
+`imagem`, `plataforma`, `meli_id`, `disponivel`, `data_adicionado`,
+`verificado_em`.
 
 **As chaves são sem acento** — foram normalizadas em 07/09/2026, quando eram
 5 produtos. É JSON legal escrever `preço_atual`, mas obriga a carregar acento
@@ -121,6 +125,11 @@ Regras do arquivo:
   do lado. Sem isso a página promete o que a loja não cumpre no cartão.
 - `verificado_em` é a data em que **alguém abriu o link e olhou o preço**, e
   aparece no card. Não é a data em que o arquivo foi mexido.
+- `meli_id` é o que o robô usa pra conferir: `MLB24076624` (produto de
+  catálogo, o da URL `/p/`) ou `MLB-7547729432` (anúncio). Vazio significa
+  "ninguém confere este preço" — e o robô diz isso em voz alta a cada rodada.
+- `disponivel: false` tira o produto da página sem apagar nada. É o robô que
+  liga e desliga; mexer na mão só se souber por quê.
 - `plataforma` em kebab-case (`mercado-livre`) — vira rótulo no botão.
 - Datas em ISO (`2026-08-31`), e `metadata.ultima_atualizacao` acompanha.
 
@@ -137,6 +146,47 @@ adicionar produto, **abra o link e confira onde ele cai** antes de commitar.
 
 O lado bom: a `og:image` dessas páginas do Meli é a foto do produto em
 destaque, e foi de lá que saíram as imagens que estão no JSON.
+
+## O robô de preços
+
+Todo dia às 8h de Brasília, `.github/workflows/conferir-precos.yml` reconfere
+cada produto na API do Mercado Livre e reescreve o `produtos.json`. Mudança
+normal entra direto na `main` e a Vercel publica; mudança grande vira PR.
+
+Rodar na mão: `npm run precos:conferir`.
+
+**Por que API e não ler a página.** Pedir a página do produto por HTTP puro
+devolve a tela de *suspicious traffic* — inclusive de IP residencial. Num
+runner do GitHub, com IP de datacenter, é certeza. A API responde de qualquer
+lugar, desde que com token. Não tente voltar pra raspagem sem lembrar disso.
+
+**O refresh_token do Meli é de uso único.** Cada renovação devolve um novo e
+mata o anterior. Por isso `scripts/acesso.ts` guarda o novo **antes de
+qualquer outra coisa**, e o passo que reescreve o segredo do GitHub roda com
+`if: always()`. Se essa ordem se perder, um erro no meio da rodada deixa a
+automação sem como voltar e alguém tem que refazer a autorização na mão.
+
+As travas, que são o motivo de o robô poder commitar sozinho:
+
+| Situação | O que ele faz |
+|---|---|
+| Preço mudou até 15% | Aplica e commita na `main` |
+| Mudou mais que 15% | Aplica, mas **em PR** — preço que pula 30% costuma ser outra coisa |
+| Produto pausado ou sem estoque | `disponivel: false` e some da página |
+| 404 no Meli | Mesma coisa: sumiu, então sai do ar |
+| API instável ou erro qualquer | **Não mexe em nada** e a Action fica vermelha |
+| Produto sem `meli_id` | Não confere, e avisa no relatório |
+
+O robô nunca marca `preco_no_pix`: a API devolve preço de tabela. Preço de Pix
+só entra quando uma pessoa abriu a página e viu.
+
+Ele também não mexe em `nome`, `descricao`, `categoria` nem `avaliacao` — isso
+é curadoria, e curadoria é do Alisson.
+
+Segredos que a Action precisa (Settings > Secrets and variables > Actions):
+`ML_CLIENT_ID`, `ML_CLIENT_SECRET`, `ML_REFRESH_TOKEN` e um `GH_PAT` com
+permissão de escrever segredos — sem o PAT o token não rotaciona e o robô
+funciona exatamente uma vez.
 
 ## Dinheiro
 
@@ -164,8 +214,9 @@ dele.
 ## Antes de entregar
 
 ```bash
-npx tsc --noEmit
+npm run verificar    # tsc --noEmit, cobre a página e os scripts do robô
 ```
 
 `npm run build` só quando o assunto for o próprio build — é lento e não diz
-nada que o `tsc` não diga.
+nada que o `tsc` não diga. As exceções são o `next/og` e a página nova, que
+só quebram no build.

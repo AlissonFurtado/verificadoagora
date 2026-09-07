@@ -1,0 +1,83 @@
+name: Conferir preços
+
+# O preço envelhece sozinho: todo dia às 8h de Brasília o robô reconfere no
+# Mercado Livre. Mudança normal entra direto na main e a Vercel publica.
+# Mudança grande vira PR, porque preço que pula 30% costuma ser outra coisa.
+
+on:
+  schedule:
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  conferir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Conferir preços no Mercado Livre
+        id: conferir
+        env:
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
+        run: npm run precos:conferir
+
+      # Antes de qualquer outra coisa: o refresh_token do Meli é de uso único e
+      # o de ontem já morreu. Se este passo não rodar, a próxima rodada falha e
+      # alguém tem que refazer a autorização na mão. Por isso `always()`.
+      - name: Guardar o refresh_token novo
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ ! -f .meli-refresh ]; then
+            echo "Sem refresh_token novo — a renovação nem chegou a acontecer."
+            exit 0
+          fi
+          gh secret set ML_REFRESH_TOKEN --body "$(cat .meli-refresh)"
+          rm .meli-refresh
+          echo "Segredo ML_REFRESH_TOKEN atualizado."
+
+      - name: Publicar o que mudou
+        if: steps.conferir.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet data/produtos.json; then
+            echo "Nenhum preço mudou hoje."
+            exit 0
+          fi
+
+          node scripts/corpo-do-pr.mjs > corpo.md
+          suspeitos=$(node -p "require('./relatorio.json').suspeitos.length")
+
+          git config user.name  "robô de preços"
+          git config user.email "contato@afdesousa.com.br"
+          git add data/produtos.json
+
+          if [ "$suspeitos" = "0" ]; then
+            git commit -F corpo.md
+            git push origin main
+            echo "Preços atualizados direto na main."
+          else
+            ramo="robo/precos-$(date +%Y-%m-%d)"
+            git checkout -b "$ramo"
+            git commit -F corpo.md
+            git push -f origin "$ramo"
+            gh pr create --base main --head "$ramo" \
+              --title "Preços de $(date +%d/%m): $suspeitos produto(s) com variação grande" \
+              --body-file corpo.md
+            echo "Variação grande: abri PR em vez de publicar."
+          fi
