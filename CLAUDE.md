@@ -50,6 +50,28 @@ imagem. Aconteceu, e só dava pra ver em produção.
 Quando o domínio for conectado, **avise o Alisson**: é o sinal pra sessão do
 Vidraceiro tirar a institucional de lá.
 
+### Onde a troca parou (07/09/2026)
+
+O domínio **já está adicionado ao projeto na Vercel**, com "Invalid
+Configuration" — o esperado, porque o DNS continua na Hostinger e nada saiu
+do ar. Falta só trocar o DNS.
+
+O endereço oficial é o **apex, sem www**: é o que vai na bio do Instagram.
+
+Registro que a Vercel pede: `A` · nome `@` · valor `216.198.79.1`.
+
+⚠️ **Não basta trocar o A.** O apex tem hoje registros **AAAA (IPv6)**
+apontando pra Hostinger, e navegador com IPv6 prefere o AAAA — a troca
+pareceria não ter funcionado, de forma intermitente e só pra algumas pessoas.
+Os AAAA têm que sair junto.
+
+O `www` tem registros próprios, diferentes dos do apex. Depois da troca ele
+continuaria servindo a institucional se ninguém mexer.
+
+**E a ordem não mudou:** a institucional só sai daqui quando estiver no ar no
+`afdesousa.com.br`. Em 07/09/2026 ela ainda não estava — o `afdesousa.com.br`
+servia "Página padrão" da Hostinger. Quem publica lá é a sessão do Vidraceiro.
+
 ## Stack, e onde ela diverge do padrão
 
 Em 07/09/2026 as três divergências abertas foram decididas e já estão
