@@ -66,8 +66,10 @@ jobs:
 
           git config user.name  "robô de preços"
           git config user.email "contato@afdesousa.com.br"
-          if ! git diff --quiet data/candidatos.json; then
-            git add data/candidatos.json
+          # git diff não enxerga arquivo novo, e na primeira rodada o
+          # candidatos.json é exatamente isso. Compara depois do add.
+          git add data/candidatos.json
+          if ! git diff --cached --quiet data/candidatos.json; then
             git commit -m "Fila da semana: $total candidato(s) garimpados"
             git push origin main
           fi
