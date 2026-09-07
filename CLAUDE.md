@@ -6,7 +6,8 @@ da bio: a página existe pra transformar aquele scroll em clique no produto.
 
 - Next.js 14 (App Router) + TypeScript + Tailwind, na **raiz do repo**
 - Dados em `data/produtos.json` — sem banco, sem API, sem backend
-- Deploy: **nenhum ainda.** Veja "O nó do domínio"
+- No ar em **verificadoagora.vercel.app** — `git push` na `main` publica
+- O domínio próprio ainda **não** está conectado. Veja "O nó do domínio"
 
 ## Quem faz
 
@@ -31,16 +32,23 @@ inverte:
 **A institucional só sai do ar quando esta landing estiver pronta pra entrar
 no lugar.** Nada de domínio vazio no meio do caminho.
 
-Ou seja: este repo é o gargalo da arrumação inteira. Enquanto a landing não
-existir, **este projeto não tem endereço público** — e nada aqui deve assumir
-que tem. É por isso que o `metadataBase` do `layout.tsx` sai de
-`NEXT_PUBLIC_SITE_URL` com `localhost` de reserva, em vez de ter o domínio
-escrito no código.
+A landing já está publicada em `verificadoagora.vercel.app` desde 01/09/2026 —
+a Vercel constrói a cada push na `main`. O que falta é só o último passo:
+conectar o `verificadoagora.com.br` ao projeto, e é aí que a institucional
+precisa sair.
 
-Quando a landing estiver publicada, **avise o Alisson**. É o sinal pra sessão
-do Vidraceiro tirar a institucional daqui e este projeto assumir o endereço.
-Na prática: publicar na Vercel primeiro, conferir o site no domínio provisório
-da Vercel, e só então apontar o DNS.
+**Nenhum endereço fica escrito no código.** O `metadataBase` do `layout.tsx`
+sai de `VERCEL_PROJECT_PRODUCTION_URL`, que a Vercel preenche com o domínio do
+projeto — e que passa a ser o domínio próprio sozinho quando ele for
+conectado.
+
+⚠️ **Não use `VERCEL_URL` pra isso.** Ela é o endereço daquele deploy
+específico, que a Vercel protege com login e responde 302. Com ela, a capa do
+link apontava pra uma URL protegida e o link colado no Instagram aparecia sem
+imagem. Aconteceu, e só dava pra ver em produção.
+
+Quando o domínio for conectado, **avise o Alisson**: é o sinal pra sessão do
+Vidraceiro tirar a institucional de lá.
 
 ## Stack, e onde ela diverge do padrão
 

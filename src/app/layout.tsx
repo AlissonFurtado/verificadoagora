@@ -1,9 +1,20 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const enderecoDoSite =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+/**
+ * De onde saem as URLs absolutas das metatags.
+ *
+ * Tem que ser `VERCEL_PROJECT_PRODUCTION_URL` (o domínio do projeto) e não
+ * `VERCEL_URL` (o endereço daquele deploy específico). Com VERCEL_URL a capa
+ * do link apontava pra uma URL de deploy, que a Vercel protege com login e
+ * responde 302 — resultado: link colado no Instagram aparecia sem imagem.
+ *
+ * Como é o domínio do projeto, ele vira `verificadoagora.com.br` sozinho no
+ * dia em que o domínio for conectado. Nada pra lembrar de trocar.
+ */
+const enderecoDoSite = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : 'http://localhost:3000';
 
 const titulo = 'Verificado Agora — achadinhos de tech';
 const descricao =
