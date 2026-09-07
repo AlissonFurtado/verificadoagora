@@ -1,0 +1,90 @@
+{
+  "garimpado_em": "2026-09-07",
+  "total": 7,
+  "candidatos": [
+    {
+      "meli_id": "MLB40556904",
+      "tipo": "produto",
+      "nome": "Fone de Ouvido Bluetooth 5.4 soundcore P30i da Anker, Cancelamento de Ruído Adaptativo, Graves Poderosos, 45H de Reprodução, Estojo 2-em-1 com Suporte para Celular, IP54, Fone sem fio TWS, Branco",
+      "categoria": "Eletrônicos, Áudio e Vídeo",
+      "preco": 196.6,
+      "preco_original": 389,
+      "desconto_percentual": 49,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_944817-MLA99499902540_112025-F.jpg",
+      "url_do_produto": "",
+      "garimpado_em": "2026-09-07"
+    },
+    {
+      "meli_id": "MLB38302175",
+      "tipo": "produto",
+      "nome": "Fone de Ouvido Soundcore P20i Bluetooth 5.3 Grave Potente Drivers 10mm 30h Bateria Carregamento Rápido App Personalização De Som Via App IPX5 2 Mics IA para Chamadas Claras Case Compacto Cor Azul",
+      "categoria": "Eletrônicos, Áudio e Vídeo",
+      "preco": 155.97,
+      "preco_original": 299,
+      "desconto_percentual": 47,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_709113-MLA99494499900_112025-F.jpg",
+      "url_do_produto": "",
+      "garimpado_em": "2026-09-07"
+    },
+    {
+      "meli_id": "MLB63036814",
+      "tipo": "produto",
+      "nome": "Smart Tv 32 Philco P32vik Roku Led Dolby Audio Hdr Wi-fi 110/220v",
+      "categoria": "Eletrônicos, Áudio e Vídeo",
+      "preco": 998.91,
+      "preco_original": 1499,
+      "desconto_percentual": 33,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_691057-MLA100479527690_122025-F.jpg",
+      "url_do_produto": "",
+      "garimpado_em": "2026-09-07"
+    },
+    {
+      "meli_id": "MLB52039200",
+      "tipo": "produto",
+      "nome": "Samsung Galaxy Buds Core branco",
+      "categoria": "Eletrônicos, Áudio e Vídeo",
+      "preco": 243.66,
+      "preco_original": 349,
+      "desconto_percentual": 30,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_967872-MLA87279987383_072025-F.jpg",
+      "url_do_produto": "",
+      "garimpado_em": "2026-09-07"
+    },
+    {
+      "meli_id": "MLB50722875",
+      "tipo": "produto",
+      "nome": "Suporte Articulado Para Monitor 13 a 32 Pistão a Gás Ajustável Zinnia Nimbo 110 Preto",
+      "categoria": "Eletrônicos, Áudio e Vídeo",
+      "preco": 254.1,
+      "preco_original": 338.81,
+      "desconto_percentual": 25,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_696266-MLA97205822349_112025-F.jpg",
+      "url_do_produto": "",
+      "garimpado_em": "2026-09-07"
+    },
+    {
+      "meli_id": "MLB8923630",
+      "tipo": "produto",
+      "nome": "Aspirador De Pó e Água Wap Gtw 10 Compacto 1400w 10 Litros Amarelo",
+      "categoria": "Eletrodomésticos",
+      "preco": 259.9,
+      "preco_original": 399,
+      "desconto_percentual": 34,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_944970-MLA99949674111_112025-F.jpg",
+      "url_do_produto": "",
+      "garimpado_em": "2026-09-07"
+    },
+    {
+      "meli_id": "MLB6339793",
+      "tipo": "produto",
+      "nome": "Aspirador de Pó e Água Electrolux 1400W 12 Litros 5,9 raio de ação Compacto Potente Função Sopro protetor térmico AWD01",
+      "categoria": "Eletrodomésticos",
+      "preco": 199,
+      "preco_original": 269.99,
+      "desconto_percentual": 26,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_977365-MLA112063523985_052026-F.jpg",
+      "url_do_produto": "",
+      "garimpado_em": "2026-09-07"
+    }
+  ]
+}
