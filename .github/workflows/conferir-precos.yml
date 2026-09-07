@@ -13,6 +13,12 @@ permissions:
   contents: write
   pull-requests: write
 
+# O refresh_token do Meli é de uso único: dois workflows rodando junto fazem
+# um invalidar o token do outro. A fila serializa os dois.
+concurrency:
+  group: meli-token
+  cancel-in-progress: false
+
 jobs:
   conferir:
     runs-on: ubuntu-latest

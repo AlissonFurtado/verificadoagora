@@ -42,7 +42,7 @@ class ErroDoMeli extends Error {
   }
 }
 
-async function pedir(rota: string, accessToken: string): Promise<unknown> {
+export async function pedir(rota: string, accessToken: string): Promise<unknown> {
   const resposta = await fetch(`${API}${rota}`, {
     headers: { Authorization: `Bearer ${accessToken}`, accept: 'application/json' },
   });
@@ -83,9 +83,18 @@ export async function renovarAcesso(cred: Credenciais): Promise<TokensRenovados>
   return { accessToken: dados.access_token, novoRefreshToken: dados.refresh_token };
 }
 
-/** `MLB24076624` é produto de catálogo; `MLB-7547729432` ou `MLB7547729432` é anúncio. */
+export type TipoDeId = 'produto' | 'anuncio';
+
+/**
+ * Chute quando ninguém disse o tipo: id de catálogo é curto (`MLB24076624`),
+ * anúncio é longo ou vem com hífen (`MLB-7547729432`).
+ *
+ * É heurística mesmo — os dois são "MLB" + dígitos e as faixas se aproximam
+ * com o tempo. Quem souber o tipo (o garimpo sabe, vem do /highlights) deve
+ * passar explicitamente em vez de confiar nisto.
+ */
 function ehCatalogo(meliId: string): boolean {
-  return !meliId.includes('-') && /^MLB\d{1,10}$/.test(meliId);
+  return !meliId.includes('-') && /^MLB\d{1,9}$/.test(meliId);
 }
 
 function comoTexto(valor: unknown): string {
@@ -137,8 +146,13 @@ function normalizar(
   };
 }
 
-export async function buscarProduto(meliId: string, accessToken: string): Promise<DadosDoProduto> {
-  if (!ehCatalogo(meliId)) {
+export async function buscarProduto(
+  meliId: string,
+  accessToken: string,
+  tipo?: TipoDeId,
+): Promise<DadosDoProduto> {
+  const catalogo = tipo ? tipo === 'produto' : ehCatalogo(meliId);
+  if (!catalogo) {
     const anuncio = (await pedir(`/items/${meliId.replace('-', '')}`, accessToken)) as Record<
       string,
       unknown

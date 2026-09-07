@@ -1,0 +1,76 @@
+name: Garimpar a fila da semana
+
+# Segunda de manhã o robô olha os mais vendidos do Meli e monta a fila.
+# Ele não publica nada: candidato só vira produto depois que alguém gera o
+# link de afiliado, que é o passo que o Meli não expõe por API.
+
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+# O refresh_token do Meli é de uso único. Se este e o robô de preços rodarem
+# ao mesmo tempo, um invalida o token do outro — daí os dois na mesma fila.
+concurrency:
+  group: meli-token
+  cancel-in-progress: false
+
+jobs:
+  garimpar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Garimpar os mais vendidos
+        id: garimpo
+        env:
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
+          ML_REFRESH_TOKEN: ${{ secrets.ML_REFRESH_TOKEN }}
+        run: npm run garimpar
+
+      - name: Guardar o refresh_token novo
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ ! -f .meli-refresh ]; then
+            echo "Sem refresh_token novo — a renovação nem chegou a acontecer."
+            exit 0
+          fi
+          gh secret set ML_REFRESH_TOKEN --body "$(cat .meli-refresh)"
+          rm .meli-refresh
+          echo "Segredo ML_REFRESH_TOKEN atualizado."
+
+      - name: Guardar a fila e avisar
+        if: steps.garimpo.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          total=$(node -p "require('./data/candidatos.json').total")
+          if [ "$total" = "0" ]; then
+            echo "Nenhum produto passou no filtro esta semana."
+            exit 0
+          fi
+
+          git config user.name  "robô de preços"
+          git config user.email "contato@afdesousa.com.br"
+          if ! git diff --quiet data/candidatos.json; then
+            git add data/candidatos.json
+            git commit -m "Fila da semana: $total candidato(s) garimpados"
+            git push origin main
+          fi
+
+          node scripts/corpo-da-issue.mjs > corpo.md
+          gh issue create --title "Fila da semana: $total candidato(s) pra gerar link" --body-file corpo.md

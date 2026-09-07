@@ -214,12 +214,22 @@ não compensa economizar dez minutos por semana.
 
 Então a corrente é automática dos dois lados e manual exatamente no meio:
 
-1. **Robô garimpa** os mais vendidos (`/highlights/MLB/category/{id}`), filtra
-   por desconto e nota, e monta uma fila de candidatos
+1. **Robô garimpa** os mais vendidos (`.github/workflows/garimpar.yml`, toda
+   segunda) e escreve `data/candidatos.json` + abre uma issue com a fila.
+   Filtro em `data/garimpo.json`: desconto ≥ 20%, preço de R$ 100 a R$ 2.000,
+   nas categorias Eletrônicos, Informática e Eletrodomésticos. As categorias
+   são por **nome** — o script resolve o id na API e, se errar o nome, lista
+   os que existem
 2. **O link é gerado à mão**, no Linkbuilder, dentro do Chrome logado do
    Alisson — numa sessão com o Claude, que dirige e faz o trabalho repetitivo
 3. **O resto é automático de novo**: card, publicação, conferência diária de
    preço
+
+`candidatos.json` não é catálogo: nada dali aparece no site. Candidato vira
+produto quando ganha `link_afiliado` e é movido pra `produtos.json`.
+
+⚠️ Os dois workflows renovam o mesmo token de uso único, então compartilham
+`concurrency: group: meli-token`. Rodando junto, um invalidaria o outro.
 
 Quem tentar automatizar o passo 2 vai reencontrar essa parede. Ela é do Meli,
 não do código.

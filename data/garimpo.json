@@ -1,0 +1,10 @@
+{
+  "_leia": "Config do robô que garimpa os mais vendidos. As categorias são por NOME: o script resolve o id na API e, se não achar, mostra os nomes disponíveis.",
+  "categorias": ["Eletrônicos, Áudio e Vídeo", "Informática", "Eletrodomésticos"],
+  "por_categoria": 5,
+  "filtros": {
+    "desconto_minimo": 20,
+    "preco_minimo": 100,
+    "preco_maximo": 2000
+  }
+}

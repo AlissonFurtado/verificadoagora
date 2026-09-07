@@ -10,7 +10,8 @@
     "precos:conferir": "tsx scripts/conferir-precos.ts",
     "meli:autorizar": "tsx scripts/meli-autorizar.ts",
     "meli:inspecionar": "tsx scripts/meli-inspecionar.ts",
-    "verificar": "tsc --noEmit"
+    "verificar": "tsc --noEmit",
+    "garimpar": "tsx scripts/garimpar.ts"
   },
   "dependencies": {
     "next": "^14.0.0",
