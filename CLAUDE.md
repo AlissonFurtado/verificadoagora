@@ -149,11 +149,23 @@ perfil, com o produto em destaque e um botão "Ir para produto". Um clique a
 mais, e quando a lista do perfil esvazia o link vira uma página vazia — foi o
 que aconteceu com o robô aspirador (id 1).
 
-Link bom é o do **Linkbuilder**, que abre a página do produto direto. Ao
-adicionar produto, **abra o link e confira onde ele cai** antes de commitar.
+**E não existe alternativa.** Testado em 07/09/2026 direto no gerador: o
+"Gerador de produtos recomendados" é a ferramenta oficial de link de afiliado,
+e tanto o link curto quanto o "link completo" apontam pra `/social/`. Não há
+opção de link direto pro produto. Quem procurar de novo vai gastar o mesmo
+tempo pra chegar na mesma resposta.
+
+Como funciona de verdade: gerar o link **adiciona o produto à lista "Minhas
+recomendações"**, e o link leva ao perfil com esse produto em destaque e um
+botão "Ir para produto". Um clique a mais, e a comissão é creditada.
+
+⚠️ **Daí o modo de falhar:** produto que sai da lista "Minhas recomendações"
+deixa o link apontando pro perfil sem ele — foi o que aconteceu com o robô
+aspirador, cujo link caía num perfil vazio. Não esvazie a lista no Meli sem
+tirar os produtos correspondentes daqui.
 
 O lado bom: a `og:image` dessas páginas do Meli é a foto do produto em
-destaque, e foi de lá que saíram as imagens que estão no JSON.
+destaque, e foi de lá que saíram as primeiras imagens do JSON.
 
 ## O robô de preços
 
@@ -234,11 +246,13 @@ produto quando ganha `link_afiliado` e é movido pra `produtos.json`.
 Quem tentar automatizar o passo 2 vai reencontrar essa parede. Ela é do Meli,
 não do código.
 
-### Os 5 produtos que estão lá hoje são exemplos
+### A primeira fila garimpada entrou em 07/09/2026
 
-O Alisson pegou esses links aleatoriamente pra testar, sem curadoria nenhuma.
-Não são escolha de produto: são dado de teste que acabou em produção. Quando a
-primeira fila garimpada de verdade entrar, eles saem.
+Os 5 produtos anteriores eram links pegos a esmo pra testar e foram
+substituídos pelos 7 primeiros garimpados de verdade. `nome` e `descricao`
+são encurtados na mão: o título que vem da API tem 200 caracteres e não cabe
+num card. `avaliacao: 0` significa "ninguém conferiu a nota" e o card esconde
+a linha — melhor que anunciar "Nota 0 de 5".
 
 ## Dinheiro
 

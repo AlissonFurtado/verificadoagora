@@ -146,6 +146,17 @@ function normalizar(
   };
 }
 
+/**
+ * URL da página do produto. O `permalink` da API vem vazio em produto de
+ * catálogo, então monta-se pelo id — o Meli redireciona pro endereço com
+ * slug. É essa URL que vai pro Linkbuilder.
+ */
+export function urlDoProduto(meliId: string, tipo: TipoDeId): string {
+  return tipo === 'produto'
+    ? `https://www.mercadolivre.com.br/p/${meliId}`
+    : `https://produto.mercadolivre.com.br/${meliId.startsWith('MLB-') ? meliId : meliId.replace('MLB', 'MLB-')}`;
+}
+
 export async function buscarProduto(
   meliId: string,
   accessToken: string,

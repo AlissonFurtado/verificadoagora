@@ -12,7 +12,7 @@ import fs from 'fs';
 import path from 'path';
 import { carregarEnv } from './env';
 import { obterAcesso } from './acesso';
-import { buscarProduto, pedir, type TipoDeId } from '../src/lib/meli';
+import { buscarProduto, pedir, urlDoProduto, type TipoDeId } from '../src/lib/meli';
 
 type Config = {
   categorias: string[];
@@ -125,7 +125,7 @@ async function main(): Promise<void> {
         preco_original: dados.precoOriginal,
         desconto_percentual: desconto,
         imagem: dados.imagem,
-        url_do_produto: dados.permalink,
+        url_do_produto: dados.permalink || urlDoProduto(destaque.id, tipo),
         garimpado_em: hoje,
       });
     }

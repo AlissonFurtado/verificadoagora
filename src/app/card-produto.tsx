@@ -35,7 +35,9 @@ export function CardProduto({ produto }: { produto: Produto }) {
           {produto.categoria}
         </p>
         <h2 className="mb-2 min-w-0 text-lg font-semibold">{produto.nome}</h2>
-        <p className="mb-3 min-w-0 text-sm text-slate-300">{produto.descricao}</p>
+        {produto.descricao && (
+          <p className="mb-3 min-w-0 text-sm text-slate-300">{produto.descricao}</p>
+        )}
 
         <div className="mb-3 mt-auto">
           <p className="text-slate-400 line-through">{formatarReal(produto.preco_original)}</p>
@@ -47,9 +49,12 @@ export function CardProduto({ produto }: { produto: Produto }) {
           </p>
         </div>
 
-        <p className="mb-1 text-sm text-slate-300">
-          <span aria-hidden="true">⭐</span> Nota {produto.avaliacao} de 5
-        </p>
+        {/* Nota 0 = ninguém conferiu. Some, em vez de anunciar "Nota 0 de 5". */}
+        {produto.avaliacao > 0 && (
+          <p className="mb-1 text-sm text-slate-300">
+            <span aria-hidden="true">⭐</span> Nota {produto.avaliacao} de 5
+          </p>
+        )}
         <p className="mb-3 text-xs text-slate-400">
           Preço conferido em {formatarData(produto.verificado_em)}
         </p>
