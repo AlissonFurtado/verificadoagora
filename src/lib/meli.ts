@@ -96,10 +96,18 @@ function comoNumero(valor: unknown): number | null {
   return typeof valor === 'number' && Number.isFinite(valor) ? valor : null;
 }
 
-/** Extrai os campos que a landing usa, aceitando as duas formas de resposta. */
-function normalizar(bruto: Record<string, unknown>, meliId: string): DadosDoProduto {
-  // Produto de catálogo entrega o preço dentro de buy_box_winner; anúncio, na raiz.
-  const vencedor = (bruto.buy_box_winner ?? bruto) as Record<string, unknown>;
+/**
+ * Extrai os campos que a landing usa.
+ *
+ * `bruto` é o produto (catálogo) ou o anúncio; `oferta` é de onde sai o preço.
+ * Em anúncio os dois são o mesmo objeto.
+ */
+function normalizar(
+  bruto: Record<string, unknown>,
+  oferta: Record<string, unknown>,
+  meliId: string,
+): DadosDoProduto {
+  const vencedor = oferta;
 
   const preco = comoNumero(vencedor.price);
   if (preco === null) {
@@ -130,9 +138,40 @@ function normalizar(bruto: Record<string, unknown>, meliId: string): DadosDoProd
 }
 
 export async function buscarProduto(meliId: string, accessToken: string): Promise<DadosDoProduto> {
-  const rota = ehCatalogo(meliId) ? `/products/${meliId}` : `/items/${meliId.replace('-', '')}`;
-  const bruto = (await pedir(rota, accessToken)) as Record<string, unknown>;
-  return normalizar(bruto, meliId);
+  if (!ehCatalogo(meliId)) {
+    const anuncio = (await pedir(`/items/${meliId.replace('-', '')}`, accessToken)) as Record<
+      string,
+      unknown
+    >;
+    return normalizar(anuncio, anuncio, meliId);
+  }
+
+  const produto = (await pedir(`/products/${meliId}`, accessToken)) as Record<string, unknown>;
+
+  // O buy_box_winner costuma vir nulo. Quando vem, /items lista as ofertas
+  // ativas daquele produto — a primeira é a que o Meli mostra na página.
+  let oferta = produto.buy_box_winner as Record<string, unknown> | null;
+  if (!oferta) {
+    const lista = (await pedir(`/products/${meliId}/items`, accessToken)) as {
+      results?: Record<string, unknown>[];
+    };
+    oferta = lista.results?.[0] ?? null;
+  }
+
+  // Sem oferta ativa não há o que anunciar. O preço 0 nunca chega na página:
+  // quem chama olha `disponivel` antes de olhar preço.
+  if (!oferta) {
+    return {
+      nome: comoTexto(produto.name),
+      preco: 0,
+      precoOriginal: null,
+      imagem: '',
+      disponivel: false,
+      permalink: comoTexto(produto.permalink),
+    };
+  }
+
+  return normalizar(produto, oferta, meliId);
 }
 
 /** Devolve a resposta crua, pra quando a normalização não achar o que espera. */
