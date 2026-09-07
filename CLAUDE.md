@@ -196,6 +196,34 @@ Segredos que a Action precisa (Settings > Secrets and variables > Actions):
 permissão de escrever segredos — sem o PAT o token não rotaciona e o robô
 funciona exatamente uma vez.
 
+## A curadoria: como produto entra na página
+
+Decidido em 07/09/2026, depois de pesquisar o que dá e o que não dá.
+
+**Não existe API oficial de afiliados do Mercado Livre.** Não é falta de
+procurar: o programa simplesmente não expõe geração de link. O que existe são
+serviços de terceiros que funcionam com cookie/sessão da conta de afiliado —
+**não usar**. É a conta que recebe a comissão; entregar sessão dela pra fora
+não compensa economizar dez minutos por semana.
+
+Então a corrente é automática dos dois lados e manual exatamente no meio:
+
+1. **Robô garimpa** os mais vendidos (`/highlights/MLB/category/{id}`), filtra
+   por desconto e nota, e monta uma fila de candidatos
+2. **O link é gerado à mão**, no Linkbuilder, dentro do Chrome logado do
+   Alisson — numa sessão com o Claude, que dirige e faz o trabalho repetitivo
+3. **O resto é automático de novo**: card, publicação, conferência diária de
+   preço
+
+Quem tentar automatizar o passo 2 vai reencontrar essa parede. Ela é do Meli,
+não do código.
+
+### Os 5 produtos que estão lá hoje são exemplos
+
+O Alisson pegou esses links aleatoriamente pra testar, sem curadoria nenhuma.
+Não são escolha de produto: são dado de teste que acabou em produção. Quando a
+primeira fila garimpada de verdade entrar, eles saem.
+
 ## Dinheiro
 
 Três regras que não são de estilo:
@@ -218,6 +246,11 @@ mandar o clique.
 Quando chegar a hora, a regra é a **fila de revisão do Metricool**. Post que
 sai sozinho, sem o Alisson ver antes, não é aceitável: é publicação em nome
 dele.
+
+Reconfirmado em 07/09/2026, quando surgiu a ideia de postar automático. O
+argumento que decidiu: se o robô também **escolhe** o produto, publicar
+sozinho vira "um robô decide o que anunciar no seu nome e anuncia". São dois
+riscos empilhados, não um. Aprovar a fila pelo celular leva segundos.
 
 ## Antes de entregar
 
