@@ -1,54 +1,9 @@
-import { lerCatalogo, formatarReal, type Produto } from '@/lib/produtos';
+import { lerCatalogo } from '@/lib/catalogo';
+import { formatarData } from '@/lib/produtos';
+import { CardProduto } from './card-produto';
+import { Vitrine } from './vitrine';
 
 export const revalidate = 3600; // o preço envelhece: revalida de hora em hora
-
-const NOME_PLATAFORMA: Record<string, string> = {
-  'mercado-livre': 'Mercado Livre',
-  shopee: 'Shopee',
-  amazon: 'Amazon',
-};
-
-function CardProduto({ produto }: { produto: Produto }) {
-  const plataforma = NOME_PLATAFORMA[produto.plataforma] ?? produto.plataforma;
-
-  return (
-    <article className="flex min-w-0 flex-col rounded-lg bg-slate-800 p-4 transition-shadow hover:shadow-lg">
-      <div className="mb-2 flex min-w-0 items-center gap-2">
-        <span className="rounded bg-red-600 px-2 py-1 text-sm font-bold text-white">
-          {produto.desconto_percentual}% off
-        </span>
-        <span className="min-w-0 truncate text-xs text-slate-400">{produto.categoria}</span>
-      </div>
-
-      <h2 className="mb-2 min-w-0 text-lg font-semibold">{produto.nome}</h2>
-      <p className="mb-3 min-w-0 text-sm text-slate-300">{produto.descricao}</p>
-
-      <div className="mb-3 mt-auto">
-        <p className="text-slate-400 line-through">{formatarReal(produto.preco_original)}</p>
-        <p className="text-3xl font-bold text-green-400">{formatarReal(produto.preco_atual)}</p>
-      </div>
-
-      <p className="mb-3 text-sm text-slate-300">
-        <span aria-hidden="true">⭐</span> Nota {produto.avaliacao} de 5
-      </p>
-
-      {produto.cupom && (
-        <p className="mb-3 min-w-0 break-words rounded bg-blue-600 px-2 py-1 text-sm">
-          Cupom: <strong>{produto.cupom}</strong>
-        </p>
-      )}
-
-      <a
-        href={produto.link_afiliado}
-        target="_blank"
-        rel="sponsored noopener noreferrer"
-        className="block rounded bg-green-600 px-4 py-2 text-center font-bold text-white transition-colors hover:bg-green-700"
-      >
-        Ver no {plataforma}
-      </a>
-    </article>
-  );
-}
 
 export default function Home() {
   const { produtos, metadata } = lerCatalogo();
@@ -60,21 +15,28 @@ export default function Home() {
           <h1 className="mb-2 text-4xl font-bold">
             <span aria-hidden="true">✓</span> Verificado Agora
           </h1>
-          <p className="text-xl text-slate-300">Achadinhos de tech com os melhores descontos</p>
+          <p className="mb-3 text-xl text-slate-300">
+            Achadinhos de tech com os melhores descontos
+          </p>
+          <p className="max-w-2xl text-sm text-slate-400">
+            Os links aqui são de afiliado: se você comprar por eles, ganhamos uma comissão do
+            Mercado Livre. Você paga o mesmo preço.
+          </p>
         </div>
       </header>
 
       <section className="mx-auto max-w-6xl px-4 py-12">
         <p className="mb-6 text-sm text-slate-400">
-          Preços conferidos em {metadata.ultima_atualizacao.split('-').reverse().join('/')}. Podem
-          mudar a qualquer momento no site da loja.
+          Preços conferidos em {formatarData(metadata.ultima_atualizacao)}. Loja muda preço a
+          qualquer hora — vale conferir antes de comprar.
         </p>
 
-        <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {produtos.map((produto) => (
+        <Vitrine
+          produtos={produtos}
+          cards={produtos.map((produto) => (
             <CardProduto key={produto.id} produto={produto} />
           ))}
-        </div>
+        />
       </section>
 
       <footer className="mt-12 bg-slate-950 py-6 text-slate-400">

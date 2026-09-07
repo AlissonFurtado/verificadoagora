@@ -33,7 +33,9 @@ no lugar.** Nada de domínio vazio no meio do caminho.
 
 Ou seja: este repo é o gargalo da arrumação inteira. Enquanto a landing não
 existir, **este projeto não tem endereço público** — e nada aqui deve assumir
-que tem. O `VERCEL_URL` do `.env.example` já assume: é o alvo, não o presente.
+que tem. É por isso que o `metadataBase` do `layout.tsx` sai de
+`NEXT_PUBLIC_SITE_URL` com `localhost` de reserva, em vez de ter o domínio
+escrito no código.
 
 Quando a landing estiver publicada, **avise o Alisson**. É o sinal pra sessão
 do Vidraceiro tirar a institucional daqui e este projeto assumir o endereço.
@@ -55,10 +57,28 @@ aplicadas:
 Estrutura:
 
 ```
-src/app/     ← layout.tsx, page.tsx, globals.css
-src/lib/     ← produtos.ts (tipo Produto, lerCatalogo, formatarReal)
-data/        ← produtos.json
+src/app/
+  layout.tsx            ← metadata, Open Graph
+  page.tsx              ← monta os cards (Server Component)
+  card-produto.tsx      ← o card, com next/image
+  vitrine.tsx           ← 'use client': só o filtro de categoria
+  icon.tsx              ← favicon gerado (next/og, runtime edge)
+  opengraph-image.tsx   ← capa do link gerada (next/og, runtime edge)
+src/lib/
+  produtos.ts           ← tipos e formatação. Sem fs: roda no cliente também
+  catalogo.ts           ← lerCatalogo(), único lugar que toca o disco
+data/produtos.json
 ```
+
+**A separação `produtos.ts` / `catalogo.ts` é de propósito.** `vitrine.tsx` é
+client component; se importasse o módulo que faz `import fs`, o bundle do
+navegador quebrava. Tipo e formatação de um lado, disco do outro.
+
+**`next/og` só compila com `export const runtime = 'edge'`.** Sem isso o build
+morre no Windows com `TypeError: Invalid URL` em `fileURLToPath`. E a fonte
+padrão do next/og não tem o glifo `✓` — na imagem ele é *desenhado* com
+bordas, senão sai um quadradinho. Na página HTML o caractere pode ser usado
+normalmente.
 
 O que **não** diverge e não deve divergir: pt-BR no domínio e na interface,
 `tsc --noEmit` antes de entregar, cor nunca como única informação, `min-w-0`
@@ -79,8 +99,9 @@ produto** — não existe painel, não existe CMS. A página lê do disco no bui
 ```
 
 Cada produto: `id` (número, único e estável), `nome`, `categoria`,
-`preco_original`, `preco_atual`, `desconto_percentual` (inteiro), `avaliacao`,
-`link_afiliado`, `cupom`, `descricao`, `plataforma`, `data_adicionado`.
+`preco_original`, `preco_atual`, `desconto_percentual` (inteiro),
+`preco_no_pix` (booleano), `avaliacao`, `link_afiliado`, `cupom`, `descricao`,
+`imagem`, `plataforma`, `data_adicionado`, `verificado_em`.
 
 **As chaves são sem acento** — foram normalizadas em 07/09/2026, quando eram
 5 produtos. É JSON legal escrever `preço_atual`, mas obriga a carregar acento
@@ -91,11 +112,31 @@ referência de quais campos existem.
 
 Regras do arquivo:
 
-- `cupom` é string vazia quando não tem. Nunca `null`, nunca ausente.
-- `desconto_percentual` tem que bater com os dois preços. Se não bater, a
-  página mente pro visitante.
+- `cupom` e `imagem` são string vazia quando não tem. Nunca `null`, nunca
+  ausente. Sem `imagem`, o card mostra "Sem foto do produto" e continua de pé.
+- `desconto_percentual` é o que a loja anuncia. Pode dar 1 ponto de diferença
+  do cálculo `1 - atual/original` porque o Meli arredonda pra baixo; mais que
+  isso é erro e a página passa a mentir pro visitante.
+- `preco_no_pix: true` quando o preço só vale no Pix — o card escreve "no Pix"
+  do lado. Sem isso a página promete o que a loja não cumpre no cartão.
+- `verificado_em` é a data em que **alguém abriu o link e olhou o preço**, e
+  aparece no card. Não é a data em que o arquivo foi mexido.
 - `plataforma` em kebab-case (`mercado-livre`) — vira rótulo no botão.
 - Datas em ISO (`2026-08-31`), e `metadata.ultima_atualizacao` acompanha.
+
+### A armadilha dos links do Mercado Livre
+
+Link gerado a partir do **Perfil Social** (`meli.la/...` que cai em
+`mercadolivre.com.br/social/alisson580`) **não leva ao produto**: leva ao
+perfil, com o produto em destaque e um botão "Ir para produto". Um clique a
+mais, e quando a lista do perfil esvazia o link vira uma página vazia — foi o
+que aconteceu com o robô aspirador (id 1).
+
+Link bom é o do **Linkbuilder**, que abre a página do produto direto. Ao
+adicionar produto, **abra o link e confira onde ele cai** antes de commitar.
+
+O lado bom: a `og:image` dessas páginas do Meli é a foto do produto em
+destaque, e foi de lá que saíram as imagens que estão no JSON.
 
 ## Dinheiro
 
