@@ -17,6 +17,8 @@ export function Vitrine({
   const categorias = categoriasDe(produtos);
   const [ativa, setAtiva] = useState<string | null>(null);
 
+  const visiveis = produtos.filter((p) => ativa === null || p.categoria === ativa);
+
   const botao = (rotulo: string, valor: string | null) => {
     const selecionada = ativa === valor;
     return (
@@ -25,10 +27,10 @@ export function Vitrine({
         type="button"
         onClick={() => setAtiva(valor)}
         aria-pressed={selecionada}
-        className={`rounded-full border px-4 py-1.5 text-sm transition-colors ${
+        className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
           selecionada
-            ? 'border-green-500 bg-green-600 font-semibold text-white'
-            : 'border-slate-600 text-slate-300 hover:border-slate-400'
+            ? 'bg-white text-slate-900 shadow'
+            : 'bg-white/5 text-slate-300 ring-1 ring-inset ring-white/10 hover:bg-white/10 hover:text-white'
         }`}
       >
         {rotulo}
@@ -38,14 +40,14 @@ export function Vitrine({
 
   return (
     <>
-      <div className="mb-8 flex flex-wrap gap-2">
+      <div className="-mx-4 mb-8 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
         {botao(`Tudo (${produtos.length})`, null)}
         {categorias.map((c) =>
           botao(`${c} (${produtos.filter((p) => p.categoria === c).length})`, c),
         )}
       </div>
 
-      <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {produtos.map((produto, i) =>
           ativa === null || produto.categoria === ativa ? (
             <div key={produto.id} className="min-w-0">
@@ -54,6 +56,12 @@ export function Vitrine({
           ) : null,
         )}
       </div>
+
+      {visiveis.length === 0 && (
+        <p className="py-12 text-center text-slate-400">
+          Nada nesta categoria agora. Volte na segunda — a lista é refeita toda semana.
+        </p>
+      )}
     </>
   );
 }

@@ -1,5 +1,10 @@
 import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
+
+// next/font baixa e serve a fonte do próprio domínio: sem chamada ao Google
+// no navegador de quem visita, e sem o pisca-pisca de troca de fonte.
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--fonte' });
 
 /**
  * De onde saem as URLs absolutas das metatags.
@@ -36,8 +41,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
-      <body className="bg-slate-900 text-white">{children}</body>
+    <html lang="pt-BR" className={inter.variable}>
+      <body className="bg-slate-950 font-sans text-white antialiased">{children}</body>
     </html>
   );
 }

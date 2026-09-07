@@ -160,6 +160,11 @@ referência de quais campos existem.
 
 Regras do arquivo:
 
+- `cupom` é **cupom de desconto de verdade**, e nada mais. O painel de
+  afiliados também mostra um "ID do produto" (tipo `HDDAJQ-17AY`), que serve
+  pra colar no buscador do Meli — **não é cupom**. O catálogo original tinha
+  esse ID no campo `cupom` e a página anunciava "Cupom: HDDAJQ-ZYTV" pra quem
+  nunca conseguiria usar. Não repita.
 - `cupom` e `imagem` são string vazia quando não tem. Nunca `null`, nunca
   ausente. Sem `imagem`, o card mostra "Sem foto do produto" e continua de pé.
 - `desconto_percentual` é o que a loja anuncia. Pode dar 1 ponto de diferença
