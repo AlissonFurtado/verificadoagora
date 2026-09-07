@@ -191,6 +191,12 @@ só entra quando uma pessoa abriu a página e viu.
 Ele também não mexe em `nome`, `descricao`, `categoria` nem `avaliacao` — isso
 é curadoria, e curadoria é do Alisson.
 
+**Quem é dono do refresh token é a Action.** Desde 07/09/2026 os segredos
+estão no GitHub e cada rodada lá queima o token e grava o novo por cima.
+Rodar `npm run precos:conferir` na máquina **invalida o que o GitHub tem** e
+quebra a rodada seguinte. Se precisar rodar local, refaça a autorização e
+recadastre o `ML_REFRESH_TOKEN` no GitHub depois.
+
 Segredos que a Action precisa (Settings > Secrets and variables > Actions):
 `ML_CLIENT_ID`, `ML_CLIENT_SECRET`, `ML_REFRESH_TOKEN` e um `GH_PAT` com
 permissão de escrever segredos — sem o PAT o token não rotaciona e o robô
