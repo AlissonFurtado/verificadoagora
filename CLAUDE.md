@@ -6,8 +6,8 @@ da bio: a página existe pra transformar aquele scroll em clique no produto.
 
 - Next.js 14 (App Router) + TypeScript + Tailwind, na **raiz do repo**
 - Dados em `data/produtos.json` — sem banco, sem API, sem backend
-- No ar em **verificadoagora.vercel.app** — `git push` na `main` publica
-- O domínio próprio ainda **não** está conectado. Veja "O nó do domínio"
+- No ar em **verificadoagora.com.br** — `git push` na `main` publica
+- O domínio próprio entrou em 07/09/2026. Veja "O nó do domínio"
 
 ## Quem faz
 
@@ -50,27 +50,41 @@ imagem. Aconteceu, e só dava pra ver em produção.
 Quando o domínio for conectado, **avise o Alisson**: é o sinal pra sessão do
 Vidraceiro tirar a institucional de lá.
 
-### Onde a troca parou (07/09/2026)
+### A troca aconteceu em 07/09/2026
 
-O domínio **já está adicionado ao projeto na Vercel**, com "Invalid
-Configuration" — o esperado, porque o DNS continua na Hostinger e nada saiu
-do ar. Falta só trocar o DNS.
+`verificadoagora.com.br` **serve esta landing**, com certificado válido. O
+registro é `A` · `@` · `216.198.79.1`, no DNS da Hostinger. O endereço oficial
+é o apex, sem www.
 
-O endereço oficial é o **apex, sem www**: é o que vai na bio do Instagram.
+Nenhum endereço ficou escrito no código: o `metadataBase` sai de
+`VERCEL_PROJECT_PRODUCTION_URL` e migrou sozinho pro domínio novo.
 
-Registro que a Vercel pede: `A` · nome `@` · valor `216.198.79.1`.
+**A institucional não morreu, mudou de porta.** Ela continua no ar em
+`www.verificadoagora.com.br`, que ficou de propósito apontando pra Hostinger.
+É uma solução temporária: quando a sessão do Vidraceiro publicar a
+institucional no `afdesousa.com.br`, o `www` daqui deve virar redirecionamento
+pro apex ou ser apagado.
 
-⚠️ **Não basta trocar o A.** O apex tem hoje registros **AAAA (IPv6)**
-apontando pra Hostinger, e navegador com IPv6 prefere o AAAA — a troca
-pareceria não ter funcionado, de forma intermitente e só pra algumas pessoas.
-Os AAAA têm que sair junto.
+### O que mais mora nesta zona DNS
 
-O `www` tem registros próprios, diferentes dos do apex. Depois da troca ele
-continuaria servindo a institucional se ninguém mexer.
+O domínio virou hub por acidente e ainda carrega outros projetos. Auditado em
+07/09/2026:
 
-**E a ordem não mudou:** a institucional só sai daqui quando estiver no ar no
-`afdesousa.com.br`. Em 07/09/2026 ela ainda não estava — o `afdesousa.com.br`
-servia "Página padrão" da Hostinger. Quem publica lá é a sessão do Vidraceiro.
+| Registro | Serve | Situação |
+|---|---|---|
+| `A @` | esta landing (Vercel) | ativo |
+| `CNAME www` | institucional (Hostinger) | ativo, temporário |
+| `ALIAS hrvidros` | **landing do HR Vidros** | 🔴 **ativo — é do cliente** |
+| `ALIAS api-licitacoes` | "Página padrão" da Hostinger | morto |
+| `CNAME licitacoes` | Vercel que não existe mais | morto |
+| `A ftp` | 45.132.157.6 | não auditado |
+
+⚠️ **`hrvidros.verificadoagora.com.br` está no ar e é a página de um cliente
+real** (a vidraçaria de Parauapebas). O destino dela, `hrvidros.afdesousa.com.br`,
+ainda não tem DNS. **Não apague esse registro** antes de a landing existir no
+endereço novo — o cliente ficaria sem página nenhuma.
+
+Os dois mortos (`api-licitacoes`, `licitacoes`) podem sair a qualquer momento.
 
 ## Stack, e onde ela diverge do padrão
 
