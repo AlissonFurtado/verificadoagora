@@ -67,7 +67,13 @@ async function main(): Promise<void> {
 
   const catalogo = lerJson<Catalogo>(path.join(raiz, 'data', 'produtos.json'), {
     produtos: [],
-    metadata: { ultima_atualizacao: '', total_produtos: 0, comissao_media_ml: 0, moeda: 'BRL' },
+    metadata: {
+      ultima_atualizacao: '',
+      conferido_em: '',
+      total_produtos: 0,
+      comissao_media_ml: 0,
+      moeda: 'BRL',
+    },
   });
   const jaNoCatalogo = new Set(catalogo.produtos.map((p) => p.meli_id).filter(Boolean));
   const familiasNoCatalogo = new Set(catalogo.produtos.map((p) => p.familia).filter(Boolean));

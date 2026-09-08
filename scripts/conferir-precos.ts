@@ -139,6 +139,10 @@ async function main(): Promise<void> {
   }
 
   catalogo.metadata.ultima_atualizacao = hoje();
+  // A hora que a rodada realmente terminou, não a agendada: o cron do GitHub
+  // atrasa horas quando a fila deles enche, e é este instante que a página
+  // mostra pra quem chega.
+  catalogo.metadata.conferido_em = new Date().toISOString();
   catalogo.metadata.total_produtos = catalogo.produtos.length;
 
   fs.writeFileSync(caminho, `${JSON.stringify(catalogo, null, 2)}\n`, 'utf-8');

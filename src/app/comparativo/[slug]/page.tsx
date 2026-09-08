@@ -6,6 +6,8 @@ import { lerCatalogo, lerComparativos } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
 import { acharComparativo, comTextoDeHoje, type Comparativo } from '@/lib/comparativos';
 import { acharPorSlug, caminhoDoComparativo, gerarSlug } from '@/lib/slug';
+import { descreverConferencia } from '@/lib/relogio';
+import { SeloDeConferencia } from '../../selo-de-conferencia';
 
 export const revalidate = 3600;
 
@@ -103,6 +105,8 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
 
   const { produto, comparativo } = achado;
   const catalogo = produtosVisiveis(lerCatalogo().produtos);
+  const conferidoEm = lerCatalogo().metadata.conferido_em;
+  const conferencia = descreverConferencia(conferidoEm, new Date());
   const base = process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : '';
@@ -134,6 +138,12 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           </span>
           <span className="text-slate-400 font-bold">Comparativo</span>
         </nav>
+
+        {conferencia && (
+          <div className="mb-6">
+            <SeloDeConferencia conferidoEm={conferidoEm} inicial={conferencia} />
+          </div>
+        )}
 
         <header className="min-w-0">
           <p className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold uppercase tracking-widest text-amber-800 ring-1 ring-inset ring-amber-600/10">

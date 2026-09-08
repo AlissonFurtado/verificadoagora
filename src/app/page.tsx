@@ -1,10 +1,12 @@
 import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
-import { formatarData, ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
+import { ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
 import { seloDeMenorPreco } from '@/lib/historico';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import { caminhoDoComparativo } from '@/lib/slug';
 import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
+import { SeloDeConferencia } from './selo-de-conferencia';
+import { descreverConferencia } from '@/lib/relogio';
 
 export const revalidate = 3600; // o preço envelhece: revalida de hora em hora
 
@@ -20,7 +22,7 @@ export const revalidate = 3600; // o preço envelhece: revalida de hora em hora
  * onde continua sendo declarado — veja "Dinheiro" no CLAUDE.md.
  */
 const GARANTIAS = [
-  ['Preço conferido todo dia', 'um robô confere na API do Mercado Livre às 8h'],
+  ['Preço conferido todo dia', 'um robô confere na API do Mercado Livre toda manhã'],
   ['Histórico de verdade', 'guardamos o preço de cada dia, por isso sabemos qual é o menor'],
 ] as const;
 
@@ -29,15 +31,17 @@ export default function Home() {
   const produtos = ordenarPorRecencia(produtosVisiveis(todos));
   const historico = lerHistorico();
   const comparativos = lerComparativos();
+  const conferencia = descreverConferencia(metadata.conferido_em, new Date());
 
   return (
     <main className="min-h-screen bg-fundo">
       <header className="border-b border-slate-200/70">
         <div className="mx-auto max-w-6xl px-4 py-6 sm:py-14">
-          <p className="mb-2 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-700 ring-1 ring-inset ring-emerald-600/10">
-            <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Conferido em {formatarData(metadata.ultima_atualizacao)}
-          </p>
+          <div className="mb-2">
+            {conferencia && (
+              <SeloDeConferencia conferidoEm={metadata.conferido_em} inicial={conferencia} />
+            )}
+          </div>
 
           <h1 className="bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-3xl font-black tracking-tight text-transparent sm:text-5xl">
             Verificado Agora

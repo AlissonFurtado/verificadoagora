@@ -28,6 +28,16 @@ export type Catalogo = {
   produtos: Produto[];
   metadata: {
     ultima_atualizacao: string;
+    /**
+     * Instante em que o robô terminou de conferir, em ISO com fuso.
+     *
+     * É data **e hora** de propósito: o cron do GitHub é melhor esforço e
+     * atrasa horas quando a fila deles enche — em 08/09/2026 a rodada das 8h
+     * saiu às 11h51. A página mostra a hora que aconteceu, não a agendada.
+     *
+     * Vazio enquanto o robô nunca rodou: aí o selo do relógio some.
+     */
+    conferido_em: string;
     total_produtos: number;
     comissao_media_ml: number;
     moeda: string;

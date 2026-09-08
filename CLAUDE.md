@@ -185,6 +185,10 @@ Regras do arquivo:
   liga e desliga; mexer na mão só se souber por quê.
 - `plataforma` em kebab-case (`mercado-livre`) — vira rótulo no botão.
 - Datas em ISO (`2026-08-31`), e `metadata.ultima_atualizacao` acompanha.
+- `metadata.conferido_em` é ISO **com hora** (`2026-09-08T14:51:05Z`): o
+  instante em que a rodada do robô terminou. É a fonte do relógio que aparece
+  no topo das três páginas — "Preço conferido há 7 horas · hoje às 11h51".
+  Vazio faz o relógio sumir, em vez de inventar um horário.
 
 ### A armadilha dos links do Mercado Livre
 
@@ -214,11 +218,20 @@ destaque, e foi de lá que saíram as primeiras imagens do JSON.
 
 ## O robô de preços
 
-Todo dia às 8h de Brasília, `.github/workflows/conferir-precos.yml` reconfere
-cada produto na API do Mercado Livre e reescreve o `produtos.json`. Mudança
-normal entra direto na `main` e a Vercel publica; mudança grande vira PR.
+Toda manhã, `.github/workflows/conferir-precos.yml` reconfere cada produto na
+API do Mercado Livre e reescreve o `produtos.json`. Mudança normal entra
+direto na `main` e a Vercel publica; mudança grande vira PR.
 
 Rodar na mão: `npm run precos:conferir`.
+
+⚠️ **"Toda manhã", não "às 8h".** O cron pede 11:00 UTC (8h de Brasília), mas
+o agendador do GitHub é melhor esforço: em 08/09/2026 a rodada saiu às 14:51
+UTC — 3h51 de atraso — e o garimpo, agendado pras 10h, saiu às 14h09. A página
+chegou a anunciar "confere às 8h" e isso era falso na prática.
+
+Por isso o robô grava `metadata.conferido_em`, com **data e hora** do instante
+em que terminou, e é essa hora que a página mostra. Nunca prometa horário
+cravado ao visitante: mostre o que aconteceu.
 
 **Por que API e não ler a página.** Pedir a página do produto por HTTP puro
 devolve a tela de *suspicious traffic* — inclusive de IP residencial. Num

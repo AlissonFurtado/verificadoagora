@@ -13,6 +13,8 @@ import {
 } from '@/lib/produtos';
 import { seloDeMenorPreco, type PontoDoHistorico } from '@/lib/historico';
 import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
+import { descreverConferencia } from '@/lib/relogio';
+import { SeloDeConferencia } from '../../selo-de-conferencia';
 
 export const revalidate = 3600;
 
@@ -148,6 +150,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
   const plataforma = NOME_PLATAFORMA[produto.plataforma] ?? produto.plataforma;
   const economia = produto.preco_original - produto.preco_atual;
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
+  const conferencia = descreverConferencia(lerCatalogo().metadata.conferido_em, new Date());
 
   return (
     <main className="min-h-screen bg-fundo text-slate-800">
@@ -163,6 +166,15 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           </span>
           <span className="text-slate-400 font-bold">{produto.categoria}</span>
         </nav>
+
+        {conferencia && (
+          <div className="mb-6">
+            <SeloDeConferencia
+              conferidoEm={lerCatalogo().metadata.conferido_em}
+              inicial={conferencia}
+            />
+          </div>
+        )}
 
         <div className="grid min-w-0 gap-8 md:grid-cols-2">
           <div className="relative aspect-square min-w-0 overflow-hidden rounded-2xl bg-white border border-slate-200/80 shadow-md">
