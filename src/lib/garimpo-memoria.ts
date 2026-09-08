@@ -9,6 +9,8 @@
 
 export type Visto = {
   sugerido_em: string;
+  /** Agrupador do Meli, pra reconhecer o mesmo produto sob outro id. */
+  familia?: string;
   /** Preço no dia em que foi sugerido. É a régua pra decidir se vale repetir. */
   preco_sugerido: number;
   vezes: number;
@@ -43,14 +45,25 @@ export type Veredito =
  */
 export function avaliar(
   meliId: string,
+  familia: string,
   precoDeHoje: number,
   memoria: Memoria,
   jaNoCatalogo: Set<string>,
+  familiasNoCatalogo: Set<string>,
   hoje: string,
 ): Veredito {
   if (jaNoCatalogo.has(meliId)) return { sugerir: false, motivo: 'já está no catálogo' };
 
-  const visto = memoria.vistos[meliId];
+  // O mesmo aparelho existe sob mais de um id no Meli. A família é o que
+  // impede de sugerir hoje o que já está na página com outro número.
+  if (familia && familiasNoCatalogo.has(familia)) {
+    return { sugerir: false, motivo: 'já está no catálogo' };
+  }
+
+  const porFamilia = familia
+    ? Object.values(memoria.vistos).find((v) => v.familia === familia)
+    : undefined;
+  const visto = memoria.vistos[meliId] ?? porFamilia;
   if (!visto) return { sugerir: true, motivo: 'inédito' };
 
   if (diasEntre(visto.sugerido_em, hoje) >= DIAS_ATE_ESQUECER) {
@@ -65,10 +78,17 @@ export function avaliar(
   return { sugerir: false, motivo: 'já sugerido' };
 }
 
-export function registrar(memoria: Memoria, meliId: string, preco: number, hoje: string): void {
+export function registrar(
+  memoria: Memoria,
+  meliId: string,
+  familia: string,
+  preco: number,
+  hoje: string,
+): void {
   const anterior = memoria.vistos[meliId];
   memoria.vistos[meliId] = {
     sugerido_em: hoje,
+    familia: familia || anterior?.familia,
     preco_sugerido: preco,
     vezes: (anterior?.vezes ?? 0) + 1,
   };

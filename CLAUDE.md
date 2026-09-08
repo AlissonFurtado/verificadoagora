@@ -296,9 +296,26 @@ regras (`src/lib/garimpo-memoria.ts`):
 | Situação | O que acontece |
 |---|---|
 | Produto já no `produtos.json` | Nunca mais é sugerido |
+| Mesma **família** de um que já está lá | Nunca mais é sugerido |
 | Já sugerido, preço parecido | Não repete — **silêncio conta como "não"** |
 | Já sugerido e caiu 15%+ | Volta: é oferta nova, não repetição |
 | Sugerido há 60+ dias | Volta: o mercado já é outro |
+
+### O mesmo produto tem vários ids no Meli
+
+Descoberto em 08/09/2026, na primeira fila diária: o Soundcore P20i está no
+catálogo do Meli como `MLB38302175` **e** `MLB43397587`; o aspirador WAP GTW
+10 como `MLB8923630` **e** `MLB8923631` — ids consecutivos, mesmo aparelho.
+Memória por id não pega isso, e dois repetidos entraram na fila.
+
+Por isso o campo `familia` (`family_name`, `grouper_id` ou
+`catalog_product_id`, nessa ordem): é o agrupador do próprio Meli e reconhece
+o mesmo produto sob outro número. Comparar nome seria chute — "Fone Bluetooth
+soundcore P20i" e "Fone De Ouvido In ear Soundcore P20i Bluetooth 5.3" são o
+mesmo produto e quase não se parecem como texto.
+
+Produto que entrou antes do campo existir tem `familia: ""`; o robô de preços
+preenche na primeira vez que passa por ele.
 
 ⚠️ **A memória precisa ser commitada junto com a fila.** Se o commit falhar,
 o garimpo de amanhã sugere exatamente o que sugeriu hoje. Por isso os dois

@@ -1,6 +1,6 @@
 {
   "garimpado_em": "2026-09-08",
-  "total": 10,
+  "total": 8,
   "candidatos": [
     {
       "meli_id": "MLB18927373",
@@ -12,32 +12,6 @@
       "desconto_percentual": 48,
       "imagem": "https://http2.mlstatic.com/D_NQ_NP_923263-MLA99474168604_112025-F.jpg",
       "url_do_produto": "https://www.mercadolivre.com.br/p/MLB18927373",
-      "motivo": "inédito",
-      "garimpado_em": "2026-09-08"
-    },
-    {
-      "meli_id": "MLB43397587",
-      "tipo": "produto",
-      "nome": "Fone De Ouvido In ear Soundcore P20i Bluetooth 5.3 Grave Potente Drivers 10mm 30h Bateria Carregamento Rápido Personalização De Som Via App Ipx5 2 Mics Ia Para Chamadas Claras Case Compacto Cor Branco",
-      "categoria": "Eletrônicos, Áudio e Vídeo",
-      "preco": 155.97,
-      "preco_original": 299,
-      "desconto_percentual": 47,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_788794-MLA95696847458_102025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB43397587",
-      "motivo": "inédito",
-      "garimpado_em": "2026-09-08"
-    },
-    {
-      "meli_id": "MLB8923631",
-      "tipo": "produto",
-      "nome": "Aspirador de Pó e Água WAP GTW 10 1400W de Potência com Bocal de Sopro",
-      "categoria": "Eletrodomésticos",
-      "preco": 257.9,
-      "preco_original": 485.57,
-      "desconto_percentual": 46,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_985627-MLA100060225801_122025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB8923631",
       "motivo": "inédito",
       "garimpado_em": "2026-09-08"
     },

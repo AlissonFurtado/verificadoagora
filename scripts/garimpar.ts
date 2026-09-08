@@ -24,6 +24,7 @@ type Config = {
 
 type Candidato = {
   meli_id: string;
+  familia: string;
   tipo: TipoDeId;
   nome: string;
   categoria: string;
@@ -69,6 +70,7 @@ async function main(): Promise<void> {
     metadata: { ultima_atualizacao: '', total_produtos: 0, comissao_media_ml: 0, moeda: 'BRL' },
   });
   const jaNoCatalogo = new Set(catalogo.produtos.map((p) => p.meli_id).filter(Boolean));
+  const familiasNoCatalogo = new Set(catalogo.produtos.map((p) => p.familia).filter(Boolean));
 
   const accessToken = await obterAcesso();
 
@@ -162,7 +164,15 @@ async function main(): Promise<void> {
         continue;
       }
 
-      const veredito = avaliar(destaque.id, dados.preco, memoria, jaNoCatalogo, hoje);
+      const veredito = avaliar(
+        destaque.id,
+        dados.familia,
+        dados.preco,
+        memoria,
+        jaNoCatalogo,
+        familiasNoCatalogo,
+        hoje,
+      );
       if (!veredito.sugerir) {
         descartes.ja_sugerido += 1;
         continue;
@@ -171,6 +181,7 @@ async function main(): Promise<void> {
       passaram += 1;
       encontrados.push({
         meli_id: destaque.id,
+        familia: dados.familia,
         tipo,
         nome: dados.nome,
         categoria: alvo.nome,
@@ -192,7 +203,7 @@ async function main(): Promise<void> {
   encontrados.sort((a, b) => b.desconto_percentual - a.desconto_percentual);
   const candidatos = encontrados.slice(0, config.limite_diario);
 
-  for (const c of candidatos) registrar(memoria, c.meli_id, c.preco, hoje);
+  for (const c of candidatos) registrar(memoria, c.meli_id, c.familia, c.preco, hoje);
   memoria.atualizado_em = hoje;
 
   fs.writeFileSync(

@@ -25,6 +25,12 @@ export type TokensRenovados = {
 
 export type DadosDoProduto = {
   nome: string;
+  /**
+   * Agrupador do Meli. O mesmo aparelho aparece em mais de um id — o P20i
+   * está lá como MLB38302175 e MLB43397587 — e é por aqui que dá pra saber
+   * que são o mesmo produto. Comparar nome seria chute.
+   */
+  familia: string;
   preco: number;
   precoOriginal: number | null;
   imagem: string;
@@ -138,6 +144,10 @@ function normalizar(
 
   return {
     nome: comoTexto(bruto.name) || comoTexto(bruto.title),
+    familia:
+      comoTexto(bruto.family_name) ||
+      comoTexto(bruto.grouper_id) ||
+      comoTexto(bruto.catalog_product_id),
     preco,
     precoOriginal: comoNumero(vencedor.original_price),
     imagem,
@@ -188,6 +198,10 @@ export async function buscarProduto(
   if (!oferta) {
     return {
       nome: comoTexto(produto.name),
+      familia:
+        comoTexto(produto.family_name) ||
+        comoTexto(produto.grouper_id) ||
+        comoTexto(produto.catalog_product_id),
       preco: 0,
       precoOriginal: null,
       imagem: '',

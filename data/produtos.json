@@ -17,7 +17,8 @@
       "meli_id": "MLB40556904",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07"
+      "verificado_em": "2026-09-07",
+      "familia": ""
     },
     {
       "id": 2,
@@ -36,7 +37,8 @@
       "meli_id": "MLB38302175",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07"
+      "verificado_em": "2026-09-07",
+      "familia": ""
     },
     {
       "id": 3,
@@ -55,7 +57,8 @@
       "meli_id": "MLB63036814",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07"
+      "verificado_em": "2026-09-07",
+      "familia": ""
     },
     {
       "id": 4,
@@ -74,7 +77,8 @@
       "meli_id": "MLB52039200",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07"
+      "verificado_em": "2026-09-07",
+      "familia": ""
     },
     {
       "id": 5,
@@ -93,7 +97,8 @@
       "meli_id": "MLB50722875",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07"
+      "verificado_em": "2026-09-07",
+      "familia": ""
     },
     {
       "id": 6,
@@ -112,7 +117,8 @@
       "meli_id": "MLB8923630",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07"
+      "verificado_em": "2026-09-07",
+      "familia": ""
     },
     {
       "id": 7,
@@ -131,7 +137,8 @@
       "meli_id": "MLB6339793",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07"
+      "verificado_em": "2026-09-07",
+      "familia": ""
     }
   ],
   "metadata": {

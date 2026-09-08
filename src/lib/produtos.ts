@@ -18,6 +18,8 @@ export type Produto = {
   meli_id: string;
   /** O robô desliga quando o produto sai do ar. Produto desligado não aparece na página. */
   disponivel: boolean;
+  /** Agrupador do Meli, usado pra não sugerir de novo o que já está aqui com outro id. */
+  familia: string;
   data_adicionado: string;
   verificado_em: string;
 };

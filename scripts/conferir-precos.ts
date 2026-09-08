@@ -114,6 +114,8 @@ async function main(): Promise<void> {
     }
     produto.desconto_percentual = descontoEntre(produto.preco_original, novo);
     if (dados.imagem) produto.imagem = dados.imagem;
+    // Preenche a família em quem entrou antes de o campo existir.
+    if (!produto.familia && dados.familia) produto.familia = dados.familia;
 
     // Só entra no histórico preço que a API confirmou hoje. Preço não
     // conferido não vira dado histórico — senão o "menor preço" mente depois.
