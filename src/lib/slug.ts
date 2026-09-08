@@ -28,3 +28,12 @@ export function caminhoDoProduto(produto: Produto): string {
 export function acharPorSlug(produtos: Produto[], slug: string): Produto | undefined {
   return produtos.find((p) => gerarSlug(p) === slug);
 }
+
+/**
+ * Endereço do comparativo de um produto. Reaproveita o slug do produto de
+ * propósito: /produto/x e /comparativo/x falam do mesmo aparelho, e um só
+ * gerador mantém os dois endereços alinhados quando o nome muda.
+ */
+export function caminhoDoComparativo(produto: Produto): string {
+  return `/comparativo/${gerarSlug(produto)}`;
+}

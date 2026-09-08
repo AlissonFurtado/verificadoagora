@@ -13,16 +13,40 @@ import { caminhoDoProduto } from '@/lib/slug';
 export function CardProduto({
   produto,
   selo,
+  comparativo,
 }: {
   produto: Produto;
   /** "Menor preço em N dias", ou null quando não há histórico pra afirmar. */
   selo: string | null;
+  /**
+   * Quando o produto tem comparativo escrito, o card vira destaque: faixa
+   * âmbar no topo, anel âmbar em volta e um segundo link, pra tabela. É o
+   * único card da grade que aponta pra dois lugares — a loja e o comparativo.
+   */
+  comparativo?: { caminho: string; rivais: number } | null;
 }) {
   const economia = produto.preco_original - produto.preco_atual;
   const caminho = caminhoDoProduto(produto);
 
   return (
-    <article className="group flex min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-white/10 transition duration-200 hover:-translate-y-0.5 hover:shadow-xl">
+    <article
+      className={`group flex min-w-0 flex-col overflow-hidden rounded-xl bg-white shadow-md transition duration-200 hover:-translate-y-0.5 hover:shadow-xl ${
+        comparativo ? 'ring-2 ring-amber-400' : 'ring-1 ring-white/10'
+      }`}
+    >
+      {comparativo && (
+        <Link
+          href={comparativo.caminho}
+          className="flex items-center justify-center gap-1.5 bg-amber-400 px-2 py-1.5 text-[11px] font-extrabold uppercase tracking-wide text-amber-950 hover:bg-amber-300"
+        >
+          <span aria-hidden="true">⚖</span>
+          {/* No celular o card tem meia tela: o texto longo só entra a partir
+              do sm, onde a coluna já é larga o bastante pra caber numa linha. */}
+          Comparativo
+          <span className="hidden sm:inline">· {comparativo.rivais} modelos</span>
+        </Link>
+      )}
+
       <Link href={caminho} className="relative block aspect-square bg-white">
         {produto.imagem ? (
           <Image
@@ -90,6 +114,17 @@ export function CardProduto({
           Ver oferta
           <span aria-hidden="true">→</span>
         </a>
+
+        {comparativo && (
+          <Link
+            href={comparativo.caminho}
+            className="flex items-center justify-center gap-1 rounded-lg bg-amber-50 px-3 py-2 text-xs font-bold text-amber-800 ring-1 ring-inset ring-amber-200 transition-colors hover:bg-amber-100"
+          >
+            Comparar
+            <span className="hidden sm:inline">com {comparativo.rivais} concorrentes</span>
+            <span aria-hidden="true">→</span>
+          </Link>
+        )}
 
         <div className="flex items-center justify-between text-[10px] text-slate-400">
           <span>Conferido em {formatarData(produto.verificado_em)}</span>

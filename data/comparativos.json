@@ -1,0 +1,153 @@
+{
+  "comparativos": [
+    {
+      "meli_id": "MLB47115842",
+      "titulo": "Galaxy A36 5G vale a pena? Comparamos com 4 celulares da mesma faixa",
+      "resumo": "O A36 apareceu a R$ 1.449,90 com 44% de desconto. Colocamos a ficha dele lado a lado com o Moto G17 — que também está aqui na página — e com os três intermediários que mais aparecem quando alguém procura celular nessa faixa. As especificações vêm dos fabricantes e da GSMArena; os preços, só dos dois que nosso robô confere todo dia.",
+      "colunas": [
+        { "chave": "a36", "nome": "Galaxy A36 5G", "meli_id": "MLB47115842" },
+        { "chave": "g17", "nome": "Moto G17", "meli_id": "MLB65041644" },
+        { "chave": "redmi14", "nome": "Redmi Note 14 5G", "meli_id": "" },
+        { "chave": "pocox7", "nome": "Poco X7", "meli_id": "" },
+        { "chave": "g86", "nome": "Moto G86", "meli_id": "" }
+      ],
+      "linhas": [
+        {
+          "campo": "Atualizações do Android",
+          "valores": {
+            "a36": "Até 6 versões",
+            "g17": "Nenhuma prometida",
+            "redmi14": "2 versões",
+            "pocox7": "4 versões",
+            "g86": "2 versões"
+          },
+          "vencedores": ["a36"],
+          "nota": "É a linha que decide quantos anos o aparelho continua servindo. A Samsung promete seis versões do Android no A36 — o dobro do segundo colocado. Para o G17, a Motorola confirmou só correções de segurança, sem nenhuma versão nova do Android."
+        },
+        {
+          "campo": "Tela",
+          "valores": {
+            "a36": "6,7 pol. Super AMOLED, 120 Hz, 1.900 nits",
+            "g17": "6,7 pol. LCD, 60 Hz, 1.050 nits",
+            "redmi14": "6,67 pol. AMOLED, 120 Hz",
+            "pocox7": "6,67 pol. AMOLED, 120 Hz, 3.000 nits",
+            "g86": "6,67 pol. pOLED, 120 Hz, 4.500 nits"
+          },
+          "vencedores": ["g86"],
+          "nota": "AMOLED e pOLED mostram preto de verdade e gastam menos bateria que LCD. O G17 é o único LCD da lista e o único a 60 Hz: a rolagem aparece visivelmente menos fluida do que nos outros quatro."
+        },
+        {
+          "campo": "Processador",
+          "valores": {
+            "a36": "Snapdragon 6 Gen 3 (4 nm)",
+            "g17": "MediaTek Helio G81 Extreme",
+            "redmi14": "Dimensity 7025 Ultra",
+            "pocox7": "Dimensity 7300 Ultra (4 nm)",
+            "g86": "Dimensity 7300 (4 nm)"
+          },
+          "vencedores": ["pocox7"],
+          "nota": "O A36 e os dois Dimensity 7300 jogam na mesma faixa, com vantagem de fôlego para o Poco X7. O Helio G81 do G17 é de uma geração bem anterior: dá conta de mensagem, vídeo e redes sociais, não de jogo pesado."
+        },
+        {
+          "campo": "Memória",
+          "valores": {
+            "a36": "6 GB · 128 GB, sem microSD",
+            "g17": "4 GB (+8 turbo) · 128 GB, microSD até 1 TB",
+            "redmi14": "8 GB · 256 GB",
+            "pocox7": "8 GB · 256 GB",
+            "g86": "8 GB · 256 GB"
+          },
+          "vencedores": ["redmi14", "pocox7", "g86"],
+          "nota": "Aqui a oferta do A36 perde: é a versão de 6 GB e 128 GB, e a linha A36 não tem entrada de cartão de memória. Quem guarda muita foto e vídeo aperta o armazenamento antes do que imagina — e só o G17 aceita cartão."
+        },
+        {
+          "campo": "Bateria e carregamento",
+          "valores": {
+            "a36": "5.000 mAh · 45 W",
+            "g17": "5.200 mAh · 20 W",
+            "redmi14": "5.110 mAh · 45 W",
+            "pocox7": "5.110 mAh · 45 W",
+            "g86": "5.200 mAh · 30 W"
+          },
+          "vencedores": ["a36", "redmi14", "pocox7"],
+          "nota": "A capacidade é praticamente igual nos cinco; o que muda é a pressa. O A36 vai de zero a cheio em cerca de 68 minutos. O G17, com 20 W, leva perto de uma hora e meia."
+        },
+        {
+          "campo": "Câmera principal",
+          "valores": {
+            "a36": "50 MP com estabilização óptica",
+            "g17": "50 MP Sony LYTIA 600, sem estabilização óptica",
+            "redmi14": "108 MP com estabilização óptica",
+            "pocox7": "50 MP",
+            "g86": "50 MP com estabilização óptica"
+          },
+          "vencedores": ["redmi14"],
+          "nota": "Estabilização óptica é o que salva foto à noite e vídeo gravado andando — conta mais no dia a dia do que a contagem de megapixels. O A36 tem; o G17 não."
+        },
+        {
+          "campo": "Resistência a água",
+          "valores": {
+            "a36": "IP67 — imersão até 1 m",
+            "g17": "IP64 — respingos",
+            "redmi14": "IP64 — respingos",
+            "pocox7": "IP68 — imersão até 1,5 m",
+            "g86": "IP68/IP69 e padrão militar MIL-STD-810H"
+          },
+          "vencedores": ["g86"],
+          "nota": "IP67 e IP68 aguentam cair na pia. IP64 aguenta chuva, e só. É a diferença entre um susto e uma troca de aparelho."
+        },
+        {
+          "campo": "Rede",
+          "valores": {
+            "a36": "5G",
+            "g17": "Só 4G",
+            "redmi14": "5G",
+            "pocox7": "5G",
+            "g86": "5G"
+          },
+          "vencedores": ["a36", "redmi14", "pocox7", "g86"],
+          "nota": "O G17 é o único sem 5G da lista. Se onde você mora ainda não tem cobertura, isso não muda nada hoje — mas muda daqui a alguns anos, e celular a gente troca devagar."
+        }
+      ],
+      "a_favor": [
+        "Seis versões do Android é o dobro do segundo colocado da tabela. É o que decide se o aparelho ainda vale em 2031.",
+        "Super AMOLED de 120 Hz com 1.900 nits: enxerga no sol, ao contrário do LCD do G17.",
+        "IP67 e 45 W resolvem os dois aborrecimentos mais comuns: molhar o celular e ficar esperando carregar.",
+        "44% de desconto de verdade — R$ 1.449,90 contra R$ 2.599 de tabela, conferido no dia."
+      ],
+      "contra": [
+        "É a versão de 6 GB e 128 GB, e a linha A36 não aceita cartão de memória.",
+        "Em desempenho bruto, o Poco X7 e o Moto G86 entregam mais por perto do mesmo dinheiro.",
+        "Quem fotografa muito à noite encontra no Redmi Note 14 5G uma câmera principal mais capaz."
+      ],
+      "veredito": "Se o seu critério é durar, o A36 é a escolha da tabela: seis anos de atualização, IP67 e carga rápida cobrem justamente o que faz um celular ser trocado antes da hora. Se o seu critério é desempenho por real, o Poco X7 e o Moto G86 batem o A36 no papel — mas nenhum dos dois estava com 44% de desconto quando conferimos. E se o orçamento manda, o Moto G17 aqui do lado faz o básico por quase metade do preço, desde que você aceite tela de 60 Hz, nada de 5G e nenhuma versão nova de Android prometida.",
+      "fontes": [
+        {
+          "titulo": "Samsung Galaxy A36 5G — especificações (GSMArena)",
+          "url": "https://www.gsmarena.com/samsung_galaxy_a36-13497.php"
+        },
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        },
+        {
+          "titulo": "Moto G17 pode não receber atualização de Android (Notebookcheck)",
+          "url": "https://www.notebookcheck.net/Moto-G17-may-not-receive-any-Android-updates-as-Motorola-cites-lack-of-EU-requirements.1217839.0.html"
+        },
+        {
+          "titulo": "Redmi Note 14 5G: duas versões do Android e quatro anos de segurança (GSMArena)",
+          "url": "https://www.gsmarena.com/redmi_note_14_gets_six_years_of_security_updates_four_major_android_updates-news-66574.php"
+        },
+        {
+          "titulo": "Poco X7 — ficha técnica (Tecnoblog)",
+          "url": "https://tecnoblog.net/produtos/xiaomi-poco-x7/"
+        },
+        {
+          "titulo": "Moto G86 — ficha técnica (Tecnoblog)",
+          "url": "https://tecnoblog.net/produtos/motorola-moto-g86/"
+        }
+      ],
+      "escrito_em": "2026-09-08"
+    }
+  ]
+}

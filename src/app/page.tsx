@@ -1,6 +1,8 @@
-import { lerCatalogo, lerHistorico } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
 import { formatarData, ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
 import { seloDeMenorPreco } from '@/lib/historico';
+import { acharComparativo, quantosRivais } from '@/lib/comparativos';
+import { caminhoDoComparativo } from '@/lib/slug';
 import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
 
@@ -17,6 +19,7 @@ export default function Home() {
   const { produtos: todos, metadata } = lerCatalogo();
   const produtos = ordenarPorRecencia(produtosVisiveis(todos));
   const historico = lerHistorico();
+  const comparativos = lerComparativos();
 
   return (
     <main className="min-h-screen bg-slate-950">
@@ -57,13 +60,24 @@ export default function Home() {
 
         <Vitrine
           produtos={produtos}
-          cards={produtos.map((produto) => (
-            <CardProduto
-              key={produto.id}
-              produto={produto}
-              selo={seloDeMenorPreco(historico.produtos[produto.meli_id], produto.preco_atual)}
-            />
-          ))}
+          cards={produtos.map((produto) => {
+            const comparativo = acharComparativo(comparativos, produto.meli_id);
+            return (
+              <CardProduto
+                key={produto.id}
+                produto={produto}
+                selo={seloDeMenorPreco(historico.produtos[produto.meli_id], produto.preco_atual)}
+                comparativo={
+                  comparativo
+                    ? {
+                        caminho: caminhoDoComparativo(produto),
+                        rivais: quantosRivais(comparativo),
+                      }
+                    : null
+                }
+              />
+            );
+          })}
         />
       </section>
 

@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { lerCatalogo, lerHistorico } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
+import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import {
   formatarData,
   formatarReal,
@@ -11,7 +12,7 @@ import {
   type Produto,
 } from '@/lib/produtos';
 import { seloDeMenorPreco, type PontoDoHistorico } from '@/lib/historico';
-import { acharPorSlug, caminhoDoProduto, gerarSlug } from '@/lib/slug';
+import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
 
 export const revalidate = 3600;
 
@@ -143,6 +144,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
   const selo = seloDeMenorPreco(pontos, produto.preco_atual);
   const plataforma = NOME_PLATAFORMA[produto.plataforma] ?? produto.plataforma;
   const economia = produto.preco_original - produto.preco_atual;
+  const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
 
   return (
     <main className="min-h-screen bg-slate-950">
@@ -231,6 +233,16 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               Ver no {plataforma}
               <span aria-hidden="true">→</span>
             </a>
+
+            {comparativo && (
+              <Link
+                href={caminhoDoComparativo(produto)}
+                className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-amber-500/10 px-6 py-3 text-sm font-bold text-amber-300 ring-1 ring-inset ring-amber-500/25 transition-colors hover:bg-amber-500/15"
+              >
+                <span aria-hidden="true">⚖</span>
+                Comparar com {quantosRivais(comparativo)} concorrentes
+              </Link>
+            )}
 
             <p className="mt-3 text-center text-xs text-slate-400">
               Preço conferido em {formatarData(produto.verificado_em)} · link de afiliado

@@ -376,6 +376,43 @@ diferente pro robô e pra pessoa (*cloaking*) tira o site do índice.
 O botão do card vai **direto pra loja**. A página do produto é porta de
 entrada de busca, não degrau do funil: quem chega por ela já está lá.
 
+### Comparativos
+
+O primeiro entrou em 08/09/2026: o Galaxy A36 5G contra quatro rivais, em
+`/comparativo/{mesmo slug do produto}`. O alvo é quem digita "A36 vale a pena"
+— gente que ainda não decidiu e que a vitrine sozinha não alcança.
+
+⚠️ **Comparativo é sempre pedido explícito do Alisson.** Nenhum robô escreve
+um, e nenhum aparece porque o produto "parecia bom". A escolha dos rivais e o
+veredito são curadoria assinada; robô escolhendo o que elogiar é exatamente o
+que tira a autoridade da página.
+
+Moram em `data/comparativos.json`, um por produto, ligados pelo `meli_id`. O
+tipo `Comparativo` em `src/lib/comparativos.ts` diz quais campos existem.
+
+As três decisões que sustentam o formato:
+
+- **Preço não fica no arquivo do comparativo.** A linha de preço da tabela é
+  montada do `produtos.json` na hora, e só aparece pros modelos que estão no
+  catálogo. Concorrente de fora mostra "não acompanhamos" — porque preço de
+  rival ninguém reconfere, e publicar valor velho é a regra 2 quebrada em
+  letra grande. Foi por isso que a coluna de preço dos de fora foi descartada
+  em 08/09/2026, e não por falta de pesquisa.
+- **Concorrente que também está no catálogo entra clicável.** O A36 é
+  comparado com o Moto G17, que é nosso: a mesma página pode gerar comissão
+  por dois caminhos, e o leitor ganha uma alternativa barata de verdade.
+- **A tabela mostra onde o produto perde.** O A36 perde em memória, em
+  processador e em câmera, e isso está lá. Comparativo que só elogia não
+  convence ninguém e não merece ser citado por IA.
+
+Cada linha tem uma `nota` explicando por que aquilo importa pra quem vai
+comprar — sem ela é só uma tabela de números. E `vencedores` é lista: empate
+técnico entre três é comum, e cravar um vencedor onde não há seria mentira.
+
+A marcação é `schema.org/Article` com `citation` das fontes, **não `Review`
+com nota**. Nota que ninguém mediu, dita em linguagem de máquina, é o mesmo
+erro do preço inventado.
+
 ## Dinheiro
 
 Três regras que não são de estilo:
