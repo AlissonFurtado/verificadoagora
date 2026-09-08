@@ -1,6 +1,6 @@
 import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
 import { ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
-import { seloDeMenorPreco } from '@/lib/historico';
+import { resumirTendencia, seloDeMenorPreco } from '@/lib/historico';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import { caminhoDoComparativo } from '@/lib/slug';
 import { CardProduto } from './card-produto';
@@ -88,6 +88,7 @@ export default function Home() {
                 key={produto.id}
                 produto={produto}
                 selo={seloDeMenorPreco(historico.produtos[produto.meli_id], produto.preco_atual)}
+                tendencia={resumirTendencia(historico.produtos[produto.meli_id])}
                 comparativo={
                   comparativo
                     ? {

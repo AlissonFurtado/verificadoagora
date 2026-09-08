@@ -146,6 +146,15 @@ async function main(): Promise<void> {
   catalogo.metadata.total_produtos = catalogo.produtos.length;
 
   fs.writeFileSync(caminho, `${JSON.stringify(catalogo, null, 2)}\n`, 'utf-8');
+
+  // ⚠️ Este arquivo já foi esquecido uma vez. Entre 07/09 e 08/09/2026 o robô
+  // lia o histórico, acumulava o preço do dia na memória e terminava a rodada
+  // sem gravar — o gráfico da página do produto e o selo de "menor preço"
+  // nunca apareceram, e cada dia conferido se perdia. Se um dia esta linha
+  // sumir, é isso que volta a acontecer, calado.
+  historico.atualizado_em = hoje();
+  fs.writeFileSync(caminhoHistorico, `${JSON.stringify(historico, null, 2)}\n`, 'utf-8');
+
   fs.writeFileSync(
     path.join(process.cwd(), 'relatorio.json'),
     `${JSON.stringify(relatorio, null, 2)}\n`,

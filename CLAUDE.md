@@ -224,6 +224,18 @@ direto na `main` e a Vercel publica; mudança grande vira PR.
 
 Rodar na mão: `npm run precos:conferir`.
 
+⚠️ **O robô escreve três arquivos, não um.** `data/produtos.json`,
+`data/historico.json` e o `relatorio.json` que a Action lê. Entre 07 e
+08/09/2026 faltava o `writeFileSync` do histórico: o script lia o arquivo,
+acumulava o preço do dia na memória e terminava a rodada sem gravar. O
+workflow até fazia `git add data/historico.json`, mas nada mudava, então nada
+era commitado — e o erro era mudo.
+
+O estrago: todo produto ficou com **um ponto só**, o gráfico da página do
+produto (precisa de 2) e o selo de menor preço (precisa de 3) nunca
+apareceram uma vez, e cada dia conferido se perdia. Se o gráfico sumir de
+novo, é a primeira coisa a checar.
+
 ⚠️ **"Toda manhã", não "às 8h".** O cron pede 11:00 UTC (8h de Brasília), mas
 o agendador do GitHub é melhor esforço: em 08/09/2026 a rodada saiu às 14:51
 UTC — 3h51 de atraso — e o garimpo, agendado pras 10h, saiu às 14h09. A página

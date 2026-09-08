@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { formatarData, formatarReal, type Produto } from '@/lib/produtos';
 import { caminhoDoProduto } from '@/lib/slug';
+import type { Tendencia } from '@/lib/historico';
+import { MiniGrafico } from './mini-grafico';
 
 /**
  * Card do produto.
@@ -19,6 +21,7 @@ export function CardProduto({
   produto,
   selo,
   comparativo,
+  tendencia,
 }: {
   produto: Produto;
   /** "Menor preço em N dias", ou null quando não há histórico pra afirmar. */
@@ -30,6 +33,8 @@ export function CardProduto({
    * card mais alto que os outros e desalinharia a grade por um produto só.
    */
   comparativo?: { caminho: string; rivais: number } | null;
+  /** Como o preço andou. `null` até o robô ter dois dias do produto. */
+  tendencia?: Tendencia | null;
 }) {
   const economia = produto.preco_original - produto.preco_atual;
   const caminho = caminhoDoProduto(produto);
@@ -97,9 +102,14 @@ export function CardProduto({
           </h2>
 
           <div className="mt-auto min-w-0">
-            <p className="text-xs font-medium text-slate-400 line-through">
-              {formatarReal(produto.preco_original)}
-            </p>
+            {/* O traçado divide a linha do preço antigo, que é curta: é o
+                único lugar do card onde ele entra sem mudar a altura. */}
+            <div className="flex min-w-0 items-center justify-between gap-2">
+              <p className="text-xs font-medium text-slate-400 line-through">
+                {formatarReal(produto.preco_original)}
+              </p>
+              {tendencia && <MiniGrafico tendencia={tendencia} />}
+            </div>
             <p className="flex flex-wrap items-baseline gap-x-2 text-2xl font-black tracking-tight text-emerald-600">
               {formatarReal(produto.preco_atual)}
               {produto.preco_no_pix && (
