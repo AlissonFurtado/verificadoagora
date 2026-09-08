@@ -127,7 +127,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           <Link href="/" className="hover:text-slate-900 transition-colors">
             Verificado Agora
           </Link>
-          <span className="mx-2 text-slate-300 animate-pulse" aria-hidden="true">
+          <span className="mx-2 text-slate-300" aria-hidden="true">
             ›
           </span>
           <span className="text-slate-400 font-bold">Comparativo</span>
@@ -186,7 +186,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             href={produto.link_afiliado}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-emerald-500/25 transition-all hover:from-emerald-600 hover:to-emerald-700 hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] animate-pulse-subtle"
+            className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-emerald-500/25 transition-all hover:from-emerald-600 hover:to-emerald-700 hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
           >
             Ver oferta
             <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
@@ -355,7 +355,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
               href={produto.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
-              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-emerald-500/10 transition-all hover:from-emerald-600 hover:to-emerald-700 animate-pulse-subtle"
+              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-emerald-500/10 transition-all hover:from-emerald-600 hover:to-emerald-700"
             >
               Ver o {produto.nome.split(' ').slice(0, 3).join(' ')} por{' '}
               {formatarReal(produto.preco_atual)}

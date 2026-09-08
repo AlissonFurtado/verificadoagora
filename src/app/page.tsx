@@ -22,7 +22,7 @@ export default function Home() {
   const comparativos = lerComparativos();
 
   return (
-    <main className="min-h-screen bg-slate-50">
+    <main className="min-h-screen bg-slate-100">
       <header className="border-b border-slate-200/80 bg-white shadow-sm">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
           <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-700 ring-1 ring-inset ring-emerald-600/10">
