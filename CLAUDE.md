@@ -436,6 +436,11 @@ Três regras que não são de estilo:
 1. **Todo link é de afiliado, e isso é declarado.** No rodapé da página e na
    legenda de todo post. É exigência do próprio programa de afiliados e é o
    mínimo de honestidade com quem clica. Nunca tire.
+
+   Em 08/09/2026 o aviso **encolheu, não sumiu**: saiu a caixa do topo da
+   vitrine e os parágrafos longos viraram uma linha em cada rodapé — "Links
+   de afiliado · você paga o mesmo preço". Se alguém pedir de novo pra "tirar
+   o aviso de afiliado", é esta linha que está em jogo, e ela fica.
 2. **Preço e cupom envelhecem.** Não anuncie desconto sem conferir no link
    antes. Produto com preço errado queima a confiança, que é o único ativo
    desta página.

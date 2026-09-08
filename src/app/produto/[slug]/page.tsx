@@ -150,7 +150,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-800">
+    <main className="min-h-screen bg-fundo text-slate-800">
       <DadosEstruturados produto={produto} />
 
       <div className="mx-auto max-w-5xl px-4 py-8">
@@ -257,10 +257,9 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           <Grafico pontos={pontos} />
         </div>
 
-        <footer className="mt-12 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
-          <p className="mx-auto max-w-2xl leading-relaxed">
-            Este é um link de afiliado: se você comprar por ele, ganhamos uma comissão do{' '}
-            {plataforma}. O preço que você paga é exatamente o mesmo.
+        <footer className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
+          <p className="text-xs text-slate-400">
+            Link de afiliado do {plataforma} · você paga o mesmo preço
           </p>
           <p className="mt-4">
             <Link href="/" className="font-bold text-emerald-600 hover:text-emerald-700 transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">

@@ -117,7 +117,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
   );
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-800">
+    <main className="min-h-screen bg-fundo text-slate-800">
       <DadosEstruturados
         comparativo={comparativo}
         produto={produto}
@@ -403,11 +403,10 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           </ul>
         </section>
 
-        <footer className="mt-12 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
-          <p className="mx-auto max-w-2xl leading-relaxed">
-            Os links de compra desta página são de afiliado: se você comprar por eles, ganhamos uma
-            comissão. O preço que você paga é exatamente o mesmo, e isso não muda o que escrevemos
-            acima — a tabela mostra inclusive onde o {produto.nome} perde.
+        <footer className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
+          <p className="mx-auto max-w-2xl text-xs leading-relaxed text-slate-400">
+            Links de afiliado · você paga o mesmo preço, e isso não muda o que escrevemos acima:
+            a tabela mostra inclusive onde o {produto.nome} perde.
           </p>
           <p className="mt-4">
             <Link href="/" className="font-bold text-emerald-600 hover:text-emerald-700 transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">
