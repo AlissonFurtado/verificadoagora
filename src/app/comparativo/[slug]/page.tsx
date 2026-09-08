@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { lerCatalogo, lerComparativos } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
-import { acharComparativo, type Comparativo } from '@/lib/comparativos';
+import { acharComparativo, comTextoDeHoje, type Comparativo } from '@/lib/comparativos';
 import { acharPorSlug, caminhoDoComparativo, gerarSlug } from '@/lib/slug';
 
 export const revalidate = 3600;
@@ -24,7 +24,9 @@ function buscar(slug: string): Achado | undefined {
   const produto = acharPorSlug(produtosVisiveis(lerCatalogo().produtos), slug);
   if (!produto) return undefined;
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
-  return comparativo ? { produto, comparativo } : undefined;
+  // Resolve `{preco}` e companhia aqui, num lugar só: a página e o
+  // generateMetadata passam os dois por esta função.
+  return comparativo ? { produto, comparativo: comTextoDeHoje(comparativo, produto) } : undefined;
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {

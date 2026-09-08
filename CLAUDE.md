@@ -392,9 +392,9 @@ tipo `Comparativo` em `src/lib/comparativos.ts` diz quais campos existem.
 
 As três decisões que sustentam o formato:
 
-- **Preço não fica no arquivo do comparativo.** A linha de preço da tabela é
-  montada do `produtos.json` na hora, e só aparece pros modelos que estão no
-  catálogo. Concorrente de fora mostra "não acompanhamos" — porque preço de
+- **Nenhum preço fica escrito no arquivo do comparativo** — nem na tabela,
+  nem na prosa. A linha de preço é montada do `produtos.json` na hora, e só
+  aparece pros modelos que estão no catálogo. Concorrente de fora mostra "não acompanhamos" — porque preço de
   rival ninguém reconfere, e publicar valor velho é a regra 2 quebrada em
   letra grande. Foi por isso que a coluna de preço dos de fora foi descartada
   em 08/09/2026, e não por falta de pesquisa.
@@ -404,6 +404,22 @@ As três decisões que sustentam o formato:
 - **A tabela mostra onde o produto perde.** O A36 perde em memória, em
   processador e em câmera, e isso está lá. Comparativo que só elogia não
   convence ninguém e não merece ser citado por IA.
+
+### Número no texto é marcador, nunca número
+
+O texto do comparativo escreve `{preco}`, `{preco_original}`, `{desconto}`,
+`{economia}` e `{data}`; a página troca pelo valor do catálogo na hora de
+renderizar (`comTextoDeHoje`, em `src/lib/comparativos.ts`).
+
+Aconteceu em 08/09/2026, no mesmo dia em que o comparativo nasceu: o robô
+mexeu no preço do A36 às 8h, a tabela passou a mostrar 42% — e o texto ao
+lado continuou anunciando "44% de desconto de verdade". Preço velho escrito
+por extenso é o mesmo erro da regra 2, só que mais difícil de perceber,
+porque a tabela ao lado está certa.
+
+Marcador que não existe fica na página como está escrito, visível. É de
+propósito: erro de digitação que aparece alguém conserta; erro que some
+calado vira frase sem sentido no ar.
 
 Cada linha tem uma `nota` explicando por que aquilo importa pra quem vai
 comprar — sem ela é só uma tabela de números. E `vencedores` é lista: empate

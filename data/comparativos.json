@@ -3,7 +3,7 @@
     {
       "meli_id": "MLB47115842",
       "titulo": "Galaxy A36 5G vale a pena? Comparamos com 4 celulares da mesma faixa",
-      "resumo": "O A36 apareceu a R$ 1.449,90 com 44% de desconto. Colocamos a ficha dele lado a lado com o Moto G17 — que também está aqui na página — e com os três intermediários que mais aparecem quando alguém procura celular nessa faixa. As especificações vêm dos fabricantes e da GSMArena; os preços, só dos dois que nosso robô confere todo dia.",
+      "resumo": "O A36 está a {preco}, com {desconto}% de desconto. Colocamos a ficha dele lado a lado com o Moto G17 — que também está aqui na página — e com os três intermediários que mais aparecem quando alguém procura celular nessa faixa. As especificações vêm dos fabricantes e da GSMArena; os preços, só dos dois que nosso robô confere todo dia.",
       "colunas": [
         { "chave": "a36", "nome": "Galaxy A36 5G", "meli_id": "MLB47115842" },
         { "chave": "g17", "nome": "Moto G17", "meli_id": "MLB65041644" },
@@ -113,14 +113,14 @@
         "Seis versões do Android é o dobro do segundo colocado da tabela. É o que decide se o aparelho ainda vale em 2031.",
         "Super AMOLED de 120 Hz com 1.900 nits: enxerga no sol, ao contrário do LCD do G17.",
         "IP67 e 45 W resolvem os dois aborrecimentos mais comuns: molhar o celular e ficar esperando carregar.",
-        "44% de desconto de verdade — R$ 1.449,90 contra R$ 2.599 de tabela, conferido no dia."
+        "{desconto}% de desconto de verdade — {preco} contra {preco_original} de tabela, conferido em {data}."
       ],
       "contra": [
         "É a versão de 6 GB e 128 GB, e a linha A36 não aceita cartão de memória.",
         "Em desempenho bruto, o Poco X7 e o Moto G86 entregam mais por perto do mesmo dinheiro.",
         "Quem fotografa muito à noite encontra no Redmi Note 14 5G uma câmera principal mais capaz."
       ],
-      "veredito": "Se o seu critério é durar, o A36 é a escolha da tabela: seis anos de atualização, IP67 e carga rápida cobrem justamente o que faz um celular ser trocado antes da hora. Se o seu critério é desempenho por real, o Poco X7 e o Moto G86 batem o A36 no papel — mas nenhum dos dois estava com 44% de desconto quando conferimos. E se o orçamento manda, o Moto G17 aqui do lado faz o básico por quase metade do preço, desde que você aceite tela de 60 Hz, nada de 5G e nenhuma versão nova de Android prometida.",
+      "veredito": "Se o seu critério é durar, o A36 é a escolha da tabela: seis anos de atualização, IP67 e carga rápida cobrem justamente o que faz um celular ser trocado antes da hora. Se o seu critério é desempenho por real, o Poco X7 e o Moto G86 batem o A36 no papel — mas nenhum dos dois estava com {desconto}% de desconto quando conferimos. E se o orçamento manda, o Moto G17 aqui do lado faz o básico por quase metade do preço, desde que você aceite tela de 60 Hz, nada de 5G e nenhuma versão nova de Android prometida.",
       "fontes": [
         {
           "titulo": "Samsung Galaxy A36 5G — especificações (GSMArena)",
