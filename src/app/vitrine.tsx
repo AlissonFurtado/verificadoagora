@@ -27,10 +27,10 @@ export function Vitrine({
         type="button"
         onClick={() => setAtiva(valor)}
         aria-pressed={selecionada}
-        className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+        className={`shrink-0 rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
           selecionada
-            ? 'bg-white text-slate-900 shadow'
-            : 'bg-white/5 text-slate-300 ring-1 ring-inset ring-white/10 hover:bg-white/10 hover:text-white'
+            ? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/20 hover:bg-emerald-700 hover:scale-[1.02]'
+            : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 shadow-sm'
         }`}
       >
         {rotulo}
@@ -40,7 +40,7 @@ export function Vitrine({
 
   return (
     <>
-      <div className="-mx-4 mb-8 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
+      <div className="sticky top-0 z-30 -mx-4 mb-10 flex gap-2 overflow-x-auto px-4 py-4 sm:mx-0 sm:flex-wrap sm:px-0 bg-slate-50/85 backdrop-blur-md border-b border-slate-200/40">
         {botao(`Tudo (${produtos.length})`, null)}
         {categorias.map((c) =>
           botao(`${c} (${produtos.filter((p) => p.categoria === c).length})`, c),

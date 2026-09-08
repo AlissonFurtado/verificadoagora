@@ -120,15 +120,18 @@ function Grafico({ pontos }: { pontos: PontoDoHistorico[] }) {
   )} a ${formatarReal(max)}`;
 
   return (
-    <section className="min-w-0 rounded-2xl bg-white/5 p-5 ring-1 ring-inset ring-white/10">
-      <h2 className="mb-1 text-sm font-bold text-white">Como o preço se comportou</h2>
-      <p className="mb-4 text-xs text-slate-400">
-        {pontos.length} dias observados · menor {formatarReal(min)} · maior {formatarReal(max)}
+    <section className="min-w-0 rounded-2xl bg-white border border-slate-200/60 p-6 shadow-sm">
+      <h2 className="mb-1 text-sm font-bold text-slate-800 flex items-center gap-1.5">
+        <span aria-hidden="true" className="text-emerald-500">📈</span>
+        Como o preço se comportou
+      </h2>
+      <p className="mb-4 text-xs text-slate-500 font-medium">
+        {pontos.length} dias observados · menor <span className="text-emerald-600 font-bold">{formatarReal(min)}</span> · maior <span className="text-slate-700 font-bold">{formatarReal(max)}</span>
       </p>
       <svg viewBox={`0 0 ${largura} ${altura}`} className="h-28 w-full" role="img" aria-label={legenda}>
-        <path d={caminho} fill="none" stroke="#34d399" strokeWidth="2.5" strokeLinejoin="round" />
+        <path d={caminho} fill="none" stroke="#059669" strokeWidth="2.5" strokeLinejoin="round" />
       </svg>
-      <div className="mt-1 flex justify-between text-[11px] text-slate-500">
+      <div className="mt-2 flex justify-between text-[11px] text-slate-400 font-semibold">
         <span>{formatarData(pontos[0].dia)}</span>
         <span>{formatarData(pontos[pontos.length - 1].dia)}</span>
       </div>
@@ -147,80 +150,80 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
 
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-slate-50 text-slate-800">
       <DadosEstruturados produto={produto} />
 
       <div className="mx-auto max-w-5xl px-4 py-8">
-        <nav className="mb-8 text-sm text-slate-400">
-          <Link href="/" className="hover:text-white">
+        <nav className="mb-8 text-sm text-slate-500 font-semibold">
+          <Link href="/" className="hover:text-slate-900 transition-colors">
             Verificado Agora
           </Link>
-          <span className="mx-2" aria-hidden="true">
+          <span className="mx-2 text-slate-300 animate-pulse" aria-hidden="true">
             ›
           </span>
-          <span className="text-slate-500">{produto.categoria}</span>
+          <span className="text-slate-400 font-bold">{produto.categoria}</span>
         </nav>
 
         <div className="grid min-w-0 gap-8 md:grid-cols-2">
-          <div className="relative aspect-square min-w-0 overflow-hidden rounded-2xl bg-white">
+          <div className="relative aspect-square min-w-0 overflow-hidden rounded-2xl bg-white border border-slate-200/80 shadow-md">
             {produto.imagem ? (
               <Image
                 src={produto.imagem}
                 alt={produto.nome}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-contain p-8"
+                className="object-contain p-8 hover:scale-105 transition duration-500"
                 priority
               />
             ) : (
-              <div className="flex h-full items-center justify-center text-slate-400">
+              <div className="flex h-full items-center justify-center text-slate-400 font-medium">
                 Sem foto do produto
               </div>
             )}
           </div>
 
-          <div className="flex min-w-0 flex-col">
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+          <div className="flex min-w-0 flex-col justify-center">
+            <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">
               {produto.categoria}
             </p>
-            <h1 className="mt-2 text-3xl font-extrabold leading-tight text-white">{produto.nome}</h1>
-            {produto.descricao && <p className="mt-3 text-slate-300">{produto.descricao}</p>}
+            <h1 className="mt-2 text-3xl font-black leading-tight text-slate-900">{produto.nome}</h1>
+            {produto.descricao && <p className="mt-3 text-slate-500 text-sm font-medium leading-relaxed">{produto.descricao}</p>}
 
             <div className="mt-6">
-              <p className="text-slate-400 line-through">{formatarReal(produto.preco_original)}</p>
-              <p className="flex flex-wrap items-baseline gap-x-3 text-4xl font-extrabold text-emerald-400">
+              <p className="text-sm font-semibold text-slate-400 line-through">{formatarReal(produto.preco_original)}</p>
+              <p className="flex flex-wrap items-baseline gap-x-3 text-4xl font-black tracking-tight text-emerald-600">
                 {formatarReal(produto.preco_atual)}
-                <span className="rounded-md bg-red-600 px-2 py-1 text-base font-bold text-white">
-                  {produto.desconto_percentual}% OFF
+                <span className="rounded-full bg-red-500 px-3 py-1.5 text-xs font-black text-white shadow-md shadow-red-500/10 flex items-center gap-1">
+                  <span>🔥</span> {produto.desconto_percentual}% OFF
                 </span>
               </p>
               {produto.preco_no_pix && (
-                <p className="mt-1 text-sm text-slate-400">Preço válido no Pix</p>
+                <p className="mt-1.5 text-xs font-extrabold text-slate-400 uppercase tracking-wider">Preço válido no Pix</p>
               )}
             </div>
 
             <div className="mt-4 flex min-w-0 flex-wrap gap-2">
               {economia > 0 && (
-                <span className="rounded-md bg-emerald-500/10 px-3 py-1.5 text-sm font-semibold text-emerald-300 ring-1 ring-inset ring-emerald-500/20">
+                <span className="rounded-xl bg-emerald-100 px-3 py-1.5 text-xs font-bold text-emerald-700">
                   Você economiza {formatarReal(economia)}
                 </span>
               )}
               {selo && (
-                <span className="rounded-md bg-amber-500/10 px-3 py-1.5 text-sm font-bold text-amber-300 ring-1 ring-inset ring-amber-500/20">
-                  {selo}
+                <span className="rounded-xl bg-amber-100 px-3 py-1.5 text-xs font-bold text-amber-800 flex items-center gap-1">
+                  <span>📉</span> {selo}
                 </span>
               )}
             </div>
 
             {produto.avaliacao > 0 && (
-              <p className="mt-4 text-slate-300">
-                <span aria-hidden="true">⭐</span> Nota {produto.avaliacao} de 5
+              <p className="mt-4 text-sm font-bold text-slate-600 flex items-center gap-1">
+                <span aria-hidden="true" className="text-amber-400 text-base">⭐</span> Nota {produto.avaliacao} de 5
               </p>
             )}
 
             {produto.cupom && (
-              <p className="mt-4 min-w-0 break-words rounded-lg bg-blue-500/10 px-3 py-2 text-sm text-blue-200 ring-1 ring-inset ring-blue-500/20">
-                Cupom: <strong>{produto.cupom}</strong>
+              <p className="mt-4 min-w-0 break-words rounded-xl bg-blue-50 border border-blue-200/50 px-4 py-3 text-sm text-blue-700 font-medium">
+                Cupom ativo: <strong className="font-extrabold uppercase bg-blue-100 px-2 py-0.5 rounded text-blue-800 ml-1 select-all">{produto.cupom}</strong>
               </p>
             )}
 
@@ -228,40 +231,40 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               href={produto.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
-              className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 text-lg font-bold text-white transition-colors hover:bg-emerald-700"
+              className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-emerald-500/25 transition-all hover:from-emerald-600 hover:to-emerald-700 hover:shadow-xl hover:scale-[1.01] active:scale-[0.99] animate-pulse-subtle"
             >
               Ver no {plataforma}
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
             </a>
 
             {comparativo && (
               <Link
                 href={caminhoDoComparativo(produto)}
-                className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-amber-500/10 px-6 py-3 text-sm font-bold text-amber-300 ring-1 ring-inset ring-amber-500/25 transition-colors hover:bg-amber-500/15"
+                className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-amber-50 border border-amber-200/60 px-6 py-3.5 text-sm font-bold text-amber-800 transition-colors hover:bg-amber-100"
               >
                 <span aria-hidden="true">⚖</span>
                 Comparar com {quantosRivais(comparativo)} concorrentes
               </Link>
             )}
 
-            <p className="mt-3 text-center text-xs text-slate-400">
-              Preço conferido em {formatarData(produto.verificado_em)} · link de afiliado
+            <p className="mt-4 text-center text-[10px] text-slate-400 font-semibold">
+              Preço verificado em {formatarData(produto.verificado_em)} · link de afiliado
             </p>
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-12">
           <Grafico pontos={pontos} />
         </div>
 
-        <footer className="mt-10 border-t border-white/10 pt-6 text-center text-sm text-slate-400">
-          <p className="mx-auto max-w-2xl">
+        <footer className="mt-12 border-t border-slate-200 pt-8 text-center text-sm text-slate-500">
+          <p className="mx-auto max-w-2xl leading-relaxed">
             Este é um link de afiliado: se você comprar por ele, ganhamos uma comissão do{' '}
             {plataforma}. O preço que você paga é exatamente o mesmo.
           </p>
-          <p className="mt-3">
-            <Link href="/" className="font-semibold text-emerald-400 hover:text-emerald-300">
-              ← Ver todos os achados
+          <p className="mt-4">
+            <Link href="/" className="font-bold text-emerald-600 hover:text-emerald-700 transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">
+              <span>←</span> Ver todos os achados
             </Link>
           </p>
         </footer>

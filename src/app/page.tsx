@@ -22,26 +22,30 @@ export default function Home() {
   const comparativos = lerComparativos();
 
   return (
-    <main className="min-h-screen bg-slate-950">
-      <header className="border-b border-white/10 bg-gradient-to-b from-slate-900 to-slate-950">
+    <main className="min-h-screen bg-slate-50">
+      <header className="border-b border-slate-200/80 bg-white shadow-sm">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-400 ring-1 ring-inset ring-emerald-500/20">
-            <span aria-hidden="true">✓</span> Conferido em {formatarData(metadata.ultima_atualizacao)}
+          <p className="mb-3 inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-emerald-700 ring-1 ring-inset ring-emerald-600/10">
+            <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            Conferido em {formatarData(metadata.ultima_atualizacao)}
           </p>
 
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+          <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-transparent">
             Verificado Agora
           </h1>
-          <p className="mt-3 max-w-xl text-lg text-slate-300">
+          <p className="mt-3 max-w-xl text-lg font-medium text-slate-600">
             Achadinhos de tecnologia com desconto de verdade — e o preço conferido no dia,
             não no mês passado.
           </p>
 
           <dl className="mt-8 grid gap-4 sm:grid-cols-3">
             {GARANTIAS.map(([titulo, texto]) => (
-              <div key={titulo} className="min-w-0 rounded-xl bg-white/5 p-4 ring-1 ring-inset ring-white/10">
-                <dt className="text-sm font-bold text-white">{titulo}</dt>
-                <dd className="mt-1 text-sm leading-snug text-slate-400">{texto}</dd>
+              <div key={titulo} className="min-w-0 rounded-2xl bg-slate-50/50 p-5 border border-slate-200/60 shadow-sm hover:shadow-md hover:border-slate-300/80 transition duration-300">
+                <dt className="text-sm font-bold text-slate-800 flex items-center gap-2">
+                  <span className="text-emerald-600 font-extrabold text-base">✓</span>
+                  {titulo}
+                </dt>
+                <dd className="mt-1.5 text-xs leading-relaxed text-slate-500">{texto}</dd>
               </div>
             ))}
           </dl>
@@ -49,11 +53,11 @@ export default function Home() {
       </header>
 
       <section className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
-        <div className="mb-6 flex flex-wrap items-baseline justify-between gap-2">
-          <h2 className="text-2xl font-bold text-white">
+        <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3">
+          <h2 className="text-2xl font-extrabold text-slate-900 tracking-tight">
             {produtos.length} {produtos.length === 1 ? 'achado' : 'achados'} desta semana
           </h2>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-slate-500 font-medium">
             A loja muda preço a qualquer hora — vale conferir antes de comprar.
           </p>
         </div>
@@ -81,15 +85,15 @@ export default function Home() {
         />
       </section>
 
-      <footer className="border-t border-white/10 bg-slate-950">
-        <div className="mx-auto max-w-6xl space-y-3 px-4 py-10 text-center text-sm text-slate-400">
-          <p className="mx-auto max-w-2xl">
+      <footer className="border-t border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl space-y-3 px-4 py-12 text-center text-sm text-slate-500">
+          <p className="mx-auto max-w-2xl leading-relaxed">
             Todos os links desta página são de afiliado: se você comprar por eles, ganhamos uma
             comissão do Mercado Livre. O preço que você paga é exatamente o mesmo.
           </p>
-          <p className="text-slate-500">
+          <p className="text-xs text-slate-400">
             © 2026 Verificado Agora — A F DE SOUSA ·{' '}
-            <a className="underline hover:text-slate-300" href="mailto:contato@afdesousa.com.br">
+            <a className="underline hover:text-slate-600 font-medium transition-colors" href="mailto:contato@afdesousa.com.br">
               contato@afdesousa.com.br
             </a>
           </p>
