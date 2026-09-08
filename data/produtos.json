@@ -17,8 +17,8 @@
       "meli_id": "MLB40556904",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07",
-      "familia": ""
+      "verificado_em": "2026-09-08",
+      "familia": "Anker Bluetooth Soundcore P30I P30i"
     },
     {
       "id": 2,
@@ -37,16 +37,16 @@
       "meli_id": "MLB38302175",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07",
-      "familia": ""
+      "verificado_em": "2026-09-08",
+      "familia": "Anker TWS P20i"
     },
     {
       "id": 3,
       "nome": "Smart TV 32\" Philco P32VIK Roku",
       "categoria": "Eletrônicos",
       "preco_original": 1499,
-      "preco_atual": 998.91,
-      "desconto_percentual": 33,
+      "preco_atual": 948,
+      "desconto_percentual": 36,
       "preco_no_pix": false,
       "avaliacao": 0,
       "link_afiliado": "https://meli.la/1hvu5AF",
@@ -57,8 +57,8 @@
       "meli_id": "MLB63036814",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07",
-      "familia": ""
+      "verificado_em": "2026-09-08",
+      "familia": "Smart Tv 32 Philco P32vik Roku Led Dolby Audio Hdr Wi-fi 110/220v"
     },
     {
       "id": 4,
@@ -77,8 +77,8 @@
       "meli_id": "MLB52039200",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07",
-      "familia": ""
+      "verificado_em": "2026-09-08",
+      "familia": "Samsung Galaxy Buds Core SM-R410NZWALTA"
     },
     {
       "id": 5,
@@ -97,8 +97,8 @@
       "meli_id": "MLB50722875",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07",
-      "familia": ""
+      "verificado_em": "2026-09-08",
+      "familia": "Zinnia ZNO-ZNNBO110-WH01"
     },
     {
       "id": 6,
@@ -117,16 +117,16 @@
       "meli_id": "MLB8923630",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07",
-      "familia": ""
+      "verificado_em": "2026-09-08",
+      "familia": "Wap GTW 10 FW005705 10 L"
     },
     {
       "id": 7,
       "nome": "Aspirador de Pó e Água Electrolux",
       "categoria": "Casa",
       "preco_original": 269.99,
-      "preco_atual": 199,
-      "desconto_percentual": 26,
+      "preco_atual": 229,
+      "desconto_percentual": 15,
       "preco_no_pix": false,
       "avaliacao": 0,
       "link_afiliado": "https://meli.la/1LwKpct",
@@ -137,8 +137,8 @@
       "meli_id": "MLB6339793",
       "disponivel": true,
       "data_adicionado": "2026-09-07",
-      "verificado_em": "2026-09-07",
-      "familia": ""
+      "verificado_em": "2026-09-08",
+      "familia": "Electrolux Hidrolux AWD01 3011AHBR411 12 L"
     },
     {
       "id": 8,
@@ -156,7 +156,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB18927373",
       "disponivel": true,
-      "familia": "",
+      "familia": "Electrolux do Brasil SA Electrolux Efficient ECM10 4910ANBR405 Corrente doméstica",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     },
@@ -176,7 +176,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB46689945",
       "disponivel": true,
-      "familia": "",
+      "familia": "TDX Estabilizador Gimbal TDX",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     },
@@ -196,7 +196,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB65041644",
       "disponivel": true,
-      "familia": "",
+      "familia": "Motorola Moto G17",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     },
@@ -204,9 +204,9 @@
       "id": 11,
       "nome": "Samsung Galaxy A36 5G 128GB",
       "categoria": "Celulares",
-      "preco_original": 2599,
-      "preco_atual": 1449.9,
-      "desconto_percentual": 44,
+      "preco_original": 2538.57,
+      "preco_atual": 1465.56,
+      "desconto_percentual": 42,
       "preco_no_pix": false,
       "avaliacao": 0,
       "link_afiliado": "https://meli.la/2biob9D",
@@ -216,7 +216,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB47115842",
       "disponivel": true,
-      "familia": "",
+      "familia": "Samsung Galaxy A36 5g",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     },
@@ -236,7 +236,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB47251297",
       "disponivel": true,
-      "familia": "",
+      "familia": "GameSir T4 Nova Lite Multi-plataforma",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     },
@@ -256,7 +256,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB63906982",
       "disponivel": true,
-      "familia": "",
+      "familia": "Basike Tripé Para Celular tripé celular universal",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     },
@@ -264,8 +264,8 @@
       "id": 14,
       "nome": "Controle GameSir G7 SE para Xbox",
       "categoria": "Games",
-      "preco_original": 361.15,
-      "preco_atual": 223.63,
+      "preco_original": 357.65,
+      "preco_atual": 221.47,
       "desconto_percentual": 38,
       "preco_no_pix": false,
       "avaliacao": 0,
@@ -276,7 +276,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB24473062",
       "disponivel": true,
-      "familia": "",
+      "familia": "GameSir G7 SE",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     },
@@ -285,8 +285,8 @@
       "nome": "Mixer Elgin Turbo Chef 3 em 1",
       "categoria": "Casa",
       "preco_original": 160,
-      "preco_atual": 114,
-      "desconto_percentual": 28,
+      "preco_atual": 129,
+      "desconto_percentual": 19,
       "preco_no_pix": false,
       "avaliacao": 0,
       "link_afiliado": "https://meli.la/1pAANJq",
@@ -296,7 +296,7 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB18709031",
       "disponivel": true,
-      "familia": "",
+      "familia": "Elgin 3 en 1 Turbo Chef",
       "data_adicionado": "2026-09-08",
       "verificado_em": "2026-09-08"
     }
