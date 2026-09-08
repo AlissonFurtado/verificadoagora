@@ -1,12 +1,15 @@
-name: Garimpar a fila da semana
+name: Garimpar a fila do dia
 
-# Segunda de manhã o robô olha os mais vendidos do Meli e monta a fila.
+# Toda manhã o robô olha os mais vendidos do Meli e monta a fila do dia.
 # Ele não publica nada: candidato só vira produto depois que alguém gera o
 # link de afiliado, que é o passo que o Meli não expõe por API.
+#
+# Roda às 10h de Brasília, depois do robô de preços das 8h — os dois dividem
+# o mesmo token de uso único e a fila de concorrência abaixo os serializa.
 
 on:
   schedule:
-    - cron: '0 12 * * 1'
+    - cron: '0 13 * * *'
   workflow_dispatch:
 
 permissions:
@@ -60,7 +63,7 @@ jobs:
         run: |
           total=$(node -p "require('./data/candidatos.json').total")
           if [ "$total" = "0" ]; then
-            echo "Nenhum produto passou no filtro esta semana."
+            echo "Nenhum produto novo hoje. A memória fez o trabalho dela."
             exit 0
           fi
 
@@ -68,11 +71,13 @@ jobs:
           git config user.email "contato@afdesousa.com.br"
           # git diff não enxerga arquivo novo, e na primeira rodada o
           # candidatos.json é exatamente isso. Compara depois do add.
-          git add data/candidatos.json
-          if ! git diff --cached --quiet data/candidatos.json; then
-            git commit -m "Fila da semana: $total candidato(s) garimpados"
+          # A memória vai junto: sem ela commitada, o garimpo de amanhã
+          # sugere de novo exatamente o que foi sugerido hoje.
+          git add data/candidatos.json data/garimpo-memoria.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Fila de $(date +%d/%m): $total candidato(s) garimpados"
             git push origin main
           fi
 
           node scripts/corpo-da-issue.mjs > corpo.md
-          gh issue create --title "Fila da semana: $total candidato(s) pra gerar link" --body-file corpo.md
+          gh issue create --title "Fila de $(date +%d/%m): $total candidato(s) pra gerar link" --body-file corpo.md

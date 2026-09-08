@@ -271,12 +271,11 @@ não compensa economizar dez minutos por semana.
 
 Então a corrente é automática dos dois lados e manual exatamente no meio:
 
-1. **Robô garimpa** os mais vendidos (`.github/workflows/garimpar.yml`, toda
-   segunda) e escreve `data/candidatos.json` + abre uma issue com a fila.
-   Filtro em `data/garimpo.json`: desconto ≥ 20%, preço de R$ 100 a R$ 2.000,
-   nas categorias Eletrônicos, Informática e Eletrodomésticos. As categorias
-   são por **nome** — o script resolve o id na API e, se errar o nome, lista
-   os que existem
+1. **Robô garimpa todo dia** (`.github/workflows/garimpar.yml`, 10h de
+   Brasília) e escreve `data/candidatos.json` + abre uma issue com a fila do
+   dia, no máximo 10. Filtro em `data/garimpo.json`: desconto ≥ 20%, preço de
+   R$ 100 a R$ 2.000, em seis categorias de tecnologia. As categorias são por
+   **nome** — nome errado é avisado no log e pulado, sem derrubar a rodada
 2. **O link é gerado à mão**, no Linkbuilder, dentro do Chrome logado do
    Alisson — numa sessão com o Claude, que dirige e faz o trabalho repetitivo
 3. **O resto é automático de novo**: card, publicação, conferência diária de
@@ -284,6 +283,26 @@ Então a corrente é automática dos dois lados e manual exatamente no meio:
 
 `candidatos.json` não é catálogo: nada dali aparece no site. Candidato vira
 produto quando ganha `link_afiliado` e é movido pra `produtos.json`.
+
+### A memória, que é o que faz o diário funcionar
+
+Os "mais vendidos" do Meli mudam devagar. Sem memória, rodar todo dia nas
+mesmas categorias devolveria quase a mesma lista — e o Alisson pararia de
+olhar a fila na terceira repetição.
+
+`data/garimpo-memoria.json` guarda o que já foi sugerido e por quanto. As
+regras (`src/lib/garimpo-memoria.ts`):
+
+| Situação | O que acontece |
+|---|---|
+| Produto já no `produtos.json` | Nunca mais é sugerido |
+| Já sugerido, preço parecido | Não repete — **silêncio conta como "não"** |
+| Já sugerido e caiu 15%+ | Volta: é oferta nova, não repetição |
+| Sugerido há 60+ dias | Volta: o mercado já é outro |
+
+⚠️ **A memória precisa ser commitada junto com a fila.** Se o commit falhar,
+o garimpo de amanhã sugere exatamente o que sugeriu hoje. Por isso os dois
+arquivos entram no mesmo `git add`.
 
 ⚠️ Os dois workflows renovam o mesmo token de uso único, então compartilham
 `concurrency: group: meli-token`. Rodando junto, um invalidaria o outro.

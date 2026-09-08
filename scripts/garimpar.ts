@@ -1,22 +1,24 @@
 /**
- * Garimpa os mais vendidos do Mercado Livre e monta a fila da semana.
+ * Garimpa os mais vendidos do Mercado Livre e monta a fila do dia.
  *
  *   npm run garimpar
  *
- * Escreve data/candidatos.json: produtos que passaram no filtro, com o link
- * da página do produto pronto pra colar no Linkbuilder. **Não** escreve no
- * catálogo — candidato só vira produto depois que alguém gera o link de
- * afiliado, que é o passo que o Meli não deixa automatizar.
+ * Escreve data/candidatos.json: produtos que passaram no filtro e que o
+ * Alisson ainda não viu, com o link da página pronto pro Linkbuilder. **Não**
+ * escreve no catálogo — candidato só vira produto depois que alguém gera o
+ * link de afiliado, que é o passo que o Meli não deixa automatizar.
  */
 import fs from 'fs';
 import path from 'path';
 import { carregarEnv } from './env';
 import { obterAcesso } from './acesso';
 import { buscarProduto, pedir, urlDoProduto, type TipoDeId } from '../src/lib/meli';
+import type { Catalogo } from '../src/lib/produtos';
+import { avaliar, registrar, type Memoria } from '../src/lib/garimpo-memoria';
 
 type Config = {
   categorias: string[];
-  por_categoria: number;
+  limite_diario: number;
   filtros: { desconto_minimo: number; preco_minimo: number; preco_maximo: number };
 };
 
@@ -30,6 +32,7 @@ type Candidato = {
   desconto_percentual: number;
   imagem: string;
   url_do_produto: string;
+  motivo: string;
   garimpado_em: string;
 };
 
@@ -42,14 +45,31 @@ function achatar(texto: string): string {
     .trim();
 }
 
+function lerJson<T>(caminho: string, vazio: T): T {
+  return fs.existsSync(caminho) ? (JSON.parse(fs.readFileSync(caminho, 'utf-8')) as T) : vazio;
+}
+
 carregarEnv();
 
 async function main(): Promise<void> {
   const raiz = process.cwd();
-  const config = JSON.parse(
-    fs.readFileSync(path.join(raiz, 'data', 'garimpo.json'), 'utf-8'),
-  ) as Config;
   const hoje = new Date().toISOString().slice(0, 10);
+
+  const config = lerJson<Config>(path.join(raiz, 'data', 'garimpo.json'), {
+    categorias: [],
+    limite_diario: 10,
+    filtros: { desconto_minimo: 20, preco_minimo: 100, preco_maximo: 2000 },
+  });
+
+  const caminhoMemoria = path.join(raiz, 'data', 'garimpo-memoria.json');
+  const memoria = lerJson<Memoria>(caminhoMemoria, { atualizado_em: '', vistos: {} });
+
+  const catalogo = lerJson<Catalogo>(path.join(raiz, 'data', 'produtos.json'), {
+    produtos: [],
+    metadata: { ultima_atualizacao: '', total_produtos: 0, comissao_media_ml: 0, moeda: 'BRL' },
+  });
+  const jaNoCatalogo = new Set(catalogo.produtos.map((p) => p.meli_id).filter(Boolean));
+
   const accessToken = await obterAcesso();
 
   const categoriasDoMeli = (await pedir('/sites/MLB/categories', accessToken)) as {
@@ -59,18 +79,34 @@ async function main(): Promise<void> {
 
   const alvos: { id: string; nome: string }[] = [];
   for (const procurado of config.categorias) {
-    const achada = categoriasDoMeli.find((c) => achatar(c.name) === achatar(procurado))
-      ?? categoriasDoMeli.find((c) => achatar(c.name).includes(achatar(procurado)));
+    const achada =
+      categoriasDoMeli.find((c) => achatar(c.name) === achatar(procurado)) ??
+      categoriasDoMeli.find((c) => achatar(c.name).includes(achatar(procurado)));
+
+    // Nome errado avisa e segue. Derrubar a rodada inteira por causa de uma
+    // categoria mal escrita seria perder as outras cinco por nada.
     if (!achada) {
-      console.error(`Categoria "${procurado}" não existe no Meli. As que existem:`);
-      console.error(categoriasDoMeli.map((c) => `  ${c.name}`).join('\n'));
-      process.exit(1);
+      console.error(`[garimpo] categoria "${procurado}" não existe no Meli — pulando.`);
+      continue;
     }
     alvos.push({ id: achada.id, nome: achada.name });
   }
 
-  const candidatos: Candidato[] = [];
-  const descartados = { sem_desconto: 0, fora_de_preco: 0, indisponivel: 0, erro: 0 };
+  if (alvos.length === 0) {
+    console.error('Nenhuma categoria válida. As que o Meli tem:');
+    console.error(categoriasDoMeli.map((c) => `  ${c.name}`).join('\n'));
+    process.exit(1);
+  }
+
+  const encontrados: Candidato[] = [];
+  const descartes = {
+    ja_no_catalogo: 0,
+    ja_sugerido: 0,
+    sem_desconto: 0,
+    fora_de_preco: 0,
+    indisponivel: 0,
+    erro: 0,
+  };
 
   for (const alvo of alvos) {
     const destaques = (await pedir(`/highlights/MLB/category/${alvo.id}`, accessToken)) as {
@@ -78,45 +114,62 @@ async function main(): Promise<void> {
     };
     const lista = destaques.content ?? [];
     if (lista.length === 0) {
-      console.error(`[garimpo] ${alvo.nome}: /highlights não devolveu "content". Veio:`,
-        Object.keys(destaques).join(','));
+      console.error(
+        `[garimpo] ${alvo.nome}: /highlights não devolveu "content". Veio:`,
+        Object.keys(destaques).join(','),
+      );
       continue;
     }
 
-    const daCategoria: Candidato[] = [];
+    let passaram = 0;
     for (const destaque of lista) {
       const tipo: TipoDeId = destaque.type === 'PRODUCT' ? 'produto' : 'anuncio';
+
+      // Produto que já está na página não precisa nem de consulta: sai antes
+      // de gastar uma chamada de API.
+      if (jaNoCatalogo.has(destaque.id)) {
+        descartes.ja_no_catalogo += 1;
+        continue;
+      }
+
       let dados;
       try {
         dados = await buscarProduto(destaque.id, accessToken, tipo);
       } catch (err) {
-        descartados.erro += 1;
+        descartes.erro += 1;
         console.error('[garimpo]', destaque.id, err instanceof Error ? err.message : err);
         continue;
       }
 
       if (!dados.disponivel) {
-        descartados.indisponivel += 1;
+        descartes.indisponivel += 1;
         continue;
       }
       if (dados.preco < config.filtros.preco_minimo || dados.preco > config.filtros.preco_maximo) {
-        descartados.fora_de_preco += 1;
+        descartes.fora_de_preco += 1;
         continue;
       }
       // Sem preço de antes não dá pra afirmar que é desconto — e a página não
       // anuncia desconto que ninguém consegue provar.
       if (!dados.precoOriginal || dados.precoOriginal <= dados.preco) {
-        descartados.sem_desconto += 1;
+        descartes.sem_desconto += 1;
         continue;
       }
 
       const desconto = Math.floor((1 - dados.preco / dados.precoOriginal) * 100);
       if (desconto < config.filtros.desconto_minimo) {
-        descartados.sem_desconto += 1;
+        descartes.sem_desconto += 1;
         continue;
       }
 
-      daCategoria.push({
+      const veredito = avaliar(destaque.id, dados.preco, memoria, jaNoCatalogo, hoje);
+      if (!veredito.sugerir) {
+        descartes.ja_sugerido += 1;
+        continue;
+      }
+
+      passaram += 1;
+      encontrados.push({
         meli_id: destaque.id,
         tipo,
         nome: dados.nome,
@@ -126,23 +179,36 @@ async function main(): Promise<void> {
         desconto_percentual: desconto,
         imagem: dados.imagem,
         url_do_produto: dados.permalink || urlDoProduto(destaque.id, tipo),
+        motivo: veredito.motivo,
         garimpado_em: hoje,
       });
     }
 
-    daCategoria.sort((a, b) => b.desconto_percentual - a.desconto_percentual);
-    candidatos.push(...daCategoria.slice(0, config.por_categoria));
-    console.log(`${alvo.nome}: ${daCategoria.length} passaram, ficaram ${Math.min(daCategoria.length, config.por_categoria)}`);
+    console.log(`${alvo.nome}: ${lista.length} olhados, ${passaram} novos`);
   }
+
+  // Melhor desconto primeiro: se sobrar gente de fora do limite, que fique de
+  // fora a oferta mais fraca.
+  encontrados.sort((a, b) => b.desconto_percentual - a.desconto_percentual);
+  const candidatos = encontrados.slice(0, config.limite_diario);
+
+  for (const c of candidatos) registrar(memoria, c.meli_id, c.preco, hoje);
+  memoria.atualizado_em = hoje;
 
   fs.writeFileSync(
     path.join(raiz, 'data', 'candidatos.json'),
     `${JSON.stringify({ garimpado_em: hoje, total: candidatos.length, candidatos }, null, 2)}\n`,
     'utf-8',
   );
+  fs.writeFileSync(caminhoMemoria, `${JSON.stringify(memoria, null, 2)}\n`, 'utf-8');
 
-  console.log(`\nFila da semana: ${candidatos.length} candidato(s).`);
-  console.log(`Descartados — sem desconto: ${descartados.sem_desconto}, fora da faixa de preço: ${descartados.fora_de_preco}, indisponíveis: ${descartados.indisponivel}, erro: ${descartados.erro}`);
+  console.log(`\nFila de hoje: ${candidatos.length} (de ${encontrados.length} que passaram)`);
+  console.log(
+    `Descartados — no catálogo: ${descartes.ja_no_catalogo}, já sugeridos: ${descartes.ja_sugerido}, ` +
+      `sem desconto: ${descartes.sem_desconto}, fora da faixa: ${descartes.fora_de_preco}, ` +
+      `indisponíveis: ${descartes.indisponivel}, erro: ${descartes.erro}`,
+  );
+  console.log(`Memória: ${Object.keys(memoria.vistos).length} produtos já vistos.`);
 }
 
 main().catch((err) => {
