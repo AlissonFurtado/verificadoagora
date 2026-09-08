@@ -1,5 +1,5 @@
 import { lerCatalogo, lerHistorico } from '@/lib/catalogo';
-import { formatarData, produtosVisiveis } from '@/lib/produtos';
+import { formatarData, ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
 import { seloDeMenorPreco } from '@/lib/historico';
 import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
@@ -15,7 +15,7 @@ const GARANTIAS = [
 
 export default function Home() {
   const { produtos: todos, metadata } = lerCatalogo();
-  const produtos = produtosVisiveis(todos);
+  const produtos = ordenarPorRecencia(produtosVisiveis(todos));
   const historico = lerHistorico();
 
   return (

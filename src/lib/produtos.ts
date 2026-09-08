@@ -54,6 +54,24 @@ export function produtosVisiveis(produtos: Produto[]): Produto[] {
   return produtos.filter((p) => p.disponivel);
 }
 
+/**
+ * Mais recente primeiro. O que entrou hoje aparece no topo, porque é o que a
+ * pessoa que já visitou ontem ainda não viu.
+ *
+ * Dentro do mesmo dia, desempata pelo maior desconto — a ordem de entrada no
+ * arquivo é acidente do garimpo, e deixaria a oferta mais fraca do dia no
+ * topo da página.
+ */
+export function ordenarPorRecencia(produtos: Produto[]): Produto[] {
+  return [...produtos].sort((a, b) =>
+    a.data_adicionado === b.data_adicionado
+      ? b.desconto_percentual - a.desconto_percentual
+      : a.data_adicionado < b.data_adicionado
+        ? 1
+        : -1,
+  );
+}
+
 /** Categorias na ordem em que aparecem no catálogo, sem repetir. */
 export function categoriasDe(produtos: Produto[]): string[] {
   return produtos.reduce<string[]>((acc, p) => (acc.includes(p.categoria) ? acc : [...acc, p.categoria]), []);
