@@ -274,8 +274,9 @@ Então a corrente é automática dos dois lados e manual exatamente no meio:
 1. **Robô garimpa todo dia** (`.github/workflows/garimpar.yml`, 10h de
    Brasília) e escreve `data/candidatos.json` + abre uma issue com a fila do
    dia, no máximo 10. Filtro em `data/garimpo.json`: desconto ≥ 20%, preço de
-   R$ 100 a R$ 2.000, em seis categorias de tecnologia. As categorias são por
-   **nome** — nome errado é avisado no log e pulado, sem derrubar a rodada
+   R$ 100 a R$ 2.000. Cada categoria da lista é um **nome** de categoria de
+   primeiro nível ou um **id** (`MLB14370`) de qualquer nível; o que não
+   resolve é avisado no log e pulado, sem derrubar a rodada
 2. **O link é gerado à mão**, no Linkbuilder, dentro do Chrome logado do
    Alisson — numa sessão com o Claude, que dirige e faz o trabalho repetitivo
 3. **O resto é automático de novo**: card, publicação, conferência diária de
@@ -300,6 +301,20 @@ regras (`src/lib/garimpo-memoria.ts`):
 | Já sugerido, preço parecido | Não repete — **silêncio conta como "não"** |
 | Já sugerido e caiu 15%+ | Volta: é oferta nova, não repetição |
 | Sugerido há 60+ dias | Volta: o mercado já é outro |
+
+### Por que Informática entra por subcategoria
+
+Duas rodadas seguidas deram zero em Informática. Não era nome errado nem bug:
+o topo de "mais vendidos" da categoria é **consumível barato** — papel A4,
+filamento de impressora 3D, gift card, power bank de R$ 76. Quase tudo abaixo
+do piso de R$ 100, e o que passa não tem desconto.
+
+Os produtos que interessam moram nas subcategorias, e é por isso que a config
+aceita id: `MLB14370` (Monitores), `MLB430598` (Armazenamento), `MLB454379`
+(Periféricos), `MLB430687` (Portáteis).
+
+Vale desconfiar do mesmo em qualquer categoria que renda pouco: o problema
+costuma ser o topo dela, não o filtro.
 
 ### O mesmo produto tem vários ids no Meli
 

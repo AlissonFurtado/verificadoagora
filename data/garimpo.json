@@ -1,12 +1,16 @@
 {
-  "_leia": "Config do garimpo diário. As categorias são por NOME: o script resolve o id na API, e nome errado é avisado no log e pulado, sem derrubar a rodada.",
+  "_leia": "Config do garimpo diário. Cada categoria pode ser o NOME de uma categoria de primeiro nível, ou o ID de qualquer categoria (inclusive subcategoria, tipo MLB14370). Nome ou id que não resolve é avisado no log e pulado, sem derrubar a rodada.",
+  "_por_que_subcategorias_de_informatica": "O topo de Informática são consumíveis: papel, filamento de impressora 3D, gift card. Quase tudo abaixo de R$ 100 ou sem desconto. Os produtos que interessam moram nas subcategorias.",
   "categorias": [
     "Eletrônicos, Áudio e Vídeo",
-    "Informática",
     "Eletrodomésticos",
     "Celulares e Telefones",
     "Games",
-    "Câmeras e Acessórios"
+    "Câmeras e Acessórios",
+    "MLB14370",
+    "MLB430598",
+    "MLB454379",
+    "MLB430687"
   ],
   "limite_diario": 10,
   "filtros": {

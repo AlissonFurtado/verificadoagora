@@ -81,12 +81,25 @@ async function main(): Promise<void> {
 
   const alvos: { id: string; nome: string }[] = [];
   for (const procurado of config.categorias) {
+    // Id direto (`MLB14370`) serve pra subcategoria: `/sites/MLB/categories`
+    // só lista as de primeiro nível, e é nas de dentro que moram monitor,
+    // SSD e notebook. O topo de "Informática" é papel e filamento.
+    if (/^MLB\d+$/.test(procurado)) {
+      try {
+        const c = (await pedir(`/categories/${procurado}`, accessToken)) as { name?: string };
+        alvos.push({ id: procurado, nome: c.name ?? procurado });
+      } catch {
+        console.error(`[garimpo] categoria ${procurado} não respondeu — pulando.`);
+      }
+      continue;
+    }
+
     const achada =
       categoriasDoMeli.find((c) => achatar(c.name) === achatar(procurado)) ??
       categoriasDoMeli.find((c) => achatar(c.name).includes(achatar(procurado)));
 
     // Nome errado avisa e segue. Derrubar a rodada inteira por causa de uma
-    // categoria mal escrita seria perder as outras cinco por nada.
+    // categoria mal escrita seria perder as outras por nada.
     if (!achada) {
       console.error(`[garimpo] categoria "${procurado}" não existe no Meli — pulando.`);
       continue;
