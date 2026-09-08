@@ -61,17 +61,26 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git diff --quiet data/produtos.json; then
+          git config user.name  "robô de preços"
+          git config user.email "contato@afdesousa.com.br"
+
+          # O histórico vai pra main sempre, mesmo com preço parado: é o
+          # registro de que o robô olhou naquele dia, e é dele que sai o selo
+          # de "menor preço em N dias". Nunca vira PR.
+          git add data/historico.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Histórico de preços de $(date +%d/%m/%Y)"
+            git push origin main
+          fi
+
+          git add data/produtos.json
+          if git diff --cached --quiet; then
             echo "Nenhum preço mudou hoje."
             exit 0
           fi
 
           node scripts/corpo-do-pr.mjs > corpo.md
           suspeitos=$(node -p "require('./relatorio.json').suspeitos.length")
-
-          git config user.name  "robô de preços"
-          git config user.email "contato@afdesousa.com.br"
-          git add data/produtos.json
 
           if [ "$suspeitos" = "0" ]; then
             git commit -F corpo.md

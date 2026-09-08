@@ -1,6 +1,14 @@
 import fs from 'fs';
 import path from 'path';
 import type { Catalogo } from './produtos';
+import type { Historico } from './historico';
+
+/** Histórico de preço. Some quando o arquivo ainda não existe, sem quebrar a página. */
+export function lerHistorico(): Historico {
+  const caminho = path.join(process.cwd(), 'data', 'historico.json');
+  if (!fs.existsSync(caminho)) return { atualizado_em: '', produtos: {} };
+  return JSON.parse(fs.readFileSync(caminho, 'utf-8')) as Historico;
+}
 
 /** Lê o catálogo do disco. Fonte única de verdade da landing — não há painel. */
 export function lerCatalogo(): Catalogo {

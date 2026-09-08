@@ -16,6 +16,7 @@ import { carregarEnv } from './env';
 import { obterAcesso } from './acesso';
 import { buscarProduto } from '../src/lib/meli';
 import type { Catalogo, Produto } from '../src/lib/produtos';
+import { registrarPreco, type Historico } from '../src/lib/historico';
 
 /** Acima disso o preço não vai pro ar sozinho: vira PR. */
 const VARIACAO_SUSPEITA = 0.15;
@@ -49,6 +50,11 @@ async function main(): Promise<void> {
 
   const caminho = path.join(process.cwd(), 'data', 'produtos.json');
   const catalogo = JSON.parse(fs.readFileSync(caminho, 'utf-8')) as Catalogo;
+
+  const caminhoHistorico = path.join(process.cwd(), 'data', 'historico.json');
+  const historico: Historico = fs.existsSync(caminhoHistorico)
+    ? (JSON.parse(fs.readFileSync(caminhoHistorico, 'utf-8')) as Historico)
+    : { atualizado_em: '', produtos: {} };
 
   const relatorio: Relatorio = {
     rodado_em: hoje(),
@@ -108,6 +114,14 @@ async function main(): Promise<void> {
     }
     produto.desconto_percentual = descontoEntre(produto.preco_original, novo);
     if (dados.imagem) produto.imagem = dados.imagem;
+
+    // Só entra no histórico preço que a API confirmou hoje. Preço não
+    // conferido não vira dado histórico — senão o "menor preço" mente depois.
+    historico.produtos[produto.meli_id] = registrarPreco(
+      historico.produtos[produto.meli_id],
+      hoje(),
+      novo,
+    );
 
     if (novo !== anterior) {
       const mudanca: Mudanca = {

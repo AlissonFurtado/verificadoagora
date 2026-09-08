@@ -11,7 +11,14 @@ import {
  * o card some atrás do produto e é o produto que aparece. É o que faz a página
  * parecer vitrine e não lista.
  */
-export function CardProduto({ produto }: { produto: Produto }) {
+export function CardProduto({
+  produto,
+  selo,
+}: {
+  produto: Produto;
+  /** "Menor preço em N dias", ou null quando não há histórico pra afirmar. */
+  selo: string | null;
+}) {
   const plataforma = NOME_PLATAFORMA[produto.plataforma] ?? produto.plataforma;
   const economia = produto.preco_original - produto.preco_atual;
 
@@ -62,11 +69,18 @@ export function CardProduto({ produto }: { produto: Produto }) {
               <span className="text-sm font-semibold text-slate-500">no Pix</span>
             )}
           </p>
-          {economia > 0 && (
-            <p className="mt-2 inline-block rounded-md bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">
-              Você economiza {formatarReal(economia)}
-            </p>
-          )}
+          <div className="mt-2 flex min-w-0 flex-wrap gap-2">
+            {economia > 0 && (
+              <span className="rounded-md bg-emerald-50 px-2 py-1 text-xs font-semibold text-emerald-700">
+                Você economiza {formatarReal(economia)}
+              </span>
+            )}
+            {selo && (
+              <span className="rounded-md bg-amber-50 px-2 py-1 text-xs font-bold text-amber-700 ring-1 ring-inset ring-amber-200">
+                {selo}
+              </span>
+            )}
+          </div>
         </div>
 
         {produto.avaliacao > 0 && (

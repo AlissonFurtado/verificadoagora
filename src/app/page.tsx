@@ -1,5 +1,6 @@
-import { lerCatalogo } from '@/lib/catalogo';
+import { lerCatalogo, lerHistorico } from '@/lib/catalogo';
 import { formatarData, produtosVisiveis } from '@/lib/produtos';
+import { seloDeMenorPreco } from '@/lib/historico';
 import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
 
@@ -8,13 +9,14 @@ export const revalidate = 3600; // o preço envelhece: revalida de hora em hora
 /** Os três motivos pra confiar na página, ditos sem enrolação. */
 const GARANTIAS = [
   ['Preço conferido todo dia', 'Um robô confere na API do Mercado Livre às 8h da manhã.'],
-  ['Some o que sai do ar', 'Produto pausado ou sem estoque desaparece daqui sozinho.'],
+  ['Histórico de verdade', 'Guardamos o preço de cada dia — por isso sabemos quando é o menor.'],
   ['Link de afiliado declarado', 'Ganhamos comissão se você comprar. Você paga o mesmo preço.'],
 ] as const;
 
 export default function Home() {
   const { produtos: todos, metadata } = lerCatalogo();
   const produtos = produtosVisiveis(todos);
+  const historico = lerHistorico();
 
   return (
     <main className="min-h-screen bg-slate-950">
@@ -56,7 +58,11 @@ export default function Home() {
         <Vitrine
           produtos={produtos}
           cards={produtos.map((produto) => (
-            <CardProduto key={produto.id} produto={produto} />
+            <CardProduto
+              key={produto.id}
+              produto={produto}
+              selo={seloDeMenorPreco(historico.produtos[produto.meli_id], produto.preco_atual)}
+            />
           ))}
         />
       </section>
