@@ -103,7 +103,9 @@ Estrutura:
 ```
 src/app/
   layout.tsx            ← metadata, Open Graph
-  page.tsx              ← monta os cards (Server Component)
+  page.tsx              ← a vitrine (Server Component)
+  produto/[slug]/       ← uma página por produto, com schema.org e gráfico
+  sitemap.ts, robots.ts ← gerados do catálogo
   card-produto.tsx      ← o card, com next/image
   vitrine.tsx           ← 'use client': só o filtro de categoria
   icon.tsx              ← favicon gerado (next/og, runtime edge)
@@ -111,6 +113,8 @@ src/app/
   oauth/meli/page.tsx   ← retorno do login do Meli: só mostra o code na tela
 src/lib/
   produtos.ts           ← tipos e formatação. Sem fs: roda no cliente também
+  historico.ts          ← preço por dia e o selo de "menor preço em N dias"
+  slug.ts               ← endereço de cada produto no site
   catalogo.ts           ← lerCatalogo(), único lugar que toca o disco
   meli.ts               ← API do Mercado Livre. Único lugar que fala com o Meli
 scripts/                ← o robô de preços (TypeScript, roda com tsx)
@@ -294,6 +298,32 @@ substituídos pelos 7 primeiros garimpados de verdade. `nome` e `descricao`
 são encurtados na mão: o título que vem da API tem 200 caracteres e não cabe
 num card. `avaliacao: 0` significa "ninguém conferiu a nota" e o card esconde
 a linha — melhor que anunciar "Nota 0 de 5".
+
+## Ser achado: busca e IA
+
+Cada produto tem **URL própria** (`/produto/{slug}-{meli_id}`) com marcação
+`schema.org` de `Product` e `Offer`. É de lá que buscador e assistente de IA
+leem preço, moeda e disponibilidade sem adivinhar no HTML.
+
+**O `meli_id` no fim do slug é de propósito.** O `nome` é curadoria e muda
+quando o Alisson reescreve o título; sem o id, reescrever quebraria uma URL
+já indexada. Com ele, o texto muda à vontade.
+
+O `priceValidUntil` é o dia seguinte à conferência — o preço vale até a
+próxima checagem, não pra sempre. Prometer validade maior que a real é o
+mesmo erro do preço velho, só que em linguagem de máquina.
+
+`robots.ts` libera tudo, **inclusive rastreador de IA**. A aposta do projeto é
+ser citado como fonte de preço conferido, e pra isso o robô precisa entrar e
+ler o preço.
+
+⚠️ **Nunca esconda o preço atrás de clique.** A ideia apareceu em 07/09/2026 e
+foi descartada com razão: IA cita fato, e sem preço na página não há fato pra
+citar — o site sai da resposta em vez de ganhar o clique. Mostrar coisa
+diferente pro robô e pra pessoa (*cloaking*) tira o site do índice.
+
+O botão do card vai **direto pra loja**. A página do produto é porta de
+entrada de busca, não degrau do funil: quem chega por ela já está lá.
 
 ## Dinheiro
 

@@ -47,7 +47,7 @@ export function Vitrine({
         )}
       </div>
 
-      <div className="grid min-w-0 grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid min-w-0 grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
         {produtos.map((produto, i) =>
           ativa === null || produto.categoria === ativa ? (
             <div key={produto.id} className="min-w-0">
