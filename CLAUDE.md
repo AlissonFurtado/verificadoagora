@@ -362,6 +362,20 @@ só entra quando uma pessoa abriu a página e viu.
 Ele também não mexe em `nome`, `descricao`, `categoria` nem `avaliacao` — isso
 é curadoria, e curadoria é do Alisson.
 
+⚠️ **Actions não abrem pull request por padrão.** Na primeira vez que um preço
+passou dos 15% — 09/09/2026 — o robô criou o branch, empurrou e morreu no
+`gh pr create`:
+
+```
+GitHub Actions is not permitted to create or approve pull requests
+```
+
+É uma trava do repositório, não do código: **Settings → Actions → General →
+Workflow permissions → "Allow GitHub Actions to create and approve pull
+requests"**. Nada se perde quando acontece — o branch fica íntegro no GitHub e
+dá pra mergear à mão. Mas a Action fica vermelha e o preço novo não chega na
+vitrine até alguém perceber.
+
 **Quem é dono do refresh token é a Action.** Desde 07/09/2026 os segredos
 estão no GitHub e cada rodada lá queima o token e grava o novo por cima.
 Rodar `npm run precos:conferir` na máquina **invalida o que o GitHub tem** e
