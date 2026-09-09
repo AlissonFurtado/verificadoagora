@@ -4,13 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
-import {
-  formatarData,
-  formatarReal,
-  NOME_PLATAFORMA,
-  produtosVisiveis,
-  type Produto,
-} from '@/lib/produtos';
+import { formatarData, formatarReal, NOME_PLATAFORMA, type Produto } from '@/lib/produtos';
 import { seloDeMenorPreco, type PontoDoHistorico } from '@/lib/historico';
 import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { descreverConferencia } from '@/lib/relogio';
@@ -18,23 +12,40 @@ import { SeloDeConferencia } from '../../selo-de-conferencia';
 
 export const revalidate = 3600;
 
-/** Uma página por produto: é o que dá ao buscador e à IA o que indexar. */
+/**
+ * Uma página por produto: é o que dá ao buscador e à IA o que indexar.
+ *
+ * ⚠️ **Aqui é o catálogo inteiro, não `produtosVisiveis`.** Produto desligado
+ * (`disponivel: false`) sai da vitrine e do sitemap, mas a página dele
+ * continua respondendo — dizendo que a oferta acabou. Até 09/09/2026 ela
+ * devolvia 404, e uma URL que morre joga fora o que já tinha sido indexado;
+ * se o preço cair de novo e o robô religar o produto, teria que começar do
+ * zero. O endereço fica de pé, o conteúdo é que muda.
+ */
 export function generateStaticParams() {
-  return produtosVisiveis(lerCatalogo().produtos).map((p) => ({ slug: gerarSlug(p) }));
+  return lerCatalogo().produtos.map((p) => ({ slug: gerarSlug(p) }));
 }
 
 function buscar(slug: string): Produto | undefined {
-  return acharPorSlug(produtosVisiveis(lerCatalogo().produtos), slug);
+  return acharPorSlug(lerCatalogo().produtos, slug);
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const produto = buscar(params.slug);
   if (!produto) return { title: 'Produto não encontrado' };
 
-  const titulo = `${produto.nome} por ${formatarReal(produto.preco_atual)}`;
-  const descricao = `${produto.desconto_percentual}% de desconto, preço conferido em ${formatarData(
-    produto.verificado_em,
-  )}. ${produto.descricao}`;
+  // O título diz a verdade também na lista do buscador: quem clica num
+  // resultado que promete oferta e cai num aviso de encerrada não volta.
+  const titulo = produto.disponivel
+    ? `${produto.nome} por ${formatarReal(produto.preco_atual)}`
+    : `${produto.nome} — oferta encerrada`;
+  const descricao = produto.disponivel
+    ? `${produto.desconto_percentual}% de desconto, preço conferido em ${formatarData(
+        produto.verificado_em,
+      )}. ${produto.descricao}`
+    : `Esta oferta não está mais no ar. O último preço conferido foi ${formatarReal(
+        produto.preco_atual,
+      )}, em ${formatarData(produto.verificado_em)}. Veja o histórico e os achados de hoje.`;
 
   return {
     title: titulo,
@@ -195,6 +206,18 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           </div>
 
           <div className="flex min-w-0 flex-col justify-center">
+            {/* O aviso vem antes do preço de propósito: quem chegou por uma
+                busca antiga precisa saber que a oferta acabou antes de ler o
+                valor, não depois de descer a página inteira. */}
+            {!produto.disponivel && (
+              <p className="mb-4 flex min-w-0 flex-wrap items-baseline gap-x-2 rounded-xl border border-amber-300/70 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                <strong className="font-extrabold">Esta oferta acabou.</strong>
+                <span className="min-w-0">
+                  O último preço conferido foi em {formatarData(produto.verificado_em)}.
+                </span>
+              </p>
+            )}
+
             <p className="text-xs font-bold uppercase tracking-widest text-marca">
               {produto.categoria}
             </p>
@@ -205,8 +228,15 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               <p className="text-sm font-semibold text-slate-400 line-through">{formatarReal(produto.preco_original)}</p>
               <p className="flex flex-wrap items-baseline gap-x-3 text-4xl font-black tracking-tight text-marca">
                 {formatarReal(produto.preco_atual)}
-                <span className="rounded-full bg-red-500 px-3 py-1.5 text-xs font-black text-white shadow-md shadow-red-500/10 flex items-center gap-1">
-                  <span>🔥</span> {produto.desconto_percentual}% OFF
+                <span
+                  className={`flex items-center gap-1 rounded-full px-3 py-1.5 text-xs font-black shadow-md ${
+                    produto.disponivel
+                      ? 'bg-desconto text-white shadow-red-500/10'
+                      : 'bg-slate-200 text-slate-600 shadow-none'
+                  }`}
+                >
+                  {produto.disponivel && <span aria-hidden="true">🔥</span>}
+                  {produto.desconto_percentual}% OFF
                 </span>
               </p>
               {produto.preco_no_pix && (
@@ -239,19 +269,32 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               </p>
             )}
 
-            <a
-              href={produto.link_afiliado}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-              data-oferta={produto.nome}
-              data-categoria={produto.categoria}
-              data-preco={produto.preco_atual}
-              data-onde="produto"
-              className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
-            >
-              Ver no {plataforma}
-              <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
-            </a>
+            {/* Sem botão de compra quando a oferta acabou. Mandar alguém pra
+                loja num preço que não vale mais é exatamente o erro que esta
+                página existe pra não cometer — o caminho vira a vitrine. */}
+            {produto.disponivel ? (
+              <a
+                href={produto.link_afiliado}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                data-oferta={produto.nome}
+                data-categoria={produto.categoria}
+                data-preco={produto.preco_atual}
+                data-onde="produto"
+                className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
+              >
+                Ver no {plataforma}
+                <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
+              </a>
+            ) : (
+              <Link
+                href="/"
+                className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca"
+              >
+                Ver os achados de hoje
+                <span aria-hidden="true" className="text-xl leading-none">→</span>
+              </Link>
+            )}
 
             {comparativo && (
               <Link
@@ -275,9 +318,11 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
         </div>
 
         <footer className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
-          <p className="text-xs text-slate-400">
-            Link de afiliado do {plataforma} · você paga o mesmo preço
-          </p>
+          {produto.disponivel && (
+            <p className="text-xs text-slate-400">
+              Link de afiliado do {plataforma} · você paga o mesmo preço
+            </p>
+          )}
           <p className="mt-4">
             <Link href="/" className="font-bold text-marca hover:text-marca-acao transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">
               <span>←</span> Ver todos os achados

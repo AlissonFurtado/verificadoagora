@@ -270,8 +270,13 @@ Regras do arquivo:
 - `meli_id` é o que o robô usa pra conferir: `MLB24076624` (produto de
   catálogo, o da URL `/p/`) ou `MLB-7547729432` (anúncio). Vazio significa
   "ninguém confere este preço" — e o robô diz isso em voz alta a cada rodada.
-- `disponivel: false` tira o produto da página sem apagar nada. É o robô que
-  liga e desliga; mexer na mão só se souber por quê.
+- `disponivel: false` tira o produto **da vitrine e do sitemap**, mas a página
+  dele continua respondendo, dizendo que a oferta acabou e mostrando o
+  histórico. Até 09/09/2026 ela devolvia 404, porque `generateStaticParams`
+  usava `produtosVisiveis` — e URL que morre joga fora o que já tinha sido
+  indexado. Sem oferta não há botão de compra nem declaração de afiliado: o
+  caminho vira a vitrine. É o robô que liga e desliga; mexer na mão só se
+  souber por quê.
 - `plataforma` em kebab-case (`mercado-livre`) — vira rótulo no botão.
 - Datas em ISO (`2026-08-31`), e `metadata.ultima_atualizacao` acompanha.
 - `metadata.conferido_em` é ISO **com hora** (`2026-09-08T14:51:05Z`): o
