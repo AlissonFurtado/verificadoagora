@@ -93,6 +93,7 @@ export function CardProduto({
           {comparativo && (
             <Link
               href={comparativo.caminho}
+              data-comparativo={produto.nome}
               className="absolute bottom-2 left-2 flex items-center gap-1 rounded bg-amber-400 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-amber-950 shadow-sm transition-colors hover:bg-amber-300 sm:bottom-3 sm:left-3"
             >
               <span aria-hidden="true">⚖</span>
@@ -158,6 +159,10 @@ export function CardProduto({
             href={produto.link_afiliado}
             target="_blank"
             rel="sponsored noopener noreferrer"
+            data-oferta={produto.nome}
+            data-categoria={produto.categoria}
+            data-preco={produto.preco_atual}
+            data-onde="vitrine"
             className="mt-1.5 block rounded-lg bg-marca-acao px-3 py-2.5 text-center text-[13px] font-extrabold uppercase tracking-wider text-white transition-colors hover:bg-marca"
           >
             Ver oferta

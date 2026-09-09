@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { track } from '@vercel/analytics';
 import { categoriasDe, type Produto } from '@/lib/produtos';
 
 /**
@@ -84,7 +85,12 @@ export function Vitrine({
       <button
         key={rotulo}
         type="button"
-        onClick={() => setAtiva(valor)}
+        onClick={() => {
+          setAtiva(valor);
+          // A categoria mais filtrada é a que deveria estar no garimpo.json:
+          // a medição aqui realimenta o robô que escolhe os candidatos.
+          track('filtro_usado', { categoria: valor ?? 'tudo' });
+        }}
         aria-pressed={selecionada}
         className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
           selecionada

@@ -198,6 +198,10 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             href={produto.link_afiliado}
             target="_blank"
             rel="sponsored noopener noreferrer"
+            data-oferta={produto.nome}
+            data-categoria={produto.categoria}
+            data-preco={produto.preco_atual}
+            data-onde="comparativo"
             className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
           >
             Ver oferta
@@ -367,6 +371,10 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
               href={produto.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
+              data-oferta={produto.nome}
+              data-categoria={produto.categoria}
+              data-preco={produto.preco_atual}
+              data-onde="comparativo"
               className="flex items-center gap-2 rounded-xl bg-marca-acao px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-marca/10 transition-all hover:bg-marca"
             >
               Ver o {produto.nome.split(' ').slice(0, 3).join(' ')} por{' '}
@@ -383,6 +391,10 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                   href={doCatalogo.link_afiliado}
                   target="_blank"
                   rel="sponsored noopener noreferrer"
+                  data-oferta={doCatalogo.nome}
+                  data-categoria={doCatalogo.categoria}
+                  data-preco={doCatalogo.preco_atual}
+                  data-onde="comparativo-rival"
                   className="flex items-center gap-2 rounded-xl bg-slate-100 border border-slate-200 px-5 py-3.5 text-sm font-bold text-slate-700 hover:bg-slate-200 hover:text-slate-900 transition-all"
                 >
                   Ver o {coluna.nome} por {formatarReal(doCatalogo.preco_atual)}

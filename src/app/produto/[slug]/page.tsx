@@ -243,6 +243,10 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               href={produto.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
+              data-oferta={produto.nome}
+              data-categoria={produto.categoria}
+              data-preco={produto.preco_atual}
+              data-onde="produto"
               className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
             >
               Ver no {plataforma}
@@ -252,6 +256,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
             {comparativo && (
               <Link
                 href={caminhoDoComparativo(produto)}
+                data-comparativo={produto.nome}
                 className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-amber-50 border border-amber-200/60 px-6 py-3.5 text-sm font-bold text-amber-800 transition-colors hover:bg-amber-100"
               >
                 <span aria-hidden="true">⚖</span>

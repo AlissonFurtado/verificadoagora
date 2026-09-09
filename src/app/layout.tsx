@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
+import { MedirCliques } from './medicao';
 import './globals.css';
 
 // next/font baixa e serve a fonte do próprio domínio: sem chamada ao Google
@@ -42,7 +44,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={inter.variable}>
-      <body className="bg-fundo font-sans text-slate-900 antialiased">{children}</body>
+      <body className="bg-fundo font-sans text-slate-900 antialiased">
+        {children}
+        {/*
+          Medição. Entrou em 08/09/2026: o site estava no ar desde 01/09 sem
+          ninguém saber quantas pessoas entravam.
+
+          Escolhido por não usar cookie — daí não precisar de banner de
+          consentimento, que seria a primeira coisa que o visitante veria no
+          celular, em cima da vitrine. Só roda em produção; em
+          desenvolvimento o pacote fica quieto sozinho.
+        */}
+        <Analytics />
+        <MedirCliques />
+      </body>
     </html>
   );
 }

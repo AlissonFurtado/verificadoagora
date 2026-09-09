@@ -182,6 +182,42 @@ regressivo** (a página não sabe quando a oferta acaba — quem muda o preço �
 loja) e o **banner com vermelho de urgência**. As duas contradizem o nome do
 site.
 
+## Medição
+
+Entrou em 08/09/2026. Até então o site estava no ar havia uma semana e
+**ninguém sabia quantas pessoas entravam** — nem se alguém tinha clicado num
+link de afiliado uma vez sequer.
+
+**Vercel Analytics**, escolhido por não usar cookie: sem cookie não precisa de
+banner de consentimento, e banner seria a primeira coisa que o visitante veria
+no celular, em cima da vitrine que custou trabalho pra caber na tela.
+
+Três eventos, em `src/app/medicao.tsx`:
+
+| Evento | Responde |
+|---|---|
+| `oferta_clicada` | quantas visitas viram clique, em quais produtos e a partir de qual página |
+| `comparativo_aberto` | se o comparativo puxa gente ou é enfeite |
+| `filtro_usado` | que categoria as pessoas procuram de verdade |
+
+**`oferta_clicada` é o único que liga o site ao dinheiro.** É o número pra
+cruzar com os cliques que o painel de afiliado do Mercado Livre já mostra: se
+os dois baterem, o caminho está inteiro; se a página contar mais cliques que o
+Meli, alguma coisa quebra no meio.
+
+**`filtro_usado` realimenta o robô.** A categoria mais filtrada é a que
+deveria estar no `data/garimpo.json`.
+
+O clique é capturado por **delegação num só lugar** (`MedirCliques`, montado no
+`layout.tsx`), lendo `data-oferta`, `data-categoria`, `data-preco` e
+`data-onde` do link. Foi assim pra os cards continuarem sendo componentes de
+servidor — envolver cada botão num componente cliente mandaria o catálogo
+inteiro pro navegador. Link novo que precise ser medido só precisa dos
+atributos.
+
+⚠️ **Nenhum dado pessoal vai nos eventos.** Só nome de produto, categoria e
+preço — o que já está público na própria página.
+
 ## O contrato do `data/produtos.json`
 
 É a fonte única de verdade da página. **Editar esse arquivo é publicar
