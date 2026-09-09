@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-08",
+  "atualizado_em": "2026-09-09",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -144,6 +144,66 @@
       "sugerido_em": "2026-09-08",
       "familia": "Fujifilm Instax Mini 12 Pilha",
       "preco_sugerido": 467,
+      "vezes": 1
+    },
+    "MLB50243717": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Suporte Zinnia ZNO-ZNNBO110-WH01",
+      "preco_sugerido": 103.9,
+      "vezes": 1
+    },
+    "MLB46560669": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Monitor Gamer Samsung com tela de 24\" 100Hz e resolução Full HD",
+      "preco_sugerido": 539,
+      "vezes": 1
+    },
+    "MLB55044657": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Samsung Galaxy A17",
+      "preco_sugerido": 835,
+      "vezes": 1
+    },
+    "MLB41540860": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Moto G35 5G Dual SIM",
+      "preco_sugerido": 999,
+      "vezes": 1
+    },
+    "MLB51533757": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Moto G86",
+      "preco_sugerido": 1652.67,
+      "vezes": 1
+    },
+    "MLB15085750": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Controle joystick sem fio Sony PlayStation Dualshock 4 Wireless controller",
+      "preco_sugerido": 129.21,
+      "vezes": 1
+    },
+    "MLB41149253": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Mouse para jogos sem fio Attack Shark X11 X11",
+      "preco_sugerido": 179.99,
+      "vezes": 1
+    },
+    "MLB36555516": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Controle joystick sem fio GameSir T4 Nova Lite Multi-plataforma",
+      "preco_sugerido": 179.9,
+      "vezes": 1
+    },
+    "MLB64255484": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Tripé para câmera Basike Tripé Para Celular tripé celular universal de 180cm de diâmetro",
+      "preco_sugerido": 159.97,
+      "vezes": 1
+    },
+    "MLB16602518": {
+      "sugerido_em": "2026-09-09",
+      "familia": "Liquidificador Oster 1400 Full OLIQ610 3.2 L",
+      "preco_sugerido": 188.37,
       "vezes": 1
     }
   }
