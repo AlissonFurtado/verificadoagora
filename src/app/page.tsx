@@ -3,6 +3,7 @@ import { ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
 import { resumirTendencia, seloDeMenorPreco } from '@/lib/historico';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import { caminhoDoComparativo } from '@/lib/slug';
+import Link from 'next/link';
 import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
 import { SeloDeConferencia } from './selo-de-conferencia';
@@ -25,6 +26,16 @@ const GARANTIAS = [
   ['Preço conferido todo dia', 'um robô confere na API do Mercado Livre toda manhã'],
   ['Histórico de verdade', 'guardamos o preço de cada dia, por isso sabemos qual é o menor'],
 ] as const;
+
+/**
+ * O foco do site desde 09/09/2026: celulares intermediários.
+ *
+ * O que já estava no catálogo fora dessa faixa continua no ar e continua
+ * sendo conferido — mas não recebe produto novo, e o filtro deixa de dar a
+ * ele o mesmo peso. Dois assuntos com o mesmo destaque atrapalham a leitura
+ * de tópico do buscador.
+ */
+const CATEGORIA_FOCO = 'Celulares';
 
 export default function Home() {
   const { produtos: todos, metadata } = lerCatalogo();
@@ -55,9 +66,12 @@ export default function Home() {
           </h1>
           {/* Some no celular: no espaço que ele ocupa cabe metade de um card,
               e o título já diz o que a página é. */}
-          <p className="mt-3 hidden max-w-xl text-lg font-medium text-sky-100/70 sm:block">
-            Achadinhos de tecnologia com desconto de verdade — e o preço conferido no dia,
-            não no mês passado.
+          <p className="mt-2 max-w-xl text-sm font-semibold text-marca-claro sm:mt-3 sm:text-lg">
+            Celulares intermediários, de R$ 800 a R$ 2.500.
+          </p>
+          <p className="mt-2 hidden max-w-xl text-lg font-medium text-sky-100/70 sm:block">
+            O preço de cada um é conferido por robô toda manhã, e a gente guarda o valor de todo
+            dia — por isso dá pra dizer quando está barato de verdade.
           </p>
 
           <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-sky-100/65 sm:mt-6 sm:text-sm">
@@ -79,7 +93,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-4 py-5 sm:py-12">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 sm:mb-8">
           <h2 className="text-xl font-extrabold tracking-tight text-slate-900 sm:text-2xl">
-            {produtos.length} {produtos.length === 1 ? 'achado' : 'achados'} desta semana
+            {produtos.length} {produtos.length === 1 ? 'achado conferido' : 'achados conferidos'}
           </h2>
           <p className="text-xs font-medium text-slate-500 sm:text-sm">
             A loja muda preço a qualquer hora — vale conferir antes de comprar.
@@ -87,6 +101,7 @@ export default function Home() {
         </div>
 
         <Vitrine
+          foco={CATEGORIA_FOCO}
           produtos={produtos}
           cards={produtos.map((produto) => {
             const comparativo = acharComparativo(comparativos, produto.meli_id);
@@ -120,6 +135,14 @@ export default function Home() {
           {/* Encurtado em 08/09/2026, não removido: o programa de afiliados
               exige a declaração e a regra 1 do projeto diz "nunca tire". Uma
               linha cumpre a exigência sem virar parede de texto. */}
+          <p>
+            <Link
+              href="/como-conferimos"
+              className="font-bold text-marca-claro underline decoration-marca-claro/40 underline-offset-4 transition-colors hover:text-white"
+            >
+              Como conferimos os preços
+            </Link>
+          </p>
           <p className="text-sky-100/75">Links de afiliado · você paga o mesmo preço</p>
           <p>
             © 2026 A F DE SOUSA ·{' '}

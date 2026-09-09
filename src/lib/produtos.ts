@@ -22,6 +22,19 @@ export type Produto = {
   familia: string;
   data_adicionado: string;
   verificado_em: string;
+  /**
+   * Dois ou três parágrafos escritos à mão sobre o produto: pra quem serve e
+   * quando **não** comprar.
+   *
+   * ⚠️ **Não é opcional pra produto novo.** Página com preço e botão e mais
+   * nada é o que a política de spam do Google chama de *thin affiliate* — e a
+   * partir de 09/09/2026 nenhum produto entra no catálogo sem isto, mesmo que
+   * o robô tenha achado uma oferta ótima.
+   *
+   * A frase sobre o histórico de preço **não vem daqui**: ela é gerada do
+   * `historico.json` por `fraseDoHistorico`, pra nunca envelhecer.
+   */
+  analise: string[];
 };
 
 export type Catalogo = {

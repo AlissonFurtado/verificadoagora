@@ -23,9 +23,10 @@ const enderecoDoSite = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : 'http://localhost:3000';
 
-const titulo = 'Verificado Agora — achadinhos de tech';
+const titulo = 'Verificado Agora — celulares intermediários com preço conferido todo dia';
 const descricao =
-  'Ofertas de tecnologia conferidas uma a uma, com o preço do dia e o link direto da loja.';
+  'Celulares intermediários de R$ 800 a R$ 2.500, com o preço conferido por robô toda manhã, ' +
+  'histórico de cada dia e comparativos ficha a ficha.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(enderecoDoSite),
@@ -39,6 +40,20 @@ export const metadata: Metadata = {
     siteName: 'Verificado Agora',
   },
   twitter: { card: 'summary_large_image', title: titulo, description: descricao },
+  /*
+   * `max-image-preview: large` é requisito do Google Discover: sem ele o
+   * buscador só pode mostrar miniatura, e Discover não usa miniatura. Vale
+   * pra todas as páginas porque o layout é a raiz.
+   *
+   * ⚠️ A foto do produto que vem do Meli tem 719px de largura no maior
+   * tamanho disponível — abaixo dos 1200px que o Discover pede. Quem cumpre
+   * o requisito é a capa gerada em `opengraph-image.tsx`, que é 1200x630.
+   */
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

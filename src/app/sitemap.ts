@@ -19,6 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1,
     },
+    {
+      // Explica o robô: é o ativo de confiança do site e o tipo de texto que
+      // buscador e IA conseguem ler e citar.
+      url: `${base}/como-conferimos`,
+      lastModified: new Date(metadata.ultima_atualizacao),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
     ...visiveis.map((produto) => ({
       url: `${base}${caminhoDoProduto(produto)}`,
       lastModified: new Date(produto.verificado_em),

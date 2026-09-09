@@ -8,16 +8,16 @@ import { track } from '@vercel/analytics';
  *
  * | evento              | responde                                          |
  * |---------------------|---------------------------------------------------|
- * | `oferta_clicada`    | quantas visitas viram clique, e em quais produtos  |
- * | `comparativo_aberto`| se o comparativo puxa gente ou é enfeite           |
- * | `filtro_usado`      | que categoria as pessoas procuram de verdade       |
+ * | `clique_oferta`     | quantas visitas viram clique, e em quais produtos  |
+ * | `abre_comparativo`  | se o comparativo puxa gente ou é enfeite           |
+ * | `filtro_categoria`  | que categoria as pessoas procuram de verdade       |
  *
- * `oferta_clicada` é o único que liga o site ao dinheiro: é o número pra
+ * `clique_oferta` é o único que liga o site ao dinheiro: é o número pra
  * cruzar com os cliques que o painel de afiliado do Mercado Livre já mostra.
  * Se os dois baterem, o caminho está inteiro; se a página contar mais cliques
  * que o Meli, alguma coisa quebra no meio.
  *
- * `filtro_usado` não é curiosidade: a categoria mais filtrada é a que deveria
+ * `filtro_categoria` não é curiosidade: a categoria mais filtrada é a que deveria
  * estar no `data/garimpo.json`. A medição realimenta o robô.
  *
  * ⚠️ **Nada de dado pessoal vai nestes eventos.** Só nome de produto,
@@ -35,7 +35,7 @@ export function MedirCliques() {
         // (documentação de 25/08/2026), e mandar mais é pedir pra perder o
         // evento inteiro. Categoria e preço saíram porque dá pra descobrir os
         // dois no catálogo a partir do nome — `onde` não dá.
-        track('oferta_clicada', {
+        track('clique_oferta', {
           produto: oferta.dataset.oferta ?? '',
           // De qual página saiu o clique: a vitrine, a página do produto ou o
           // comparativo. É o que diz se vale escrever mais comparativo.
@@ -46,7 +46,7 @@ export function MedirCliques() {
 
       const comparativo = alvo.closest<HTMLElement>('[data-comparativo]');
       if (comparativo) {
-        track('comparativo_aberto', { produto: comparativo.dataset.comparativo ?? '' });
+        track('abre_comparativo', { comparativo: comparativo.dataset.comparativo ?? '' });
       }
     }
 

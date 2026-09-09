@@ -198,7 +198,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             href={produto.link_afiliado}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            data-oferta={produto.nome}
+            data-oferta={gerarSlug(produto)}
             data-categoria={produto.categoria}
             data-preco={produto.preco_atual}
             data-onde="comparativo"
@@ -371,7 +371,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
               href={produto.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
-              data-oferta={produto.nome}
+              data-oferta={gerarSlug(produto)}
               data-categoria={produto.categoria}
               data-preco={produto.preco_atual}
               data-onde="comparativo"
@@ -391,7 +391,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                   href={doCatalogo.link_afiliado}
                   target="_blank"
                   rel="sponsored noopener noreferrer"
-                  data-oferta={doCatalogo.nome}
+                  data-oferta={gerarSlug(doCatalogo)}
                   data-categoria={doCatalogo.categoria}
                   data-preco={doCatalogo.preco_atual}
                   data-onde="comparativo-rival"

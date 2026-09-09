@@ -70,17 +70,32 @@ function CardQueEntra({ atraso, children }: { atraso: number; children: React.Re
 export function Vitrine({
   produtos,
   cards,
+  foco,
 }: {
   produtos: Produto[];
   cards: React.ReactNode[];
+  /**
+   * A categoria em que o site é especializado. Vem primeira e com peso
+   * visual; as outras continuam clicáveis, mas em segundo plano — elas estão
+   * no ar por herança, não porque o site é sobre elas.
+   */
+  foco?: string;
 }) {
   const categorias = categoriasDe(produtos);
+  const emFoco = foco && categorias.includes(foco) ? foco : null;
+  const secundarias = categorias.filter((c) => c !== emFoco);
   const [ativa, setAtiva] = useState<string | null>(null);
 
   const visiveis = produtos.filter((p) => ativa === null || p.categoria === ativa);
 
-  const botao = (rotulo: string, valor: string | null) => {
+  const quantosEm = (categoria: string) =>
+    produtos.filter((p) => p.categoria === categoria).length;
+
+  const botao = (rotulo: string, valor: string | null, secundaria = false) => {
     const selecionada = ativa === valor;
+    const repouso = secundaria
+      ? 'bg-transparent text-slate-500 ring-1 ring-inset ring-slate-300/70 hover:bg-white hover:text-marca'
+      : 'bg-white text-slate-600 ring-1 ring-inset ring-slate-300 hover:bg-slate-100 hover:text-marca';
     return (
       <button
         key={rotulo}
@@ -89,14 +104,12 @@ export function Vitrine({
           setAtiva(valor);
           // A categoria mais filtrada é a que deveria estar no garimpo.json:
           // a medição aqui realimenta o robô que escolhe os candidatos.
-          track('filtro_usado', { categoria: valor ?? 'tudo' });
+          track('filtro_categoria', { categoria: valor ?? 'tudo' });
         }}
         aria-pressed={selecionada}
-        className={`shrink-0 rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
-          selecionada
-            ? 'bg-marca text-white shadow'
-            : 'bg-white text-slate-600 ring-1 ring-inset ring-slate-300 hover:bg-slate-100 hover:text-marca'
-        }`}
+        className={`shrink-0 rounded-full transition-colors ${
+          secundaria ? 'px-3 py-1.5 text-xs font-semibold' : 'px-4 py-2 text-sm font-semibold'
+        } ${selecionada ? 'bg-marca text-white shadow' : repouso}`}
       >
         {rotulo}
       </button>
@@ -105,11 +118,14 @@ export function Vitrine({
 
   return (
     <>
-      <div className="-mx-4 mb-8 flex gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
+      <div className="-mx-4 mb-8 flex items-center gap-2 overflow-x-auto px-4 pb-2 sm:mx-0 sm:flex-wrap sm:px-0">
+        {emFoco && botao(`${emFoco} (${quantosEm(emFoco)})`, emFoco)}
         {botao(`Tudo (${produtos.length})`, null)}
-        {categorias.map((c) =>
-          botao(`${c} (${produtos.filter((p) => p.categoria === c).length})`, c),
+        {/* A barrinha separa o assunto do site do que ficou de herança. */}
+        {emFoco && secundarias.length > 0 && (
+          <span aria-hidden="true" className="h-5 w-px shrink-0 bg-slate-300" />
         )}
+        {secundarias.map((c) => botao(`${c} (${quantosEm(c)})`, c, true))}
       </div>
 
       {/* Uma coluna no celular: o card fica deitado e cabem três por tela. */}

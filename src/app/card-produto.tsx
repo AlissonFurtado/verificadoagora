@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatarData, formatarReal, type Produto } from '@/lib/produtos';
-import { caminhoDoProduto } from '@/lib/slug';
+import { caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import type { Tendencia } from '@/lib/historico';
 import { MiniGrafico } from './mini-grafico';
 
@@ -93,7 +93,7 @@ export function CardProduto({
           {comparativo && (
             <Link
               href={comparativo.caminho}
-              data-comparativo={produto.nome}
+              data-comparativo={gerarSlug(produto)}
               className="absolute bottom-2 left-2 flex items-center gap-1 rounded bg-amber-400 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-amber-950 shadow-sm transition-colors hover:bg-amber-300 sm:bottom-3 sm:left-3"
             >
               <span aria-hidden="true">⚖</span>
@@ -159,7 +159,7 @@ export function CardProduto({
             href={produto.link_afiliado}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            data-oferta={produto.nome}
+            data-oferta={gerarSlug(produto)}
             data-categoria={produto.categoria}
             data-preco={produto.preco_atual}
             data-onde="vitrine"

@@ -1,8 +1,13 @@
 # verificadoagora
 
-Landing de afiliados de tecnologia — "achadinhos" com desconto, link do
-Mercado Livre. Quem chega vem do Instagram (**@verificadoagora_**), pelo link
-da bio: a página existe pra transformar aquele scroll em clique no produto.
+Site de **celulares intermediários** (R$ 800 a R$ 2.500) com o preço conferido
+por robô toda manhã, link de afiliado do Mercado Livre.
+
+O foco entrou em 09/09/2026, por brief do Alisson. Antes era "achadinhos de
+tecnologia" em geral. O que já estava no catálogo fora dessa faixa — casa,
+games, foto, áudio — **fica no ar e continua sendo conferido**, mas não recebe
+produto novo e perdeu o destaque no filtro: dois assuntos com o mesmo peso
+atrapalham a leitura de tópico do buscador.
 
 - Next.js 14 (App Router) + TypeScript + Tailwind, na **raiz do repo**
 - Dados em `data/produtos.json` — sem banco, sem API, sem backend
@@ -574,11 +579,20 @@ Três regras que não são de estilo:
    vitrine e os parágrafos longos viraram uma linha em cada rodapé — "Links
    de afiliado · você paga o mesmo preço". Se alguém pedir de novo pra "tirar
    o aviso de afiliado", é esta linha que está em jogo, e ela fica.
-2. **Preço e cupom envelhecem.** Não anuncie desconto sem conferir no link
+2. **Produto não entra sem parágrafo original.** O campo `analise` do
+   `produtos.json` tem 2 a 3 parágrafos escritos à mão: pra quem serve e
+   quando **não** comprar. Página com preço e botão e mais nada é o que a
+   política de spam do Google chama de *thin affiliate*. Vale mesmo quando o
+   robô achou uma oferta ótima — e é o motivo pelo qual **catálogo grande não
+   é meta**: mais URL sem texto não traz tráfego, atrapalha.
+3. **Preço e cupom envelhecem.** Não anuncie desconto sem conferir no link
    antes. Produto com preço errado queima a confiança, que é o único ativo
    desta página.
-3. **`link_afiliado` sempre com o tracking do Alisson.** Link limpo entrega o
+4. **`link_afiliado` sempre com o tracking do Alisson.** Link limpo entrega o
    clique de graça.
+5. **Nunca use `meli.la` em rede social.** Encurtador em pin do Pinterest ou
+   post é sinalizado como spam. Nas redes o destino é sempre uma página do
+   próprio site, que aí leva pro Meli.
 
 ## Instagram: é fase 3, não é agora
 

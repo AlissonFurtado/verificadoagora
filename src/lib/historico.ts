@@ -109,3 +109,43 @@ export function resumirTendencia(pontos: PontoDoHistorico[] | undefined): Tenden
 
   return { pontos, variacao, porcento, descricao };
 }
+
+/**
+ * O histórico de preço dito em uma frase, em HTML visível.
+ *
+ * O gráfico continua ali do lado, mas ele é uma imagem: **assistente de IA lê
+ * o texto renderizado** na hora de escolher quem citar, e um `<path>` de SVG
+ * não diz preço nenhum. Sem esta frase, o dado que só nós temos — o preço de
+ * cada dia — fica invisível justamente para quem a página quer alcançar.
+ *
+ * Devolve `null` com menos de dois dias: uma "variação" de um ponto só não
+ * existe, e inventar redação em cima disso seria o mesmo erro do preço velho.
+ */
+export function fraseDoHistorico(
+  pontos: PontoDoHistorico[] | undefined,
+  precoDeHoje: number,
+  formatar: (valor: number) => string,
+  formatarDia: (dia: string) => string,
+): string | null {
+  if (!pontos || pontos.length < 2) return null;
+
+  const corte = diasAtras(JANELA_MAXIMA);
+  const janela = pontos.filter((p) => p.dia >= corte);
+  if (janela.length < 2) return null;
+
+  const menor = janela.reduce((a, b) => (b.preco < a.preco ? b : a));
+  const dias = janela.length;
+  const quando = `nos últimos ${dias} dias`;
+
+  const abertura = `Acompanhamos este preço todo dia. O menor valor ${quando} foi ${formatar(
+    menor.preco,
+  )}, em ${formatarDia(menor.dia)}.`;
+
+  if (precoDeHoje <= menor.preco) {
+    return `${abertura} Hoje está ${formatar(precoDeHoje)} — é o menor que já vimos nesse período.`;
+  }
+
+  const acima = Math.round(((precoDeHoje - menor.preco) / menor.preco) * 100);
+  const diferenca = acima >= 1 ? `${acima}% acima` : `pouco acima`;
+  return `${abertura} Hoje está ${formatar(precoDeHoje)}, ${diferenca} do menor observado.`;
+}

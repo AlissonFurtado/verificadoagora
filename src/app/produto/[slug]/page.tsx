@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import { formatarData, formatarReal, NOME_PLATAFORMA, type Produto } from '@/lib/produtos';
-import { seloDeMenorPreco, type PontoDoHistorico } from '@/lib/historico';
+import { fraseDoHistorico, seloDeMenorPreco, type PontoDoHistorico } from '@/lib/historico';
 import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
@@ -162,6 +162,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
   const economia = produto.preco_original - produto.preco_atual;
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
   const conferencia = descreverConferencia(lerCatalogo().metadata.conferido_em, new Date());
+  const frasePreco = fraseDoHistorico(pontos, produto.preco_atual, formatarReal, formatarData);
 
   return (
     <main className="min-h-screen bg-fundo text-slate-800">
@@ -277,7 +278,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
                 href={produto.link_afiliado}
                 target="_blank"
                 rel="sponsored noopener noreferrer"
-                data-oferta={produto.nome}
+                data-oferta={gerarSlug(produto)}
                 data-categoria={produto.categoria}
                 data-preco={produto.preco_atual}
                 data-onde="produto"
@@ -299,7 +300,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
             {comparativo && (
               <Link
                 href={caminhoDoComparativo(produto)}
-                data-comparativo={produto.nome}
+                data-comparativo={gerarSlug(produto)}
                 className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-amber-50 border border-amber-200/60 px-6 py-3.5 text-sm font-bold text-amber-800 transition-colors hover:bg-amber-100"
               >
                 <span aria-hidden="true">⚖</span>
@@ -313,7 +314,30 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           </div>
         </div>
 
-        <div className="mt-12">
+        {/* Os parágrafos escritos à mão. Sem eles a página é só preço e
+            botão — o que a política de spam do Google chama de thin affiliate,
+            e o que nenhum assistente de IA tem motivo pra citar. */}
+        {produto.analise?.length > 0 && (
+          <section className="mt-12 min-w-0 rounded-2xl bg-white border border-slate-200/60 p-6 shadow-sm sm:p-8">
+            <h2 className="text-lg font-black text-slate-900 sm:text-xl">
+              {produto.disponivel ? 'Vale a pena?' : 'O que achávamos deste produto'}
+            </h2>
+            <div className="mt-4 flex max-w-[65ch] flex-col gap-4 text-[15px] leading-relaxed text-slate-600">
+              {produto.analise.map((paragrafo) => (
+                <p key={paragrafo.slice(0, 40)}>{paragrafo}</p>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="mt-6">
+          {/* A frase vem antes do gráfico e é a mesma informação em texto: o
+              gráfico é um SVG, e quem lê a página pra citar lê o texto. */}
+          {frasePreco && (
+            <p className="mb-4 max-w-[65ch] text-[15px] leading-relaxed text-slate-600">
+              {frasePreco}
+            </p>
+          )}
           <Grafico pontos={pontos} />
         </div>
 
