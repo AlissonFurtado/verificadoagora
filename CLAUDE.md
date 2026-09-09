@@ -139,6 +139,49 @@ O Tailwind chegou a existir só no `package.json`: a página usava as classes
 sem `tailwind.config.js`, `postcss.config.js`, `globals.css` nem layout, e saía
 sem estilo nenhum. Se alguma dessas peças sumir de novo, é isso que aconteceu.
 
+## O visual
+
+Fechado em 08/09/2026, depois de duas rodadas de comparação lado a lado com
+os produtos reais. As cores são **tokens no `tailwind.config.js`** — não
+espalhe hex pelo código.
+
+| Token | Cor | Onde |
+|---|---|---|
+| `fundo` | `#eef2f8` | o corpo claro da vitrine |
+| `noite` → `noite-meio` | `#0b1220` → `#172554` | faixa do topo e do rodapé (`.faixa-noturna`) |
+| `corte` | `#38bdf8` | a linha de 4px que separa o escuro do claro |
+| `marca` | `#1d4ed8` | preço, links, coluna do produto no comparativo |
+| `marca-acao` | `#2563eb` | botão de compra |
+| `economia` | `#047857` | quanto se economiza, e o traçado quando o preço cai |
+| `desconto` | `#d00000` | o selo de % OFF |
+
+**A faixa escura no topo é o que separa a página de um blog.** Ela abre e o
+rodapé fecha com o mesmo gradiente, e a vitrine clara fica emoldurada entre as
+duas. Antes disso o cabeçalho era branco sobre cinza e o Alisson resumiu bem:
+"parece um blog não chamativo".
+
+⚠️ **Verde e azul não são a mesma coisa aqui.** Azul é a marca; verde é
+semântica de "isto é bom" — economia, queda de preço, o selo *Melhor* na
+tabela do comparativo. Trocar o verde por azul apagaria essa distinção.
+
+⚠️ **Nunca use `#3483fa` nem `#00a650`.** São o azul e o verde de marca do
+**Mercado Livre**. A paleta que originou este visual trazia os dois, e foram
+recusados: uma página de afiliado vestida com as cores da loja parece
+propriedade oficial dela — problema com o programa de afiliados, e quem clica
+achando que está no Meli perde a confiança que a marca "Verificado" existe
+pra construir. O azul daqui é próximo o bastante para agradar e distante o
+bastante para não confundir.
+
+O card também nasceu dessa paleta — tag de categoria colorida, preço antigo e
+atual colados, preço em 26px peso 900, botão em caixa alta. O que **não** veio
+de lá foi o card vertical com foto grande: ele devolveria o problema de um
+produto por tela. Veja `card-produto.tsx`.
+
+Duas ideias da paleta original ficaram de fora de propósito: o **cronômetro
+regressivo** (a página não sabe quando a oferta acaba — quem muda o preço é a
+loja) e o **banner com vermelho de urgência**. As duas contradizem o nome do
+site.
+
 ## O contrato do `data/produtos.json`
 
 É a fonte única de verdade da página. **Editar esse arquivo é publicar

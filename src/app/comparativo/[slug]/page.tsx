@@ -183,7 +183,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
 
           <div className="min-w-0 flex-1">
             <h2 className="text-xl font-black text-slate-900">{produto.nome}</h2>
-            <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-3xl font-black text-emerald-600 tracking-tight">
+            <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-3xl font-black text-marca tracking-tight">
               {formatarReal(produto.preco_atual)}
               <span className="rounded-full bg-red-500 px-3 py-1 text-xs font-black text-white shadow-md shadow-red-500/10 flex items-center gap-1">
                 <span>🔥</span> {produto.desconto_percentual}% OFF
@@ -198,7 +198,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             href={produto.link_afiliado}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-emerald-500/25 transition-all hover:from-emerald-600 hover:to-emerald-700 hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
+            className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
           >
             Ver oferta
             <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
@@ -233,12 +233,12 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                       key={coluna.chave}
                       scope="col"
                       className={`min-w-[11rem] px-4 py-3.5 font-extrabold border-r border-slate-200/30 ${
-                        i === 0 ? 'bg-emerald-50/70 text-emerald-900' : 'text-slate-700'
+                        i === 0 ? 'bg-marca/[0.07] text-marca' : 'text-slate-700'
                       }`}
                     >
                       {coluna.nome}
                       {noCatalogo.has(coluna.chave) && (
-                        <span className="mt-1 block text-[10px] font-bold uppercase tracking-wider text-emerald-600">
+                        <span className="mt-1 block text-[10px] font-bold uppercase tracking-wider text-marca">
                           está na vitrine
                         </span>
                       )}
@@ -267,11 +267,11 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                     return (
                       <td
                         key={coluna.chave}
-                        className={`px-4 py-4 align-top border-r border-slate-200/30 ${i === 0 ? 'bg-emerald-50/20' : ''}`}
+                        className={`px-4 py-4 align-top border-r border-slate-200/30 ${i === 0 ? 'bg-marca/[0.04]' : ''}`}
                       >
                         {doCatalogo ? (
                           <>
-                            <span className="text-lg font-black text-emerald-600 block">
+                            <span className="text-lg font-black text-marca block">
                               {formatarReal(doCatalogo.preco_atual)}
                             </span>
                             <span className="mt-1 block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
@@ -304,9 +304,9 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                           key={coluna.chave}
                           className={`px-4 py-4 align-top border-r border-slate-200/30 ${
                             venceu
-                              ? 'bg-emerald-50/60 text-slate-900 font-medium'
+                              ? 'bg-emerald-50/70 text-slate-900 font-medium'
                               : i === 0
-                                ? 'bg-emerald-50/10 text-slate-600'
+                                ? 'bg-marca/[0.04] text-slate-600'
                                 : 'text-slate-600'
                           }`}
                         >
@@ -367,7 +367,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
               href={produto.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
-              className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-emerald-500/10 transition-all hover:from-emerald-600 hover:to-emerald-700"
+              className="flex items-center gap-2 rounded-xl bg-marca-acao px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-marca/10 transition-all hover:bg-marca"
             >
               Ver o {produto.nome.split(' ').slice(0, 3).join(' ')} por{' '}
               {formatarReal(produto.preco_atual)}
@@ -404,7 +404,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                   href={fonte.url}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
-                  className="break-words text-slate-400 underline decoration-slate-200 underline-offset-4 hover:text-emerald-600 hover:decoration-emerald-400 transition-colors"
+                  className="break-words text-slate-400 underline decoration-slate-200 underline-offset-4 hover:text-marca hover:decoration-marca transition-colors"
                 >
                   {fonte.titulo}
                 </a>
@@ -419,7 +419,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             a tabela mostra inclusive onde o {produto.nome} perde.
           </p>
           <p className="mt-4">
-            <Link href="/" className="font-bold text-emerald-600 hover:text-emerald-700 transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">
+            <Link href="/" className="font-bold text-marca hover:text-marca-acao transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">
               <span>←</span> Ver todos os achados
             </Link>
           </p>

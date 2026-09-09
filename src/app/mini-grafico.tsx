@@ -30,7 +30,7 @@ export function MiniGrafico({ tendencia }: { tendencia: Tendencia }) {
     .join(' ');
 
   const caiu = tendencia.porcento < 0;
-  const cor = caiu ? 'text-emerald-600' : 'text-slate-500';
+  const cor = caiu ? 'text-economia' : 'text-slate-500';
   const sinal = tendencia.porcento > 0 ? '+' : '';
 
   return (

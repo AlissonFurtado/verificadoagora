@@ -18,10 +18,17 @@ import { descreverConferencia, type Conferencia } from '@/lib/relogio';
 export function SeloDeConferencia({
   conferidoEm,
   inicial,
+  sobre = 'claro',
 }: {
   conferidoEm: string;
   /** Calculado no servidor, pra hidratação não divergir. */
   inicial: Conferencia;
+  /**
+   * Onde o selo está pousado. Na vitrine ele fica dentro da faixa noturna;
+   * nas páginas de produto e comparativo, sobre o fundo claro. Sem isso o
+   * texto sumiria num dos dois.
+   */
+  sobre?: 'claro' | 'escuro';
 }) {
   const [agora, setAgora] = useState<Conferencia>(inicial);
 
@@ -35,23 +42,28 @@ export function SeloDeConferencia({
     return () => clearInterval(relogio);
   }, [conferidoEm]);
 
+  const escuro = sobre === 'escuro';
+  const caixa = agora.atrasado
+    ? escuro
+      ? 'bg-amber-400/15 text-amber-200 ring-amber-300/30'
+      : 'bg-amber-50 text-amber-800 ring-amber-600/20'
+    : escuro
+      ? 'bg-corte/15 text-sky-100 ring-corte/30'
+      : 'bg-marca/10 text-marca ring-marca/20';
+  const ponto = agora.atrasado
+    ? escuro
+      ? 'bg-amber-300'
+      : 'bg-amber-500'
+    : `animate-pulse ${escuro ? 'bg-corte' : 'bg-marca-acao'}`;
+
   return (
     <p
-      className={`inline-flex flex-wrap items-center gap-x-2 gap-y-0.5 rounded-full px-3 py-1.5 text-xs font-semibold ring-1 ring-inset ${
-        agora.atrasado
-          ? 'bg-amber-50 text-amber-800 ring-amber-600/20'
-          : 'bg-emerald-50 text-emerald-700 ring-emerald-600/15'
-      }`}
+      className={`inline-flex flex-wrap items-center gap-x-2 gap-y-0.5 rounded-full px-3 py-1.5 text-xs font-semibold ring-1 ring-inset ${caixa}`}
     >
       <span className="flex items-center gap-1.5">
         {/* O ponto pulsa só quando o preço está fresco: animação em cima de
             um dado velho seria enfeite dizendo o contrário do texto. */}
-        <span
-          aria-hidden="true"
-          className={`flex h-2 w-2 shrink-0 rounded-full ${
-            agora.atrasado ? 'bg-amber-500' : 'animate-pulse bg-emerald-500'
-          }`}
-        />
+        <span aria-hidden="true" className={`flex h-2 w-2 shrink-0 rounded-full ${ponto}`} />
         <span className="font-bold uppercase tracking-wide">Preço conferido {agora.faz}</span>
       </span>
       <span className="font-medium opacity-70">

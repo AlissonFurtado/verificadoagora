@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /*
+   * A faixa do topo e a do rodape: mesmo gradiente, para a pagina abrir e
+   * fechar com o mesmo escuro. E o contraste dela com o corpo claro que tira
+   * a cara de blog -- foi o que o Alisson escolheu em 08/09/2026.
+   */
+  .faixa-noturna {
+    background: linear-gradient(135deg, #0b1220 0%, #172554 45%, #1d4ed8 100%);
+  }
+}

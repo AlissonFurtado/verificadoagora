@@ -35,29 +35,36 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-fundo">
-      <header className="border-b border-slate-200/70">
+      {/* A faixa noturna, cortada por uma linha ciano. É o contraste dela com
+          o corpo claro que separa a vitrine de um blog — foi assim que o
+          Alisson escolheu em 08/09/2026, entre três cortes de topo. */}
+      <header className="faixa-noturna border-b-4 border-corte">
         <div className="mx-auto max-w-6xl px-4 py-6 sm:py-14">
           <div className="mb-2">
             {conferencia && (
-              <SeloDeConferencia conferidoEm={metadata.conferido_em} inicial={conferencia} />
+              <SeloDeConferencia
+                conferidoEm={metadata.conferido_em}
+                inicial={conferencia}
+                sobre="escuro"
+              />
             )}
           </div>
 
-          <h1 className="bg-gradient-to-r from-emerald-600 to-teal-700 bg-clip-text text-3xl font-black tracking-tight text-transparent sm:text-5xl">
-            Verificado Agora
+          <h1 className="text-3xl font-black tracking-tight text-white sm:text-5xl">
+            Verificado <span className="text-marca-claro">Agora</span>
           </h1>
           {/* Some no celular: no espaço que ele ocupa cabe metade de um card,
               e o título já diz o que a página é. */}
-          <p className="mt-3 hidden max-w-xl text-lg font-medium text-slate-600 sm:block">
+          <p className="mt-3 hidden max-w-xl text-lg font-medium text-sky-100/70 sm:block">
             Achadinhos de tecnologia com desconto de verdade — e o preço conferido no dia,
             não no mês passado.
           </p>
 
-          <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-slate-500 sm:mt-6 sm:text-sm">
+          <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-sky-100/65 sm:mt-6 sm:text-sm">
             {GARANTIAS.map(([titulo, texto]) => (
               <div key={titulo} className="flex min-w-0 items-baseline gap-1.5">
-                <dt className="font-bold text-slate-700">
-                  <span aria-hidden="true" className="mr-1 font-black text-emerald-600">
+                <dt className="font-bold text-sky-50">
+                  <span aria-hidden="true" className="mr-1 font-black text-corte">
                     ✓
                   </span>
                   {titulo}
@@ -103,16 +110,21 @@ export default function Home() {
         />
       </section>
 
-      <footer className="border-t border-slate-200">
-        <div className="mx-auto max-w-6xl space-y-2 px-4 py-8 text-center text-xs text-slate-400">
+      {/* O rodapé usa a mesma faixa do topo: a página abre e fecha no mesmo
+          escuro, e a vitrine clara fica emoldurada entre as duas. */}
+      <footer className="faixa-noturna mt-4 border-t-4 border-corte">
+        <div className="mx-auto max-w-6xl space-y-2 px-4 py-8 text-center text-xs text-sky-100/50">
+          <p className="text-base font-black tracking-tight text-white">
+            Verificado <span className="text-marca-claro">Agora</span>
+          </p>
           {/* Encurtado em 08/09/2026, não removido: o programa de afiliados
               exige a declaração e a regra 1 do projeto diz "nunca tire". Uma
               linha cumpre a exigência sem virar parede de texto. */}
-          <p className="text-slate-500">Links de afiliado · você paga o mesmo preço</p>
+          <p className="text-sky-100/75">Links de afiliado · você paga o mesmo preço</p>
           <p>
-            © 2026 Verificado Agora — A F DE SOUSA ·{' '}
+            © 2026 A F DE SOUSA ·{' '}
             <a
-              className="font-medium underline transition-colors hover:text-slate-600"
+              className="font-medium underline transition-colors hover:text-white"
               href="mailto:contato@afdesousa.com.br"
             >
               contato@afdesousa.com.br

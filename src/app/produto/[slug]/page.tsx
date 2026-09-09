@@ -124,14 +124,14 @@ function Grafico({ pontos }: { pontos: PontoDoHistorico[] }) {
   return (
     <section className="min-w-0 rounded-2xl bg-white border border-slate-200/60 p-6 shadow-sm">
       <h2 className="mb-1 text-sm font-bold text-slate-800 flex items-center gap-1.5">
-        <span aria-hidden="true" className="text-emerald-500">📈</span>
+        <span aria-hidden="true" className="text-marca">📈</span>
         Como o preço se comportou
       </h2>
       <p className="mb-4 text-xs text-slate-500 font-medium">
-        {pontos.length} dias observados · menor <span className="text-emerald-600 font-bold">{formatarReal(min)}</span> · maior <span className="text-slate-700 font-bold">{formatarReal(max)}</span>
+        {pontos.length} dias observados · menor <span className="text-marca font-bold">{formatarReal(min)}</span> · maior <span className="text-slate-700 font-bold">{formatarReal(max)}</span>
       </p>
       <svg viewBox={`0 0 ${largura} ${altura}`} className="h-28 w-full" role="img" aria-label={legenda}>
-        <path d={caminho} fill="none" stroke="#059669" strokeWidth="2.5" strokeLinejoin="round" />
+        <path d={caminho} fill="none" stroke="#1d4ed8" strokeWidth="2.5" strokeLinejoin="round" />
       </svg>
       <div className="mt-2 flex justify-between text-[11px] text-slate-400 font-semibold">
         <span>{formatarData(pontos[0].dia)}</span>
@@ -195,7 +195,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           </div>
 
           <div className="flex min-w-0 flex-col justify-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-emerald-600">
+            <p className="text-xs font-bold uppercase tracking-widest text-marca">
               {produto.categoria}
             </p>
             <h1 className="mt-2 text-3xl font-black leading-tight text-slate-900">{produto.nome}</h1>
@@ -203,7 +203,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
 
             <div className="mt-6">
               <p className="text-sm font-semibold text-slate-400 line-through">{formatarReal(produto.preco_original)}</p>
-              <p className="flex flex-wrap items-baseline gap-x-3 text-4xl font-black tracking-tight text-emerald-600">
+              <p className="flex flex-wrap items-baseline gap-x-3 text-4xl font-black tracking-tight text-marca">
                 {formatarReal(produto.preco_atual)}
                 <span className="rounded-full bg-red-500 px-3 py-1.5 text-xs font-black text-white shadow-md shadow-red-500/10 flex items-center gap-1">
                   <span>🔥</span> {produto.desconto_percentual}% OFF
@@ -216,7 +216,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
 
             <div className="mt-4 flex min-w-0 flex-wrap gap-2">
               {economia > 0 && (
-                <span className="rounded-xl bg-emerald-100 px-3 py-1.5 text-xs font-bold text-emerald-700">
+                <span className="rounded-xl bg-emerald-100 px-3 py-1.5 text-xs font-bold text-economia">
                   Você economiza {formatarReal(economia)}
                 </span>
               )}
@@ -243,7 +243,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               href={produto.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
-              className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-emerald-500/25 transition-all hover:from-emerald-600 hover:to-emerald-700 hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
+              className="mt-6 flex items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
             >
               Ver no {plataforma}
               <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
@@ -274,7 +274,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
             Link de afiliado do {plataforma} · você paga o mesmo preço
           </p>
           <p className="mt-4">
-            <Link href="/" className="font-bold text-emerald-600 hover:text-emerald-700 transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">
+            <Link href="/" className="font-bold text-marca hover:text-marca-acao transition-colors flex items-center justify-center gap-1.5 hover:-translate-x-0.5 duration-200">
               <span>←</span> Ver todos os achados
             </Link>
           </p>
