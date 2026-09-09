@@ -215,8 +215,18 @@ servidor — envolver cada botão num componente cliente mandaria o catálogo
 inteiro pro navegador. Link novo que precise ser medido só precisa dos
 atributos.
 
-⚠️ **Nenhum dado pessoal vai nos eventos.** Só nome de produto, categoria e
-preço — o que já está público na própria página.
+⚠️ **Nenhum dado pessoal vai nos eventos.** Só nome de produto e de onde saiu
+o clique — o que já está público na própria página.
+
+⚠️ **Evento personalizado não existe no plano Hobby da Vercel.** Conferido na
+documentação em 08/09/2026: o grátis dá visita por página, 50 mil eventos por
+mês e janela de relatório de **1 mês** — a contagem nunca para, mas só se
+enxerga os últimos 30 dias. Os três eventos acima são enviados e descartados
+até o projeto virar Pro.
+
+⚠️ **No máximo 2 propriedades por evento**, mesmo no Pro. `oferta_clicada`
+chegou a mandar quatro e foi cortado pra `produto` e `onde`: categoria e preço
+dá pra descobrir no catálogo a partir do nome, `onde` não dá.
 
 ## O contrato do `data/produtos.json`
 

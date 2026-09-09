@@ -31,10 +31,12 @@ export function MedirCliques() {
 
       const oferta = alvo.closest<HTMLElement>('[data-oferta]');
       if (oferta) {
+        // ⚠️ Duas propriedades, no máximo. É o teto do plano Pro da Vercel
+        // (documentação de 25/08/2026), e mandar mais é pedir pra perder o
+        // evento inteiro. Categoria e preço saíram porque dá pra descobrir os
+        // dois no catálogo a partir do nome — `onde` não dá.
         track('oferta_clicada', {
           produto: oferta.dataset.oferta ?? '',
-          categoria: oferta.dataset.categoria ?? '',
-          preco: Number(oferta.dataset.preco ?? 0),
           // De qual página saiu o clique: a vitrine, a página do produto ou o
           // comparativo. É o que diz se vale escrever mais comparativo.
           onde: oferta.dataset.onde ?? '',
