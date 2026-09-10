@@ -553,6 +553,45 @@ curso. O que existe é escolher o canal cujo atraso cabe no prazo.
 | 5–6 (08–21/10) | Instagram entra | Fila do Metricool, post diário aprovado pelo Alisson |
 | 7–8 (22/10–03/11) | Apertar o que rendeu | Dobrar no canal com mais `oferta_clicada`; cortar o que deu zero |
 
+### O que o domínio já viveu, e o que ele ensinou
+
+Levantado em 10/09/2026, no Search Console. **O domínio não é novo:** de
+23/01 a ~julho/2026 rodou aqui um **WordPress** com 4 páginas de análise de
+produto. O Wayback não arquivou nada — o texto delas não é recuperável, só o
+relatório.
+
+O placar dele em 16 meses: **581 impressões, 3 cliques, posição média 11,1.**
+
+| Página antiga | Impressões | Hoje |
+|---|---|---|
+| `/analise-philco-32-roku/` | 227 | mesmo produto está no catálogo → merece 301 |
+| `/kabum-smart-700/` | 82 | não vendemos → 404 mesmo |
+| `/a16-vale-a-pena/` | 77 | não vendemos o A16 → 404 mesmo |
+| `/analise-hy320/` | 11 | não vendemos → 404 mesmo |
+
+⚠️ **Redirect só existe quando o destino é o mesmo produto.** Mandar quem
+buscava o A16 pra uma página do A36 é soft 404 pro Google e mentira pro
+visitante. URL antiga sem equivalente **fica 404**, e isso está certo.
+
+⚠️ **O formato "{modelo} vale a pena" é medição, não teoria.** As consultas
+que trouxeram impressão foram `samsung galaxy a16 vale a pena`, `samsung a16
+vale a pena em 2026` e `robô aspirador kabum smart 700 é bom` — com 4 páginas
+e zero autoridade. É o alvo declarado dos comparativos, e agora tem prova
+neste domínio. **Página de julgamento ranqueia; ficha de produto não.**
+
+⚠️ **E é o que o índice de hoje confirma:** em 10/09/2026 o site tinha
+**1 página indexada e 8 "rastreada, mas não indexada"** — todas fichas de
+produto de commodity (fone, aspirador, cafeteira, mixer, controle), com
+`analise` de 475 a 934 caracteres. Não é lentidão do Google: é recusa. **Mais
+produto no mesmo molde piora o quadro.** O que abre índice é comparativo e
+guia.
+
+⚠️ **Parte das impressões do domínio não é desta página.** `vidraçaria
+parauapebas`, `box banheiro` e afins somam 184 impressões e vêm do
+`hrvidros.verificadoagora.com.br`, do cliente. Há busca real por vidraçaria em
+Parauapebas — informação do projeto **Vidraceiro**, e que some do relatório
+quando o subdomínio migrar sem Search Console próprio.
+
 ### Regras que valem em qualquer canal
 
 - **O destino é sempre uma página deste site**, nunca o link do Meli direto e
