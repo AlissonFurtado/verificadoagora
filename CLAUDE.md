@@ -400,6 +400,12 @@ A corrente é automática dos dois lados e manual no meio:
    ⚠️ **`foco` põe as categorias do assunto da página no topo da fila**, na
    frente do desconto — quem sobra do limite diário é sempre de fora do foco. A
    fila de 10/09 veio com 10 candidatos e nenhum celular, que é o que motivou.
+   ⚠️ **`desconto_minimo_do_foco` (15%) é o piso só das categorias de foco.**
+   Fora do foco continua 20%. O topo de Celulares e Telefones quase nunca bate
+   20%, e fila sem celular nenhum não serve ao assunto da página. Decisão do
+   Alisson em 10/09/2026, escolhida no lugar de entrar por subcategoria.
+   O log do garimpo agora diz **por categoria** por que cada candidato caiu
+   (preço, desconto, já sugerido) — é por ali que se confere se o piso resolveu.
 2. **O link é gerado à mão** no Linkbuilder, no Chrome logado do Alisson, numa
    sessão com o Claude dirigindo.
 3. **O resto volta a ser automático**: card, publicação, conferência diária.

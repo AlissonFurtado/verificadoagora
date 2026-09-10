@@ -22,6 +22,12 @@ type Config = {
   foco: string[];
   limite_diario: number;
   filtros: { desconto_minimo: number; preco_minimo: number; preco_maximo: number };
+  /**
+   * Piso de desconto só para as categorias de `foco`. O topo de "Celulares e
+   * Telefones" raramente bate 20%, e fila sem celular nenhum não serve ao
+   * assunto da página. Ausente = usa o piso geral.
+   */
+  desconto_minimo_do_foco?: number;
 };
 
 type Candidato = {
@@ -65,6 +71,7 @@ async function main(): Promise<void> {
     foco: [],
     limite_diario: 10,
     filtros: { desconto_minimo: 20, preco_minimo: 100, preco_maximo: 2500 },
+    desconto_minimo_do_foco: undefined,
   });
   const foco = new Set((config.foco ?? []).map(achatar));
 
@@ -135,7 +142,17 @@ async function main(): Promise<void> {
     erro: 0,
   };
 
+  // Snapshot dos descartes antes da categoria: a diferença no fim diz por que
+  // uma categoria rendeu zero. Sem isso, "0 novos" não distingue "tudo abaixo
+  // de R$ 100" de "tudo já sugerido" — e foi essa dúvida que travou o foco em
+  // celulares.
   for (const alvo of alvos) {
+    const antes = { ...descartes };
+    const emFoco = foco.has(achatar(alvo.nome)) || foco.has(achatar(alvo.id));
+    const pisoDeDesconto =
+      emFoco && config.desconto_minimo_do_foco != null
+        ? config.desconto_minimo_do_foco
+        : config.filtros.desconto_minimo;
     const destaques = (await pedir(`/highlights/MLB/category/${alvo.id}`, accessToken)) as {
       content?: { id: string; type: string }[];
     };
@@ -184,7 +201,7 @@ async function main(): Promise<void> {
       }
 
       const desconto = Math.floor((1 - dados.preco / dados.precoOriginal) * 100);
-      if (desconto < config.filtros.desconto_minimo) {
+      if (desconto < pisoDeDesconto) {
         descartes.sem_desconto += 1;
         continue;
       }
@@ -215,13 +232,21 @@ async function main(): Promise<void> {
         desconto_percentual: desconto,
         imagem: dados.imagem,
         url_do_produto: dados.permalink || urlDoProduto(destaque.id, tipo),
-        no_foco: foco.has(achatar(alvo.nome)) || foco.has(achatar(alvo.id)),
+        no_foco: emFoco,
         motivo: veredito.motivo,
         garimpado_em: hoje,
       });
     }
 
-    console.log(`${alvo.nome}: ${lista.length} olhados, ${passaram} novos`);
+    const porQue = (Object.keys(descartes) as (keyof typeof descartes)[])
+      .map((k) => [k, descartes[k] - antes[k]] as const)
+      .filter(([, n]) => n > 0)
+      .map(([k, n]) => `${k.replace(/_/g, ' ')}: ${n}`)
+      .join(', ');
+    console.log(
+      `${alvo.nome}: ${lista.length} olhados, ${passaram} novos` +
+        (porQue ? ` — descartados ${porQue}` : ''),
+    );
   }
 
   // Foco primeiro (celular é o assunto da página), melhor desconto depois: se

@@ -16,6 +16,8 @@
   "foco": [
     "Celulares e Telefones"
   ],
+  "_por_que_desconto_do_foco": "O topo de Celulares e Telefones quase nunca bate 20% de desconto, e fila sem celular nenhum não serve ao assunto da página (10/09/2026: 10 candidatos, zero celulares). Piso menor só pro foco; fora dele continua 20%.",
+  "desconto_minimo_do_foco": 15,
   "limite_diario": 10,
   "filtros": {
     "desconto_minimo": 20,
