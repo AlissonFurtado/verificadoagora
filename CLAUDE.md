@@ -58,17 +58,38 @@ Vidraceiro tirar a institucional de lá.
 ### A troca aconteceu em 07/09/2026
 
 `verificadoagora.com.br` **serve esta landing**, com certificado válido. O
-registro é `A` · `@` · `216.198.79.1`, no DNS da Hostinger. O endereço oficial
-é o apex, sem www.
+registro é `A` · `@` · `216.198.79.1`, no DNS da Hostinger.
 
 Nenhum endereço ficou escrito no código: o `metadataBase` sai de
 `VERCEL_PROJECT_PRODUCTION_URL` e migrou sozinho pro domínio novo.
 
-**A institucional não morreu, mudou de porta.** Ela continua no ar em
-`www.verificadoagora.com.br`, que ficou de propósito apontando pra Hostinger.
-É uma solução temporária: quando a sessão do Vidraceiro publicar a
-institucional no `afdesousa.com.br`, o `www` daqui deve virar redirecionamento
-pro apex ou ser apagado.
+### O oficial é o `www`, e o apex redireciona (09/09/2026)
+
+```
+verificadoagora.com.br       → 308 → www.verificadoagora.com.br
+www.verificadoagora.com.br   → 200, serve a landing
+```
+
+Saiu ao contrário do que estava planejado — o combinado era o apex ser o
+oficial. **Ficou assim de propósito depois de conferir que funciona igual:**
+o que importa pro buscador é existir uma versão canônica só, e existe. Se
+alguém for inverter um dia, é em Settings → Domains da Vercel, marcando o
+apex como *Primary Domain*; não mexe em DNS. E não precisa refazer o Search
+Console: a propriedade foi verificada como **Domínio**, que cobre apex e www
+de uma vez.
+
+⚠️ **A institucional saiu do ar.** Ela morava em `www.verificadoagora.com.br`
+e o `www` passou a servir esta landing. `afdesousa.com.br` ainda responde
+"Página padrão" da Hostinger, então **a página institucional não tem endereço
+nenhum hoje**. Foi decisão do Alisson, tomada depois de eu avisar. Pendência
+pra sessão do Vidraceiro: publicar a institucional no `afdesousa.com.br`.
+
+### Search Console
+
+Propriedade do tipo **Domínio**, verificada em 09/09/2026 por registro `TXT`
+no `@` da Hostinger (`google-site-verification=...`). Não apague esse TXT — e
+se precisar adicionar outro TXT, adicione como registro novo em vez de
+substituir.
 
 ### O que mais mora nesta zona DNS
 
@@ -77,11 +98,12 @@ O domínio virou hub por acidente e ainda carrega outros projetos. Auditado em
 
 | Registro | Serve | Situação |
 |---|---|---|
-| `A @` | esta landing (Vercel) | ativo |
-| `CNAME www` | institucional (Hostinger) | ativo, temporário |
+| `A @` | redireciona pro `www` | ativo |
+| `CNAME www` | **esta landing** (Vercel) | ativo, é o endereço oficial |
 | `ALIAS hrvidros` | **landing do HR Vidros** | 🔴 **ativo — é do cliente** |
 | `ALIAS api-licitacoes` | "Página padrão" da Hostinger | morto |
 | `CNAME licitacoes` | Vercel que não existe mais | morto |
+| `TXT @` | verificação do Search Console | ativo, **não apague** |
 | `A ftp` | 45.132.157.6 | não auditado |
 
 ⚠️ **`hrvidros.verificadoagora.com.br` está no ar e é a página de um cliente
