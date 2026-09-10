@@ -394,9 +394,12 @@ A corrente é automática dos dois lados e manual no meio:
 
 1. **Garimpo diário** (`garimpar.yml`, 10h de Brasília) escreve
    `data/candidatos.json`, abre uma issue com a fila e para por aí. Filtro em
-   `data/garimpo.json`: desconto ≥ 20%, preço de R$ 100 a R$ 2.000, no máximo
+   `data/garimpo.json`: desconto ≥ 20%, preço de R$ 100 a R$ 2.500, no máximo
    10 por dia. Categoria pode ser **nome** de primeiro nível ou **id**
    (`MLB14370`) de qualquer nível; o que não resolve é pulado com aviso.
+   ⚠️ **`foco` põe as categorias do assunto da página no topo da fila**, na
+   frente do desconto — quem sobra do limite diário é sempre de fora do foco. A
+   fila de 10/09 veio com 10 candidatos e nenhum celular, que é o que motivou.
 2. **O link é gerado à mão** no Linkbuilder, no Chrome logado do Alisson, numa
    sessão com o Claude dirigindo.
 3. **O resto volta a ser automático**: card, publicação, conferência diária.
@@ -539,162 +542,107 @@ Três regras que não são de estilo:
 
 ## Divulgação: o plano até a primeira venda
 
-Meta do Alisson, posta em 10/09/2026: **uma venda até o início de novembro**
-(03/11/2026, ~8 semanas). Antes disso o site esteve um mês no ar sem
-divulgação nenhuma — o gargalo nunca foi catálogo, é visita.
+Meta posta em 10/09/2026: **uma venda até 03/11/2026**. O gargalo nunca foi
+catálogo, é visita — o site passou o primeiro mês no ar sem divulgação nenhuma.
 
-⚠️ **SEO não chega a tempo, e isso está certo.** Site novo leva meses pra
-ranquear no Google; Pinterest rende em semanas e fórum rende no mesmo dia. As
-três frentes continuam de pé, mas com papéis diferentes: **fórum traz a
-primeira visita, Pinterest traz o volume de novembro, SEO paga a partir de
-dezembro.** Não julgue o SEO pelo resultado de novembro nem abandone ele por
-isso — é o único canal que não exige postar todo dia.
+| Canal | Prazo até render | Papel | Situação |
+|---|---|---|---|
+| **Fóruns / Reddit** | dias | Primeira visita, e o teste de se a página convence | não começou |
+| **Pinterest** | 2 a 6 semanas | Era o volume de novembro | 🔴 **bloqueado**, veja abaixo |
+| **Google / SEO** | 3 a 6 meses | O ativo que compõe sozinho | sitemap enviado 10/09 |
+| **Instagram** | meses | Antecipado do "fase 3" a pedido do Alisson | não começou |
 
-⚠️ **Não existe canal grátis e instantâneo.** Quem prometer isso está vendendo
-curso. O que existe é escolher o canal cujo atraso cabe no prazo.
+⚠️ **SEO não chega a tempo de novembro, e isso está certo.** Com o Pinterest
+bloqueado, quem ainda cabe no prazo é **fórum**. Não julgue o SEO pelo resultado
+de novembro: é o único canal que não exige postar todo dia.
 
-### Os quatro canais e o que cada um responde
-
-| Canal | Prazo até render | Papel |
-|---|---|---|
-| **Fóruns / Reddit** | dias | Primeira visita e primeira prova de que a página convence |
-| **Pinterest** | 2 a 6 semanas | O volume que tem que produzir a venda de novembro |
-| **Google / SEO** | 3 a 6 meses | Compõe sozinho; é o ativo, não a campanha |
-| **Instagram** | meses | Antecipado do "fase 3" a pedido do Alisson em 10/09/2026 |
-
-### O cronograma
-
-| Semana | Foco | Entrega |
-|---|---|---|
-| 1 (10–16/09) | Diagnóstico + fórum | Sitemap no Search Console; 3 respostas em fórum; conta Pinterest criada |
-| 2 (17–23/09) | Pinterest de pé | 5 pastas por faixa de preço; 1 pin por produto do catálogo |
-| 3–4 (24/09–07/10) | Volume | 3 a 5 pins/dia; 1 comparativo/semana; fórum 2×/semana |
-| 5–6 (08–21/10) | Instagram entra | Fila do Metricool, post diário aprovado pelo Alisson |
-| 7–8 (22/10–03/11) | Apertar o que rendeu | Dobrar no canal com mais `oferta_clicada`; cortar o que deu zero |
-
-### O que o domínio já viveu, e o que ele ensinou
-
-Levantado em 10/09/2026, no Search Console. **O domínio não é novo:** de
-23/01 a ~julho/2026 rodou aqui um **WordPress** com 4 páginas de análise de
-produto. O Wayback não arquivou nada — o texto delas não é recuperável, só o
-relatório.
-
-O placar dele em 16 meses: **581 impressões, 3 cliques, posição média 11,1.**
-
-| Página antiga | Impressões | Hoje |
-|---|---|---|
-| `/analise-philco-32-roku/` | 227 | mesmo produto está no catálogo → merece 301 |
-| `/kabum-smart-700/` | 82 | não vendemos → 404 mesmo |
-| `/a16-vale-a-pena/` | 77 | não vendemos o A16 → 404 mesmo |
-| `/analise-hy320/` | 11 | não vendemos → 404 mesmo |
-
-⚠️ **Redirect só existe quando o destino é o mesmo produto.** Mandar quem
-buscava o A16 pra uma página do A36 é soft 404 pro Google e mentira pro
-visitante. URL antiga sem equivalente **fica 404**, e isso está certo.
-
-⚠️ **O formato "{modelo} vale a pena" é medição, não teoria.** As consultas
-que trouxeram impressão foram `samsung galaxy a16 vale a pena`, `samsung a16
-vale a pena em 2026` e `robô aspirador kabum smart 700 é bom` — com 4 páginas
-e zero autoridade. É o alvo declarado dos comparativos, e agora tem prova
-neste domínio. **Página de julgamento ranqueia; ficha de produto não.**
-
-⚠️ **E é o que o índice de hoje confirma:** em 10/09/2026 o site tinha
-**1 página indexada e 8 "rastreada, mas não indexada"** — todas fichas de
-produto de commodity (fone, aspirador, cafeteira, mixer, controle), com
-`analise` de 475 a 934 caracteres. Não é lentidão do Google: é recusa. **Mais
-produto no mesmo molde piora o quadro.** O que abre índice é comparativo e
-guia.
-
-⚠️ **Parte das impressões do domínio não é desta página.** `vidraçaria
-parauapebas`, `box banheiro` e afins somam 184 impressões e vêm do
-`hrvidros.verificadoagora.com.br`, do cliente. Há busca real por vidraçaria em
-Parauapebas — informação do projeto **Vidraceiro**, e que some do relatório
-quando o subdomínio migrar sem Search Console próprio.
-
-### 🔴 O Pinterest bloqueia o domínio
-
-Descoberto em 10/09/2026, tentando publicar o primeiro pin: **nenhum link para
-`verificadoagora.com.br` pode ser publicado no Pinterest.** O campo de destino
-responde *"Esse link está bloqueado porque pode não atender às nossas políticas
-de conteúdo"* e o botão Publicar desabilita. Vale para a vitrine, para as
-páginas de produto e para o domínio inteiro; `wikipedia.org` passa no mesmo
-campo, então o validador funciona e o problema é o domínio.
-
-⚠️ **A validação do link só dispara quando o foco vai pro seletor de pasta.**
-Sair do campo clicando na imagem não checa nada — e ler esse silêncio como
-"aceita" foi o que produziu um diagnóstico errado por três URLs. Para testar um
-link, entre no campo, digite e **clique no seletor de pasta**.
-
-**Apelação enviada em 10/09/2026**, com print do erro anexado. Resposta vem por
-e-mail. O argumento central foi o do site anterior: o WordPress de afiliados
-saiu em julho e o projeto atual é outro conteúdo — se a marcação veio de lá, o
-motivo não existe mais.
-
-Se precisar refazer: Central de Ajuda → "Conta suspensa ou desativada" → "Entre
-em contato conosco", pedindo revisão do domínio. É do Alisson — envolve
-escrever em nome dele. Enquanto não passar, **Pinterest não é canal**, e o
-cronograma de novembro depende de fórum e SEO.
-
-Provável causa, não confirmada: o domínio rodou um WordPress de afiliados até
-julho/2026 (veja "O que o domínio já viveu"), e o classificador de spam pode
-ter marcado dali.
-
-### Pinterest: o gerador de pins
-
-`npm run pins` lê o `produtos.json` e escreve `data/pins.json` com título,
-descrição, destino e foto de cada produto visível, agrupados por pasta. **Não
-publica nada** — o Pinterest não abre API de publicação pra conta nova, e post
-que sai sozinho em nome do Alisson é a mesma regra do Instagram.
-
-- ⚠️ **Pin não leva preço.** Pin vive meses e o robô muda o preço toda manhã;
-  ninguém edita 15 pins por dia. Mesma razão do comparativo não escrever preço
-  no arquivo. O pin promete o que não envelhece: que o preço é conferido todo
-  dia.
-- ⚠️ **O título é `{nome} vale a pena?`** porque foi essa a consulta que já
-  rendeu impressão neste domínio, medida no Search Console. Não é chute.
-- ⚠️ **A pasta é faixa de preço, mas só vira "Celulares até R$ X" se for
-  celular.** A primeira versão olhava só o preço e pôs uma Smart TV de R$ 998
-  em "Celulares até R$ 1.500". Pasta que mente sobre o conteúdo faz o Pinterest
-  parar de distribuir o perfil.
-- ⚠️ **O que é cortado no limite de 500 é a análise, nunca o rodapé.** Cortar a
-  descrição inteira comia a declaração de afiliado do produto de texto mais
-  longo — a linha que o programa exige.
-- Produto sem `imagem` não vira pin: pin é formato visual. O script avisa quais
-  ficaram de fora.
-- **A arte do pin sai do site**, em `/pin/{slug}` (`src/app/pin/[slug]/route.tsx`):
-  1000×1500, foto sobre branco, marca em volta. A foto crua do Meli não serve —
-  chega quadrada e pequena (a do A36 tem 389px de largura, contra os 1000 que o
-  Pinterest pede) e o próprio pin-builder reclama. ⚠️ **Edge não enxerga disco:**
-  o catálogo entra por `import` do JSON, não por `lerCatalogo()`.
-
-**Reivindicado em 10/09/2026:** perfil **Verificado Agora**, conta de empresa,
-`www.verificadoagora.com.br` conectado pela meta tag `p:domain_verify` que mora
-no `layout.tsx`. Fica em Configurações → Link para o Pinterest → Sites.
-
-⚠️ **Não instale a "tag do Pinterest"** que ele oferece logo depois de
-reivindicar. É a tag de conversão de anúncio pago — que não existe aqui — e
-**usa cookie**, o que traria de volta o banner de consentimento que o Vercel
-Analytics foi escolhido pra evitar. Recusada de propósito.
-
-⚠️ **Conta é de empresa e o site precisa ser reivindicado.** A conta pessoal
-não dá estatística de clique por URL nem credita o pin ao perfil. Criar conta e
-aceitar termos é do Alisson — veja `~/.claude/CLAUDE.md`.
+Cronograma original (semana 1 = 10/09): diagnóstico e fórum → Pinterest de pé →
+volume, 1 comparativo/semana → Instagram → dobrar no que rendeu. **O bloqueio do
+Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
 
 ### Regras que valem em qualquer canal
 
-- **O destino é sempre uma página deste site**, nunca o link do Meli direto e
-  **nunca `meli.la`** — encurtador em rede social é sinalizado como spam. A
-  página leva pro Meli; é ela que carrega a análise que justifica o clique.
+- **O destino é sempre uma página deste site**, nunca o link do Meli e **nunca
+  `meli.la`** — encurtador em rede social é sinalizado como spam.
 - **Fórum não é lugar de link solto.** Responde-se a pergunta de verdade,
-  citando a página como fonte do preço. Link sem resposta é spam e queima o
-  perfil, que não se recupera. A skill `garimpar-foruns` acha as threads.
-- **Declaração de afiliado em toda legenda** — é exigência do programa. Vale
-  igual no Pinterest e no Reddit, não só no rodapé do site.
-- **O placar é `oferta_clicada` com a propriedade `onde`**, cruzado com o
-  painel de afiliado do Meli. Canal que não move esse número em duas semanas
-  não está funcionando — e "eu acho que está crescendo" não conta.
-  ⚠️ Evento personalizado não aparece no plano Hobby da Vercel (veja
-  "Medição"): até virar Pro, o placar real é o painel do Meli.
+  citando a página como fonte do preço. A skill `garimpar-foruns` acha as
+  threads.
+- **Declaração de afiliado em toda legenda**, não só no rodapé do site.
+- **O placar é `oferta_clicada` com a propriedade `onde`**, cruzado com o painel
+  do Meli. Canal que não mexe nesse número em duas semanas não está funcionando.
+  ⚠️ Evento personalizado não aparece no plano Hobby (veja "Medição"): até virar
+  Pro, o placar real é o painel do Meli.
+
+### O que o domínio já viveu
+
+⚠️ **O domínio não é novo.** De 23/01 a ~julho/2026 rodou aqui um **WordPress**
+com 4 páginas de análise. Placar em 16 meses: **581 impressões, 3 cliques,
+posição 11,1**. O Wayback não arquivou nada — o texto delas não é recuperável.
+
+| Página antiga | Impressões | Hoje |
+|---|---|---|
+| `/analise-philco-32-roku/` | 227 | mesmo produto no catálogo → **301 ativo** |
+| `/kabum-smart-700/` · `/a16-vale-a-pena/` · `/analise-hy320/` | 82 · 77 · 11 | não vendemos → 404, e está certo |
+
+⚠️ **Redirect só quando o destino é o mesmo produto.** Mandar quem buscava o
+A16 para o A36 é soft 404 pro Google e mentira pro visitante.
+
+⚠️ **O formato "{modelo} vale a pena" é medição, não teoria.** As consultas que
+renderam foram `samsung galaxy a16 vale a pena`, `samsung a16 vale a pena em
+2026` e `robô aspirador kabum smart 700 é bom` — com 4 páginas e zero
+autoridade. É o alvo dos comparativos, e agora tem prova neste domínio.
+
+⚠️ **E o índice de hoje confirma:** em 10/09/2026, **1 página indexada e 8
+"rastreada, mas não indexada"** — todas fichas de produto de commodity. Não é
+lentidão do Google, é recusa. **Mais produto no mesmo molde piora.** Quem abre
+índice é comparativo e guia. **Página de julgamento ranqueia; ficha, não.**
+
+⚠️ **Parte das impressões não é desta página:** `vidraçaria parauapebas`, `box
+banheiro` e afins somam 184 impressões e vêm do `hrvidros.` — do cliente. Há
+busca real por vidraçaria em Parauapebas: informação do projeto **Vidraceiro**,
+que some do relatório quando o subdomínio migrar.
+
+### 🔴 Pinterest: bloqueado, com apelação em curso
+
+Perfil **Verificado Agora**, conta de empresa, site reivindicado em 10/09/2026
+pela meta tag `p:domain_verify` no `layout.tsx` (⚠️ não apague: o Pinterest
+reconfere, e sem ela a reivindicação cai).
+
+**Mas nenhum link para `verificadoagora.com.br` pode virar pin.** O campo de
+destino responde *"Esse link está bloqueado porque pode não atender às nossas
+políticas de conteúdo"*; vale para o domínio inteiro, e `wikipedia.org` passa no
+mesmo campo. **Apelação enviada em 10/09/2026** (Central de Ajuda → Apresentar
+um recurso → O Pinterest bloqueou meu site), com print anexado, argumentando que
+o WordPress de afiliados saiu em julho e o projeto atual é outro conteúdo.
+
+⚠️ **A validação do link só dispara quando o foco vai pro seletor de pasta.**
+Sair do campo clicando na imagem não checa nada — ler esse silêncio como
+"aceita" produziu um diagnóstico errado por três URLs. Para testar: digite e
+**clique no seletor de pasta**.
+
+⚠️ **Não instale a "tag do Pinterest"** oferecida depois de reivindicar. É de
+anúncio pago, que não existe aqui, e **usa cookie** — traria de volta o banner
+de consentimento que o Vercel Analytics foi escolhido pra evitar.
+
+**Os pins já estão prontos pro dia em que liberar.** `npm run pins` lê o
+catálogo e escreve `data/pins.json` com título, descrição, destino, pasta e a
+arte. Não publica nada — o Pinterest não abre API pra conta nova, e post
+automático em nome do Alisson é a mesma regra do Instagram.
+
+- ⚠️ **Pin não leva preço** — nem no texto, nem na arte. Pin vive meses e o robô
+  muda o preço toda manhã; ninguém edita 15 pins por dia. Mesma razão do
+  comparativo não escrever preço no arquivo.
+- ⚠️ **Título é `{nome} vale a pena?`**, pela medição acima. Descrição cabe em
+  **800** caracteres (contador do pin-builder; 500 era chute) e **o que se corta
+  é a análise, nunca a declaração de afiliado**.
+- ⚠️ **Pasta é faixa de preço, mas só vira "Celulares até R$ X" se for
+  celular** — a primeira versão pôs uma Smart TV de R$ 998 em "Celulares até
+  R$ 1.500". Pasta que mente faz o Pinterest parar de distribuir o perfil.
+- ⚠️ **A arte sai do site**, em `/pin/{slug}` (`src/app/pin/[slug]/route.tsx`):
+  1000×1500. A foto crua do Meli não serve — chega quadrada e pequena (a do A36
+  tem 389px de largura, contra os 1000 que o Pinterest pede). **Edge não enxerga
+  disco:** o catálogo entra por `import` do JSON, não por `lerCatalogo()`.
+- Produto sem `imagem` não vira pin, e o script avisa quais ficaram de fora.
 
 ## Instagram: é fase 3, não é agora
 
