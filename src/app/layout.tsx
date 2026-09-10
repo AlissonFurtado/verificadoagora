@@ -54,6 +54,20 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
   },
+
+  /**
+   * Reivindicação do site no Pinterest (10/09/2026).
+   *
+   * É o que credita cada pin ao perfil **Verificado Agora** e libera a
+   * estatística de clique por URL — sem isso, pin publicado a partir do site
+   * fica órfão e o painel não diz qual página trouxe visita.
+   *
+   * ⚠️ **Não apague.** O Pinterest reconfere a tag de tempos em tempos, e sem
+   * ela a reivindicação cai. Mesma natureza do `TXT` do Search Console.
+   */
+  verification: {
+    other: { 'p:domain_verify': '8de2eab5c44ef1e9974d050818ea7714' },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
