@@ -648,6 +648,11 @@ que sai sozinho em nome do Alisson é a mesma regra do Instagram.
   longo — a linha que o programa exige.
 - Produto sem `imagem` não vira pin: pin é formato visual. O script avisa quais
   ficaram de fora.
+- **A arte do pin sai do site**, em `/pin/{slug}` (`src/app/pin/[slug]/route.tsx`):
+  1000×1500, foto sobre branco, marca em volta. A foto crua do Meli não serve —
+  chega quadrada e pequena (a do A36 tem 389px de largura, contra os 1000 que o
+  Pinterest pede) e o próprio pin-builder reclama. ⚠️ **Edge não enxerga disco:**
+  o catálogo entra por `import` do JSON, não por `lerCatalogo()`.
 
 **Reivindicado em 10/09/2026:** perfil **Verificado Agora**, conta de empresa,
 `www.verificadoagora.com.br` conectado pela meta tag `p:domain_verify` que mora
