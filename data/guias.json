@@ -1,0 +1,163 @@
+{
+  "_leia": "Guias de faixa, escritos à mão. Ordenam os intermediários por perfil de quem compra, não por nota. A ficha de cada aparelho é copiada palavra por palavra dos comparativos e conferida pelo `npm run fichas` — número novo aqui é número que ninguém verificou na fonte do fabricante. Nenhum preço fica escrito: use os marcadores {preco}, {preco_original}, {desconto}, {economia}, {data}, que só funcionam em perfil com meli_id no catálogo.",
+  "guias": [
+    {
+      "slug": "celulares-ate-1500",
+      "titulo": "Melhor celular até R$ 1.500: qual comprar em 2026",
+      "resumo": "Não existe um melhor celular desta faixa — existe o melhor para o que você faz com ele. Separamos seis aparelhos de até R$ 1.500 por perfil de uso, com a ficha conferida na fonte do fabricante e o preço de dois deles conferido pelo nosso robô todos os dias.",
+      "teto": 1500,
+      "perfis": [
+        {
+          "chave": "durar-anos",
+          "perfil": "Quero que dure anos sem ficar obsoleto",
+          "aparelho": "Galaxy A36 5G",
+          "meli_id": "MLB47115842",
+          "porque": [
+            "A Samsung promete até 6 versões novas do Android nele — o dobro do segundo colocado desta lista e o triplo da maioria. É a única especificação da faixa que você não consegue melhorar depois com nenhum acessório.",
+            "Tela Super AMOLED de 120 Hz e 1.900 nits: dá pra usar no sol sem fazer sombra com a mão.",
+            "IP67 quer dizer imersão, não só respingo. Cai na pia e sobrevive.",
+            "Está a {preco}, {desconto}% abaixo do preço de tabela — economia de {economia}, conferida em {data}."
+          ],
+          "quando_nao": "Não compre se você joga sério ou guarda muito arquivo: são 6 GB de RAM e 128 GB sem entrada para cartão, o menor conjunto entre os cinco 5G daqui. O Poco X7 e o Moto G86 entregam 8 GB e 256 GB pela mesma faixa.",
+          "ficha": {
+            "Atualizações do Android": "Até 6 versões",
+            "Tela": "6,7 pol. Super AMOLED, 120 Hz, Full HD+, 1.900 nits",
+            "Memória": "6 GB · 128 GB, sem microSD",
+            "Bateria e carregamento": "5.000 mAh · 45 W",
+            "Resistência a água": "IP67 (imersão)"
+          }
+        },
+        {
+          "chave": "orcamento-manda",
+          "perfil": "O orçamento é o que manda",
+          "aparelho": "Moto G17",
+          "meli_id": "MLB65041644",
+          "porque": [
+            "É o mais barato desta lista por uma margem larga, a {preco}, e dá conta do dia inteiro de WhatsApp, vídeo e redes sociais sem drama.",
+            "Bateria de 5.200 mAh, a maior do guia junto do Moto G86.",
+            "Aceita microSD de até 1 TB: os 128 GB não são o teto, e cartão é mais barato que aparelho novo."
+          ],
+          "quando_nao": "Não compre se você pretende ficar com ele mais de dois anos. A Motorola não prometeu nenhuma versão nova do Android para o G17, ele não pega 5G e a tela é LCD de 60 Hz — três coisas que não têm conserto depois da compra. Se couber esticar o orçamento, qualquer outro aparelho desta lista envelhece melhor.",
+          "ficha": {
+            "Atualizações do Android": "Nenhuma versão prometida",
+            "Tela": "6,7 pol. LCD, 60 Hz, Full HD+, 1.050 nits",
+            "Memória": "4 GB · 128 GB, microSD até 1 TB",
+            "Bateria e carregamento": "5.200 mAh · 20 W",
+            "Rede": "Só 4G"
+          }
+        },
+        {
+          "chave": "jogos",
+          "perfil": "Eu jogo, e jogo pesado",
+          "aparelho": "Poco X7",
+          "meli_id": "",
+          "porque": [
+            "Dimensity 7300 Ultra em 4 nm com 8 GB de RAM e 256 GB: é o conjunto mais folgado da faixa, e RAM é o que evita o jogo recarregar toda vez que você troca de aplicativo.",
+            "AMOLED de 120 Hz e 3.000 nits — a fluidez pesa mais na sensação de jogo do que uns pontos a mais de benchmark.",
+            "Quatro versões novas do Android prometidas, atrás só do A36 nesta lista.",
+            "IP68: imersão até 1,5 metro."
+          ],
+          "quando_nao": "Não compre se você quer câmera: os 50 MP dele não têm estabilização óptica, e nesta lista o Redmi Note 14 e o Moto G86 têm. E vale lembrar que nós não acompanhamos o preço dele — confira antes de fechar.",
+          "ficha": {
+            "Atualizações do Android": "4 versões",
+            "Tela": "6,67 pol. AMOLED, 120 Hz, 3.000 nits",
+            "Processador": "Dimensity 7300 Ultra (4 nm)",
+            "Memória": "8 GB · 256 GB",
+            "Bateria e carregamento": "5.110 mAh · 45 W",
+            "Resistência a água": "IP68 — imersão até 1,5 m"
+          }
+        },
+        {
+          "chave": "aguenta-tranco",
+          "perfil": "Meu celular apanha o dia inteiro",
+          "aparelho": "Moto G86",
+          "meli_id": "",
+          "porque": [
+            "IP68/IP69 mais o padrão militar MIL-STD-810H: é o único da lista que declara resistência a jato de água quente e a queda, não só a imersão.",
+            "Tela pOLED de 4.500 nits, a mais brilhante daqui por uma distância grande — quem trabalha na rua enxerga o que está fazendo.",
+            "5.200 mAh com 8 GB de RAM e 256 GB, e câmera de 50 MP com estabilização óptica."
+          ],
+          "quando_nao": "Não compre se o plano é ficar anos com ele: são 2 versões novas do Android prometidas, contra 6 do A36. E carrega a 30 W, mais devagar que os 45 W do A36, do Poco X7 e do Redmi Note 14. Também não acompanhamos o preço dele.",
+          "ficha": {
+            "Atualizações do Android": "2 versões",
+            "Tela": "6,67 pol. pOLED, 120 Hz, 4.500 nits",
+            "Memória": "8 GB · 256 GB",
+            "Bateria e carregamento": "5.200 mAh · 30 W",
+            "Resistência a água": "IP68/IP69 e padrão militar MIL-STD-810H"
+          }
+        },
+        {
+          "chave": "camera",
+          "perfil": "Tiro foto o tempo todo",
+          "aparelho": "Redmi Note 14 5G",
+          "meli_id": "",
+          "porque": [
+            "108 MP com estabilização óptica: é a maior resolução da faixa, e a estabilização é o que salva foto em ambiente fechado, onde a mão treme.",
+            "8 GB de RAM e 256 GB — espaço é o que acaba primeiro em quem fotografa muito.",
+            "AMOLED de 120 Hz e carregamento de 45 W."
+          ],
+          "quando_nao": "Não compre se durabilidade for o critério: 2 versões de Android e IP64, que é respingo, não imersão. Megapixel também não é qualidade sozinho — 108 MP com sensor pequeno pode render menos que 50 MP bem resolvidos. E não acompanhamos o preço dele.",
+          "ficha": {
+            "Atualizações do Android": "2 versões",
+            "Tela": "6,67 pol. AMOLED, 120 Hz",
+            "Memória": "8 GB · 256 GB",
+            "Bateria e carregamento": "5.110 mAh · 45 W",
+            "Câmera principal": "108 MP com estabilização óptica",
+            "Resistência a água": "IP64 — respingos"
+          }
+        },
+        {
+          "chave": "samsung-barato",
+          "perfil": "Quero Samsung, mas gastando menos",
+          "aparelho": "Galaxy A16 5G",
+          "meli_id": "",
+          "porque": [
+            "Mesma promessa de até 6 versões novas do Android do A36, por bem menos dinheiro. Na durabilidade de software, empata com o topo desta lista.",
+            "Tem entrada para microSD, coisa que o A36 não tem, e chega a 256 GB de fábrica.",
+            "Super AMOLED e 5G."
+          ],
+          "quando_nao": "Não compre esperando a mesma experiência do A36: a tela é de 90 Hz e 800 nits, contra 120 Hz e 1.900 nits — a diferença aparece na rolagem e some no sol. Carrega a 25 W e o IP54 é só respingo. Não acompanhamos o preço dele.",
+          "ficha": {
+            "Atualizações do Android": "Até 6 versões",
+            "Tela": "6,7 pol. Super AMOLED, 90 Hz, Full HD+, 800 nits",
+            "Memória": "4 a 8 GB · até 256 GB, com microSD",
+            "Bateria e carregamento": "5.000 mAh · 25 W",
+            "Resistência a água": "IP54 (respingos)"
+          }
+        }
+      ],
+      "veredito": "Se nenhum perfil acima é exatamente o seu, o critério que menos gente considera e mais dói depois é o de atualizações: é o único item da ficha que você não consegue melhorar com cartão de memória, capinha ou carregador. Por isso o Galaxy A36 abre a lista mesmo perdendo em memória e em brilho de tela para o Moto G86 e o Poco X7. E se o orçamento não estica, o Moto G17 faz o básico bem — desde que você saiba que está comprando um aparelho para dois anos, não para cinco.",
+      "fontes": [
+        {
+          "titulo": "Galaxy A36 5G — especificações oficiais (Samsung Brasil)",
+          "url": "https://www.samsung.com.br/smartphones/galaxy-a/galaxy-a36-5g-awesome-lavender-128gb-sm-a366bzldzto/"
+        },
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        },
+        {
+          "titulo": "Moto G17 pode não receber atualização de Android (Notebookcheck)",
+          "url": "https://www.notebookcheck.net/Moto-G17-may-not-receive-any-Android-updates-as-Motorola-cites-lack-of-EU-requirements.1217839.0.html"
+        },
+        {
+          "titulo": "Poco X7 — especificações oficiais (Xiaomi)",
+          "url": "https://www.poco.net/global/product/poco-x7/specs/"
+        },
+        {
+          "titulo": "Moto G86 — especificações (Motorola Support)",
+          "url": "https://en-gb.support.motorola.com/app/answers/detail/a_id/188318/~/specifications---moto-g86-5g"
+        },
+        {
+          "titulo": "Redmi Note 14 5G — especificações oficiais (Xiaomi)",
+          "url": "https://www.mi.com/global/product/redmi-note-14-5g/specs/"
+        },
+        {
+          "titulo": "Galaxy A16 5G — ficha técnica (Tecnoblog)",
+          "url": "https://tecnoblog.net/produtos/samsung-galaxy-a16-5g/"
+        }
+      ],
+      "escrito_em": "2026-09-10"
+    }
+  ]
+}

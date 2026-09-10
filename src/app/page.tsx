@@ -1,4 +1,4 @@
-import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerGuias, lerHistorico } from '@/lib/catalogo';
 import { ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
 import { resumirTendencia, seloDeMenorPreco } from '@/lib/historico';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
@@ -42,6 +42,7 @@ export default function Home() {
   const produtos = ordenarPorRecencia(produtosVisiveis(todos));
   const historico = lerHistorico();
   const comparativos = lerComparativos();
+  const guias = lerGuias();
   const conferencia = descreverConferencia(metadata.conferido_em, new Date());
 
   return (
@@ -89,6 +90,31 @@ export default function Home() {
           </dl>
         </div>
       </header>
+
+      {/* Guia acima da grade porque ele responde a dúvida de quem ainda não
+          escolheu — e a vitrine sozinha só serve quem já sabe o que quer. */}
+      {guias.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 pt-5 sm:pt-12">
+          <ul className="flex min-w-0 flex-wrap gap-3">
+            {guias.map((guia) => (
+              <li key={guia.slug} className="min-w-0">
+                <Link
+                  href={`/guia/${guia.slug}`}
+                  className="flex min-w-0 items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-white px-5 py-3.5 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-marca/30 hover:text-marca hover:shadow-md"
+                >
+                  <span aria-hidden="true" className="font-black text-marca">
+                    ☰
+                  </span>
+                  <span className="min-w-0">{guia.titulo}</span>
+                  <span aria-hidden="true" className="text-marca">
+                    →
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="mx-auto max-w-6xl px-4 py-5 sm:py-12">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 sm:mb-8">

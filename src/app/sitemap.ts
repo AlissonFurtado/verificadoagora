@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { lerCatalogo, lerComparativos } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerGuias } from '@/lib/catalogo';
 import { produtosVisiveis } from '@/lib/produtos';
 import { caminhoDoComparativo, caminhoDoProduto } from '@/lib/slug';
 
@@ -32,6 +32,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(produto.verificado_em),
       changeFrequency: 'daily' as const,
       priority: 0.8,
+    })),
+    // Guia de faixa: a página de julgamento que alcança quem ainda não sabe o
+    // nome do aparelho — e ficha de produto o Google vinha recusando.
+    ...lerGuias().map((guia) => ({
+      url: `${base}/guia/${guia.slug}`,
+      lastModified: new Date(metadata.ultima_atualizacao),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     })),
     // Comparativo é texto escrito à mão: muda pouco, mas vale mais no índice
     // do que a página de um produto só — é a pergunta que a pessoa digita.

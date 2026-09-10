@@ -3,6 +3,7 @@ import path from 'path';
 import type { Catalogo } from './produtos';
 import type { Historico } from './historico';
 import type { Comparativo, Comparativos } from './comparativos';
+import type { Guia, Guias } from './guias';
 
 /** Histórico de preço. Some quando o arquivo ainda não existe, sem quebrar a página. */
 export function lerHistorico(): Historico {
@@ -26,4 +27,14 @@ export function lerComparativos(): Comparativo[] {
   const caminho = path.join(process.cwd(), 'data', 'comparativos.json');
   if (!fs.existsSync(caminho)) return [];
   return (JSON.parse(fs.readFileSync(caminho, 'utf-8')) as Comparativos).comparativos;
+}
+
+/**
+ * Guias de faixa escritos à mão. Some sem quebrar nada quando o arquivo não
+ * existe — igual aos comparativos: guia é opcional.
+ */
+export function lerGuias(): Guia[] {
+  const caminho = path.join(process.cwd(), 'data', 'guias.json');
+  if (!fs.existsSync(caminho)) return [];
+  return (JSON.parse(fs.readFileSync(caminho, 'utf-8')) as Guias).guias;
 }

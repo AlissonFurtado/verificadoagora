@@ -480,6 +480,31 @@ entrada de busca, não degrau do funil.
 `/como-conferimos` explica o robô, com marcação `FAQPage`. É o ativo que
 ninguém copia — qualquer um lista ofertas, ninguém tem o histórico.
 
+### Guias de faixa
+
+Em `/guia/{slug}`, de `data/guias.json`. O primeiro é
+`/guia/celulares-ate-1500`, escrito em 10/09/2026.
+
+**Ordena por perfil de quem compra, não por nota** — "quero que dure anos",
+"o orçamento manda", "eu jogo". Foi a forma escolhida pelo Alisson entre
+tabela única e ranking cru: quem digita "melhor celular até 1500" ainda não
+sabe qual especificação importa pra ele, e ranking único mentiria (o G86 ganha
+do A36 pra jogo e perde em durar anos).
+
+- ⚠️ **A ficha de cada perfil é copiada palavra por palavra dos
+  comparativos**, e o `npm run fichas` confere o guia junto. Número novo aqui
+  é número que ninguém verificou na fonte do fabricante.
+- **Nenhum preço no arquivo**: mesmos marcadores do comparativo, resolvidos
+  por perfil contra o produto daquele perfil (`comTextoDeHoje` de
+  `guias.ts`) — o marcador de um aparelho não pode vazar pro texto do outro.
+- **Aparelho de fora do catálogo entra sem preço**, dizendo "não acompanhamos".
+  Quatro dos seis do primeiro guia são assim, e o rodapé diz isso.
+- **`quando_nao` é obrigatório em todo perfil.** Guia que só elogia não merece
+  citação — mesma regra da tabela que mostra onde o produto perde.
+- Marcação é `Article` com `citation` **mais um `ItemList`**: a ordem dos
+  perfis é a substância da página e não se lê de um parágrafo.
+- Guia é curadoria, como o comparativo: **nenhum robô escreve um**.
+
 ### Comparativos
 
 ⚠️ **Antes de escrever um, veja se o produto já é coluna de outro.** O

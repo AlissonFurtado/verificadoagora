@@ -27,6 +27,18 @@ type Coluna = { chave: string; nome: string; meli_id: string };
 type Linha = { campo: string; valores: Record<string, string> };
 type Comparativo = { meli_id: string; titulo: string; colunas: Coluna[]; linhas: Linha[] };
 
+/**
+ * O guia repete a ficha dos mesmos aparelhos em outra página — que é
+ * exatamente a situação que criou este script. Um perfil do guia é uma coluna
+ * a mais para conferir, com o nome do aparelho como identidade.
+ */
+type PerfilDoGuia = {
+  aparelho: string;
+  meli_id: string;
+  ficha: Record<string, string>;
+};
+type Guia = { slug: string; perfis: PerfilDoGuia[] };
+
 /** Cada grandeza do texto: "5.200 mAh · 20 W" → { mah: "5200", w: "20" }. */
 function grandezasDe(texto: string): Map<string, string> {
   const achados = texto.matchAll(/(\d+(?:[.,]\d+)*)\s*([a-zA-Záéíóúâêôãõç]+)/g);
@@ -63,6 +75,11 @@ function main(): void {
     comparativos: Comparativo[];
   };
 
+  const caminhoGuias = path.join(process.cwd(), 'data', 'guias.json');
+  const guias: Guia[] = fs.existsSync(caminhoGuias)
+    ? (JSON.parse(fs.readFileSync(caminhoGuias, 'utf-8')) as { guias: Guia[] }).guias
+    : [];
+
   // Cada aparelho identificável, e o que cada comparativo diz sobre ele.
   // Rival de fora não tem `meli_id`, então é agrupado pelo nome da coluna.
   type Dito = { onde: string; texto: string };
@@ -79,6 +96,21 @@ function main(): void {
         const lista = porCampo.get(linha.campo) ?? [];
         lista.push({ onde: comparativo.meli_id, texto });
         porCampo.set(linha.campo, lista);
+      }
+
+      ditos.set(aparelho, porCampo);
+    }
+  }
+
+  for (const guia of guias) {
+    for (const perfil of guia.perfis) {
+      const aparelho = perfil.meli_id || perfil.aparelho;
+      const porCampo = ditos.get(aparelho) ?? new Map<string, Dito[]>();
+
+      for (const [campo, texto] of Object.entries(perfil.ficha)) {
+        const lista = porCampo.get(campo) ?? [];
+        lista.push({ onde: `guia/${guia.slug}`, texto });
+        porCampo.set(campo, lista);
       }
 
       ditos.set(aparelho, porCampo);

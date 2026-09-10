@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { lerCatalogo, lerComparativos } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerGuias } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
 import { acharComparativo, comTextoDeHoje, type Comparativo } from '@/lib/comparativos';
 import { acharPorSlug, caminhoDoComparativo, gerarSlug } from '@/lib/slug';
@@ -114,6 +114,10 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
   /** Quem tem meli_id está no catálogo — e o preço vem de lá, nunca do JSON do
    *  comparativo. É o que mantém o robô de preços mandando na única linha da
    *  tabela que envelheceria sozinha. */
+  const guiasComEle = lerGuias().filter((guia) =>
+    guia.perfis.some((perfil) => perfil.meli_id === produto.meli_id),
+  );
+
   const noCatalogo = new Map(
     comparativo.colunas
       .map((c) => [c.chave, catalogo.find((p) => p.meli_id === c.meli_id)] as const)
@@ -404,6 +408,28 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             })}
           </div>
         </section>
+
+        {/* Quem chegou aqui buscando o nome do aparelho pode ainda estar em
+            dúvida sobre a faixa inteira. O guia é a página que responde isso. */}
+        {guiasComEle.length > 0 && (
+          <section className="mt-8 min-w-0 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400">
+              Ainda comparando a faixa inteira?
+            </h2>
+            <ul className="mt-3 space-y-1.5 text-sm">
+              {guiasComEle.map((guia) => (
+                <li key={guia.slug} className="min-w-0">
+                  <Link
+                    href={`/guia/${guia.slug}`}
+                    className="font-bold text-marca underline decoration-marca/30 underline-offset-4 transition-colors hover:text-marca-acao hover:decoration-marca"
+                  >
+                    {guia.titulo} →
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         <section className="mt-8 min-w-0">
           <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400">
