@@ -23,6 +23,27 @@ atrapalham a leitura de tópico do buscador.
 > (`~/.claude/CLAUDE.md`) e valem em todos os projetos. O padrão técnico
 > compartilhado entre eles está na skill `padrao-afdesousa`.
 
+## Onde paramos — 10/09/2026
+
+Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
+
+**Meta:** uma venda até 03/11/2026. O gargalo é visita, não catálogo.
+
+| Frente | Estado | De quem é a vez |
+|---|---|---|
+| Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento dia 1 postado | **Dele**: dias 2 e 3, depois o comentário com link |
+| Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
+| Garimpo com piso de 15% no foco | No ar, primeira rodada em 11/09 de manhã | Conferir se veio celular, e o log por categoria se não veio |
+| Pinterest | Bloqueado; apelação de 10/09 sem resposta | Reconferir a cada poucos dias |
+| Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
+
+⚠️ **Os rascunhos do Reddit moram em pasta temporária e não sobrevivem ao
+`/clear`.** Se ele pedir de novo, é refazer o garimpo — leia devagar.
+
+⚠️ **O guia não vende sozinho, e isso é de propósito:** quatro dos seis
+aparelhos não são nossos. Se ele trouxer visita e nenhum clique, o problema é
+o catálogo ter só dois celulares, não o texto.
+
 ## Economia de contexto
 
 O Alisson paga por token e o limite dele já apertou uma vez. **Esta seção vale
@@ -47,15 +68,29 @@ Como trabalhar barato aqui:
 
 ### ⚠️ Antes do `/clear`, despeje o aprendizado aqui
 
-Limpar a conversa é a forma mais eficaz de baratear a sessão — e é **este
-arquivo que atravessa o `/clear`**. Nada mais atravessa.
+**O Alisson limpa a conversa o tempo todo, de propósito, pra economizar
+token.** Conte com isso: é **este arquivo que atravessa o `/clear`**, e nada
+mais atravessa. Rascunho em pasta temporária, resultado de comando, o que foi
+combinado no meio do caminho — tudo isso morre.
 
 Então, ao fim de qualquer trabalho que descubra algo, escreva aqui: a
-armadilha encontrada, a decisão tomada e o porquê. Se o Alisson disser que vai
+armadilha encontrada, a decisão tomada e o porquê. Se ele disser que vai
 limpar, ofereça isso antes.
 
+**Quando ele pedir "atualize o CLAUDE.md", são três coisas, nesta ordem:**
+
+1. **Gravar o que foi aprendido** — regra, decisão, armadilha. Com o porquê.
+2. **Deixar a retomada pronta** — o que ficou pendente e de quem é a vez. A
+   próxima sessão começa sem memória nenhuma da conversa: se não estiver
+   escrito aqui, ela vai perguntar de novo o que ele já respondeu.
+3. **Enxugar sem perder contexto** — juntar o que ficou repetido, cortar
+   história, manter toda regra. Na dúvida entre encurtar e preservar, preserve:
+   o custo de reler uma linha a mais é centavos, o de refazer uma decisão é a
+   sessão inteira.
+
 Escreva a regra, não a história. "O robô não gravava o histórico entre 07 e
-08/09" vale uma linha; o relato de como foi descoberto, nenhuma.
+08/09" vale uma linha; o relato de como foi descoberto, nenhuma. **Data e
+número ficam** — são eles que provam a regra depois.
 
 ## O domínio
 
@@ -306,26 +341,20 @@ Regras do arquivo:
 
 ### A armadilha dos links do Mercado Livre
 
-Link gerado a partir do **Perfil Social** (`meli.la/...` que cai em
-`mercadolivre.com.br/social/alisson580`) **não leva ao produto**: leva ao
-perfil, com o produto em destaque e um botão "Ir para produto". Um clique a
-mais, e quando a lista do perfil esvazia o link vira uma página vazia — foi o
-que aconteceu com o robô aspirador (id 1).
+Gerar o link **adiciona o produto à lista "Minhas recomendações"** do Perfil
+Social, e o `meli.la/...` resultante cai em `mercadolivre.com.br/social/`:
+leva ao **perfil**, com o produto em destaque e um botão "Ir para produto".
+Um clique a mais, e a comissão é creditada.
 
 **E não existe alternativa.** Testado em 07/09/2026 direto no gerador: o
-"Gerador de produtos recomendados" é a ferramenta oficial de link de afiliado,
-e tanto o link curto quanto o "link completo" apontam pra `/social/`. Não há
-opção de link direto pro produto. Quem procurar de novo vai gastar o mesmo
-tempo pra chegar na mesma resposta.
-
-Como funciona de verdade: gerar o link **adiciona o produto à lista "Minhas
-recomendações"**, e o link leva ao perfil com esse produto em destaque e um
-botão "Ir para produto". Um clique a mais, e a comissão é creditada.
+"Gerador de produtos recomendados" é a ferramenta oficial, e tanto o link
+curto quanto o "link completo" apontam pra `/social/`. Quem procurar de novo
+vai gastar o mesmo tempo pra chegar na mesma resposta.
 
 ⚠️ **Daí o modo de falhar:** produto que sai da lista "Minhas recomendações"
 deixa o link apontando pro perfil sem ele — foi o que aconteceu com o robô
-aspirador, cujo link caía num perfil vazio. Não esvazie a lista no Meli sem
-tirar os produtos correspondentes daqui.
+aspirador (id 1), cujo link caía num perfil vazio. Não esvazie a lista no Meli
+sem tirar os produtos correspondentes daqui.
 
 O lado bom: a `og:image` dessas páginas do Meli é a foto do produto em
 destaque, e foi de lá que saíram as primeiras imagens do JSON.
@@ -578,9 +607,9 @@ catálogo, é visita — o site passou o primeiro mês no ar sem divulgação ne
 
 | Canal | Prazo até render | Papel | Situação |
 |---|---|---|---|
-| **Fóruns / Reddit** | dias | Primeira visita, e o teste de se a página convence | não começou |
+| **Fóruns / Reddit** | dias | Primeira visita, e o teste de se a página convence | aquecendo desde 10/09 |
 | **Pinterest** | 2 a 6 semanas | Era o volume de novembro | 🔴 **bloqueado**, veja abaixo |
-| **Google / SEO** | 3 a 6 meses | O ativo que compõe sozinho | sitemap enviado 10/09 |
+| **Google / SEO** | 3 a 6 meses | O ativo que compõe sozinho | sitemap + 1º guia, 10/09 |
 | **Instagram** | meses | Antecipado do "fase 3" a pedido do Alisson | não começou |
 
 ⚠️ **SEO não chega a tempo de novembro, e isso está certo.** Com o Pinterest
@@ -607,13 +636,11 @@ Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
   que cite o site — nunca escondida, que é o que o Reddit de fato bane.
   Convenção informal do Reddit: ~9 participações genuínas por 1 que cita algo
   seu. Por isso o aquecimento sem link antes.
-- **Aquecimento em curso.** Dia 1 postado em 10/09/2026 (thread "128Gb é muito
-  pouco?"), sem link, com o Alisson trocando o texto pelo dele. Faltam dois
-  dias de aquecimento antes do primeiro comentário que cita o site.
-  ⚠️ **O que ele acrescentou é o que funcionou:** experiência pessoal
+- ⚠️ **Rascunho meu é ponto de partida, não texto final.** No aquecimento de
+  10/09 o que o Alisson acrescentou foi o que funcionou: experiência pessoal
   ("comprei um de 128 GB porque era mais barato e me frustrei") vale mais que
-  conselho bem escrito, e é o que ninguém copia de site de ficha técnica.
-  Rascunho meu é ponto de partida, não texto final.
+  conselho bem escrito, e é o que ninguém copia de site de ficha técnica. Erro
+  de digitação inclusive ajuda — texto perfeito demais soa a robô.
 - ⚠️ **Regra 2 do sub é ban permanente por spam.** Um comentário por dia, no
   máximo, e declaração de afiliado na resposta. Circula `meli.la` por lá com
   upvote — não imite: é o que a comunidade pune quando percebe, e a nossa
@@ -660,6 +687,16 @@ autoridade. É o alvo dos comparativos, e agora tem prova neste domínio.
 "rastreada, mas não indexada"** — todas fichas de produto de commodity. Não é
 lentidão do Google, é recusa. **Mais produto no mesmo molde piora.** Quem abre
 índice é comparativo e guia. **Página de julgamento ranqueia; ficha, não.**
+
+⚠️ **Não confunda os dois motivos no painel.** No mesmo dia havia 12 páginas
+não indexadas: 8 recusadas (as fichas, o problema real) e **4 "não encontrado
+(404)", que são as páginas do WordPress antigo e estão certas assim**. Só o
+primeiro número mede alguma coisa.
+
+**Solicitar indexação à mão acelera página nova**: Inspeção de URL → Solicitar
+indexação põe na fila prioritária. Feito para `/guia/celulares-ate-1500` em
+10/09/2026, no mesmo dia em que ela subiu. Vale para toda página de julgamento
+nova; repetir na mesma URL não adianta nada.
 
 ⚠️ **Parte das impressões não é desta página:** `vidraçaria parauapebas`, `box
 banheiro` e afins somam 184 impressões e vêm do `hrvidros.` — do cliente. Há
