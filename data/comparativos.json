@@ -5,11 +5,31 @@
       "titulo": "Galaxy A36 5G vale a pena? Comparamos com 4 celulares da mesma faixa",
       "resumo": "O A36 está a {preco}, com {desconto}% de desconto. Colocamos a ficha dele lado a lado com o Moto G17 — que também está aqui na página — e com os três intermediários que mais aparecem quando alguém procura celular nessa faixa. As especificações vêm dos fabricantes e da GSMArena; os preços, só dos dois que nosso robô confere todo dia.",
       "colunas": [
-        { "chave": "a36", "nome": "Galaxy A36 5G", "meli_id": "MLB47115842" },
-        { "chave": "g17", "nome": "Moto G17", "meli_id": "MLB65041644" },
-        { "chave": "redmi14", "nome": "Redmi Note 14 5G", "meli_id": "" },
-        { "chave": "pocox7", "nome": "Poco X7", "meli_id": "" },
-        { "chave": "g86", "nome": "Moto G86", "meli_id": "" }
+        {
+          "chave": "a36",
+          "nome": "Galaxy A36 5G",
+          "meli_id": "MLB47115842"
+        },
+        {
+          "chave": "g17",
+          "nome": "Moto G17",
+          "meli_id": "MLB65041644"
+        },
+        {
+          "chave": "redmi14",
+          "nome": "Redmi Note 14 5G",
+          "meli_id": ""
+        },
+        {
+          "chave": "pocox7",
+          "nome": "Poco X7",
+          "meli_id": ""
+        },
+        {
+          "chave": "g86",
+          "nome": "Moto G86",
+          "meli_id": ""
+        }
       ],
       "linhas": [
         {
@@ -21,7 +41,9 @@
             "pocox7": "4 versões",
             "g86": "2 versões"
           },
-          "vencedores": ["a36"],
+          "vencedores": [
+            "a36"
+          ],
           "nota": "É a linha que decide quantos anos o aparelho continua servindo. A Samsung promete seis versões do Android no A36 — o dobro do segundo colocado. Para o G17, a Motorola confirmou só correções de segurança, sem nenhuma versão nova do Android."
         },
         {
@@ -33,7 +55,9 @@
             "pocox7": "6,67 pol. AMOLED, 120 Hz, 3.000 nits",
             "g86": "6,67 pol. pOLED, 120 Hz, 4.500 nits"
           },
-          "vencedores": ["g86"],
+          "vencedores": [
+            "g86"
+          ],
           "nota": "AMOLED e pOLED mostram preto de verdade e gastam menos bateria que LCD. O G17 é o único LCD da lista e o único a 60 Hz: a rolagem aparece visivelmente menos fluida do que nos outros quatro."
         },
         {
@@ -45,7 +69,9 @@
             "pocox7": "Dimensity 7300 Ultra (4 nm)",
             "g86": "Dimensity 7300 (4 nm)"
           },
-          "vencedores": ["pocox7"],
+          "vencedores": [
+            "pocox7"
+          ],
           "nota": "O A36 e os dois Dimensity 7300 jogam na mesma faixa, com vantagem de fôlego para o Poco X7. O Helio G81 do G17 é de uma geração bem anterior: dá conta de mensagem, vídeo e redes sociais, não de jogo pesado."
         },
         {
@@ -57,7 +83,11 @@
             "pocox7": "8 GB · 256 GB",
             "g86": "8 GB · 256 GB"
           },
-          "vencedores": ["redmi14", "pocox7", "g86"],
+          "vencedores": [
+            "redmi14",
+            "pocox7",
+            "g86"
+          ],
           "nota": "Aqui a oferta do A36 perde: é a versão de 6 GB e 128 GB, e a linha A36 não tem entrada de cartão de memória. Quem guarda muita foto e vídeo aperta o armazenamento antes do que imagina — e só o G17 aceita cartão."
         },
         {
@@ -69,7 +99,11 @@
             "pocox7": "5.110 mAh · 45 W",
             "g86": "5.200 mAh · 30 W"
           },
-          "vencedores": ["a36", "redmi14", "pocox7"],
+          "vencedores": [
+            "a36",
+            "redmi14",
+            "pocox7"
+          ],
           "nota": "A capacidade é praticamente igual nos cinco; o que muda é a pressa. O A36 vai de zero a cheio em cerca de 68 minutos. O G17, com 20 W, leva perto de uma hora e meia."
         },
         {
@@ -81,7 +115,9 @@
             "pocox7": "50 MP",
             "g86": "50 MP com estabilização óptica"
           },
-          "vencedores": ["redmi14"],
+          "vencedores": [
+            "redmi14"
+          ],
           "nota": "Estabilização óptica é o que salva foto à noite e vídeo gravado andando — conta mais no dia a dia do que a contagem de megapixels. O A36 tem; o G17 não."
         },
         {
@@ -93,7 +129,9 @@
             "pocox7": "IP68 — imersão até 1,5 m",
             "g86": "IP68/IP69 e padrão militar MIL-STD-810H"
           },
-          "vencedores": ["g86"],
+          "vencedores": [
+            "g86"
+          ],
           "nota": "IP67 e IP68 aguentam cair na pia. IP64 aguenta chuva, e só. É a diferença entre um susto e uma troca de aparelho."
         },
         {
@@ -105,7 +143,12 @@
             "pocox7": "5G",
             "g86": "5G"
           },
-          "vencedores": ["a36", "redmi14", "pocox7", "g86"],
+          "vencedores": [
+            "a36",
+            "redmi14",
+            "pocox7",
+            "g86"
+          ],
           "nota": "O G17 é o único sem 5G da lista. Se onde você mora ainda não tem cobertura, isso não muda nada hoje — mas muda daqui a alguns anos, e celular a gente troca devagar."
         }
       ],
@@ -148,6 +191,195 @@
         }
       ],
       "escrito_em": "2026-09-08"
+    },
+    {
+      "meli_id": "MLB65041644",
+      "titulo": "Moto G17 vale a pena? Comparamos com 4 celulares de até R$ 1.500",
+      "resumo": "O G17 está a {preco}, com {desconto}% de desconto. Ele é o degrau de entrada da faixa, então a pergunta útil não é se ele é bom, e sim o que muda quando se gasta um pouco mais. Colocamos a ficha dele ao lado de três rivais diretos e do Galaxy A36 — que também está aqui na página e custa quase o dobro. As especificações vêm dos fabricantes e das fichas técnicas publicadas; os preços, só dos dois que nosso robô confere todo dia.",
+      "colunas": [
+        {
+          "chave": "g17",
+          "nome": "Moto G17",
+          "meli_id": "MLB65041644"
+        },
+        {
+          "chave": "a16",
+          "nome": "Galaxy A16 5G",
+          "meli_id": ""
+        },
+        {
+          "chave": "redmi14c",
+          "nome": "Redmi 14C",
+          "meli_id": ""
+        },
+        {
+          "chave": "g15",
+          "nome": "Moto G15",
+          "meli_id": ""
+        },
+        {
+          "chave": "a36",
+          "nome": "Galaxy A36 5G",
+          "meli_id": "MLB47115842"
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Atualizações do Android",
+          "valores": {
+            "g17": "Nenhuma versão prometida",
+            "a16": "Até 6 versões",
+            "redmi14c": "Não divulgado",
+            "g15": "Não divulgado",
+            "a36": "Até 6 versões"
+          },
+          "vencedores": [
+            "a16",
+            "a36"
+          ],
+          "nota": "É a linha que decide por quantos anos o aparelho continua servindo. A Samsung promete seis versões do Android no A16 e no A36, com segurança até 2030. Para o G17, a Motorola confirmou apenas correções de segurança, sem nenhuma versão nova de Android — e é a diferença mais cara da tabela, porque não se corrige depois."
+        },
+        {
+          "campo": "Tela",
+          "valores": {
+            "g17": "6,72 pol. LCD, 60 Hz, Full HD+, 1.000 nits",
+            "a16": "6,7 pol. Super AMOLED, 90 Hz, Full HD+, 800 nits",
+            "redmi14c": "6,88 pol. LCD, 120 Hz, HD+ (720p)",
+            "g15": "6,72 pol. LCD, 120 Hz, Full HD+",
+            "a36": "6,7 pol. Super AMOLED, 120 Hz, Full HD+, 1.900 nits"
+          },
+          "vencedores": [
+            "a36"
+          ],
+          "nota": "Duas coisas diferentes se misturam aqui. O G17 é o único a 60 Hz: a rolagem aparece visivelmente menos fluida que nos outros quatro, e isso se nota no primeiro minuto de uso. Já o Redmi 14C tem 120 Hz mas é o único em HD+ — a tela é a maior da lista e a menos definida. O A16 troca fluidez por AMOLED, que mostra preto de verdade."
+        },
+        {
+          "campo": "Processador",
+          "valores": {
+            "g17": "MediaTek Helio G81 Extreme",
+            "a16": "Exynos 1330 (5 nm)",
+            "redmi14c": "MediaTek Helio G81 Ultra",
+            "g15": "MediaTek Helio G81 Ultra (12 nm)",
+            "a36": "Snapdragon 6 Gen 3 (4 nm)"
+          },
+          "vencedores": [
+            "a36"
+          ],
+          "nota": "Três dos cinco rodam variações do mesmo Helio G81, um chip de 12 nm de geração anterior: dão conta de mensagem, vídeo e redes sociais, não de jogo pesado. O Exynos 1330 do A16 é de 5 nm e o Snapdragon do A36 é de 4 nm — fabricação mais moderna significa mais desempenho por carga de bateria, não só mais velocidade."
+        },
+        {
+          "campo": "Memória",
+          "valores": {
+            "g17": "4 GB · 128 GB, microSD até 1 TB",
+            "a16": "4 a 8 GB · até 256 GB, com microSD",
+            "redmi14c": "8 GB · 256 GB, com microSD",
+            "g15": "4 a 8 GB · 128 GB, com microSD",
+            "a36": "6 GB · 128 GB, sem microSD"
+          },
+          "vencedores": [
+            "redmi14c"
+          ],
+          "nota": "O G17 anuncia 12 GB de RAM, mas são 4 GB reais mais 8 GB emprestados do armazenamento. A \"RAM turbo\" ajuda a manter aplicativos abertos e não substitui memória de verdade — é a mesma conta que o Redmi 14C e o Moto G15 fazem. O A36 é o único da lista sem cartão de memória: os 128 GB dele são o teto."
+        },
+        {
+          "campo": "Bateria e carregamento",
+          "valores": {
+            "g17": "5.200 mAh · 18 W",
+            "a16": "5.000 mAh · 25 W",
+            "redmi14c": "5.160 mAh · 18 W",
+            "g15": "5.200 mAh · 18 W",
+            "a36": "5.000 mAh · 45 W"
+          },
+          "vencedores": [
+            "a36"
+          ],
+          "nota": "Em capacidade os cinco empatam na prática — todos passam o dia. A diferença está na hora de carregar: com 45 W o A36 recupera em minutos o que os 18 W do G17 levam mais de uma hora para repor. Quem carrega dormindo não sente; quem esquece de carregar, sente todo dia."
+        },
+        {
+          "campo": "Rede",
+          "valores": {
+            "g17": "Só 4G",
+            "a16": "5G",
+            "redmi14c": "Só 4G",
+            "g15": "Só 4G",
+            "a36": "5G"
+          },
+          "vencedores": [
+            "a16",
+            "a36"
+          ],
+          "nota": "O G17 não pega 5G, e esse é o corte mais concreto entre ele e o A16, que custa perto disso e pega. Se onde você usa o celular ainda não tem 5G, a linha não muda nada hoje — mas muda no tempo em que você vai ficar com o aparelho."
+        },
+        {
+          "campo": "Resistência a água",
+          "valores": {
+            "g17": "IP64 (respingos)",
+            "a16": "IP54 (respingos)",
+            "redmi14c": "Não divulgado",
+            "g15": "Não divulgado",
+            "a36": "IP67 (imersão)"
+          },
+          "vencedores": [
+            "a36"
+          ],
+          "nota": "IP64 e IP54 protegem de chuva e respingo, não de queda na água. Só o A36 tem IP67, que aguenta imersão. É a diferença entre \"molhou e sobreviveu\" e \"caiu na pia e acabou\"."
+        },
+        {
+          "campo": "Câmera principal",
+          "valores": {
+            "g17": "50 MP, f/1.8 (Sony LYTIA 600)",
+            "a16": "50 MP, f/1.8",
+            "redmi14c": "50 MP",
+            "g15": "50 MP",
+            "a36": "50 MP com estabilização óptica"
+          },
+          "vencedores": [
+            "a36"
+          ],
+          "nota": "Os cinco anunciam 50 MP, e o número sozinho não diz nada: o que separa foto boa de foto ruim nessa faixa é o sensor e a estabilização. O A36 é o único com estabilização óptica, que é o que salva foto à noite e vídeo andando."
+        }
+      ],
+      "a_favor": [
+        "É o mais barato da tabela por uma margem larga, a {preco} — e faz o básico do dia sem drama.",
+        "Bateria de 5.200 mAh, a maior da lista junto do Moto G15.",
+        "Aceita microSD de até 1 TB, então os 128 GB não são o teto.",
+        "IP64 é uma proteção um pouco melhor que a do Galaxy A16, que custa mais.",
+        "{desconto}% de desconto de verdade — {preco} contra {preco_original} de tabela, conferido em {data}."
+      ],
+      "contra": [
+        "Nenhuma versão nova de Android prometida. Em dois anos ele fica para trás dos outros quatro, e não há como corrigir isso depois.",
+        "Único da tabela a 60 Hz: a rolagem parece travada ao lado de qualquer um dos outros.",
+        "Não pega 5G. O Galaxy A16 pega, por perto do mesmo dinheiro.",
+        "São 4 GB de RAM reais; os 12 GB anunciados incluem 8 GB emprestados do armazenamento."
+      ],
+      "veredito": "O G17 se justifica por um motivo só, e é um motivo legítimo: preço. Se o orçamento é o que manda e o aparelho precisa dar conta de WhatsApp, vídeo e redes sociais, ele faz isso e economiza {economia} em relação ao preço de tabela. Mas ele é a compra que envelhece mais rápido da tabela — sem 5G, a 60 Hz e sem nenhuma versão nova de Android prometida. Se der para esticar até o Galaxy A16 5G, você troca um pouco de bateria por 5G, tela AMOLED e seis anos de atualização, que é o que decide se o celular ainda serve daqui a cinco anos. E se o orçamento for o dobro, o Galaxy A36 aqui do lado ganha em quase todas as linhas desta tabela.",
+      "fontes": [
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        },
+        {
+          "titulo": "Moto G17: preço e ficha técnica (TechTudo)",
+          "url": "https://www.techtudo.com.br/guia/2026/02/moto-g17-preco-ficha-tecnica-e-tudo-sobre-o-celular-barato-da-motorola-edmobile.ghtml"
+        },
+        {
+          "titulo": "Moto G17 pode não receber atualização de Android (Notebookcheck)",
+          "url": "https://www.notebookcheck.net/Moto-G17-may-not-receive-any-Android-updates-as-Motorola-cites-lack-of-EU-requirements.1217839.0.html"
+        },
+        {
+          "titulo": "Galaxy A16 5G — ficha técnica (Tecnoblog)",
+          "url": "https://tecnoblog.net/produtos/samsung-galaxy-a16-5g/"
+        },
+        {
+          "titulo": "Redmi 14C — especificações oficiais (Xiaomi)",
+          "url": "https://www.mi.com/global/product/redmi-14-c/specs/"
+        },
+        {
+          "titulo": "Moto G15 — especificações (Motorola Support)",
+          "url": "https://en-gb.support.motorola.com/app/answers/detail/a_id/183973/~/specifications---moto-g15"
+        }
+      ],
+      "escrito_em": "2026-09-10"
     }
   ]
 }
