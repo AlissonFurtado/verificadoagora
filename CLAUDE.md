@@ -23,95 +23,76 @@ atrapalham a leitura de tópico do buscador.
 > (`~/.claude/CLAUDE.md`) e valem em todos os projetos. O padrão técnico
 > compartilhado entre eles está na skill `padrao-afdesousa`.
 
-## O nó do domínio
+## Economia de contexto
 
-`verificadoagora.com.br` foi o **primeiro domínio** do Alisson e virou hub por
-acidente histórico. Hoje ele serve a **página institucional da A F DE SOUSA**,
-hospedada na Hostinger por upload manual, cujo fonte mora no repositório do
-**Vidraceiro** (`landing/hub/index.html`) — não aqui.
+O Alisson paga por token e o limite dele já apertou uma vez. **Esta seção vale
+tanto quanto as regras técnicas.**
 
-Em 07/09/2026 ficou decidido que o papel de hub passa pro `afdesousa.com.br` e
-que este domínio volta a ser só o que o nome diz. Com uma ordem que não se
-inverte:
+O que custa caro, em ordem: o histórico da conversa, screenshot, arquivo
+grande relido, resposta longa.
 
-**A institucional só sai do ar quando esta landing estiver pronta pra entrar
-no lugar.** Nada de domínio vazio no meio do caminho.
+Como trabalhar barato aqui:
 
-A landing já está publicada em `verificadoagora.vercel.app` desde 01/09/2026 —
-a Vercel constrói a cada push na `main`. O que falta é só o último passo:
-conectar o `verificadoagora.com.br` ao projeto, e é aí que a institucional
-precisa sair.
+- **Verifique medindo, não olhando.** `curl` e uma linha de `node` provam a
+  mesma coisa que um screenshot por uma fração do preço. Screenshot só quando
+  o assunto for de fato visual e não der pra medir.
+- **Resposta curta por padrão.** Diga o que mudou, o que não funcionou e o que
+  falta. Sem recapitular o que ele acabou de ler.
+- **Uma pergunta boa em vez de três.** A regra de perguntar em múltipla
+  escolha (`~/.claude/CLAUDE.md`) continua valendo — o Alisson gosta dela.
+  Guarde-a pro que muda dinheiro, dado ou visual; no resto, decida e diga o
+  que decidiu.
+- **Junte o trabalho.** Várias edições e uma verificação no fim custam menos
+  que verificar a cada passo.
 
-**Nenhum endereço fica escrito no código.** O `metadataBase` do `layout.tsx`
-sai de `VERCEL_PROJECT_PRODUCTION_URL`, que a Vercel preenche com o domínio do
-projeto — e que passa a ser o domínio próprio sozinho quando ele for
-conectado.
+### ⚠️ Antes do `/clear`, despeje o aprendizado aqui
 
-⚠️ **Não use `VERCEL_URL` pra isso.** Ela é o endereço daquele deploy
-específico, que a Vercel protege com login e responde 302. Com ela, a capa do
-link apontava pra uma URL protegida e o link colado no Instagram aparecia sem
-imagem. Aconteceu, e só dava pra ver em produção.
+Limpar a conversa é a forma mais eficaz de baratear a sessão — e é **este
+arquivo que atravessa o `/clear`**. Nada mais atravessa.
 
-Quando o domínio for conectado, **avise o Alisson**: é o sinal pra sessão do
-Vidraceiro tirar a institucional de lá.
+Então, ao fim de qualquer trabalho que descubra algo, escreva aqui: a
+armadilha encontrada, a decisão tomada e o porquê. Se o Alisson disser que vai
+limpar, ofereça isso antes.
 
-### A troca aconteceu em 07/09/2026
+Escreva a regra, não a história. "O robô não gravava o histórico entre 07 e
+08/09" vale uma linha; o relato de como foi descoberto, nenhuma.
 
-`verificadoagora.com.br` **serve esta landing**, com certificado válido. O
-registro é `A` · `@` · `216.198.79.1`, no DNS da Hostinger.
+## O domínio
 
-Nenhum endereço ficou escrito no código: o `metadataBase` sai de
-`VERCEL_PROJECT_PRODUCTION_URL` e migrou sozinho pro domínio novo.
+Endereço oficial: **`www.verificadoagora.com.br`**. O apex redireciona pra ele
+(308). Saiu ao contrário do planejado e ficou assim porque funciona igual — o
+que importa é existir uma versão canônica só. Pra inverter: Settings → Domains
+da Vercel, apex como *Primary Domain*. Não mexe em DNS.
 
-### O oficial é o `www`, e o apex redireciona (09/09/2026)
+Nameservers na **Hostinger**. Nenhum endereço fica escrito no código: o
+`metadataBase` sai de `VERCEL_PROJECT_PRODUCTION_URL`.
 
-```
-verificadoagora.com.br       → 308 → www.verificadoagora.com.br
-www.verificadoagora.com.br   → 200, serve a landing
-```
+⚠️ **Não use `VERCEL_URL`.** É o endereço do deploy, protegido por login,
+responde 302 — a capa do link no Instagram saía sem imagem. Só dava pra ver em
+produção.
 
-Saiu ao contrário do que estava planejado — o combinado era o apex ser o
-oficial. **Ficou assim de propósito depois de conferir que funciona igual:**
-o que importa pro buscador é existir uma versão canônica só, e existe. Se
-alguém for inverter um dia, é em Settings → Domains da Vercel, marcando o
-apex como *Primary Domain*; não mexe em DNS. E não precisa refazer o Search
-Console: a propriedade foi verificada como **Domínio**, que cobre apex e www
-de uma vez.
+**Search Console**: propriedade tipo *Domínio*, verificada em 09/09/2026 por
+`TXT` no `@`. Não apague esse TXT; TXT novo entra como registro adicional.
 
-⚠️ **A institucional saiu do ar.** Ela morava em `www.verificadoagora.com.br`
-e o `www` passou a servir esta landing. `afdesousa.com.br` ainda responde
-"Página padrão" da Hostinger, então **a página institucional não tem endereço
-nenhum hoje**. Foi decisão do Alisson, tomada depois de eu avisar. Pendência
-pra sessão do Vidraceiro: publicar a institucional no `afdesousa.com.br`.
-
-### Search Console
-
-Propriedade do tipo **Domínio**, verificada em 09/09/2026 por registro `TXT`
-no `@` da Hostinger (`google-site-verification=...`). Não apague esse TXT — e
-se precisar adicionar outro TXT, adicione como registro novo em vez de
-substituir.
-
-### O que mais mora nesta zona DNS
-
-O domínio virou hub por acidente e ainda carrega outros projetos. Auditado em
-07/09/2026:
+### A zona DNS carrega outros projetos
 
 | Registro | Serve | Situação |
 |---|---|---|
-| `A @` | redireciona pro `www` | ativo |
-| `CNAME www` | **esta landing** (Vercel) | ativo, é o endereço oficial |
-| `ALIAS hrvidros` | **landing do HR Vidros** | 🔴 **ativo — é do cliente** |
-| `ALIAS api-licitacoes` | "Página padrão" da Hostinger | morto |
-| `CNAME licitacoes` | Vercel que não existe mais | morto |
-| `TXT @` | verificação do Search Console | ativo, **não apague** |
-| `A ftp` | 45.132.157.6 | não auditado |
+| `A @` → `216.198.79.1` | redireciona pro `www` | ativo |
+| `CNAME www` | esta landing (Vercel) | ativo, é o oficial |
+| `TXT @` | Search Console | ativo, **não apague** |
+| `ALIAS hrvidros` | **landing do HR Vidros** | 🔴 **ativo — é de cliente** |
+| `ALIAS api-licitacoes`, `CNAME licitacoes` | nada | mortos, podem sair |
+| `A ftp` → `45.132.157.6` | ? | não auditado |
 
-⚠️ **`hrvidros.verificadoagora.com.br` está no ar e é a página de um cliente
-real** (a vidraçaria de Parauapebas). O destino dela, `hrvidros.afdesousa.com.br`,
-ainda não tem DNS. **Não apague esse registro** antes de a landing existir no
-endereço novo — o cliente ficaria sem página nenhuma.
+⚠️ **`hrvidros.verificadoagora.com.br` é a página de um cliente real** (a
+vidraçaria de Parauapebas) e `hrvidros.afdesousa.com.br` ainda não resolve.
+Não apague esse registro.
 
-Os dois mortos (`api-licitacoes`, `licitacoes`) podem sair a qualquer momento.
+⚠️ **A institucional da A F DE SOUSA está sem endereço** desde 09/09/2026:
+morava no `www` daqui e saiu quando ele passou a servir a landing. O
+`afdesousa.com.br` responde "Página padrão" da Hostinger. Decisão do Alisson,
+com o aviso dado antes. Pendência da sessão do Vidraceiro.
 
 ## Stack, e onde ela diverge do padrão
 
@@ -345,255 +326,170 @@ destaque, e foi de lá que saíram as primeiras imagens do JSON.
 
 ## O robô de preços
 
-Toda manhã, `.github/workflows/conferir-precos.yml` reconfere cada produto na
-API do Mercado Livre e reescreve o `produtos.json`. Mudança normal entra
-direto na `main` e a Vercel publica; mudança grande vira PR.
-
+Toda manhã, `conferir-precos.yml` reconfere cada produto na API do Meli.
 Rodar na mão: `npm run precos:conferir`.
 
-⚠️ **O robô escreve três arquivos, não um.** `data/produtos.json`,
-`data/historico.json` e o `relatorio.json` que a Action lê. Entre 07 e
-08/09/2026 faltava o `writeFileSync` do histórico: o script lia o arquivo,
-acumulava o preço do dia na memória e terminava a rodada sem gravar. O
-workflow até fazia `git add data/historico.json`, mas nada mudava, então nada
-era commitado — e o erro era mudo.
+⚠️ **Ele escreve três arquivos**: `produtos.json`, `historico.json` e o
+`relatorio.json` que a Action lê. Entre 07 e 08/09/2026 faltava o
+`writeFileSync` do histórico — o script acumulava na memória e não gravava, o
+`git add` não via mudança e ninguém reclamava. Resultado: um ponto por
+produto, gráfico e selo de menor preço nunca apareceram. **Se o gráfico sumir,
+é a primeira coisa a checar.**
 
-O estrago: todo produto ficou com **um ponto só**, o gráfico da página do
-produto (precisa de 2) e o selo de menor preço (precisa de 3) nunca
-apareceram uma vez, e cada dia conferido se perdia. Se o gráfico sumir de
-novo, é a primeira coisa a checar.
+⚠️ **"Toda manhã", não "às 8h".** O cron pede 11:00 UTC, mas o agendador do
+GitHub atrasa horas: em 08/09 saiu às 14:51 UTC. Por isso o robô grava
+`metadata.conferido_em` com data e hora, e é essa hora que a página mostra.
+Nunca prometa horário cravado ao visitante.
 
-⚠️ **"Toda manhã", não "às 8h".** O cron pede 11:00 UTC (8h de Brasília), mas
-o agendador do GitHub é melhor esforço: em 08/09/2026 a rodada saiu às 14:51
-UTC — 3h51 de atraso — e o garimpo, agendado pras 10h, saiu às 14h09. A página
-chegou a anunciar "confere às 8h" e isso era falso na prática.
+⚠️ **Actions não abrem pull request por padrão** — falha com *"GitHub Actions
+is not permitted to create or approve pull requests"*. A opção foi ligada em
+10/09/2026 em Settings → Actions → General → Workflow permissions. Se voltar a
+falhar, é ali. O branch fica íntegro e dá pra mergear à mão.
 
-Por isso o robô grava `metadata.conferido_em`, com **data e hora** do instante
-em que terminou, e é essa hora que a página mostra. Nunca prometa horário
-cravado ao visitante: mostre o que aconteceu.
+**Por que API e não raspagem.** Pedir a página por HTTP puro devolve
+*suspicious traffic*, mesmo de IP residencial — num runner do GitHub é
+certeza. A API responde de qualquer lugar, com token.
 
-**Por que API e não ler a página.** Pedir a página do produto por HTTP puro
-devolve a tela de *suspicious traffic* — inclusive de IP residencial. Num
-runner do GitHub, com IP de datacenter, é certeza. A API responde de qualquer
-lugar, desde que com token. Não tente voltar pra raspagem sem lembrar disso.
+⚠️ **O refresh_token do Meli é de uso único.** Cada renovação mata o anterior.
+Por isso `scripts/acesso.ts` grava o novo **antes de qualquer outra coisa** e o
+passo que reescreve o segredo roda com `if: always()`.
 
-**O refresh_token do Meli é de uso único.** Cada renovação devolve um novo e
-mata o anterior. Por isso `scripts/acesso.ts` guarda o novo **antes de
-qualquer outra coisa**, e o passo que reescreve o segredo do GitHub roda com
-`if: always()`. Se essa ordem se perder, um erro no meio da rodada deixa a
-automação sem como voltar e alguém tem que refazer a autorização na mão.
+⚠️ **Quem é dono do refresh token é a Action.** Rodar
+`npm run precos:conferir` na máquina **invalida o que o GitHub tem** e quebra
+a rodada seguinte. Se rodar local, refaça a autorização e recadastre
+`ML_REFRESH_TOKEN`.
 
-As travas, que são o motivo de o robô poder commitar sozinho:
+Segredos (Settings → Secrets → Actions): `ML_CLIENT_ID`, `ML_CLIENT_SECRET`,
+`ML_REFRESH_TOKEN` e um `GH_PAT` com permissão de escrever segredos — sem o
+PAT o token não rotaciona e o robô funciona exatamente uma vez.
+
+As travas, que são o motivo de ele poder commitar sozinho:
 
 | Situação | O que ele faz |
 |---|---|
 | Preço mudou até 15% | Aplica e commita na `main` |
-| Mudou mais que 15% | Aplica, mas **em PR** — preço que pula 30% costuma ser outra coisa |
-| Produto pausado ou sem estoque | `disponivel: false` e some da página |
-| 404 no Meli | Mesma coisa: sumiu, então sai do ar |
-| API instável ou erro qualquer | **Não mexe em nada** e a Action fica vermelha |
-| Produto sem `meli_id` | Não confere, e avisa no relatório |
+| Mudou mais que 15% | Aplica **em PR** — 30% costuma ser outra coisa |
+| Pausado, sem estoque ou 404 | `disponivel: false`, some da página |
+| API instável ou erro | **Não mexe em nada** e a Action fica vermelha |
+| Sem `meli_id` | Não confere, avisa no relatório |
 
-O robô nunca marca `preco_no_pix`: a API devolve preço de tabela. Preço de Pix
-só entra quando uma pessoa abriu a página e viu.
-
-Ele também não mexe em `nome`, `descricao`, `categoria` nem `avaliacao` — isso
-é curadoria, e curadoria é do Alisson.
-
-⚠️ **Actions não abrem pull request por padrão.** Na primeira vez que um preço
-passou dos 15% — 09/09/2026 — o robô criou o branch, empurrou e morreu no
-`gh pr create`:
-
-```
-GitHub Actions is not permitted to create or approve pull requests
-```
-
-É uma trava do repositório, não do código: **Settings → Actions → General →
-Workflow permissions → "Allow GitHub Actions to create and approve pull
-requests"**. Nada se perde quando acontece — o branch fica íntegro no GitHub e
-dá pra mergear à mão. Mas a Action fica vermelha e o preço novo não chega na
-vitrine até alguém perceber.
-
-**Quem é dono do refresh token é a Action.** Desde 07/09/2026 os segredos
-estão no GitHub e cada rodada lá queima o token e grava o novo por cima.
-Rodar `npm run precos:conferir` na máquina **invalida o que o GitHub tem** e
-quebra a rodada seguinte. Se precisar rodar local, refaça a autorização e
-recadastre o `ML_REFRESH_TOKEN` no GitHub depois.
-
-Segredos que a Action precisa (Settings > Secrets and variables > Actions):
-`ML_CLIENT_ID`, `ML_CLIENT_SECRET`, `ML_REFRESH_TOKEN` e um `GH_PAT` com
-permissão de escrever segredos — sem o PAT o token não rotaciona e o robô
-funciona exatamente uma vez.
+Ele nunca marca `preco_no_pix` (a API dá preço de tabela) e não toca em
+`nome`, `descricao`, `categoria`, `avaliacao`, `analise` nem `oculto` — isso é
+curadoria.
 
 ## A curadoria: como produto entra na página
 
-Decidido em 07/09/2026, depois de pesquisar o que dá e o que não dá.
+**Não existe API oficial de afiliados do Mercado Livre.** O programa não expõe
+geração de link, e não é falta de procurar. Existem serviços de terceiros que
+usam cookie/sessão da conta de afiliado — **não usar**: é a conta que recebe a
+comissão.
 
-**Não existe API oficial de afiliados do Mercado Livre.** Não é falta de
-procurar: o programa simplesmente não expõe geração de link. O que existe são
-serviços de terceiros que funcionam com cookie/sessão da conta de afiliado —
-**não usar**. É a conta que recebe a comissão; entregar sessão dela pra fora
-não compensa economizar dez minutos por semana.
+A corrente é automática dos dois lados e manual no meio:
 
-Então a corrente é automática dos dois lados e manual exatamente no meio:
+1. **Garimpo diário** (`garimpar.yml`, 10h de Brasília) escreve
+   `data/candidatos.json`, abre uma issue com a fila e para por aí. Filtro em
+   `data/garimpo.json`: desconto ≥ 20%, preço de R$ 100 a R$ 2.000, no máximo
+   10 por dia. Categoria pode ser **nome** de primeiro nível ou **id**
+   (`MLB14370`) de qualquer nível; o que não resolve é pulado com aviso.
+2. **O link é gerado à mão** no Linkbuilder, no Chrome logado do Alisson, numa
+   sessão com o Claude dirigindo.
+3. **O resto volta a ser automático**: card, publicação, conferência diária.
 
-1. **Robô garimpa todo dia** (`.github/workflows/garimpar.yml`, 10h de
-   Brasília) e escreve `data/candidatos.json` + abre uma issue com a fila do
-   dia, no máximo 10. Filtro em `data/garimpo.json`: desconto ≥ 20%, preço de
-   R$ 100 a R$ 2.000. Cada categoria da lista é um **nome** de categoria de
-   primeiro nível ou um **id** (`MLB14370`) de qualquer nível; o que não
-   resolve é avisado no log e pulado, sem derrubar a rodada
-2. **O link é gerado à mão**, no Linkbuilder, dentro do Chrome logado do
-   Alisson — numa sessão com o Claude, que dirige e faz o trabalho repetitivo
-3. **O resto é automático de novo**: card, publicação, conferência diária de
-   preço
-
-`candidatos.json` não é catálogo: nada dali aparece no site. Candidato vira
-produto quando ganha `link_afiliado` e é movido pra `produtos.json`.
+`candidatos.json` não é catálogo — nada dali aparece no site. Candidato vira
+produto quando ganha `link_afiliado`, `analise` e entra no `produtos.json`.
 
 ### A memória, que é o que faz o diário funcionar
 
-Os "mais vendidos" do Meli mudam devagar. Sem memória, rodar todo dia nas
-mesmas categorias devolveria quase a mesma lista — e o Alisson pararia de
-olhar a fila na terceira repetição.
-
-`data/garimpo-memoria.json` guarda o que já foi sugerido e por quanto. As
-regras (`src/lib/garimpo-memoria.ts`):
+Os "mais vendidos" mudam devagar; sem memória a fila se repetiria e o Alisson
+pararia de olhar. `data/garimpo-memoria.json` guarda o que já foi sugerido
+(`src/lib/garimpo-memoria.ts`):
 
 | Situação | O que acontece |
 |---|---|
-| Produto já no `produtos.json` | Nunca mais é sugerido |
-| Mesma **família** de um que já está lá | Nunca mais é sugerido |
+| Já no `produtos.json`, ou mesma **família** | Nunca mais é sugerido |
 | Já sugerido, preço parecido | Não repete — **silêncio conta como "não"** |
-| Já sugerido e caiu 15%+ | Volta: é oferta nova, não repetição |
-| Sugerido há 60+ dias | Volta: o mercado já é outro |
+| Já sugerido e caiu 15%+ | Volta: é oferta nova |
+| Sugerido há 60+ dias | Volta: o mercado é outro |
 
-### Por que Informática entra por subcategoria
+⚠️ **Memória e fila entram no mesmo `git add`.** Se o commit da memória
+falhar, o garimpo de amanhã repete o de hoje.
 
-Duas rodadas seguidas deram zero em Informática. Não era nome errado nem bug:
-o topo de "mais vendidos" da categoria é **consumível barato** — papel A4,
-filamento de impressora 3D, gift card, power bank de R$ 76. Quase tudo abaixo
-do piso de R$ 100, e o que passa não tem desconto.
+⚠️ **O mesmo produto tem vários ids no Meli.** Soundcore P20i é `MLB38302175`
+e `MLB43397587`; o WAP GTW 10 é `MLB8923630` e `MLB8923631`. Por isso o campo
+`familia` (`family_name` → `grouper_id` → `catalog_product_id`): é o agrupador
+do próprio Meli. Comparar nome seria chute — os títulos dos duplicados quase
+não se parecem. Produto antigo tem `familia: ""` e o robô preenche na primeira
+passagem.
 
-Os produtos que interessam moram nas subcategorias, e é por isso que a config
-aceita id: `MLB14370` (Monitores), `MLB430598` (Armazenamento), `MLB454379`
-(Periféricos), `MLB430687` (Portáteis).
+⚠️ **Categoria que rende pouco: desconfie do topo dela, não do filtro.**
+Informática deu zero duas vezes porque seus mais vendidos são papel A4,
+filamento 3D e gift card — abaixo do piso de R$ 100. A solução foi entrar por
+subcategoria: `MLB14370` monitores, `MLB430598` armazenamento, `MLB454379`
+periféricos, `MLB430687` portáteis.
 
-Vale desconfiar do mesmo em qualquer categoria que renda pouco: o problema
-costuma ser o topo dela, não o filtro.
+⚠️ Os dois workflows renovam o mesmo token de uso único e compartilham
+`concurrency: group: meli-token`. Rodando junto, um invalida o outro.
 
-### O mesmo produto tem vários ids no Meli
-
-Descoberto em 08/09/2026, na primeira fila diária: o Soundcore P20i está no
-catálogo do Meli como `MLB38302175` **e** `MLB43397587`; o aspirador WAP GTW
-10 como `MLB8923630` **e** `MLB8923631` — ids consecutivos, mesmo aparelho.
-Memória por id não pega isso, e dois repetidos entraram na fila.
-
-Por isso o campo `familia` (`family_name`, `grouper_id` ou
-`catalog_product_id`, nessa ordem): é o agrupador do próprio Meli e reconhece
-o mesmo produto sob outro número. Comparar nome seria chute — "Fone Bluetooth
-soundcore P20i" e "Fone De Ouvido In ear Soundcore P20i Bluetooth 5.3" são o
-mesmo produto e quase não se parecem como texto.
-
-Produto que entrou antes do campo existir tem `familia: ""`; o robô de preços
-preenche na primeira vez que passa por ele.
-
-⚠️ **A memória precisa ser commitada junto com a fila.** Se o commit falhar,
-o garimpo de amanhã sugere exatamente o que sugeriu hoje. Por isso os dois
-arquivos entram no mesmo `git add`.
-
-⚠️ Os dois workflows renovam o mesmo token de uso único, então compartilham
-`concurrency: group: meli-token`. Rodando junto, um invalidaria o outro.
-
-Quem tentar automatizar o passo 2 vai reencontrar essa parede. Ela é do Meli,
-não do código.
-
-### A primeira fila garimpada entrou em 07/09/2026
-
-Os 5 produtos anteriores eram links pegos a esmo pra testar e foram
-substituídos pelos 7 primeiros garimpados de verdade. `nome` e `descricao`
-são encurtados na mão: o título que vem da API tem 200 caracteres e não cabe
-num card. `avaliacao: 0` significa "ninguém conferiu a nota" e o card esconde
-a linha — melhor que anunciar "Nota 0 de 5".
+**Curadoria à mão em todo produto novo:** `nome` e `descricao` encurtados (o
+título da API tem 200 caracteres e não cabe no card), `avaliacao: 0` quando
+ninguém conferiu a nota (o card esconde a linha), e os parágrafos de
+`analise`.
 
 ## Ser achado: busca e IA
 
-Cada produto tem **URL própria** (`/produto/{slug}-{meli_id}`) com marcação
-`schema.org` de `Product` e `Offer`. É de lá que buscador e assistente de IA
-leem preço, moeda e disponibilidade sem adivinhar no HTML.
+Cada produto tem **URL própria** (`/produto/{slug}-{meli_id}`) com
+`schema.org` de `Product`/`Offer`. O `meli_id` no fim do slug é de propósito:
+`nome` é curadoria e muda, e sem o id reescrever um título quebraria uma URL
+indexada.
 
-**O `meli_id` no fim do slug é de propósito.** O `nome` é curadoria e muda
-quando o Alisson reescreve o título; sem o id, reescrever quebraria uma URL
-já indexada. Com ele, o texto muda à vontade.
+`priceValidUntil` é o dia seguinte à conferência — o preço vale até a próxima
+checagem. `robots.ts` libera tudo, **inclusive rastreador de IA**, e o layout
+manda `max-image-preview: large` (requisito do Google Discover).
 
-O `priceValidUntil` é o dia seguinte à conferência — o preço vale até a
-próxima checagem, não pra sempre. Prometer validade maior que a real é o
-mesmo erro do preço velho, só que em linguagem de máquina.
+⚠️ **A foto do Meli tem 719px de largura no maior tamanho** — abaixo dos
+1200px que o Discover pede. Quem cumpre é a capa gerada em
+`opengraph-image.tsx` (1200×630). Não adianta procurar variante maior.
 
-`robots.ts` libera tudo, **inclusive rastreador de IA**. A aposta do projeto é
-ser citado como fonte de preço conferido, e pra isso o robô precisa entrar e
-ler o preço.
+⚠️ **Nunca esconda o preço atrás de clique.** IA cita fato; sem preço na
+página não há fato pra citar. Mostrar coisa diferente pro robô e pra pessoa
+(*cloaking*) tira o site do índice.
 
-⚠️ **Nunca esconda o preço atrás de clique.** A ideia apareceu em 07/09/2026 e
-foi descartada com razão: IA cita fato, e sem preço na página não há fato pra
-citar — o site sai da resposta em vez de ganhar o clique. Mostrar coisa
-diferente pro robô e pra pessoa (*cloaking*) tira o site do índice.
+⚠️ **Texto visível ganha de JSON-LD na hora da citação.** Assistente de IA lê
+o HTML renderizado — um `<path>` de SVG não diz preço nenhum. Por isso o
+histórico aparece como frase (`fraseDoHistorico`) além do gráfico, e por isso
+todo produto tem `analise`.
 
 O botão do card vai **direto pra loja**. A página do produto é porta de
-entrada de busca, não degrau do funil: quem chega por ela já está lá.
+entrada de busca, não degrau do funil.
+
+`/como-conferimos` explica o robô, com marcação `FAQPage`. É o ativo que
+ninguém copia — qualquer um lista ofertas, ninguém tem o histórico.
 
 ### Comparativos
 
-O primeiro entrou em 08/09/2026: o Galaxy A36 5G contra quatro rivais, em
-`/comparativo/{mesmo slug do produto}`. O alvo é quem digita "A36 vale a pena"
-— gente que ainda não decidiu e que a vitrine sozinha não alcança.
+Em `/comparativo/{mesmo slug do produto}`, um por `meli_id` em
+`data/comparativos.json`. O alvo é quem digita "A36 vale a pena". O brief de
+09/09/2026 fez dele o **formato-padrão**, meta de um por semana.
 
 ⚠️ **Comparativo é sempre pedido explícito do Alisson.** Nenhum robô escreve
-um, e nenhum aparece porque o produto "parecia bom". A escolha dos rivais e o
-veredito são curadoria assinada; robô escolhendo o que elogiar é exatamente o
-que tira a autoridade da página.
+um. Curadoria assinada por robô é o que tira a autoridade da página.
 
-Moram em `data/comparativos.json`, um por produto, ligados pelo `meli_id`. O
-tipo `Comparativo` em `src/lib/comparativos.ts` diz quais campos existem.
-
-As três decisões que sustentam o formato:
-
-- **Nenhum preço fica escrito no arquivo do comparativo** — nem na tabela,
-  nem na prosa. A linha de preço é montada do `produtos.json` na hora, e só
-  aparece pros modelos que estão no catálogo. Concorrente de fora mostra "não acompanhamos" — porque preço de
-  rival ninguém reconfere, e publicar valor velho é a regra 2 quebrada em
-  letra grande. Foi por isso que a coluna de preço dos de fora foi descartada
-  em 08/09/2026, e não por falta de pesquisa.
-- **Concorrente que também está no catálogo entra clicável.** O A36 é
-  comparado com o Moto G17, que é nosso: a mesma página pode gerar comissão
-  por dois caminhos, e o leitor ganha uma alternativa barata de verdade.
-- **A tabela mostra onde o produto perde.** O A36 perde em memória, em
-  processador e em câmera, e isso está lá. Comparativo que só elogia não
-  convence ninguém e não merece ser citado por IA.
-
-### Número no texto é marcador, nunca número
-
-O texto do comparativo escreve `{preco}`, `{preco_original}`, `{desconto}`,
-`{economia}` e `{data}`; a página troca pelo valor do catálogo na hora de
-renderizar (`comTextoDeHoje`, em `src/lib/comparativos.ts`).
-
-Aconteceu em 08/09/2026, no mesmo dia em que o comparativo nasceu: o robô
-mexeu no preço do A36 às 8h, a tabela passou a mostrar 42% — e o texto ao
-lado continuou anunciando "44% de desconto de verdade". Preço velho escrito
-por extenso é o mesmo erro da regra 2, só que mais difícil de perceber,
-porque a tabela ao lado está certa.
-
-Marcador que não existe fica na página como está escrito, visível. É de
-propósito: erro de digitação que aparece alguém conserta; erro que some
-calado vira frase sem sentido no ar.
-
-Cada linha tem uma `nota` explicando por que aquilo importa pra quem vai
-comprar — sem ela é só uma tabela de números. E `vencedores` é lista: empate
-técnico entre três é comum, e cravar um vencedor onde não há seria mentira.
-
-A marcação é `schema.org/Article` com `citation` das fontes, **não `Review`
-com nota**. Nota que ninguém mediu, dita em linguagem de máquina, é o mesmo
-erro do preço inventado.
+- **Nenhum preço fica escrito no arquivo**, nem na tabela nem na prosa. A
+  tabela monta do `produtos.json`; a prosa usa marcadores `{preco}`,
+  `{preco_original}`, `{desconto}`, `{economia}`, `{data}`, resolvidos por
+  `comTextoDeHoje`. Aconteceu no primeiro dia: o robô mudou o preço às 8h e o
+  texto continuou dizendo "44% de desconto". Marcador desconhecido fica
+  visível na página, de propósito.
+- **Concorrente de fora mostra "não acompanhamos"** em vez de preço: valor de
+  rival ninguém reconfere.
+- **Concorrente que está no catálogo entra clicável** — a mesma página pode
+  gerar comissão por dois caminhos.
+- **A tabela mostra onde o produto perde.** Comparativo que só elogia não
+  convence e não merece citação.
+- `vencedores` é lista (empate é comum) e cada linha tem uma `nota` dizendo
+  por que aquilo importa.
+- Marcação é `Article` com `citation`, **não `Review` com nota** — nota que
+  ninguém mediu é preço inventado em outra linguagem.
 
 ## Dinheiro
 
