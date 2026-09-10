@@ -598,6 +598,29 @@ parauapebas`, `box banheiro` e afins somam 184 impressões e vêm do
 Parauapebas — informação do projeto **Vidraceiro**, e que some do relatório
 quando o subdomínio migrar sem Search Console próprio.
 
+### 🔴 O Pinterest bloqueia o domínio
+
+Descoberto em 10/09/2026, tentando publicar o primeiro pin: **nenhum link para
+`verificadoagora.com.br` pode ser publicado no Pinterest.** O campo de destino
+responde *"Esse link está bloqueado porque pode não atender às nossas políticas
+de conteúdo"* e o botão Publicar desabilita. Vale para a vitrine, para as
+páginas de produto e para o domínio inteiro; `wikipedia.org` passa no mesmo
+campo, então o validador funciona e o problema é o domínio.
+
+⚠️ **A validação do link só dispara quando o foco vai pro seletor de pasta.**
+Sair do campo clicando na imagem não checa nada — e ler esse silêncio como
+"aceita" foi o que produziu um diagnóstico errado por três URLs. Para testar um
+link, entre no campo, digite e **clique no seletor de pasta**.
+
+O caminho é apelar: Central de Ajuda → "Conta suspensa ou desativada" → "Entre
+em contato conosco", pedindo revisão do domínio. É do Alisson — envolve
+escrever em nome dele. Enquanto não passar, **Pinterest não é canal**, e o
+cronograma de novembro depende de fórum e SEO.
+
+Provável causa, não confirmada: o domínio rodou um WordPress de afiliados até
+julho/2026 (veja "O que o domínio já viveu"), e o classificador de spam pode
+ter marcado dali.
+
 ### Pinterest: o gerador de pins
 
 `npm run pins` lê o `produtos.json` e escreve `data/pins.json` com título,

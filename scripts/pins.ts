@@ -26,7 +26,9 @@ const SITE = 'https://www.verificadoagora.com.br';
 
 /** Limites do Pinterest. Passar disso corta no meio da frase. */
 const MAX_TITULO = 100;
-const MAX_DESCRICAO = 500;
+// 800, medido no contador do próprio pin-builder em 10/09/2026. A primeira
+// versão usava 500 por chute e cortava análise que cabia inteira.
+const MAX_DESCRICAO = 800;
 
 type Pin = {
   meli_id: string;
