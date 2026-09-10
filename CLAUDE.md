@@ -612,7 +612,12 @@ Sair do campo clicando na imagem não checa nada — e ler esse silêncio como
 "aceita" foi o que produziu um diagnóstico errado por três URLs. Para testar um
 link, entre no campo, digite e **clique no seletor de pasta**.
 
-O caminho é apelar: Central de Ajuda → "Conta suspensa ou desativada" → "Entre
+**Apelação enviada em 10/09/2026**, com print do erro anexado. Resposta vem por
+e-mail. O argumento central foi o do site anterior: o WordPress de afiliados
+saiu em julho e o projeto atual é outro conteúdo — se a marcação veio de lá, o
+motivo não existe mais.
+
+Se precisar refazer: Central de Ajuda → "Conta suspensa ou desativada" → "Entre
 em contato conosco", pedindo revisão do domínio. É do Alisson — envolve
 escrever em nome dele. Enquanto não passar, **Pinterest não é canal**, e o
 cronograma de novembro depende de fórum e SEO.
