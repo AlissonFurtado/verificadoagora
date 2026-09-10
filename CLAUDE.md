@@ -607,6 +607,13 @@ Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
   que cite o site — nunca escondida, que é o que o Reddit de fato bane.
   Convenção informal do Reddit: ~9 participações genuínas por 1 que cita algo
   seu. Por isso o aquecimento sem link antes.
+- **Aquecimento em curso.** Dia 1 postado em 10/09/2026 (thread "128Gb é muito
+  pouco?"), sem link, com o Alisson trocando o texto pelo dele. Faltam dois
+  dias de aquecimento antes do primeiro comentário que cita o site.
+  ⚠️ **O que ele acrescentou é o que funcionou:** experiência pessoal
+  ("comprei um de 128 GB porque era mais barato e me frustrei") vale mais que
+  conselho bem escrito, e é o que ninguém copia de site de ficha técnica.
+  Rascunho meu é ponto de partida, não texto final.
 - ⚠️ **Regra 2 do sub é ban permanente por spam.** Um comentário por dia, no
   máximo, e declaração de afiliado na resposta. Circula `meli.la` por lá com
   upvote — não imite: é o que a comunidade pune quando percebe, e a nossa
