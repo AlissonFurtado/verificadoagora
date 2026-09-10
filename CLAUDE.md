@@ -576,6 +576,12 @@ Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
 - ⚠️ **O sub é `r/CelularesBR`** (11,2 mil inscritos, ~10 pedidos de
   recomendação na faixa por semana). `r/celulares` não existe; `r/brasil` e
   `r/brdev` só dão menção solta de celular. Garimpado em 10/09/2026.
+- **A conta do Reddit é `u/a_f_de_sousa`**, criada em 10/09/2026. Pessoal, não
+  de marca: conta com nome do site entra marcada como anunciante e não
+  consegue participar. A relação vai **declarada no texto** de todo comentário
+  que cite o site — nunca escondida, que é o que o Reddit de fato bane.
+  Convenção informal do Reddit: ~9 participações genuínas por 1 que cita algo
+  seu. Por isso o aquecimento sem link antes.
 - ⚠️ **Regra 2 do sub é ban permanente por spam.** Um comentário por dia, no
   máximo, e declaração de afiliado na resposta. Circula `meli.la` por lá com
   upvote — não imite: é o que a comunidade pune quando percebe, e a nossa
