@@ -518,6 +518,57 @@ Três regras que não são de estilo:
    post é sinalizado como spam. Nas redes o destino é sempre uma página do
    próprio site, que aí leva pro Meli.
 
+## Divulgação: o plano até a primeira venda
+
+Meta do Alisson, posta em 10/09/2026: **uma venda até o início de novembro**
+(03/11/2026, ~8 semanas). Antes disso o site esteve um mês no ar sem
+divulgação nenhuma — o gargalo nunca foi catálogo, é visita.
+
+⚠️ **SEO não chega a tempo, e isso está certo.** Site novo leva meses pra
+ranquear no Google; Pinterest rende em semanas e fórum rende no mesmo dia. As
+três frentes continuam de pé, mas com papéis diferentes: **fórum traz a
+primeira visita, Pinterest traz o volume de novembro, SEO paga a partir de
+dezembro.** Não julgue o SEO pelo resultado de novembro nem abandone ele por
+isso — é o único canal que não exige postar todo dia.
+
+⚠️ **Não existe canal grátis e instantâneo.** Quem prometer isso está vendendo
+curso. O que existe é escolher o canal cujo atraso cabe no prazo.
+
+### Os quatro canais e o que cada um responde
+
+| Canal | Prazo até render | Papel |
+|---|---|---|
+| **Fóruns / Reddit** | dias | Primeira visita e primeira prova de que a página convence |
+| **Pinterest** | 2 a 6 semanas | O volume que tem que produzir a venda de novembro |
+| **Google / SEO** | 3 a 6 meses | Compõe sozinho; é o ativo, não a campanha |
+| **Instagram** | meses | Antecipado do "fase 3" a pedido do Alisson em 10/09/2026 |
+
+### O cronograma
+
+| Semana | Foco | Entrega |
+|---|---|---|
+| 1 (10–16/09) | Diagnóstico + fórum | Sitemap no Search Console; 3 respostas em fórum; conta Pinterest criada |
+| 2 (17–23/09) | Pinterest de pé | 5 pastas por faixa de preço; 1 pin por produto do catálogo |
+| 3–4 (24/09–07/10) | Volume | 3 a 5 pins/dia; 1 comparativo/semana; fórum 2×/semana |
+| 5–6 (08–21/10) | Instagram entra | Fila do Metricool, post diário aprovado pelo Alisson |
+| 7–8 (22/10–03/11) | Apertar o que rendeu | Dobrar no canal com mais `oferta_clicada`; cortar o que deu zero |
+
+### Regras que valem em qualquer canal
+
+- **O destino é sempre uma página deste site**, nunca o link do Meli direto e
+  **nunca `meli.la`** — encurtador em rede social é sinalizado como spam. A
+  página leva pro Meli; é ela que carrega a análise que justifica o clique.
+- **Fórum não é lugar de link solto.** Responde-se a pergunta de verdade,
+  citando a página como fonte do preço. Link sem resposta é spam e queima o
+  perfil, que não se recupera. A skill `garimpar-foruns` acha as threads.
+- **Declaração de afiliado em toda legenda** — é exigência do programa. Vale
+  igual no Pinterest e no Reddit, não só no rodapé do site.
+- **O placar é `oferta_clicada` com a propriedade `onde`**, cruzado com o
+  painel de afiliado do Meli. Canal que não move esse número em duas semanas
+  não está funcionando — e "eu acho que está crescendo" não conta.
+  ⚠️ Evento personalizado não aparece no plano Hobby da Vercel (veja
+  "Medição"): até virar Pro, o placar real é o painel do Meli.
+
 ## Instagram: é fase 3, não é agora
 
 Existe um plano de postagem diária escrito pelo Alisson — rotação de produtos,
