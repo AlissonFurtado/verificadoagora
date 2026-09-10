@@ -37,8 +37,10 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Pinterest | Bloqueado; apelação de 10/09 sem resposta | Reconferir a cada poucos dias |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
 
-⚠️ **Os rascunhos do Reddit moram em pasta temporária e não sobrevivem ao
-`/clear`.** Se ele pedir de novo, é refazer o garimpo — leia devagar.
+📁 **Os rascunhos de post moram em `rascunhos/`, fora do Git** (está no
+`.gitignore`): `aquecimento-reddit.md` e `rascunhos-reddit.md`. ⚠️ **O repo é
+público** — texto a publicar em nome do Alisson, nome de conta e plano de
+aquecimento não sobem. Leia de lá antes de refazer garimpo nenhum.
 
 ⚠️ **O guia não vende sozinho, e isso é de propósito:** quatro dos seis
 aparelhos não são nossos. Se ele trouxer visita e nenhum clique, o problema é
