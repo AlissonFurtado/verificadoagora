@@ -12,10 +12,14 @@
     "MLB454379",
     "MLB430687"
   ],
+  "_por_que_foco": "O site é de celulares intermediários (brief de 09/09/2026). As outras categorias continuam sendo garimpadas, mas candidato de foco vai pro topo da fila na frente do desconto — quem sobra do limite diário é sempre de fora do foco.",
+  "foco": [
+    "Celulares e Telefones"
+  ],
   "limite_diario": 10,
   "filtros": {
     "desconto_minimo": 20,
     "preco_minimo": 100,
-    "preco_maximo": 2000
+    "preco_maximo": 2500
   }
 }

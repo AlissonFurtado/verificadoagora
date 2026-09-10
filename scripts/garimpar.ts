@@ -18,6 +18,8 @@ import { avaliar, registrar, type Memoria } from '../src/lib/garimpo-memoria';
 
 type Config = {
   categorias: string[];
+  /** Categorias do foco atual: vão pro topo da fila, na frente de desconto. */
+  foco: string[];
   limite_diario: number;
   filtros: { desconto_minimo: number; preco_minimo: number; preco_maximo: number };
 };
@@ -33,6 +35,8 @@ type Candidato = {
   desconto_percentual: number;
   imagem: string;
   url_do_produto: string;
+  /** Está numa das categorias de `foco`. Ordena a fila antes do desconto. */
+  no_foco: boolean;
   motivo: string;
   garimpado_em: string;
 };
@@ -58,9 +62,11 @@ async function main(): Promise<void> {
 
   const config = lerJson<Config>(path.join(raiz, 'data', 'garimpo.json'), {
     categorias: [],
+    foco: [],
     limite_diario: 10,
-    filtros: { desconto_minimo: 20, preco_minimo: 100, preco_maximo: 2000 },
+    filtros: { desconto_minimo: 20, preco_minimo: 100, preco_maximo: 2500 },
   });
+  const foco = new Set((config.foco ?? []).map(achatar));
 
   const caminhoMemoria = path.join(raiz, 'data', 'garimpo-memoria.json');
   const memoria = lerJson<Memoria>(caminhoMemoria, { atualizado_em: '', vistos: {} });
@@ -209,6 +215,7 @@ async function main(): Promise<void> {
         desconto_percentual: desconto,
         imagem: dados.imagem,
         url_do_produto: dados.permalink || urlDoProduto(destaque.id, tipo),
+        no_foco: foco.has(achatar(alvo.nome)) || foco.has(achatar(alvo.id)),
         motivo: veredito.motivo,
         garimpado_em: hoje,
       });
@@ -217,9 +224,13 @@ async function main(): Promise<void> {
     console.log(`${alvo.nome}: ${lista.length} olhados, ${passaram} novos`);
   }
 
-  // Melhor desconto primeiro: se sobrar gente de fora do limite, que fique de
-  // fora a oferta mais fraca.
-  encontrados.sort((a, b) => b.desconto_percentual - a.desconto_percentual);
+  // Foco primeiro (celular é o assunto da página), melhor desconto depois: se
+  // sobrar gente de fora do limite, que fique de fora a oferta mais fraca de
+  // fora do foco.
+  encontrados.sort(
+    (a, b) =>
+      Number(b.no_foco) - Number(a.no_foco) || b.desconto_percentual - a.desconto_percentual,
+  );
   const candidatos = encontrados.slice(0, config.limite_diario);
 
   for (const c of candidatos) registrar(memoria, c.meli_id, c.familia, c.preco, hoje);
