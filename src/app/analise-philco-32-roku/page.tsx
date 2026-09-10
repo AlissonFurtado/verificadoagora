@@ -18,6 +18,14 @@ import { caminhoDoProduto } from '@/lib/slug';
  * O destino sai de `caminhoDoProduto`, não escrito à mão: o `nome` é curadoria
  * e muda, e um slug fixo aqui viraria um 301 pra lugar nenhum.
  */
+/**
+ * ⚠️ **`force-dynamic` é o que faz o redirect valer pro Google.** Prerenderada,
+ * a rota devolvia 308 sem cabeçalho `Location` — o Next assa o desvio como
+ * payload de cliente, e crawler não segue isso. Dinâmica, o desvio sai como
+ * redirect HTTP de verdade.
+ */
+export const dynamic = 'force-dynamic';
+
 const MELI_ID = 'MLB63036814';
 
 export default function AnalisePhilco32Roku(): never {
