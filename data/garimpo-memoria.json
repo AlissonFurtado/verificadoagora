@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-09",
+  "atualizado_em": "2026-09-10",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -204,6 +204,66 @@
       "sugerido_em": "2026-09-09",
       "familia": "Liquidificador Oster 1400 Full OLIQ610 3.2 L",
       "preco_sugerido": 188.37,
+      "vezes": 1
+    },
+    "MLB39205913": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Smart TV LG 43\"Full HD, Processador A5 Ger6, AI, Alexa e webOS 23 - 43LR6700PSA",
+      "preco_sugerido": 1619.99,
+      "vezes": 1
+    },
+    "MLB15248175": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Suporte North Bayou NB F80",
+      "preco_sugerido": 111.55,
+      "vezes": 1
+    },
+    "MLB38176139": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Fone de ouvido sem fio Anker TWS P30I A3959",
+      "preco_sugerido": 196.6,
+      "vezes": 1
+    },
+    "MLB66418417": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Smart Tv 43'' Philco Full Hd Roku Tv Hdr10 Dolby P43cra",
+      "preco_sugerido": 1329,
+      "vezes": 1
+    },
+    "MLB24028629": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Fone de ouvido in-ear sem fio Soundcore TWS P20i com luz LED",
+      "preco_sugerido": 155.97,
+      "vezes": 1
+    },
+    "MLB25302407": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Câmera instantânea Fujifilm Instax Mini 12",
+      "preco_sugerido": 499.99,
+      "vezes": 1
+    },
+    "MLB61455819": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Monitor AOC com tela de 24\" 144Hz e resolução Full HD",
+      "preco_sugerido": 602,
+      "vezes": 1
+    },
+    "MLB69284011": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Controle joystick sem fio FGB CROWLEY YKQ-120 PlayStation",
+      "preco_sugerido": 101.24,
+      "vezes": 1
+    },
+    "MLB52135607": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Controle joystick GameSir G7 SE",
+      "preco_sugerido": 224.43,
+      "vezes": 1
+    },
+    "MLB66055148": {
+      "sugerido_em": "2026-09-10",
+      "familia": "Smart Tv 32 Philco Roku Tv Dolby Áudio Hdr10 P32crb",
+      "preco_sugerido": 949.9,
       "vezes": 1
     }
   }
