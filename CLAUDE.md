@@ -621,6 +621,15 @@ que sai sozinho em nome do Alisson é a mesma regra do Instagram.
 - Produto sem `imagem` não vira pin: pin é formato visual. O script avisa quais
   ficaram de fora.
 
+**Reivindicado em 10/09/2026:** perfil **Verificado Agora**, conta de empresa,
+`www.verificadoagora.com.br` conectado pela meta tag `p:domain_verify` que mora
+no `layout.tsx`. Fica em Configurações → Link para o Pinterest → Sites.
+
+⚠️ **Não instale a "tag do Pinterest"** que ele oferece logo depois de
+reivindicar. É a tag de conversão de anúncio pago — que não existe aqui — e
+**usa cookie**, o que traria de volta o banner de consentimento que o Vercel
+Analytics foi escolhido pra evitar. Recusada de propósito.
+
 ⚠️ **Conta é de empresa e o site precisa ser reivindicado.** A conta pessoal
 não dá estatística de clique por URL nem credita o pin ao perfil. Criar conta e
 aceitar termos é do Alisson — veja `~/.claude/CLAUDE.md`.
