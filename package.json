@@ -10,9 +10,10 @@
     "precos:conferir": "tsx scripts/conferir-precos.ts",
     "meli:autorizar": "tsx scripts/meli-autorizar.ts",
     "meli:inspecionar": "tsx scripts/meli-inspecionar.ts",
-    "verificar": "tsc --noEmit",
+    "verificar": "tsc --noEmit && npm run fichas",
     "garimpar": "tsx scripts/garimpar.ts",
-    "pins": "tsx scripts/pins.ts"
+    "pins": "tsx scripts/pins.ts",
+    "fichas": "tsx scripts/conferir-fichas.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

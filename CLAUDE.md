@@ -473,6 +473,19 @@ ninguém copia — qualquer um lista ofertas, ninguém tem o histórico.
 
 ### Comparativos
 
+⚠️ **Antes de escrever um, veja se o produto já é coluna de outro.** O
+comparativo do A36 já trazia o G17; repetir o par daria a mesma tabela. O que
+rende página nova é o produto **pelo ponto de vista dele**, contra os rivais da
+faixa *dele* — foi assim que o G17 ganhou a própria página, contra A16, Redmi
+14C e G15, com o A36 como o degrau acima.
+
+⚠️ **Ficha se confere na fonte do fabricante, nunca de memória nem de
+agregador.** Onde o fabricante não divulga, a célula diz "Não divulgado" — chute
+numa tabela é o mesmo que preço errado. `npm run fichas` guarda a consistência
+entre páginas, não a verdade de cada número: essa é de quem escreve.
+
+
+
 Em `/comparativo/{mesmo slug do produto}`, um por `meli_id` em
 `data/comparativos.json`. O alvo é quem digita "A36 vale a pena". O brief de
 09/09/2026 fez dele o **formato-padrão**, meta de um por semana.
@@ -701,8 +714,23 @@ riscos empilhados, não um. Aprovar a fila pelo celular leva segundos.
 ## Antes de entregar
 
 ```bash
-npm run verificar    # tsc --noEmit, cobre a página e os scripts do robô
+npm run verificar    # tsc --noEmit + npm run fichas
 ```
+
+`npm run fichas` (`scripts/conferir-fichas.ts`) confere se o site descreve o
+mesmo aparelho com os mesmos números em todas as páginas.
+
+⚠️ **Nasceu de um erro real, em 10/09/2026:** o Moto G17 era coluna em dois
+comparativos, com **20 W** num e **18 W** no outro, 1.050 nits contra 1.000. Os
+dois números tinham fonte — o certo era a página oficial da Motorola; o outro
+veio de site de ficha técnica. **Site de ficha técnica agregada erra; o
+fabricante, não.** Página de "preço conferido" que se contradiz sobre a ficha
+perde a única coisa que vende.
+
+Ele compara **grandeza, não redação**: `IP64 (respingos)` e `IP64 — respingos`
+passam; `20 W` e `18 W` não. E só compara número **com unidade** — o `600` de
+"Sony LYTIA 600" e o `1.8` de "f/1.8" não são grandeza comparável, e exigir
+texto idêntico encheria a saída de ruído.
 
 `npm run build` só quando o assunto for o próprio build — é lento e não diz
 nada que o `tsc` não diga. As exceções são o `next/og` e a página nova, que

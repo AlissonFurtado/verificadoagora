@@ -242,16 +242,16 @@
         {
           "campo": "Tela",
           "valores": {
-            "g17": "6,72 pol. LCD, 60 Hz, Full HD+, 1.000 nits",
+            "g17": "6,7 pol. LCD, 60 Hz, Full HD+, 1.050 nits",
             "a16": "6,7 pol. Super AMOLED, 90 Hz, Full HD+, 800 nits",
             "redmi14c": "6,88 pol. LCD, 120 Hz, HD+ (720p)",
-            "g15": "6,72 pol. LCD, 120 Hz, Full HD+",
+            "g15": "6,72 pol. LCD, 60 Hz, Full HD+",
             "a36": "6,7 pol. Super AMOLED, 120 Hz, Full HD+, 1.900 nits"
           },
           "vencedores": [
             "a36"
           ],
-          "nota": "Duas coisas diferentes se misturam aqui. O G17 é o único a 60 Hz: a rolagem aparece visivelmente menos fluida que nos outros quatro, e isso se nota no primeiro minuto de uso. Já o Redmi 14C tem 120 Hz mas é o único em HD+ — a tela é a maior da lista e a menos definida. O A16 troca fluidez por AMOLED, que mostra preto de verdade."
+          "nota": "Duas coisas diferentes se misturam aqui. O G17 e o Moto G15 são os dois a 60 Hz: a rolagem aparece visivelmente menos fluida que nos outros três, e isso se nota no primeiro minuto de uso. Já o Redmi 14C tem 120 Hz mas é o único em HD+ — a tela é a maior da lista e a menos definida. O A16 troca fluidez por AMOLED, que mostra preto de verdade; o A36 não abre mão de nenhum dos dois."
         },
         {
           "campo": "Processador",
@@ -284,7 +284,7 @@
         {
           "campo": "Bateria e carregamento",
           "valores": {
-            "g17": "5.200 mAh · 18 W",
+            "g17": "5.200 mAh · 20 W",
             "a16": "5.000 mAh · 25 W",
             "redmi14c": "5.160 mAh · 18 W",
             "g15": "5.200 mAh · 18 W",
@@ -293,7 +293,7 @@
           "vencedores": [
             "a36"
           ],
-          "nota": "Em capacidade os cinco empatam na prática — todos passam o dia. A diferença está na hora de carregar: com 45 W o A36 recupera em minutos o que os 18 W do G17 levam mais de uma hora para repor. Quem carrega dormindo não sente; quem esquece de carregar, sente todo dia."
+          "nota": "Em capacidade os cinco empatam na prática — todos passam o dia. A diferença está na hora de carregar: com 45 W o A36 recupera em minutos o que os 20 W do G17 levam bem mais tempo para repor. Quem carrega dormindo não sente; quem esquece de carregar, sente todo dia."
         },
         {
           "campo": "Rede",
@@ -348,7 +348,7 @@
       ],
       "contra": [
         "Nenhuma versão nova de Android prometida. Em dois anos ele fica para trás dos outros quatro, e não há como corrigir isso depois.",
-        "Único da tabela a 60 Hz: a rolagem parece travada ao lado de qualquer um dos outros.",
+        "Tela de 60 Hz: ao lado do Redmi 14C ou do A36 a rolagem parece travada. Só o Moto G15 empata com ele nesse ponto.",
         "Não pega 5G. O Galaxy A16 pega, por perto do mesmo dinheiro.",
         "São 4 GB de RAM reais; os 12 GB anunciados incluem 8 GB emprestados do armazenamento."
       ],
