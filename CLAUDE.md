@@ -598,6 +598,33 @@ parauapebas`, `box banheiro` e afins somam 184 impressões e vêm do
 Parauapebas — informação do projeto **Vidraceiro**, e que some do relatório
 quando o subdomínio migrar sem Search Console próprio.
 
+### Pinterest: o gerador de pins
+
+`npm run pins` lê o `produtos.json` e escreve `data/pins.json` com título,
+descrição, destino e foto de cada produto visível, agrupados por pasta. **Não
+publica nada** — o Pinterest não abre API de publicação pra conta nova, e post
+que sai sozinho em nome do Alisson é a mesma regra do Instagram.
+
+- ⚠️ **Pin não leva preço.** Pin vive meses e o robô muda o preço toda manhã;
+  ninguém edita 15 pins por dia. Mesma razão do comparativo não escrever preço
+  no arquivo. O pin promete o que não envelhece: que o preço é conferido todo
+  dia.
+- ⚠️ **O título é `{nome} vale a pena?`** porque foi essa a consulta que já
+  rendeu impressão neste domínio, medida no Search Console. Não é chute.
+- ⚠️ **A pasta é faixa de preço, mas só vira "Celulares até R$ X" se for
+  celular.** A primeira versão olhava só o preço e pôs uma Smart TV de R$ 998
+  em "Celulares até R$ 1.500". Pasta que mente sobre o conteúdo faz o Pinterest
+  parar de distribuir o perfil.
+- ⚠️ **O que é cortado no limite de 500 é a análise, nunca o rodapé.** Cortar a
+  descrição inteira comia a declaração de afiliado do produto de texto mais
+  longo — a linha que o programa exige.
+- Produto sem `imagem` não vira pin: pin é formato visual. O script avisa quais
+  ficaram de fora.
+
+⚠️ **Conta é de empresa e o site precisa ser reivindicado.** A conta pessoal
+não dá estatística de clique por URL nem credita o pin ao perfil. Criar conta e
+aceitar termos é do Alisson — veja `~/.claude/CLAUDE.md`.
+
 ### Regras que valem em qualquer canal
 
 - **O destino é sempre uma página deste site**, nunca o link do Meli direto e

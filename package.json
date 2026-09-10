@@ -11,7 +11,8 @@
     "meli:autorizar": "tsx scripts/meli-autorizar.ts",
     "meli:inspecionar": "tsx scripts/meli-inspecionar.ts",
     "verificar": "tsc --noEmit",
-    "garimpar": "tsx scripts/garimpar.ts"
+    "garimpar": "tsx scripts/garimpar.ts",
+    "pins": "tsx scripts/pins.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
