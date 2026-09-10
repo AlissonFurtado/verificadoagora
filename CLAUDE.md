@@ -589,6 +589,12 @@ Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
 - ⚠️ **A API JSON do Reddit corta em 429 depois de ~30 chamadas seguidas.**
   Buscar termo × sub em laço queima a cota antes de achar qualquer coisa. Use
   poucas queries, 4 a 6 segundos entre elas, e filtre no cliente.
+- 🔴 **Rajada de requisição no Reddit é risco da conta do Alisson, não meu.**
+  Em 10/09/2026 o garimpo rodou ~80 chamadas em segundos pela sessão do
+  navegador dele e levou 429. Foi só leitura — nenhum voto, nenhum comentário
+  — mas é o padrão que os algoritmos marcam, e quem paga o shadowban é ele.
+  **Leia devagar ou peça a página aberta.** Postar, votar e criar conta
+  continuam sendo dele, sempre e à mão.
 - ⚠️ **A resposta honesta às vezes não é o nosso produto** — e é ela que faz o
   link valer. Num pedido de celular para jogos, o G86 ganha do A36 na nossa
   própria tabela; dizer isso é o ativo. Comentário que só empurra o catálogo é
