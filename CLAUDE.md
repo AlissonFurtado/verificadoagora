@@ -139,6 +139,12 @@ padrão do next/og não tem o glifo `✓` — na imagem ele é *desenhado* com
 bordas, senão sai um quadradinho. Na página HTML o caractere pode ser usado
 normalmente.
 
+⚠️ **Rota de redirect precisa de `export const dynamic = 'force-dynamic'`.**
+Prerenderada, ela devolve 308 **sem cabeçalho `Location`**: o Next assa o
+desvio como payload de cliente e nenhum crawler segue. Só se descobre medindo
+em produção — o `tsc` e o build passam iguais. Veja
+`src/app/analise-philco-32-roku/page.tsx`.
+
 O que **não** diverge e não deve divergir: pt-BR no domínio e na interface,
 `tsc --noEmit` antes de entregar, cor nunca como única informação, `min-w-0`
 no container **e nos filhos** de qualquer grade nova.
