@@ -297,6 +297,12 @@ Regras do arquivo:
 - `meli_id` é o que o robô usa pra conferir: `MLB24076624` (produto de
   catálogo, o da URL `/p/`) ou `MLB-7547729432` (anúncio). Vazio significa
   "ninguém confere este preço" — e o robô diz isso em voz alta a cada rodada.
+- `oculto: true` é a curadoria tirando da vitrine um produto que **continua à
+  venda** — desconto que caiu abaixo do piso, por exemplo. Some da grade e do
+  sitemap; a página fica no ar. ⚠️ **É campo separado porque `disponivel` é do
+  robô:** em 09/09/2026 o suporte foi desligado à mão e a rodada do dia
+  seguinte religou, porque a loja ainda o vendia. O robô nunca toca em
+  `oculto`.
 - `disponivel: false` tira o produto **da vitrine e do sitemap**, mas a página
   dele continua respondendo, dizendo que a oferta acabou e mostrando o
   histórico. Até 09/09/2026 ela devolvia 404, porque `generateStaticParams`

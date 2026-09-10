@@ -119,7 +119,8 @@
       "analise": [
         "Um braço articulado com pistão a gás tira o monitor da mesa e devolve o espaço embaixo dele. Serve para quem trabalha sentado o dia inteiro e precisa subir a tela até a altura dos olhos — a diferença aparece no pescoço depois de algumas semanas, não no primeiro dia.",
         "Antes de comprar, meça duas coisas: a espessura do tampo, porque a garra tem limite, e se o seu monitor tem os furos VESA na traseira. Monitor sem VESA não encaixa, e é mais comum do que parece em modelos de entrada. Mesa de vidro ou com borda arredondada também costuma dar problema na fixação."
-      ]
+      ],
+      "oculto": true
     },
     {
       "id": 6,

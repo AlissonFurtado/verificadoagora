@@ -18,6 +18,15 @@ export type Produto = {
   meli_id: string;
   /** O robô desliga quando o produto sai do ar. Produto desligado não aparece na página. */
   disponivel: boolean;
+  /**
+   * Curadoria tirou da vitrine, mesmo estando à venda.
+   *
+   * ⚠️ **Existe porque `disponivel` é do robô.** Em 09/09/2026 o suporte de
+   * monitor foi desligado à mão por ter caído pra 10% de desconto — e a
+   * rodada do dia seguinte viu que ele continuava à venda e religou. O robô
+   * manda em `disponivel`; só a curadoria mexe aqui, e ele nunca toca.
+   */
+  oculto?: boolean;
   /** Agrupador do Meli, usado pra não sugerir de novo o que já está aqui com outro id. */
   familia: string;
   data_adicionado: string;
@@ -74,7 +83,7 @@ export function formatarData(iso: string): string {
 
 /** Só o que pode ser mostrado: produto fora do ar some da página em vez de mentir. */
 export function produtosVisiveis(produtos: Produto[]): Produto[] {
-  return produtos.filter((p) => p.disponivel);
+  return produtos.filter((p) => p.disponivel && !p.oculto);
 }
 
 /**
