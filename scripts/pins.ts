@@ -20,7 +20,7 @@
 import fs from 'fs';
 import path from 'path';
 import { produtosVisiveis, type Catalogo, type Produto } from '../src/lib/produtos';
-import { caminhoDoProduto } from '../src/lib/slug';
+import { caminhoDoProduto, gerarSlug } from '../src/lib/slug';
 
 const SITE = 'https://www.verificadoagora.com.br';
 
@@ -36,6 +36,9 @@ type Pin = {
   titulo: string;
   descricao: string;
   destino: string;
+  /** A arte 1000x1500 gerada pelo site. É esta que vai pro pin. */
+  arte: string;
+  /** A foto crua do Meli, que a arte usa por dentro. Fica pra conferência. */
   imagem: string;
 };
 
@@ -127,6 +130,10 @@ function main(): void {
       titulo: tituloDe(produto),
       descricao: descricaoDe(produto),
       destino: `${SITE}${caminhoDoProduto(produto)}`,
+      // ⚠️ A foto crua do Meli não serve como pin: chega quadrada e pequena (a
+      // do Galaxy A36 tem 389px de largura, contra os 1000 que o Pinterest
+      // pede). `/pin/{slug}` devolve a arte vertical no tamanho certo.
+      arte: `${SITE}/pin/${gerarSlug(produto)}`,
       imagem: produto.imagem,
     });
   }
@@ -147,7 +154,7 @@ function main(): void {
     }
     console.log(`— ${pin.titulo}`);
     console.log(`  destino: ${pin.destino}`);
-    console.log(`  imagem:  ${pin.imagem}`);
+    console.log(`  arte:    ${pin.arte}`);
     console.log(`  ${pin.descricao.replace(/\n\n/g, '\n  ')}\n`);
   }
 
