@@ -573,6 +573,20 @@ Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
 - **Fórum não é lugar de link solto.** Responde-se a pergunta de verdade,
   citando a página como fonte do preço. A skill `garimpar-foruns` acha as
   threads.
+- ⚠️ **O sub é `r/CelularesBR`** (11,2 mil inscritos, ~10 pedidos de
+  recomendação na faixa por semana). `r/celulares` não existe; `r/brasil` e
+  `r/brdev` só dão menção solta de celular. Garimpado em 10/09/2026.
+- ⚠️ **Regra 2 do sub é ban permanente por spam.** Um comentário por dia, no
+  máximo, e declaração de afiliado na resposta. Circula `meli.la` por lá com
+  upvote — não imite: é o que a comunidade pune quando percebe, e a nossa
+  regra de nunca usar encurtador em rede social continua valendo.
+- ⚠️ **A API JSON do Reddit corta em 429 depois de ~30 chamadas seguidas.**
+  Buscar termo × sub em laço queima a cota antes de achar qualquer coisa. Use
+  poucas queries, 4 a 6 segundos entre elas, e filtre no cliente.
+- ⚠️ **A resposta honesta às vezes não é o nosso produto** — e é ela que faz o
+  link valer. Num pedido de celular para jogos, o G86 ganha do A36 na nossa
+  própria tabela; dizer isso é o ativo. Comentário que só empurra o catálogo é
+  o que queima a conta.
 - **Declaração de afiliado em toda legenda**, não só no rodapé do site.
 - **O placar é `oferta_clicada` com a propriedade `onde`**, cruzado com o painel
   do Meli. Canal que não mexe nesse número em duas semanas não está funcionando.
