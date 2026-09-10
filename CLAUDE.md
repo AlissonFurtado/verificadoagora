@@ -631,7 +631,10 @@ reconfere, e sem ela a reivindicação cai).
 **Mas nenhum link para `verificadoagora.com.br` pode virar pin.** O campo de
 destino responde *"Esse link está bloqueado porque pode não atender às nossas
 políticas de conteúdo"*; vale para o domínio inteiro, e `wikipedia.org` passa no
-mesmo campo. **Apelação enviada em 10/09/2026** (Central de Ajuda → Apresentar
+mesmo campo. **Reconferido em 10/09/2026, à noite: continua bloqueado** — mesmo texto
+vermelho, testado no comparativo do A36 com o gesto certo (foco no seletor de
+pasta). Nenhuma resposta da apelação no e-mail. Reconferir vale a pena a cada
+poucos dias, e são dois minutos. **Apelação enviada em 10/09/2026** (Central de Ajuda → Apresentar
 um recurso → O Pinterest bloqueou meu site), com print anexado, argumentando que
 o WordPress de afiliados saiu em julho e o projeto atual é outro conteúdo.
 
