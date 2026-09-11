@@ -33,7 +33,7 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 |---|---|---|
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento dia 1 postado | **Dele**: dias 2 e 3, depois o comentário com link |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
-| Garimpo com piso de 15% no foco | 🔴 **Ainda não se sabe**: às 15h UTC de 11/09 a rodada do dia não tinha saído (última issue é a Fila de 10/09). É o atraso normal do agendador | Conferir a Fila de 11/09 quando sair: veio celular? Se não, o log por categoria |
+| Garimpo | Fila de 11/09 saiu: o piso de 15% funcionou, mas trouxe **acessório**, não celular. Foco trocado pra `MLB1055` no mesmo dia | Conferir a Fila de 12/09: agora tem que vir aparelho |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Última tentativa rascunhada | **Dele**: postar `rascunhos/pinterest-revisao-humana.md` em community.pinterest.biz (seção Help), logado na conta de empresa |
 | Instagram | 🟢 **Antecipado em 11/09** pra ocupar o lugar do Pinterest | **Dele**: dizer se o perfil e o Metricool já estão de pé. Sem isso não há fila de revisão pra encher |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
@@ -453,6 +453,14 @@ A corrente é automática dos dois lados e manual no meio:
    Alisson em 10/09/2026, escolhida no lugar de entrar por subcategoria.
    O log do garimpo agora diz **por categoria** por que cada candidato caiu
    (preço, desconto, já sugerido) — é por ali que se confere se o piso resolveu.
+   ⚠️ **O foco é `MLB1055` (Celulares e Smartphones), não `Celulares e
+   Telefones`.** Trocado em 11/09/2026: o piso de 15% funcionou e trouxe três
+   candidatos da categoria — carregador, power bank e power bank, R$ 147 a
+   R$ 160, **nenhum celular**. `MLB1051` é guarda-chuva (acessório, capinha,
+   smartwatch, telefone fixo) e seus mais vendidos são acessório barato. Mesma
+   armadilha de Informática, mesma solução: subcategoria. **Baixar o piso e
+   entrar por subcategoria não eram alternativas — eram as duas metades da
+   correção.**
 2. **O link é gerado à mão** no Linkbuilder, no Chrome logado do Alisson, numa
    sessão com o Claude dirigindo.
 3. **O resto volta a ser automático**: card, publicação, conferência diária.
