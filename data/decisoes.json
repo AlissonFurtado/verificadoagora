@@ -133,6 +133,134 @@
         }
       ],
       "escrito_em": "2026-09-10"
+    },
+    {
+      "slug": "tela-de-celular-amoled-ou-lcd",
+      "titulo": "Tela de celular: AMOLED ou LCD, 60 ou 120 Hz, e quanto brilho importa",
+      "resumo": "A tela é a peça que você olha o tempo inteiro e a que mais muda a sensação de aparelho caro — e é onde a faixa intermediária mais varia. Quatro perguntas respondidas em uma frase cada, com o que cada número muda no uso de verdade.",
+      "perguntas": [
+        {
+          "chave": "amoled-ou-lcd",
+          "pergunta": "AMOLED ou LCD?",
+          "resposta_curta": "AMOLED, se couber no orçamento. Ele desliga o pixel para mostrar preto, o que dá contraste melhor, cor mais viva e alguma economia de bateria em tema escuro. LCD não é ruim — é mais apagado, e o preto dele vira cinza.",
+          "opcoes": [
+            {
+              "rotulo": "AMOLED",
+              "para_quem": "Quem vê vídeo, foto e usa tema escuro",
+              "explicacao": "Preto de verdade, cor saturada e mais brilho máximo pela mesma faixa de preço. É o que faz um aparelho de R$ 1.500 parecer mais caro do que é."
+            },
+            {
+              "rotulo": "LCD",
+              "para_quem": "Quem prioriza bateria grande ou preço",
+              "explicacao": "Cumpre bem WhatsApp, navegador e vídeo em ambiente fechado. Perde no sol e no filme com cena escura, não no dia a dia comum."
+            }
+          ],
+          "detalhe": [
+            "Os nomes mudam por marca e confundem: Super AMOLED (Samsung), pOLED, OLED. São variações da mesma tecnologia, a de pixel que acende sozinho. LCD também aparece disfarçado — “IPS” é um tipo de LCD.",
+            "O ganho de bateria do AMOLED só existe se você usa tema escuro na maior parte do tempo. Com fundo branco o dia inteiro, os dois gastam parecido."
+          ],
+          "cuidado": "AMOLED pode marcar a tela com imagem fixa depois de anos de uso — a barra de notificação, o teclado. É bem menos comum do que já foi e raro com uso normal, mas é a única desvantagem real dele, e não tem conserto."
+        },
+        {
+          "chave": "taxa-de-atualizacao",
+          "pergunta": "60, 90 ou 120 Hz: dá para sentir?",
+          "resposta_curta": "Dá, e é a diferença mais fácil de notar de todas — aparece no primeiro deslizar de tela. 120 Hz é o padrão da faixa hoje; 60 Hz não trava nada, mas parece um aparelho de geração anterior.",
+          "opcoes": [
+            {
+              "rotulo": "60 Hz",
+              "para_quem": "Quem escolhe por preço ou bateria",
+              "explicacao": "Tudo funciona igual. O que muda é a fluidez do rolar da lista e da animação — e, depois de usar 120 Hz, voltar incomoda."
+            },
+            {
+              "rotulo": "90 Hz",
+              "para_quem": "Meio-termo",
+              "explicacao": "A maior parte do ganho está do 60 para o 90. Do 90 para o 120 a diferença existe, mas é menor que a primeira."
+            },
+            {
+              "rotulo": "120 Hz",
+              "para_quem": "Quem usa o celular o dia inteiro",
+              "explicacao": "O padrão da faixa intermediária. Em jogo, só ajuda se o jogo também rodar nessa taxa — a maioria dos pesados não roda."
+            }
+          ],
+          "detalhe": [
+            "Taxa de atualização é quantas vezes por segundo a tela se redesenha. Ela não deixa o celular mais rápido: deixa o movimento mais liso. Um aparelho com processador fraco e 120 Hz continua demorando para abrir aplicativo.",
+            "Muitos aparelhos deixam escolher entre taxa alta e economia de bateria nos ajustes. Se bateria é a sua prioridade, dá para comprar 120 Hz e usar em 60 — o contrário não existe."
+          ],
+          "cuidado": "Desconfie quando a ficha diz 120 Hz e a resolução é HD+: várias telas grandes e baratas juntam as duas coisas, e a fluidez alta não compensa a imagem serrilhada que você vê o dia inteiro."
+        },
+        {
+          "chave": "resolucao",
+          "pergunta": "HD+ ou Full HD+?",
+          "resposta_curta": "Full HD+, principalmente em tela grande. Numa tela de 6,7 polegadas, HD+ deixa texto e ícone visivelmente menos nítidos — e tela grande com resolução baixa é o atalho mais comum para baratear um anúncio.",
+          "opcoes": [
+            {
+              "rotulo": "HD+ (720p)",
+              "para_quem": "Quem só usa WhatsApp e ligação",
+              "explicacao": "Aceitável em tela pequena e em orçamento apertado. Em tela de quase 7 polegadas, o serrilhado aparece na letra."
+            },
+            {
+              "rotulo": "Full HD+ (1080p)",
+              "para_quem": "Praticamente todo mundo",
+              "explicacao": "O padrão da faixa. Texto nítido, vídeo em 1080p exibido como foi gravado, e nenhum arrependimento previsível."
+            }
+          ],
+          "detalhe": [
+            "Resolução é quantos pontos a tela tem, e o que importa é ela junto do tamanho. A mesma resolução numa tela maior fica mais esticada — por isso HD+ incomoda mais nos aparelhos grandes, que são justamente os que mais trazem HD+.",
+            "É um dos poucos itens em que dá para confiar no nome comercial: “Full HD+” na ficha do fabricante quer dizer 1080p de largura de linha, e “HD+” quer dizer 720p."
+          ],
+          "cuidado": "Resolução alta com processador fraco pesa, porque o aparelho tem mais pixel para desenhar. Entre um HD+ folgado e um Full HD+ sufocado, o segundo pode parecer mais lento — mas na faixa intermediária de hoje isso quase não acontece."
+        },
+        {
+          "chave": "brilho",
+          "pergunta": "Quantos nits eu preciso?",
+          "resposta_curta": "O número que importa é o de usar no sol. Abaixo de mais ou menos 800 nits de pico, você faz sombra com a mão na rua; a partir de 1.000 dá para ler tranquilo, e acima disso vira conforto, não necessidade.",
+          "opcoes": [
+            {
+              "rotulo": "Até cerca de 800 nits",
+              "para_quem": "Uso em ambiente fechado",
+              "explicacao": "Em casa e no trabalho, nada a reclamar. Na rua ao meio-dia atrapalha — e é aí que você mais precisa ver o mapa ou o código do pagamento."
+            },
+            {
+              "rotulo": "1.000 nits ou mais",
+              "para_quem": "Quem usa o celular na rua",
+              "explicacao": "Entrega, moto, obra, praia, ler mapa andando. É o item que separa um aparelho utilizável de outro, ao ar livre."
+            }
+          ],
+          "detalhe": [
+            "Fabricante costuma anunciar o brilho de pico, que a tela atinge em pedaços da imagem e por pouco tempo — não é o brilho que ela sustenta na tela inteira. Serve para comparar aparelhos entre si, não como promessa.",
+            "Brilho alto é onde o AMOLED abre mais vantagem na faixa: os números maiores estão todos em tela AMOLED ou pOLED."
+          ],
+          "cuidado": "Nits é o número mais inflado das fichas e o mais copiado errado por site de ficha técnica agregada. Quando um número te fizer mudar de aparelho, confira na página oficial do fabricante — foi assim que achamos 1.050 contra 1.000 nits para o mesmo Moto G17 aqui no site."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB47115842",
+          "nota": "É o conjunto completo desta página num aparelho só: 6,7 pol. Super AMOLED, 120 Hz, Full HD+, 1.900 nits. A tela é o motivo principal para escolher ele em vez do irmão mais barato. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Tela": "6,7 pol. Super AMOLED, 120 Hz, Full HD+, 1.900 nits"
+          }
+        },
+        {
+          "meli_id": "MLB65041644",
+          "nota": "Aqui a tela é onde o preço baixo aparece: 6,7 pol. LCD, 60 Hz, Full HD+, 1.050 nits. Resolução e brilho estão bons — o que falta é o AMOLED e a fluidez dos 120 Hz. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Tela": "6,7 pol. LCD, 60 Hz, Full HD+, 1.050 nits"
+          }
+        }
+      ],
+      "veredito": "Se for para escolher uma coisa só desta página, escolha a taxa de atualização: é o que você sente a cada minuto de uso, e 120 Hz virou padrão da faixa. Depois vem o tipo de painel, e só então o brilho — a não ser que você trabalhe na rua, e aí o brilho passa na frente de tudo. Resolução hoje é quase sempre Full HD+; quando não for, é sinal de que cortaram custo em algum lugar, e vale procurar onde mais.",
+      "fontes": [
+        {
+          "titulo": "Galaxy A36 5G — especificações oficiais (Samsung Brasil)",
+          "url": "https://www.samsung.com.br/smartphones/galaxy-a/galaxy-a36-5g-awesome-lavender-128gb-sm-a366bzldzto/"
+        },
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        }
+      ],
+      "escrito_em": "2026-09-10"
     }
   ]
 }

@@ -9,6 +9,7 @@ import { fraseDoHistorico, seloDeMenorPreco, type PontoDoHistorico } from '@/lib
 import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
+import { GuiasRelacionados } from '../../guias-relacionados';
 
 export const revalidate = 3600;
 
@@ -340,6 +341,8 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           )}
           <Grafico pontos={pontos} />
         </div>
+
+        <GuiasRelacionados produto={produto} />
 
         <footer className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
           {produto.disponivel && (

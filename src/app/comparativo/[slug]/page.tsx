@@ -8,6 +8,7 @@ import { acharComparativo, comTextoDeHoje, type Comparativo } from '@/lib/compar
 import { acharPorSlug, caminhoDoComparativo, gerarSlug } from '@/lib/slug';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
+import { GuiasRelacionados } from '../../guias-relacionados';
 
 export const revalidate = 3600;
 
@@ -450,6 +451,8 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             ))}
           </ul>
         </section>
+
+        <GuiasRelacionados produto={produto} />
 
         <footer className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
           <p className="mx-auto max-w-2xl text-xs leading-relaxed text-slate-400">
