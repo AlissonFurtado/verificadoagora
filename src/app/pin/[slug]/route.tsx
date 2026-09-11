@@ -26,18 +26,40 @@ import { gerarSlug } from '@/lib/slug';
  */
 export const runtime = 'edge';
 
-const LARGURA = 1000;
-const ALTURA = 1500;
+/**
+ * Dois formatos, uma arte só.
+ *
+ * ⚠️ **O 2:3 do Pinterest não serve no Instagram.** O feed corta vertical em
+ * 4:5, e uma arte 1000x1500 perderia o rodapé — que é justamente onde está o
+ * endereço do site. O quadrado foi a escolha do Alisson em 11/09/2026: é o
+ * único formato que o Instagram nunca corta, e a conta é nova demais pra
+ * apostar num recorte.
+ *
+ * ⚠️ **Formato quadrado não é o vertical espremido.** Sobra menos altura, então
+ * a foto encolhe e os tipos descem junto — senão o nome do produto empurra o
+ * rodapé pra fora. Os números de cada formato moram em `MEDIDAS`.
+ */
+const MEDIDAS = {
+  pin: { largura: 1000, altura: 1500, foto: 760, imagem: 640, marca: 54, nome: 60, chamada: 40, rodape: 32 },
+  quadrado: { largura: 1080, altura: 1080, foto: 540, imagem: 460, marca: 48, nome: 52, chamada: 36, rodape: 30 },
+} as const;
+
+type Formato = keyof typeof MEDIDAS;
+
+function lerFormato(url: string): Formato {
+  return new URL(url).searchParams.get('formato') === 'quadrado' ? 'quadrado' : 'pin';
+}
 
 function acharProduto(slug: string): Produto | undefined {
   return produtosVisiveis((catalogo as Catalogo).produtos).find((p) => gerarSlug(p) === slug);
 }
 
-export function GET(_pedido: Request, { params }: { params: { slug: string } }): Response {
+export function GET(pedido: Request, { params }: { params: { slug: string } }): Response {
   const produto = acharProduto(params.slug);
   if (!produto || !produto.imagem) {
     return new Response('Pin não encontrado', { status: 404 });
   }
+  const m = MEDIDAS[lerFormato(pedido.url)];
 
   return new ImageResponse(
     (
@@ -65,7 +87,7 @@ export function GET(_pedido: Request, { params }: { params: { slug: string } }):
               transform: 'rotate(45deg)',
             }}
           />
-          <div style={{ display: 'flex', fontSize: 54, fontWeight: 700 }}>Verificado Agora</div>
+          <div style={{ display: 'flex', fontSize: m.marca, fontWeight: 700 }}>Verificado Agora</div>
         </div>
 
         {/* A foto, sobre branco: foto de produto do Meli vem recortada em fundo
@@ -76,7 +98,7 @@ export function GET(_pedido: Request, { params }: { params: { slug: string } }):
             alignItems: 'center',
             justifyContent: 'center',
             marginTop: 48,
-            height: 760,
+            height: m.foto,
             borderRadius: 32,
             background: 'white',
             padding: 40,
@@ -86,17 +108,17 @@ export function GET(_pedido: Request, { params }: { params: { slug: string } }):
           <img
             src={produto.imagem}
             alt=""
-            width={640}
-            height={640}
+            width={m.imagem}
+            height={m.imagem}
             style={{ objectFit: 'contain' }}
           />
         </div>
 
-        <div style={{ display: 'flex', marginTop: 52, fontSize: 60, fontWeight: 700, lineHeight: 1.15 }}>
+        <div style={{ display: 'flex', marginTop: 52, fontSize: m.nome, fontWeight: 700, lineHeight: 1.15 }}>
           {produto.nome}
         </div>
 
-        <div style={{ display: 'flex', marginTop: 28, fontSize: 40, color: '#7dd3fc' }}>
+        <div style={{ display: 'flex', marginTop: 28, fontSize: m.chamada, color: '#7dd3fc' }}>
           Vale a pena?
         </div>
 
@@ -104,7 +126,7 @@ export function GET(_pedido: Request, { params }: { params: { slug: string } }):
           style={{
             display: 'flex',
             marginTop: 'auto',
-            fontSize: 32,
+            fontSize: m.rodape,
             color: '#cbd5e1',
           }}
         >
@@ -112,6 +134,6 @@ export function GET(_pedido: Request, { params }: { params: { slug: string } }):
         </div>
       </div>
     ),
-    { width: LARGURA, height: ALTURA },
+    { width: m.largura, height: m.altura },
   );
 }
