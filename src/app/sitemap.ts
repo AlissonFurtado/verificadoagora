@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { lerCatalogo, lerComparativos, lerGuias } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerDecisoes, lerGuias } from '@/lib/catalogo';
 import { produtosVisiveis } from '@/lib/produtos';
 import { caminhoDoComparativo, caminhoDoProduto } from '@/lib/slug';
 
@@ -39,6 +39,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/guia/${guia.slug}`,
       lastModified: new Date(metadata.ultima_atualizacao),
       changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    })),
+    // Guia de decisão: responde a pergunta de especificação ("quanto de RAM?"),
+    // que é anterior a saber o nome de qualquer aparelho.
+    ...lerDecisoes().map((decisao) => ({
+      url: `${base}/guia/${decisao.slug}`,
+      lastModified: new Date(decisao.escrito_em),
+      changeFrequency: 'monthly' as const,
       priority: 0.9,
     })),
     // Comparativo é texto escrito à mão: muda pouco, mas vale mais no índice

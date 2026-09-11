@@ -1,4 +1,4 @@
-import { lerCatalogo, lerComparativos, lerGuias, lerHistorico } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerDecisoes, lerGuias, lerHistorico } from '@/lib/catalogo';
 import { ordenarPorRecencia, produtosVisiveis } from '@/lib/produtos';
 import { resumirTendencia, seloDeMenorPreco } from '@/lib/historico';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
@@ -43,6 +43,18 @@ export default function Home() {
   const historico = lerHistorico();
   const comparativos = lerComparativos();
   const guias = lerGuias();
+  // Os dois formatos de guia entram na mesma fileira: da home, a diferença
+  // entre "por perfil" e "por pergunta" não importa a ninguém. O título do
+  // guia de decisão é longo de propósito (é a busca inteira), então no botão
+  // entra só a parte antes dos dois-pontos.
+  const atalhosDeGuia = [
+    ...guias.map((g) => ({ slug: g.slug, rotulo: g.titulo, icone: '☰' })),
+    ...lerDecisoes().map((d) => ({
+      slug: d.slug,
+      rotulo: d.titulo.split(':')[0],
+      icone: '?',
+    })),
+  ];
   const conferencia = descreverConferencia(metadata.conferido_em, new Date());
 
   return (
@@ -93,19 +105,19 @@ export default function Home() {
 
       {/* Guia acima da grade porque ele responde a dúvida de quem ainda não
           escolheu — e a vitrine sozinha só serve quem já sabe o que quer. */}
-      {guias.length > 0 && (
+      {atalhosDeGuia.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 pt-5 sm:pt-12">
           <ul className="flex min-w-0 flex-wrap gap-3">
-            {guias.map((guia) => (
+            {atalhosDeGuia.map((guia) => (
               <li key={guia.slug} className="min-w-0">
                 <Link
                   href={`/guia/${guia.slug}`}
                   className="flex min-w-0 items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-white px-5 py-3.5 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-marca/30 hover:text-marca hover:shadow-md"
                 >
                   <span aria-hidden="true" className="font-black text-marca">
-                    ☰
+                    {guia.icone}
                   </span>
-                  <span className="min-w-0">{guia.titulo}</span>
+                  <span className="min-w-0">{guia.rotulo}</span>
                   <span aria-hidden="true" className="text-marca">
                     →
                   </span>

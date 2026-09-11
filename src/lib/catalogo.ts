@@ -4,6 +4,7 @@ import type { Catalogo } from './produtos';
 import type { Historico } from './historico';
 import type { Comparativo, Comparativos } from './comparativos';
 import type { Guia, Guias } from './guias';
+import type { Decisao, Decisoes } from './decisoes';
 
 /** Histórico de preço. Some quando o arquivo ainda não existe, sem quebrar a página. */
 export function lerHistorico(): Historico {
@@ -37,4 +38,14 @@ export function lerGuias(): Guia[] {
   const caminho = path.join(process.cwd(), 'data', 'guias.json');
   if (!fs.existsSync(caminho)) return [];
   return (JSON.parse(fs.readFileSync(caminho, 'utf-8')) as Guias).guias;
+}
+
+/**
+ * Guias de decisão escritos à mão. Some sem quebrar nada quando o arquivo não
+ * existe — igual aos guias e comparativos.
+ */
+export function lerDecisoes(): Decisao[] {
+  const caminho = path.join(process.cwd(), 'data', 'decisoes.json');
+  if (!fs.existsSync(caminho)) return [];
+  return (JSON.parse(fs.readFileSync(caminho, 'utf-8')) as Decisoes).decisoes;
 }

@@ -36,6 +36,7 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Garimpo com piso de 15% no foco | No ar, primeira rodada em 11/09 de manhã | Conferir se veio celular, e o log por categoria se não veio |
 | Pinterest | Bloqueado; apelação de 10/09 sem resposta | Reconferir a cada poucos dias |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
+| Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
 
 📁 **Os rascunhos de post moram em `rascunhos/`, fora do Git** (está no
 `.gitignore`): `aquecimento-reddit.md` e `rascunhos-reddit.md`. ⚠️ **O repo é
@@ -535,6 +536,33 @@ do A36 pra jogo e perde em durar anos).
 - Marcação é `Article` com `citation` **mais um `ItemList`**: a ordem dos
   perfis é a substância da página e não se lê de um parágrafo.
 - Guia é curadoria, como o comparativo: **nenhum robô escreve um**.
+
+### Guias de decisão
+
+Em `/guia/{slug}`, de `data/decisoes.json` — **mesmo endereço do guia de
+faixa**, formato diferente. O primeiro é `/guia/quanto-de-memoria-no-celular`,
+escrito em 10/09/2026.
+
+Responde **pergunta de especificação** ("128 ou 256 GB?", "4, 6 ou 8 GB de
+RAM?"), não "qual aparelho comprar". Existe porque o molde do guia de faixa é
+por perfil → um aparelho, e nessa pergunta a resposta é uma *configuração*: no
+molde antigo os mesmos dois celulares se repetiriam em cada seção.
+
+- **A resposta vem em uma frase, em texto visível, antes da explicação**
+  (`resposta_curta`). É o que a IA cita — a mesma regra de sempre: texto
+  visível ganha de JSON-LD.
+- **O catálogo aparece uma vez só, no fim**, em `exemplos` — topo de funil de
+  propósito, quem digita isso não sabe o nome de aparelho nenhum. `data-onde`
+  do clique é `guia-decisao`.
+- **`cuidado` é obrigatório em toda pergunta**, como o `quando_nao` do guia de
+  faixa.
+- Marcação é `Article` com `citation` **mais um `FAQPage`** — a página é
+  literalmente pergunta com resposta curta.
+- **Nenhum preço no arquivo**: só a `nota` do exemplo aceita os marcadores.
+- A `ficha` de cada exemplo é copiada palavra por palavra dos comparativos, e
+  o `npm run fichas` confere junto.
+- ⚠️ **Slug repetido entre `guias.json` e `decisoes.json` é erro de
+  curadoria**: `generateStaticParams` soma os dois e a decisão ganha.
 
 ### Comparativos
 

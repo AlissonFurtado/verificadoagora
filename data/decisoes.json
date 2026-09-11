@@ -1,0 +1,138 @@
+{
+  "_leia": "Guias de decisão, escritos à mão. Respondem uma pergunta de especificação ('quanto de RAM?'), não 'qual aparelho comprar' — o catálogo aparece uma vez só, no fim. Ficha dos exemplos copiada palavra por palavra dos comparativos e conferida pelo `npm run fichas`. Nenhum preço fica escrito: use os marcadores {preco}, {preco_original}, {desconto}, {economia}, {data} na `nota` do exemplo.",
+  "decisoes": [
+    {
+      "slug": "quanto-de-memoria-no-celular",
+      "titulo": "Quanta memória seu celular precisa ter: 128 ou 256 GB, 4, 6 ou 8 GB de RAM",
+      "resumo": "As duas memórias do celular fazem coisas diferentes, e pagar a mais na errada é o jeito mais comum de desperdiçar dinheiro num aparelho intermediário. Abaixo, quatro perguntas respondidas em uma frase cada, e o que muda na prática quando você escolhe cada número.",
+      "perguntas": [
+        {
+          "chave": "ram-ou-armazenamento",
+          "pergunta": "RAM e armazenamento são a mesma coisa?",
+          "resposta_curta": "Não. A RAM é o que segura os aplicativos abertos ao mesmo tempo; o armazenamento é onde ficam suas fotos, vídeos e aplicativos instalados. São dois números diferentes na mesma ficha, e um não compensa o outro.",
+          "opcoes": [
+            {
+              "rotulo": "RAM",
+              "para_quem": "Quem troca de aplicativo o tempo todo",
+              "explicacao": "É a mesa de trabalho. Quando ela enche, o sistema fecha o que estava aberto atrás — é por isso que o jogo recarrega do zero depois que você responde uma mensagem, e por isso a câmera demora a abrir."
+            },
+            {
+              "rotulo": "Armazenamento",
+              "para_quem": "Quem guarda foto, vídeo e aplicativo",
+              "explicacao": "É o armário. Quando ele enche, você recebe aviso de espaço, o celular para de tirar foto e as atualizações de aplicativo travam. Não afeta velocidade — até faltar."
+            }
+          ],
+          "detalhe": [
+            "Uma ficha escrita como “8 GB · 256 GB” quase sempre traz a RAM primeiro e o armazenamento depois. Quando a loja anuncia só um número grande — “celular de 256 GB” —, é do armário que ela está falando, e a RAM pode ser qualquer coisa.",
+            "A confusão custa dinheiro nas duas direções: gente que paga a mais por 256 GB e continua com o aparelho travando, porque o problema era RAM, e gente que compra 8 GB de RAM e fica sem espaço no segundo ano."
+          ],
+          "cuidado": "Algumas marcas anunciam “RAM virtual”, “RAM turbo” ou “RAM expandida” — um pedaço do armazenamento emprestado para fingir memória. Ajuda a manter aplicativo aberto em segundo plano, mas não é a mesma coisa: armazenamento é muito mais lento que RAM de verdade. Um “4 GB (+8 turbo)” na ficha é um aparelho de 4 GB."
+        },
+        {
+          "chave": "quanta-ram",
+          "pergunta": "4, 6 ou 8 GB de RAM?",
+          "resposta_curta": "6 GB é o piso confortável hoje para quem usa o celular o dia inteiro. 4 GB ainda dá conta de WhatsApp, vídeo e redes sociais, desde que você aceite que o aplicativo do fundo vai recarregar. 8 GB só compensa se você joga ou deixa muita coisa aberta ao mesmo tempo.",
+          "opcoes": [
+            {
+              "rotulo": "4 GB",
+              "para_quem": "WhatsApp, ligação, YouTube, banco",
+              "explicacao": "Funciona, e é o que cabe no orçamento mais apertado. O sintoma é o aplicativo de trás reabrindo do zero quando você volta nele."
+            },
+            {
+              "rotulo": "6 GB",
+              "para_quem": "Uso pesado do dia a dia",
+              "explicacao": "Segura redes sociais, câmera, mapas e mensagens alternando sem reabrir tudo. É o ponto em que a maioria para de sentir o aparelho engasgar."
+            },
+            {
+              "rotulo": "8 GB",
+              "para_quem": "Jogos e quem vive com dez coisas abertas",
+              "explicacao": "A folga que evita o jogo recarregar depois de uma mensagem. Num intermediário costuma vir junto de 256 GB — é o mesmo degrau de preço."
+            }
+          ],
+          "detalhe": [
+            "RAM é o item que mais muda a sensação de “celular rápido” no uso comum, e é o que você não consegue melhorar depois. Cartão de memória resolve espaço; não existe cartão de RAM.",
+            "Se a escolha for entre um aparelho com mais RAM e outro com mais armazenamento pelo mesmo preço, e você não sabe qual dos dois problemas tem: prefira a RAM. Falta de espaço tem conserto barato — apagar, backup na nuvem, cartão quando o aparelho aceita. Falta de RAM só tem um conserto, que é comprar outro celular."
+          ],
+          "cuidado": "Comparar RAM entre celulares só faz sentido dentro da mesma geração de sistema. Um aparelho de 4 GB lançado agora carrega um Android mais pesado que um de 4 GB de cinco anos atrás — o número igual não significa a mesma folga."
+        },
+        {
+          "chave": "quanto-armazenamento",
+          "pergunta": "128 GB ou 256 GB?",
+          "resposta_curta": "128 GB basta para a maioria das pessoas, desde que você use backup de fotos na nuvem ou o aparelho aceite cartão. 256 GB compensa para quem grava vídeo, baixa série para ver offline ou não quer pensar no assunto por quatro anos.",
+          "opcoes": [
+            {
+              "rotulo": "128 GB",
+              "para_quem": "Foto de celular, aplicativos comuns, música por streaming",
+              "explicacao": "É o padrão da faixa intermediária. Uma parte já vem ocupada pelo sistema e pelos aplicativos de fábrica — veja em Ajustes → Armazenamento no aparelho que você tem hoje quanto sobra na prática."
+            },
+            {
+              "rotulo": "128 GB + cartão",
+              "para_quem": "Quem guarda muita foto e paga pouco",
+              "explicacao": "Quando a ficha diz “microSD até 1 TB”, o armário deixa de ser o teto. Cartão custa bem menos que o degrau de 256 GB — e vai com você para o próximo celular."
+            },
+            {
+              "rotulo": "256 GB",
+              "para_quem": "Vídeo, jogos grandes, série baixada",
+              "explicacao": "Vídeo em alta resolução é o que enche armazenamento de verdade; jogo grande vem logo atrás. Se você faz os dois, 128 GB vira administração de espaço todo mês."
+            }
+          ],
+          "detalhe": [
+            "O jeito honesto de decidir isto não é chute: abra Ajustes → Armazenamento no celular que você usa hoje e veja quanto você ocupou em quantos anos. Se em três anos você não passou de 80 GB, 128 GB é a sua resposta.",
+            "Backup automático de fotos na nuvem muda a conta inteira, porque o que mais enche celular é foto e vídeo. Só vale lembrar que o plano gratuito dessas nuvens é pequeno — se você não pretende pagar mensalidade, conte com o espaço do aparelho mesmo."
+          ],
+          "cuidado": "Nem todo aparelho aceita cartão, e essa informação some do anúncio com facilidade. Vários intermediários recentes tiraram a entrada de microSD — inclusive modelos mais caros que os que ainda têm. Procure “microSD” ou “sem microSD” na ficha antes de contar com o cartão para compensar 128 GB."
+        },
+        {
+          "chave": "cartao-resolve",
+          "pergunta": "Cartão de memória resolve tudo?",
+          "resposta_curta": "Resolve foto, vídeo e arquivo — que é o que enche celular. Não resolve RAM, e no Android de hoje não serve para instalar aplicativo dentro dele.",
+          "opcoes": [
+            {
+              "rotulo": "O cartão resolve",
+              "para_quem": "Foto, vídeo, música, documento, arquivo baixado",
+              "explicacao": "É espaço barato e transferível. Quem tira muita foto gasta menos comprando 128 GB com cartão do que subindo para 256 GB."
+            },
+            {
+              "rotulo": "O cartão não resolve",
+              "para_quem": "Aplicativo, jogo grande, travamento",
+              "explicacao": "Aplicativo mora na memória interna. E cartão barato e lento atrasa até a galeria abrir — se for comprar, olhe a classe de velocidade, não só o tamanho."
+            }
+          ],
+          "detalhe": [
+            "A entrada de cartão virou item de aparelho mais simples: acontece de um celular de entrada aceitar microSD e o modelo acima dele, mais caro, não aceitar. Não dá para presumir pelo preço.",
+            "Se você depende do cartão, ele deixa de ser acessório: na hora de comparar dois aparelhos, “com microSD” é uma linha da ficha tão decisiva quanto o tamanho da bateria."
+          ],
+          "cuidado": "Cartão é a peça mais frágil do conjunto e a mais fácil de perder junto com as fotos. Se as suas memórias estão só no cartão, elas estão num lugar só — o que quer dizer que não estão com backup nenhum."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB65041644",
+          "nota": "É o caso do orçamento apertado com a saída pelo cartão: 4 GB (+8 turbo) · 128 GB, microSD até 1 TB. Espaço não vai ser o seu problema; o aplicativo de trás recarregando, pode ser. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Memória": "4 GB (+8 turbo) · 128 GB, microSD até 1 TB"
+          }
+        },
+        {
+          "meli_id": "MLB47115842",
+          "nota": "É o caminho inverso: 6 GB · 128 GB, sem microSD. A RAM está no piso confortável desta página, mas o armário é fixo, e aí o backup na nuvem deixa de ser opcional. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Memória": "6 GB · 128 GB, sem microSD"
+          }
+        }
+      ],
+      "veredito": "Juntando as quatro respostas: para a maioria das pessoas o alvo é 6 GB de RAM com 128 GB e o backup de fotos resolvido — seja por cartão, seja pela nuvem. Suba para 8 GB antes de subir para 256 GB, porque espaço tem conserto depois da compra e RAM não tem. E se o orçamento só alcança 4 GB, escolha um aparelho que aceite microSD: aí pelo menos o segundo problema você resolve por uns poucos reais.",
+      "fontes": [
+        {
+          "titulo": "Galaxy A36 5G — especificações oficiais (Samsung Brasil)",
+          "url": "https://www.samsung.com.br/smartphones/galaxy-a/galaxy-a36-5g-awesome-lavender-128gb-sm-a366bzldzto/"
+        },
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        }
+      ],
+      "escrito_em": "2026-09-10"
+    }
+  ]
+}

@@ -2,9 +2,15 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { lerCatalogo, lerComparativos, lerGuias } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerDecisoes, lerGuias } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
 import { acharGuia, comTextoDeHoje, quantosAcompanhados, type Guia } from '@/lib/guias';
+import {
+  acharDecisao,
+  comTextoDeHoje as decisaoComTextoDeHoje,
+  type Decisao,
+} from '@/lib/decisoes';
+import { PaginaDecisao } from './decisao';
 import { caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
@@ -12,7 +18,25 @@ import { SeloDeConferencia } from '../../selo-de-conferencia';
 export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return lerGuias().map((g) => ({ slug: g.slug }));
+  // Os dois formatos de guia dividem o mesmo endereço: para quem chega da
+  // busca, ambos são "a página que responde antes de vender". O que muda é a
+  // forma — faixa é por perfil de quem compra, decisão é por pergunta de
+  // especificação. Slug repetido entre os dois arquivos é erro de curadoria.
+  return [...lerGuias(), ...lerDecisoes()].map((g) => ({ slug: g.slug }));
+}
+
+/** O catálogo por `meli_id`, que é como guia e decisão referem produto. */
+function catalogoPorMeliId(): Map<string, Produto> {
+  return new Map(
+    produtosVisiveis(lerCatalogo().produtos).map((p) => [p.meli_id, p] as const),
+  );
+}
+
+function buscarDecisao(slug: string): { decisao: Decisao; porMeliId: Map<string, Produto> } | undefined {
+  const decisao = acharDecisao(lerDecisoes(), slug);
+  if (!decisao) return undefined;
+  const porMeliId = catalogoPorMeliId();
+  return { decisao: decisaoComTextoDeHoje(decisao, porMeliId), porMeliId };
 }
 
 type Achado = { guia: Guia; porMeliId: Map<string, Produto> };
@@ -23,14 +47,22 @@ function buscar(slug: string): Achado | undefined {
 
   // O preço sai do catálogo na hora, nunca do JSON do guia: é o que mantém o
   // robô de preços mandando na única informação da página que envelhece só.
-  const porMeliId = new Map(
-    produtosVisiveis(lerCatalogo().produtos).map((p) => [p.meli_id, p] as const),
-  );
+  const porMeliId = catalogoPorMeliId();
 
   return { guia: comTextoDeHoje(guia, porMeliId), porMeliId };
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const decisao = acharDecisao(lerDecisoes(), params.slug);
+  if (decisao) {
+    return {
+      title: decisao.titulo,
+      description: decisao.resumo,
+      alternates: { canonical: `/guia/${decisao.slug}` },
+      openGraph: { title: decisao.titulo, description: decisao.resumo, type: 'article' },
+    };
+  }
+
   const achado = buscar(params.slug);
   if (!achado) return { title: 'Guia não encontrado' };
 
@@ -89,6 +121,28 @@ function DadosEstruturados({ guia, url }: { guia: Guia; url: string }) {
 }
 
 export default function PaginaDoGuia({ params }: { params: { slug: string } }) {
+  const naDecisao = buscarDecisao(params.slug);
+  if (naDecisao) {
+    const conferidoEm = lerCatalogo().metadata.conferido_em;
+    const conferencia = descreverConferencia(conferidoEm, new Date());
+    return (
+      <PaginaDecisao
+        decisao={naDecisao.decisao}
+        porMeliId={naDecisao.porMeliId}
+        comComparativo={new Set(lerComparativos().map((c) => c.meli_id))}
+        conferidoEm={conferidoEm}
+        selo={
+          conferencia && <SeloDeConferencia conferidoEm={conferidoEm} inicial={conferencia} />
+        }
+        base={
+          process.env.VERCEL_PROJECT_PRODUCTION_URL
+            ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+            : ''
+        }
+      />
+    );
+  }
+
   const achado = buscar(params.slug);
   if (!achado) notFound();
 

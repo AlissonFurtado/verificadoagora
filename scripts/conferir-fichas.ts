@@ -39,6 +39,13 @@ type PerfilDoGuia = {
 };
 type Guia = { slug: string; perfis: PerfilDoGuia[] };
 
+/**
+ * O guia de decisão cita a ficha de um aparelho para ilustrar a resposta — é
+ * mais uma página repetindo número, e portanto mais uma coluna para conferir.
+ */
+type ExemploDaDecisao = { meli_id: string; ficha: Record<string, string> };
+type Decisao = { slug: string; exemplos: ExemploDaDecisao[] };
+
 /** Cada grandeza do texto: "5.200 mAh · 20 W" → { mah: "5200", w: "20" }. */
 function grandezasDe(texto: string): Map<string, string> {
   const achados = texto.matchAll(/(\d+(?:[.,]\d+)*)\s*([a-zA-Záéíóúâêôãõç]+)/g);
@@ -114,6 +121,25 @@ function main(): void {
       }
 
       ditos.set(aparelho, porCampo);
+    }
+  }
+
+  const caminhoDecisoes = path.join(process.cwd(), 'data', 'decisoes.json');
+  const decisoes: Decisao[] = fs.existsSync(caminhoDecisoes)
+    ? (JSON.parse(fs.readFileSync(caminhoDecisoes, 'utf-8')) as { decisoes: Decisao[] }).decisoes
+    : [];
+
+  for (const decisao of decisoes) {
+    for (const exemplo of decisao.exemplos) {
+      const porCampo = ditos.get(exemplo.meli_id) ?? new Map<string, Dito[]>();
+
+      for (const [campo, texto] of Object.entries(exemplo.ficha)) {
+        const lista = porCampo.get(campo) ?? [];
+        lista.push({ onde: `guia/${decisao.slug}`, texto });
+        porCampo.set(campo, lista);
+      }
+
+      ditos.set(exemplo.meli_id, porCampo);
     }
   }
 
