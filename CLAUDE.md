@@ -35,7 +35,7 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | Fila de 11/09 saiu: o piso de 15% funcionou, mas trouxe **acessório**, não celular. Foco trocado pra `MLB1055` no mesmo dia | Conferir a Fila de 12/09: agora tem que vir aparelho |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
-| Instagram | 🟢 **Antecipado em 11/09.** Arte quadrada, 14 legendas e `/instagram` no ar. G17 (12/09) e A36 (13/09) agendados às 10h, com notificação no app | **Dele**: pôr `www.verificadoagora.com.br/instagram` na bio antes de sexta 10h, e concluir os dois posts pela notificação do app do Metricool |
+| Instagram | 🟢 **Pronto pra sair.** Arte quadrada, 14 legendas e `/instagram` no ar; link já na bio e app do Metricool instalado, com os dois posts visíveis nele (confirmado por ele em 11/09) | **Dele**: concluir o G17 pela notificação em 12/09 às 10h, e o A36 em 13/09. Depois: **o feed para**, e só volta com um terceiro celular no catálogo |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
