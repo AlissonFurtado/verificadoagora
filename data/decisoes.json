@@ -261,6 +261,134 @@
         }
       ],
       "escrito_em": "2026-09-10"
+    },
+    {
+      "slug": "quantos-anos-de-atualizacao-no-celular",
+      "titulo": "Por quantos anos o celular continua servindo: o que as atualizações do Android mudam",
+      "resumo": "É a única linha da ficha que não se conserta depois da compra, e a que menos gente olha. Abaixo, quatro perguntas respondidas em uma frase cada, e o que muda na prática entre um aparelho com seis versões prometidas e um com nenhuma.",
+      "perguntas": [
+        {
+          "chave": "versao-ou-seguranca",
+          "pergunta": "Atualização de versão e atualização de segurança são a mesma coisa?",
+          "resposta_curta": "Não. A versão nova do Android traz recurso e muda a cara do sistema; a correção de segurança tapa buraco sem mudar nada que você veja. Um aparelho pode receber anos de correção sem nunca subir de versão — e é o caso mais comum na faixa intermediária.",
+          "opcoes": [
+            {
+              "rotulo": "Versão do Android",
+              "para_quem": "Quem quer recurso novo e aplicativo compatível por mais tempo",
+              "explicacao": "É o número que sobe: Android 15, 16, 17. Cada uma traz função nova e, mais importante, mantém o aparelho dentro do que os aplicativos passam a exigir. É a que as marcas prometem em quantidade — “até 6 versões”."
+            },
+            {
+              "rotulo": "Correção de segurança",
+              "para_quem": "Quem usa banco, e-mail e carteira digital no celular",
+              "explicacao": "É o pacote mensal ou trimestral que fecha falha conhecida. Não muda nada na tela. Costuma durar mais tempo que as versões, e é o que separa um celular velho de um celular arriscado."
+            }
+          ],
+          "detalhe": [
+            "As duas promessas aparecem separadas no anúncio quando aparecem: “6 versões do Android” e “6 anos de segurança” são dois compromissos, não um. Quando a loja diz só “receberá atualizações”, sem número, quase sempre está falando da segurança — que é a parte barata de prometer.",
+            "Ninguém é obrigado a divulgar isso, e boa parte não divulga. Ficha que não fala do assunto é resposta: significa que a marca não quis se comprometer."
+          ],
+          "cuidado": "Marca que promete “atualizações por 5 anos” sem dizer de quê está escolhendo a palavra com cuidado. Procure a contagem de versões; se ela não existir no site oficial, trate como zero versão prometida, não como informação faltando."
+        },
+        {
+          "chave": "quantos-anos-bastam",
+          "pergunta": "Quantos anos de atualização são suficientes?",
+          "resposta_curta": "Combine com quanto tempo você pretende ficar com o aparelho: para quem troca a cada dois anos, duas versões bastam; para quem pretende usar até parar, é a linha em que vale pagar a mais, porque é a única que não tem conserto depois.",
+          "opcoes": [
+            {
+              "rotulo": "Nenhuma versão prometida",
+              "para_quem": "Quem vai usar por um ou dois anos, e sabe disso",
+              "explicacao": "O aparelho funciona igual no primeiro dia e no último. O que acontece é que ele fica parado na versão em que saiu de fábrica enquanto o resto anda — e o incômodo aparece devagar, em aplicativo que pede sistema mais novo."
+            },
+            {
+              "rotulo": "Duas a quatro versões",
+              "para_quem": "O meio-termo da faixa intermediária",
+              "explicacao": "Cobre bem o ciclo de três anos que a maioria das pessoas cumpre sem perceber. É o que a maior parte dos aparelhos desta faixa entrega quando entrega alguma coisa."
+            },
+            {
+              "rotulo": "Seis versões",
+              "para_quem": "Quem pretende ficar com o aparelho até ele parar",
+              "explicacao": "Hoje é o teto do mercado intermediário. Na prática, é comprar um celular agora que ainda vai receber versão nova quando você já tiver esquecido quanto pagou nele."
+            }
+          ],
+          "detalhe": [
+            "O cálculo honesto não é “mais é melhor”, é “quanto tempo eu fico com ele”. Pagar algumas centenas a mais por quatro versões extras faz sentido para quem segura o aparelho cinco anos, e nenhum para quem troca quando a tela trinca.",
+            "Uma pista que não engana: veja quanto o modelo do ano passado da mesma marca recebeu de verdade. Promessa é intenção; histórico é fato."
+          ],
+          "cuidado": "A contagem começa no lançamento do modelo, não na sua compra. Um aparelho anunciado com seis versões que já está há dois anos na prateleira chega até você com quatro — e o anúncio continua dizendo seis."
+        },
+        {
+          "chave": "para-de-funcionar",
+          "pergunta": "Celular sem atualização para de funcionar?",
+          "resposta_curta": "Não, e é por isso que o problema passa despercebido: ele continua ligando, tirando foto e abrindo o WhatsApp por anos. O que acontece é mais lento — aplicativo de banco que passa a exigir sistema mais novo, e falha conhecida que ninguém mais vai fechar.",
+          "opcoes": [
+            {
+              "rotulo": "O que não muda",
+              "para_quem": "Ligação, mensagem, câmera, vídeo, redes sociais",
+              "explicacao": "Nada disso depende de versão nova. Um aparelho comprado hoje sem atualização nenhuma vai fazer essas coisas daqui a três anos exatamente como faz agora."
+            },
+            {
+              "rotulo": "O que aperta com o tempo",
+              "para_quem": "Banco, carteira digital, aplicativo corporativo",
+              "explicacao": "São os que mais cedo passam a exigir uma versão mínima do Android, e os que mais doem quando param — porque não existe alternativa instalável fora da loja."
+            }
+          ],
+          "detalhe": [
+            "A falha de segurança não aparece como aviso na tela. É por isso que ela é o argumento errado para assustar e o argumento certo para decidir: quem usa o celular para movimentar dinheiro está comprando anos de correção, não recurso novo.",
+            "Nenhum aparelho vira inútil de um dia para o outro. O que a atualização compra é o direito de adiar a próxima troca por decisão sua, e não porque um aplicativo de que você depende parou."
+          ],
+          "cuidado": "Instalar sistema alternativo para “atualizar por fora” resolve no papel e cria dois problemas: perde a garantia e, na maioria dos casos, quebra o aplicativo de banco, que justamente detecta sistema modificado. Não é caminho para quem só quer o celular funcionando."
+        },
+        {
+          "chave": "onde-conferir",
+          "pergunta": "Dá para saber quantas atualizações um modelo vai receber antes de comprar?",
+          "resposta_curta": "Dá, e em um lugar só: a página oficial do fabricante daquele modelo. Anúncio de loja, site de ficha técnica e vídeo de análise erram essa linha com frequência, porque ela muda por modelo dentro da mesma família.",
+          "opcoes": [
+            {
+              "rotulo": "Serve como fonte",
+              "para_quem": "Site do fabricante, na página do modelo exato",
+              "explicacao": "É onde o compromisso é público. Se a contagem de versões estiver lá, é promessa; se não estiver, a marca não assumiu nada — e isso também é a resposta."
+            },
+            {
+              "rotulo": "Não serve como fonte",
+              "para_quem": "Anúncio de loja, agregador de ficha técnica, comentário",
+              "explicacao": "Repetem a política de uma linha inteira como se valesse para todo modelo dela. Acontece de o aparelho de cima receber seis versões e o de baixo, do mesmo ano e da mesma marca, nenhuma."
+            }
+          ],
+          "detalhe": [
+            "Confira pelo nome completo do modelo, com a capacidade: famílias inteiras compartilham nome comercial e não compartilham política de atualização.",
+            "Quando a página oficial não diz nada sobre o assunto, a informação que falta é a informação: escreva “não divulgado” na sua comparação e siga. Chute aqui custa anos de uso."
+          ],
+          "cuidado": "Traduzir “não divulgado” como “deve receber umas duas” é o erro mais caro desta página. É a única linha da ficha que você não consegue verificar depois da compra, nem trocar, nem contornar com acessório."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB47115842",
+          "nota": "É o teto da faixa nesta linha: até 6 versões do Android, o dobro do segundo colocado nos nossos comparativos. Se a ideia é ficar anos com o aparelho, é aqui que o dinheiro a mais compra tempo. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Atualizações do Android": "Até 6 versões"
+          }
+        },
+        {
+          "meli_id": "MLB65041644",
+          "nota": "É o caminho oposto, e assumido: a Motorola confirmou correções de segurança e nenhuma versão nova do Android. Funciona bem pelo que custa, desde que a conta que você faça seja de um ou dois anos, não de cinco. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Atualizações do Android": "Nenhuma versão prometida"
+          }
+        }
+      ],
+      "veredito": "Juntando as quatro respostas: decida primeiro por quanto tempo você quer ficar com o aparelho, e só então olhe a contagem de versões — duas bastam para quem troca a cada dois anos, seis compensam para quem segura até parar. Confira o número na página oficial do modelo exato, e leia o silêncio como zero, não como omissão. É a única linha da ficha que não se resolve depois: espaço tem cartão, bateria tem carregador, versão do Android não tem contorno nenhum.",
+      "fontes": [
+        {
+          "titulo": "Galaxy A36 5G — especificações oficiais (Samsung Brasil)",
+          "url": "https://www.samsung.com.br/smartphones/galaxy-a/galaxy-a36-5g-awesome-lavender-128gb-sm-a366bzldzto/"
+        },
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        }
+      ],
+      "escrito_em": "2026-09-11"
     }
   ]
 }
