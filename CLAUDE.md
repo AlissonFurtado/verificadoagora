@@ -34,8 +34,9 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento dia 1 postado | **Dele**: dias 2 e 3, depois o comentário com link |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | Fila de 11/09 saiu: o piso de 15% funcionou, mas trouxe **acessório**, não celular. Foco trocado pra `MLB1055` no mesmo dia | Conferir a Fila de 12/09: agora tem que vir aparelho |
-| Pinterest | 🔴 **Apelação recusada em 11/09**. Última tentativa rascunhada | **Dele**: postar `rascunhos/pinterest-revisao-humana.md` em community.pinterest.biz (seção Help), logado na conta de empresa |
-| Instagram | 🟢 **Antecipado em 11/09** pra ocupar o lugar do Pinterest | **Dele**: dizer se o perfil e o Metricool já estão de pé. Sem isso não há fila de revisão pra encher |
+| Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
+| Instagram | 🟢 **Antecipado em 11/09.** Perfil e Metricool já de pé; arte quadrada e 14 legendas prontas (`npm run posts`) | **Dele**: pôr o link do site na bio — sem isso o post não tem pra onde mandar ninguém. Depois, encher a fila de revisão |
+| Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
 | Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09 | **Dele**: pedir indexação |
@@ -895,11 +896,38 @@ O que **não** mudou com a antecipação, e é o essencial:
 - **O destino é sempre uma página deste site**, nunca `meli.la`, nunca o link
   do Meli direto.
 - **Declaração de afiliado em toda legenda.**
-- **A arte dos pins serve.** `npm run pins` já gera 1000×1500 em `/pin/{slug}`,
-  e o título "{nome} vale a pena?" veio de medição (veja "O que o domínio já
-  viveu"). Vertical é vertical: só o destino muda. Não refaça arte do zero.
 - ⚠️ **Pin não leva preço, e post também não** — pelo mesmo motivo: o robô
   muda o preço toda manhã e ninguém edita post publicado.
+
+**O perfil é `@verificadoagorabr`**, já conectado ao **Metricool** desde
+28/08/2026 (brandId `6800489`, fuso `America/Sao_Paulo`). Em 11/09 a fila
+estava vazia — nenhum post agendado, nenhum publicado.
+
+⚠️ **A arte do pin NÃO servia como estava.** `/pin/{slug}` é 2:3 (1000×1500),
+o formato do Pinterest, e o feed do Instagram corta vertical em 4:5 — o rodapé
+com o endereço do site sairia. A rota ganhou **`?formato=quadrado`**, que
+devolve **1080×1080**: escolha do Alisson em 11/09/2026, por ser o único
+formato que o Instagram nunca corta, e a conta é nova demais pra apostar num
+recorte. Os dois formatos saem do mesmo arquivo, com as medidas em `MEDIDAS`
+— formato quadrado não é o vertical espremido: a foto encolhe e os tipos
+descem junto, senão o nome do produto empurra o rodapé pra fora.
+
+⚠️ **Link em legenda não é clicável no Instagram.** O único link que o
+aplicativo abre é o da bio. Por isso a legenda diz "link na bio" e o `destino`
+fica só no JSON — escrever a URL no meio da legenda é pedir pro leitor digitar
+à mão, que ninguém faz. **Consequência que muda o placar:** com um link só na
+bio, `data-onde` não distingue de qual post veio o clique. Até haver página
+intermediária, o Instagram mede como um canal inteiro, não post a post.
+
+**`npm run posts`** (`scripts/posts.ts`, irmão de `pins.ts`) lê o catálogo e
+escreve `data/posts.json`: legenda, arte quadrada, destino pra bio. 14 posts
+em 11/09/2026. **Não publica nada.**
+
+⚠️ **A rotação começa pelos celulares, e isso não é detalhe.** O perfil está
+zerado: os primeiros posts é que dizem ao Instagram — e a quem chega — do que
+a conta trata. Começar por cafeteira e aspirador faria o assunto da conta
+nascer errado, o mesmo problema de tópico que tirou as categorias de fora do
+foco do destaque na vitrine.
 
 Existe um plano de postagem diária escrito pelo Alisson — rotação de produtos,
 logs, state em JSON. **Ele ainda não foi ligado**, e o primeiro passo não é
