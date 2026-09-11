@@ -34,7 +34,8 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento dia 1 postado | **Dele**: dias 2 e 3, depois o comentário com link |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo com piso de 15% no foco | 🔴 **Ainda não se sabe**: às 15h UTC de 11/09 a rodada do dia não tinha saído (última issue é a Fila de 10/09). É o atraso normal do agendador | Conferir a Fila de 11/09 quando sair: veio celular? Se não, o log por categoria |
-| Pinterest | 🔴 **Apelação recusada em 11/09**. Não é mais espera | Decisão dele: pedir revisão humana na Business Community, ou desistir do canal |
+| Pinterest | 🔴 **Apelação recusada em 11/09**. Última tentativa rascunhada | **Dele**: postar `rascunhos/pinterest-revisao-humana.md` em community.pinterest.biz (seção Help), logado na conta de empresa |
+| Instagram | 🟢 **Antecipado em 11/09** pra ocupar o lugar do Pinterest | **Dele**: dizer se o perfil e o Metricool já estão de pé. Sem isso não há fila de revisão pra encher |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
 | Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09 | **Dele**: pedir indexação |
@@ -712,9 +713,11 @@ meio**, e é preciso escolher o substituto em vez de esperar:
   máximo, pela regra 2 do sub.
 - **SEO continua, e é o que compõe.** O formato que abre índice já está provado
   (guia e comparativo; ficha, não). É a frente que eu consigo tocar sozinho.
-- **O substituto do volume é decisão em aberto.** Os candidatos são Instagram
-  antecipado (era fase 3, e publicar em nome dele exige a fila do Metricool),
-  TikTok/Shorts, ou aceitar novembro sem volume e apostar em fórum + SEO.
+- 🟢 **O substituto escolhido é o Instagram, antecipado em 11/09.** Veja a
+  seção "Instagram" — a fila de revisão do Metricool continua obrigatória.
+- **A revisão humana do Pinterest foi pedida**, não é desistência: o rascunho
+  do post na Business Community está em `rascunhos/pinterest-revisao-humana.md`.
+  Se recusarem de novo ou não responderem em ~3 semanas, o canal morreu.
 - ⚠️ **Os pins já prontos (`data/pins.json`, `npm run pins`, a arte em
   `/pin/{slug}`) não se perdem**: a arte 1000×1500 e o título "{nome} vale a
   pena?" servem igual em qualquer feed vertical. Só o destino muda.
@@ -870,13 +873,31 @@ automático em nome do Alisson é a mesma regra do Instagram.
   disco:** o catálogo entra por `import` do JSON, não por `lerCatalogo()`.
 - Produto sem `imagem` não vira pin, e o script avisa quais ficaram de fora.
 
-## Instagram: é fase 3, não é agora
+## Instagram: agora é o canal de volume
+
+🟢 **Antecipado em 11/09/2026, por decisão do Alisson**, quando a apelação do
+Pinterest foi recusada. O Pinterest era o volume previsto para novembro; sem
+ele, sobravam fórum (que cabe no prazo mas depende do ritmo dele) e SEO (que
+não chega a tempo). O Instagram entrou nesse lugar.
+
+O que **não** mudou com a antecipação, e é o essencial:
+
+- **Nada sai sem ele aprovar.** A regra da fila de revisão do Metricool
+  continua valendo inteira — veja abaixo.
+- **O destino é sempre uma página deste site**, nunca `meli.la`, nunca o link
+  do Meli direto.
+- **Declaração de afiliado em toda legenda.**
+- **A arte dos pins serve.** `npm run pins` já gera 1000×1500 em `/pin/{slug}`,
+  e o título "{nome} vale a pena?" veio de medição (veja "O que o domínio já
+  viveu"). Vertical é vertical: só o destino muda. Não refaça arte do zero.
+- ⚠️ **Pin não leva preço, e post também não** — pelo mesmo motivo: o robô
+  muda o preço toda manhã e ninguém edita post publicado.
 
 Existe um plano de postagem diária escrito pelo Alisson — rotação de produtos,
-logs, state em JSON. **Não comece.** Site que não existe não tem pra onde
-mandar o clique.
+logs, state em JSON. **Ele ainda não foi ligado**, e o primeiro passo não é
+automação: é ter post que preste saindo à mão pela fila do Metricool.
 
-Quando chegar a hora, a regra é a **fila de revisão do Metricool**. Post que
+A regra é a **fila de revisão do Metricool**. Post que
 sai sozinho, sem o Alisson ver antes, não é aceitável: é publicação em nome
 dele.
 
