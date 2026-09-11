@@ -23,7 +23,7 @@ atrapalham a leitura de tópico do buscador.
 > (`~/.claude/CLAUDE.md`) e valem em todos os projetos. O padrão técnico
 > compartilhado entre eles está na skill `padrao-afdesousa`.
 
-## Onde paramos — 10/09/2026
+## Onde paramos — 11/09/2026
 
 Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 
@@ -33,11 +33,12 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 |---|---|---|
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento dia 1 postado | **Dele**: dias 2 e 3, depois o comentário com link |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
-| Garimpo com piso de 15% no foco | No ar, primeira rodada em 11/09 de manhã | Conferir se veio celular, e o log por categoria se não veio |
-| Pinterest | Bloqueado; apelação de 10/09 sem resposta | Reconferir a cada poucos dias |
+| Garimpo com piso de 15% no foco | 🔴 **Ainda não se sabe**: às 15h UTC de 11/09 a rodada do dia não tinha saído (última issue é a Fila de 10/09). É o atraso normal do agendador | Conferir a Fila de 11/09 quando sair: veio celular? Se não, o log por categoria |
+| Pinterest | 🔴 **Apelação recusada em 11/09**. Não é mais espera | Decisão dele: pedir revisão humana na Business Community, ou desistir do canal |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
 | Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09 | **Dele**: pedir indexação |
+| Guia de decisão `/guia/quantos-anos-de-atualizacao-no-celular` | No ar desde 11/09 | **Dele**: pedir indexação |
 | Perguntas nas 15 fichas | No ar desde 10/09 | Ninguém — é esperar o Google reavaliar as 8 recusadas |
 | Guia de faixa até R$ 2.500 | 🔴 **Parado**, e a razão importa | Decisão dele: ver abaixo |
 
@@ -691,7 +692,7 @@ catálogo, é visita — o site passou o primeiro mês no ar sem divulgação ne
 | Canal | Prazo até render | Papel | Situação |
 |---|---|---|---|
 | **Fóruns / Reddit** | dias | Primeira visita, e o teste de se a página convence | aquecendo desde 10/09 |
-| **Pinterest** | 2 a 6 semanas | Era o volume de novembro | 🔴 **bloqueado**, veja abaixo |
+| **Pinterest** | 2 a 6 semanas | Era o volume de novembro | 🔴 **morto por ora** — apelação recusada em 11/09, veja abaixo |
 | **Google / SEO** | 3 a 6 meses | O ativo que compõe sozinho | sitemap + 1º guia, 10/09 |
 | **Instagram** | meses | Antecipado do "fase 3" a pedido do Alisson | não começou |
 
@@ -701,7 +702,22 @@ de novembro: é o único canal que não exige postar todo dia.
 
 Cronograma original (semana 1 = 10/09): diagnóstico e fórum → Pinterest de pé →
 volume, 1 comparativo/semana → Instagram → dobrar no que rendeu. **O bloqueio do
-Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
+Pinterest tirou as semanas 2 a 4 do lugar.**
+
+🔴 **Com a apelação recusada em 11/09, o plano até 03/11 ficou com dois canais e
+meio**, e é preciso escolher o substituto em vez de esperar:
+
+- **Fórum é o único que cabe no prazo.** Passa a ser a frente principal, não a
+  primeira etapa. Depende do ritmo do Alisson: um comentário por dia, no
+  máximo, pela regra 2 do sub.
+- **SEO continua, e é o que compõe.** O formato que abre índice já está provado
+  (guia e comparativo; ficha, não). É a frente que eu consigo tocar sozinho.
+- **O substituto do volume é decisão em aberto.** Os candidatos são Instagram
+  antecipado (era fase 3, e publicar em nome dele exige a fila do Metricool),
+  TikTok/Shorts, ou aceitar novembro sem volume e apostar em fórum + SEO.
+- ⚠️ **Os pins já prontos (`data/pins.json`, `npm run pins`, a arte em
+  `/pin/{slug}`) não se perdem**: a arte 1000×1500 e o título "{nome} vale a
+  pena?" servem igual em qualquer feed vertical. Só o destino muda.
 
 ### Regras que valem em qualquer canal
 
@@ -728,7 +744,11 @@ Pinterest tirou as semanas 2 a 4 do lugar**; refazer quando ele voltar.
   máximo, e declaração de afiliado na resposta. Circula `meli.la` por lá com
   upvote — não imite: é o que a comunidade pune quando percebe, e a nossa
   regra de nunca usar encurtador em rede social continua valendo.
-- ⚠️ **A API JSON do Reddit corta em 429 depois de ~30 chamadas seguidas.**
+- ⚠️ **O `WebFetch` não abre `reddit.com`** ("unable to fetch"). Conferido em
+  11/09/2026. Ou seja: não dá pra checar o estado de uma thread sem a sessão do
+  navegador dele — e a sessão do navegador é justamente o que leva 429. Na
+  prática, **quem confere thread é ele, no celular**, antes de postar.
+- ⚠️ **A API JSON do Reddit corta em ~30 chamadas seguidas, com 429.**
   Buscar termo × sub em laço queima a cota antes de achar qualquer coisa. Use
   poucas queries, 4 a 6 segundos entre elas, e filtre no cliente.
 - 🔴 **Rajada de requisição no Reddit é risco da conta do Alisson, não meu.**
@@ -786,7 +806,7 @@ banheiro` e afins somam 184 impressões e vêm do `hrvidros.` — do cliente. H�
 busca real por vidraçaria em Parauapebas: informação do projeto **Vidraceiro**,
 que some do relatório quando o subdomínio migrar.
 
-### 🔴 Pinterest: bloqueado, com apelação em curso
+### 🔴 Pinterest: bloqueado, apelação recusada
 
 Perfil **Verificado Agora**, conta de empresa, site reivindicado em 10/09/2026
 pela meta tag `p:domain_verify` no `layout.tsx` (⚠️ não apague: o Pinterest
@@ -795,12 +815,31 @@ reconfere, e sem ela a reivindicação cai).
 **Mas nenhum link para `verificadoagora.com.br` pode virar pin.** O campo de
 destino responde *"Esse link está bloqueado porque pode não atender às nossas
 políticas de conteúdo"*; vale para o domínio inteiro, e `wikipedia.org` passa no
-mesmo campo. **Reconferido em 10/09/2026, à noite: continua bloqueado** — mesmo texto
-vermelho, testado no comparativo do A36 com o gesto certo (foco no seletor de
-pasta). Nenhuma resposta da apelação no e-mail. Reconferir vale a pena a cada
-poucos dias, e são dois minutos. **Apelação enviada em 10/09/2026** (Central de Ajuda → Apresentar
-um recurso → O Pinterest bloqueou meu site), com print anexado, argumentando que
-o WordPress de afiliados saiu em julho e o projeto atual é outro conteúdo.
+mesmo campo. Testado no comparativo do A36 com o gesto certo (foco no seletor de
+pasta). **Apelação enviada em 10/09/2026** (Central de Ajuda → Apresentar um
+recurso → O Pinterest bloqueou meu site), com print anexado, argumentando que o
+WordPress de afiliados saiu em julho e o projeto atual é outro conteúdo.
+
+🔴 **A apelação foi RECUSADA em 11/09/2026, 07:42 UTC** — e-mail de
+`pinbot@legal.pinterest.com`, assunto "A suspensão do seu domínio": *"Analisamos
+sua contestação e decidimos não desbloquear seu site (verificadoagora.com.br)"*.
+Nenhum motivo, só o link das diretrizes de spam. O código da campanha no rodapé
+do e-mail é `DOMAIN_BLOCKED_SPAM_APPEAL_REJECTED`. **Pare de reconferir o campo
+de destino** — não é mais espera, é decisão nova.
+
+⚠️ **A recusa é automática, e isso é padrão do Pinterest, não azar nosso.** Em
+setembro/2026 a Pinterest Business Community tem dezenas de casos idênticos:
+domínio reivindicado por DNS, bloqueado como spam, **duas** apelações recusadas
+pelo mesmo texto genérico, sem motivo. O único caminho que essas pessoas
+encontram é **postar na própria Business Community pedindo revisão humana**
+(`community.pinterest.biz`, seção Help ou Creators). Segunda apelação pela
+Central de Ajuda é o mesmo robô: não gasta o tempo dele.
+
+⚠️ **Trocar de domínio não é contorno.** O bloqueio é do domínio, e subdomínio
+dele herda — `hrvidros.verificadoagora.com.br` é a prova de que o apex manda no
+resto. Levantar domínio novo só pra passar no Pinterest joga fora a
+propriedade do Search Console e o pouco de autoridade que este já tem, por um
+canal que ainda pode recusar o domínio novo pelo mesmo conteúdo.
 
 ⚠️ **A validação do link só dispara quando o foco vai pro seletor de pasta.**
 Sair do campo clicando na imagem não checa nada — ler esse silêncio como
