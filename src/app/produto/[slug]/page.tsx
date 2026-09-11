@@ -101,12 +101,64 @@ function DadosEstruturados({ produto }: { produto: Produto }) {
       : {}),
   };
 
+  // O `FAQPage` vai separado do `Product` de propósito: são duas coisas que o
+  // buscador entende sozinhas, e produto sem pergunta escrita não deve
+  // declarar um FAQ vazio.
+  const faq =
+    produto.perguntas && produto.perguntas.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: produto.perguntas.map((p) => ({
+            '@type': 'Question',
+            name: p.pergunta,
+            acceptedAnswer: { '@type': 'Answer', text: p.resposta },
+          })),
+        }
+      : undefined;
+
   return (
-    <script
-      type="application/ld+json"
-      // JSON montado por nós, não conteúdo de terceiro
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(dados) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        // JSON montado por nós, não conteúdo de terceiro
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(dados) }}
+      />
+      {faq && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
+        />
+      )}
+    </>
+  );
+}
+
+/**
+ * As perguntas escritas à mão, em texto visível.
+ *
+ * ⚠️ **O JSON-LD não substitui isto.** Assistente de IA lê o HTML
+ * renderizado: uma resposta que só existe dentro do `<script>` não é citada.
+ */
+function Perguntas({ produto }: { produto: Produto }) {
+  if (!produto.perguntas || produto.perguntas.length === 0) return null;
+
+  return (
+    <section className="mt-10 min-w-0 rounded-2xl border border-slate-200/60 bg-white p-6 shadow-sm sm:p-8">
+      <h2 className="text-lg font-black text-slate-900 sm:text-xl">
+        Perguntas de quem está decidindo
+      </h2>
+      <dl className="mt-5 space-y-5">
+        {produto.perguntas.map((p) => (
+          <div key={p.pergunta} className="min-w-0 border-l-4 border-marca/20 pl-4">
+            <dt className="text-[15px] font-black leading-snug text-slate-900">{p.pergunta}</dt>
+            <dd className="mt-1.5 max-w-[65ch] text-[15px] leading-relaxed text-slate-600">
+              {p.resposta}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
   );
 }
 
@@ -341,6 +393,8 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           )}
           <Grafico pontos={pontos} />
         </div>
+
+        <Perguntas produto={produto} />
 
         <GuiasRelacionados produto={produto} />
 

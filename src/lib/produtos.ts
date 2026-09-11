@@ -44,6 +44,21 @@ export type Produto = {
    * `historico.json` por `fraseDoHistorico`, pra nunca envelhecer.
    */
   analise: string[];
+  /**
+   * As perguntas que alguém faz antes de comprar **este** produto, com a
+   * resposta curta. Opcional, e curadoria — o robô nunca escreve uma.
+   *
+   * Entrou em 10/09/2026. A ficha de produto já tinha `analise` escrita à
+   * mão, e ainda assim o Google recusava as fichas de commodity ("rastreada,
+   * mas não indexada"): mais parágrafo dizendo o mesmo não resolveria. O que
+   * falta na ficha é **julgamento em formato de pergunta** — que é o que a
+   * pessoa digita, o que vira `FAQPage` e o que assistente de IA cita.
+   *
+   * ⚠️ Pergunta precisa ser a que alguém faria de verdade ("serve para
+   * academia?"), e a resposta pode ser "não". FAQ que só elogia é o mesmo
+   * problema do comparativo que só elogia.
+   */
+  perguntas?: { pergunta: string; resposta: string }[];
 };
 
 export type Catalogo = {
