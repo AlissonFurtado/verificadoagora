@@ -31,7 +31,7 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 
 | Frente | Estado | De quem é a vez |
 |---|---|---|
-| Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento dia 1 postado | **Dele**: dias 2 e 3, depois o comentário com link |
+| Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento **dias 1 e 2 postados** (dia 2 em 11/09, na thread "A57 ou S24 usado?", com o texto reescrito por ele) | **Dele**: dia 3 ("Celular gamer até 2.500", link em `rascunhos/`), depois o comentário com link |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | Fila de 11/09 saiu: o piso de 15% funcionou, mas trouxe **acessório**, não celular. Foco trocado pra `MLB1055` no mesmo dia | Conferir a Fila de 12/09: agora tem que vir aparelho |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
