@@ -13,7 +13,8 @@
     "verificar": "tsc --noEmit && npm run fichas",
     "garimpar": "tsx scripts/garimpar.ts",
     "pins": "tsx scripts/pins.ts",
-    "fichas": "tsx scripts/conferir-fichas.ts"
+    "fichas": "tsx scripts/conferir-fichas.ts",
+    "posts": "tsx scripts/posts.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
