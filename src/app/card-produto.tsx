@@ -40,6 +40,7 @@ export function CardProduto({
   selo,
   comparativo,
   tendencia,
+  onde = 'vitrine',
 }: {
   produto: Produto;
   /** "Menor preço em N dias", ou null quando não há histórico pra afirmar. */
@@ -53,6 +54,12 @@ export function CardProduto({
   comparativo?: { caminho: string; rivais: number } | null;
   /** Como o preço andou. `null` até o robô ter dois dias do produto. */
   tendencia?: Tendencia | null;
+  /**
+   * De onde saiu o clique, no evento `oferta_clicada`. A vitrine é o padrão;
+   * `/instagram` passa o seu para que o placar do canal não se misture com o
+   * da home — é a propriedade `onde`, a que responde "esse canal rendeu?".
+   */
+  onde?: string;
 }) {
   const economia = produto.preco_original - produto.preco_atual;
   const caminho = caminhoDoProduto(produto);
@@ -162,7 +169,7 @@ export function CardProduto({
             data-oferta={gerarSlug(produto)}
             data-categoria={produto.categoria}
             data-preco={produto.preco_atual}
-            data-onde="vitrine"
+            data-onde={onde}
             className="mt-1.5 block rounded-lg bg-marca-acao px-3 py-2.5 text-center text-[13px] font-extrabold uppercase tracking-wider text-white transition-colors hover:bg-marca"
           >
             Ver oferta
