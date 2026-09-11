@@ -37,6 +37,19 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Pinterest | Bloqueado; apelação de 10/09 sem resposta | Reconferir a cada poucos dias |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
+| Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09 | **Dele**: pedir indexação |
+| Perguntas nas 15 fichas | No ar desde 10/09 | Ninguém — é esperar o Google reavaliar as 8 recusadas |
+| Guia de faixa até R$ 2.500 | 🔴 **Parado**, e a razão importa | Decisão dele: ver abaixo |
+
+⚠️ **Por que o guia até R$ 2.500 parou:** a faixa de R$ 1.500 a 2.500 quase não
+tem aparelho com ficha oficial acessível (veja a armadilha do `WebFetch` em
+"Comparativos"), e os que dá para conferir — A36, G86, Poco X7, Redmi Note 14
+5G, G17 — **já são cinco dos seis do guia de até R$ 1.500**. Escrever daria
+página quase duplicada, que é o oposto do que abre índice. O único nome novo
+com ficha oficial conferida é o **Moto Edge 60 Fusion** (pOLED 6,7 pol.,
+120 Hz, 4.500 nits, Dimensity 7300, 8/256 com microSD, 5.200 mAh · 68 W, 50 MP
+Sony LYTIA 700C com OIS, IP68/IP69 + MIL-STD-810H; atualizações não
+divulgadas). Retomar quando houver 3 ou 4 aparelhos novos conferíveis.
 
 📁 **Os rascunhos de post moram em `rascunhos/`, fora do Git** (está no
 `.gitignore`): `aquecimento-reddit.md` e `rascunhos-reddit.md`. ⚠️ **O repo é
@@ -537,6 +550,38 @@ do A36 pra jogo e perde em durar anos).
   perfis é a substância da página e não se lê de um parágrafo.
 - Guia é curadoria, como o comparativo: **nenhum robô escreve um**.
 
+### Perguntas na ficha de produto
+
+Campo `perguntas` (opcional) no `produtos.json`: 2 a 4 perguntas com resposta
+curta, em texto visível **e** `FAQPage`. Escritas em 10/09/2026 para os 15
+produtos — 49 no total.
+
+⚠️ **Nasceu de um diagnóstico corrigido no meio do caminho.** O plano era
+"engordar as fichas que o Google recusou", até abrir as 15 `analise` e ver que
+todas já tinham 500 a 900 caracteres de "pra quem serve / quando não comprar".
+**Não é falta de texto que faz o Google recusar ficha de commodity** — é o
+molde. Mais parágrafo dizendo o mesmo seria enchimento. O que faltava era
+julgamento **em formato de pergunta**, que é o que a pessoa digita.
+
+- ⚠️ **Pelo menos uma resposta por produto tem que ser "não"** ("serve para
+  academia?" → não). FAQ que só elogia é o mesmo problema do comparativo que
+  só elogia.
+- **Nenhum número novo entra por aqui**: tudo saiu da `analise` e da
+  `descricao` que já estavam no catálogo.
+- É curadoria: **o robô nunca escreve uma**. Ele preserva o campo porque muta
+  o objeto lido, não remonta o produto — vale lembrar disso se alguém
+  reescrever `conferir-precos.ts`.
+
+### Guias relacionados na ficha
+
+`src/app/guias-relacionados.tsx`, no fim da ficha e do comparativo. Até
+10/09/2026 **guia só era alcançado pela home** — e as fichas, que o Google
+rastreia todo dia, não levavam a lugar nenhum.
+
+⚠️ **A relevância é por categoria (`Celulares`), não por slug escrito no
+componente.** Guia novo de celular aparece sozinho em toda ficha de celular.
+Lista de slug no código seria uma lista para alguém esquecer de atualizar.
+
 ### Guias de decisão
 
 Em `/guia/{slug}`, de `data/decisoes.json` — **mesmo endereço do guia de
@@ -571,6 +616,14 @@ comparativo do A36 já trazia o G17; repetir o par daria a mesma tabela. O que
 rende página nova é o produto **pelo ponto de vista dele**, contra os rivais da
 faixa *dele* — foi assim que o G17 ganhou a própria página, contra A16, Redmi
 14C e G15, com o A36 como o degrau acima.
+
+⚠️ **Ficha oficial nem sempre se deixa ler por `WebFetch`.** Em 10/09/2026,
+para montar um guia da faixa de R$ 1.500 a 2.500: a loja da Samsung trunca a
+seção de especificações (o A56 só entregou tela, bateria, IP67 e as 6
+atualizações), `poco.net` redireciona para `po.co` e morre, e URL de produto
+chutada dá 404. **O que funcionou foi a página oficial da Motorola**, que veio
+completa. Quando a fonte não abre, ou o número fica "Não divulgado" ou o
+aparelho fica de fora — nunca de agregador.
 
 ⚠️ **Ficha se confere na fonte do fabricante, nunca de memória nem de
 agregador.** Onde o fabricante não divulga, a célula diz "Não divulgado" — chute
