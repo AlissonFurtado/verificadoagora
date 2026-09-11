@@ -35,7 +35,7 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | Fila de 11/09 saiu: o piso de 15% funcionou, mas trouxe **acessório**, não celular. Foco trocado pra `MLB1055` no mesmo dia | Conferir a Fila de 12/09: agora tem que vir aparelho |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
-| Instagram | 🟢 **Antecipado em 11/09.** Perfil e Metricool já de pé; arte quadrada e 14 legendas prontas (`npm run posts`) | **Dele**: pôr o link do site na bio — sem isso o post não tem pra onde mandar ninguém. Depois, encher a fila de revisão |
+| Instagram | 🟢 **Antecipado em 11/09.** Arte quadrada, 14 legendas e `/instagram` no ar. G17 (12/09) e A36 (13/09) agendados às 10h, com notificação no app | **Dele**: pôr `www.verificadoagora.com.br/instagram` na bio antes de sexta 10h, e concluir os dois posts pela notificação do app do Metricool |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
@@ -915,9 +915,22 @@ descem junto, senão o nome do produto empurra o rodapé pra fora.
 ⚠️ **Link em legenda não é clicável no Instagram.** O único link que o
 aplicativo abre é o da bio. Por isso a legenda diz "link na bio" e o `destino`
 fica só no JSON — escrever a URL no meio da legenda é pedir pro leitor digitar
-à mão, que ninguém faz. **Consequência que muda o placar:** com um link só na
-bio, `data-onde` não distingue de qual post veio o clique. Até haver página
-intermediária, o Instagram mede como um canal inteiro, não post a post.
+à mão, que ninguém faz.
+
+**O link da bio é `/instagram`** (`src/app/instagram/page.tsx`, no ar em
+11/09/2026). As duas alternativas foram descartadas com motivo: mandar pra
+home faz quem veio do post do G17 cair numa vitrine de quinze produtos e ter
+que caçar; trocar o link da bio a cada post conserta hoje e quebra ontem,
+porque o post de terça passa a apontar pro produto de quarta — e é trabalho
+manual diário.
+
+- **A ordem da página é a de `data/posts.json`**, a mesma em que os posts
+  saem. O produto do post de hoje está sempre no topo sem ninguém editar nada.
+- **`data-onde` é `instagram`**, não `vitrine` — `CardProduto` ganhou a prop
+  `onde` pra isso. É o que responde "esse canal rendeu?".
+- ⚠️ **`noindex`, e fora do sitemap.** É uma lista de produtos que já existem
+  na vitrine: exatamente a página fina que o Google vem recusando neste
+  domínio. Serve a quem chega pela bio, não à busca.
 
 **`npm run posts`** (`scripts/posts.ts`, irmão de `pins.ts`) lê o catálogo e
 escreve `data/posts.json`: legenda, arte quadrada, destino pra bio. 14 posts
@@ -929,11 +942,37 @@ a conta trata. Começar por cafeteira e aspirador faria o assunto da conta
 nascer errado, o mesmo problema de tópico que tirou as categorias de fora do
 foco do destaque na vitrine.
 
+🔴 **A fila de revisão do Metricool não existe no plano gratuito.** Tentada em
+11/09/2026: a API responde 403 *"Cannot get approval data on FREE user"*. O
+mecanismo que ficou no lugar, e que protege a mesma coisa, é
+**`autoPublish: false`** — o post fica agendado no horário certo, mas em vez
+de publicar sozinho manda **notificação pro app do Metricool no celular**, e o
+Alisson conclui com um toque. ⚠️ **Depende do app instalado**: sem o app, o
+post simplesmente não sai. Se ele reclamar que um post não saiu, é a primeira
+coisa a checar.
+
+**Dois posts agendados em 11/09/2026**, os dois celulares do catálogo:
+G17 em 12/09 às 10h e A36 em 13/09 às 10h (fuso São Paulo). **10h é o melhor
+horário medido** pelo Metricool para essa conta, em todos os dias da semana;
+18h é o segundo.
+
+⚠️ **A primeira semana parou em dois posts de propósito.** O catálogo só tem
+dois celulares: do dia 3 em diante a rotação cai em aspirador, cafeteira e
+controle, e o perfil nasceria falando de outra coisa — o mesmo problema de
+tópico que tirou as categorias de fora do foco do destaque na vitrine. Decisão
+do Alisson em 11/09, sabendo do risco de perfil parado. **Destravar depende do
+terceiro celular**, que depende do garimpo (foco corrigido no mesmo dia) e de
+ele gerar o link de afiliado no PC.
+
+A arte é aceita pelo Metricool direto da URL com query string
+(`?formato=quadrado`): ele baixa e re-hospeda em `static.metricool.com`. Não
+precisa subir arquivo à mão.
+
 Existe um plano de postagem diária escrito pelo Alisson — rotação de produtos,
 logs, state em JSON. **Ele ainda não foi ligado**, e o primeiro passo não é
-automação: é ter post que preste saindo à mão pela fila do Metricool.
+automação: é ter post que preste saindo pela mão dele.
 
-A regra é a **fila de revisão do Metricool**. Post que
+A regra continua: post que
 sai sozinho, sem o Alisson ver antes, não é aceitável: é publicação em nome
 dele.
 
