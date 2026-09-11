@@ -38,9 +38,9 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Instagram | 🟢 **Pronto pra sair.** Arte quadrada, 14 legendas e `/instagram` no ar; link já na bio e app do Metricool instalado, com os dois posts visíveis nele (confirmado por ele em 11/09) | **Dele**: concluir o G17 pela notificação em 12/09 às 10h, e o A36 em 13/09. Depois: **o feed para**, e só volta com um terceiro celular no catálogo |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
 | Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
-| Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09 | **Dele**: pedir indexação no Search Console (Inspeção de URL → Solicitar indexação) |
-| Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09 | **Dele**: pedir indexação |
-| Guia de decisão `/guia/quantos-anos-de-atualizacao-no-celular` | No ar desde 11/09 | **Dele**: pedir indexação |
+| Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
+| Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
+| Guia de decisão `/guia/quantos-anos-de-atualizacao-no-celular` | No ar desde 11/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
 | Perguntas nas 15 fichas | No ar desde 10/09 | Ninguém — é esperar o Google reavaliar as 8 recusadas |
 | Guia de faixa até R$ 2.500 | 🔴 **Parado**, e a razão importa | Decisão dele: ver abaixo |
 
