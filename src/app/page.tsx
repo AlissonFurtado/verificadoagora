@@ -28,14 +28,16 @@ const GARANTIAS = [
 ] as const;
 
 /**
- * O foco do site desde 09/09/2026: celulares intermediários.
+ * ⚠️ **O foco em celulares acabou em 11/09/2026**, por decisão do Alisson.
  *
- * O que já estava no catálogo fora dessa faixa continua no ar e continua
- * sendo conferido — mas não recebe produto novo, e o filtro deixa de dar a
- * ele o mesmo peso. Dois assuntos com o mesmo destaque atrapalham a leitura
- * de tópico do buscador.
+ * Ele entrou em 09/09 para o buscador ler um assunto só, e saiu porque o
+ * catálogo tinha dois celulares e a vitrine parecia vazia. O aviso sobre a
+ * leitura de tópico foi dado antes da decisão, e a decisão foi mantida.
+ *
+ * Sem foco, o filtro trata toda categoria igual — é o que `Vitrine` faz
+ * quando `foco` não vem.
  */
-const CATEGORIA_FOCO = 'Celulares';
+const CATEGORIA_FOCO = undefined;
 
 export default function Home() {
   const { produtos: todos, metadata } = lerCatalogo();
@@ -80,11 +82,12 @@ export default function Home() {
           {/* Some no celular: no espaço que ele ocupa cabe metade de um card,
               e o título já diz o que a página é. */}
           <p className="mt-2 max-w-xl text-sm font-semibold text-marca-claro sm:mt-3 sm:text-lg">
-            Celulares intermediários, de R$ 800 a R$ 2.500.
+            Tecnologia com preço conferido todo dia.
           </p>
           <p className="mt-2 hidden max-w-xl text-lg font-medium text-sky-100/70 sm:block">
-            O preço de cada um é conferido por robô toda manhã, e a gente guarda o valor de todo
-            dia — por isso dá pra dizer quando está barato de verdade.
+            Celular, eletrônico, casa e games. O preço de cada um é conferido por robô toda manhã,
+            e a gente guarda o valor de todo dia — por isso dá pra dizer quando está barato de
+            verdade.
           </p>
 
           <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-sky-100/65 sm:mt-6 sm:text-sm">

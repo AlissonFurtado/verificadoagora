@@ -1,13 +1,21 @@
 # verificadoagora
 
-Site de **celulares intermediários** (R$ 800 a R$ 2.500) com o preço conferido
+Site de **tecnologia** (celular, eletrônico, casa, games) com o preço conferido
 por robô toda manhã, link de afiliado do Mercado Livre.
 
-O foco entrou em 09/09/2026, por brief do Alisson. Antes era "achadinhos de
-tecnologia" em geral. O que já estava no catálogo fora dessa faixa — casa,
-games, foto, áudio — **fica no ar e continua sendo conferido**, mas não recebe
-produto novo e perdeu o destaque no filtro: dois assuntos com o mesmo peso
-atrapalham a leitura de tópico do buscador.
+⚠️ **O escopo foi e voltou, e a história importa pra ninguém refazer a volta.**
+Em 09/09/2026 um brief estreitou tudo para **celulares intermediários de R$ 800
+a R$ 2.500**, pelo argumento de que dois assuntos com o mesmo peso atrapalham a
+leitura de tópico do buscador. Em **11/09/2026 o Alisson reabriu para
+tecnologia em geral**: com dois celulares no catálogo a vitrine parecia vazia,
+e "parece pouco" foi a razão dada. O aviso sobre o custo em SEO foi dado antes
+da decisão, com as alternativas na mesa (encher a faixa; alargar só um degrau,
+para acessório de celular) — ele escolheu abrir. **Se o índice do Google piorar
+daqui pra frente, esta é a variável que mudou.**
+
+O que saiu junto do foco, tudo em 11/09: o destaque de `Celulares` no filtro da
+vitrine (`CATEGORIA_FOCO`), o `foco`/`desconto_minimo_do_foco` do
+`data/garimpo.json`, e o título e a descrição do site.
 
 - Next.js 14 (App Router) + TypeScript + Tailwind, na **raiz do repo**
 - Dados em `data/produtos.json` — sem banco, sem API, sem backend
@@ -33,11 +41,11 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 |---|---|---|
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento **dias 1 e 2 postados** (dia 2 em 11/09, na thread "A57 ou S24 usado?", com o texto reescrito por ele) | **Dele**: dia 3 ("Celular gamer até 2.500", link em `rascunhos/`), depois o comentário com link |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
-| Garimpo | Fila de 11/09 saiu: o piso de 15% funcionou, mas trouxe **acessório**, não celular. Foco trocado pra `MLB1055` no mesmo dia | Conferir a Fila de 12/09: agora tem que vir aparelho |
+| Garimpo | 🔄 **Sem foco desde 11/09** — a fila volta a ser ordenada só por desconto, como antes de 09/09. `MLB1055` segue na lista de categorias | Conferir a Fila de 12/09: agora vale candidato de qualquer categoria |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
-| Instagram | 🟢 **Pronto pra sair.** Arte quadrada, 14 legendas e `/instagram` no ar; link já na bio e app do Metricool instalado, com os dois posts visíveis nele (confirmado por ele em 11/09) | **Dele**: concluir o G17 pela notificação em 12/09 às 10h, e o A36 em 13/09. Depois: **o feed para**, e só volta com um terceiro celular no catálogo |
+| Instagram | 🟢 **Pronto pra sair.** Arte quadrada, 14 legendas e `/instagram` no ar; link já na bio e app do Metricool instalado, com os dois posts visíveis nele (confirmado por ele em 11/09) | **Dele**: concluir o G17 pela notificação em 12/09 às 10h, e o A36 em 13/09. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
-| Catálogo de celular | Só G17 e A36, os dois já com comparativo | Sem um terceiro, não há comparativo novo a escrever |
+| Catálogo | 15 produtos, sendo 2 celulares (G17 e A36, os dois já com comparativo) | Comparativo novo depende de produto novo, de qualquer categoria agora |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
 | Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
 | Guia de decisão `/guia/quantos-anos-de-atualizacao-no-celular` | No ar desde 11/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
@@ -445,9 +453,11 @@ A corrente é automática dos dois lados e manual no meio:
    `data/garimpo.json`: desconto ≥ 20%, preço de R$ 100 a R$ 2.500, no máximo
    10 por dia. Categoria pode ser **nome** de primeiro nível ou **id**
    (`MLB14370`) de qualquer nível; o que não resolve é pulado com aviso.
-   ⚠️ **`foco` põe as categorias do assunto da página no topo da fila**, na
-   frente do desconto — quem sobra do limite diário é sempre de fora do foco. A
-   fila de 10/09 veio com 10 candidatos e nenhum celular, que é o que motivou.
+   ⚠️ **`foco` e `desconto_minimo_do_foco` saíram do JSON em 11/09**, com a
+   reabertura do escopo: a fila volta a ser ordenada só por desconto.
+   `scripts/garimpar.ts` ainda lê os dois campos e roda sem eles
+   (`config.foco ?? []`) — basta devolvê-los se o foco voltar. O que segue
+   valendo é a lição sobre **subcategoria**, abaixo.
    ⚠️ **`desconto_minimo_do_foco` (15%) é o piso só das categorias de foco.**
    Fora do foco continua 20%. O topo de Celulares e Telefones quase nunca bate
    20%, e fila sem celular nenhum não serve ao assunto da página. Decisão do

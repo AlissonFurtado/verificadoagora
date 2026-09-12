@@ -23,9 +23,9 @@ const enderecoDoSite = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : 'http://localhost:3000';
 
-const titulo = 'Verificado Agora — celulares intermediários com preço conferido todo dia';
+const titulo = 'Verificado Agora — tecnologia com preço conferido todo dia';
 const descricao =
-  'Celulares intermediários de R$ 800 a R$ 2.500, com o preço conferido por robô toda manhã, ' +
+  'Celular, eletrônico, casa e games com o preço conferido por robô toda manhã, ' +
   'histórico de cada dia e comparativos ficha a ficha.';
 
 export const metadata: Metadata = {

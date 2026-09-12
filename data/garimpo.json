@@ -12,17 +12,11 @@
     "MLB454379",
     "MLB430687"
   ],
-  "_por_que_foco": "O site é de celulares intermediários (brief de 09/09/2026). As outras categorias continuam sendo garimpadas, mas candidato de foco vai pro topo da fila na frente do desconto — quem sobra do limite diário é sempre de fora do foco.",
-  "foco": [
-    "MLB1055"
-  ],
-  "_por_que_desconto_do_foco": "O topo de Celulares e Telefones quase nunca bate 20% de desconto, e fila sem celular nenhum não serve ao assunto da página (10/09/2026: 10 candidatos, zero celulares). Piso menor só pro foco; fora dele continua 20%.",
-  "desconto_minimo_do_foco": 15,
   "limite_diario": 10,
   "filtros": {
     "desconto_minimo": 20,
     "preco_minimo": 100,
     "preco_maximo": 2500
   },
-  "_por_que_subcategoria_de_celulares": "MLB1051 (Celulares e Telefones) é guarda-chuva: acessório, capinha, smartwatch, telefone fixo. Em 11/09/2026 o piso de 15% do foco funcionou e trouxe três candidatos da categoria — carregador, power bank e power bank, de R$ 147 a R$ 160, nenhum celular. MLB1055 (Celulares e Smartphones) é onde mora o aparelho. Mesma armadilha de Informática."
+  "_por_que_sem_foco": "O foco em celulares acabou em 11/09/2026, por decisao do Alisson: o catalogo tinha dois celulares e a vitrine parecia vazia. Sem foco, a fila e ordenada so por desconto, como era antes de 09/09. O aviso sobre a leitura de topico do buscador foi dado antes da decisao. MLB1055 (Celulares e Smartphones) fica na lista de categorias: e a subcategoria onde mora o aparelho, e MLB1051 e guarda-chuva de acessorio barato."
 }
