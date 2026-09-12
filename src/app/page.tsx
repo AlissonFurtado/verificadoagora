@@ -49,11 +49,11 @@ export default function Home() {
   // entra só a parte antes dos dois-pontos.
   const atalhosDeGuia = [
     ...guias.map((g) => ({ slug: g.slug, rotulo: g.titulo, icone: '☰' })),
-    ...lerDecisoes().map((d) => ({
-      slug: d.slug,
-      rotulo: d.titulo.split(':')[0],
-      icone: '?',
-    })),
+    // O guia de faixa corta no dois-pontos ("Melhor celular até R$ 1.500:
+    // qual comprar em 2026" vira o rótulo bom). Na decisão, cortar assim
+    // estraga: "Tela de celular: AMOLED ou LCD?" virava "Tela de celular",
+    // que não diz pergunta nenhuma. O título inteiro já é curto.
+    ...lerDecisoes().map((d) => ({ slug: d.slug, rotulo: d.titulo, icone: '?' })),
   ];
   const conferencia = descreverConferencia(metadata.conferido_em, new Date());
 
@@ -107,17 +107,24 @@ export default function Home() {
           escolheu — e a vitrine sozinha só serve quem já sabe o que quer. */}
       {atalhosDeGuia.length > 0 && (
         <section className="mx-auto max-w-6xl px-4 pt-5 sm:pt-12">
-          <ul className="flex min-w-0 flex-wrap gap-3">
+          {/* ⚠️ No celular é uma tira que rola de lado, não uma grade que
+              quebra linha: com 4 guias de rótulo longo, o flex-wrap empilhava
+              4 botões de 48px e empurrava o primeiro card pra fora da tela.
+              A tira custa uma linha e **não cresce** quando entrar o 5º guia,
+              que é o que vai acontecer — publicar guia é a frente de SEO.
+              Mesmo gesto da barra de filtro logo abaixo. Do `sm` pra cima
+              volta a quebrar linha: lá sobra largura. */}
+          <ul className="-mx-4 flex min-w-0 gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
             {atalhosDeGuia.map((guia) => (
-              <li key={guia.slug} className="min-w-0">
+              <li key={guia.slug} className="shrink-0">
                 <Link
                   href={`/guia/${guia.slug}`}
-                  className="flex min-w-0 items-center gap-2.5 rounded-2xl border border-slate-200/80 bg-white px-5 py-3.5 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-marca/30 hover:text-marca hover:shadow-md"
+                  className="flex items-center gap-2.5 whitespace-nowrap rounded-2xl border border-slate-200/80 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 shadow-sm transition-all hover:border-marca/30 hover:text-marca hover:shadow-md sm:whitespace-normal sm:px-5 sm:py-3.5"
                 >
                   <span aria-hidden="true" className="font-black text-marca">
                     {guia.icone}
                   </span>
-                  <span className="min-w-0">{guia.rotulo}</span>
+                  <span>{guia.rotulo}</span>
                   <span aria-hidden="true" className="text-marca">
                     →
                   </span>
