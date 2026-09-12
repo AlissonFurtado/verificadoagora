@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-11",
+  "atualizado_em": "2026-09-12",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -324,6 +324,48 @@
       "sugerido_em": "2026-09-11",
       "familia": "Suporte ELG F80N",
       "preco_sugerido": 150.99,
+      "vezes": 1
+    },
+    "MLB51541501": {
+      "sugerido_em": "2026-09-12",
+      "familia": "interno Kingston SNV3S/500G 500GB",
+      "preco_sugerido": 648.98,
+      "vezes": 1
+    },
+    "MLB62148588": {
+      "sugerido_em": "2026-09-12",
+      "familia": "Realme Cseries RMX5303 Dual SIM",
+      "preco_sugerido": 999,
+      "vezes": 1
+    },
+    "MLB52027456": {
+      "sugerido_em": "2026-09-12",
+      "familia": "Monitor Sam sung com tela de 32\"",
+      "preco_sugerido": 939.99,
+      "vezes": 1
+    },
+    "MLB28562373": {
+      "sugerido_em": "2026-09-12",
+      "familia": "Monitor Brazil PC com tela de 20\" e resolução HD+",
+      "preco_sugerido": 232,
+      "vezes": 1
+    },
+    "MLB15749699": {
+      "sugerido_em": "2026-09-12",
+      "familia": "interno Adata ASU650SS-240GT-R 240GB",
+      "preco_sugerido": 290,
+      "vezes": 1
+    },
+    "MLB48778915": {
+      "sugerido_em": "2026-09-12",
+      "familia": "Monitor LG com tela de 27\" 60Hz e resolução 4K",
+      "preco_sugerido": 1249,
+      "vezes": 1
+    },
+    "MLB42420279": {
+      "sugerido_em": "2026-09-12",
+      "familia": "Monitor Gamer AOC com tela de 23.8\" 100Hz e resolução Full HD",
+      "preco_sugerido": 528.37,
       "vezes": 1
     }
   }
