@@ -660,6 +660,16 @@ Em `/comparativo/{mesmo slug do produto}`, um por `meli_id` em
 ⚠️ **Comparativo é sempre pedido explícito do Alisson.** Nenhum robô escreve
 um. Curadoria assinada por robô é o que tira a autoridade da página.
 
+⚠️ **No celular a ficha não é tabela — são blocos, um por critério.** Decidido
+em 11/09/2026, com um print dele na mão. A tabela deslizante fixava a coluna de
+critérios em 14rem (mais de metade de uma tela de 390px) e usava fundo
+semitransparente (`bg-slate-50/95`): o conteúdo que rolava aparecia **por baixo**
+do texto — "R$ 887,78" escrito em cima da nota da linha. Cada critério virou um
+bloco com um modelo por linha; do `lg` pra cima a tabela volta, porque lá ela
+cabe. **As duas versões saem da mesma lista `linhasDaFicha`** — montagem
+separada é como os dois formatos passariam a divergir. ⚠️ Fundo de coluna fixa
+nunca leva alfa.
+
 - **Nenhum preço fica escrito no arquivo**, nem na tabela nem na prosa. A
   tabela monta do `produtos.json`; a prosa usa marcadores `{preco}`,
   `{preco_original}`, `{desconto}`, `{economia}`, `{data}`, resolvidos por

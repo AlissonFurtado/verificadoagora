@@ -125,6 +125,48 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
       .filter((par): par is readonly [string, Produto] => Boolean(par[1])),
   );
 
+  /**
+   * A ficha inteira numa lista só — a linha de preço na frente das linhas do
+   * arquivo do comparativo.
+   *
+   * ⚠️ Existe porque a mesma ficha é desenhada de **dois jeitos**: blocos
+   * empilhados no celular, tabela do `lg` pra cima. Duas montagens separadas
+   * é como os dois formatos passariam a divergir com o tempo.
+   */
+  const linhasDaFicha = [
+    {
+      campo: 'Preço conferido',
+      nota: 'Só publicamos preço que nosso robô confere todo dia. Dos concorrentes não acompanhamos o valor, então não inventamos um.',
+      vencedores: [] as string[],
+      celula: (chave: string) => {
+        const doCatalogo = noCatalogo.get(chave);
+        if (!doCatalogo) {
+          return (
+            <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              não acompanhamos
+            </span>
+          );
+        }
+        return (
+          <>
+            <span className="block text-lg font-black text-marca">
+              {formatarReal(doCatalogo.preco_atual)}
+            </span>
+            <span className="mt-1 block text-[10px] font-bold uppercase tracking-wider text-slate-400">
+              em {formatarData(doCatalogo.verificado_em)}
+            </span>
+          </>
+        );
+      },
+    },
+    ...comparativo.linhas.map((linha) => ({
+      campo: linha.campo,
+      nota: linha.nota,
+      vencedores: linha.vencedores,
+      celula: (chave: string) => <>{linha.valores[chave] ?? '—'}</>,
+    })),
+  ];
+
   return (
     <main className="min-h-screen bg-fundo text-slate-800">
       <DadosEstruturados
@@ -216,24 +258,80 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
 
         <section className="mt-10 min-w-0">
           <h2 className="text-2xl font-black tracking-tight text-slate-900">A tabela</h2>
-          <p className="mt-1 text-sm text-slate-500 font-medium">
+          <p className="mt-1 hidden text-sm font-medium text-slate-500 lg:block">
             Arraste a tabela para o lado para ver todos os modelos.
           </p>
 
+          {/* ⚠️ **No celular a ficha não é tabela, e isso foi uma decisão.**
+              A tabela deslizante tinha a coluna de critérios fixa em 14rem —
+              mais de metade de uma tela de 390px — e o fundo dela era
+              semitransparente, então o conteúdo que rolava aparecia POR BAIXO
+              do texto. O print do Alisson em 11/09/2026 mostrava "R$ 887,78"
+              escrito em cima da nota da linha.
+
+              Cada critério vira um bloco, com um modelo por linha dentro: não
+              rola nada de lado, e quem perde continua aparecendo — que é a
+              regra do comparativo. Do `lg` pra cima a tabela volta, porque lá
+              ela cabe e comparar coluna a coluna é melhor. */}
+          <div className="mt-4 space-y-4 lg:hidden">
+            {linhasDaFicha.map((linha) => (
+              <div
+                key={linha.campo}
+                className="min-w-0 rounded-2xl border border-slate-200/80 bg-white p-4 shadow-sm"
+              >
+                <h3 className="text-base font-black text-slate-900">{linha.campo}</h3>
+                <p className="mt-1 text-xs font-normal leading-relaxed text-slate-400">
+                  {linha.nota}
+                </p>
+
+                <dl className="mt-3 divide-y divide-slate-200/70 border-t border-slate-200/70">
+                  {comparativo.colunas.map((coluna, i) => {
+                    const venceu = linha.vencedores.includes(coluna.chave);
+                    return (
+                      <div
+                        key={coluna.chave}
+                        className={`-mx-4 flex min-w-0 items-baseline justify-between gap-3 px-4 py-2.5 ${
+                          venceu ? 'bg-emerald-50/70' : i === 0 ? 'bg-marca/[0.04]' : ''
+                        }`}
+                      >
+                        <dt
+                          className={`min-w-0 shrink text-sm font-bold ${
+                            i === 0 ? 'text-marca' : 'text-slate-700'
+                          }`}
+                        >
+                          {coluna.nome}
+                        </dt>
+                        <dd
+                          className={`min-w-0 text-right text-sm ${
+                            venceu ? 'font-semibold text-slate-900' : 'text-slate-600'
+                          }`}
+                        >
+                          {linha.celula(coluna.chave)}
+                          {venceu && <Melhor />}
+                        </dd>
+                      </div>
+                    );
+                  })}
+                </dl>
+              </div>
+            ))}
+          </div>
+
           {/* A tabela é o único lugar da página que pode passar da largura da
               tela: rola dentro do próprio quadro, e o corpo nunca rola no
-              horizontal. */}
-          <div className="mt-4 min-w-0 overflow-x-auto rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+              horizontal. ⚠️ O fundo da coluna fixa é **opaco** — com alfa,
+              o que desliza aparece por baixo dela. */}
+          <div className="mt-4 hidden min-w-0 overflow-x-auto rounded-2xl border border-slate-200/80 bg-white shadow-sm lg:block">
             <table className="w-full border-collapse text-left text-sm">
               <caption className="sr-only">
                 Ficha técnica do {produto.nome} comparada com{' '}
                 {comparativo.colunas.length - 1} modelos concorrentes
               </caption>
               <thead>
-                <tr className="bg-slate-50 border-b border-slate-200/85">
+                <tr className="border-b border-slate-200/85 bg-slate-50">
                   <th
                     scope="col"
-                    className="sticky left-0 z-10 w-56 min-w-[14rem] bg-slate-50 border-r border-slate-200/80 px-4 py-3.5 font-bold text-slate-800"
+                    className="sticky left-0 z-10 w-56 min-w-[14rem] border-r border-slate-200/80 bg-slate-50 px-4 py-3.5 font-bold text-slate-800"
                   >
                     O que compara
                   </th>
@@ -241,7 +339,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                     <th
                       key={coluna.chave}
                       scope="col"
-                      className={`min-w-[11rem] px-4 py-3.5 font-extrabold border-r border-slate-200/30 ${
+                      className={`min-w-[11rem] border-r border-slate-200/30 px-4 py-3.5 font-extrabold ${
                         i === 0 ? 'bg-marca/[0.07] text-marca' : 'text-slate-700'
                       }`}
                     >
@@ -257,49 +355,11 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
               </thead>
 
               <tbody>
-                {/* Linha de preço montada do catálogo, não do arquivo do
-                    comparativo: assim o robô de preços continua dono dela e o
-                    texto nunca anuncia valor que ninguém conferiu hoje. */}
-                <tr className="border-b border-slate-200/60">
-                  <th
-                    scope="row"
-                    className="sticky left-0 z-10 bg-slate-50/95 border-r border-slate-200 px-4 py-4 align-top font-bold text-slate-800"
-                  >
-                    Preço conferido
-                    <span className="mt-1 block text-xs font-normal leading-relaxed text-slate-400">
-                      Só publicamos preço que nosso robô confere todo dia. Dos concorrentes não
-                      acompanhamos o valor, então não inventamos um.
-                    </span>
-                  </th>
-                  {comparativo.colunas.map((coluna, i) => {
-                    const doCatalogo = noCatalogo.get(coluna.chave);
-                    return (
-                      <td
-                        key={coluna.chave}
-                        className={`px-4 py-4 align-top border-r border-slate-200/30 ${i === 0 ? 'bg-marca/[0.04]' : ''}`}
-                      >
-                        {doCatalogo ? (
-                          <>
-                            <span className="text-lg font-black text-marca block">
-                              {formatarReal(doCatalogo.preco_atual)}
-                            </span>
-                            <span className="mt-1 block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                              em {formatarData(doCatalogo.verificado_em)}
-                            </span>
-                          </>
-                        ) : (
-                          <span className="text-slate-400 text-xs font-semibold uppercase tracking-wider">não acompanhamos</span>
-                        )}
-                      </td>
-                    );
-                  })}
-                </tr>
-
-                {comparativo.linhas.map((linha) => (
+                {linhasDaFicha.map((linha) => (
                   <tr key={linha.campo} className="border-b border-slate-200/60">
                     <th
                       scope="row"
-                      className="sticky left-0 z-10 bg-slate-50/95 border-r border-slate-200 px-4 py-4 align-top font-bold text-slate-800"
+                      className="sticky left-0 z-10 border-r border-slate-200 bg-slate-50 px-4 py-4 align-top font-bold text-slate-800"
                     >
                       {linha.campo}
                       <span className="mt-1 block text-xs font-normal leading-relaxed text-slate-400">
@@ -311,15 +371,15 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                       return (
                         <td
                           key={coluna.chave}
-                          className={`px-4 py-4 align-top border-r border-slate-200/30 ${
+                          className={`border-r border-slate-200/30 px-4 py-4 align-top ${
                             venceu
-                              ? 'bg-emerald-50/70 text-slate-900 font-medium'
+                              ? 'bg-emerald-50/70 font-medium text-slate-900'
                               : i === 0
                                 ? 'bg-marca/[0.04] text-slate-600'
                                 : 'text-slate-600'
                           }`}
                         >
-                          {linha.valores[coluna.chave] ?? '—'}
+                          {linha.celula(coluna.chave)}
                           {venceu && <Melhor />}
                         </td>
                       );
