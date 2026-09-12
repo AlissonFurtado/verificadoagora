@@ -31,6 +31,26 @@ vitrine (`CATEGORIA_FOCO`), o `foco`/`desconto_minimo_do_foco` do
 > (`~/.claude/CLAUDE.md`) e valem em todos os projetos. O padrão técnico
 > compartilhado entre eles está na skill `padrao-afdesousa`.
 
+⚠️ **O lado comercial da empresa saiu deste repo em 12/09/2026.** Cliente,
+preço, proposta e prospecção moram em `C:\projetos\afdesousa-comercial`, que
+é privado — este aqui é público. Se a conversa virar "como ganhar dinheiro",
+"conseguir cliente" ou "quanto cobrar", **é lá**, e não aqui: o nicho, os
+pacotes e as regras de LGPD da prospecção estão escritos naquele arquivo.
+
+Dois relatórios de pesquisa de 11–12/09/2026 embasaram aquilo, e valem uma
+leitura antes de opinar sobre o futuro desta landing:
+
+- **Seis rotas até o primeiro real** — a conta de que este site precisa de
+  6.500 a 11.500 visitas/mês para render R$ 1.000, e o que mais existe ao
+  alcance dele: <https://claude.ai/code/artifact/cce97c0b-5eec-40d2-8465-65158b65f34a>
+- **Vender sem sair de casa** — o plano comercial:
+  <https://claude.ai/code/artifact/df4e549b-355a-4b17-b283-e483170bc937>
+
+⚠️ **O que isso significa para este projeto:** ele continua, mas rebaixado a
+**ativo de 6 a 12 meses que compõe sozinho** — não é a fonte de renda de 2026.
+Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
+em 11/09/2026, depois da pesquisa.
+
 ## Onde paramos — 11/09/2026
 
 Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
@@ -51,6 +71,8 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Guia de decisão `/guia/quantos-anos-de-atualizacao-no-celular` | No ar desde 11/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
 | Perguntas nas 15 fichas | No ar desde 10/09 | Ninguém — é esperar o Google reavaliar as 8 recusadas |
 | Guia de faixa até R$ 2.500 | 🔴 **Parado**, e a razão importa | Decisão dele: ver abaixo |
+| Comparativo no celular | Blocos por critério no ar desde 11/09 (era tabela deslizante com a coluna fixa vazando por cima do texto) | **Dele**: conferir no aparelho |
+| Home no celular | Atalhos viraram tira que rola de lado em 11/09 | **Dele**: conferir no aparelho |
 
 ⚠️ **Por que o guia até R$ 2.500 parou:** a faixa de R$ 1.500 a 2.500 quase não
 tem aparelho com ficha oficial acessível (veja a armadilha do `WebFetch` em
@@ -84,6 +106,19 @@ Como trabalhar barato aqui:
 - **Verifique medindo, não olhando.** `curl` e uma linha de `node` provam a
   mesma coisa que um screenshot por uma fração do preço. Screenshot só quando
   o assunto for de fato visual e não der pra medir.
+- 🔴 **Não dá pra conferir layout de celular daqui, e isso não é falta de
+  tentar.** Em 11/09/2026 o `resize_window` do Chrome respondeu "sucesso" três
+  vezes e o `innerWidth` continuou 1920 — a janela dele não redimensiona.
+  **Quem confere visual no aparelho é ele**, sempre. Diga isso em voz alta em
+  vez de entregar como verificado.
+- **Para provar que o HTML saiu certo**, sem screenshot: `npx next dev -p 3111`
+  (a 3000 costuma estar ocupada), `curl` a página para um arquivo e `grep` as
+  classes e os textos esperados. Foi assim que os blocos do comparativo foram
+  conferidos. ⚠️ `$TMPDIR` vem vazio no Bash daqui: use o caminho do
+  scratchpad por extenso, ou o redirecionamento falha com *Permission denied*.
+- ⚠️ **Escrever arquivo com acento pelo heredoc do Bash quebra.** Gere o texto
+  num `.py` no scratchpad e rode com `python`, ou os acentos somem do que o
+  visitante lê — aconteceu em 11/09/2026 e teve que ser desfeito à mão.
 - **Resposta curta por padrão.** Diga o que mudou, o que não funcionou e o que
   falta. Sem recapitular o que ele acabou de ler.
 - **Uma pergunta boa em vez de três.** A regra de perguntar em múltipla
@@ -235,6 +270,23 @@ espalhe hex pelo código.
 rodapé fecha com o mesmo gradiente, e a vitrine clara fica emoldurada entre as
 duas. Antes disso o cabeçalho era branco sobre cinza e o Alisson resumiu bem:
 "parece um blog não chamativo".
+
+### A home no celular: o que empurra o produto pra fora da tela
+
+⚠️ **Os atalhos de guia são uma tira que rola de lado, não uma grade que quebra
+linha.** Com 4 guias de rótulo longo, o `flex-wrap` empilhava 4 botões de 48px
+e o primeiro card começava fora da tela — reclamação dele em 11/09/2026. A tira
+custa uma linha e **não cresce** quando entrar o 5º guia, que vai entrar:
+publicar guia é a frente de SEO. Do `sm` pra cima volta a quebrar linha.
+
+⚠️ **O rótulo do guia de decisão não corta no dois-pontos.** No guia de faixa
+cortar é bom ("Melhor celular até R$ 1.500: qual comprar em 2026" vira um
+rótulo limpo). Na decisão estraga: "Tela de celular: AMOLED ou LCD?" virava
+"Tela de celular", que não diz pergunta nenhuma.
+
+**O orçamento da dobra, pra quem for mexer:** cabeçalho ~175px + atalhos ~50px
++ título da vitrine ~80px + filtro ~74px. Tudo que entrar acima da grade sai do
+espaço do primeiro card.
 
 ⚠️ **Verde e azul não são a mesma coisa aqui.** Azul é a marca; verde é
 semântica de "isto é bom" — economia, queda de preço, o selo *Melhor* na
