@@ -59,11 +59,11 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 
 | Frente | Estado | De quem é a vez |
 |---|---|---|
-| Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; aquecimento **dias 1 e 2 postados** (dia 2 em 11/09, na thread "A57 ou S24 usado?", com o texto reescrito por ele) | **Dele**: dia 3 ("Celular gamer até 2.500", link em `rascunhos/`), depois o comentário com link |
+| Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | 🔄 **Sem foco desde 11/09** — a fila volta a ser ordenada só por desconto. `MLB1055` segue na lista. 🟢 **A fila de 12/09 trouxe 7 candidatos e, pela primeira vez, um celular de verdade**: Realme C73 128GB 4GB, R$ 999, 37% — a troca de `MLB1051` por `MLB1055` resolveu | **Dele**: gerar o link de afiliado do Realme C73 no PC (Linkbuilder). É o 3º celular do catálogo, e com ele nasce um comparativo novo |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
-| Instagram | 🟢 **Pronto pra sair.** Arte quadrada, 14 legendas e `/instagram` no ar; link já na bio e app do Metricool instalado, com os dois posts visíveis nele (confirmado por ele em 11/09) | **Dele**: concluir o G17 pela notificação em 12/09 às 10h, e o A36 em 13/09. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
+| Instagram | 🔴 **O 1º post não saiu sozinho em 12/09: a notificação do Metricool nunca chegou no celular dele.** Veja "A notificação que não chega", abaixo. O G17 foi publicado à mão em 12/09, com a arte e a legenda entregues pelo chat | **Dele**: conferir a permissão de notificação do app do Metricool — senão o A36 (13/09, 10h) para no mesmo lugar. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
 | Catálogo | 15 produtos, sendo 2 celulares (G17 e A36, os dois já com comparativo) | Comparativo novo depende de produto novo, de qualquer categoria agora |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
@@ -989,6 +989,19 @@ aplicativo abre é o da bio. Por isso a legenda diz "link na bio" e o `destino`
 fica só no JSON — escrever a URL no meio da legenda é pedir pro leitor digitar
 à mão, que ninguém faz.
 
+**Ele perguntou de novo em 12/09/2026 ("consigo colocar link no post?") e a
+resposta ficou decidida: só a bio.** O mapa completo, pra ninguém refazer a
+pergunta — legenda ❌, comentário ❌, bio ✅ (cabem até 5 links), **adesivo de
+link no story ✅** (liberado pra qualquer conta desde 2021, sem mínimo de
+seguidor), mensagem direta ✅. As duas alternativas reais foram postas na mesa
+e recusadas: **story com adesivo de link** dá clique num toque só, mas dura 24h
+e é mais um passo manual por dia; **vários links na bio** (fixo + produto do
+dia) tem o mesmo defeito de trocar o link a cada post — conserta hoje e quebra
+ontem. Fica a bio apontando pra `/instagram`, que já resolve por ordem de
+`posts.json`. ⚠️ Não conferido: se o Metricool do plano grátis agenda story
+**com** adesivo de link (a API não expõe campo pra isso — provável que o
+adesivo só entre à mão na hora de publicar).
+
 **O link da bio é `/instagram`** (`src/app/instagram/page.tsx`, no ar em
 11/09/2026). As duas alternativas foram descartadas com motivo: mandar pra
 home faz quem veio do post do G17 cair numa vitrine de quinze produtos e ter
@@ -1022,6 +1035,37 @@ de publicar sozinho manda **notificação pro app do Metricool no celular**, e o
 Alisson conclui com um toque. ⚠️ **Depende do app instalado**: sem o app, o
 post simplesmente não sai. Se ele reclamar que um post não saiu, é a primeira
 coisa a checar.
+
+### 🔴 A notificação que não chega — e o "Sent" que mente
+
+**Aconteceu no primeiro post, em 12/09/2026.** O G17 estava agendado pras 10h
+com `autoPublish: false`; às 17h ele mandou print do Metricool mostrando faixa
+verde **"Sent"** e perguntou por que não aparecia no Instagram. Não aparecia
+porque nunca foi publicado: **a notificação não chegou no celular dele.**
+
+⚠️ **`status: "PUBLISHED"` na API não quer dizer publicado.** Em modo
+notificação o Metricool marca o post como enviado quando **despacha a
+notificação**, e não tem como saber se o Alisson concluiu dentro do Instagram.
+O `getScheduledPosts` devolvia `"status":"PUBLISHED","detailedStatus":
+"Published"` pra um post que não existia em lugar nenhum. **Nunca leia esse
+campo como prova de que saiu** — a única prova é o feed.
+
+⚠️ **E não dá pra conferir o feed daqui.** `curl` em
+`instagram.com/verificadoagorabr` devolve 200 com 625 KB de muro de login:
+nenhum `og:description`, nenhuma contagem de post. Quem confere se o post
+existe é ele, no aplicativo.
+
+**O que fica pendente, e é a causa raiz:** a permissão de notificação do app do
+Metricool no celular dele. Sem resolver, todo post agendado em modo
+notificação morre igual. A saída, se não resolver, é `autoPublish: true` — mas
+isso é decisão dele, porque troca "ele conclui cada post" por "o Metricool
+publica sozinho", e a regra de nada sair sem ele ver é dele.
+
+**O plano B que funcionou:** publicar à mão. A arte sai do próprio site
+(`/pin/{slug}?formato=quadrado`, 1080×1080 — conferido, o `curl` devolve
+`image/png` e o cabeçalho PNG diz 1080x1080) e a legenda sai de
+`data/posts.json`. Mandei o PNG pelo `SendUserFile` e a legenda em bloco de
+código, que é o que ele consegue copiar do celular.
 
 **Dois posts agendados em 11/09/2026**, os dois celulares do catálogo:
 G17 em 12/09 às 10h e A36 em 13/09 às 10h (fuso São Paulo). **10h é o melhor
