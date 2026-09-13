@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-12",
+  "atualizado_em": "2026-09-13",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -366,6 +366,66 @@
       "sugerido_em": "2026-09-12",
       "familia": "Monitor Gamer AOC com tela de 23.8\" 100Hz e resolução Full HD",
       "preco_sugerido": 528.37,
+      "vezes": 1
+    },
+    "MLB75627274": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Mochila para notebook jiesipote 9243 40L",
+      "preco_sugerido": 109,
+      "vezes": 1
+    },
+    "MLB23144158": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Mouse gamer sem fio Logitech G Serie G Lightspeed G305",
+      "preco_sugerido": 179.9,
+      "vezes": 1
+    },
+    "MLB50200257": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Monitor Gamer AOC com tela de 21.5\" 120Hz e resolução Full HD",
+      "preco_sugerido": 424,
+      "vezes": 1
+    },
+    "MLB25860033": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Aspirador Britânia BAS1295P 1L",
+      "preco_sugerido": 122.9,
+      "vezes": 1
+    },
+    "MLB57489948": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Monitor LG com tela de 24\" 144Hz e resolução Full HD",
+      "preco_sugerido": 625,
+      "vezes": 1
+    },
+    "MLB16211423": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Mouse Gamer G203 Lightsync Rgb 8.000 Dpi Ciano Logitech G",
+      "preco_sugerido": 102,
+      "vezes": 1
+    },
+    "MLB65541449": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Fone de ouvido wireless on ear sem fio JBL Tune 530BT JBLT530BTBLKBR",
+      "preco_sugerido": 199,
+      "vezes": 1
+    },
+    "MLB68199804": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Samsung Smartphones Galaxy A37 5G 5G Dual SIM",
+      "preco_sugerido": 1887.78,
+      "vezes": 1
+    },
+    "MLB64311324": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Monitor LG com tela de 27\" 144Hz e resolução Full HD",
+      "preco_sugerido": 854.28,
+      "vezes": 1
+    },
+    "MLB24006582": {
+      "sugerido_em": "2026-09-13",
+      "familia": "Fone de ouvido over-ear gamer Havit Gamer H2002d H2002dB",
+      "preco_sugerido": 198,
       "vezes": 1
     }
   }
