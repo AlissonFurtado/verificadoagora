@@ -747,6 +747,27 @@ nunca leva alfa.
 - Marcação é `Article` com `citation`, **não `Review` com nota** — nota que
   ninguém mediu é preço inventado em outra linguagem.
 
+## 🔴 Os termos do programa de afiliados (lidos em 15/09/2026)
+
+<https://www.mercadolivre.com.br/ajuda/30228>. Lidos quando ele perguntou se
+podia usar o vídeo do anúncio num reel. **Três cláusulas batem de frente com
+o que o site já faz, e nenhuma foi resolvida ainda** — decisão dele:
+
+| Cláusula | Diz | Bate em |
+|---|---|---|
+| **5.3** | Afiliado "não poderá fazer qualquer publicidade **comparando** os produtos… com qualquer produto, seja de empresa concorrente ou não" | Os comparativos e os guias — o formato que abre índice |
+| **5.4** | Nas postagens com link, "só poderá mencionar as informações previstas expressamente nos anúncios" | As `analise` com dado de fabricante que o anúncio não traz (ex.: "4 GB reais" do OPPO) |
+| **1.3** | Só conta como Mídia (e só gera pagamento) o site/rede **informado ao ML antes** | Não conferido se `verificadoagora.com.br` e `@verificadoagorabr` estão cadastrados no painel |
+
+- **Vídeo do anúncio: não.** 9.2 não dá direito sobre conteúdo que não foi
+  expressamente liberado; 9.5 põe na conta do afiliado qualquer obra de
+  terceiro (fotografia inclusive); 4.3(c) proíbe coleta automatizada de
+  "materiais criativos". O único material liberado é o que o ML
+  **disponibilizar** ao afiliado (1.7) — conferir se o painel oferece.
+- **5.1 pede sinalização de publicidade no padrão CONAR** (Guia de
+  Influenciadores) em todo conteúdo com link — "Link de afiliado" na legenda
+  pode não bastar; CONAR costuma pedir `#publi`/"publicidade".
+
 ## Dinheiro
 
 Três regras que não são de estilo:
