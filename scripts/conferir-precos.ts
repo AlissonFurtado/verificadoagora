@@ -68,7 +68,13 @@ async function main(): Promise<void> {
 
   const accessToken = await obterAcesso();
 
+  // Como cada produto estava antes da rodada. É o que volta pra main quando a
+  // variação é suspeita: só ele espera no PR, o resto do catálogo publica.
+  const antes = new Map<number, Produto>();
+
   for (const produto of catalogo.produtos) {
+    antes.set(produto.id, structuredClone(produto));
+
     if (!produto.meli_id) {
       relatorio.sem_id.push({ id: produto.id, nome: produto.nome });
       continue;
@@ -134,7 +140,11 @@ async function main(): Promise<void> {
         variacao: arredondar((novo - anterior) / anterior),
       };
       relatorio.mudancas.push(mudanca);
-      if (Math.abs(mudanca.variacao) > VARIACAO_SUSPEITA) relatorio.suspeitos.push(mudanca);
+      // Produto oculto não aparece na vitrine: preço estranho nele não engana
+      // ninguém e não segura a rodada.
+      if (Math.abs(mudanca.variacao) > VARIACAO_SUSPEITA && !produto.oculto) {
+        relatorio.suspeitos.push(mudanca);
+      }
     }
   }
 
@@ -145,7 +155,23 @@ async function main(): Promise<void> {
   catalogo.metadata.conferido_em = new Date().toISOString();
   catalogo.metadata.total_produtos = catalogo.produtos.length;
 
-  fs.writeFileSync(caminho, `${JSON.stringify(catalogo, null, 2)}\n`, 'utf-8');
+  // ⚠️ Até 15/09/2026 um único suspeito mandava a rodada inteira pro PR: em
+  // 14/09 o suporte de monitor (oculto!) caiu 58% e o A36 ficou dois dias na
+  // página a R$ 1.435 com a loja cobrando R$ 1.499. Agora são dois arquivos:
+  // produtos.json vai pra main com os suspeitos no estado de ontem, e
+  // produtos-com-suspeitos.json (não versionado) é o que a Action põe no PR.
+  const seguro: Catalogo = {
+    ...catalogo,
+    produtos: catalogo.produtos.map((p) =>
+      relatorio.suspeitos.some((s) => s.id === p.id) ? antes.get(p.id)! : p,
+    ),
+  };
+  fs.writeFileSync(caminho, `${JSON.stringify(seguro, null, 2)}\n`, 'utf-8');
+  fs.writeFileSync(
+    path.join(process.cwd(), 'produtos-com-suspeitos.json'),
+    `${JSON.stringify(catalogo, null, 2)}\n`,
+    'utf-8',
+  );
 
   // ⚠️ Este arquivo já foi esquecido uma vez. Entre 07/09 e 08/09/2026 o robô
   // lia o histórico, acumulava o preço do dia na memória e terminava a rodada

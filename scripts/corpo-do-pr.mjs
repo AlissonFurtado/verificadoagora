@@ -7,16 +7,17 @@ const real = (v) => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BR
 const pct = (v) => `${v > 0 ? '+' : ''}${Math.round(v * 100)}%`;
 
 const linhas = [];
+// O mesmo texto serve ao commit da main e ao PR: o título diz as duas coisas.
 const titulo =
   r.suspeitos.length > 0
-    ? `Preços de ${r.rodado_em}: ${r.suspeitos.length} com variação grande`
+    ? `Preços de ${r.rodado_em}: ${r.suspeitos.length} com variação grande esperando revisão`
     : `Atualiza os preços conferidos em ${r.rodado_em}`;
 
 linhas.push(titulo, '');
 linhas.push(`Conferidos ${r.conferidos} produto(s) na API do Mercado Livre.`, '');
 
 if (r.suspeitos.length > 0) {
-  linhas.push('Variação acima de 15% — é por isso que isto veio como PR:');
+  linhas.push('Variação acima de 15% — só estes esperam no PR, o resto já foi pra main:');
   for (const m of r.suspeitos) linhas.push(`- ${m.nome}: ${real(m.de)} -> ${real(m.para)} (${pct(m.variacao)})`);
   linhas.push('');
 }

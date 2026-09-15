@@ -73,26 +73,26 @@ jobs:
             git push origin main
           fi
 
-          git add data/produtos.json
-          if git diff --cached --quiet; then
-            echo "Nenhum preço mudou hoje."
-            exit 0
-          fi
-
+          # O que é normal vai pra main mesmo quando há suspeito: o script já
+          # devolveu os suspeitos ao preço de ontem neste arquivo.
           node scripts/corpo-do-pr.mjs > corpo.md
-          suspeitos=$(node -p "require('./relatorio.json').suspeitos.length")
-
-          if [ "$suspeitos" = "0" ]; then
+          git add data/produtos.json
+          if ! git diff --cached --quiet; then
             git commit -F corpo.md
             git push origin main
-            echo "Preços atualizados direto na main."
-          else
+            echo "Preços normais atualizados direto na main."
+          fi
+
+          suspeitos=$(node -p "require('./relatorio.json').suspeitos.length")
+          if [ "$suspeitos" != "0" ]; then
             ramo="robo/precos-$(date +%Y-%m-%d)"
             git checkout -b "$ramo"
-            git commit -F corpo.md
+            cp produtos-com-suspeitos.json data/produtos.json
+            git add data/produtos.json
+            git commit -m "Preços de $(date +%d/%m): $suspeitos produto(s) com variação grande"
             git push -f origin "$ramo"
             gh pr create --base main --head "$ramo" \
               --title "Preços de $(date +%d/%m): $suspeitos produto(s) com variação grande" \
               --body-file corpo.md
-            echo "Variação grande: abri PR em vez de publicar."
+            echo "Variação grande: só os suspeitos foram pro PR."
           fi

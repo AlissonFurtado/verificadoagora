@@ -149,6 +149,8 @@ next-env.d.ts
 # Robô de preços
 .meli-refresh
 relatorio.json
+produtos-com-suspeitos.json
+corpo.md
 
 # Rascunhos de post (Reddit e afins): texto pra publicar em nome do Alisson,
 # com nome de conta e plano de aquecimento. O repo e publico — isto nao sobe.
