@@ -51,7 +51,7 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 11/09/2026
+## Onde paramos — 15/09/2026
 
 Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 
@@ -61,11 +61,12 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 |---|---|---|
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
-| Garimpo | 🔄 **Sem foco desde 11/09** — a fila volta a ser ordenada só por desconto. `MLB1055` segue na lista. 🟢 **A fila de 12/09 trouxe 7 candidatos e, pela primeira vez, um celular de verdade**: Realme C73 128GB 4GB, R$ 999, 37% — a troca de `MLB1051` por `MLB1055` resolveu | **Dele**: gerar o link de afiliado do Realme C73 no PC (Linkbuilder). É o 3º celular do catálogo, e com ele nasce um comparativo novo |
+| Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | **Dele**: link do **Moto G06** (R$ 726, 48%, `MLB58353028`), que não veio no lote de 15/09. **Redmi 15C** (`MLB54993504`) tem link (`https://meli.la/1c4fPPf`) mas ficou de fora: ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria |
+| Catálogo | 🟢 **23 produtos desde 15/09**: entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
+| Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
 | Instagram | 🔴 **O 1º post não saiu sozinho em 12/09: a notificação do Metricool nunca chegou no celular dele.** Veja "A notificação que não chega", abaixo. A arte e a legenda do G17 foram entregues pelo chat pra ele publicar à mão — **não confirmado se chegou a sair: pergunte** | **Dele**: publicar o G17 se ainda não saiu, e conferir a permissão de notificação do app do Metricool — senão o A36 (13/09, 10h) para no mesmo lugar. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
-| Catálogo | 15 produtos, sendo 2 celulares (G17 e A36, os dois já com comparativo) | Comparativo novo depende de produto novo, de qualquer categoria agora |
 | Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
 | Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
 | Guia de decisão `/guia/quantos-anos-de-atualizacao-no-celular` | No ar desde 11/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
@@ -482,10 +483,17 @@ As travas, que são o motivo de ele poder commitar sozinho:
 | Situação | O que ele faz |
 |---|---|
 | Preço mudou até 15% | Aplica e commita na `main` |
-| Mudou mais que 15% | Aplica **em PR** — 30% costuma ser outra coisa |
+| Mudou mais que 15% | **Só esse produto** vai pro PR; o resto da rodada publica na main. Produto `oculto` nunca é suspeito |
 | Pausado, sem estoque ou 404 | `disponivel: false`, some da página |
 | API instável ou erro | **Não mexe em nada** e a Action fica vermelha |
 | Sem `meli_id` | Não confere, avisa no relatório |
+
+⚠️ **Até 15/09/2026 um suspeito segurava a rodada inteira.** Em 14/09 o
+suporte de monitor (oculto) caiu 58%, tudo foi pro PR e o A36 ficou dois dias
+no site a R$ 1.435 com a loja a R$ 1.499 — e o relógio "conferido há" parou.
+Agora o script grava `produtos.json` com os suspeitos no preço de ontem e
+`produtos-com-suspeitos.json` (fora do Git) pro PR. **Se o relógio do site
+parar, procure branch `robo/precos-*` esperando merge.**
 
 Ele nunca marca `preco_no_pix` (a API dá preço de tabela) e não toca em
 `nome`, `descricao`, `categoria`, `avaliacao`, `analise` nem `oculto` — isso é
