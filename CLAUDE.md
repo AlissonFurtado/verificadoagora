@@ -757,7 +757,11 @@ o que o site já faz, e nenhuma foi resolvida ainda** — decisão dele:
 |---|---|---|
 | **5.3** | Afiliado "não poderá fazer qualquer publicidade **comparando** os produtos… com qualquer produto, seja de empresa concorrente ou não" | Os comparativos e os guias — o formato que abre índice |
 | **5.4** | Nas postagens com link, "só poderá mencionar as informações previstas expressamente nos anúncios" | As `analise` com dado de fabricante que o anúncio não traz (ex.: "4 GB reais" do OPPO) |
-| **1.3** | Só conta como Mídia (e só gera pagamento) o site/rede **informado ao ML antes** | Não conferido se `verificadoagora.com.br` e `@verificadoagorabr` estão cadastrados no painel |
+| **1.3** | Só conta como Mídia (e só gera pagamento) o site/rede **informado ao ML antes** | 🟢 **Resolvido**: em Perfil de afiliado → Contas vinculadas estão `Instagram verificadoagorabr` e `https://verificadoagora.com.br/` (conferido 15/09) |
+
+**Placar do painel em 15/09/2026:** 7 a 13/09 → **19 cliques** (+1800% sobre a
+semana anterior), **0 compradores, 0 vendas**. É o primeiro número real de
+clique vindo do site.
 
 - **Vídeo do anúncio: não.** 9.2 não dá direito sobre conteúdo que não foi
   expressamente liberado; 9.5 põe na conta do afiliado qualquer obra de
