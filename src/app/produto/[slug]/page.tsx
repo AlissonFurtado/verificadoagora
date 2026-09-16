@@ -7,6 +7,7 @@ import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import { formatarData, formatarReal, NOME_PLATAFORMA, type Produto } from '@/lib/produtos';
 import { fraseDoHistorico, seloDeMenorPreco, type PontoDoHistorico } from '@/lib/historico';
 import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
+import { GraficoDePrecos } from './grafico-precos';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
 import { GuiasRelacionados } from '../../guias-relacionados';
@@ -158,49 +159,6 @@ function Perguntas({ produto }: { produto: Produto }) {
           </div>
         ))}
       </dl>
-    </section>
-  );
-}
-
-/** Linha do tempo do preço. SVG na mão: um gráfico não vale uma dependência. */
-function Grafico({ pontos }: { pontos: PontoDoHistorico[] }) {
-  if (pontos.length < 2) return null;
-
-  const precos = pontos.map((p) => p.preco);
-  const min = Math.min(...precos);
-  const max = Math.max(...precos);
-  const amplitude = max - min || 1;
-  const largura = 600;
-  const altura = 120;
-
-  const caminho = pontos
-    .map((p, i) => {
-      const x = (i / (pontos.length - 1)) * largura;
-      const y = altura - ((p.preco - min) / amplitude) * (altura - 16) - 8;
-      return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
-    })
-    .join(' ');
-
-  const legenda = `Variação de preço em ${pontos.length} dias, de ${formatarReal(
-    min,
-  )} a ${formatarReal(max)}`;
-
-  return (
-    <section className="min-w-0 rounded-2xl bg-white border border-slate-200/60 p-6 shadow-sm">
-      <h2 className="mb-1 text-sm font-bold text-slate-800 flex items-center gap-1.5">
-        <span aria-hidden="true" className="text-marca">📈</span>
-        Como o preço se comportou
-      </h2>
-      <p className="mb-4 text-xs text-slate-500 font-medium">
-        {pontos.length} dias observados · menor <span className="text-marca font-bold">{formatarReal(min)}</span> · maior <span className="text-slate-700 font-bold">{formatarReal(max)}</span>
-      </p>
-      <svg viewBox={`0 0 ${largura} ${altura}`} className="h-28 w-full" role="img" aria-label={legenda}>
-        <path d={caminho} fill="none" stroke="#1d4ed8" strokeWidth="2.5" strokeLinejoin="round" />
-      </svg>
-      <div className="mt-2 flex justify-between text-[11px] text-slate-400 font-semibold">
-        <span>{formatarData(pontos[0].dia)}</span>
-        <span>{formatarData(pontos[pontos.length - 1].dia)}</span>
-      </div>
     </section>
   );
 }
@@ -391,7 +349,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               {frasePreco}
             </p>
           )}
-          <Grafico pontos={pontos} />
+          <GraficoDePrecos pontos={pontos} />
         </div>
 
         <Perguntas produto={produto} />
