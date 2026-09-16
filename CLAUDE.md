@@ -485,8 +485,22 @@ As travas, que são o motivo de ele poder commitar sozinho:
 | Preço mudou até 15% | Aplica e commita na `main` |
 | Mudou mais que 15% | **Só esse produto** vai pro PR; o resto da rodada publica na main. Produto `oculto` nunca é suspeito |
 | Pausado, sem estoque ou 404 | `disponivel: false`, some da página |
+| 404 em `/products/{id}/items` | "sem oferta ativa" — a página existe, ninguém vende |
 | API instável ou erro | **Não mexe em nada** e a Action fica vermelha |
 | Sem `meli_id` | Não confere, avisa no relatório |
+
+🔴 **404 da API não prova que o produto acabou.** Em 16/09 a rodada das 15h
+desligou o **A36** e o **OPPO A6t** dizendo "sumiu do Meli", e os dois estavam
+à venda — o A36 a R$ 1.649, conferido no navegador. Rodada nova no mesmo dia
+(`workflow_dispatch`, pelo GitHub) trouxe o A36 de volta com o preço certo:
+**foi falha passageira da API**. O OPPO ficou de fora por 404 em
+`/products/{id}/items`, que é outra coisa — catálogo sem nenhuma oferta ativa.
+**Se um produto sumir da vitrine sem motivo, rode o workflow à mão antes de
+mexer no JSON**: a rodada seguinte costuma corrigir sozinha.
+
+⚠️ **Rodar o workflow à mão é seguro, rodar `npm run precos:conferir` na
+máquina não é** — o segundo invalida o refresh token do GitHub (ver acima).
+Actions → Conferir preços → *Run workflow*.
 
 ⚠️ **Até 15/09/2026 um suspeito segurava a rodada inteira.** Em 14/09 o
 suporte de monitor (oculto) caiu 58%, tudo foi pro PR e o A36 ficou dois dias
@@ -922,6 +936,21 @@ As 23 não indexadas de 16/09, e o que cada grupo quer dizer:
 | Rastreada, não indexada | 8 | Só 1 é página nossa de verdade: o **comparativo do G17** (rastreado em 15/09). O resto é lixo do WordPress antigo, o `hrvidros.`, a rota `/icon` e o apex em `http` |
 | 404 | 5 | WordPress antigo. Está certo assim |
 | Redirecionamento | 1 | O apex → `www`. Certo assim |
+
+**Indexação pedida à mão em 16/09** para 5 URLs: comparativo do A36,
+`/como-conferimos` e as fichas do Edge 60 Fusion, Realme C73 e OPPO A6t.
+⚠️ **O primeiro pedido foi RECUSADO** com "problemas de indexação detectados
+no teste em tempo real" — bastou clicar em *Ver o teste em tempo real* e pedir
+de novo, que aceitou. Se recusar, é isso: rodar o teste ao vivo antes.
+
+⚠️ **O atalho `?id=` da Inspeção de URL não existe** (dá 404 do Google). O
+caminho é o campo "Inspecionar qualquer URL" no topo do Search Console.
+
+🔴 **Snippet de produto: o guia gerava 6 entidades inválidas** — todo perfil
+virava `Product` sem `offers`, e 4 dos 6 aparelhos não são nossos, então não
+têm preço. Corrigido em 16/09: aparelho do catálogo vira `Product` com
+`offers`; **aparelho de fora vira `Thing`**. Vale para qualquer página nova
+que liste aparelho que não vendemos.
 
 ⚠️ **"Detectada, mas não indexada" não é o mesmo problema que "rastreada, mas
 não indexada".** A primeira é fila de rastreamento (o Google ainda nem olhou);
