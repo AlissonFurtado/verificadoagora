@@ -908,6 +908,26 @@ autoridade. É o alvo dos comparativos, e agora tem prova neste domínio.
 lentidão do Google, é recusa. **Mais produto no mesmo molde piora.** Quem abre
 índice é comparativo e guia. **Página de julgamento ranqueia; ficha, não.**
 
+🟢 **Em 16/09/2026 o quadro virou: 12 indexadas** (era 1 em 10/09). Entraram
+**os 4 guias** — inclusive os três de decisão, indexados em ~1 dia — e **6
+fichas de produto**. Ou seja: ficha não é recusada para sempre; o que
+destravou foi o site ganhar páginas de julgamento que linkam para elas
+(`guias-relacionados`), mais o pedido de indexação à mão.
+
+As 23 não indexadas de 16/09, e o que cada grupo quer dizer:
+
+| Motivo | Quantas | O que são |
+|---|---|---|
+| Detectada, **nunca rastreada** | 9 | Fila do Google, não recusa. Inclui `/como-conferimos`, o **comparativo do A36** e a ficha do A36 |
+| Rastreada, não indexada | 8 | Só 1 é página nossa de verdade: o **comparativo do G17** (rastreado em 15/09). O resto é lixo do WordPress antigo, o `hrvidros.`, a rota `/icon` e o apex em `http` |
+| 404 | 5 | WordPress antigo. Está certo assim |
+| Redirecionamento | 1 | O apex → `www`. Certo assim |
+
+⚠️ **"Detectada, mas não indexada" não é o mesmo problema que "rastreada, mas
+não indexada".** A primeira é fila de rastreamento (o Google ainda nem olhou);
+a segunda é julgamento. Só a segunda mede qualidade — e hoje ela está quase
+vazia de página nossa.
+
 ⚠️ **Não confunda os dois motivos no painel.** No mesmo dia havia 12 páginas
 não indexadas: 8 recusadas (as fichas, o problema real) e **4 "não encontrado
 (404)", que são as páginas do WordPress antigo e estão certas assim**. Só o
