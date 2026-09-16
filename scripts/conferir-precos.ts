@@ -91,7 +91,16 @@ async function main(): Promise<void> {
       // ser instabilidade da API — nesse caso não se mexe em nada.
       if (/ respondeu 404/.test(erro)) {
         produto.disponivel = false;
-        relatorio.desligados.push({ id: produto.id, nome: produto.nome, motivo: 'sumiu do Meli' });
+        // ⚠️ Guarda a rota: em 16/09/2026 o A36 e o OPPO A6t foram desligados
+        // por 404 e os dois estavam à venda normalmente no site do Meli. Sem
+        // saber se o 404 veio de /products/{id} ou de /products/{id}/items,
+        // não dá pra saber se o produto sumiu ou se só ficou sem oferta.
+        const rota = erro.match(/\[meli\] (\S+) respondeu 404/)?.[1] ?? 'rota desconhecida';
+        relatorio.desligados.push({
+          id: produto.id,
+          nome: produto.nome,
+          motivo: `404 em ${rota}`,
+        });
       } else {
         relatorio.falhas.push({ id: produto.id, nome: produto.nome, erro });
       }

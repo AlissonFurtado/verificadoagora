@@ -86,7 +86,42 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
  * linguagem. O `ItemList` por cima declara a ordem dos perfis — que é a
  * substância da página, e não dá pra ler de um parágrafo.
  */
-function DadosEstruturados({ guia, url }: { guia: Guia; url: string }) {
+function DadosEstruturados({
+  guia,
+  url,
+  porMeliId,
+  base,
+}: {
+  guia: Guia;
+  url: string;
+  porMeliId: Map<string, Produto>;
+  base: string;
+}) {
+  // ⚠️ Aparelho que não é nosso entra como `Thing`, não como `Product`.
+  // Até 16/09/2026 todo perfil virava `Product` sem `offers`, e o Search
+  // Console acusou as 6 entidades do guia com "Especifique offers, review ou
+  // aggregateRating": produto sem preço não é produto pro Google. Preço a
+  // gente só tem de quem está no catálogo — e inventar o dos outros é o que
+  // este site existe pra não fazer.
+  const itemDoPerfil = (aparelho: string, meliId: string) => {
+    const produto = porMeliId.get(meliId);
+    if (!produto) return { '@type': 'Thing', name: aparelho };
+    return {
+      '@type': 'Product',
+      name: aparelho,
+      url: `${base}${caminhoDoProduto(produto)}`,
+      offers: {
+        '@type': 'Offer',
+        price: produto.preco_atual,
+        priceCurrency: 'BRL',
+        availability: produto.disponivel
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/OutOfStock',
+        url: produto.link_afiliado,
+      },
+    };
+  };
+
   const dados = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -106,7 +141,7 @@ function DadosEstruturados({ guia, url }: { guia: Guia; url: string }) {
         '@type': 'ListItem',
         position: i + 1,
         name: `${p.aparelho} — ${p.perfil}`,
-        item: { '@type': 'Product', name: p.aparelho },
+        item: itemDoPerfil(p.aparelho, p.meli_id),
       })),
     },
   };
@@ -156,7 +191,12 @@ export default function PaginaDoGuia({ params }: { params: { slug: string } }) {
 
   return (
     <main className="min-h-screen bg-fundo text-slate-800">
-      <DadosEstruturados guia={guia} url={`${base}/guia/${guia.slug}`} />
+      <DadosEstruturados
+        guia={guia}
+        url={`${base}/guia/${guia.slug}`}
+        porMeliId={porMeliId}
+        base={base}
+      />
 
       <div className="mx-auto max-w-4xl px-4 py-8">
         <nav className="mb-8 text-sm font-semibold text-slate-500">
