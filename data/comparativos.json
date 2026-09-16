@@ -380,6 +380,497 @@
         }
       ],
       "escrito_em": "2026-09-10"
+    },
+    {
+      "meli_id": "MLB47245501",
+      "titulo": "Edge 60 Fusion vale a pena? Comparamos com 3 celulares da mesma faixa",
+      "resumo": "O Edge 60 Fusion está a {preco}, com {desconto}% de desconto. Ele é o degrau acima dos intermediários comuns, então a pergunta útil é o que se ganha ao subir do Galaxy A36 — que também está aqui na página — para ele. Colocamos a ficha dos quatro lado a lado. As especificações vêm dos fabricantes; os preços, só dos dois que nosso robô confere todo dia.",
+      "colunas": [
+        {
+          "chave": "edge",
+          "nome": "Edge 60 Fusion",
+          "meli_id": "MLB47245501"
+        },
+        {
+          "chave": "a36",
+          "nome": "Galaxy A36 5G",
+          "meli_id": "MLB47115842"
+        },
+        {
+          "chave": "pocox7",
+          "nome": "Poco X7",
+          "meli_id": ""
+        },
+        {
+          "chave": "g86",
+          "nome": "Moto G86",
+          "meli_id": ""
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Atualizações do Android",
+          "valores": {
+            "edge": "Não divulgado",
+            "a36": "Até 6 versões",
+            "pocox7": "4 versões",
+            "g86": "2 versões"
+          },
+          "vencedores": [
+            "a36"
+          ],
+          "nota": "É a linha que decide quantos anos o aparelho continua servindo, e é onde o Edge perde feio: a Motorola não divulga quantas versões novas de Android ele recebe. O A36 promete até seis, custa menos e é por isso que ele continua no site."
+        },
+        {
+          "campo": "Tela",
+          "valores": {
+            "edge": "6,7 pol. pOLED, 120 Hz, 4.500 nits",
+            "a36": "6,7 pol. Super AMOLED, 120 Hz, 1.900 nits",
+            "pocox7": "6,67 pol. AMOLED, 120 Hz, 3.000 nits",
+            "g86": "6,67 pol. pOLED, 120 Hz, 4.500 nits"
+          },
+          "vencedores": [
+            "edge",
+            "g86"
+          ],
+          "nota": "Os 4.500 nits do Edge e do G86 são o que faz a tela continuar legível em sol aberto — na praia, na rua, dentro do carro. A do A36 é boa, mas com menos da metade desse brilho de pico."
+        },
+        {
+          "campo": "Processador",
+          "valores": {
+            "edge": "Dimensity 7300 (4 nm)",
+            "a36": "Snapdragon 6 Gen 3 (4 nm)",
+            "pocox7": "Dimensity 7300 Ultra (4 nm)",
+            "g86": "Dimensity 7300 (4 nm)"
+          },
+          "vencedores": [
+            "pocox7"
+          ],
+          "nota": "Os quatro jogam na mesma faixa de desempenho, com uma vantagem de fôlego para o Poco X7. Quem sai do Edge para o A36 não vai sentir diferença em uso comum — a diferença de preço entre eles não está aqui."
+        },
+        {
+          "campo": "Memória",
+          "valores": {
+            "edge": "8 GB (+8 turbo) · 256 GB",
+            "a36": "6 GB · 128 GB, sem microSD",
+            "pocox7": "8 GB · 256 GB",
+            "g86": "8 GB · 256 GB"
+          },
+          "vencedores": [
+            "edge",
+            "pocox7",
+            "g86"
+          ],
+          "nota": "Aqui a oferta do A36 perde: é a versão de 6 GB e 128 GB, e a linha A36 não tem entrada de cartão. O Edge dobra o armazenamento, e os 16 GB que o anúncio promete são 8 GB reais mais 8 GB emprestados do próprio armazenamento."
+        },
+        {
+          "campo": "Bateria e carregamento",
+          "valores": {
+            "edge": "5.200 mAh · 68 W",
+            "a36": "5.000 mAh · 45 W",
+            "pocox7": "5.110 mAh · 45 W",
+            "g86": "5.200 mAh · 30 W"
+          },
+          "vencedores": [
+            "edge"
+          ],
+          "nota": "Os 68 W do Edge são a maior potência de carregamento da tabela: na prática, é a diferença entre deixar o celular na tomada por meia hora antes de sair e ter que planejar a carga."
+        },
+        {
+          "campo": "Rede",
+          "valores": {
+            "edge": "5G",
+            "a36": "5G",
+            "pocox7": "5G",
+            "g86": "5G"
+          },
+          "vencedores": [
+            "edge",
+            "a36",
+            "pocox7",
+            "g86"
+          ],
+          "nota": "Empate: nessa faixa de preço 5G já é o mínimo, e nenhum dos quatro fica de fora."
+        },
+        {
+          "campo": "Resistência a água",
+          "valores": {
+            "edge": "IP68/IP69 e padrão militar MIL-STD-810H",
+            "a36": "IP67 — imersão até 1 m",
+            "pocox7": "IP68 — imersão até 1,5 m",
+            "g86": "IP68/IP69 e padrão militar MIL-STD-810H"
+          },
+          "vencedores": [
+            "edge",
+            "g86"
+          ],
+          "nota": "IP69 cobre jato de água quente, o que nenhum outro da tabela promete, e o padrão militar mede queda e variação de temperatura. Para quem usa o celular em obra, cozinha ou praia, é a linha que mais muda a vida útil do aparelho."
+        },
+        {
+          "campo": "Câmera principal",
+          "valores": {
+            "edge": "50 MP Sony LYTIA 700C com estabilização óptica",
+            "a36": "50 MP com estabilização óptica",
+            "pocox7": "50 MP",
+            "g86": "50 MP com estabilização óptica"
+          },
+          "vencedores": [
+            "edge"
+          ],
+          "nota": "Megapixel igual não quer dizer foto igual: o que separa é o sensor e a estabilização. O Edge é o único com sensor Sony LYTIA nomeado na ficha, e o Poco X7 é o único sem estabilização óptica — a diferença aparece em foto à noite."
+        }
+      ],
+      "a_favor": [
+        "A tela mais brilhante da tabela, 4.500 nits, legível em sol aberto.",
+        "O carregamento mais rápido da lista: 68 W contra 45 W do segundo colocado.",
+        "IP68 e IP69 mais padrão militar MIL-STD-810H — o mais resistente dos quatro.",
+        "256 GB de armazenamento, o dobro da oferta do A36.",
+        "{desconto}% de desconto de verdade: {preco} contra {preco_original} de tabela, conferido em {data}."
+      ],
+      "contra": [
+        "A Motorola não divulga quantas versões novas de Android ele recebe. Em três anos isso pode custar mais caro que a diferença de preço.",
+        "Custa mais que o Galaxy A36, que promete até seis versões do Android.",
+        "Os 16 GB de RAM anunciados são 8 GB reais mais 8 GB emprestados do armazenamento.",
+        "O desempenho não é melhor que o do A36 em uso comum: você paga por tela, câmera e resistência, não por velocidade."
+      ],
+      "veredito": "O Edge 60 Fusion é a compra certa para quem usa o celular fora de casa e maltrata o aparelho: tela que se lê no sol, IP69 mais padrão militar, carga de 68 W e câmera com sensor Sony e estabilização. Nessas quatro linhas ele ganha de todo mundo na tabela, e economiza {economia} em relação ao preço de tabela. Mas ele perde onde a decisão costuma ser tomada: a Motorola não promete nenhuma versão nova de Android, enquanto o Galaxy A36 — aqui ao lado, mais barato — promete até seis. Se o seu critério é durar anos recebendo atualização, compre o A36. Se é aguentar o uso pesado e enxergar a tela no sol, o Edge vale a diferença.",
+      "fontes": [
+        {
+          "titulo": "Motorola Edge 60 Fusion 5G — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-motorola-edge-60-fusion-5g/p"
+        },
+        {
+          "titulo": "Samsung Galaxy A36 5G — especificações (GSMArena)",
+          "url": "https://www.gsmarena.com/samsung_galaxy_a36-13497.php"
+        },
+        {
+          "titulo": "Poco X7 — ficha técnica (Tecnoblog)",
+          "url": "https://tecnoblog.net/produtos/xiaomi-poco-x7/"
+        },
+        {
+          "titulo": "Moto G86 — ficha técnica (Tecnoblog)",
+          "url": "https://tecnoblog.net/produtos/motorola-moto-g86/"
+        }
+      ],
+      "escrito_em": "2026-09-16"
+    },
+    {
+      "meli_id": "MLB18910381",
+      "titulo": "DualSense vale a pena? Comparamos com 2 controles que custam metade",
+      "resumo": "O DualSense está a {preco}, com {desconto}% de desconto. A pergunta que traz gente aqui não é se ele é bom — é se compensa pagar mais do dobro de um controle genérico. Colocamos os três controles do nosso catálogo lado a lado, e a resposta depende menos de qualidade e mais de onde você joga.",
+      "colunas": [
+        {
+          "chave": "dualsense",
+          "nome": "DualSense PS5",
+          "meli_id": "MLB18910381"
+        },
+        {
+          "chave": "g7se",
+          "nome": "GameSir G7 SE",
+          "meli_id": "MLB24473062"
+        },
+        {
+          "chave": "t4",
+          "nome": "GameSir T4 Nova Lite",
+          "meli_id": "MLB47251297"
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Onde funciona",
+          "valores": {
+            "dualsense": "PS5, PC, Android e iOS",
+            "g7se": "Xbox One, Series S/X e PC",
+            "t4": "PC, Switch, Android, iOS e Steam"
+          },
+          "vencedores": [
+            "t4"
+          ],
+          "nota": "Esta é a linha que decide tudo, antes de qualquer outra: console tem trava de licenciamento, e nenhum controle genérico contorna isso. No PS5, só o DualSense funciona. No Xbox, só o G7 SE dos três. O T4 cobre o resto."
+        },
+        {
+          "campo": "Gatilhos adaptáveis",
+          "valores": {
+            "dualsense": "Sim, nos jogos de PS5 que usam",
+            "g7se": "Não",
+            "t4": "Não"
+          },
+          "vencedores": [
+            "dualsense"
+          ],
+          "nota": "O gatilho endurece conforme o jogo: a corda do arco que fica pesada, o freio que trava. É a função que justifica o preço — e ela só existe dentro do PS5, em jogos feitos para ela."
+        },
+        {
+          "campo": "Vibração",
+          "valores": {
+            "dualsense": "Resposta tátil detalhada",
+            "g7se": "Motores tradicionais",
+            "t4": "Motores tradicionais"
+          },
+          "vencedores": [
+            "dualsense"
+          ],
+          "nota": "A vibração do DualSense distingue chuva de terra batida; a dos outros dois é o tremor de sempre, que serve bem e ninguém reclama."
+        },
+        {
+          "campo": "Analógicos",
+          "valores": {
+            "dualsense": "Potenciômetro — sujeito a drift",
+            "g7se": "Hall Effect",
+            "t4": "Hall Effect"
+          },
+          "vencedores": [
+            "g7se",
+            "t4"
+          ],
+          "nota": "Aqui o controle caro perde, e perde no que mais mata controle: analógico comum desgasta e começa a mover o personagem sozinho, o drift. Hall Effect usa campo magnético, não encosta em nada, e esse defeito não aparece. É por isso que muita gente compra o segundo DualSense — e é justamente o que os GameSir resolvem."
+        },
+        {
+          "campo": "Conexão",
+          "valores": {
+            "dualsense": "Sem fio por Bluetooth ou cabo USB-C",
+            "g7se": "Só com fio (USB-C)",
+            "t4": "Sem fio por Bluetooth e 2,4 GHz, ou cabo"
+          },
+          "vencedores": [
+            "dualsense",
+            "t4"
+          ],
+          "nota": "O fio do G7 SE tira a latência e a preocupação com carga, mas amarra você à distância do cabo. Se o sofá é longe da TV, ele está fora antes de qualquer outra comparação."
+        },
+        {
+          "campo": "Bateria",
+          "valores": {
+            "dualsense": "Interna recarregável",
+            "g7se": "Não tem — funciona pelo cabo",
+            "t4": "Interna recarregável"
+          },
+          "vencedores": [
+            "g7se"
+          ],
+          "nota": "Controle com fio nunca descarrega no meio da partida. O DualSense é o que menos dura dos três em sessão longa — quem joga muitas horas acaba jogando com ele plugado, que é o mesmo que ter um controle com fio caro."
+        },
+        {
+          "campo": "Microfone embutido",
+          "valores": {
+            "dualsense": "Sim",
+            "g7se": "Não",
+            "t4": "Não"
+          },
+          "vencedores": [
+            "dualsense"
+          ],
+          "nota": "Dá para falar com os amigos sem headset. É conveniência real para jogo online rápido, e some se você já usa fone com microfone."
+        }
+      ],
+      "a_favor": [
+        "É o único dos três que funciona no PS5 — não há alternativa genérica.",
+        "Gatilhos adaptáveis e vibração detalhada, que nenhum controle comum tem.",
+        "Microfone embutido para jogar online sem headset.",
+        "{desconto}% de desconto: {preco} contra {preco_original} de tabela, conferido em {data}."
+      ],
+      "contra": [
+        "Analógicos de potenciômetro: com o tempo pode aparecer drift, que é justamente o defeito que os dois GameSir eliminam.",
+        "As duas funções que justificam o preço não funcionam fora do PS5 — no PC você paga por elas e não as usa.",
+        "Bateria é o ponto fraco dos três em sessão longa.",
+        "Custa mais que o dobro dos genéricos do nosso catálogo."
+      ],
+      "veredito": "Se você tem PS5, a comparação acaba na primeira linha: nenhum controle genérico funciona nele, e os gatilhos adaptáveis são uma função de verdade, não enfeite de marketing. Compre — e economize {economia} sobre o preço de tabela. Se você joga no PC, no celular ou no Switch, a conta muda inteira: você pagaria mais do dobro por duas funções que quase não vai ver, e ainda levaria analógico que pode dar drift. Nesse caso o T4 Nova Lite resolve melhor por bem menos. E se o seu console é Xbox, o DualSense simplesmente não liga: o caminho é o G7 SE.",
+      "fontes": [
+        {
+          "titulo": "Controle sem fio DualSense — página oficial da PlayStation Brasil",
+          "url": "https://www.playstation.com/pt-br/accessories/dualsense-wireless-controller/"
+        },
+        {
+          "titulo": "GameSir G7 SE — página oficial",
+          "url": "https://www.gamesir.hk/products/gamesir-g7-se"
+        },
+        {
+          "titulo": "GameSir T4 Nova Lite — página oficial",
+          "url": "https://www.gamesir.hk/products/gamesir-t4-nova-lite"
+        }
+      ],
+      "escrito_em": "2026-09-16"
+    },
+    {
+      "meli_id": "MLB58353028",
+      "titulo": "Moto G06 vale a pena? Comparamos com 4 celulares de até R$ 1.000",
+      "resumo": "O G06 está a {preco}, com {desconto}% de desconto. Ele é o celular de tela grande mais barato do nosso catálogo, então a pergunta útil é o que se perde para chegar nesse preço. Colocamos a ficha dele ao lado do Moto G17 e do Realme C73 — que também estão aqui na página — e de dois rivais diretos da faixa. As especificações vêm dos fabricantes; os preços, só dos que nosso robô confere todo dia.",
+      "colunas": [
+        {
+          "chave": "g06",
+          "nome": "Moto G06",
+          "meli_id": "MLB58353028"
+        },
+        {
+          "chave": "g17",
+          "nome": "Moto G17",
+          "meli_id": "MLB65041644"
+        },
+        {
+          "chave": "c73",
+          "nome": "Realme C73",
+          "meli_id": "MLB62148588"
+        },
+        {
+          "chave": "g15",
+          "nome": "Moto G15",
+          "meli_id": ""
+        },
+        {
+          "chave": "a16",
+          "nome": "Galaxy A16 5G",
+          "meli_id": ""
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Atualizações do Android",
+          "valores": {
+            "g06": "Não divulgado",
+            "g17": "Nenhuma versão prometida",
+            "c73": "Não divulgado",
+            "g15": "Não divulgado",
+            "a16": "Até 6 versões"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "É a linha que decide quantos anos o aparelho continua servindo, e nesta faixa quase ninguém promete nada. O Galaxy A16 é a exceção: seis versões novas de Android, por perto do mesmo dinheiro."
+        },
+        {
+          "campo": "Tela",
+          "valores": {
+            "g06": "6,9 pol. LCD, 120 Hz, HD+ (720p)",
+            "g17": "6,7 pol. LCD, 60 Hz, Full HD+, 1.050 nits",
+            "c73": "6,7 pol. LCD, 120 Hz",
+            "g15": "6,72 pol. LCD, 60 Hz, Full HD+",
+            "a16": "6,7 pol. Super AMOLED, 90 Hz, Full HD+, 800 nits"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "Aqui está a troca central do G06: ele tem a maior tela e os 120 Hz que deixam a rolagem macia, mas é a resolução mais baixa da tabela — 720p esticados em 6,9 polegadas ficam visivelmente menos nítidos que o Full HD do G17 e do G15. O A16 ganha por ser o único AMOLED, que mostra preto de verdade."
+        },
+        {
+          "campo": "Processador",
+          "valores": {
+            "g06": "MediaTek Helio G81 Extreme",
+            "g17": "MediaTek Helio G81 Extreme",
+            "c73": "Não divulgado",
+            "g15": "MediaTek Helio G81 Ultra (12 nm)",
+            "a16": "Exynos 1330 (5 nm)"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "G06 e G17 usam exatamente o mesmo processador: em uso comum eles empatam, e a escolha entre os dois é tela contra tela. O Exynos do A16 é de fabricação mais moderna e rende mais por carga de bateria."
+        },
+        {
+          "campo": "Memória",
+          "valores": {
+            "g06": "4 GB (+8 turbo) · 128 GB, microSD até 1 TB",
+            "g17": "4 GB · 128 GB, microSD até 1 TB",
+            "c73": "4 GB · 128 GB",
+            "g15": "4 a 8 GB · 128 GB, com microSD",
+            "a16": "4 a 8 GB · até 256 GB, com microSD"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "Todos partem de 4 GB reais — a RAM turbo que os anúncios somam é memória emprestada do armazenamento, e não substitui memória de verdade. O A16 é o único que chega a 256 GB."
+        },
+        {
+          "campo": "Bateria e carregamento",
+          "valores": {
+            "g06": "5.200 mAh · 10 W",
+            "g17": "5.200 mAh · 20 W",
+            "c73": "6.000 mAh",
+            "g15": "5.200 mAh · 18 W",
+            "a16": "5.000 mAh · 25 W"
+          },
+          "vencedores": [
+            "c73"
+          ],
+          "nota": "O C73 tem a maior bateria da tabela. E repare no outro número: os 10 W do G06 são o carregamento mais lento daqui — metade do G17, que custa pouco mais. Na prática é deixar carregando de noite, não antes de sair."
+        },
+        {
+          "campo": "Rede",
+          "valores": {
+            "g06": "Só 4G",
+            "g17": "Só 4G",
+            "c73": "Não divulgado",
+            "g15": "Só 4G",
+            "a16": "5G"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "Só o A16 pega 5G, e isso não se corrige depois da compra. Para quem pretende ficar três ou quatro anos com o aparelho, é o ponto mais caro desta tabela."
+        },
+        {
+          "campo": "Resistência a água",
+          "valores": {
+            "g06": "IP64 (respingos)",
+            "g17": "IP64 (respingos)",
+            "c73": "Não divulgado",
+            "g15": "Não divulgado",
+            "a16": "IP54 (respingos)"
+          },
+          "vencedores": [
+            "g06",
+            "g17"
+          ],
+          "nota": "IP64 protege contra respingo e poeira — chuva na rua, cozinha, pia. Nenhum dos cinco aguenta imersão, então nada de levar para a piscina."
+        },
+        {
+          "campo": "Câmera principal",
+          "valores": {
+            "g06": "50 MP, f/1.8",
+            "g17": "50 MP, f/1.8 (Sony LYTIA 600)",
+            "c73": "Não divulgado",
+            "g15": "50 MP",
+            "a16": "50 MP, f/1.8"
+          },
+          "vencedores": [
+            "g17"
+          ],
+          "nota": "Os 50 MP se repetem em quase todos; o que muda é o sensor. O G17 é o único com sensor Sony nomeado na ficha, e nenhum dos cinco tem estabilização óptica — foto à noite vai sair tremida em todos eles."
+        }
+      ],
+      "a_favor": [
+        "A maior tela da tabela, 6,9 polegadas, com 120 Hz — rolagem mais macia que a do G17 e do G15, que ficam em 60 Hz.",
+        "Bateria de 5.200 mAh e IP64 contra respingo.",
+        "Aceita microSD de até 1 TB, então os 128 GB não são o teto.",
+        "É o mais barato dos cinco, a {preco}.",
+        "{desconto}% de desconto de verdade: {preco} contra {preco_original} de tabela, conferido em {data}."
+      ],
+      "contra": [
+        "Carregamento de 10 W, o mais lento da tabela: uma carga cheia leva horas.",
+        "Tela HD+ (720p) em 6,9 polegadas — a menos nítida daqui.",
+        "Não pega 5G, e a Motorola não divulga nenhuma versão nova de Android para ele.",
+        "São 4 GB de RAM reais; os 12 GB do anúncio incluem 8 GB emprestados do armazenamento."
+      ],
+      "veredito": "O G06 se justifica por tela: se você quer a maior tela possível pelo menor preço, e usa o celular para WhatsApp, vídeo e redes sociais, ele entrega isso e economiza {economia} sobre o preço de tabela. Os 120 Hz são um luxo raro nessa faixa. Mas o preço aparece em dois lugares: a imagem é a menos nítida da tabela e o carregamento de 10 W é lento a ponto de incomodar. Se você carrega o celular de noite e não liga para nitidez, ele é a melhor compra daqui. Se quiser mais definição pelo mesmo tipo de dinheiro, o Moto G17 tem Full HD e carrega no dobro da velocidade; e se o plano é ficar anos com ele, o Galaxy A16 5G é o único que pega 5G e promete atualização.",
+      "fontes": [
+        {
+          "titulo": "Moto G06 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g06-128-gb/p"
+        },
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        },
+        {
+          "titulo": "Moto G15 — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g15-128-gb/p"
+        },
+        {
+          "titulo": "Samsung Galaxy A16 5G — especificações (GSMArena)",
+          "url": "https://www.gsmarena.com/samsung_galaxy_a16_5g-13388.php"
+        }
+      ],
+      "escrito_em": "2026-09-16"
     }
   ]
 }
