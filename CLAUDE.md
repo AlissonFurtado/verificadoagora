@@ -62,7 +62,9 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | **Dele**: link do **Moto G06** (R$ 726, 48%, `MLB58353028`), que não veio no lote de 15/09. **Redmi 15C** (`MLB54993504`) tem link (`https://meli.la/1c4fPPf`) mas ficou de fora: ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria |
-| Catálogo | 🟢 **23 produtos desde 15/09**: entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
+| Comparativos | 🟢 **5 desde 16/09**: A36, G17, **Edge 60 Fusion** (contra A36, Poco X7, G86), **DualSense** (contra os dois GameSir) e **Moto G06** (contra G17, C73, G15, A16) | **Dele**: pedir indexação dos 3 novos no Search Console |
+| Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
+| Catálogo | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
 | Instagram | 🔴 **O 1º post não saiu sozinho em 12/09: a notificação do Metricool nunca chegou no celular dele.** Veja "A notificação que não chega", abaixo. A arte e a legenda do G17 foram entregues pelo chat pra ele publicar à mão — **não confirmado se chegou a sair: pergunte** | **Dele**: publicar o G17 se ainda não saiu, e conferir a permissão de notificação do app do Metricool — senão o A36 (13/09, 10h) para no mesmo lugar. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
@@ -74,6 +76,15 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Guia de faixa até R$ 2.500 | 🔴 **Parado**, e a razão importa | Decisão dele: ver abaixo |
 | Comparativo no celular | Blocos por critério no ar desde 11/09 (era tabela deslizante com a coluna fixa vazando por cima do texto) | **Dele**: conferir no aparelho |
 | Home no celular | Atalhos viraram tira que rola de lado em 11/09 | **Dele**: conferir no aparelho |
+
+🟢 **O guia até R$ 2.500 está destravado desde 16/09**: o Edge 60 Fusion
+entrou no catálogo com ficha oficial conferida e já é coluna de comparativo.
+Faltam 2 ou 3 nomes novos conferíveis pra ele valer a pena.
+
+⚠️ **A ficha da Realme e a da Xiaomi não abrem** (404 e 403 em 15–16/09). O
+Realme C73 entrou com o que o anúncio diz, e o **Redmi 15C ficou de fora**
+mesmo com link gerado. A da Motorola abre e vem completa — é a fonte que
+funciona.
 
 ⚠️ **Por que o guia até R$ 2.500 parou:** a faixa de R$ 1.500 a 2.500 quase não
 tem aparelho com ficha oficial acessível (veja a armadilha do `WebFetch` em
