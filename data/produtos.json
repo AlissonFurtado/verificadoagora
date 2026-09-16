@@ -790,12 +790,62 @@
         "Os limites são sérios e é melhor saber antes. **4 GB de RAM** ficam curtos com muitas abas abertas, e **128 GB** enchem rápido com as atualizações do Windows. E por ser processador ARM, **nem todo programa roda**: jogos, alguns módulos de segurança de banco e drivers de impressora antiga podem não funcionar ou rodar lentos por emulação.",
         "Compre para estudante que usa principalmente navegador e aplicativos da Microsoft. Não compre para jogo, edição de foto ou vídeo, nem se você depende de um programa específico — confira antes se ele roda no Windows para ARM."
       ]
+    },
+    {
+      "id": 24,
+      "nome": "Motorola Moto G06 128GB",
+      "categoria": "Celulares",
+      "preco_original": 1399,
+      "preco_atual": 726,
+      "desconto_percentual": 48,
+      "preco_no_pix": false,
+      "avaliacao": 0,
+      "link_afiliado": "https://meli.la/1beWDDS",
+      "cupom": "",
+      "descricao": "4G, tela de 6,9\" e 120 Hz, 128GB com microSD, bateria de 5200 mAh",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_657060-MLA104761778541_012026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB58353028",
+      "disponivel": true,
+      "familia": "Moto G06",
+      "data_adicionado": "2026-09-16",
+      "verificado_em": "2026-09-16",
+      "analise": [
+        "O G06 é o celular de tela grande mais barato do catálogo: 6,9 polegadas com 120 Hz, número que aparelho desta faixa quase nunca traz — o Moto G17, aqui do lado, tem 60 Hz. Na prática é rolagem mais macia em rede social e leitura mais confortável para quem tem dificuldade de enxergar letra pequena. A bateria de 5.200 mAh e a certificação IP64 contra respingo completam o pacote de quem quer um aparelho sem drama.",
+        "Três limites vêm da ficha da Motorola e é melhor saber antes: **ele é 4G, não 5G**; a tela é HD+ (720p), então em 6,9 polegadas a imagem fica menos nítida que num Full HD; e o carregamento é de **10 W**, dos mais lentos do mercado — uma carga cheia leva horas. São 4 GB de RAM reais, mais 8 GB emprestados do armazenamento, e a Motorola não divulga quantas versões novas de Android ele recebe.",
+        "Compre se tela grande e preço baixo mandam, e se você carrega o celular de noite sem pressa. Se você joga ou tira muita foto, o Realme C73 tem bateria maior e o Edge 60 Fusion resolve os dois pontos — os dois estão aqui no site."
+      ]
+    },
+    {
+      "id": 25,
+      "nome": "Controle DualSense PS5",
+      "categoria": "Games",
+      "preco_original": 699,
+      "preco_atual": 430,
+      "desconto_percentual": 38,
+      "preco_no_pix": false,
+      "avaliacao": 0,
+      "link_afiliado": "https://meli.la/31oXDh1",
+      "cupom": "",
+      "descricao": "Controle oficial do PS5, sem fio, com gatilhos adaptáveis e vibração por resposta tátil",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_754972-MLA96100942203_102025-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB18910381",
+      "disponivel": true,
+      "familia": "Controle joystick sem fio Sony PlayStation DualSense Wireless Controller PS5",
+      "data_adicionado": "2026-09-16",
+      "verificado_em": "2026-09-16",
+      "analise": [
+        "É o controle oficial do PlayStation 5, e o que ele faz de diferente não aparece em ficha técnica: os gatilhos endurecem conforme o que acontece no jogo — a corda do arco que fica pesada, o freio que trava — e a vibração é detalhada o bastante para você sentir a diferença entre chuva e terra batida. Quem tem PS5 e usa controle genérico está deixando isso de lado.",
+        "O que pesa: **é caro para um controle**, e essas duas funções só valem dentro do PS5, em jogos que as usam. No PC, ele funciona por cabo ou Bluetooth, mas gatilho adaptável e vibração fina só aparecem em um punhado de jogos. A bateria dura menos que a dos controles da geração passada — quem joga sessões longas acaba jogando com o cabo ligado.",
+        "Compre como segundo controle do PS5, para jogar acompanhado, ou para substituir um que já está com o analógico falhando. Não compre para jogar só no PC ou no celular: aí um controle mais simples entrega o mesmo por menos da metade — temos dois no site."
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-09-16",
     "conferido_em": "2026-09-16T22:10:18.202Z",
-    "total_produtos": 23,
+    "total_produtos": 25,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
