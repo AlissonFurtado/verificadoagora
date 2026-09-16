@@ -95,11 +95,15 @@ async function main(): Promise<void> {
         // por 404 e os dois estavam à venda normalmente no site do Meli. Sem
         // saber se o 404 veio de /products/{id} ou de /products/{id}/items,
         // não dá pra saber se o produto sumiu ou se só ficou sem oferta.
+        // 404 em /products/{id}/items é produto de catálogo sem nenhuma oferta
+        // ativa — a página existe, ninguém está vendendo. 404 na rota principal
+        // é o produto ter deixado de existir. São coisas diferentes, e só a
+        // segunda é definitiva.
         const rota = erro.match(/\[meli\] (\S+) respondeu 404/)?.[1] ?? 'rota desconhecida';
         relatorio.desligados.push({
           id: produto.id,
           nome: produto.nome,
-          motivo: `404 em ${rota}`,
+          motivo: rota.endsWith('/items') ? 'sem oferta ativa no Meli' : `sumiu do Meli (404 em ${rota})`,
         });
       } else {
         relatorio.falhas.push({ id: produto.id, nome: produto.nome, erro });
