@@ -10,13 +10,15 @@
     "MLB14370",
     "MLB430598",
     "MLB454379",
-    "MLB430687"
+    "MLB430687",
+    "Casa, Móveis e Decoração"
   ],
-  "limite_diario": 10,
+  "limite_diario": 20,
   "filtros": {
     "desconto_minimo": 20,
     "preco_minimo": 100,
     "preco_maximo": 2500
   },
-  "_por_que_sem_foco": "O foco em celulares acabou em 11/09/2026, por decisao do Alisson: o catalogo tinha dois celulares e a vitrine parecia vazia. Sem foco, a fila e ordenada so por desconto, como era antes de 09/09. O aviso sobre a leitura de topico do buscador foi dado antes da decisao. MLB1055 (Celulares e Smartphones) fica na lista de categorias: e a subcategoria onde mora o aparelho, e MLB1051 e guarda-chuva de acessorio barato."
+  "_por_que_sem_foco": "O foco em celulares acabou em 11/09/2026, por decisao do Alisson: o catalogo tinha dois celulares e a vitrine parecia vazia. Sem foco, a fila e ordenada so por desconto, como era antes de 09/09. O aviso sobre a leitura de topico do buscador foi dado antes da decisao. MLB1055 (Celulares e Smartphones) fica na lista de categorias: e a subcategoria onde mora o aparelho, e MLB1051 e guarda-chuva de acessorio barato.",
+  "_por_que_20_por_dia": "Subiu de 10 para 20 em 16/09/2026: o Alisson topou gerar ate 20 links por dia para engordar o catalogo antes da Black Friday (27/11). O gargalo nunca foi achar oferta, e sim o link de afiliado, que so ele gera. Se a fila voltar a vir curta, o limite nao e o problema: e a memoria fazendo o trabalho dela."
 }

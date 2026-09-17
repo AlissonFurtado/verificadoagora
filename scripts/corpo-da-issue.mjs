@@ -16,6 +16,12 @@ for (const c of candidatos) {
   l.push(`  ${real(c.preco)} (era ${real(c.preco_original)}, −${c.desconto_percentual}%) · \`${c.meli_id}\` · ${c.motivo ?? 'inédito'}`);
   l.push(`  ${c.url_do_produto}`);
 }
+// Bloco pra abrir tudo de uma vez: ele gera os links no PC, e caçar URL no
+// meio do texto formatado é o passo chato. Aqui elas vêm cruas, uma por linha.
+l.push('', '### Só as URLs, pra copiar de uma vez', '', '```');
+for (const c of candidatos) l.push(c.url_do_produto);
+l.push('```', '');
+l.push('Devolva os `meli.la` na mesma ordem, ou diga o nome junto — o que for mais rápido.');
 l.push('', 'Nada disso entrou no site: candidato só vira produto com link de afiliado.');
 l.push('Fila completa em `data/candidatos.json`. O que já foi sugerido antes não');
 l.push('volta a aparecer, a não ser que fique 15% mais barato ou passem 60 dias.');
