@@ -78,8 +78,9 @@ viraram produto no mesmo dia.
 | Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Em **17/09** a página passou a **linkar os 3 guias** e cada guia a linkar de volta pela trilha, e a tabela passou a dizer **quantos dias de preço cada produto tem** | **Dele**: pedir indexação das 4 quando quiser acelerar |
 | Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
-| A36 fora do ar | 🔴 **Desde 17/09 o Galaxy A36 está `disponivel: false`, e é real** — a variação que acompanhamos ficou sem oferta no Meli (conferido na página). A ficha dele continua no ar sem botão de compra, como manda o contrato do JSON. **Ele é coluna de 3 comparativos e do guia até R$ 1.500**, que passam a mostrar "não acompanhamos" no lugar do preço | **Dele**: gerar o link de **`MLB47111438`, que a fila de 17/09 trouxe a R$ 1.544,32 (41% OFF)** — é o mesmo A36 128 GB / 6 GB em outro anúncio, e mais barato que os R$ 1.649 que saíram do ar. Entra como produto novo, com `meli_id` novo; o antigo fica desligado |
-| Catálogo | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
+| A36: dois cadastros | 🟡 **Resolvido pela metade em 17/09.** O anúncio antigo (`MLB47115842`) saiu do ar de verdade e ficou `disponivel: false`; o **novo, verde-limão (`MLB47111438`), entrou no catálogo a R$ 1.544,32** e está na vitrine. **Mas o comparativo do A36 continua amarrado ao `meli_id` antigo** — a página mostra "Esta oferta acabou" e não vende, enquanto o aparelho está à venda ali do lado | **Decisão dele**: ou o comparativo passa a achar o produto pela `familia` quando o dele está desligado (mexe em código, mantém a URL indexada), ou reescrevemos o comparativo no `meli_id` novo (URL nova, perde o que o Google já rastreou). Eu recomendo o primeiro |
+| Catálogo | 🟢 **32 produtos desde 17/09** — entraram A36 verde, Galaxy A07, Projetor HY320, Placa-mãe Asus TUF B550M-PLUS, SSD Externo SanDisk 1TB, Liquidificador Oster e Micro-ondas Electrolux, todos com `analise` escrita à mão e ficha lida no anúncio. **Os 7 estão sem `perguntas`** | Ninguém — perguntas quando sobrar fôlego |
+| Catálogo (antes) | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
 | Instagram | 🔴 **O 1º post não saiu sozinho em 12/09: a notificação do Metricool nunca chegou no celular dele.** Veja "A notificação que não chega", abaixo. A arte e a legenda do G17 foram entregues pelo chat pra ele publicar à mão — **não confirmado se chegou a sair: pergunte** | **Dele**: publicar o G17 se ainda não saiu, e conferir a permissão de notificação do app do Metricool — senão o A36 (13/09, 10h) para no mesmo lugar. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
@@ -621,6 +622,18 @@ A corrente é automática dos dois lados e manual no meio:
    correção.**
 2. **O link é gerado à mão** no Linkbuilder, no Chrome logado do Alisson, numa
    sessão com o Claude dirigindo.
+   🟢 **O Linkbuilder aceita a fila inteira de uma vez — descoberto em
+   17/09/2026.** Endereço:
+   <https://www.mercadolivre.com.br/afiliados/linkbuilder> (o nome na tela é
+   "Gerador de produtos recomendados"). O campo diz *"Insira 1 ou mais URLs
+   separados por 1 linha"*: cola-se o bloco de URLs que o e-mail das 16h12
+   manda, escolhe-se a etiqueta `alisson580` e um clique em **Gerar** devolve
+   todos os `meli.la` de uma vez, na **mesma ordem da entrada** (conferido
+   abrindo o 1º e o 12º link). Até então ele fazia um por um, voltando ao chat
+   a cada link — 12 idas e voltas viraram uma.
+   ⚠️ **Leia os links do DOM, não do screenshot**: `meli.la/1bChrpF` e
+   `meli.la/1bChrpE` são indistinguíveis numa imagem, e link trocado manda o
+   clique pro produto errado. O valor está no `<textarea>` do painel direito.
 3. **O resto volta a ser automático**: card, publicação, conferência diária.
 
 `candidatos.json` não é catálogo — nada dali aparece no site. Candidato vira
@@ -686,6 +699,61 @@ periféricos, `MLB430687` portáteis.
 título da API tem 200 caracteres e não cabe no card), `avaliacao: 0` quando
 ninguém conferiu a nota (o card esconde a linha), e os parágrafos de
 `analise`.
+
+### Ler a ficha do anúncio sem levar 403
+
+Descoberto em 17/09/2026, para escrever a `analise` de 7 produtos de uma vez.
+`curl` na página do Meli dá **403** (é a mesma proteção que obrigou o robô a
+usar a API). O que funciona: no Chrome logado, estando **em qualquer página do
+`mercadolivre.com.br`**, rodar `fetch` para a URL do produto — é same-origin,
+usa a sessão dele e vem o HTML inteiro. Dali saem os pares de especificação
+(`.ui-vpp-highlighted-specs__key-value` e `.andes-table__row`), a nota e o
+bloco de preço (`.ui-pdp-price`).
+
+⚠️ **Espace 1,5 a 2 segundos entre os produtos.** Rajada pela sessão dele é o
+mesmo risco que levou 429 no Reddit em 10/09 — e aqui a conta em jogo é a que
+recebe comissão.
+
+⚠️ **A ficha do anúncio é fonte para `analise`, não para tabela de
+comparativo.** Comparativo continua exigindo a página do fabricante: o anúncio
+erra e se contradiz (veja a câmera "4K" abaixo).
+
+### 🔴 O preço da API não é o preço que a loja anuncia
+
+Medido em 17/09/2026, produto a produto: o Meli mostra em destaque o **preço
+no Pix** e, menor, o valor "em outros meios" — que é justamente o que a API
+devolve. No A36: página **R$ 1.399 (46% OFF) no Pix**, API **R$ 1.544,32
+(41%)**. No micro-ondas: R$ 508,32 no Pix contra R$ 524,04.
+
+**Cadastre sempre com o número da API**, que é o do garimpo. Razão técnica, e
+não de gosto: `conferir-precos.ts` **força `preco_no_pix = false`** e recalcula
+`desconto_percentual` a cada rodada — cadastrar o preço do Pix seria desfeito
+na manhã seguinte, deixando a página com um desconto que não bate com preço
+nenhum. O site mostrando o valor do cartão é o lado seguro: quem paga no Pix
+encontra menos do que esperava, nunca mais.
+
+⚠️ **Por isso nenhum produto do catálogo tem `preco_no_pix: true`** — o campo
+existe, mas só serviria se o robô parasse de mexer nele.
+
+### O que reprova um candidato (casos reais de 17/09)
+
+Dos 12 links gerados, **5 não viraram produto**. Os motivos valem de régua:
+
+- **O anúncio se contradiz.** A câmera "Wi-Fi 4K" tem, na ficha do próprio
+  anúncio, `Tipo de resolução: Full HD`. Num site chamado Verificado, esse é
+  o produto que não entra — e o motivo não é o preço, é a contradição.
+- **O preço "de" é inflado.** SSD SATA de 240 GB de marca desconhecida a
+  R$ 231,79 "com 29% de desconto", numa faixa em que os conhecidos custam
+  bem menos: o desconto existe só contra um preço de tabela que ninguém cobra.
+- **Já temos um igual.** Suporte articulado de monitor — o catálogo tem um,
+  hoje `oculto`. E dois liquidificadores na mesma fila: entrou o de marca e
+  potência maior, o outro ficou.
+- **Fora do assunto do site.** Mochila de viagem, ainda que com saída USB.
+
+**Link gerado que não vira produto não é desperdício** — ele só fica na lista
+"Minhas recomendações" do perfil. O que **não** se pode é esvaziar essa lista
+sem tirar do site os produtos correspondentes (o link passa a apontar para um
+perfil sem o produto).
 
 ## Ser achado: busca e IA
 
@@ -1039,12 +1107,11 @@ posição 11,1**. O Wayback não arquivou nada — o texto delas não é recuper
 | `/analise-philco-32-roku/` | 227 | mesmo produto no catálogo → **301 ativo** |
 | `/kabum-smart-700/` · `/a16-vale-a-pena/` · `/analise-hy320/` | 82 · 77 · 11 | não vendemos → 404, e está certo |
 
-🟢 **O HY320 voltou à fila em 17/09** (`MLB48959123`, R$ 255,90, 30% OFF). Se
-ele entrar no catálogo, `/analise-hy320/` deixa de ser 404 e vira **301 para a
-ficha nova**, como já é o caso do Philco — é o mesmo produto, que é a única
-condição que autoriza o redirect. São 11 impressões de volta, e o molde da
-rota já existe em `src/app/analise-philco-32-roku/page.tsx` (lembre do
-`export const dynamic = 'force-dynamic'`, senão o 308 sai sem `Location`).
+🟢 **O HY320 entrou no catálogo em 17/09 e a URL antiga foi resgatada**:
+`src/app/analise-hy320/page.tsx` devolve 308 com `Location` para a ficha nova
+(medido). São 11 impressões de volta. Restam `/kabum-smart-700/` e
+`/a16-vale-a-pena/` em 404 — e continuam certas assim, até o dia em que
+vendermos aqueles dois produtos.
 
 ⚠️ **Redirect só quando o destino é o mesmo produto.** Mandar quem buscava o
 A16 para o A36 é soft 404 pro Google e mentira pro visitante.
