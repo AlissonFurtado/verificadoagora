@@ -51,14 +51,26 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 15/09/2026
+## Onde paramos — 16/09/2026
 
 Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 
-**Meta:** uma venda até 03/11/2026. O gargalo é visita, não catálogo.
+**Meta:** uma venda até 03/11/2026. O gargalo é visita, não catálogo — mas em
+16/09 entrou uma segunda aposta com prazo próprio: **a Black Friday de
+27/11/2026** (seção própria abaixo).
+
+**O ciclo diário combinado em 16/09**, que é como o catálogo cresce agora:
+às ~14h o garimpo escreve a fila (até 20 candidatos) e abre a issue → às
+16h12 a rotina na nuvem manda o e-mail com as URLs → ele gera os `meli.la`
+no Linkbuilder e cola no chat → eu escrevo `descricao` e `analise` e publico.
+**Ele topou até 20 links por dia.** Em 16/09 ele mandou 9 de uma vez e 8
+viraram produto no mesmo dia.
 
 | Frente | Estado | De quem é a vez |
 |---|---|---|
+| Lembrete dos links | 🟢 **Rotina na nuvem criada em 16/09**, 16h12, e-mail pro `alisson580@gmail.com` com a fila do dia. ⚠️ **O envio em si nunca foi exercitado** — no teste a fila era de ontem e ela (corretamente) não mandou nada | **Dele**: dizer se o e-mail chegou em 17/09. Se não chegar, ler o log com `RemoteTrigger get_run_log` |
+| Perguntas nas fichas | 🟡 As 15 antigas têm; **os 10 produtos que entraram em 15 e 16/09 não têm** | Ninguém — vale escrever quando sobrar fôlego; é curadoria, robô não escreve |
+| Conferir no celular | 🟡 Pendente de 16/09: os **3 comparativos novos**, o **filtro do gráfico**, a **tabela da `/black-friday`** (rola de lado) | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | Ninguém. ⚠️ **Redmi 15C descartado em 16/09, por decisão dele**: tinha link gerado, mas a ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria. Não insista nele |
