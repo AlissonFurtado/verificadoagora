@@ -63,6 +63,8 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | Ninguém. ⚠️ **Redmi 15C descartado em 16/09, por decisão dele**: tinha link gerado, mas a ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria. Não insista nele |
 | Comparativos | 🟢 **5 desde 16/09**: A36, G17, **Edge 60 Fusion** (contra A36, Poco X7, G86), **DualSense** (contra os dois GameSir) e **Moto G06** (contra G17, C73, G15, A16). Indexação dos 3 novos pedida em 16/09 | Ninguém — é esperar o Google |
+| Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Meta: chegar a 27/11 com as páginas já indexadas | **Dele**: pedir indexação das 4 quando quiser acelerar |
+| Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
 | Catálogo | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
@@ -687,6 +689,31 @@ rastreia todo dia, não levavam a lugar nenhum.
 ⚠️ **A relevância é por categoria (`Celulares`), não por slug escrito no
 componente.** Guia novo de celular aparece sozinho em toda ficha de celular.
 Lista de slug no código seria uma lista para alguém esquecer de atualizar.
+
+### Black Friday 2026 — a aposta sazonal
+
+Decidida em 16/09/2026. **A data é 27/11/2026**, e a aposta tem prazo: página
+publicada até meados de outubro tem chance no Google; em novembro, não tem.
+
+⚠️ **O ângulo não é "promoções", é "o desconto é real?".** Disputar
+*promoções da black friday* contra Promobit, Buscapé e portal de notícia com
+12 páginas indexadas é gastar dez semanas pra ficar na página 5. O que só nós
+temos é **o preço de cada dia desde 07/09/2026** — na Black Friday serão ~82
+dias por produto. É a metade da promessa do nome do site que ainda não tinha
+sido usada, e casa com o filtro de 30/60/90 dias do gráfico.
+
+- **`/black-friday`** (`src/app/black-friday/page.tsx`): tabela montada do
+  histórico — menor e maior valor **que nós mesmos vimos**, com data, e selo
+  de quem está no menor preço hoje. Produto entra depois de 2 dias de
+  conferência. `FAQPage`, no sitemap, e **primeiro atalho da home**.
+  ⚠️ **URL perene, sem ano**: em 2027 a mesma página é reescrita e a
+  autoridade não se perde. Depois de 27/11 tirar o atalho da home (a página
+  fica no ar).
+- **Três guias por categoria**, no molde de decisão (o que o Google já
+  indexou 3 vezes aqui): `vale-esperar-black-friday-celular`,
+  `-monitor-e-notebook`, `-controle-de-videogame`.
+- ⚠️ **O atalho da home agora usa `href`, não `slug`** — antes montava
+  `/guia/{slug}` fixo, e a Black Friday não mora em `/guia`.
 
 ### Guias de decisão
 
