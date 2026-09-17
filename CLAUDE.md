@@ -78,7 +78,7 @@ viraram produto no mesmo dia.
 | Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Em **17/09** a página passou a **linkar os 3 guias** e cada guia a linkar de volta pela trilha, e a tabela passou a dizer **quantos dias de preço cada produto tem** | **Dele**: pedir indexação das 4 quando quiser acelerar |
 | Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
-| A36 fora do ar | 🔴 **Desde 17/09 o Galaxy A36 está `disponivel: false`, e é real** — a variação que acompanhamos ficou sem oferta no Meli (conferido na página). A ficha dele continua no ar sem botão de compra, como manda o contrato do JSON. **Ele é coluna de 3 comparativos e do guia até R$ 1.500**, que passam a mostrar "não acompanhamos" no lugar do preço | **Dele**: se quiser o A36 de volta na vitrine, gerar link de outra variação (outra cor ou 256 GB) — é produto novo, com `meli_id` novo |
+| A36 fora do ar | 🔴 **Desde 17/09 o Galaxy A36 está `disponivel: false`, e é real** — a variação que acompanhamos ficou sem oferta no Meli (conferido na página). A ficha dele continua no ar sem botão de compra, como manda o contrato do JSON. **Ele é coluna de 3 comparativos e do guia até R$ 1.500**, que passam a mostrar "não acompanhamos" no lugar do preço | **Dele**: gerar o link de **`MLB47111438`, que a fila de 17/09 trouxe a R$ 1.544,32 (41% OFF)** — é o mesmo A36 128 GB / 6 GB em outro anúncio, e mais barato que os R$ 1.649 que saíram do ar. Entra como produto novo, com `meli_id` novo; o antigo fica desligado |
 | Catálogo | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
@@ -1038,6 +1038,13 @@ posição 11,1**. O Wayback não arquivou nada — o texto delas não é recuper
 |---|---|---|
 | `/analise-philco-32-roku/` | 227 | mesmo produto no catálogo → **301 ativo** |
 | `/kabum-smart-700/` · `/a16-vale-a-pena/` · `/analise-hy320/` | 82 · 77 · 11 | não vendemos → 404, e está certo |
+
+🟢 **O HY320 voltou à fila em 17/09** (`MLB48959123`, R$ 255,90, 30% OFF). Se
+ele entrar no catálogo, `/analise-hy320/` deixa de ser 404 e vira **301 para a
+ficha nova**, como já é o caso do Philco — é o mesmo produto, que é a única
+condição que autoriza o redirect. São 11 impressões de volta, e o molde da
+rota já existe em `src/app/analise-philco-32-roku/page.tsx` (lembre do
+`export const dynamic = 'force-dynamic'`, senão o 308 sai sem `Location`).
 
 ⚠️ **Redirect só quando o destino é o mesmo produto.** Mandar quem buscava o
 A16 para o A36 é soft 404 pro Google e mentira pro visitante.
