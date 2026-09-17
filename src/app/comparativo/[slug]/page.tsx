@@ -12,9 +12,19 @@ import { GuiasRelacionados } from '../../guias-relacionados';
 
 export const revalidate = 3600;
 
-/** O comparativo mora no mesmo slug do produto: /produto/x e /comparativo/x. */
+/**
+ * O comparativo mora no mesmo slug do produto: /produto/x e /comparativo/x.
+ *
+ * ⚠️ **Usa o catálogo inteiro, não `produtosVisiveis`** — a mesma correção que
+ * a ficha recebeu em 09/09/2026 e que o comparativo não tinha. Produto que o
+ * robô desliga (`disponivel: false`) ou que a curadoria oculta sairia daqui e
+ * a URL passaria a responder 404, jogando fora o que o Google já indexou. Em
+ * 17/09/2026 foi o que aconteceu com o comparativo do A36, que estava na fila
+ * de indexação. Ele sai do sitemap — quem cuida disso é o `sitemap.ts` —, mas
+ * a página continua no ar.
+ */
 export function generateStaticParams() {
-  const produtos = produtosVisiveis(lerCatalogo().produtos);
+  const produtos = lerCatalogo().produtos;
   return lerComparativos()
     .map((c) => produtos.find((p) => p.meli_id === c.meli_id))
     .filter((p): p is Produto => Boolean(p))
@@ -24,7 +34,7 @@ export function generateStaticParams() {
 type Achado = { produto: Produto; comparativo: Comparativo };
 
 function buscar(slug: string): Achado | undefined {
-  const produto = acharPorSlug(produtosVisiveis(lerCatalogo().produtos), slug);
+  const produto = acharPorSlug(lerCatalogo().produtos, slug);
   if (!produto) return undefined;
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
   // Resolve `{preco}` e companhia aqui, num lugar só: a página e o
@@ -229,11 +239,29 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           </div>
 
           <div className="min-w-0 flex-1">
+            {/* Mesma regra da ficha: quem chegou por busca antiga precisa saber
+                que a oferta acabou antes de ler o preço, e sem oferta não há
+                botão de compra — o comparativo continua valendo como leitura. */}
+            {!produto.disponivel && (
+              <p className="mb-3 flex min-w-0 flex-wrap items-baseline gap-x-2 rounded-xl border border-amber-300/70 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                <strong className="font-extrabold">Esta oferta acabou.</strong>
+                <span className="min-w-0">
+                  O último preço conferido foi em {formatarData(produto.verificado_em)}. A
+                  comparação abaixo continua valendo.
+                </span>
+              </p>
+            )}
             <h2 className="text-xl font-black text-slate-900">{produto.nome}</h2>
             <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-3xl font-black text-marca tracking-tight">
               {formatarReal(produto.preco_atual)}
-              <span className="rounded-full bg-red-500 px-3 py-1 text-xs font-black text-white shadow-md shadow-red-500/10 flex items-center gap-1">
-                <span>🔥</span> {produto.desconto_percentual}% OFF
+              <span
+                className={`rounded-full px-3 py-1 text-xs font-black shadow-md flex items-center gap-1 ${
+                  produto.disponivel
+                    ? 'bg-red-500 text-white shadow-red-500/10'
+                    : 'bg-slate-200 text-slate-600 shadow-none'
+                }`}
+              >
+                {produto.disponivel && <span>🔥</span>} {produto.desconto_percentual}% OFF
               </span>
             </p>
             <p className="mt-1 text-sm font-semibold text-slate-400 line-through">
@@ -241,19 +269,29 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             </p>
           </div>
 
-          <a
-            href={produto.link_afiliado}
-            target="_blank"
-            rel="sponsored noopener noreferrer"
-            data-oferta={gerarSlug(produto)}
-            data-categoria={produto.categoria}
-            data-preco={produto.preco_atual}
-            data-onde="comparativo"
-            className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
-          >
-            Ver oferta
-            <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
-          </a>
+          {produto.disponivel ? (
+            <a
+              href={produto.link_afiliado}
+              target="_blank"
+              rel="sponsored noopener noreferrer"
+              data-oferta={gerarSlug(produto)}
+              data-categoria={produto.categoria}
+              data-preco={produto.preco_atual}
+              data-onde="comparativo"
+              className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
+            >
+              Ver oferta
+              <span aria-hidden="true" className="text-xl leading-none transition-transform group-hover:translate-x-1">→</span>
+            </a>
+          ) : (
+            <Link
+              href="/"
+              className="flex shrink-0 items-center justify-center gap-2 rounded-xl border border-slate-300 px-6 py-4 text-base font-extrabold text-slate-700 transition-colors hover:border-marca hover:text-marca"
+            >
+              Ver o que está no ar
+              <span aria-hidden="true" className="text-xl leading-none">→</span>
+            </Link>
+          )}
         </section>
 
         <section className="mt-10 min-w-0">
@@ -432,20 +470,22 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           <p className="mt-3 text-base leading-relaxed text-slate-600 font-medium">{comparativo.veredito}</p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href={produto.link_afiliado}
-              target="_blank"
-              rel="sponsored noopener noreferrer"
-              data-oferta={gerarSlug(produto)}
-              data-categoria={produto.categoria}
-              data-preco={produto.preco_atual}
-              data-onde="comparativo"
-              className="flex items-center gap-2 rounded-xl bg-marca-acao px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-marca/10 transition-all hover:bg-marca"
-            >
-              Ver o {produto.nome.split(' ').slice(0, 3).join(' ')} por{' '}
-              {formatarReal(produto.preco_atual)}
-              <span aria-hidden="true">→</span>
-            </a>
+            {produto.disponivel && (
+              <a
+                href={produto.link_afiliado}
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                data-oferta={gerarSlug(produto)}
+                data-categoria={produto.categoria}
+                data-preco={produto.preco_atual}
+                data-onde="comparativo"
+                className="flex items-center gap-2 rounded-xl bg-marca-acao px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-marca/10 transition-all hover:bg-marca"
+              >
+                Ver o {produto.nome.split(' ').slice(0, 3).join(' ')} por{' '}
+                {formatarReal(produto.preco_atual)}
+                <span aria-hidden="true">→</span>
+              </a>
+            )}
 
             {comparativo.colunas.slice(1).map((coluna) => {
               const doCatalogo = noCatalogo.get(coluna.chave);

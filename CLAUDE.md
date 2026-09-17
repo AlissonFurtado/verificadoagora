@@ -78,6 +78,7 @@ viraram produto no mesmo dia.
 | Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Em **17/09** a página passou a **linkar os 3 guias** e cada guia a linkar de volta pela trilha, e a tabela passou a dizer **quantos dias de preço cada produto tem** | **Dele**: pedir indexação das 4 quando quiser acelerar |
 | Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
+| A36 fora do ar | 🔴 **Desde 17/09 o Galaxy A36 está `disponivel: false`, e é real** — a variação que acompanhamos ficou sem oferta no Meli (conferido na página). A ficha dele continua no ar sem botão de compra, como manda o contrato do JSON. **Ele é coluna de 3 comparativos e do guia até R$ 1.500**, que passam a mostrar "não acompanhamos" no lugar do preço | **Dele**: se quiser o A36 de volta na vitrine, gerar link de outra variação (outra cor ou 256 GB) — é produto novo, com `meli_id` novo |
 | Catálogo | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
@@ -454,6 +455,16 @@ Regras do arquivo:
   indexado. Sem oferta não há botão de compra nem declaração de afiliado: o
   caminho vira a vitrine. É o robô que liga e desliga; mexer na mão só se
   souber por quê.
+  🔴 **O comparativo tinha exatamente o mesmo defeito, e só foi descoberto em
+  17/09/2026**, quando o A36 saiu de verdade: `/comparativo/{slug}` passou a
+  responder **404** — e essa URL estava na fila de indexação pedida em 16/09.
+  Corrigido no mesmo dia (`generateStaticParams` e `buscar` usam o catálogo
+  inteiro, como a ficha), e o comparativo ganhou o aviso "Esta oferta acabou"
+  no lugar do botão de compra. **Concorrente do catálogo que ainda está à
+  venda continua clicável na mesma página** — a comissão por outro caminho não
+  se perde. ⚠️ **Se aparecer uma terceira página que liste produto por slug,
+  confira isso nela antes de publicar**: o sintoma só aparece no dia em que um
+  produto é desligado.
 - `plataforma` em kebab-case (`mercado-livre`) — vira rótulo no botão.
 - Datas em ISO (`2026-08-31`), e `metadata.ultima_atualizacao` acompanha.
 - `metadata.conferido_em` é ISO **com hora** (`2026-09-08T14:51:05Z`): o
@@ -540,12 +551,19 @@ desligou o **A36** e o **OPPO A6t** dizendo "sumiu do Meli", e os dois estavam
 **Se um produto sumir da vitrine sem motivo, rode o workflow à mão antes de
 mexer no JSON**: a rodada seguinte costuma corrigir sozinha.
 
-⚠️ **E aconteceu de novo em 17/09**, com o mesmo A36: a rodada das 15h24 UTC
-desligou o aparelho outra vez, mantendo o preço em R$ 1.649. Ou seja, **não
-foi episódio único — é comportamento recorrente da API para esse anúncio**. A
-rodada #13 foi disparada à mão no mesmo dia. Se isso virar rotina diária, o
-caminho não é mexer no JSON: é investigar se o `meli_id` do A36 deveria ser o
-do anúncio (`MLB-...`) em vez do produto de catálogo.
+⚠️ **Em 17/09 o mesmo A36 caiu de novo — e desta vez o robô estava certo.**
+A rodada das 15h24 UTC desligou o aparelho; a rodada #13, disparada à mão às
+17h30 UTC, **manteve desligado**. Aí a conferência no navegador deu o motivo:
+`mercadolivre.com.br/p/MLB47115842` responde **"Este produto está indisponível.
+Por favor, escolha outra variação."** — a variação preta 128 GB que
+acompanhamos ficou sem oferta ativa. Nada a corrigir no JSON.
+
+**A regra que fica, e é a lição das duas vezes juntas:** rodar o workflow à
+mão é o primeiro passo, não a resposta. **Se a segunda rodada mantiver o
+produto desligado, abra a página do Meli antes de concluir qualquer coisa** —
+em 16/09 a rodada nova trouxe o A36 de volta (era a API falhando), em 17/09
+manteve (era a oferta que acabou mesmo). O sintoma no JSON é idêntico; só a
+página distingue.
 
 ⚠️ **Rodar o workflow à mão pelo GitHub, sem `gh` na máquina:** não existe `gh`
 instalado aqui (conferido em 17/09). O caminho é o Chrome logado dele —
