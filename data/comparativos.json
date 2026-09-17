@@ -871,6 +871,206 @@
         }
       ],
       "escrito_em": "2026-09-16"
+    },
+    {
+      "meli_id": "MLB53838786",
+      "titulo": "Monitor Samsung S3 27\" 120 Hz vale a pena? Comparamos com 3 monitores Full HD",
+      "resumo": "O S3 de 27 polegadas com 120 Hz está a {preco}, com {desconto}% de desconto. A dúvida de quem chega aqui quase sempre é uma destas duas: 27 ou 24 polegadas, e vale pagar a mais pelos 120 Hz em vez dos 100 Hz do modelo vizinho. Pusemos a ficha dele ao lado do irmão de 24 polegadas — que também está aqui na página —, do S3 de 27 polegadas com 100 Hz e de um rival da AOC com painel diferente. As especificações vêm dos fabricantes; os preços, só dos dois que nosso robô confere todo dia.",
+      "colunas": [
+        {
+          "chave": "s27_120",
+          "nome": "Samsung S3 27\" 120 Hz",
+          "meli_id": "MLB53838786"
+        },
+        {
+          "chave": "s24_120",
+          "nome": "Samsung S3 24\" 120 Hz",
+          "meli_id": "MLB51435621"
+        },
+        {
+          "chave": "s27_100",
+          "nome": "Samsung S3 27\" 100 Hz",
+          "meli_id": ""
+        },
+        {
+          "chave": "aoc",
+          "nome": "AOC 27B35HM",
+          "meli_id": ""
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Tela e painel",
+          "valores": {
+            "s27_120": "27 pol. IPS, Full HD (1.920 × 1.080)",
+            "s24_120": "24 pol. IPS, Full HD (1.920 × 1.080)",
+            "s27_100": "27 pol. IPS, Full HD (1.920 × 1.080)",
+            "aoc": "27 pol. VA, Full HD (1.920 × 1.080)"
+          },
+          "vencedores": [
+            "s24_120"
+          ],
+          "nota": "Os quatro têm a mesma quantidade de pixels, e é aí que mora a escolha: espalhados em 24 polegadas eles ficam menores e o texto sai mais nítido; em 27, a mesma imagem fica maior e menos definida. Por isso o de 24 ganha esta linha para quem trabalha de perto — e perde para quem quer tela grande. O AOC é o único com painel VA, que dá preto mais profundo e ângulo de visão pior que o IPS."
+        },
+        {
+          "campo": "Taxa de atualização",
+          "valores": {
+            "s27_120": "Máx. 120 Hz",
+            "s24_120": "Máx. 120 Hz",
+            "s27_100": "Máx. 100 Hz",
+            "aoc": "120 Hz"
+          },
+          "vencedores": [
+            "s27_120",
+            "s24_120",
+            "aoc"
+          ],
+          "nota": "É o dobro do monitor comum de 60 Hz, e a diferença aparece na rolagem do navegador e em jogo de tiro e corrida — desde que a sua placa de vídeo entregue esses quadros. Os 20 Hz que separam este do S3 de 100 Hz são a menor diferença da tabela: quase ninguém enxerga isso sem os dois lado a lado."
+        },
+        {
+          "campo": "Tempo de resposta",
+          "valores": {
+            "s27_120": "5 ms (GTG)",
+            "s24_120": "5 ms (GTG)",
+            "s27_100": "5 ms (GTG)",
+            "aoc": "4 ms"
+          },
+          "vencedores": [
+            "aoc"
+          ],
+          "nota": "Mede o quanto o pixel demora para mudar de cor; quanto menor, menos rastro atrás do que se move rápido. A vantagem de 1 ms do AOC é pequena na prática, e os três Samsung empatam — nenhum deles é monitor de competição."
+        },
+        {
+          "campo": "Brilho",
+          "valores": {
+            "s27_120": "250 cd/m² (típico)",
+            "s24_120": "250 cd/m² (típico)",
+            "s27_100": "250 cd/m² (típico)",
+            "aoc": "Não divulgado"
+          },
+          "vencedores": [
+            "s27_120",
+            "s24_120",
+            "s27_100"
+          ],
+          "nota": "250 cd/m² é o padrão de monitor de escritório: suficiente em ambiente fechado, apertado numa sala com janela grande atrás da mesa. A AOC não publica o número desta linha na página do 27B35HM."
+        },
+        {
+          "campo": "Contraste estático",
+          "valores": {
+            "s27_120": "1.000:1",
+            "s24_120": "1.000:1",
+            "s27_100": "1.000:1",
+            "aoc": "Não divulgado"
+          },
+          "vencedores": [
+            "s27_120",
+            "s24_120",
+            "s27_100"
+          ],
+          "nota": "É o que separa o preto do branco na mesma imagem. Os três Samsung declaram 1.000:1, o valor comum em IPS. Painel VA como o do AOC costuma ir além disso, mas a AOC não publica o número — e nós não preenchemos célula com estimativa."
+        },
+        {
+          "campo": "Cobertura de cor",
+          "valores": {
+            "s27_120": "72% NTSC",
+            "s24_120": "72% NTSC",
+            "s27_100": "72% NTSC",
+            "aoc": "Não divulgado"
+          },
+          "vencedores": [
+            "s27_120",
+            "s24_120",
+            "s27_100"
+          ],
+          "nota": "72% NTSC é cor de monitor de uso geral, e serve para trabalho e jogo. Quem edita foto ou vídeo para publicar deve procurar outra faixa de produto, com cobertura sRGB declarada."
+        },
+        {
+          "campo": "Sincronização com a placa de vídeo",
+          "valores": {
+            "s27_120": "Não divulgado",
+            "s24_120": "Não divulgado",
+            "s27_100": "Não tem",
+            "aoc": "Adaptive Sync"
+          },
+          "vencedores": [
+            "aoc"
+          ],
+          "nota": "É o recurso que casa o monitor com a placa de vídeo e evita a imagem partida ao meio em jogo. A ficha do S3 de 100 Hz diz que ele não tem; nas dos dois de 120 Hz a Samsung simplesmente não fala do assunto, o que não é o mesmo que ter. Se jogo é a prioridade, é a linha em que o AOC ganha."
+        },
+        {
+          "campo": "Entradas",
+          "valores": {
+            "s27_120": "2 × HDMI 1.4",
+            "s24_120": "2 × HDMI 1.4",
+            "s27_100": "1 × HDMI 1.4 e 1 × VGA",
+            "aoc": "1 × HDMI 1.4 e 1 × VGA"
+          },
+          "vencedores": [
+            "s27_120",
+            "s24_120"
+          ],
+          "nota": "Os dois de 120 Hz trazem duas HDMI, o que permite deixar computador e console ligados ao mesmo tempo. Nenhum dos quatro tem DisplayPort, USB ou saída de fone — confira se o seu computador tem saída HDMI antes de comprar."
+        },
+        {
+          "campo": "Suporte e VESA",
+          "valores": {
+            "s27_120": "Inclinação -2° a 21°, VESA 100 × 100",
+            "s24_120": "Inclinação -2° a 21°, VESA 100 × 100",
+            "s27_100": "Inclinação -2° a 21°, VESA 100 × 100",
+            "aoc": "Inclinação -5° a 25°, VESA 100 × 100"
+          },
+          "vencedores": [
+            "aoc"
+          ],
+          "nota": "Nenhum dos quatro ajusta altura nem gira — todos só inclinam, e o AOC inclina um pouco mais. Os quatro aceitam braço VESA 100 × 100, que é a saída para quem precisa subir a tela até a altura dos olhos."
+        },
+        {
+          "campo": "Garantia",
+          "valores": {
+            "s27_120": "Não divulgado",
+            "s24_120": "Não divulgado",
+            "s27_100": "Não divulgado",
+            "aoc": "3 anos"
+          },
+          "vencedores": [
+            "aoc"
+          ],
+          "nota": "A AOC anuncia três anos na própria página do produto. A Samsung não informa o prazo nas fichas destes monitores — vale conferir no anúncio antes de fechar, porque em monitor a garantia costuma ser o que decide um empate."
+        }
+      ],
+      "a_favor": [
+        "A maior tela da tabela com a taxa mais alta: 27 polegadas a 120 Hz, contra os 100 Hz do S3 vizinho de mesmo tamanho.",
+        "Painel IPS com 178°/178° de ângulo de visão — a imagem não desbota quando alguém olha de lado.",
+        "Duas entradas HDMI 1.4: dá para deixar computador e console ligados ao mesmo tempo, sem trocar cabo.",
+        "{desconto}% de desconto de verdade: {preco} contra {preco_original} de tabela, conferido em {data}."
+      ],
+      "contra": [
+        "Full HD esticado em 27 polegadas: cada pixel fica maior, e isso aparece em texto e planilha de perto.",
+        "A Samsung não divulga FreeSync nem Adaptive Sync nesta ficha — o AOC divulga, e é o que evita a imagem rasgada em jogo.",
+        "O suporte só inclina (-2° a 21°): não sobe, não desce, não gira. Para ajustar altura, só com braço VESA 100 × 100.",
+        "Não tem alto-falante nem saída de fone: o som precisa sair do computador."
+      ],
+      "veredito": "Ele vale se você quer tela grande para jogo, vídeo e duas janelas lado a lado, e senta a uma distância normal da mesa — a {preco}, os 120 Hz em 27 polegadas são raros nessa faixa e a economia sobre a tabela é de {economia}. Se o seu uso é mais texto e planilha, o irmão de 24 polegadas mostra a mesma quantidade de pixels numa área menor e fica visivelmente mais nítido, por menos dinheiro; ele está aqui na página. Se a prioridade é jogo, repare que quem oferece sincronização com a placa de vídeo nesta tabela é o AOC, com painel VA e 4 ms — em compensação, VA perde para IPS no ângulo de visão. E se 100 Hz já bastam para você, o S3 de 27 polegadas com 100 Hz faz quase tudo o que este faz.",
+      "fontes": [
+        {
+          "titulo": "Monitor Essential S3 27\" FHD IPS 120 Hz (LS27F320GALMZD) — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/monitors/full-hd-1080p/essential-monitor-s3-s32gf-27-inch-fhd-ips-120hz-ls27f320galmzd/"
+        },
+        {
+          "titulo": "Monitor Essential S3 24\" FHD IPS 120 Hz (LS24F320GALMZD) — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/monitors/full-hd-1080p/essential-monitor-s3-s32gf-24-inch-fhd-ips-120hz-ls24f320galmzd/"
+        },
+        {
+          "titulo": "Monitor Essential S3 27\" FHD IPS 100 Hz (LS27D300GALMZD) — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/monitors/full-hd-1080p/essential-monitor-s3-s30gd-27-inch-fhd-ips-100hz-ls27d300galmzd/"
+        },
+        {
+          "titulo": "AOC 27B35HM — página oficial da AOC",
+          "url": "https://www.aoc.com/pt/monitors/27b35hm"
+        }
+      ],
+      "escrito_em": "2026-09-17"
     }
   ]
 }

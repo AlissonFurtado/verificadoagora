@@ -93,6 +93,22 @@ export function PaginaDecisao({
           <span className="mx-2 text-slate-300" aria-hidden="true">
             ›
           </span>
+          {/*
+           * Os guias de "vale esperar?" têm uma página-mãe, e ela precisa ser
+           * alcançável a partir daqui: a tabela de histórico da Black Friday é
+           * a prova que sustenta a resposta destes guias — e link interno de
+           * volta é o que fez as fichas saírem de "rastreada, não indexada".
+           */}
+          {decisao.slug.startsWith('vale-esperar-black-friday') && (
+            <>
+              <Link href="/black-friday" className="transition-colors hover:text-slate-900">
+                Black Friday 2026
+              </Link>
+              <span className="mx-2 text-slate-300" aria-hidden="true">
+                ›
+              </span>
+            </>
+          )}
           <span className="font-bold text-slate-400">Guia</span>
         </nav>
 

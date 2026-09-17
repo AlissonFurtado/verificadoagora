@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { lerCatalogo, lerHistorico } from '@/lib/catalogo';
+import { lerCatalogo, lerDecisoes, lerHistorico } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
 import type { PontoDoHistorico } from '@/lib/historico';
 import { caminhoDoProduto } from '@/lib/slug';
@@ -11,6 +11,13 @@ export const revalidate = 3600;
 
 /** Sexta-feira da Black Friday de 2026. */
 const BLACK_FRIDAY = '2026-11-27';
+
+/**
+ * Os guias de "vale esperar?" moram em `/guia/{slug}` como qualquer decisão,
+ * e são reconhecidos por este prefixo de slug — não por uma lista escrita
+ * aqui, que é lista para alguém esquecer de atualizar quando entrar o quarto.
+ */
+const PREFIXO_DOS_GUIAS = 'vale-esperar-black-friday';
 
 const TITULO = 'Black Friday 2026: o desconto é real?';
 const DESCRICAO =
@@ -117,6 +124,7 @@ export default function PaginaBlackFriday() {
   const produtos = produtosVisiveis(todos);
   const historico = lerHistorico().produtos;
   const linhas = montarLinhas(produtos, historico);
+  const guias = lerDecisoes().filter((d) => d.slug.startsWith(PREFIXO_DOS_GUIAS));
   const conferencia = descreverConferencia(meta.conferido_em, new Date());
 
   const diasObservados = Math.max(0, ...linhas.map((l) => l.dias));
@@ -209,7 +217,7 @@ export default function PaginaBlackFriday() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {linhas.map(({ produto, menor, maior, noMenor: estaNoMenor }) => (
+                {linhas.map(({ produto, dias, menor, maior, noMenor: estaNoMenor }) => (
                   <tr key={produto.id} className="align-top">
                     <td className="py-3 pr-3 min-w-0">
                       <Link
@@ -223,6 +231,9 @@ export default function PaginaBlackFriday() {
                           ✓ no menor preço
                         </span>
                       )}
+                      <span className="block text-[11px] text-slate-400">
+                        {dias} {dias === 1 ? 'dia observado' : 'dias observados'}
+                      </span>
                     </td>
                     <td className="py-3 pr-3 font-black text-slate-900 whitespace-nowrap">
                       {formatarReal(produto.preco_atual)}
@@ -270,6 +281,27 @@ export default function PaginaBlackFriday() {
               de novembro vê o mesmo número que nós vemos hoje — e aí a conta é simples.
             </p>
           </div>
+
+          {guias.length > 0 && (
+            <div className="mt-6 border-t border-slate-100 pt-5">
+              <h3 className="text-sm font-black uppercase tracking-wide text-slate-500">
+                A resposta muda por categoria
+              </h3>
+              <ul className="mt-3 space-y-3">
+                {guias.map((guia) => (
+                  <li key={guia.slug}>
+                    <Link
+                      href={`/guia/${guia.slug}`}
+                      className="font-bold text-marca hover:underline"
+                    >
+                      {guia.titulo}
+                    </Link>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{guia.resumo}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </section>
 
         <section className="rounded-2xl bg-white border border-slate-200/60 p-6 shadow-sm">
