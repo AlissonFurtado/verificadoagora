@@ -39,6 +39,22 @@ export type LinhaDoComparativo = {
 export type Comparativo = {
   /** O produto do catálogo que é o assunto. Tem que existir em produtos.json. */
   meli_id: string;
+  /**
+   * Outros anúncios **do mesmo aparelho**, em ordem de preferência.
+   *
+   * ⚠️ **Existe porque anúncio morre e página indexada não pode morrer
+   * junto.** Em 17/09/2026 o anúncio do A36 que acompanhávamos saiu do ar e
+   * outro, do mesmo celular, entrou no catálogo com `meli_id` novo: a URL do
+   * comparativo é a do primeiro — que é a que o Google conhece — e o preço e
+   * o botão passam a vir do primeiro desta lista que estiver à venda.
+   *
+   * **Quem afirma que dois anúncios são o mesmo aparelho é a curadoria, aqui,
+   * e não o código.** Casar por `familia` não serve: o agrupador do Meli para
+   * os dois A36 veio diferente ("Samsung Galaxy A36 5g" e "Samsung Galaxy A36
+   * 5G 5G Dual SIM"), e casar por nome normalizado juntaria um 128 GB com um
+   * 256 GB — que são preços diferentes na mesma página.
+   */
+  tambem?: string[];
   titulo: string;
   resumo: string;
   colunas: ColunaDoComparativo[];

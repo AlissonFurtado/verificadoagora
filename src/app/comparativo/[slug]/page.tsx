@@ -31,23 +31,42 @@ export function generateStaticParams() {
     .map((p) => ({ slug: gerarSlug(p) }));
 }
 
-type Achado = { produto: Produto; comparativo: Comparativo };
+/**
+ * `produto` é a identidade da página — dele saem o slug, o canonical e o nome.
+ * `oferta` é de onde vem preço, desconto e botão: o mesmo produto quase
+ * sempre, e o substituto de `tambem` quando o anúncio original morreu.
+ */
+type Achado = { produto: Produto; oferta: Produto; comparativo: Comparativo };
+
+/** O primeiro anúncio à venda: o próprio, ou um dos listados em `tambem`. */
+function acharOferta(produto: Produto, comparativo: Comparativo, catalogo: Produto[]): Produto {
+  if (produto.disponivel) return produto;
+  for (const meliId of comparativo.tambem ?? []) {
+    const outro = catalogo.find((p) => p.meli_id === meliId && p.disponivel && !p.oculto);
+    if (outro) return outro;
+  }
+  return produto;
+}
 
 function buscar(slug: string): Achado | undefined {
-  const produto = acharPorSlug(lerCatalogo().produtos, slug);
+  const catalogo = lerCatalogo().produtos;
+  const produto = acharPorSlug(catalogo, slug);
   if (!produto) return undefined;
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
+  if (!comparativo) return undefined;
+  const oferta = acharOferta(produto, comparativo, catalogo);
   // Resolve `{preco}` e companhia aqui, num lugar só: a página e o
-  // generateMetadata passam os dois por esta função.
-  return comparativo ? { produto, comparativo: comTextoDeHoje(comparativo, produto) } : undefined;
+  // generateMetadata passam os dois por esta função. Os marcadores falam do
+  // que está à venda hoje, então quem resolve o texto é a oferta.
+  return { produto, oferta, comparativo: comTextoDeHoje(comparativo, oferta) };
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const achado = buscar(params.slug);
   if (!achado) return { title: 'Comparativo não encontrado' };
 
-  const { produto, comparativo } = achado;
-  const descricao = `${comparativo.colunas.length} celulares lado a lado: tela, processador, bateria, câmera e anos de atualização. ${produto.nome} por ${formatarReal(produto.preco_atual)}, preço conferido em ${formatarData(produto.verificado_em)}.`;
+  const { produto, oferta, comparativo } = achado;
+  const descricao = `${comparativo.colunas.length} celulares lado a lado: tela, processador, bateria, câmera e anos de atualização. ${produto.nome} por ${formatarReal(oferta.preco_atual)}, preço conferido em ${formatarData(oferta.verificado_em)}.`;
 
   return {
     title: comparativo.titulo,
@@ -57,7 +76,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       title: comparativo.titulo,
       description: descricao,
       type: 'article',
-      images: produto.imagem ? [{ url: produto.imagem }] : undefined,
+      images: oferta.imagem ? [{ url: oferta.imagem }] : undefined,
     },
   };
 }
@@ -71,11 +90,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
  */
 function DadosEstruturados({
   comparativo,
-  produto,
+  oferta,
   url,
 }: {
   comparativo: Comparativo;
-  produto: Produto;
+  oferta: Produto;
   url: string;
 }) {
   const dados = {
@@ -84,7 +103,7 @@ function DadosEstruturados({
     headline: comparativo.titulo,
     description: comparativo.resumo,
     datePublished: comparativo.escrito_em,
-    dateModified: produto.verificado_em,
+    dateModified: oferta.verificado_em,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     author: { '@type': 'Organization', name: 'Verificado Agora' },
     publisher: { '@type': 'Organization', name: 'A F DE SOUSA' },
@@ -114,7 +133,9 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
   const achado = buscar(params.slug);
   if (!achado) notFound();
 
-  const { produto, comparativo } = achado;
+  const { produto, oferta, comparativo } = achado;
+  /** Verdadeiro quando o anúncio original morreu e o preço vem de outro. */
+  const ofertaSubstituta = oferta.meli_id !== produto.meli_id;
   const catalogo = produtosVisiveis(lerCatalogo().produtos);
   const conferidoEm = lerCatalogo().metadata.conferido_em;
   const conferencia = descreverConferencia(conferidoEm, new Date());
@@ -131,7 +152,16 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
 
   const noCatalogo = new Map(
     comparativo.colunas
-      .map((c) => [c.chave, catalogo.find((p) => p.meli_id === c.meli_id)] as const)
+      .map((c) => {
+        // A coluna do próprio produto segue a oferta: quando o anúncio dele
+        // morreu, quem tem preço é o substituto — senão a página diria "não
+        // acompanhamos" justamente sobre o aparelho de que ela trata.
+        const daColuna =
+          c.meli_id === produto.meli_id && oferta.disponivel
+            ? oferta
+            : catalogo.find((p) => p.meli_id === c.meli_id);
+        return [c.chave, daColuna] as const;
+      })
       .filter((par): par is readonly [string, Produto] => Boolean(par[1])),
   );
 
@@ -181,7 +211,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
     <main className="min-h-screen bg-fundo text-slate-800">
       <DadosEstruturados
         comparativo={comparativo}
-        produto={produto}
+        oferta={oferta}
         url={`${base}${caminhoDoComparativo(produto)}`}
       />
 
@@ -214,7 +244,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           </p>
           <p className="mt-3 text-sm text-slate-400 font-semibold">
             Escrito em {formatarData(comparativo.escrito_em)} · preços conferidos em{' '}
-            {formatarData(produto.verificado_em)}
+            {formatarData(oferta.verificado_em)}
           </p>
         </header>
 
@@ -222,9 +252,9 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             quem já decidiu não precisa descer a tabela inteira pra comprar. */}
         <section className="mt-8 flex min-w-0 flex-col gap-5 rounded-2xl bg-white border border-slate-200/80 p-6 shadow-md sm:flex-row sm:items-center">
           <div className="relative aspect-square w-full shrink-0 overflow-hidden rounded-xl bg-white border border-slate-100 sm:h-36 sm:w-36">
-            {produto.imagem ? (
+            {oferta.imagem ? (
               <Image
-                src={produto.imagem}
+                src={oferta.imagem}
                 alt={produto.nome}
                 fill
                 sizes="(max-width: 640px) 100vw, 144px"
@@ -242,41 +272,50 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
             {/* Mesma regra da ficha: quem chegou por busca antiga precisa saber
                 que a oferta acabou antes de ler o preço, e sem oferta não há
                 botão de compra — o comparativo continua valendo como leitura. */}
-            {!produto.disponivel && (
-              <p className="mb-3 flex min-w-0 flex-wrap items-baseline gap-x-2 rounded-xl border border-amber-300/70 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-                <strong className="font-extrabold">Esta oferta acabou.</strong>
-                <span className="min-w-0">
-                  O último preço conferido foi em {formatarData(produto.verificado_em)}. A
-                  comparação abaixo continua valendo.
-                </span>
+            {ofertaSubstituta ? (
+              <p className="mb-3 min-w-0 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600">
+                O anúncio que acompanhávamos saiu do ar. O preço abaixo é de{' '}
+                <strong className="font-extrabold text-slate-800">outro anúncio do mesmo
+                aparelho</strong>, que o robô confere desde{' '}
+                {formatarData(oferta.data_adicionado)}.
               </p>
+            ) : (
+              !oferta.disponivel && (
+                <p className="mb-3 flex min-w-0 flex-wrap items-baseline gap-x-2 rounded-xl border border-amber-300/70 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+                  <strong className="font-extrabold">Esta oferta acabou.</strong>
+                  <span className="min-w-0">
+                    O último preço conferido foi em {formatarData(oferta.verificado_em)}. A
+                    comparação abaixo continua valendo.
+                  </span>
+                </p>
+              )
             )}
             <h2 className="text-xl font-black text-slate-900">{produto.nome}</h2>
             <p className="mt-1 flex flex-wrap items-baseline gap-x-3 text-3xl font-black text-marca tracking-tight">
-              {formatarReal(produto.preco_atual)}
+              {formatarReal(oferta.preco_atual)}
               <span
                 className={`rounded-full px-3 py-1 text-xs font-black shadow-md flex items-center gap-1 ${
-                  produto.disponivel
+                  oferta.disponivel
                     ? 'bg-red-500 text-white shadow-red-500/10'
                     : 'bg-slate-200 text-slate-600 shadow-none'
                 }`}
               >
-                {produto.disponivel && <span>🔥</span>} {produto.desconto_percentual}% OFF
+                {oferta.disponivel && <span>🔥</span>} {oferta.desconto_percentual}% OFF
               </span>
             </p>
             <p className="mt-1 text-sm font-semibold text-slate-400 line-through">
-              {formatarReal(produto.preco_original)}
+              {formatarReal(oferta.preco_original)}
             </p>
           </div>
 
-          {produto.disponivel ? (
+          {oferta.disponivel ? (
             <a
-              href={produto.link_afiliado}
+              href={oferta.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
               data-oferta={gerarSlug(produto)}
-              data-categoria={produto.categoria}
-              data-preco={produto.preco_atual}
+              data-categoria={oferta.categoria}
+              data-preco={oferta.preco_atual}
               data-onde="comparativo"
               className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-marca-acao px-6 py-4 text-base font-extrabold text-white shadow-lg shadow-marca/25 transition-all hover:bg-marca hover:shadow-xl hover:scale-[1.01] active:scale-[0.99]"
             >
@@ -470,19 +509,19 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           <p className="mt-3 text-base leading-relaxed text-slate-600 font-medium">{comparativo.veredito}</p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            {produto.disponivel && (
+            {oferta.disponivel && (
               <a
-                href={produto.link_afiliado}
+                href={oferta.link_afiliado}
                 target="_blank"
                 rel="sponsored noopener noreferrer"
                 data-oferta={gerarSlug(produto)}
-                data-categoria={produto.categoria}
-                data-preco={produto.preco_atual}
+                data-categoria={oferta.categoria}
+                data-preco={oferta.preco_atual}
                 data-onde="comparativo"
                 className="flex items-center gap-2 rounded-xl bg-marca-acao px-5 py-3.5 text-sm font-extrabold text-white shadow-md shadow-marca/10 transition-all hover:bg-marca"
               >
                 Ver o {produto.nome.split(' ').slice(0, 3).join(' ')} por{' '}
-                {formatarReal(produto.preco_atual)}
+                {formatarReal(oferta.preco_atual)}
                 <span aria-hidden="true">→</span>
               </a>
             )}

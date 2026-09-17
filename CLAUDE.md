@@ -68,7 +68,7 @@ viraram produto no mesmo dia.
 
 | Frente | Estado | De quem é a vez |
 |---|---|---|
-| Lembrete dos links | 🟢 **Rotina na nuvem criada em 16/09**, 16h12, e-mail pro `alisson580@gmail.com` com a fila do dia. ⚠️ **O envio em si nunca foi exercitado** — no teste a fila era de ontem e ela (corretamente) não mandou nada | **Dele**: dizer se o e-mail chegou em 17/09. Se não chegar, ler o log com `RemoteTrigger get_run_log` |
+| Lembrete dos links | 🟢 **Funcionou de verdade em 17/09**: o e-mail das 16h12 chegou, com os 12 candidatos e o bloco de URLs. A rotina está validada de ponta a ponta. ⚠️ **Mas o Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar o e-mail em texto puro (não feito) | **Dele**: dizer se quer que eu ajuste a rotina para texto puro |
 | Perguntas nas fichas | 🟢 **As 25 fichas têm, desde 17/09** — 30 perguntas novas escritas para os 10 produtos de 15 e 16/09. Nenhum número novo: tudo saiu da `analise` e da `descricao` | Ninguém |
 | Conferir no celular | 🟡 Pendente de 16/09: os **3 comparativos novos**, o **filtro do gráfico**, a **tabela da `/black-friday`** (rola de lado). De 17/09: o **comparativo do monitor** (10 linhas de ficha — é o maior até agora nos blocos do celular) e as **perguntas nas fichas** | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
@@ -78,7 +78,7 @@ viraram produto no mesmo dia.
 | Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Em **17/09** a página passou a **linkar os 3 guias** e cada guia a linkar de volta pela trilha, e a tabela passou a dizer **quantos dias de preço cada produto tem** | **Dele**: pedir indexação das 4 quando quiser acelerar |
 | Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
-| A36: dois cadastros | 🟡 **Resolvido pela metade em 17/09.** O anúncio antigo (`MLB47115842`) saiu do ar de verdade e ficou `disponivel: false`; o **novo, verde-limão (`MLB47111438`), entrou no catálogo a R$ 1.544,32** e está na vitrine. **Mas o comparativo do A36 continua amarrado ao `meli_id` antigo** — a página mostra "Esta oferta acabou" e não vende, enquanto o aparelho está à venda ali do lado | **Decisão dele**: ou o comparativo passa a achar o produto pela `familia` quando o dele está desligado (mexe em código, mantém a URL indexada), ou reescrevemos o comparativo no `meli_id` novo (URL nova, perde o que o Google já rastreou). Eu recomendo o primeiro |
+| A36: dois cadastros | 🟢 **Resolvido em 17/09.** O anúncio antigo (`MLB47115842`) saiu do ar e ficou `disponivel: false`; o novo, verde-limão (`MLB47111438`), entrou a R$ 1.544,32. O comparativo **mantém a URL antiga** (a que o Google conhece) e tira preço, botão e foto do anúncio vivo, via o campo `tambem` — ver "Quando o anúncio morre e a página fica" | Ninguém |
 | Catálogo | 🟢 **32 produtos desde 17/09** — entraram A36 verde, Galaxy A07, Projetor HY320, Placa-mãe Asus TUF B550M-PLUS, SSD Externo SanDisk 1TB, Liquidificador Oster e Micro-ondas Electrolux, todos com `analise` escrita à mão e ficha lida no anúncio. **Os 7 estão sem `perguntas`** | Ninguém — perguntas quando sobrar fôlego |
 | Catálogo (antes) | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
@@ -920,6 +920,31 @@ entre páginas, não a verdade de cada número: essa é de quem escreve.
 Em `/comparativo/{mesmo slug do produto}`, um por `meli_id` em
 `data/comparativos.json`. O alvo é quem digita "A36 vale a pena". O brief de
 09/09/2026 fez dele o **formato-padrão**, meta de um por semana.
+
+### Quando o anúncio morre e a página fica
+
+Criado em 17/09/2026, quando o anúncio do A36 saiu do ar e outro, do mesmo
+celular, entrou no catálogo com `meli_id` novo. O comparativo do A36 é URL
+indexada: reescrevê-lo no id novo criaria endereço novo e jogaria fora o
+rastreamento.
+
+**Como funciona:** o comparativo aceita `tambem: ["MLB..."]` — outros anúncios
+**do mesmo aparelho**, em ordem de preferência. A página continua sendo achada
+pelo produto do `meli_id` original (slug, canonical e nome saem dele), mas
+**preço, desconto, foto, botão e os marcadores `{preco}` saem do primeiro
+anúncio da lista que estiver à venda**. Uma linha discreta avisa o visitante
+de que o anúncio acompanhado saiu do ar e o preço é de outro do mesmo
+aparelho. Sem nenhum vivo, volta o aviso "Esta oferta acabou", sem botão.
+
+⚠️ **Quem afirma que dois anúncios são o mesmo aparelho é a curadoria, no
+arquivo — nunca o código.** Duas alternativas foram descartadas com medição:
+casar por `familia` **não funciona** (o agrupador do Meli veio diferente para
+os dois A36: `"Samsung Galaxy A36 5g"` e `"Samsung Galaxy A36 5G 5G Dual
+SIM"`), e casar por nome normalizado juntaria um 128 GB com um 256 GB — preços
+diferentes na mesma página.
+
+⚠️ **O produto antigo continua no `produtos.json`**, desligado. É ele que
+sustenta a URL: apagá-lo faria a página voltar a 404.
 
 ⚠️ **Comparativo é sempre pedido explícito do Alisson.** Nenhum robô escreve
 um. Curadoria assinada por robô é o que tira a autoridade da página.
