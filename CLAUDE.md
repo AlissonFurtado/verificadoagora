@@ -566,6 +566,30 @@ A corrente é automática dos dois lados e manual no meio:
 `candidatos.json` não é catálogo — nada dali aparece no site. Candidato vira
 produto quando ganha `link_afiliado`, `analise` e entra no `produtos.json`.
 
+### O lembrete diário dos links (rotina na nuvem)
+
+Criada em 16/09/2026, quando ele topou **gerar até 20 links por dia** pra
+engordar o catálogo antes da Black Friday. Por isso o `limite_diario` do
+`data/garimpo.json` subiu de 10 para 20 e entrou "Casa, Móveis e Decoração".
+
+- **Rotina `trig_013Qa6WXrWCGCpbcCVhyBj9r`**, todo dia **16h12 de Brasília**
+  (`12 19 * * *` em UTC): lê `data/candidatos.json` do repo e **manda e-mail
+  pro `alisson580@gmail.com`** com a fila e as URLs cruas. Painel:
+  <https://claude.ai/code/routines/trig_013Qa6WXrWCGCpbcCVhyBj9r>
+- ⚠️ **Não adiante o horário.** Nasceu às 11h12 e não servia: o garimpo pede
+  as 10h no cron, mas o agendador do GitHub entrega entre **13h54 e 15h27 de
+  Brasília** (commits de 13 a 16/09). Antes disso a fila do dia não existe, e
+  o lembrete sai sempre com a de ontem — que a própria rotina descarta.
+- ⚠️ **Ela só envia se `garimpado_em` for a data de hoje em UTC.** Fila do dia
+  anterior não vira e-mail — é de propósito, pra não lembrar duas vezes da
+  mesma fila. Se o garimpo falhar de manhã, não chega e-mail nenhum.
+- ⚠️ **Rotina roda na nuvem, não na máquina dele**: não enxerga nada local, e
+  o prompt precisa ser autossuficiente. Ela só lê e avisa — não commita.
+- A issue diária do garimpo continua existindo; o e-mail é o lembrete que
+  chega no celular sem ele procurar.
+- `scripts/corpo-da-issue.mjs` agora fecha com **um bloco só de URLs**, uma
+  por linha, pra abrir as 20 de uma vez em vez de caçar link no texto.
+
 ### A memória, que é o que faz o diário funcionar
 
 Os "mais vendidos" mudam devagar; sem memória a fila se repetiria e o Alisson
