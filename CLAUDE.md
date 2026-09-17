@@ -61,8 +61,8 @@ Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 |---|---|---|
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
-| Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | **Dele**: link do **Moto G06** (R$ 726, 48%, `MLB58353028`), que não veio no lote de 15/09. **Redmi 15C** (`MLB54993504`) tem link (`https://meli.la/1c4fPPf`) mas ficou de fora: ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria |
-| Comparativos | 🟢 **5 desde 16/09**: A36, G17, **Edge 60 Fusion** (contra A36, Poco X7, G86), **DualSense** (contra os dois GameSir) e **Moto G06** (contra G17, C73, G15, A16) | **Dele**: pedir indexação dos 3 novos no Search Console |
+| Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | Ninguém. ⚠️ **Redmi 15C descartado em 16/09, por decisão dele**: tinha link gerado, mas a ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria. Não insista nele |
+| Comparativos | 🟢 **5 desde 16/09**: A36, G17, **Edge 60 Fusion** (contra A36, Poco X7, G86), **DualSense** (contra os dois GameSir) e **Moto G06** (contra G17, C73, G15, A16). Indexação dos 3 novos pedida em 16/09 | Ninguém — é esperar o Google |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
 | Catálogo | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
@@ -782,6 +782,14 @@ o que o site já faz, e nenhuma foi resolvida ainda** — decisão dele:
 |---|---|---|
 | **5.3** | Afiliado "não poderá fazer qualquer publicidade **comparando** os produtos… com qualquer produto, seja de empresa concorrente ou não" | Os comparativos e os guias — o formato que abre índice |
 | **5.4** | Nas postagens com link, "só poderá mencionar as informações previstas expressamente nos anúncios" | As `analise` com dado de fabricante que o anúncio não traz (ex.: "4 GB reais" do OPPO) |
+
+🟡 **Decisão do Alisson em 16/09/2026 sobre 5.3 e 5.4: seguir escrevendo
+comparativo e guia.** O argumento dele: o site não tem tráfego, ninguém vai
+reparar agora, e o formato é o único que abre índice — quando as coisas
+andarem, revisa. **Não é esquecimento, é risco aceito com informação na mão.**
+⚠️ O que fica combinado: **quando o tráfego começar a aparecer** (primeiras
+vendas, ou o painel do Meli acusando volume), **retomar esta decisão** — o
+risco não é multa, é perder a conta que recebe a comissão.
 | **1.3** | Só conta como Mídia (e só gera pagamento) o site/rede **informado ao ML antes** | 🟢 **Resolvido**: em Perfil de afiliado → Contas vinculadas estão `Instagram verificadoagorabr` e `https://verificadoagora.com.br/` (conferido 15/09) |
 
 **Placar do painel em 15/09/2026:** 7 a 13/09 → **19 cliques** (+1800% sobre a
