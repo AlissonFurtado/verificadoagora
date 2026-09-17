@@ -51,7 +51,7 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 16/09/2026
+## Onde paramos — 17/09/2026
 
 Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 
@@ -69,13 +69,13 @@ viraram produto no mesmo dia.
 | Frente | Estado | De quem é a vez |
 |---|---|---|
 | Lembrete dos links | 🟢 **Rotina na nuvem criada em 16/09**, 16h12, e-mail pro `alisson580@gmail.com` com a fila do dia. ⚠️ **O envio em si nunca foi exercitado** — no teste a fila era de ontem e ela (corretamente) não mandou nada | **Dele**: dizer se o e-mail chegou em 17/09. Se não chegar, ler o log com `RemoteTrigger get_run_log` |
-| Perguntas nas fichas | 🟡 As 15 antigas têm; **os 10 produtos que entraram em 15 e 16/09 não têm** | Ninguém — vale escrever quando sobrar fôlego; é curadoria, robô não escreve |
-| Conferir no celular | 🟡 Pendente de 16/09: os **3 comparativos novos**, o **filtro do gráfico**, a **tabela da `/black-friday`** (rola de lado) | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
+| Perguntas nas fichas | 🟢 **As 25 fichas têm, desde 17/09** — 30 perguntas novas escritas para os 10 produtos de 15 e 16/09. Nenhum número novo: tudo saiu da `analise` e da `descricao` | Ninguém |
+| Conferir no celular | 🟡 Pendente de 16/09: os **3 comparativos novos**, o **filtro do gráfico**, a **tabela da `/black-friday`** (rola de lado). De 17/09: o **comparativo do monitor** (10 linhas de ficha — é o maior até agora nos blocos do celular) e as **perguntas nas fichas** | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | Ninguém. ⚠️ **Redmi 15C descartado em 16/09, por decisão dele**: tinha link gerado, mas a ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria. Não insista nele |
-| Comparativos | 🟢 **5 desde 16/09**: A36, G17, **Edge 60 Fusion** (contra A36, Poco X7, G86), **DualSense** (contra os dois GameSir) e **Moto G06** (contra G17, C73, G15, A16). Indexação dos 3 novos pedida em 16/09 | Ninguém — é esperar o Google |
-| Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Meta: chegar a 27/11 com as páginas já indexadas | **Dele**: pedir indexação das 4 quando quiser acelerar |
+| Comparativos | 🟢 **6 desde 17/09**: A36, G17, **Edge 60 Fusion** (contra A36, Poco X7, G86), **DualSense** (contra os dois GameSir), **Moto G06** (contra G17, C73, G15, A16) e **Monitor S3 27" 120 Hz** (contra o S3 24" do catálogo, o S3 de 100 Hz e o AOC 27B35HM) — o primeiro fora de celular e controle | **Dele**: pedir indexação do comparativo do monitor |
+| Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Em **17/09** a página passou a **linkar os 3 guias** e cada guia a linkar de volta pela trilha, e a tabela passou a dizer **quantos dias de preço cada produto tem** | **Dele**: pedir indexação das 4 quando quiser acelerar |
 | Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
 | Catálogo | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
@@ -99,6 +99,23 @@ Faltam 2 ou 3 nomes novos conferíveis pra ele valer a pena.
 Realme C73 entrou com o que o anúncio diz, e o **Redmi 15C ficou de fora**
 mesmo com link gerado. A da Motorola abre e vem completa — é a fonte que
 funciona.
+
+🔴 **Não procure de novo a ficha do Realme C73: ela não existe no Brasil.**
+Conferido em 17/09/2026, em cima da tentativa de escrever o comparativo dele.
+`realme.com/br/realme-c73` e `/realme-c73-5g` dão **404**, e o site brasileiro
+da Realme lista C33, C63 e C75 — não o C73. A única ficha oficial que existe é
+a do **C73 5G indiano** (Dimensity 6300, 5G, câmera de 32 MP, IP64), que é
+**outro aparelho**: o nosso anúncio diz 4 GB de RAM e não fala em 5G. Usar a
+ficha indiana seria exatamente o erro que o `npm run fichas` nasceu para pegar.
+**O C73 fica sem comparativo próprio** até a Realme publicar a página — ele
+continua como coluna do comparativo do G06, com as células em "Não divulgado".
+
+🟢 **Fontes de ficha que abrem bem por `WebFetch`, medido em 17/09:**
+`samsung.com/br` (monitores, ficha completa com brilho, contraste, entradas e
+VESA) e `aoc.com/pt` (a página do produto; a URL `/specification` dá 404).
+Somadas à Motorola, são as três que funcionam. Samsung de **celular** continua
+truncando a seção de especificações — o problema é por linha de produto, não
+por marca.
 
 ⚠️ **Por que o guia até R$ 2.500 parou:** a faixa de R$ 1.500 a 2.500 quase não
 tem aparelho com ficha oficial acessível (veja a armadilha do `WebFetch` em
@@ -522,6 +539,19 @@ desligou o **A36** e o **OPPO A6t** dizendo "sumiu do Meli", e os dois estavam
 `/products/{id}/items`, que é outra coisa — catálogo sem nenhuma oferta ativa.
 **Se um produto sumir da vitrine sem motivo, rode o workflow à mão antes de
 mexer no JSON**: a rodada seguinte costuma corrigir sozinha.
+
+⚠️ **E aconteceu de novo em 17/09**, com o mesmo A36: a rodada das 15h24 UTC
+desligou o aparelho outra vez, mantendo o preço em R$ 1.649. Ou seja, **não
+foi episódio único — é comportamento recorrente da API para esse anúncio**. A
+rodada #13 foi disparada à mão no mesmo dia. Se isso virar rotina diária, o
+caminho não é mexer no JSON: é investigar se o `meli_id` do A36 deveria ser o
+do anúncio (`MLB-...`) em vez do produto de catálogo.
+
+⚠️ **Rodar o workflow à mão pelo GitHub, sem `gh` na máquina:** não existe `gh`
+instalado aqui (conferido em 17/09). O caminho é o Chrome logado dele —
+Actions → Conferir preços → *Run workflow*. O botão verde de confirmação não
+aparece por `find`: pegue-o pelo `read_page` com `filter: interactive` (é o
+`button type="submit"` logo abaixo do genérico "Run workflow").
 
 ⚠️ **Rodar o workflow à mão é seguro, rodar `npm run precos:conferir` na
 máquina não é** — o segundo invalida o refresh token do GitHub (ver acima).
