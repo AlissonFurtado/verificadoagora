@@ -389,6 +389,357 @@
         }
       ],
       "escrito_em": "2026-09-11"
+    },
+    {
+      "slug": "vale-esperar-black-friday-celular",
+      "titulo": "Vale esperar a Black Friday para comprar celular?",
+      "resumo": "A Black Friday de 2026 é em 27 de novembro. Para celular, a resposta honesta não é \"sim\" nem \"não\": depende de qual aparelho você quer e de quanto ele custava nas semanas anteriores. Abaixo, quatro perguntas respondidas em uma frase cada — e o que fazer com o preço que você está vendo hoje.",
+      "perguntas": [
+        {
+          "chave": "celular-cai-mesmo",
+          "pergunta": "Celular cai de preço na Black Friday?",
+          "resposta_curta": "Cai, mas quase sempre só o modelo da linha anterior. O lançamento do ano vende igual com ou sem data comemorativa, então a loja não tem motivo para dar desconto grande nele.",
+          "opcoes": [
+            {
+              "rotulo": "Linha anterior",
+              "para_quem": "Quem aceita o modelo do ano passado",
+              "explicacao": "É onde a queda acontece de verdade: a loja quer esvaziar estoque antes de o sucessor ocupar a prateleira. Um intermediário de 12 a 18 meses costuma ser a melhor compra da data."
+            },
+            {
+              "rotulo": "Lançamento do ano",
+              "para_quem": "Quem quer o modelo mais novo",
+              "explicacao": "Desconto pequeno, quando existe. Esperar novembro para comprar um lançamento raramente compensa — e o preço dele costuma cair de forma constante ao longo do ano seguinte, sem precisar de data."
+            }
+          ],
+          "detalhe": [
+            "O desconto que aparece na vitrine é calculado sobre o preço \"de\", e quem escolhe esse número é a loja. Ele não precisa ter sido cobrado recentemente, nem por aquele vendedor. É por isso que 50% OFF não quer dizer metade do que você pagaria semana passada.",
+            "O número que resolve a dúvida é outro: quanto o mesmo anúncio custava nos últimos 30 dias. É esse que guardamos todo dia para os aparelhos que acompanhamos."
+          ],
+          "cuidado": "Modelo com outra memória, outra cor ou outro vendedor é outro anúncio — e outro histórico de preço. Comparar o preço do 128 GB de hoje com o do 256 GB de outubro não diz nada."
+        },
+        {
+          "chave": "quando-comecar-a-olhar",
+          "pergunta": "Com quanta antecedência devo acompanhar o preço?",
+          "resposta_curta": "Trinta dias bastam para pegar a manobra mais comum, que é subir o preço em outubro para \"baixar\" em novembro. Sessenta dias deixam a conta segura.",
+          "opcoes": [
+            {
+              "rotulo": "30 dias",
+              "para_quem": "Quem decidiu agora que vai comprar",
+              "explicacao": "Cobre o período em que o preço costuma ser inflado antes da data. Se em 30 dias o valor só subiu, o \"desconto\" de novembro pode ser só a volta ao normal."
+            },
+            {
+              "rotulo": "60 a 90 dias",
+              "para_quem": "Quem pode esperar",
+              "explicacao": "Mostra também a tendência do modelo: aparelho em fim de vida cai devagar o ano inteiro, e aí a Black Friday é só mais um dia da descida."
+            }
+          ],
+          "detalhe": [
+            "Nas páginas de produto deste site o gráfico tem botões de 30, 60 e 90 dias. Eles ligam conforme o robô acumula histórico: começamos a guardar preço em 7 de setembro de 2026, então períodos maiores aparecem desligados até termos os dias de verdade.",
+            "Preferimos mostrar um botão desligado a mostrar uma linha de 10 dias com o rótulo de 90. Prometer histórico que não existe é o mesmo erro do preço riscado."
+          ],
+          "cuidado": "Comparador que mostra \"menor preço já registrado\" sem dizer desde quando registra não está te dando informação: \"menor preço de sempre\" pode significar menor preço desde anteontem."
+        },
+        {
+          "chave": "pix-ou-parcelado",
+          "pergunta": "O preço da Black Friday vale no cartão?",
+          "resposta_curta": "Nem sempre. Boa parte das ofertas anuncia o valor do Pix, e no cartão o preço é outro — às vezes o suficiente para acabar com o desconto.",
+          "opcoes": [
+            {
+              "rotulo": "Preço no Pix",
+              "para_quem": "Quem tem o dinheiro na hora",
+              "explicacao": "É o número que aparece grande no anúncio. Quando é só do Pix, marcamos \"no Pix\" no card, porque prometer no cartão o que a loja só dá no Pix é mentir para quem vai parcelar."
+            },
+            {
+              "rotulo": "Preço parcelado",
+              "para_quem": "Quem vai dividir",
+              "explicacao": "Confira o total, não a parcela. Doze vezes de um valor confortável pode dar mais caro que o preço à vista de outro anúncio — e juros embutidos não aparecem no selo de desconto."
+            }
+          ],
+          "detalhe": [
+            "Nosso robô lê o preço de tabela da API do Mercado Livre, que é o do cartão. Quando o preço do Pix é menor, ele aparece no anúncio e não no nosso número — é o tipo de diferença que vale abrir o link e conferir antes de fechar a compra."
+          ],
+          "cuidado": "Cupom de primeira compra e desconto de aplicativo somem no fim do carrinho para quem não se encaixa na regra. O preço que vale é o da última tela, não o da vitrine."
+        },
+        {
+          "chave": "esperar-ou-comprar-agora",
+          "pergunta": "E se o celular que eu quero já está barato hoje?",
+          "resposta_curta": "Então esperar pode custar mais caro: preço de eletrônico também sobe, e estoque de oferta acaba. Se o valor de hoje é o menor que o histórico registra, a data não tem nada melhor a oferecer.",
+          "opcoes": [
+            {
+              "rotulo": "Comprar agora",
+              "para_quem": "Quem vê o menor preço observado",
+              "explicacao": "Sem histórico, isso é palpite. Com histórico, é conta: se em 30 ou 60 dias o aparelho nunca esteve mais barato, você já está no melhor momento que se pode provar."
+            },
+            {
+              "rotulo": "Esperar novembro",
+              "para_quem": "Quem vê o preço acima da média",
+              "explicacao": "Se o valor de hoje está perto do maior que já registramos, esperar faz sentido — e acompanhar é de graça."
+            }
+          ],
+          "detalhe": [
+            "Não existe \"o preço vai cair\" garantido. O que existe é saber onde o preço de hoje está dentro da faixa dos últimos meses. Essa é a única parte da decisão que se pode medir, e é a que a gente entrega."
+          ],
+          "cuidado": "Contagem regressiva não é informação: nenhum site sabe quando a loja vai encerrar a oferta, nem nós. Se uma página promete saber, ela está vendendo urgência, não preço."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB65041644",
+          "nota": "O degrau de entrada: tela de 6,7 pol. LCD, 60 Hz, Full HD+, 1.050 nits e bateria de 5.200 mAh · 20 W. Está a {preco}, conferido em {data} — e o gráfico da ficha mostra cada dia desde que começamos a olhar.",
+          "ficha": {
+            "Tela": "6,7 pol. LCD, 60 Hz, Full HD+, 1.050 nits",
+            "Bateria e carregamento": "5.200 mAh · 20 W"
+          }
+        },
+        {
+          "meli_id": "MLB47115842",
+          "nota": "O que dura: até 6 versões novas de Android, 5.000 mAh · 45 W. É o tipo de aparelho cujo preço oscila bastante ao longo do ano — acompanhar 60 dias antes vale mais aqui do que em qualquer outro da lista. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Atualizações do Android": "Até 6 versões",
+            "Bateria e carregamento": "5.000 mAh · 45 W"
+          }
+        },
+        {
+          "meli_id": "MLB47245501",
+          "nota": "O degrau acima: 6,7 pol. pOLED, 120 Hz, 4.500 nits e 5.200 mAh · 68 W. Aparelho recente costuma cair menos na data do que o intermediário do ano passado. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Tela": "6,7 pol. pOLED, 120 Hz, 4.500 nits",
+            "Bateria e carregamento": "5.200 mAh · 68 W"
+          }
+        }
+      ],
+      "veredito": "Juntando as quatro respostas: esperar a Black Friday vale para quem quer um intermediário da linha anterior e começou a acompanhar o preço com pelo menos 30 dias de antecedência. Não vale para lançamento, e não vale se o aparelho que você quer já está no menor valor que o histórico registra — nesse caso a data só adiciona risco de estoque acabar. A regra prática é uma só: compare com o preço de ontem, nunca com o preço riscado.",
+      "fontes": [
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        },
+        {
+          "titulo": "Moto G17 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g17-128-gb/p"
+        },
+        {
+          "titulo": "Motorola Edge 60 Fusion 5G — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-motorola-edge-60-fusion-5g/p"
+        },
+        {
+          "titulo": "Samsung Galaxy A36 5G — especificações (GSMArena)",
+          "url": "https://www.gsmarena.com/samsung_galaxy_a36-13497.php"
+        }
+      ],
+      "escrito_em": "2026-09-16"
+    },
+    {
+      "slug": "vale-esperar-black-friday-monitor-e-notebook",
+      "titulo": "Vale esperar a Black Friday para comprar monitor, notebook ou SSD?",
+      "resumo": "Nas três categorias a resposta é diferente, e ignorar isso é o jeito mais fácil de pagar caro em novembro. Abaixo, três perguntas respondidas em uma frase cada, e o que o preço dos últimos meses tem a dizer sobre a compra de hoje.",
+      "perguntas": [
+        {
+          "chave": "qual-categoria-cai",
+          "pergunta": "O que cai mais de preço: monitor, notebook ou SSD?",
+          "resposta_curta": "O SSD é o que mais varia, porque o preço da memória muda o ano inteiro por motivos de mercado; monitor cai de forma moderada e previsível; notebook de configuração fraca é o que mais aparece com desconto grande — e é justamente o que costuma valer menos a pena.",
+          "opcoes": [
+            {
+              "rotulo": "SSD e armazenamento",
+              "para_quem": "Quem vai atualizar o computador",
+              "explicacao": "O preço acompanha o mercado de memória, não a data. Já aconteceu de SSD estar mais barato em agosto do que na Black Friday seguinte — acompanhar o histórico aqui rende mais que esperar o dia."
+            },
+            {
+              "rotulo": "Monitor",
+              "para_quem": "Quem quer tela nova",
+              "explicacao": "Queda moderada e bem distribuída. Modelo com sucessor anunciado cai mais; o resto acompanha a média da loja."
+            },
+            {
+              "rotulo": "Notebook",
+              "para_quem": "Quem precisa de máquina",
+              "explicacao": "É onde aparecem os descontos mais chamativos, quase sempre em configuração de entrada. Desconto grande em máquina que não dá conta do seu uso continua sendo dinheiro mal gasto."
+            }
+          ],
+          "detalhe": [
+            "Nas três, o desconto anunciado usa o preço \"de\" escolhido pela loja. O dado que resolve é o preço praticado nas semanas anteriores, que é o que guardamos todo dia para os produtos que acompanhamos.",
+            "E há a diferença de vida útil: monitor dura dez anos, SSD dura muitos e notebook de entrada envelhece rápido. Economizar 20% num aparelho que você vai trocar em dois anos rende menos que pagar o preço cheio no que vai ficar uma década."
+          ],
+          "cuidado": "Notebook em promoção costuma vir com 4 GB de RAM e armazenamento pequeno. Antes de olhar o desconto, olhe se a máquina roda o que você precisa — inclusive se o processador é ARM, caso em que nem todo programa de Windows funciona."
+        },
+        {
+          "chave": "monitor-o-que-importa",
+          "pergunta": "No monitor, o que muda de verdade entre um modelo e outro?",
+          "resposta_curta": "Tamanho e resolução juntos, não separados: Full HD fica nítido em 24 polegadas e visivelmente menos nítido em 27, com o mesmo número de pixels espalhado numa área maior.",
+          "opcoes": [
+            {
+              "rotulo": "24 polegadas",
+              "para_quem": "Mesa pequena, trabalho com texto",
+              "explicacao": "Full HD nesse tamanho tem boa definição na distância normal de uma mesa. É o encaixe mais seguro para quem passa o dia lendo e escrevendo."
+            },
+            {
+              "rotulo": "27 polegadas",
+              "para_quem": "Jogo e vídeo, mesa funda",
+              "explicacao": "Tela maior para a mesma resolução: mais imersão, menos nitidez de perto. Compensa quando você senta mais longe ou usa principalmente para jogar e assistir."
+            }
+          ],
+          "detalhe": [
+            "A taxa de atualização é o outro número que muda a sensação de uso: 120 Hz dá o dobro de quadros de um monitor comum, e isso aparece em jogo e até na rolagem do navegador — desde que o computador consiga entregar esses quadros."
+          ],
+          "cuidado": "Confira a entrada antes de comprar. Anúncio que só cita HDMI pode não ter DisplayPort, e placa de vídeo antiga pode não ter a saída que o monitor pede."
+        },
+        {
+          "chave": "ssd-antes-de-comprar",
+          "pergunta": "Qualquer SSD serve no meu computador?",
+          "resposta_curta": "Não. SSD M.2 NVMe só funciona em máquina com esse encaixe; computador antigo que só tem entrada SATA precisa do modelo de 2,5 polegadas, e nenhum adaptador resolve isso direito.",
+          "opcoes": [
+            {
+              "rotulo": "M.2 NVMe",
+              "para_quem": "Placa ou notebook com slot M.2",
+              "explicacao": "É o formato de pente, o mais rápido. Em slot PCIe 3.0 ele funciona, mas fica limitado a cerca de 3.500 MB/s — a velocidade anunciada só aparece em PCIe 4.0."
+            },
+            {
+              "rotulo": "SATA de 2,5 polegadas",
+              "para_quem": "Computador antigo",
+              "explicacao": "Bem mais lento que o NVMe, e ainda assim a maior diferença que existe para quem sai de um HD mecânico. Antes de sonhar com 6.000 MB/s, veja o que a sua máquina aceita."
+            }
+          ],
+          "detalhe": [
+            "Essa conferência leva dois minutos no manual da placa-mãe ou no site do fabricante do notebook, e evita o motivo número um de devolução de SSD comprado em promoção."
+          ],
+          "cuidado": "Velocidade anunciada é de leitura sequencial, o melhor caso. O ganho que você sente no dia a dia — abrir sistema e programa — depende pouco desse número e muito de sair do HD mecânico."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB51435621",
+          "nota": "O encaixe de mesa pequena e trabalho com texto. Está a {preco}, conferido em {data} — e a ficha mostra o preço de cada dia desde que entrou aqui.",
+          "ficha": {}
+        },
+        {
+          "meli_id": "MLB53838786",
+          "nota": "O mesmo Full HD numa tela maior: melhor para jogo e vídeo, menos nítido de perto. Está a {preco}, conferido em {data}.",
+          "ficha": {}
+        },
+        {
+          "meli_id": "MLB39766120",
+          "nota": "O caso em que conferir o encaixe antes vale mais que qualquer desconto: é M.2 NVMe, e não entra em máquina que só tem SATA. Está a {preco}, conferido em {data}.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Para SSD, acompanhe o preço e compre quando estiver baixo, independentemente do calendário — essa categoria não obedece a data. Para monitor, esperar a Black Friday costuma render um desconto real e modesto, então vale se você não tem pressa. Para notebook, o conselho é o inverso do instinto: escolha primeiro a configuração que dá conta do seu uso e só depois compare preço, porque o desconto grande de novembro quase sempre está na máquina que não serve.",
+      "fontes": [
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        }
+      ],
+      "escrito_em": "2026-09-16"
+    },
+    {
+      "slug": "vale-esperar-black-friday-controle-de-videogame",
+      "titulo": "Vale esperar a Black Friday para comprar controle de videogame?",
+      "resumo": "Controle é dos itens que mais caem de preço na data — e também um dos que mais se compra errado, porque a escolha não é de qualidade, é de compatibilidade. Abaixo, três perguntas respondidas em uma frase cada.",
+      "perguntas": [
+        {
+          "chave": "controle-cai-na-data",
+          "pergunta": "Controle cai de preço na Black Friday?",
+          "resposta_curta": "Cai, e costuma ser um dos descontos mais reais da data, porque acessório de console tem margem maior e estoque grande. Ainda assim, o valor anunciado precisa ser comparado com o das semanas anteriores, não com o preço riscado.",
+          "opcoes": [
+            {
+              "rotulo": "Controle oficial",
+              "para_quem": "Quem tem PlayStation ou Xbox",
+              "explicacao": "Desconto menor em porcentagem, mas sobre um preço alto — costuma ser a maior economia em reais da categoria."
+            },
+            {
+              "rotulo": "Controle de terceiros",
+              "para_quem": "PC, celular e Switch",
+              "explicacao": "Preço já baixo o ano inteiro, então a queda extra da data é pequena. Aqui o ganho está em escolher o modelo certo, não o dia certo."
+            }
+          ],
+          "detalhe": [
+            "Como acessório costuma ter várias versões do mesmo produto na loja, confira se o anúncio em promoção é o modelo que você quer — cor diferente e edição especial têm preços que não se comparam entre si."
+          ],
+          "cuidado": "Kit com dois controles genéricos por menos que um oficial parece vantagem, mas se a marca não tem suporte nem peça de reposição, o barato dura uma temporada."
+        },
+        {
+          "chave": "compatibilidade",
+          "pergunta": "Posso usar qualquer controle no meu console?",
+          "resposta_curta": "Não. Console tem trava de licenciamento: no PlayStation 5 só funciona o controle oficial, e no Xbox só o que tem licença da Microsoft. Controle genérico resolve PC, celular e Switch.",
+          "opcoes": [
+            {
+              "rotulo": "PlayStation 5",
+              "para_quem": "Quem joga no PS5",
+              "explicacao": "Só o oficial. Não existe alternativa barata que funcione, e é por isso que a comparação de preço aqui é entre um produto e ele mesmo em outro dia."
+            },
+            {
+              "rotulo": "Xbox",
+              "para_quem": "Quem joga no Xbox",
+              "explicacao": "Aceita controles de terceiros licenciados, quase sempre com fio. É a plataforma com mais opção boa e barata."
+            },
+            {
+              "rotulo": "PC, celular e Switch",
+              "para_quem": "Quem não joga em console da Sony ou Microsoft",
+              "explicacao": "Aqui o genérico brilha: os modelos com sensores Hall Effect nos analógicos custam pouco e não desenvolvem o drift."
+            }
+          ],
+          "detalhe": [
+            "Antes de olhar preço, decida a plataforma. É a única linha da comparação que não tem meio-termo: um controle que não liga no seu console não é barato, é inútil."
+          ],
+          "cuidado": "Anúncio que promete funcionar \"em todos os consoles\" está errado ou está falando de adaptador vendido à parte — e adaptador acrescenta atraso de resposta."
+        },
+        {
+          "chave": "drift",
+          "pergunta": "O que é o drift, e dá para evitar na hora da compra?",
+          "resposta_curta": "Drift é o analógico movendo o personagem sozinho por desgaste da peça, e dá para evitar sim: controle com sensores Hall Effect usa campo magnético, sem contato físico, e esse defeito não aparece.",
+          "opcoes": [
+            {
+              "rotulo": "Hall Effect",
+              "para_quem": "Quem já perdeu controle para o drift",
+              "explicacao": "Comum em controles de terceiros para PC e Switch, e barato. É a melhoria mais concreta que existe nessa faixa de preço."
+            },
+            {
+              "rotulo": "Analógico comum",
+              "para_quem": "Quem precisa do controle oficial",
+              "explicacao": "É o que vem nos controles oficiais de console, inclusive nos caros. Dura bastante, mas o desgaste é questão de tempo de uso."
+            }
+          ],
+          "detalhe": [
+            "É a razão pela qual muita gente compra o segundo controle oficial: não porque quis, mas porque o primeiro começou a andar sozinho. Se você joga no PC, escolher Hall Effect resolve o problema antes dele acontecer."
+          ],
+          "cuidado": "Alguns anúncios dizem \"anti-drift\" sem especificar a tecnologia. Se a ficha não diz Hall Effect ou sensor magnético, trate como analógico comum."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB18910381",
+          "nota": "O caso em que não existe alternativa: no PS5, só ele. Analógicos de potenciômetro — sujeito a drift, como todo controle oficial. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Analógicos": "Potenciômetro — sujeito a drift"
+          }
+        },
+        {
+          "meli_id": "MLB24473062",
+          "nota": "O caminho do Xbox: Hall Effect, com fio, que troca conforto por latência menor e nenhuma preocupação com carga. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Analógicos": "Hall Effect",
+            "Conexão": "Só com fio (USB-C)"
+          }
+        },
+        {
+          "meli_id": "MLB47251297",
+          "nota": "O caminho de quem joga em PC, Switch e celular: Hall Effect e sem fio, por uma fração do preço do oficial. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Analógicos": "Hall Effect"
+          }
+        }
+      ],
+      "veredito": "Controle é uma das compras em que esperar a data costuma valer mesmo — mas só depois de resolver a compatibilidade. Se o seu console é PS5, a escolha é entre comprar o oficial hoje ou em novembro, e aí o histórico de preço decide. Se você joga em PC, celular ou Switch, o ganho maior não está na data: está em escolher um controle com Hall Effect, que custa pouco e não desenvolve o defeito que aposenta a maioria dos controles.",
+      "fontes": [
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        },
+        {
+          "titulo": "Controle sem fio DualSense — página oficial da PlayStation Brasil",
+          "url": "https://www.playstation.com/pt-br/accessories/dualsense-wireless-controller/"
+        }
+      ],
+      "escrito_em": "2026-09-16"
     }
   ]
 }
