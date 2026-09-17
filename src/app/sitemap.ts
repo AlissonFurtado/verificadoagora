@@ -27,6 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     },
+    {
+      // Sazonal, mas a URL é perene: em 2027 a mesma página é reescrita, e o
+      // que ela já tiver de autoridade não se perde.
+      url: `${base}/black-friday`,
+      lastModified: new Date(metadata.ultima_atualizacao),
+      changeFrequency: 'daily' as const,
+      priority: 0.9,
+    },
     ...visiveis.map((produto) => ({
       url: `${base}${caminhoDoProduto(produto)}`,
       lastModified: new Date(produto.verificado_em),
