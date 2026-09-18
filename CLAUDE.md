@@ -45,6 +45,10 @@ leitura antes de opinar sobre o futuro desta landing:
   alcance dele: <https://claude.ai/code/artifact/cce97c0b-5eec-40d2-8465-65158b65f34a>
 - **Vender sem sair de casa** — o plano comercial:
   <https://claude.ai/code/artifact/df4e549b-355a-4b17-b283-e483170bc937>
+- **O ativo é o histórico** (18/09/2026) — o diagnóstico com os números reais do
+  Search Console, a pesquisa de conversão que gerou a barra fixa e a "escolha em
+  5 segundos", e o plano por ordem de retorno:
+  <https://claude.ai/artifact/WfSJ9nzQ1E12jDBgGckUAN>
 
 ⚠️ **O que isso significa para este projeto:** ele continua, mas rebaixado a
 **ativo de 6 a 12 meses que compõe sozinho** — não é a fonte de renda de 2026.
@@ -74,6 +78,8 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 
 | Frente | Estado | De quem é a vez |
 |---|---|---|
+| Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
+| Próximos passos de retenção | 🔴 Do plano do relatório, **nada começou**: (a) frase de histórico no topo da ficha — *"acompanhamos há N dias · menor foi R$ X em DD/MM"*, que é a frase citável por IA; (b) página **"o que caiu de preço"**, gerada do histórico, que é o motivo de voltar amanhã; (c) coluna de critérios fixa e zebra na tabela do desktop | **Minha** para (a) e (c); (b) vale decidir com ele o escopo. **Decisão dele**: alerta de queda por e-mail/push, único item que precisa de infraestrutura nova |
 | **SEO: 4 frentes escolhidas, 1 entregue** | Ele pediu **todas as quatro** em 17/09. 🟢 Feita: `guias-relacionados` passou a cobrir toda categoria. 🔴 **Faltam três**: (a) 2 guias de decisão — *"SSD SATA ou NVMe: qual serve no seu PC?"* e *"Quantos lumens um projetor precisa ter?"*, que puxam SSD NV3, SanDisk e HY320; (b) 2 guias de Black Friday — projetor/TV e eletrodoméstico; (c) comparativo do **Galaxy A07** contra G06, C73, G15 e A16 (as fichas desses quatro já estão nos comparativos, é só copiar palavra por palavra) | **Minha** — é só retomar, não depende dele |
 | HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | **Dele**: avisar o cliente para trocar o link no Instagram, no Google Meu Negócio e em cartão |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
@@ -789,6 +795,25 @@ encontra menos do que esperava, nunca mais.
 
 ⚠️ **Por isso nenhum produto do catálogo tem `preco_no_pix: true`** — o campo
 existe, mas só serviria se o robô parasse de mexer nele.
+
+### 🔴 A linha vermelha de "deixar o site mais viciante"
+
+Pedido dele em 18/09/2026, e a resposta pesquisada — **porque o caminho óbvio
+mata o site**. Estes quatro estão na mira explícita das políticas de spam do
+Google de 2026, e o primeiro contradiz o nome da marca:
+
+- **Cronômetro de oferta** e **"restam 2 unidades"**: não sabemos quando a
+  promoção acaba nem quanto há em estoque. Contagem inventada é o exemplo de
+  manual de padrão enganoso. (Já estava proibido desde a paleta original.)
+- **Ficha em massa sem julgamento**: é a definição de *thin affiliate*. **71%
+  dos sites de afiliados perderam posição no core update de março/2026** — é a
+  categoria mais atingida do ano.
+- **Pop-up que sequestra a saída**: virou política de spam nomeada em 2026.
+
+**O que prende leitor sem cruzar a linha**, e é o que foi implementado: dizer
+onde o produto perde, responder por perfil antes da prova, e deixar o botão
+alcançável sem rolar de volta. ⚠️ **Se algum dia a conversa voltar a "deixa
+mais agressivo", é esta seção que responde.**
 
 ### O que reprova um candidato (casos reais de 17/09)
 
