@@ -225,16 +225,53 @@ produção.
 | `TXT @` | Search Console | ativo, **não apague** |
 | `ALIAS hrvidros` | **landing do HR Vidros** | 🔴 **ativo — é de cliente** |
 | `ALIAS api-licitacoes`, `CNAME licitacoes` | nada | mortos, podem sair |
-| `A ftp` → `45.132.157.6` | ? | não auditado |
+| `A ftp` → `45.132.157.6` | o servidor da hospedagem | auditado em 17/09 |
 
 ⚠️ **`hrvidros.verificadoagora.com.br` é a página de um cliente real** (a
-vidraçaria de Parauapebas) e `hrvidros.afdesousa.com.br` ainda não resolve.
-Não apague esse registro.
+vidraçaria de Parauapebas). **Não apague esse registro** — e agora menos ainda:
+ele vai virar um 301 (veja abaixo).
 
-⚠️ **A institucional da A F DE SOUSA está sem endereço** desde 09/09/2026:
-morava no `www` daqui e saiu quando ele passou a servir a landing. O
-`afdesousa.com.br` responde "Página padrão" da Hostinger. Decisão do Alisson,
-com o aviso dado antes. Pendência da sessão do Vidraceiro.
+🟢 **A institucional da A F DE SOUSA voltou ao ar** em `afdesousa.com.br`
+("Site e WhatsApp para construção civil em Parauapebas"), conferido em
+17/09/2026. O `CLAUDE.md` dizia que ela estava sem endereço desde 09/09 —
+estava desatualizado.
+
+### A migração do HR Vidros para `hrvidros.afdesousa.com.br` (17/09/2026)
+
+Decisão do Alisson: tirar o site do cliente do domínio do verificadoagora.
+**Escolhido: novo no ar + 301 do antigo, mantendo o antigo uns 6 meses.** A
+razão está medida: no Search Console de 28 dias, **7 das 10 consultas do
+domínio são do HR Vidros** (`vidraçaria em parauapebas`, `box de banheiro`,
+`janelas de vidro`) — cortar seco jogaria fora a posição do cliente.
+
+O que já está feito:
+
+- 🟢 Subdomínio **`hrvidros.afdesousa.com.br` criado** no hPanel, pasta
+  `/home/u278485813/domains/afdesousa.com.br/public_html/hrvidros`.
+- 🟢 **Site copiado**: o `index.html` de **26.749 bytes** (conferido byte a
+  byte contra o original). ⚠️ **O site é um arquivo só** — a pasta `assets/`
+  está vazia e não há nenhuma URL do domínio antigo dentro do HTML (sem
+  canonical, sem og:url), então nada precisa ser reescrito.
+
+O que falta, em ordem:
+
+1. 🔴 **Registro DNS**: `A` · nome `hrvidros` · valor **`45.132.157.6`** ·
+   TTL 14400, na zona do `afdesousa.com.br`.
+2. SSL do subdomínio novo (Segurança → SSL, depois que o DNS propagar).
+3. **Redirect 301** de `hrvidros.verificadoagora.com.br` para o novo
+   (Domínios → Redirecionamentos, no site do verificadoagora).
+4. Só depois de ~6 meses, remover o `ALIAS hrvidros` desta zona.
+
+⚠️ **Duas armadilhas do painel, medidas nesse dia:**
+
+- **O diálogo "Copy" do gerenciador de arquivos não sai da raiz do site.** Não
+  dá para copiar de `verificadoagora.com.br/public_html` para
+  `afdesousa.com.br/public_html` por ele, mesmo abrindo "todos os arquivos do
+  plano". O que funcionou: baixar por HTTP (`curl` na página pública, que é
+  estática) e subir pelo upload do gerenciador, conferindo o tamanho em bytes.
+- 🔴 **O Editor de Zona DNS trava** ao abrir o seletor "Tipo" do formulário de
+  novo registro: a aba deixa de responder a screenshot e a script, e recarregar
+  não resolve. Foi por isso que o passo 1 ficou para o Alisson fazer à mão.
 
 ## Stack, e onde ela diverge do padrão
 
