@@ -51,7 +51,7 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 17/09/2026
+## Onde paramos — 18/09/2026 (madrugada)
 
 Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
 
@@ -66,8 +66,17 @@ no Linkbuilder e cola no chat → eu escrevo `descricao` e `analise` e publico.
 **Ele topou até 20 links por dia.** Em 16/09 ele mandou 9 de uma vez e 8
 viraram produto no mesmo dia.
 
+🟢 **Em 17/09 o ciclo ficou bem mais rápido e eu toquei ele inteiro**: o
+Linkbuilder **aceita a fila toda de uma vez, uma URL por linha** (ver "A
+armadilha dos links"), então as 12 viraram 12 `meli.la` num clique só, e 7
+viraram produto no mesmo dia. **Ele não precisa mais colar link por link** —
+se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
+
 | Frente | Estado | De quem é a vez |
 |---|---|---|
+| **SEO: 4 frentes escolhidas, 1 entregue** | Ele pediu **todas as quatro** em 17/09. 🟢 Feita: `guias-relacionados` passou a cobrir toda categoria. 🔴 **Faltam três**: (a) 2 guias de decisão — *"SSD SATA ou NVMe: qual serve no seu PC?"* e *"Quantos lumens um projetor precisa ter?"*, que puxam SSD NV3, SanDisk e HY320; (b) 2 guias de Black Friday — projetor/TV e eletrodoméstico; (c) comparativo do **Galaxy A07** contra G06, C73, G15 e A16 (as fichas desses quatro já estão nos comparativos, é só copiar palavra por palavra) | **Minha** — é só retomar, não depende dele |
+| HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | **Dele**: avisar o cliente para trocar o link no Instagram, no Google Meu Negócio e em cartão |
+| Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
 | Lembrete dos links | 🟢 **Funcionou de verdade em 17/09**: o e-mail das 16h12 chegou, com os 12 candidatos e o bloco de URLs. A rotina está validada de ponta a ponta. ⚠️ **Mas o Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar o e-mail em texto puro (não feito) | **Dele**: dizer se quer que eu ajuste a rotina para texto puro |
 | Perguntas nas fichas | 🟢 **As 25 fichas têm, desde 17/09** — 30 perguntas novas escritas para os 10 produtos de 15 e 16/09. Nenhum número novo: tudo saiu da `analise` e da `descricao` | Ninguém |
 | Conferir no celular | 🟡 Pendente de 16/09: os **3 comparativos novos**, o **filtro do gráfico**, a **tabela da `/black-friday`** (rola de lado). De 17/09: o **comparativo do monitor** (10 linhas de ficha — é o maior até agora nos blocos do celular) e as **perguntas nas fichas** | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
@@ -80,15 +89,11 @@ viraram produto no mesmo dia.
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
 | A36: dois cadastros | 🟢 **Resolvido em 17/09.** O anúncio antigo (`MLB47115842`) saiu do ar e ficou `disponivel: false`; o novo, verde-limão (`MLB47111438`), entrou a R$ 1.544,32. O comparativo **mantém a URL antiga** (a que o Google conhece) e tira preço, botão e foto do anúncio vivo, via o campo `tambem` — ver "Quando o anúncio morre e a página fica" | Ninguém |
 | Catálogo | 🟢 **32 produtos desde 17/09** — entraram A36 verde, Galaxy A07, Projetor HY320, Placa-mãe Asus TUF B550M-PLUS, SSD Externo SanDisk 1TB, Liquidificador Oster e Micro-ondas Electrolux, todos com `analise` escrita à mão e ficha lida no anúncio. **Os 7 estão sem `perguntas`** | Ninguém — perguntas quando sobrar fôlego |
-| Catálogo (antes) | 🟢 **25 produtos** (23 em 15/09 + Moto G06 e DualSense em 16/09): entraram Realme C73, OPPO A6t, Edge 60 Fusion, Roku Stick, SSD NV3, monitores S3 24"/27" e Galaxy Book Go — categoria nova `Informática`. **Sem `perguntas`** (campo opcional, ficou pra depois). Com 5 celulares, dá pra comparativo novo e pra retomar o guia até R$ 2.500 (Edge 60 Fusion entrou) | Ninguém — próximo passo é comparativo, sob pedido dele |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
 | Instagram | 🔴 **O 1º post não saiu sozinho em 12/09: a notificação do Metricool nunca chegou no celular dele.** Veja "A notificação que não chega", abaixo. A arte e a legenda do G17 foram entregues pelo chat pra ele publicar à mão — **não confirmado se chegou a sair: pergunte** | **Dele**: publicar o G17 se ainda não saiu, e conferir a permissão de notificação do app do Metricool — senão o A36 (13/09, 10h) para no mesmo lugar. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
-| Guia de decisão `/guia/quanto-de-memoria-no-celular` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
-| Guia de decisão `/guia/tela-de-celular-amoled-ou-lcd` | No ar desde 10/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
-| Guia de decisão `/guia/quantos-anos-de-atualizacao-no-celular` | No ar desde 11/09; **indexação pedida em 11/09** | Ninguém — é esperar o Google |
-| Perguntas nas 15 fichas | No ar desde 10/09 | Ninguém — é esperar o Google reavaliar as 8 recusadas |
+| Os 3 guias de decisão de celular (`quanto-de-memoria`, `tela-amoled-ou-lcd`, `quantos-anos-de-atualizacao`) | No ar desde 10–11/09, indexação pedida em 11/09, **todos indexados em ~1 dia** — e o de memória já aparece em consulta real (ver "O primeiro retrato de busca") | Ninguém |
 | Guia de faixa até R$ 2.500 | 🔴 **Parado**, e a razão importa | Decisão dele: ver abaixo |
 | Comparativo no celular | Blocos por critério no ar desde 11/09 (era tabela deslizante com a coluna fixa vazando por cima do texto) | **Dele**: conferir no aparelho |
 | Home no celular | Atalhos viraram tira que rola de lado em 11/09 | **Dele**: conferir no aparelho |
@@ -1200,6 +1205,40 @@ autoridade. É o alvo dos comparativos, e agora tem prova neste domínio.
 "rastreada, mas não indexada"** — todas fichas de produto de commodity. Não é
 lentidão do Google, é recusa. **Mais produto no mesmo molde piora.** Quem abre
 índice é comparativo e guia. **Página de julgamento ranqueia; ficha, não.**
+
+### 🔴 O primeiro retrato de busca, medido em 17/09/2026
+
+Lido no Search Console, janela de 28 dias. **É o número que diz onde o site
+está de verdade**, e ele é duro:
+
+| | |
+|---|---|
+| Cliques | **0** |
+| Impressões | 26 |
+| Posição média | 16,8 (página 2) |
+| Indexadas | 12 · não indexadas 23 |
+
+**Das 10 consultas listadas, 7 eram do `hrvidros`** — `vidraçaria em
+parauapebas`, `box de banheiro`, `janelas de vidro`. ⚠️ **Essas somem do
+relatório agora que o subdomínio migrou** (18/09): se as impressões caírem de
+26 para ~3 na semana que vem, **não é queda nossa, é a mudança de endereço do
+cliente**. Não interprete como regressão.
+
+**As três consultas que são nossas dizem qual formato funciona:**
+
+- `o que significa 256 gb no celular`
+- `quantos gigas`
+- `celular meu an500`
+
+**Duas das três caem no guia de decisão de memória.** Nenhuma consulta caiu em
+ficha de produto. É medição, não teoria: **o formato que traz gente aqui é o
+guia que responde pergunta de especificação** — o mesmo que já tinha indexado
+em ~1 dia. É por isso que os próximos dois guias escolhidos são de decisão.
+
+⚠️ **O relatório atrasa dias.** Em 17/09 ele dizia "última atualização
+13/09", e por isso os pedidos de indexação de 16/09 ainda não apareciam. **Não
+peça indexação de novo nem conclua nada olhando o painel no mesmo dia** —
+espere uma semana.
 
 🟢 **Em 16/09/2026 o quadro virou: 12 indexadas** (era 1 em 10/09). Entraram
 **os 4 guias** — inclusive os três de decisão, indexados em ~1 dia — e **6
