@@ -10,7 +10,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const { produtos, metadata } = lerCatalogo();
   const visiveis = produtosVisiveis(produtos);
-  const comComparativo = new Set(lerComparativos().map((c) => c.meli_id));
+  const comparativos = lerComparativos();
+
+  /**
+   * Produtos cujo comparativo continua vendendo.
+   *
+   * ⚠️ **Não é o mesmo conjunto de `visiveis`.** O comparativo pode ter um
+   * anúncio substituto em `tambem`: o produto-âncora fica desligado (e sai da
+   * vitrine, com razão), mas a página do comparativo mostra o preço do anúncio
+   * vivo e tem botão de compra — então ela pertence ao sitemap. Foi o caso do
+   * A36 em 17/09/2026.
+   */
+  const ancorasComOferta = comparativos
+    .map((c) => {
+      const ancora = produtos.find((p) => p.meli_id === c.meli_id);
+      if (!ancora || ancora.oculto) return undefined;
+      const vende =
+        ancora.disponivel ||
+        (c.tambem ?? []).some((id) =>
+          produtos.some((p) => p.meli_id === id && p.disponivel && !p.oculto),
+        );
+      return vende ? ancora : undefined;
+    })
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return [
     {
@@ -59,13 +81,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
     // Comparativo é texto escrito à mão: muda pouco, mas vale mais no índice
     // do que a página de um produto só — é a pergunta que a pessoa digita.
-    ...visiveis
-      .filter((produto) => comComparativo.has(produto.meli_id))
-      .map((produto) => ({
-        url: `${base}${caminhoDoComparativo(produto)}`,
-        lastModified: new Date(produto.verificado_em),
-        changeFrequency: 'weekly' as const,
-        priority: 0.9,
-      })),
+    ...ancorasComOferta.map((produto) => ({
+      url: `${base}${caminhoDoComparativo(produto)}`,
+      lastModified: new Date(produto.verificado_em),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    })),
   ];
 }
