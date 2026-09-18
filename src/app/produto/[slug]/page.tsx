@@ -11,6 +11,7 @@ import { GraficoDePrecos } from './grafico-precos';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
 import { GuiasRelacionados } from '../../guias-relacionados';
+import { BarraDeOferta } from '../../barra-de-oferta';
 
 export const revalidate = 3600;
 
@@ -286,6 +287,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
                 página existe pra não cometer — o caminho vira a vitrine. */}
             {produto.disponivel ? (
               <a
+                id="botao-da-oferta"
                 href={produto.link_afiliado}
                 target="_blank"
                 rel="sponsored noopener noreferrer"
@@ -369,6 +371,10 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
           </p>
         </footer>
       </div>
+
+      {/* Espaço para a barra fixa não tapar o fim do texto no celular. */}
+      {produto.disponivel && <div className="h-20 lg:hidden" aria-hidden="true" />}
+      <BarraDeOferta produto={produto} alvoId="botao-da-oferta" />
     </main>
   );
 }

@@ -9,6 +9,7 @@ import { acharPorSlug, caminhoDoComparativo, gerarSlug } from '@/lib/slug';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
 import { GuiasRelacionados } from '../../guias-relacionados';
+import { BarraDeOferta } from '../../barra-de-oferta';
 
 export const revalidate = 3600;
 
@@ -248,6 +249,55 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           </p>
         </header>
 
+        {/* A resposta antes da prova. Quem já sabe o próprio perfil resolve
+            aqui e clica; quem quer conferir desce para a tabela. */}
+        {comparativo.escolha_rapida && comparativo.escolha_rapida.length > 0 && (
+          <section className="mt-8 min-w-0 rounded-2xl border border-marca/15 bg-marca/[0.04] p-5 sm:p-6">
+            <h2 className="text-sm font-black uppercase tracking-widest text-marca">
+              A escolha em 5 segundos
+            </h2>
+            <ul className="mt-4 space-y-4">
+              {comparativo.escolha_rapida.map((escolha) => {
+                const coluna = comparativo.colunas.find((c) => c.chave === escolha.chave);
+                const doCatalogo = noCatalogo.get(escolha.chave);
+                if (!coluna) return null;
+                return (
+                  <li
+                    key={escolha.perfil}
+                    className="min-w-0 border-t border-marca/10 pt-4 first:border-0 first:pt-0"
+                  >
+                    <p className="text-[15px] leading-snug text-slate-700">
+                      <span className="font-bold text-slate-900">{escolha.perfil}</span>
+                      <span aria-hidden="true" className="mx-2 text-marca">→</span>
+                      <span className="font-black text-marca">{coluna.nome}</span>
+                    </p>
+                    <p className="mt-1 text-sm leading-relaxed text-slate-600">{escolha.porque}</p>
+                    {doCatalogo?.disponivel && (
+                      <a
+                        href={doCatalogo.link_afiliado}
+                        target="_blank"
+                        rel="sponsored noopener noreferrer"
+                        data-oferta={gerarSlug(doCatalogo)}
+                        data-categoria={doCatalogo.categoria}
+                        data-preco={doCatalogo.preco_atual}
+                        data-onde="escolha-rapida"
+                        className="mt-2.5 inline-flex items-center gap-1.5 rounded-lg bg-marca-acao px-4 py-2 text-sm font-extrabold text-white transition-colors hover:bg-marca"
+                      >
+                        Ver por {formatarReal(doCatalogo.preco_atual)}
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="mt-4 text-xs text-slate-500">
+              Links de afiliado · você paga o mesmo preço. A tabela abaixo mostra onde cada um
+              perde.
+            </p>
+          </section>
+        )}
+
         {/* O produto do comparativo, com o botão de compra logo no começo:
             quem já decidiu não precisa descer a tabela inteira pra comprar. */}
         <section className="mt-8 flex min-w-0 flex-col gap-5 rounded-2xl bg-white border border-slate-200/80 p-6 shadow-md sm:flex-row sm:items-center">
@@ -310,6 +360,7 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
 
           {oferta.disponivel ? (
             <a
+              id="botao-da-oferta"
               href={oferta.link_afiliado}
               target="_blank"
               rel="sponsored noopener noreferrer"
@@ -605,6 +656,10 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
           </p>
         </footer>
       </div>
+
+      {/* Espaço para a barra fixa não tapar o fim do texto no celular. */}
+      {oferta.disponivel && <div className="h-20 lg:hidden" aria-hidden="true" />}
+      <BarraDeOferta produto={oferta} alvoId="botao-da-oferta" />
     </main>
   );
 }

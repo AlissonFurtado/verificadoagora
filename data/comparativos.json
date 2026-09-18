@@ -7,6 +7,23 @@
       ],
       "titulo": "Galaxy A36 5G vale a pena? Comparamos com 4 celulares da mesma faixa",
       "resumo": "O A36 está a {preco}, com {desconto}% de desconto. Colocamos a ficha dele lado a lado com o Moto G17 — que também está aqui na página — e com os três intermediários que mais aparecem quando alguém procura celular nessa faixa. As especificações vêm dos fabricantes e da GSMArena; os preços, só dos dois que nosso robô confere todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Quer ficar 4 ou 5 anos com o aparelho",
+          "chave": "a36",
+          "porque": "É o único da tabela com prazo de atualização declarado: até seis versões novas de Android. Essa é a linha da ficha que não se conserta depois da compra."
+        },
+        {
+          "perfil": "O orçamento manda e o uso é o básico",
+          "chave": "g17",
+          "porque": "Faz WhatsApp, redes sociais e vídeo pelo mesmo caminho, por bem menos da metade. Você abre mão de 5G, de tela AMOLED e do prazo de atualização."
+        },
+        {
+          "perfil": "Joga sério no celular",
+          "chave": "g86",
+          "porque": "Na nossa própria tabela ele ganha do A36 em desempenho para jogo. Não vendemos esse aparelho, e dizer isso é o que faz o resto da página valer."
+        }
+      ],
       "colunas": [
         {
           "chave": "a36",
@@ -199,6 +216,23 @@
       "meli_id": "MLB65041644",
       "titulo": "Moto G17 vale a pena? Comparamos com 4 celulares de até R$ 1.500",
       "resumo": "O G17 está a {preco}, com {desconto}% de desconto. Ele é o degrau de entrada da faixa, então a pergunta útil não é se ele é bom, e sim o que muda quando se gasta um pouco mais. Colocamos a ficha dele ao lado de três rivais diretos e do Galaxy A36 — que também está aqui na página e custa quase o dobro. As especificações vêm dos fabricantes e das fichas técnicas publicadas; os preços, só dos dois que nosso robô confere todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Quer o melhor conjunto abaixo de mil reais",
+          "chave": "g17",
+          "porque": "Tela Full HD+ com 1.050 nits e sensor Sony na câmera, numa faixa onde quase ninguém entrega os dois. É o equilíbrio da tabela."
+        },
+        {
+          "perfil": "Pretende usar o aparelho por anos",
+          "chave": "a16",
+          "porque": "É o único aqui que pega 5G e promete seis versões de Android. Não acompanhamos o preço dele, mas em durabilidade de ficha ele ganha."
+        },
+        {
+          "perfil": "Pode gastar o dobro",
+          "chave": "a36",
+          "porque": "Sobe tudo de uma vez: 5G, Super AMOLED, IP67 e o prazo de atualização. Está aqui no site, com preço conferido todo dia."
+        }
+      ],
       "colunas": [
         {
           "chave": "g17",
@@ -388,6 +422,23 @@
       "meli_id": "MLB47245501",
       "titulo": "Edge 60 Fusion vale a pena? Comparamos com 3 celulares da mesma faixa",
       "resumo": "O Edge 60 Fusion está a {preco}, com {desconto}% de desconto. Ele é o degrau acima dos intermediários comuns, então a pergunta útil é o que se ganha ao subir do Galaxy A36 — que também está aqui na página — para ele. Colocamos a ficha dos quatro lado a lado. As especificações vêm dos fabricantes; os preços, só dos dois que nosso robô confere todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Trabalha na rua, na chuva, na obra",
+          "chave": "edge",
+          "porque": "IP68 e IP69 contra água e poeira, mais certificação militar contra queda. Nenhum outro da tabela chega perto disso."
+        },
+        {
+          "perfil": "Quer o maior prazo de atualização",
+          "chave": "a36",
+          "porque": "A Motorola não divulga quantas versões de Android o Edge recebe; o A36 promete até seis, e costuma custar menos. Está aqui no site."
+        },
+        {
+          "perfil": "Quer o melhor desempenho por real",
+          "chave": "g86",
+          "porque": "Para jogo ele entrega mais pelo preço. Não é nosso produto — é a resposta honesta para esse perfil."
+        }
+      ],
       "colunas": [
         {
           "chave": "edge",
@@ -561,6 +612,23 @@
       "meli_id": "MLB18910381",
       "titulo": "DualSense vale a pena? Comparamos com 2 controles que custam metade",
       "resumo": "O DualSense está a {preco}, com {desconto}% de desconto. A pergunta que traz gente aqui não é se ele é bom — é se compensa pagar mais do dobro de um controle genérico. Colocamos os três controles do nosso catálogo lado a lado, e a resposta depende menos de qualidade e mais de onde você joga.",
+      "escolha_rapida": [
+        {
+          "perfil": "Tem PS5 e quer sentir o que o console faz de diferente",
+          "chave": "dualsense",
+          "porque": "Gatilho que endurece conforme o jogo e vibração que distingue chuva de terra batida só existem no controle oficial. Nenhum genérico reproduz isso."
+        },
+        {
+          "perfil": "Joga no PC ou no celular",
+          "chave": "t4",
+          "porque": "Custa uma fração e resolve o mesmo, porque no PC as duas funções do DualSense quase não aparecem. Está aqui no site."
+        },
+        {
+          "perfil": "Quer analógico que não falha com o tempo",
+          "chave": "g7se",
+          "porque": "Sensores Hall Effect não sofrem o drift que faz o analógico andar sozinho — é o problema que mais aposenta controle. Também está aqui."
+        }
+      ],
       "colunas": [
         {
           "chave": "dualsense",
@@ -699,6 +767,23 @@
       "meli_id": "MLB58353028",
       "titulo": "Moto G06 vale a pena? Comparamos com 4 celulares de até R$ 1.000",
       "resumo": "O G06 está a {preco}, com {desconto}% de desconto. Ele é o celular de tela grande mais barato do nosso catálogo, então a pergunta útil é o que se perde para chegar nesse preço. Colocamos a ficha dele ao lado do Moto G17 e do Realme C73 — que também estão aqui na página — e de dois rivais diretos da faixa. As especificações vêm dos fabricantes; os preços, só dos que nosso robô confere todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Quer a maior tela pelo menor preço",
+          "chave": "g06",
+          "porque": "6,9 polegadas com 120 Hz é combinação rara nessa faixa, e a leitura fica confortável para quem enxerga mal de perto."
+        },
+        {
+          "perfil": "Quer imagem mais nítida e carga rápida",
+          "chave": "g17",
+          "porque": "Full HD+ contra o HD+ do G06, e carregamento de 20 W contra 10 W. Custa pouco mais e está aqui no site."
+        },
+        {
+          "perfil": "Precisa de 5G",
+          "chave": "a16",
+          "porque": "É o único da tabela que pega 5G. Não acompanhamos o preço dele, mas em três ou quatro anos de uso essa linha pesa mais que o resto."
+        }
+      ],
       "colunas": [
         {
           "chave": "g06",
@@ -879,6 +964,23 @@
       "meli_id": "MLB53838786",
       "titulo": "Monitor Samsung S3 27\" 120 Hz vale a pena? Comparamos com 3 monitores Full HD",
       "resumo": "O S3 de 27 polegadas com 120 Hz está a {preco}, com {desconto}% de desconto. A dúvida de quem chega aqui quase sempre é uma destas duas: 27 ou 24 polegadas, e vale pagar a mais pelos 120 Hz em vez dos 100 Hz do modelo vizinho. Pusemos a ficha dele ao lado do irmão de 24 polegadas — que também está aqui na página —, do S3 de 27 polegadas com 100 Hz e de um rival da AOC com painel diferente. As especificações vêm dos fabricantes; os preços, só dos dois que nosso robô confere todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Quer tela grande para jogo e vídeo",
+          "chave": "s27_120",
+          "porque": "27 polegadas a 120 Hz, com painel IPS e duas entradas HDMI para deixar PC e console ligados ao mesmo tempo."
+        },
+        {
+          "perfil": "Trabalha com texto e planilha",
+          "chave": "s24_120",
+          "porque": "Os mesmos pixels numa área menor: o texto fica visivelmente mais nítido, e custa menos. Está aqui no site."
+        },
+        {
+          "perfil": "Joga competitivo e quer sincronização",
+          "chave": "aoc",
+          "porque": "É o único da tabela que declara Adaptive Sync, o recurso que evita a imagem partida ao meio. Não acompanhamos o preço dele."
+        }
+      ],
       "colunas": [
         {
           "chave": "s27_120",
@@ -1074,6 +1176,142 @@
         }
       ],
       "escrito_em": "2026-09-17"
+    },
+    {
+      "meli_id": "MLB53222689",
+      "titulo": "Kit de 10 potes de vidro 640 ml vale a pena? Comparamos os dois do site",
+      "resumo": "Este kit está a {preco}, com {desconto}% de desconto. Temos dois kits quase gêmeos aqui: mesma capacidade, mesma quantidade, mesma tampa — e um deles custa menos. A diferença que decide é uma só, e não aparece na foto: **o tipo de vidro**. Quem tira pote do freezer e põe no micro-ondas precisa ler a primeira linha da tabela antes de escolher.",
+      "escolha_rapida": [
+        {
+          "perfil": "Congela a marmita e esquenta direto",
+          "chave": "rishon",
+          "porque": "Borossilicato aguenta a mudança brusca de temperatura que trinca vidro comum — e, neste caso, ainda sai mais barato."
+        },
+        {
+          "perfil": "Guarda na geladeira e esquenta no dia seguinte",
+          "chave": "starhouse",
+          "porque": "Sem o choque térmico do freezer, a diferença de material praticamente não aparece. Os dois levam a mesma comida."
+        }
+      ],
+      "colunas": [
+        {
+          "chave": "starhouse",
+          "nome": "Kit Starhouse",
+          "meli_id": "MLB53222689"
+        },
+        {
+          "chave": "rishon",
+          "nome": "Kit borossilicato",
+          "meli_id": "MLB63904966"
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Tipo de vidro",
+          "valores": {
+            "starhouse": "Não divulgado",
+            "rishon": "Borossilicato"
+          },
+          "vencedores": [
+            "rishon"
+          ],
+          "nota": "É a linha que decide o comparativo. Borossilicato é o vidro de forma refratária e de vidraria de laboratório; o vidro comum de embalagem é outro material, com o triplo da dilatação. O anúncio do Starhouse diz apenas \"vidro\" — e quando o anúncio não especifica, o padrão do mercado é vidro comum. Não afirmamos que seja: afirmamos que não está escrito, o que já é informação."
+        },
+        {
+          "campo": "Do freezer ao micro-ondas",
+          "valores": {
+            "starhouse": "Não divulgado",
+            "rishon": "Suporta cerca de 166 °C de diferença"
+          },
+          "vencedores": [
+            "rishon"
+          ],
+          "nota": "O número é do material, não do anúncio: borossilicato aguenta um diferencial de aproximadamente 166 °C sem trincar, porque dilata cerca de três vezes menos que o vidro comum. É exatamente o que acontece quando o pote sai de -18 °C e encontra o prato quente do micro-ondas. Com vidro comum o caminho seguro é descongelar antes, na geladeira."
+        },
+        {
+          "campo": "Capacidade e quantidade",
+          "valores": {
+            "starhouse": "640 ml · 10 potes",
+            "rishon": "640 ml · 10 potes"
+          },
+          "vencedores": [
+            "starhouse",
+            "rishon"
+          ],
+          "nota": "Empate exato, e é o que torna a comparação justa: os dois entregam a mesma comida guardada. 640 ml é a medida de uma refeição completa; abaixo disso a salada fica de fora."
+        },
+        {
+          "campo": "Medidas do pote",
+          "valores": {
+            "starhouse": "Não divulgado",
+            "rishon": "18 × 10 × 7 cm"
+          },
+          "vencedores": [
+            "rishon"
+          ],
+          "nota": "Parece detalhe e não é: 7 cm de altura é o que decide se o pote entra na bolsa térmica e se dois deles empilham na prateleira da geladeira. Um anúncio informa, o outro não."
+        },
+        {
+          "campo": "Tampa",
+          "valores": {
+            "starhouse": "Hermética, com trava lateral",
+            "rishon": "Hermética, com trava lateral"
+          },
+          "vencedores": [
+            "starhouse",
+            "rishon"
+          ],
+          "nota": "As duas travam com clipes e vedação de borracha, o que permite transportar o pote deitado. ⚠️ **Nenhuma das duas vai ao micro-ondas** — aquece só o pote, com a tampa fora. Vale para toda tampa plástica com borracha."
+        },
+        {
+          "campo": "Micro-ondas, freezer e lava-louças",
+          "valores": {
+            "starhouse": "Sim, nos três",
+            "rishon": "Sim, nos três"
+          },
+          "vencedores": [
+            "starhouse",
+            "rishon"
+          ],
+          "nota": "Os dois anúncios declaram as três aptidões para o pote de vidro. É o mínimo da categoria, e serve de piso: kit que não declare isso não deveria estar na sua lista."
+        },
+        {
+          "campo": "Reputação do anúncio",
+          "valores": {
+            "starhouse": "+250 mil vendidos · nota 4,9",
+            "rishon": "+250 mil vendidos · nota 4,9"
+          },
+          "vencedores": [
+            "starhouse",
+            "rishon"
+          ],
+          "nota": "Empate, e com base grande dos dois lados — o que significa que a nota alta aqui vale mais do que valeria num anúncio de cem vendas. Reputação não substitui ficha técnica, mas mostra que o produto chega inteiro e faz o que promete."
+        }
+      ],
+      "a_favor": [
+        "{desconto}% de desconto de verdade: {preco} contra {preco_original} de tabela, conferido em {data}.",
+        "Dez potes de 640 ml — a medida que aceita arroz, proteína e salada sem espremer.",
+        "Vidro vai ao micro-ondas e à lava-louças, e não fica com cheiro nem mancha de molho como o plástico.",
+        "Mais de 250 mil unidades vendidas no anúncio, com nota 4,9."
+      ],
+      "contra": [
+        "O anúncio não diz de que vidro o pote é feito, e isso decide a ida do freezer ao micro-ondas.",
+        "Também não informa as medidas do pote — quem precisa saber se cabe na marmiteira fica no escuro.",
+        "Sai mais caro que o kit de borossilicato daqui do lado, que informa as duas coisas.",
+        "A tampa não vai ao micro-ondas. Nenhuma desta categoria vai, mas é o erro mais comum de quem nunca usou."
+      ],
+      "veredito": "Se você congela a marmita e esquenta direto no micro-ondas, **o kit de borossilicato é a escolha**, e não é questão de gosto: o material foi feito para aguentar a mudança brusca de temperatura que quebra vidro comum, e ainda custa menos. Se a sua rotina é montar a marmita, guardar na geladeira e esquentar no dia seguinte, a diferença de material praticamente não aparece — aí este kit resolve igual, a {preco}, e você economiza {economia} sobre o preço de tabela. O que não muda em nenhum dos dois: a tampa sai antes de ir ao micro-ondas.",
+      "fontes": [
+        {
+          "titulo": "Borosilicate glass — propriedades e resistência a choque térmico (Wikipedia)",
+          "url": "https://en.wikipedia.org/wiki/Borosilicate_glass"
+        },
+        {
+          "titulo": "Borosilicate vs. Soda Lime Glass: A Detailed Comparison — L.J. Star",
+          "url": "https://www.ljstar.com/resources/glass-comparison/"
+        }
+      ],
+      "escrito_em": "2026-09-18"
     }
   ]
 }

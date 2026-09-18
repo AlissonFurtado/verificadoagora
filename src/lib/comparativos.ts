@@ -55,6 +55,21 @@ export type Comparativo = {
    * 256 GB — que são preços diferentes na mesma página.
    */
   tambem?: string[];
+  /**
+   * A escolha resolvida em uma linha por perfil, no topo da página.
+   *
+   * ⚠️ **Existe por medição de fora, não por gosto.** A literatura de conversão
+   * de 2026 é insistente num ponto: página de comparação que apresenta opções
+   * equivalentes e deixa a conclusão para o fim perde o leitor no meio —
+   * *"quem é forçado a escolher entre iguais costuma escolher ir embora"*. O
+   * veredito continua no fim, inteiro; isto aqui é a resposta antes da prova,
+   * que é a mesma regra do `resposta_curta` do guia de decisão.
+   *
+   * Cada item aponta uma `chave` de coluna. Se essa coluna for produto do
+   * catálogo, vira botão de compra ali mesmo — o clique acontece no momento em
+   * que a decisão se forma, não três rolagens depois.
+   */
+  escolha_rapida?: { perfil: string; chave: string; porque: string }[];
   titulo: string;
   resumo: string;
   colunas: ColunaDoComparativo[];
