@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { lerDecisoes, lerGuias } from '@/lib/catalogo';
+import { lerCatalogo, lerDecisoes, lerGuias } from '@/lib/catalogo';
 import type { Produto } from '@/lib/produtos';
 
 /**
@@ -8,32 +8,64 @@ import type { Produto } from '@/lib/produtos';
  * Existe por dois motivos. O primeiro é de índice: até 10/09/2026 os guias só
  * eram alcançados pela home, e página que nada aponta o Google demora a achar
  * — enquanto as fichas, que ele já rastreia todo dia, não levavam a lugar
- * nenhum. O segundo é de leitura: quem cai numa ficha pela busca muitas vezes
- * ainda está decidindo a **especificação**, não o aparelho.
+ * nenhum. Em 16/09 isso se provou: seis fichas de celular saíram do limbo
+ * depois de ganharem guia apontando para elas. O segundo motivo é de leitura:
+ * quem cai numa ficha pela busca muitas vezes ainda está decidindo a
+ * **especificação**, não o aparelho.
  *
- * ⚠️ **A relevância é por categoria, não por slug escrito no código.** Guia
- * novo de celular aparece sozinho em toda ficha de celular; guia de outro
- * assunto, quando existir, entra pela mesma regra. Slug no meio do componente
- * seria uma lista para alguém esquecer de atualizar.
+ * ⚠️ **A relevância é derivada, nunca uma lista de slug no código.** Até
+ * 17/09/2026 a regra era um `if` de categoria única (`Celulares`), e por isso
+ * as fichas de Informática, Casa e Eletrônicos — que chegaram junto com o
+ * catálogo novo — não recebiam link nenhum. Agora **a categoria de um guia sai
+ * dos produtos que ele cita**: um guia que fala do monitor S3 é guia de
+ * Informática sem ninguém escrever isso em lugar algum. Guia novo entra
+ * sozinho na ficha certa.
  */
-export function GuiasRelacionados({ produto }: { produto: Produto }) {
-  // O catálogo fora do foco (casa, games, foto, áudio) continua no ar, mas
-  // nenhum guia fala dele: melhor nenhum link que um link fora de assunto.
-  if (produto.categoria !== 'Celulares') return null;
 
-  const links = [
-    ...lerGuias().map((g) => ({
+/** As categorias que um guia cobre, lidas dos produtos do catálogo que cita. */
+function categoriasCitadas(meliIds: string[], porMeliId: Map<string, Produto>): Set<string> {
+  const categorias = new Set<string>();
+  for (const id of meliIds) {
+    const produto = porMeliId.get(id);
+    if (produto) categorias.add(produto.categoria);
+  }
+  return categorias;
+}
+
+export function GuiasRelacionados({ produto }: { produto: Produto }) {
+  const porMeliId = new Map(lerCatalogo().produtos.map((p) => [p.meli_id, p] as const));
+
+  const daFaixa = lerGuias()
+    .filter((g) =>
+      categoriasCitadas(
+        g.perfis.map((p) => p.meli_id),
+        porMeliId,
+      ).has(produto.categoria),
+    )
+    .map((g) => ({
       href: `/guia/${g.slug}`,
       titulo: g.titulo,
       chamada: 'Qual comprar, por perfil de uso',
-    })),
-    ...lerDecisoes().map((d) => ({
-      href: `/guia/${d.slug}`,
-      titulo: d.titulo.split(':')[0],
-      chamada: 'Antes de escolher o aparelho, decida a configuração',
-    })),
-  ];
+    }));
 
+  const decisoes = lerDecisoes()
+    .filter((d) =>
+      categoriasCitadas(
+        d.exemplos.map((e) => e.meli_id),
+        porMeliId,
+      ).has(produto.categoria),
+    )
+    .map((d) => ({
+      href: `/guia/${d.slug}`,
+      // Guia de faixa corta no dois-pontos e fica limpo; guia de decisão não,
+      // porque "Tela de celular: AMOLED ou LCD?" viraria "Tela de celular".
+      titulo: d.slug.startsWith('vale-esperar-black-friday') ? d.titulo : d.titulo.split(':')[0],
+      chamada: d.slug.startsWith('vale-esperar-black-friday')
+        ? 'A resposta muda conforme o que você quer comprar'
+        : 'Antes de escolher o aparelho, decida a configuração',
+    }));
+
+  const links = [...daFaixa, ...decisoes];
   if (links.length === 0) return null;
 
   return (
