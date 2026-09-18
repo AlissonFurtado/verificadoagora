@@ -223,7 +223,7 @@ produção.
 | `A @` → `216.198.79.1` | redireciona pro `www` | ativo |
 | `CNAME www` | esta landing (Vercel) | ativo, é o oficial |
 | `TXT @` | Search Console | ativo, **não apague** |
-| `ALIAS hrvidros` | **landing do HR Vidros** | 🔴 **ativo — é de cliente** |
+| `ALIAS hrvidros` | **301 para `hrvidros.afdesousa.com.br`** | 🟡 ativo só como redirect — tirar em ~mar/2027 |
 | `ALIAS api-licitacoes`, `CNAME licitacoes` | nada | mortos, podem sair |
 | `A ftp` → `45.132.157.6` | o servidor da hospedagem | auditado em 17/09 |
 
@@ -253,14 +253,27 @@ O que já está feito:
   está vazia e não há nenhuma URL do domínio antigo dentro do HTML (sem
   canonical, sem og:url), então nada precisa ser reescrito.
 
-O que falta, em ordem:
+- 🟢 **DNS e SSL: não precisou de nada.** Criar o subdomínio no hPanel já
+  escreveu sozinho o `ALIAS hrvidros → hrvidros.afdesousa.com.br.cdn.hstgr.net`
+  na zona, e o certificado saiu automático. ⚠️ **O aviso do painel pedindo
+  "adicione um Registro A" é genérico e estava errado** — não caia nele.
+- 🟢 **301 no ar em 18/09/2026**, e medido:
+  `https://hrvidros.verificadoagora.com.br/` → 301 →
+  `https://hrvidros.afdesousa.com.br/` (200, os mesmos 26.749 bytes), e
+  **o caminho é preservado** (`/contato` → `/contato`). A landing principal
+  seguiu intacta: `www` 200, apex 308 para o `www`.
 
-1. 🔴 **Registro DNS**: `A` · nome `hrvidros` · valor **`45.132.157.6`** ·
-   TTL 14400, na zona do `afdesousa.com.br`.
-2. SSL do subdomínio novo (Segurança → SSL, depois que o DNS propagar).
-3. **Redirect 301** de `hrvidros.verificadoagora.com.br` para o novo
-   (Domínios → Redirecionamentos, no site do verificadoagora).
-4. Só depois de ~6 meses, remover o `ALIAS hrvidros` desta zona.
+**Como o 301 foi feito, e por que não pelo painel:** por um `.htaccess` na
+pasta do subdomínio antigo, com `RewriteRule ^(.*)$
+https://hrvidros.afdesousa.com.br/$1 [R=301,L]`. 🔴 **A tela Domínios →
+Redirecionamentos não serve aqui**: o seletor de origem **volta sozinho para
+`verificadoagora.com.br`** depois de escolher o subdomínio, e o valor do campo
+não é legível para conferir — criar às cegas arriscava redirecionar a landing
+inteira para o site do cliente. O `.htaccess` é explícito e reversível (apagar
+o arquivo desfaz).
+
+O que falta: só **remover o `ALIAS hrvidros` desta zona depois de ~6 meses**,
+quando o Google já tiver movido as posições. Antes disso, não mexa.
 
 ⚠️ **Duas armadilhas do painel, medidas nesse dia:**
 
