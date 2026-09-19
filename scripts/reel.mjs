@@ -77,9 +77,15 @@ const entradas = CENAS.flatMap((cena) => [
 ]);
 
 // A arte é tipografia sobre fundo chapado: o zoom pequeno dá vida sem virar
-// enjoo, e escalar só 1,1× antes do zoompan evita tremer o texto.
+// enjoo.
+//
+// ⚠️ **Não faça upscale antes do zoompan.** A primeira versão escalava para
+// 1188×2112 "para o zoom não borrar" e cada render passou a comer mais de 1 GB
+// — em 19/09/2026 um lote de quatro vídeos foi morto pelo sistema por falta de
+// memória. Com zoom de apenas 1,08× o upscale não muda o que se vê, e sem ele
+// o processo cabe folgado.
 const zoom = (i) =>
-  `[${i}:v]scale=1188:2112,zoompan=z='min(zoom+0.0005,1.08)':d=${DURACAO * FPS}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1920:fps=${FPS},setsar=1[v${i}]`;
+  `[${i}:v]zoompan=z='min(zoom+0.0005,1.08)':d=${DURACAO * FPS}:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=1080x1920:fps=${FPS},setsar=1[v${i}]`;
 
 const filtros = [
   ...CENAS.map((_, i) => zoom(i)),
@@ -101,7 +107,7 @@ execFileSync(
     // `tune stillimage` é o que derruba o tamanho aqui — o conteúdo é arte
     // parada com zoom, não cena filmada. Sem ele o arquivo passa de 45 MB e
     // fica ruim de mandar para o celular.
-    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'slow', '-crf', '26',
+    '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-preset', 'medium', '-crf', '26',
     '-tune', 'stillimage', '-maxrate', '3M', '-bufsize', '6M',
     '-movflags', '+faststart',
     '-r', String(FPS),
