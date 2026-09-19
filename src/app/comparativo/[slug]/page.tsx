@@ -483,11 +483,22 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
               </thead>
 
               <tbody>
-                {linhasDaFicha.map((linha) => (
+                {linhasDaFicha.map((linha, iLinha) => {
+                  /* Zebra: com sete linhas e cinco colunas, o olho perde a
+                     altura no meio do caminho e passa a comparar a célula
+                     errada — é a queixa número um em teste de usabilidade de
+                     tabela. A faixa alternada é o que segura a linha.
+                     ⚠️ Ela vai nas células de dado, não na `tr`: o fundo da
+                     coluna fixa tem que continuar **opaco**, senão o conteúdo
+                     que desliza aparece por baixo dela. */
+                  const listrada = iLinha % 2 === 1;
+                  return (
                   <tr key={linha.campo} className="border-b border-slate-200/60">
                     <th
                       scope="row"
-                      className="sticky left-0 z-10 border-r border-slate-200 bg-slate-50 px-4 py-4 align-top font-bold text-slate-800"
+                      className={`sticky left-0 z-10 border-r border-slate-200 px-4 py-4 align-top font-bold text-slate-800 ${
+                        listrada ? 'bg-slate-100' : 'bg-slate-50'
+                      }`}
                     >
                       {linha.campo}
                       <span className="mt-1 block text-xs font-normal leading-relaxed text-slate-400">
@@ -504,7 +515,9 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                               ? 'bg-emerald-50/70 font-medium text-slate-900'
                               : i === 0
                                 ? 'bg-marca/[0.04] text-slate-600'
-                                : 'text-slate-600'
+                                : listrada
+                                  ? 'bg-slate-50/60 text-slate-600'
+                                  : 'text-slate-600'
                           }`}
                         >
                           {linha.celula(coluna.chave)}
@@ -513,7 +526,8 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
                       );
                     })}
                   </tr>
-                ))}
+                  );
+                })}
               </tbody>
             </table>
           </div>

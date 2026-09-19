@@ -110,6 +110,54 @@ export function resumirTendencia(pontos: PontoDoHistorico[] | undefined): Tenden
   return { pontos, variacao, porcento, descricao };
 }
 
+export type ResumoDoHistorico = {
+  /** Quantos dias de preço temos deste produto, dentro da janela. */
+  dias: number;
+  menor: PontoDoHistorico;
+  maior: PontoDoHistorico;
+  /** Hoje está no menor valor que já vimos? */
+  noMenor: boolean;
+  /** Quanto o preço de hoje está acima do menor, em % inteiro. */
+  acimaDoMenor: number;
+};
+
+/**
+ * O histórico reduzido aos números que decidem a compra.
+ *
+ * ⚠️ **Existe para ficar na primeira tela, e a razão é de negócio.** O preço de
+ * cada dia desde 07/09/2026 é o único dado deste site que ninguém copia — e até
+ * 18/09 ele só aparecia como gráfico no fim da página e como prosa ao lado
+ * dele. Duas medições explicam a mudança: **60% das buscas terminam sem
+ * clique**, e o que os sistemas de IA mais citam é dado original. Gráfico é
+ * imagem; para ser citado, o número precisa estar em texto, e cedo.
+ *
+ * Difere de `fraseDoHistorico` de propósito: lá é prosa que explica o gráfico,
+ * aqui são os fatos secos que o card do topo exibe. Nada de redação nova quando
+ * há menos de dois dias — um ponto só não é histórico.
+ */
+export function resumoDoHistorico(
+  pontos: PontoDoHistorico[] | undefined,
+  precoDeHoje: number,
+): ResumoDoHistorico | null {
+  if (!pontos || pontos.length < 2) return null;
+
+  const corte = diasAtras(JANELA_MAXIMA);
+  const janela = pontos.filter((p) => p.dia >= corte);
+  if (janela.length < 2) return null;
+
+  const menor = janela.reduce((a, b) => (b.preco < a.preco ? b : a));
+  const maior = janela.reduce((a, b) => (b.preco > a.preco ? b : a));
+
+  return {
+    dias: janela.length,
+    menor,
+    maior,
+    noMenor: precoDeHoje <= menor.preco,
+    acimaDoMenor:
+      menor.preco === 0 ? 0 : Math.round(((precoDeHoje - menor.preco) / menor.preco) * 100),
+  };
+}
+
 /**
  * O histórico de preço dito em uma frase, em HTML visível.
  *

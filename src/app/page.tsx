@@ -50,7 +50,10 @@ export default function Home() {
   // guia de decisão é longo de propósito (é a busca inteira), então no botão
   // entra só a parte antes dos dois-pontos.
   const atalhosDeGuia = [
-    // A Black Friday vem primeiro enquanto a data não passa: é a busca
+    // Primeiro atalho é o que muda todo dia: é o único motivo que a página
+    // oferece para alguém voltar amanhã sem passar pelo Google.
+    { href: '/quedas-de-preco', rotulo: 'O que caiu de preço', icone: '↓' },
+    // A Black Friday vem em seguida enquanto a data não passa: é a busca
     // sazonal, e o histórico de preço é o que respondemos melhor que todo
     // mundo. Depois de 27/11/2026 ela sai daqui — a página continua no ar.
     { href: '/black-friday', rotulo: 'Black Friday 2026: o desconto é real?', icone: '%' },

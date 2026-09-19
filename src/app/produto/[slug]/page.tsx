@@ -5,13 +5,19 @@ import { notFound } from 'next/navigation';
 import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import { formatarData, formatarReal, NOME_PLATAFORMA, type Produto } from '@/lib/produtos';
-import { fraseDoHistorico, seloDeMenorPreco, type PontoDoHistorico } from '@/lib/historico';
+import {
+  fraseDoHistorico,
+  resumoDoHistorico,
+  seloDeMenorPreco,
+  type PontoDoHistorico,
+} from '@/lib/historico';
 import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { GraficoDePrecos } from './grafico-precos';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
 import { GuiasRelacionados } from '../../guias-relacionados';
 import { BarraDeOferta } from '../../barra-de-oferta';
+import { HistoricoEmNumeros } from '../../historico-em-numeros';
 
 export const revalidate = 3600;
 
@@ -175,6 +181,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
   const comparativo = acharComparativo(lerComparativos(), produto.meli_id);
   const conferencia = descreverConferencia(lerCatalogo().metadata.conferido_em, new Date());
   const frasePreco = fraseDoHistorico(pontos, produto.preco_atual, formatarReal, formatarData);
+  const resumoPreco = resumoDoHistorico(pontos, produto.preco_atual);
 
   return (
     <main className="min-h-screen bg-fundo text-slate-800">
@@ -324,6 +331,8 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
             <p className="mt-4 text-center text-[10px] text-slate-400 font-semibold">
               Preço verificado em {formatarData(produto.verificado_em)} · link de afiliado
             </p>
+
+            {resumoPreco && <HistoricoEmNumeros resumo={resumoPreco} />}
           </div>
         </div>
 

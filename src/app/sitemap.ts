@@ -50,6 +50,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      // O que caiu de preço: muda todo dia e é feita só de dado nosso, então
+      // é a página com mais razão de ser rastreada com frequência.
+      url: `${base}/quedas-de-preco`,
+      lastModified: new Date(metadata.ultima_atualizacao),
+      changeFrequency: 'daily' as const,
+      priority: 0.9,
+    },
+    {
       // Sazonal, mas a URL é perene: em 2027 a mesma página é reescrita, e o
       // que ela já tiver de autoridade não se perde.
       url: `${base}/black-friday`,
