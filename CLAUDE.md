@@ -634,6 +634,14 @@ Actions → Conferir preços → *Run workflow*. O botão verde de confirmação
 aparece por `find`: pegue-o pelo `read_page` com `filter: interactive` (é o
 `button type="submit"` logo abaixo do genérico "Run workflow").
 
+🔴 **O PR de suspeitos pode ficar velho e virar armadilha.** Em 18/09 o robô
+abriu o PR 15 com três preços de variação grande. **Mergear teria apagado os
+três produtos publicados naquele dia** (A17 e os dois kits de potes), porque o
+branch partiu de um `main` anterior a eles. O certo foi: conferir os três na
+página do Meli, aplicar os valores à mão no `main` atual e deixar o PR para ser
+fechado sem merge. **Sempre olhe a data do branch antes de mergear** — quanto
+mais produto novo entra no dia, mais o branch atrasa.
+
 ⚠️ **Rodar o workflow à mão é seguro, rodar `npm run precos:conferir` na
 máquina não é** — o segundo invalida o refresh token do GitHub (ver acima).
 Actions → Conferir preços → *Run workflow*.
@@ -1421,6 +1429,89 @@ automático em nome do Alisson é a mesma regra do Instagram.
   tem 389px de largura, contra os 1000 que o Pinterest pede). **Edge não enxerga
   disco:** o catálogo entra por `import` do JSON, não por `lerCatalogo()`.
 - Produto sem `imagem` não vira pin, e o script avisa quais ficaram de fora.
+
+## 🟢 A virada de 18–19/09: canal no WhatsApp, e o reel como isca
+
+**Decisão do Alisson em 18/09/2026**, depois de ver funcionar com ele mesmo:
+entrou num grupo de ofertas por um reel e comprou. A conta que fechou o
+argumento, pesquisada no mesmo dia:
+
+| Caminho | Para render ~R$ 500/mês | Prazo |
+|---|---|---|
+| Site por busca | 3.000 a 6.000 visitas/mês | 3 a 6 meses (hoje: **0 cliques**) |
+| Canal no WhatsApp | **200 a 300 pessoas engajadas** | semanas |
+
+⚠️ **O reel que o converteu era "Patrocinado"** — anúncio, não alcance
+orgânico. Ele mandou o print. Isso é permitido (mídia paga em rede social, de
+conta cadastrada), **mas exige verba**; o caminho sem dinheiro é um reel por
+dia e medir.
+
+### O que os Termos permitem, lido na fonte em 19/09
+
+- 🟢 **Grupo/canal de WhatsApp é Mídia prevista**: os Termos definem
+  "Afiliados Divulgadores de Ofertas" como quem recomenda ofertas "via perfis
+  de suas redes sociais, **grupos de whatsapp, telegram** e/ou sites".
+- 🔴 **Cláusula 1.3**: só conta o que foi informado ao ML **antes**; o resto
+  "não será considerado para fins de participação no Programa e **não gerará
+  pagamento**". O painel tem o campo **"Otra red"** (onde o site já está) —
+  **é lá que o link do canal precisa entrar, antes do primeiro link postado**.
+- 🔴 **Cláusula 1.4**: proibido "oferecer qualquer recompensa ou benefício
+  direto" a quem cumpre condição, **sorteio incluído**. A tática mais comum de
+  encher grupo está vedada por contrato. O que resta é dar motivo real.
+- **1.3.1**: mídia paga só em rede social (Instagram/TikTok/Facebook/Pinterest
+  Ads), de conta do próprio afiliado já cadastrada. **Google Ads não conta.**
+
+### Canal, não grupo — e por quê
+
+Decidido em 18/09: **canal agora, grupo pequeno depois**. Grupo trava em 1.024
+membros e **expõe o telefone de todos para todos**; canal é ilimitado, só o
+dono publica e os seguidores não se veem. ⚠️ **O canal vai no número separado
+do Alisson, não no pessoal** — canal fica amarrado ao número e não tem volta.
+
+**Só ele pode criar o canal** (é o app dele, no número dele). Enquanto o link
+não existe, `data/canal.json` fica com `link: ""` e a `/entrar` mostra "o canal
+abre nas próximas horas" em vez de um botão morto.
+
+### `/entrar` — a página de captação
+
+`src/app/entrar/page.tsx`, `noindex`. É o destino do link na bio e dos reels.
+
+⚠️ **O modelo do mercado promete número; nós prometemos prova.** As landings
+de grupo anunciam "+40.000 membros" — não temos isso e não vamos inventar. A
+prova social daqui é **dado real**: quantos produtos, há quantos dias
+conferimos, o que caiu hoje. Quem chega vê o serviço funcionando antes de
+entrar.
+
+### Os reels: como são feitos
+
+- **`/reel/{slug}?cena=gancho|produto|prova|chamada`** — quatro cenas
+  1080×1920 em `next/og`, mesma paleta do site.
+- **`node scripts/reel.mjs <slug>`** baixa as cenas e monta um MP4 de ~15s com
+  zoom lento e crossfade. Saída em **`rascunhos/reels/`**, fora do Git.
+- 🟢 **`ffmpeg` foi instalado em 19/09** com
+  `winget install --id Gyan.FFmpeg -e --scope user` — **não pediu
+  administrador**. Se sumir do PATH, o script acha sozinho na pasta do winget.
+- ⚠️ **O reel leva preço, ao contrário do pin e do post** — e por isso **a
+  data fica gravada na arte**. Reel de oferta é do dia; o pin vive meses.
+- ⚠️ **Sai sem áudio de propósito**: a trilha entra no app na hora de publicar,
+  e o catálogo de áudios em alta é metade do alcance de um reel.
+- ⚠️ **Renderizar é lento** (preset `slow`, ~2 a 4 min por vídeo, 1 GB de RAM).
+  Gere em lote e em segundo plano, não um a um esperando.
+- As legendas prontas ficam em `rascunhos/reels/LEGENDAS.md`.
+
+### A rotina das 4h
+
+**`trig_0183exgfjXFZgMU9ZKufsdyf`**, todo dia às **4h02 de Brasília**
+(`0 7 * * *` em UTC), criada em 19/09 a pedido dele para "trabalhar enquanto
+durmo". Painel: <https://claude.ai/code/routines/trig_0183exgfjXFZgMU9ZKufsdyf>
+
+Ela lê o catálogo, **escreve as `perguntas` que faltam em até 5 produtos**,
+roda `npm run verificar`, commita se passar, e manda e-mail com o que caiu de
+preço e o que depende dele.
+
+🔴 **Ela não gera vídeo, e isso não tem conserto pelo lado dela**: roda na
+nuvem, sem a máquina do Alisson, sem ffmpeg e sem o site local. Vídeo só sai
+em sessão aberta, na máquina dele.
 
 ## Instagram: agora é o canal de volume
 
