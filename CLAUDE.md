@@ -1499,6 +1499,26 @@ entrar.
   Gere em lote e em segundo plano, não um a um esperando.
 - As legendas prontas ficam em `rascunhos/reels/LEGENDAS.md`.
 
+### 🔴 Vídeo com IA: onde está a linha (19/09/2026)
+
+Ele pediu um reel "com rosto gerado". **A resposta é não, e a razão é de
+alcance, não de gosto:** em setembro/2026 o Instagram passou a **reduzir as
+recomendações** de conteúdo com figura sintética que parece pessoa real e não
+se identifica — some do Reels e do Explore para quem não segue. Quem usa IA só
+na arte, na edição ou na legenda **não é atingido**.
+
+- ✅ **Pode**: arte gerada, vídeo de mãos/objeto/tela, texto e legenda com IA.
+- 🔴 **Não pode**: rosto sintético dando depoimento ("entrei nesse canal e
+  economizei"). Junta dois problemas — alcance cortado e depoimento falso, que
+  é o oposto do que a marca vende.
+
+**O formato recomendado, que é o padrão do nicho e não tem risco:** close nas
+mãos segurando o celular, vista de cima, luz de janela, sem rosto.
+
+**Onde ele gera:** app do **Gemini** (Android/iOS), opção *Vídeo* — incluído no
+Google AI Pro dele, **3 vídeos por dia, 720p, até 8 s**. Para projeto maior,
+`labs.google/flow`. O prompt que funciona está no histórico de 19/09.
+
 ### A rotina das 4h
 
 **`trig_0183exgfjXFZgMU9ZKufsdyf`**, todo dia às **4h02 de Brasília**
