@@ -85,7 +85,7 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 | HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | **Dele**: avisar o cliente para trocar o link no Instagram, no Google Meu Negócio e em cartão |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
 | Lembrete dos links | 🟢 **Funcionou de verdade em 17/09**: o e-mail das 16h12 chegou, com os 12 candidatos e o bloco de URLs. A rotina está validada de ponta a ponta. ⚠️ **Mas o Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar o e-mail em texto puro (não feito) | **Dele**: dizer se quer que eu ajuste a rotina para texto puro |
-| Perguntas nas fichas | 🟢 **As 25 fichas têm, desde 17/09** — 30 perguntas novas escritas para os 10 produtos de 15 e 16/09. Nenhum número novo: tudo saiu da `analise` e da `descricao` | Ninguém |
+| Perguntas nas fichas | 🟡 **30 de 35 fichas têm, desde 19/09** (rotina das 4h): A36 verde, A07, A17 e os dois kits de potes ganharam perguntas nesse dia. **Faltam 5**: Projetor HY320, Placa-mãe Asus, SSD Externo SanDisk, Liquidificador Oster, Micro-ondas Electrolux | Ninguém — a rotina das 4h pega até 5 por dia sozinha |
 | Conferir no celular | 🟡 Pendente de 16/09: os **3 comparativos novos**, o **filtro do gráfico**, a **tabela da `/black-friday`** (rola de lado). De 17/09: o **comparativo do monitor** (10 linhas de ficha — é o maior até agora nos blocos do celular) e as **perguntas nas fichas** | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
@@ -1512,6 +1512,11 @@ preço e o que depende dele.
 🔴 **Ela não gera vídeo, e isso não tem conserto pelo lado dela**: roda na
 nuvem, sem a máquina do Alisson, sem ffmpeg e sem o site local. Vídeo só sai
 em sessão aberta, na máquina dele.
+
+⚠️ **O container da rotina nasce sem `node_modules`.** Medido em 19/09/2026:
+`npm run verificar` falhava com `Cannot find module 'react'/'next'` — não era
+erro de tipo, era dependência nunca instalada. `npm ci` primeiro resolve, leva
+~10s. Rodar isso antes de `npm run verificar` em toda execução desta rotina.
 
 ## Instagram: agora é o canal de volume
 
