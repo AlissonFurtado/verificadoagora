@@ -79,7 +79,7 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 | Frente | Estado | De quem é a vez |
 |---|---|---|
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
-| Próximos passos de retenção | 🔴 Do plano do relatório, **nada começou**: (a) frase de histórico no topo da ficha — *"acompanhamos há N dias · menor foi R$ X em DD/MM"*, que é a frase citável por IA; (b) página **"o que caiu de preço"**, gerada do histórico, que é o motivo de voltar amanhã; (c) coluna de critérios fixa e zebra na tabela do desktop | **Minha** para (a) e (c); (b) vale decidir com ele o escopo. **Decisão dele**: alerta de queda por e-mail/push, único item que precisa de infraestrutura nova |
+| Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`** — o que caiu desde a última conferência e em 7 dias, no sitemap e como primeiro atalho da home. Falta só **pedir indexação** dela | **Dele**: pedir indexação de `/quedas-de-preco`. **Decisão dele**: alerta de queda por e-mail/push — único item do plano que precisa de infraestrutura nova, e o único que funciona sem depender do Google |
 | **SEO: 4 frentes escolhidas, 1 entregue** | Ele pediu **todas as quatro** em 17/09. 🟢 Feita: `guias-relacionados` passou a cobrir toda categoria. 🔴 **Faltam três**: (a) 2 guias de decisão — *"SSD SATA ou NVMe: qual serve no seu PC?"* e *"Quantos lumens um projetor precisa ter?"*, que puxam SSD NV3, SanDisk e HY320; (b) 2 guias de Black Friday — projetor/TV e eletrodoméstico; (c) comparativo do **Galaxy A07** contra G06, C73, G15 e A16 (as fichas desses quatro já estão nos comparativos, é só copiar palavra por palavra) | **Minha** — é só retomar, não depende dele |
 | HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | **Dele**: avisar o cliente para trocar o link no Instagram, no Google Meu Negócio e em cartão |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
@@ -864,6 +864,30 @@ entrada de busca, não degrau do funil.
 
 `/como-conferimos` explica o robô, com marcação `FAQPage`. É o ativo que
 ninguém copia — qualquer um lista ofertas, ninguém tem o histórico.
+
+### `/quedas-de-preco` — o motivo de voltar amanhã
+
+No ar em 18/09/2026, do plano do relatório "O ativo é o histórico".
+`src/lib/quedas.ts` acha as quedas, `src/app/quedas-de-preco/page.tsx` mostra.
+
+**Por que ela é diferente de tudo o que existe aqui:** guia e comparativo
+dependem do Google trazer alguém. Esta página é para quem **já conhece o site**
+e quer saber o que mudou — é o mecanismo que transformou rastreador de preço em
+hábito diário para muita gente. O material já existia desde 07/09; só não
+estava dito em lugar nenhum além do gráfico de cada ficha.
+
+- **Duas janelas:** queda entre as duas últimas conferências, e queda em 7 dias
+  para quem não caiu de ontem para hoje. Quem aparece numa não repete na outra.
+- **Toda queda mostra as duas pontas com data.** ⚠️ Se o robô falhar um dia, a
+  comparação passa a ser com o último dia que existe — e a página mostra essa
+  data em vez de fingir que foi ontem.
+- **Nunca usa o preço riscado da loja**, e isso está escrito na página: aquele
+  valor é escolhido por quem vende.
+- ⚠️ **Quando nada cai, ela diz que nada caiu.** É o oposto de inventar
+  movimento, e é o que faz o dia de queda valer alguma coisa.
+- `data-onde="quedas"` nos cliques, para dar para medir se a página rende.
+- Primeiro atalho da home, à frente da Black Friday, e no sitemap com
+  `changeFrequency: daily` — é a página do site que mais muda.
 
 ### Guias de faixa
 
