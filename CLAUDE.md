@@ -79,7 +79,8 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 | Frente | Estado | De quem é a vez |
 |---|---|---|
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
-| Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`** — o que caiu desde a última conferência e em 7 dias, no sitemap e como primeiro atalho da home. Falta só **pedir indexação** dela | **Dele**: pedir indexação de `/quedas-de-preco`. **Decisão dele**: alerta de queda por e-mail/push — único item do plano que precisa de infraestrutura nova, e o único que funciona sem depender do Google |
+| Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | **Decisão dele**: alerta de queda por e-mail/push — único item do plano que precisa de infraestrutura nova, e o único que funciona sem depender do Google |
+| Indexação ainda pendente | 🟡 Não consegui pedir na mesma sessão (o painel para de trocar de URL depois de dois pedidos): **comparativo do monitor**, **comparativo do A17**… quando existir, a **ficha do A17** e as **4 páginas de Black Friday** | **De quem pegar primeiro** — é 1 minuto por URL no Search Console, e o método pelo Chrome está descrito em "Ser achado" |
 | **SEO: 4 frentes escolhidas, 1 entregue** | Ele pediu **todas as quatro** em 17/09. 🟢 Feita: `guias-relacionados` passou a cobrir toda categoria. 🔴 **Faltam três**: (a) 2 guias de decisão — *"SSD SATA ou NVMe: qual serve no seu PC?"* e *"Quantos lumens um projetor precisa ter?"*, que puxam SSD NV3, SanDisk e HY320; (b) 2 guias de Black Friday — projetor/TV e eletrodoméstico; (c) comparativo do **Galaxy A07** contra G06, C73, G15 e A16 (as fichas desses quatro já estão nos comparativos, é só copiar palavra por palavra) | **Minha** — é só retomar, não depende dele |
 | HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | **Dele**: avisar o cliente para trocar o link no Instagram, no Google Meu Negócio e em cartão |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
@@ -1312,6 +1313,24 @@ de novo, que aceitou. Se recusar, é isso: rodar o teste ao vivo antes.
 
 ⚠️ **O atalho `?id=` da Inspeção de URL não existe** (dá 404 do Google). O
 caminho é o campo "Inspecionar qualquer URL" no topo do Search Console.
+
+⚠️ **Pedir indexação pelo Chrome funciona, mas o campo é teimoso** (medido em
+18/09/2026, duas URLs pedidas com sucesso):
+
+- **A primeira URL entra normalmente** clicando no campo e digitando. **A
+  segunda não**: o campo ignora a digitação e a inspeção continua na URL
+  anterior — e aí o botão vira "Solicitar novamente", que reenvia a **mesma**
+  página. Confira sempre qual URL está na tela antes de clicar.
+- **O que destrava**: preencher o campo por JS com o setter nativo de
+  `HTMLInputElement.value`, disparar `input` e um `Enter` sintético. Depois
+  disso a inspeção troca.
+- **Clicar no botão por coordenada falha quando a página entra em zoom** (o
+  mesmo defeito visto no GitHub). Clicar pelo elemento (`botao.click()`)
+  resolve.
+- 🔴 **Depois de dois pedidos seguidos o painel para de responder à troca de
+  URL** — provável cota de inspeções por minuto. **Não insista**: volte depois
+  ou faça o resto à mão. Reenviar a mesma página não muda a prioridade dela,
+  segundo o próprio Google.
 
 🔴 **Snippet de produto: o guia gerava 6 entidades inválidas** — todo perfil
 virava `Product` sem `offers`, e 4 dos 6 aparelhos não são nossos, então não
