@@ -1499,6 +1499,31 @@ entrar.
   Gere em lote e em segundo plano, não um a um esperando.
 - As legendas prontas ficam em `rascunhos/reels/LEGENDAS.md`.
 
+### Publicar no canal pelo WhatsApp Web (funciona, com um truque)
+
+Feito pela primeira vez em 19/09/2026, com autorização explícita dele. O
+WhatsApp Web Business está logado; Canais → "Verificado agora" → campo
+"Digite uma atualização".
+
+🔴 **O editor do WhatsApp recusa texto com quebra de linha injetado por JS.**
+`execCommand('insertText')` cola tudo grudado numa linha só, e
+`insertLineBreak` é ignorado — é Lexical, que intercepta os comandos. Digitar
+com `shift+Enter` insere quebras a mais, imprevisível.
+
+🟢 **O que funciona: área de transferência.** `Set-Clipboard` no PowerShell
+com o texto (here-string `@'...'@`, que preserva acento e emoji) e depois
+`ctrl+v` no campo. A formatação sai exata e o preview do link carrega sozinho
+— e o preview usa a `og:image` da ficha, que fica ótimo.
+
+⚠️ **Confira o campo antes de enviar** (`innerText` do
+`div[contenteditable][role=textbox]`): resíduo de tentativa anterior fica lá e
+vai junto.
+
+⚠️ **O WhatsApp avisa, no topo do canal, que "canais no seu país são
+obrigados a identificar o conteúdo gerado por IA".** Vale para os reels se
+algum dia usarmos vídeo gerado — a arte do `/reel` é gerada, mas mostra dado
+real e não simula pessoa; se entrar vídeo de IA de verdade, tem que rotular.
+
 ### 🔴 Vídeo com IA: onde está a linha (19/09/2026)
 
 Ele pediu um reel "com rosto gerado". **A resposta é não, e a razão é de
