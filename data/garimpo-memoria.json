@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-18",
+  "atualizado_em": "2026-09-19",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -648,6 +648,30 @@
       "sugerido_em": "2026-09-18",
       "familia": "Pote para alimentos hermético Rishon Pote Hermetico Borossilicato 640mL",
       "preco_sugerido": 104.9,
+      "vezes": 1
+    },
+    "MLB40656539": {
+      "sugerido_em": "2026-09-19",
+      "familia": "Starlink Mini omnidirecional",
+      "preco_sugerido": 495,
+      "vezes": 1
+    },
+    "MLB47900489": {
+      "sugerido_em": "2026-09-19",
+      "familia": "Monitor Gamer AOC com tela de 22\" 120Hz e resolução VGA",
+      "preco_sugerido": 459,
+      "vezes": 1
+    },
+    "MLB19444510": {
+      "sugerido_em": "2026-09-19",
+      "familia": "Processador AMD Ryzen 5 5500 3.6GHz 4.2GHz Max Turbo Cache 16MB AM4",
+      "preco_sugerido": 522,
+      "vezes": 1
+    },
+    "MLB19119113": {
+      "sugerido_em": "2026-09-19",
+      "familia": "Micro-ondas Mondial Linha Branca MO-01-21 21L",
+      "preco_sugerido": 519,
       "vezes": 1
     }
   }
