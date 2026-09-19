@@ -55,6 +55,23 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 19/09/2026 (noite)
+
+🟢 **O canal do WhatsApp está no ar e é a frente principal agora.**
+`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **9 produtos
+publicados em 19/09**, o reel foi ao ar no Instagram, e o perfil foi arrumado
+(foto, bio e link). A conta que decidiu isso: canal com 200–300 pessoas
+engajadas rende o que o site renderia com 3.000–6.000 visitas/mês, e o site
+tem **0 cliques** de busca.
+
+| O que ficou pendente | De quem é |
+|---|---|
+| 🔴 **PR 17 do robô: o SSD SanDisk caiu 40%** (R$ 945 → R$ 562,18) e está segurado como suspeito. Não conferi na fonte (o Chrome travou). **Confira e aplique à mão** — e não mergeie o branch, que é anterior aos produtos novos | Minha, na próxima sessão |
+| Publicar 5 por dia no canal — faltam **23 produtos** | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
+| Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar", é recurso de grupo. Quem faz esse papel é a descrição do canal |
+| Divulgar o canal de graça | **Dele**: status do WhatsApp pessoal (o de maior retorno), busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** — é como o número é marcado como spam |
+| Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. Tentamos os dois, o painel classifica errado sozinho — **ele também tentou e deu o mesmo**. A URL está declarada, que é o que a cláusula 1.3 exige |
+
 ## Onde paramos — 18/09/2026 (madrugada)
 
 Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
@@ -1499,6 +1516,23 @@ entrar.
   Gere em lote e em segundo plano, não um a um esperando.
 - As legendas prontas ficam em `rascunhos/reels/LEGENDAS.md`.
 
+### A fila do canal: 5 por dia
+
+`node scripts/canal.mjs` escolhe os 5 do dia e escreve as mensagens;
+`--marcar` registra como publicados. **Ele não publica nada** — publicar é o
+Chrome logado, pelo método do clipboard (abaixo).
+
+- **A ordem não é a do catálogo:** quem caiu de preço hoje passa na frente,
+  depois quem está no menor valor já visto, depois o maior desconto.
+- `data/canal-publicados.json` guarda **quem já foi e por quanto**. Produto só
+  volta se o preço tiver mudado — mesma lógica da memória do garimpo, e pela
+  mesma razão: repetir a mesma oferta é o que faz alguém sair do canal.
+- ⚠️ **Queda de R$ 6 não é manchete.** Só vira "🔻 CAIU HOJE" a partir de **3%
+  ou R$ 20**; a primeira versão gritava por qualquer centavo, o que ensina o
+  seguidor a ignorar o canal.
+- Quando não houver nada novo, o script diz isso — e **é uma resposta
+  legítima**, na mesma linha da `/quedas-de-preco` que admite quando nada caiu.
+
 ### Publicar no canal pelo WhatsApp Web (funciona, com um truque)
 
 Feito pela primeira vez em 19/09/2026, com autorização explícita dele. O
@@ -1544,15 +1578,50 @@ mãos segurando o celular, vista de cima, luz de janela, sem rosto.
 Google AI Pro dele, **3 vídeos por dia, 720p, até 8 s**. Para projeto maior,
 `labs.google/flow`. O prompt que funciona está no histórico de 19/09.
 
-### A rotina das 4h
+### Editar gravação de tela do celular (o que funcionou)
 
-**`trig_0183exgfjXFZgMU9ZKufsdyf`**, todo dia às **4h02 de Brasília**
-(`0 7 * * *` em UTC), criada em 19/09 a pedido dele para "trabalhar enquanto
-durmo". Painel: <https://claude.ai/code/routines/trig_0183exgfjXFZgMU9ZKufsdyf>
+Ele grava a tela rolando o site e eu edito. Feito em 19/09/2026
+(`scratchpad/editar3.py` é o molde; o resultado foi para
+`rascunhos/reels/tela/`).
 
-Ela lê o catálogo, **escreve as `perguntas` que faltam em até 5 produtos**,
-roda `npm run verificar`, commita se passar, e manda e-mail com o que caiu de
-preço e o que depende dele.
+**A receita:** recortar 1168×2386 → `scale=1080:-2,crop=1080:1920`, cortar em
+4 trechos, zoom crescente em cada um, legenda sobreposta, capa na frente com
+crossfade. As legendas são **PNG desenhados com ImageMagick** (pílula
+arredondada, Segoe UI Black, palavra-chave em `#38bdf8`) — muito melhor que o
+`drawtext` com faixa preta dura.
+
+🔴 **Cinco armadilhas do ffmpeg que custaram caro, todas medidas:**
+
+1. **`zoompan` com `d` maior que 1 repete cada quadro** — em vídeo isso estica
+   a duração: um trecho de 3 s virou minutos e o arquivo passou de **190 MB**.
+   Para vídeo é sempre `d=1`, com o zoom em função de `on`.
+2. **`fps` dentro do `zoompan`** faz o vídeo sair em câmera lenta quando a
+   fonte é 60 fps. O `fps=30` vai **antes**, na cadeia do trecho.
+3. **Vírgula dentro de expressão de filtro mata o comando** — no ffmpeg a
+   vírgula separa filtros. Nada de `min(a, b)` dentro de `overlay=y=...`.
+4. **Um stream de entrada só é consumido uma vez**: para usar o mesmo vídeo em
+   4 trechos, `split=4` antes.
+5. **PNG do ImageMagick Q16 sai em 16 bits** e o `xfade` recusa; converta com
+   `-depth 8 PNG24:`. E **timebase diferente também derruba o `xfade`** —
+   `settb=1/30` nos dois lados resolve. O sintoma é sempre o mesmo e não diz
+   nada: *"Could not open encoder before EOF"*.
+6. **PNG estático entra como um quadro só**: `fade` com alpha zera esse quadro
+   e a legenda **some**. Precisa de `-loop 1 -t <duração>` no input.
+
+### A rotina da manhã (8h)
+
+**`trig_0183exgfjXFZgMU9ZKufsdyf`**, todo dia às **8h de Brasília**
+(`0 11 * * *` em UTC). Criada em 19/09 às 4h e **movida para as 8h no mesmo
+dia, a pedido dele**. Painel:
+<https://claude.ai/code/routines/trig_0183exgfjXFZgMU9ZKufsdyf>
+
+Ela roda `scripts/canal.mjs` e **manda por e-mail as 5 mensagens do dia
+prontas para colar no canal**, escreve as `perguntas` que faltam em até 5
+produtos, roda `npm run verificar` e commita se passar.
+
+⚠️ **O container nasce sem `node_modules`** (medido em 19/09): `npm run
+verificar` falha com `Cannot find module 'react'` se não rodar `npm ci` antes.
+Não é erro de tipo — é dependência que nunca foi instalada.
 
 🔴 **Ela não gera vídeo, e isso não tem conserto pelo lado dela**: roda na
 nuvem, sem a máquina do Alisson, sem ffmpeg e sem o site local. Vídeo só sai
