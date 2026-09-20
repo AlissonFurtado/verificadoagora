@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-19",
+  "atualizado_em": "2026-09-20",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -672,6 +672,18 @@
       "sugerido_em": "2026-09-19",
       "familia": "Micro-ondas Mondial Linha Branca MO-01-21 21L",
       "preco_sugerido": 519,
+      "vezes": 1
+    },
+    "MLB47044981": {
+      "sugerido_em": "2026-09-20",
+      "familia": "Fone de ouvido JBL Quantum 100m2 JBLQTUM100M2BLK",
+      "preco_sugerido": 164.1,
+      "vezes": 1
+    },
+    "MLB25769744": {
+      "sugerido_em": "2026-09-20",
+      "familia": "interno Western Digital Purple 1TB 1TB",
+      "preco_sugerido": 435,
       "vezes": 1
     }
   }
