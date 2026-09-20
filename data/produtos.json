@@ -1082,6 +1082,20 @@
         "Um projetor deste preço faz uma coisa muito bem: transformar a parede da sala ou do quarto numa tela de 100 polegadas por menos do que custa uma TV de 43. Ele já vem com Android e Wi-Fi, então roda os aplicativos de streaming sem precisar de aparelho extra, e o Bluetooth manda o som para uma caixa ou soundbar.",
         "Agora o número que importa, e que quase todo anúncio de projetor barato distorce: a ficha do anúncio diz **12.000 lumens**, mas o próprio título informa **390 ANSI lumens** — e é o ANSI que vale, porque é a medida padronizada. 390 ANSI é brilho para **quarto escuro ou sala com a luz apagada e a cortina fechada**. De dia, com luz entrando, a imagem lava. Quem esperar brilho de TV vai devolver o aparelho.",
         "Compre para sessão de filme à noite, videogame na parede ou apresentação em sala fechada. Não compre para substituir a TV da sala que fica ligada de dia, nem para ambiente claro."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Dá pra usar de dia, com a sala iluminada?",
+          "resposta": "Não. Ele entrega 390 ANSI lumens, que é a medida real de brilho, mesmo o anúncio falando em 12.000 lumens — funciona bem à noite ou com a sala escurecida, não com luz do dia entrando."
+        },
+        {
+          "pergunta": "Precisa de outro aparelho pra rodar Netflix e outros apps?",
+          "resposta": "Não. Ele já vem com Android e Wi-Fi embutidos, então os aplicativos de streaming rodam direto nele."
+        },
+        {
+          "pergunta": "Como sai o som — a caixa embutida basta?",
+          "resposta": "Ele tem Bluetooth pra mandar o som a uma caixa ou soundbar externa. É assim que ele resolve áudio — vale contar com isso ao montar o espaço."
+        }
       ]
     },
     {
@@ -1107,6 +1121,20 @@
         "A TUF Gaming B550M-PLUS é a placa-mãe que sustenta a maioria das montagens AMD de custo-benefício: soquete AM4, chipset B550 com PCIe 4.0 e suporte a até 128 GB de memória DDR4, no formato mATX que cabe em gabinete pequeno. A linha TUF da Asus é a do meio — acima das placas de entrada em qualidade de componente, e bem abaixo do preço das ROG.",
         "O cuidado que evita a compra errada: **AM4 é a plataforma anterior da AMD**. Ela aceita os Ryzen das séries 3000 e 5000, que ainda se acham novos e usados por bom preço, mas **não aceita Ryzen 7000 ou 9000**, que são AM5 e usam memória DDR5. Comprar esta placa é decidir montar na geração passada — e essa é uma decisão de orçamento legítima, desde que consciente.",
         "Compre se você vai montar ou atualizar um PC com Ryzen 5000 e já tem memória DDR4 — é onde a AM4 ainda ganha em preço por desempenho. Não compre se pretende chegar aos processadores mais novos sem trocar a placa depois."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Essa placa aceita os Ryzen mais novos, tipo 7000 ou 9000?",
+          "resposta": "Não. Ela é AM4, a plataforma anterior da AMD — aceita Ryzen das séries 3000 e 5000, não os 7000/9000, que são AM5 com DDR5."
+        },
+        {
+          "pergunta": "Serve pra quem já tem memória DDR4 e Ryzen 5000?",
+          "resposta": "Sim, é exatamente aí que ela ganha em preço por desempenho: soquete AM4, chipset B550 com PCIe 4.0, até 128 GB de DDR4."
+        },
+        {
+          "pergunta": "Cabe em gabinete pequeno?",
+          "resposta": "Cabe. Ela é mATX, formato pensado pra gabinete compacto."
+        }
       ]
     },
     {
@@ -1135,6 +1163,20 @@
         "Duas coisas para conferir antes. A velocidade anunciada, de até 800 MB/s, **só aparece numa porta USB 3.2 Gen 2**; em porta USB antiga ele funciona, mas bem mais devagar. E vale lembrar que ele é um SSD portátil de linha de entrada: quem edita vídeo 4K direto do disco deve olhar os modelos com interface mais rápida.",
         "Compre para levar projeto, biblioteca de fotos ou jogos entre computadores, e para backup que precisa ser rápido o bastante para você de fato fazer. Não compre esperando que ele substitua backup em nuvem — disco que anda na mochila é o que mais se perde.",
         "**Tiramos este produto da vitrine em 19/09/2026, e o motivo é o preço.** A oferta mais barata do anúncio passou a vir dos Estados Unidos: são R$ 562,18 de mercadoria, mas o produto entra por declaração de importação e ainda paga impostos federais e estaduais, que não estão nesse valor. A loja oficial da SanDisk, que entrega do Brasil, cobrava R$ 1.215 no mesmo dia. Como não temos como dizer quanto a conta fecha para você, preferimos não anunciar o número menor — ele é verdadeiro e engana ao mesmo tempo. O produto volta para a vitrine se um vendedor nacional retomar o anúncio."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "A velocidade anunciada, de 800 MB/s, vale em qualquer porta USB?",
+          "resposta": "Não. Só chega nisso numa porta USB 3.2 Gen 2; numa porta mais antiga ele funciona, só que bem mais devagar."
+        },
+        {
+          "pergunta": "Serve pra editar vídeo 4K direto do disco?",
+          "resposta": "Não é o ideal — é um SSD portátil de linha de entrada. Quem edita 4K direto do disco deve olhar modelos com interface mais rápida."
+        },
+        {
+          "pergunta": "Por que ele não aparece na vitrine, se ainda está à venda?",
+          "resposta": "Porque o preço mais barato do anúncio passou a vir de fora do país, com imposto de importação que não entra no valor mostrado — preferimos não anunciar um número que é verdadeiro e engana ao mesmo tempo. A ficha completa do produto explica o caso."
+        }
       ]
     },
     {
@@ -1160,6 +1202,20 @@
         "Mil e quatrocentos watts num liquidificador de casa é potência de sobra, e é o que separa um aparelho que tritura gelo e faz massa de bolo de um que engasga na primeira cenoura. O copo de 3,2 litros é dos maiores da categoria — dá para uma jarra inteira de suco de uma vez, sem bater em duas levas — e a lâmina é de aço inoxidável, que não enferruja nem perde o fio como as de aço comum.",
         "As 15 velocidades soam mais úteis do que são: na prática, quase toda receita usa duas ou três, e o que faz diferença mesmo é o pulsar. Repare também que ele é **220V**, o que decide a compra se a sua casa é 127V, e que não tem display digital — o controle é o botão giratório de sempre.",
         "Compre se a casa tem gente e o liquidificador trabalha todo dia, ou se o atual já não dá conta de gelo e alimento duro. Não compre se você mora sozinho e bate uma vitamina de manhã: um aparelho de 500 W e copo menor ocupa menos bancada e custa um terço disso."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Serve pra quem mora sozinho e faz uma vitamina de manhã?",
+          "resposta": "Não é o ideal. Pra uma pessoa só, um aparelho de 500 W e copo menor ocupa menos bancada e custa um terço disso — este é pra casa com mais gente ou uso pesado."
+        },
+        {
+          "pergunta": "Ele é 110V ou 220V?",
+          "resposta": "É 220V. Confira a voltagem da sua casa antes de comprar."
+        },
+        {
+          "pergunta": "As 15 velocidades fazem diferença de verdade?",
+          "resposta": "Na prática, quase toda receita usa duas ou três — o que ajuda mesmo é a função pulsar, não o número de velocidades."
+        }
       ]
     },
     {
@@ -1185,6 +1241,20 @@
         "Vinte e três litros é o tamanho que atende a maior parte das casas: cabe um prato fundo, uma travessa média e a pipoca, sem tomar a bancada inteira. Este Electrolux tem prato giratório de 27 cm, descongelamento automático por peso — você informa quanto pesa a carne e ele calcula o tempo — e **classificação A de eficiência energética**, que é o selo mais alto e aparece na conta de luz de quem usa o forno todo dia.",
         "O detalhe que vale para quem tem criança em casa: ele traz **trava de segurança**, que impede a porta de abrir ou o aparelho de ligar sem a sequência certa. E o que ele não tem: **não tem grill nem convecção**, então não doura, não gratina e não substitui forno elétrico para assar.",
         "Compre para aquecer, descongelar e cozinhar o dia a dia com economia de energia. Não compre esperando assar bolo ou gratinar lasanha — para isso o aparelho é outro, e custa mais."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ele assa bolo ou gratina?",
+          "resposta": "Não. Ele não tem grill nem convecção — não doura e não substitui forno elétrico pra assar."
+        },
+        {
+          "pergunta": "Tem trava pra criança não mexer sozinha?",
+          "resposta": "Sim, tem trava de segurança: impede a porta de abrir ou o aparelho de ligar fora da sequência certa."
+        },
+        {
+          "pergunta": "23 litros é suficiente pra família?",
+          "resposta": "Dá pra prato fundo, travessa média e pipoca sem tomar a bancada inteira — é o tamanho que atende a maioria das casas."
+        }
       ]
     },
     {
