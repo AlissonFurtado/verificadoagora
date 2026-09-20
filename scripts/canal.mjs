@@ -40,33 +40,60 @@ function avaliar(produto) {
     anterior !== null && (queda / anterior >= 0.03 || queda >= 20);
   const noMenor = menor !== null && produto.preco_atual <= menor.preco;
 
+  const jaFoi = publicados.itens[produto.meli_id];
+
+  // ⚠️ **Produto recém-cadastrado não tem histórico, e sem isto ele nunca
+  // entrava na fila** — não caiu de preço nem está "no menor que já vi",
+  // então competia só pelo desconto anunciado e perdia para o catálogo
+  // inteiro. Novidade é motivo legítimo de mensagem: é o que o seguidor não
+  // tem como saber sozinho.
+  const estreia = !jaFoi && pontos.length <= 1;
+
   // Peso: queda de hoje vale mais que tudo — é a única coisa que o canal
-  // promete. Depois o piso histórico, e só então o desconto anunciado.
+  // promete. Depois o piso histórico, a estreia, e só então o desconto.
   let nota = produto.desconto_percentual;
+  if (estreia) nota += 30;
   if (noMenor) nota += 40;
   if (caiuHoje) nota += 100 + Math.round(((anterior - produto.preco_atual) / anterior) * 100);
 
-  const jaFoi = publicados.itens[produto.meli_id];
   if (jaFoi) {
     if (jaFoi.preco === produto.preco_atual) return null; // nada novo a dizer
     nota -= 20; // repetição só entra se for claramente melhor que o resto
   }
 
-  return { produto, pontos, anterior, menor, caiuHoje, noMenor, nota, repetido: Boolean(jaFoi) };
+  return {
+    produto,
+    pontos,
+    anterior,
+    menor,
+    caiuHoje,
+    noMenor,
+    estreia,
+    nota,
+    repetido: Boolean(jaFoi),
+  };
 }
 
-function escrever({ produto, pontos, anterior, menor, caiuHoje, noMenor, repetido }) {
+function escrever({ produto, pontos, anterior, menor, caiuHoje, noMenor, estreia, repetido }) {
   const p = produto;
   const linhas = [];
 
   if (caiuHoje) linhas.push('🔻 CAIU HOJE', '');
-  else if (noMenor) linhas.push('✅ MENOR PREÇO QUE JÁ VI', '');
+  else if (noMenor && !estreia) linhas.push('✅ MENOR PREÇO QUE JÁ VI', '');
+  else if (estreia) linhas.push('🆕 NOVO NO SITE', '');
 
   linhas.push(p.nome, `${real(p.preco_original)} → ${real(p.preco_atual)} (${p.desconto_percentual}% OFF)`, '');
 
   if (caiuHoje) {
     linhas.push(
       `Ontem estava ${real(anterior)}. Caiu ${real(anterior - p.preco_atual)} de um dia para o outro.`,
+      '',
+    );
+  } else if (estreia) {
+    // Sem histórico ainda não dá para dizer se o desconto é bom. O que dá
+    // para prometer é o que vem depois — que é justamente o serviço.
+    linhas.push(
+      'Entrou hoje no site. Daqui pra frente eu confiro o preço dele todo dia e aviso se cair.',
       '',
     );
   } else if (noMenor && pontos.length > 2) {
@@ -91,12 +118,23 @@ function gerarSlug(p) {
   return `${base}-${p.meli_id.toLowerCase()}`;
 }
 
-const escolhidos = catalogo.produtos
+const avaliados = catalogo.produtos
   .filter((p) => p.disponivel && !p.oculto)
   .map(avaliar)
   .filter(Boolean)
-  .sort((a, b) => b.nota - a.nota)
-  .slice(0, POR_DIA);
+  .sort((a, b) => b.nota - a.nota);
+
+// ⚠️ **Uma vaga é reservada para produto novo, e isso não é detalhe de
+// ordenação.** Disputando só por nota, a estreia perde sempre: uma queda de
+// preço real vale 100 pontos e um piso histórico vale 40, então um produto
+// recém-cadastrado só apareceria no canal num dia em que nada tivesse
+// acontecido no catálogo inteiro. O resultado prático era o canal nunca
+// anunciar novidade — que é a única coisa que o seguidor não descobre sozinho
+// olhando o site. Uma vaga basta: o resto da fila continua sendo mérito.
+const estreante = avaliados.find((a) => a.estreia);
+const escolhidos = estreante
+  ? [estreante, ...avaliados.filter((a) => a !== estreante).slice(0, POR_DIA - 1)]
+  : avaliados.slice(0, POR_DIA);
 
 if (escolhidos.length === 0) {
   console.log('Nada novo para mandar hoje — e isso é uma resposta legítima.');

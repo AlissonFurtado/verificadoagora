@@ -68,7 +68,7 @@ precisa mover, e é ele que diz se o canal está funcionando, não o catálogo.
 
 | O que ficou pendente | De quem é |
 |---|---|
-| Publicar 5 por dia no canal — **faltam 17 produtos** | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
+| Publicar 5 por dia no canal — **faltam 14 produtos** (18 dos 32 já foram, em 19 e 20/09) | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
 | Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar", é recurso de grupo. Quem faz esse papel é a descrição do canal |
 | Divulgar o canal de graça | **Dele**: busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. 🟢 O status do WhatsApp pessoal **já foi feito em 19/09**. ⚠️ **Nunca jogar link em grupo alheio** — é como o número é marcado como spam |
 | Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. Tentamos os dois, o painel classifica errado sozinho — **ele também tentou e deu o mesmo**. A URL está declarada, que é o que a cláusula 1.3 exige |
@@ -131,8 +131,12 @@ funciona, com duas correções medidas nesse dia:
   `replace(/\n{2,}/g,'\n')` para conferir o *conteúdo*, e um screenshot para
   conferir o *espaçamento* — comparado com uma mensagem já publicada.
 - ⚠️ **Clicar no item do canal por JS não abre**: o WhatsApp ignora `.click()`
-  na lista lateral. Tem que ser clique real (`computer`), por `ref` ou
-  coordenada.
+  na lista lateral. Tem que ser clique real (`computer`).
+- 🔴 **E o clique por `ref` também não abre** (medido em 20/09): o `find`
+  acha o botão "Canal Verificado agora", o clique é aceito e o campo de
+  mensagem não aparece. **O que funciona é clicar por coordenada em cima do
+  nome do canal** — por volta de `(170, 117)` com a lista no topo. Clicar mais
+  à direita, na área do item, também falha: seleciona sem abrir.
 - ⚠️ **`.message-out` não encontra as mensagens do canal** — o seletor devolve
   0 mesmo com tudo publicado. Para confirmar que saiu, o screenshot é a prova.
 - **Volume:** ele pediu "publica as que faltam" (22) e escolheu **5**, depois
@@ -1650,6 +1654,14 @@ Chrome logado, pelo método do clipboard (abaixo).
 
 - **A ordem não é a do catálogo:** quem caiu de preço hoje passa na frente,
   depois quem está no menor valor já visto, depois o maior desconto.
+- 🟢 **Uma das 5 vagas é reservada para produto novo** (desde 20/09/2026), e
+  não é detalhe de ordenação. Disputando só por nota, a estreia perdia sempre
+  — queda de preço vale 100 pontos, piso histórico vale 40, e um produto
+  recém-cadastrado não tem nem um nem outro. Na prática **o canal nunca
+  anunciaria novidade**, que é justamente o que o seguidor não descobre
+  sozinho. Produto novo entra com o cabeçalho **🆕 NOVO NO SITE** e a frase
+  que promete o serviço em vez de um desconto que ainda não dá para julgar:
+  *"Entrou hoje no site. Daqui pra frente eu confiro o preço dele todo dia."*
 - `data/canal-publicados.json` guarda **quem já foi e por quanto**. Produto só
   volta se o preço tiver mudado — mesma lógica da memória do garimpo, e pela
   mesma razão: repetir a mesma oferta é o que faz alguém sair do canal.
