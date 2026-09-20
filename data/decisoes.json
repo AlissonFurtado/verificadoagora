@@ -1002,6 +1002,149 @@
         }
       ],
       "escrito_em": "2026-09-20"
+    },
+    {
+      "slug": "vale-esperar-black-friday-fone-de-ouvido",
+      "titulo": "Vale esperar a Black Friday para comprar fone de ouvido?",
+      "resumo": "A Black Friday de 2026 é em 27 de novembro. Fone sem fio é uma das categorias que mais se movem na data — e também uma das que mais usam número inflado no anúncio. Abaixo, quatro perguntas respondidas em uma frase cada, incluindo a que resolve a confusão das \"45 horas de bateria\".",
+      "perguntas": [
+        {
+          "chave": "fone-cai-mesmo",
+          "pergunta": "Fone de ouvido cai de preço na Black Friday?",
+          "resposta_curta": "Cai, e costuma cair bastante: a margem da categoria é alta e o ciclo de lançamento é curto, então sempre há um modelo do ano passado que a loja precisa esvaziar.",
+          "opcoes": [
+            {
+              "rotulo": "Intermediário da geração anterior",
+              "para_quem": "Quem quer a maior queda",
+              "explicacao": "É onde a data funciona de verdade. Fone lançado há um ano costuma ter a mesma qualidade de som do sucessor e um preço bem menor."
+            },
+            {
+              "rotulo": "Modelo recém-lançado",
+              "para_quem": "Quem quer o mais novo",
+              "explicacao": "Desconto pequeno. Fone novo vende sozinho, e o preço dele cai de forma constante ao longo do ano seguinte sem depender de data nenhuma."
+            }
+          ],
+          "detalhe": [
+            "Fone é também a categoria com mais anúncio de marca desconhecida imitando modelo famoso. Na Black Friday esse tipo de oferta se multiplica, porque o desconto grande chama mais atenção que o nome do fabricante.",
+            "O desconto que aparece na vitrine é calculado sobre o preço \"de\", escolhido por quem vende. Ele não precisa ter sido cobrado recentemente."
+          ],
+          "cuidado": "Fone de ouvido é produto de higiene pessoal: a loja pode recusar a troca por arrependimento se o lacre foi rompido. Confira a política antes, não depois."
+        },
+        {
+          "chave": "bateria-anunciada",
+          "pergunta": "As \"45 horas de bateria\" são do fone mesmo?",
+          "resposta_curta": "Não. Esse número quase sempre soma o fone mais as recargas que o estojo carrega dentro dele — o fone sozinho costuma durar entre 6 e 10 horas.",
+          "opcoes": [
+            {
+              "rotulo": "Horas do fone",
+              "para_quem": "O número que importa no uso",
+              "explicacao": "É quanto tempo você escuta antes de precisar guardar no estojo. Dez horas cobrem um dia inteiro de trabalho; seis, não."
+            },
+            {
+              "rotulo": "Horas com o estojo",
+              "para_quem": "O número que aparece no anúncio",
+              "explicacao": "Diz quantas vezes você pode recarregar longe da tomada. Útil para viagem, mas não é autonomia contínua — e é sempre o maior dos dois."
+            }
+          ],
+          "detalhe": [
+            "Dá para ver os dois números lado a lado nos fones que acompanhamos: dois modelos da mesma marca entregam as mesmas 10 horas no fone e mudam só o estojo, um com 30 horas no total e outro com 45. A diferença de preço entre eles é, em boa parte, a diferença de estojo.",
+            "Ligar o cancelamento de ruído reduz a autonomia, e o fabricante nem sempre informa quanto. Quando informa, a diferença é grande: um dos fones daqui passa de cerca de 35 horas para perto de 20 com o recurso ligado."
+          ],
+          "cuidado": "Compare o mesmo número entre modelos. Ler \"45 horas\" de um e \"10 horas\" de outro e concluir que o primeiro dura quatro vezes mais é o erro que o anúncio quer que você cometa."
+        },
+        {
+          "chave": "anc-vale",
+          "pergunta": "Preciso pagar mais por cancelamento de ruído?",
+          "resposta_curta": "Só se você usa o fone em lugar barulhento de forma constante — ônibus, escritório aberto, avião. Para casa e caminhada, o recurso pesa no preço e na bateria sem resolver problema nenhum.",
+          "opcoes": [
+            {
+              "rotulo": "Com cancelamento ativo",
+              "para_quem": "Quem encara transporte público todo dia",
+              "explicacao": "O recurso corta principalmente ruído grave e constante: motor, ar-condicionado, vagão. É onde a diferença é imediata e vale o dinheiro."
+            },
+            {
+              "rotulo": "Sem cancelamento",
+              "para_quem": "Quem usa em casa, correndo ou no carro",
+              "explicacao": "Um fone que veda bem já bloqueia boa parte do som. E em rua ou bicicleta ouvir o ambiente não é defeito, é segurança."
+            }
+          ],
+          "detalhe": [
+            "Fabricante sério publica quantos decibéis o sistema corta — um dos fones daqui anuncia até 42 dB. Anúncio que diz apenas \"com cancelamento de ruído\", sem número e sem dizer se é ativo ou passivo, costuma estar falando da borracha que veda o ouvido.",
+            "Cancelamento passivo é o encaixe do fone no canal do ouvido. Ele não usa bateria, não custa nada e resolve boa parte do problema — por isso testar tamanhos de ponteira muda mais o resultado do que muita gente imagina."
+          ],
+          "cuidado": "O modo transparência, que deixa o som de fora entrar, é tão importante quanto o cancelamento para quem anda na rua. Confira se o modelo tem antes de comprar pensando só no ANC."
+        },
+        {
+          "chave": "esperar-ou-agora",
+          "pergunta": "Espero novembro ou compro agora?",
+          "resposta_curta": "Se o seu fone ainda funciona, espere e acompanhe o preço desde já. Se você está sem, compre — dois meses sem fone não se recuperam com desconto.",
+          "opcoes": [
+            {
+              "rotulo": "Esperar e acompanhar",
+              "para_quem": "Quem quer trocar por um melhor",
+              "explicacao": "Trinta dias de histórico bastam para saber se a oferta de novembro é queda real ou volta ao preço normal depois de uma subida em outubro."
+            },
+            {
+              "rotulo": "Comprar agora",
+              "para_quem": "Quem perdeu ou quebrou o anterior",
+              "explicacao": "Fone bom de faixa de entrada aparece em promoção o ano inteiro. Não é uma categoria em que valha sofrer esperando uma data."
+            }
+          ],
+          "detalhe": [
+            "Nas páginas de produto deste site o gráfico tem botões de 30, 60 e 90 dias, e guardamos o preço todo dia desde 7 de setembro de 2026. Período sem histórico fica desligado em vez de mostrar uma linha curta com rótulo comprido.",
+            "Fone é um dos produtos que mais oscilam por semana no Mercado Livre. Mais de uma vez o menor preço do trimestre apareceu fora de qualquer data comemorativa — é por isso que acompanhar rende mais do que esperar."
+          ],
+          "cuidado": "Cor diferente costuma ser outro anúncio, com outro preço e outro histórico. O preto pode estar em oferta enquanto o branco do mesmo modelo segue caro."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB40556904",
+          "nota": "O caso que a pergunta 2 explica: 10 horas no fone e 45 com o estojo. Tem cancelamento ativo com número publicado, até 42 dB, que é o que separa um ANC de verdade do \"cancelamento\" que é só a ponteira. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Driver": "10 mm",
+            "Bateria": "10 h no fone · 45 h com o estojo",
+            "Cancelamento de ruído": "Ativo e adaptativo, até 42 dB"
+          }
+        },
+        {
+          "meli_id": "MLB38302175",
+          "nota": "O irmão mais simples, e a comparação mais útil do guia: mesmo driver de 10 mm e as mesmas 10 horas no fone — o que muda é o estojo, que leva 30 horas em vez de 45. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Driver": "10 mm",
+            "Bateria": "10 h no fone · 30 h com o estojo"
+          }
+        },
+        {
+          "meli_id": "MLB52039200",
+          "nota": "Mostra o outro número que o anúncio costuma esconder: a autonomia cai de cerca de 35 horas para perto de 20 com o cancelamento ligado. Tem IP54 contra poeira e respingo, que nem todo fone dessa faixa traz. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Driver": "6,5 mm",
+            "Bateria": "Até 35 h com o estojo · cerca de 20 h com ANC",
+            "Resistência": "IP54 (poeira e respingos)"
+          }
+        }
+      ],
+      "veredito": "Juntando as quatro respostas: fone é uma das categorias em que esperar a Black Friday compensa de verdade, desde que você já tenha um funcionando e comece a olhar o preço agora. Quando a oferta chegar, ignore o número grande da bateria e procure dois outros: quantas horas o fone dura sozinho e quantos decibéis o cancelamento corta. Se o anúncio não traz nenhum dos dois, ele está vendendo desconto, não fone.",
+      "fontes": [
+        {
+          "titulo": "soundcore P30i — página oficial da soundcore",
+          "url": "https://www.soundcore.com/products/soundcore-p30i"
+        },
+        {
+          "titulo": "soundcore P20i — página oficial da soundcore",
+          "url": "https://www.soundcore.com/products/p20i"
+        },
+        {
+          "titulo": "Galaxy Buds Core — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/audio-sound/galaxy-buds/galaxy-buds-core-black-sm-r410nzkazto/"
+        },
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        }
+      ],
+      "escrito_em": "2026-09-20"
     }
   ]
 }

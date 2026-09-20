@@ -165,7 +165,7 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
 | Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | Ninguém. ⚠️ **O alerta de queda por e-mail/push foi recusado por ele em 19/09** — era o último item do plano e o único que não dependia do Google. **Não proponha de novo**: quem faz esse papel agora é o canal do WhatsApp, que entrega a queda na notificação sem infraestrutura nova |
 | Indexação ainda pendente | 🟢 **Zerada em 20/09/2026**: as 6 que faltavam foram pedidas de uma vez — comparativo do monitor, os **3 guias de Black Friday**, a **`/black-friday`** e a **ficha do A17**. ⚠️ O **comparativo do A17 não existe** (não está em `comparativos.json`); quando existir, pedir | Ninguém — é esperar o Google, semanas |
-| **SEO: 4 frentes, 3 e meia entregues** | 🟢 **20/09**: comparativo do **Galaxy A07** (contra G06, C73, G15, A16), guia de decisão **`/guia/meu-pc-aceita-ssd-nvme`** e guia **`/guia/vale-esperar-black-friday-eletrodomestico`**. Antes disso, `guias-relacionados` passou a cobrir toda categoria. 🔴 **Falta 1**: o **guia de Black Friday de projetor/TV** — travado por falta de ficha (ver abaixo) | **Decisão dele**: o que fazer com o guia de projetor/TV |
+| **SEO: as 4 frentes entregues** | 🟢 **20/09**: comparativo do **Galaxy A07** (contra G06, C73, G15, A16), **`/guia/meu-pc-aceita-ssd-nvme`**, **`/guia/vale-esperar-black-friday-eletrodomestico`** e **`/guia/vale-esperar-black-friday-fone-de-ouvido`**. Antes disso, `guias-relacionados` passou a cobrir toda categoria | **Dele**: pedir indexação das 4 páginas novas quando quiser acelerar (o laço que funciona está em "Ser achado") |
 | HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | 🟢 **Fechado**: o cliente foi avisado em 19/09. Só resta remover o `ALIAS hrvidros` desta zona por volta de mar/2027 |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
 | Lembrete dos links | 🟢 **Funcionou de verdade em 17/09**: o e-mail das 16h12 chegou, com os 12 candidatos e o bloco de URLs. A rotina está validada de ponta a ponta. ⚠️ **Mas o Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar o e-mail em texto puro (não feito) | **Dele**: dizer se quer que eu ajuste a rotina para texto puro |
@@ -1104,12 +1104,14 @@ sido usada, e casa com o filtro de 30/60/90 dias do gráfico.
   🟢 **A `/black-friday` acha os guias sozinha**, por `startsWith(
   'vale-esperar-black-friday')` — guia novo com esse prefixo entra na página
   sem ninguém editar lista nenhuma.
-- 🔴 **O 5º guia, de projetor e TV, está travado — e o motivo não se resolve
+- 🔴 **O guia de projetor e TV foi abandonado, e o motivo não se resolve
   escrevendo melhor.** Os dois produtos que ele citaria não têm ficha de
   fabricante: a Philco P32VIK não existe no site da Philco e o HY320 não tem
-  fabricante. **Decisão pendente dele** entre: escrever sobre TV usando só
-  marcas com ficha (e deixar nosso projetor fora), trocar o tema, ou esperar
-  entrar no catálogo uma TV de modelo oficial.
+  fabricante. **Decisão dele em 20/09: trocar de tema.** Entrou no lugar o
+  **`-fone-de-ouvido`**, categoria com 3 produtos no catálogo e fabricantes
+  que publicam ficha (soundcore e Samsung). ⚠️ **Se alguém retomar projetor ou
+  TV, o problema volta igual** — só muda se entrar no catálogo uma TV de
+  modelo oficial.
 - ⚠️ **O atalho da home agora usa `href`, não `slug`** — antes montava
   `/guia/{slug}` fixo, e a Black Friday não mora em `/guia`.
 
