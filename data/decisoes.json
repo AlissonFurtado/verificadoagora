@@ -740,6 +740,268 @@
         }
       ],
       "escrito_em": "2026-09-16"
+    },
+    {
+      "slug": "meu-pc-aceita-ssd-nvme",
+      "titulo": "Meu PC aceita SSD NVMe? Como descobrir antes de comprar",
+      "resumo": "O SSD NVMe é hoje o jeito mais barato de deixar um computador antigo rápido de novo — mas ele só funciona se a placa-mãe tiver onde encaixar, e o encaixe engana. Abaixo, quatro perguntas respondidas em uma frase cada, para você conferir no seu PC antes de gastar.",
+      "perguntas": [
+        {
+          "chave": "tem-onde-encaixar",
+          "pergunta": "Como sei se meu PC aceita SSD NVMe?",
+          "resposta_curta": "Procure na placa-mãe um slot pequeno e horizontal chamado M.2, com um parafusinho na ponta. Se ele existe e o manual diz \"PCIe\" ao lado, seu PC aceita NVMe.",
+          "opcoes": [
+            {
+              "rotulo": "Tem slot M.2 com PCIe",
+              "para_quem": "Placas de 2016 para cá, na maioria",
+              "explicacao": "É o caso mais comum hoje. O SSD encaixa em ângulo, deita e prende com um parafuso — não usa cabo nenhum, nem de dados nem de energia."
+            },
+            {
+              "rotulo": "Só tem portas SATA",
+              "para_quem": "PCs mais antigos, e muitos notebooks de entrada",
+              "explicacao": "Sem slot M.2, o caminho é o SSD SATA de 2,5 polegadas, que liga com os mesmos dois cabos do HD antigo. Ele é muito mais lento que um NVMe no papel — e ainda assim transforma um PC que roda com HD mecânico."
+            }
+          ],
+          "detalhe": [
+            "O jeito mais seguro de conferir sem abrir o gabinete é procurar o modelo da sua placa-mãe no site do fabricante e abrir a seção de armazenamento. É lá que está escrito quantos slots M.2 existem e o que cada um aceita.",
+            "No Windows, o modelo da placa aparece digitando \"Informações do sistema\" no menu Iniciar — o campo é \"Produto da placa base\". Com esse nome em mãos, a página do fabricante responde o resto."
+          ],
+          "cuidado": "Notebook fino às vezes traz o slot M.2 ocupado por uma placa de Wi-Fi, que é menor e não serve para SSD. Conte os slots pelo manual, não pela foto."
+        },
+        {
+          "chave": "m2-nao-e-nvme",
+          "pergunta": "Slot M.2 é a mesma coisa que NVMe?",
+          "resposta_curta": "Não, e é aqui que a maioria erra. M.2 é só o formato do encaixe: existe SSD M.2 que fala NVMe e SSD M.2 que fala SATA, iguais por fora e muito diferentes por dentro.",
+          "opcoes": [
+            {
+              "rotulo": "M.2 NVMe",
+              "para_quem": "Quem quer a velocidade que justifica a troca",
+              "explicacao": "Usa as linhas PCIe da placa e chega a milhares de MB/s. É o que se compra hoje quando o slot aceita."
+            },
+            {
+              "rotulo": "M.2 SATA",
+              "para_quem": "Quem tem um slot que só aceita esse modo",
+              "explicacao": "Mesmo pedacinho de plástico, mesma aparência, mas limitado ao teto do SATA — perto de 550 MB/s. Encaixa no mesmo lugar e entrega uma fração da velocidade."
+            }
+          ],
+          "detalhe": [
+            "Muitos slots aceitam os dois, e o manual escreve isso de forma direta. A placa-mãe que temos aqui, por exemplo, traz um slot \"PCIe 4.0 x4 e modos SATA\" e outro \"PCIe 3.0 x4 e modos SATA\" — os dois engolem qualquer um dos tipos, e é o SSD que decide a velocidade.",
+            "O contrário também existe: slot que só aceita SATA. Nele um SSD NVMe encaixa e simplesmente não aparece para o sistema — e o problema parece defeito de peça, quando é incompatibilidade."
+          ],
+          "cuidado": "Anúncio que diz só \"SSD M.2 1TB\", sem dizer NVMe ou SATA, está escondendo a informação que decide a compra. Se o vendedor não escreve, não presuma."
+        },
+        {
+          "chave": "pcie-3-ou-4",
+          "pergunta": "Preciso de PCIe 4.0, ou o 3.0 já basta?",
+          "resposta_curta": "Para uso normal, o 3.0 basta e você não vai sentir diferença. O 4.0 só aparece em cópia de arquivo enorme e em trabalho com vídeo — e um SSD 4.0 funciona num slot 3.0, na velocidade do slot.",
+          "opcoes": [
+            {
+              "rotulo": "PCIe 3.0",
+              "para_quem": "Windows, jogos, navegador, Office",
+              "explicacao": "O gargalo aí nunca é o SSD. Abrir o sistema, carregar jogo e abrir programa já estão no limite do que o computador consegue aproveitar."
+            },
+            {
+              "rotulo": "PCIe 4.0",
+              "para_quem": "Quem edita vídeo ou move dezenas de GB por dia",
+              "explicacao": "A diferença aparece quando se copia arquivo grande de um lado para o outro do mesmo disco. Fora disso, o número maior fica na caixa."
+            }
+          ],
+          "detalhe": [
+            "Um detalhe que economiza dinheiro: comprar um SSD PCIe 4.0 para um slot 3.0 não é desperdício se você pretende trocar de PC — ele continua servindo, e no slot novo entrega a velocidade cheia.",
+            "Na mesma placa os slots podem ser de gerações diferentes. Vale conferir qual é o mais rápido e usar esse para o disco do sistema."
+          ],
+          "cuidado": "Velocidade anunciada é sempre a de leitura em sequência, no melhor caso. O número que você sente no dia a dia é outro, o de arquivos pequenos — e quase nenhum anúncio informa."
+        },
+        {
+          "chave": "vale-trocar",
+          "pergunta": "Vale trocar meu SSD SATA por um NVMe?",
+          "resposta_curta": "Quase nunca. A troca que muda a vida é de HD mecânico para qualquer SSD; de SATA para NVMe, a diferença é medível mas dificilmente perceptível fora de tarefa pesada.",
+          "opcoes": [
+            {
+              "rotulo": "Sair do HD mecânico",
+              "para_quem": "Quem ainda tem disco que gira",
+              "explicacao": "É a maior diferença que dinheiro compra num PC antigo. Ligar o computador deixa de ser uma pausa para o café."
+            },
+            {
+              "rotulo": "Trocar SATA por NVMe",
+              "para_quem": "Quem trabalha com arquivo grande",
+              "explicacao": "Faz sentido como adição, não como substituição: o NVMe vira o disco do sistema e o SATA continua guardando o que não precisa de velocidade."
+            }
+          ],
+          "detalhe": [
+            "Se o slot M.2 está livre, dá para ter os dois ao mesmo tempo: o NVMe para o sistema e os programas, o SSD ou HD antigo para arquivo. Isso costuma render mais do que gastar num NVMe maior.",
+            "Atenção a uma troca invisível: em algumas placas, ocupar o segundo slot M.2 desliga uma ou duas portas SATA, porque as linhas são compartilhadas. O manual avisa, o anúncio não."
+          ],
+          "cuidado": "Antes de trocar, confira o espaço livre real. Disco acima de 80% cheio fica mais lento seja qual for o tipo — e às vezes o problema que motivou a compra era só esse."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB39766120",
+          "nota": "O tipo mais comum hoje: M.2 2280 falando PCIe 4.0, com leitura de até 6.000 MB/s. Encaixa em qualquer slot M.2 que aceite PCIe, e num slot 3.0 funciona na velocidade do slot. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Interface": "PCIe 4.0 NVMe (Gen 4x4)",
+            "Formato": "M.2 2280",
+            "Leitura e gravação": "6.000 / 4.000 MB/s"
+          }
+        },
+        {
+          "meli_id": "MLB36476927",
+          "nota": "Serve para ver na prática o que a pergunta 2 explica: esta placa tem dois slots M.2, um PCIe 4.0 x4 e outro PCIe 3.0 x4, e os dois também aceitam o modo SATA. É o tipo de informação que só a página do fabricante dá. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Slots M.2": "M.2_1 PCIe 4.0 x4 e SATA · M.2_2 PCIe 3.0 x4 e SATA",
+            "Portas SATA": "4 x SATA 6 Gb/s",
+            "Soquete e chipset": "AMD AM4 · B550"
+          }
+        }
+      ],
+      "veredito": "Juntando as quatro respostas: o que decide se o seu PC aceita NVMe não é a idade dele, é a linha \"armazenamento\" na página da sua placa-mãe. Procure o modelo da placa, veja quantos slots M.2 existem e o que está escrito ao lado de cada um. Se aparecer PCIe, pode comprar NVMe — e não precisa ser o mais caro: num PC de uso comum, o PCIe 3.0 entrega tudo o que dá para sentir. Se não houver slot M.2 nenhum, o SSD SATA de 2,5 polegadas resolve o mesmo problema, que quase sempre é sair do HD mecânico.",
+      "fontes": [
+        {
+          "titulo": "SSD NV3 PCIe 4.0 NVMe — página oficial da Kingston",
+          "url": "https://www.kingston.com/en/ssd/nv3-nvme-pcie-ssd?capacity=1tb"
+        },
+        {
+          "titulo": "TUF GAMING B550M-PLUS — especificações oficiais da ASUS",
+          "url": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b550m-plus/techspec/"
+        },
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        }
+      ],
+      "escrito_em": "2026-09-20"
+    },
+    {
+      "slug": "vale-esperar-black-friday-eletrodomestico",
+      "titulo": "Vale esperar a Black Friday para comprar eletrodoméstico?",
+      "resumo": "A Black Friday de 2026 é em 27 de novembro. Para eletrodoméstico a resposta muda conforme uma coisa só: se o seu ainda funciona ou não. Abaixo, quatro perguntas respondidas em uma frase cada — incluindo a que mais faz gente pagar caro à toa, que é confundir potência com desempenho.",
+      "perguntas": [
+        {
+          "chave": "eletro-cai-mesmo",
+          "pergunta": "Eletrodoméstico cai de preço na Black Friday?",
+          "resposta_curta": "Cai, e costuma cair mais que celular — mas o desconto grande fica no que está encalhado, não no modelo que todo mundo quer.",
+          "opcoes": [
+            {
+              "rotulo": "Item de estoque parado",
+              "para_quem": "Quem não faz questão de cor ou modelo específico",
+              "explicacao": "É onde a queda é real. Cor fora de moda, modelo do ano anterior, versão com um recurso a menos: a loja precisa do espaço no depósito e aceita ganhar menos."
+            },
+            {
+              "rotulo": "O mais vendido da categoria",
+              "para_quem": "Quem já sabe exatamente qual quer",
+              "explicacao": "Desconto menor, porque ele sai com ou sem promoção. Aqui vale mais acompanhar o preço o ano inteiro do que apostar numa data."
+            }
+          ],
+          "detalhe": [
+            "Eletroportátil pequeno — liquidificador, cafeteira, mixer — tem margem maior que linha branca, e por isso costuma aceitar corte maior de preço. Geladeira e fogão se movem menos, e quando se movem é por frete ou parcelamento, não por preço.",
+            "O desconto que aparece na vitrine é calculado sobre o preço \"de\", e quem escolhe esse número é a loja. Ele não precisa ter sido cobrado recentemente, nem por aquele vendedor."
+          ],
+          "cuidado": "Voltagem errada não tem conserto e quase nunca tem troca fácil. Antes de aproveitar qualquer oferta, confira se é 110 V, 220 V ou bivolt — é o arrependimento mais comum da data."
+        },
+        {
+          "chave": "quebrou-agora",
+          "pergunta": "O meu quebrou em setembro. Espero novembro?",
+          "resposta_curta": "Não. Dois meses sem geladeira, micro-ondas ou máquina de lavar custam mais — em comida perdida, em comida comprada pronta, em lavanderia — do que o desconto que você espera economizar.",
+          "opcoes": [
+            {
+              "rotulo": "Quebrou o essencial",
+              "para_quem": "Geladeira, fogão, máquina de lavar",
+              "explicacao": "Compre quando precisar. A conta de esperar é invisível mas real, e costuma passar do valor do desconto em poucas semanas."
+            },
+            {
+              "rotulo": "É upgrade, não necessidade",
+              "para_quem": "Quem quer trocar o que ainda funciona",
+              "explicacao": "Aqui esperar faz sentido, porque não há custo em continuar usando o atual. É o caso em que a data trabalha a seu favor."
+            }
+          ],
+          "detalhe": [
+            "Há um meio-termo que quase ninguém considera: comprar agora e continuar olhando o preço. Muita loja devolve a diferença se o valor cair dentro de alguns dias da compra, e o direito de arrependimento em compra pela internet é de sete dias, contados do recebimento.",
+            "Se o aparelho que quebrou tem conserto barato, consertar agora e trocar em novembro é a saída que junta as duas coisas."
+          ],
+          "cuidado": "Não confunda urgência real com urgência criada. Se a página diz que restam poucas unidades ou mostra um cronômetro, esse é um motivo para desconfiar, não para correr."
+        },
+        {
+          "chave": "desconto-real",
+          "pergunta": "Como saber se o desconto num eletrodoméstico é real?",
+          "resposta_curta": "Olhando quanto aquele mesmo anúncio custava nas semanas anteriores. O preço riscado ao lado da oferta não serve para isso, e nunca serviu.",
+          "opcoes": [
+            {
+              "rotulo": "Comparar com o preço de ontem",
+              "para_quem": "Todo mundo",
+              "explicacao": "É a única comparação que diz alguma coisa. Se o valor de hoje é o menor dos últimos 30 ou 60 dias, o desconto existe de verdade."
+            },
+            {
+              "rotulo": "Comparar com o preço riscado",
+              "para_quem": "Ninguém",
+              "explicacao": "Esse número é escolhido por quem vende. Ele pode ser o preço de lançamento, o de outro vendedor ou nenhum preço que alguém tenha pago."
+            }
+          ],
+          "detalhe": [
+            "Nas páginas de produto deste site o gráfico tem botões de 30, 60 e 90 dias, e guardamos preço todo dia desde 7 de setembro de 2026. Período sem histórico fica desligado em vez de mostrar uma linha curta com rótulo comprido.",
+            "Em eletroportátil a variação é maior do que parece: o mesmo liquidificador passa do maior para o menor preço do trimestre em poucas semanas, sem nenhuma data comemorativa no meio."
+          ],
+          "cuidado": "Modelo com outra cor, outra voltagem ou outro vendedor é outro anúncio — e outro histórico de preço. Comparar o inox de hoje com o branco de outubro não diz nada."
+        },
+        {
+          "chave": "potencia-nao-e-tudo",
+          "pergunta": "Potência maior é sempre melhor?",
+          "resposta_curta": "Não. Watt é consumo de energia, não qualidade de resultado — e em micro-ondas e liquidificador o número grande na caixa é o argumento de venda mais explorado da categoria.",
+          "opcoes": [
+            {
+              "rotulo": "Onde a potência importa",
+              "para_quem": "Quem tritura gelo, castanha ou congelado",
+              "explicacao": "Em liquidificador que enfrenta ingrediente duro, potência ajuda mesmo — mas acompanhada de lâmina e formato de copo que puxem a mistura para baixo."
+            },
+            {
+              "rotulo": "Onde ela engana",
+              "para_quem": "Quem faz vitamina e suco",
+              "explicacao": "Para uso comum, a diferença entre 900 W e 1400 W aparece mais na conta de luz do que no copo. O que muda o resultado é a lâmina e o tempo de uso."
+            }
+          ],
+          "detalhe": [
+            "Em micro-ondas o número que decide o tempo de aquecimento é a potência de saída, e a classificação de eficiência energética diz quanta energia ele gasta para chegar lá — são duas informações diferentes, e só a primeira aparece na propaganda.",
+            "Capacidade em litros importa mais do que se imagina: um micro-ondas de 23 litros pode não aceitar o prato redondo grande da sua casa. Meça antes."
+          ],
+          "cuidado": "Anúncio que só informa a potência, sem dizer capacidade, material da jarra ou tipo de lâmina, está escolhendo qual número mostrar. A ficha do fabricante traz o resto."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB19617679",
+          "nota": "Micro-ondas de 23 litros com 1.100 W de potência e classificação A de energia — o par de números que a pergunta 4 explica. Está a {preco}, conferido em {data}, e o gráfico da ficha mostra cada dia desde que começamos a olhar.",
+          "ficha": {
+            "Potência": "1.100 W",
+            "Capacidade": "23 litros",
+            "Eficiência energética": "Classificação A"
+          }
+        },
+        {
+          "meli_id": "MLB16602519",
+          "nota": "O caso clássico do número grande na caixa: 1.400 W, copo de 3,2 litros e 15 velocidades. É eletroportátil, a categoria que mais se move na data — e por isso a que mais vale acompanhar antes. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Potência": "1.400 W",
+            "Capacidade do copo": "3,2 litros",
+            "Velocidades": "15 e pulsar"
+          }
+        }
+      ],
+      "veredito": "Juntando as quatro respostas: esperar a Black Friday vale para quem quer trocar o que ainda funciona, e não vale para quem está sem. Se puder esperar, comece a olhar o preço agora — trinta dias bastam para saber se o desconto de novembro é queda de verdade ou volta ao normal depois de uma subida em outubro. E quando a hora chegar, não escolha pelo watt: confira capacidade, voltagem e o que a ficha do fabricante diz, que é onde está a informação que a propaganda não repete.",
+      "fontes": [
+        {
+          "titulo": "Micro-ondas Efficient 23 L — loja oficial da Electrolux",
+          "url": "https://loja.electrolux.com.br/micro-ondas-electrolux-prata-23l-efficient-me23s/p"
+        },
+        {
+          "titulo": "Liquidificador 1400 Full — loja oficial da Oster",
+          "url": "https://www.oster.com.br/liquidificador-1400-full-oster-preto/p"
+        },
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        }
+      ],
+      "escrito_em": "2026-09-20"
     }
   ]
 }

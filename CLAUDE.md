@@ -165,7 +165,7 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
 | Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | Ninguém. ⚠️ **O alerta de queda por e-mail/push foi recusado por ele em 19/09** — era o último item do plano e o único que não dependia do Google. **Não proponha de novo**: quem faz esse papel agora é o canal do WhatsApp, que entrega a queda na notificação sem infraestrutura nova |
 | Indexação ainda pendente | 🟢 **Zerada em 20/09/2026**: as 6 que faltavam foram pedidas de uma vez — comparativo do monitor, os **3 guias de Black Friday**, a **`/black-friday`** e a **ficha do A17**. ⚠️ O **comparativo do A17 não existe** (não está em `comparativos.json`); quando existir, pedir | Ninguém — é esperar o Google, semanas |
-| **SEO: 4 frentes escolhidas, 1 entregue** | Ele pediu **todas as quatro** em 17/09. 🟢 Feita: `guias-relacionados` passou a cobrir toda categoria. 🔴 **Faltam três**: (a) 2 guias de decisão — *"SSD SATA ou NVMe: qual serve no seu PC?"* e *"Quantos lumens um projetor precisa ter?"*, que puxam SSD NV3, SanDisk e HY320; (b) 2 guias de Black Friday — projetor/TV e eletrodoméstico; (c) comparativo do **Galaxy A07** contra G06, C73, G15 e A16 (as fichas desses quatro já estão nos comparativos, é só copiar palavra por palavra) | **Minha** — é só retomar, não depende dele |
+| **SEO: 4 frentes, 3 e meia entregues** | 🟢 **20/09**: comparativo do **Galaxy A07** (contra G06, C73, G15, A16), guia de decisão **`/guia/meu-pc-aceita-ssd-nvme`** e guia **`/guia/vale-esperar-black-friday-eletrodomestico`**. Antes disso, `guias-relacionados` passou a cobrir toda categoria. 🔴 **Falta 1**: o **guia de Black Friday de projetor/TV** — travado por falta de ficha (ver abaixo) | **Decisão dele**: o que fazer com o guia de projetor/TV |
 | HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | 🟢 **Fechado**: o cliente foi avisado em 19/09. Só resta remover o `ALIAS hrvidros` desta zona por volta de mar/2027 |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
 | Lembrete dos links | 🟢 **Funcionou de verdade em 17/09**: o e-mail das 16h12 chegou, com os 12 candidatos e o bloco de URLs. A rotina está validada de ponta a ponta. ⚠️ **Mas o Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar o e-mail em texto puro (não feito) | **Dele**: dizer se quer que eu ajuste a rotina para texto puro |
@@ -214,6 +214,46 @@ VESA) e `aoc.com/pt` (a página do produto; a URL `/specification` dá 404).
 Somadas à Motorola, são as três que funcionam. Samsung de **celular** continua
 truncando a seção de especificações — o problema é por linha de produto, não
 por marca.
+
+🟢 **Mais fontes medidas em 20/09/2026**, ao escrever o comparativo do A07 e os
+guias novos:
+
+| Fonte | Como se comporta |
+|---|---|
+| `asus.com` **global** | 🟢 Abre a ficha inteira por `WebFetch` — inclusive a geração PCIe de cada slot M.2 |
+| `asus.com/br` | 🔴 **Trunca**: diz "Suporta 2 x slots M.2" e omite o que cada um aceita. **Tire o `/br` da URL** |
+| `kingston.com` | 🔴 403 no `WebFetch` direto; 🟢 o `WebSearch` com `allowed_domains` devolve a ficha |
+| `oster.com.br`, `loja.electrolux.com.br` | 🟢 Ficha completa pelo `WebSearch` com domínio travado |
+| `philco.com.br` | 🔴 Ver abaixo — o modelo que vendemos não existe lá |
+
+⚠️ **A regra geral que saiu daí: quando o site brasileiro truncar, tente o
+global antes de desistir.** Foi o que destravou a placa-mãe.
+
+🔴 **Samsung de celular: a ficha existe, mas só depois de abrir os acordeões.**
+Pelo Chrome, `document.querySelectorAll('[aria-expanded="false"]').forEach(b =>
+b.click())` e então ler o `innerText` — aí vêm tela, processador, memória,
+câmera, rede e o "Período de Atualizações de Segurança". **O `WebFetch` nunca
+vai ver isso**, porque o conteúdo só entra no DOM ao clicar.
+
+⚠️ **Nem tudo que está na página oficial é ficha.** Na página do A07 convivem
+três coisas: a tabela de especificações (vale), o texto de marketing da
+Samsung (vale — foi de um `alt` de imagem que saíram os **90 Hz**) e o
+**"Resumo de avaliações por IA"**, que é feito de review de cliente e **não
+vale como fonte**. O IP54 e os "6 anos" aparecem lá; só use se também
+estiverem no texto da própria Samsung.
+
+### 🔴 Produto de varejo não tem ficha de fabricante (20/09/2026)
+
+Terceiro caso da mesma armadilha, depois do Realme C73 e da Xiaomi. **A Smart
+TV "Philco P32VIK" do nosso catálogo não existe no site da Philco** — lá a
+linha Roku de 32 pol. é PTV32K34RKGB, PTV32G7PR2CGB e afins. O `P32VIK` só
+aparece em Mercado Livre, OLX e sites de review: é **código de canal**, não
+modelo oficial. O **Projetor HY320** é pior: marca genérica, fabricante
+nenhum, e o nosso catálogo **nem registra quantos lumens ele tem**.
+
+**A regra:** antes de prometer um guia ou comparativo, confira se os produtos
+que ele vai citar têm ficha de fabricante. Se não tiverem, o texto ou muda de
+ângulo ou não é escrito — nunca se preenche a tabela com dado de agregador.
 
 ⚠️ **Por que o guia até R$ 2.500 parou:** a faixa de R$ 1.500 a 2.500 quase não
 tem aparelho com ficha oficial acessível (veja a armadilha do `WebFetch` em
@@ -1058,9 +1098,18 @@ sido usada, e casa com o filtro de 30/60/90 dias do gráfico.
   ⚠️ **URL perene, sem ano**: em 2027 a mesma página é reescrita e a
   autoridade não se perde. Depois de 27/11 tirar o atalho da home (a página
   fica no ar).
-- **Três guias por categoria**, no molde de decisão (o que o Google já
-  indexou 3 vezes aqui): `vale-esperar-black-friday-celular`,
-  `-monitor-e-notebook`, `-controle-de-videogame`.
+- **Guias por categoria**, no molde de decisão (o que o Google já indexou 3
+  vezes aqui): `vale-esperar-black-friday-celular`, `-monitor-e-notebook`,
+  `-controle-de-videogame` e, desde 20/09, **`-eletrodomestico`**.
+  🟢 **A `/black-friday` acha os guias sozinha**, por `startsWith(
+  'vale-esperar-black-friday')` — guia novo com esse prefixo entra na página
+  sem ninguém editar lista nenhuma.
+- 🔴 **O 5º guia, de projetor e TV, está travado — e o motivo não se resolve
+  escrevendo melhor.** Os dois produtos que ele citaria não têm ficha de
+  fabricante: a Philco P32VIK não existe no site da Philco e o HY320 não tem
+  fabricante. **Decisão pendente dele** entre: escrever sobre TV usando só
+  marcas com ficha (e deixar nosso projetor fora), trocar o tema, ou esperar
+  entrar no catálogo uma TV de modelo oficial.
 - ⚠️ **O atalho da home agora usa `href`, não `slug`** — antes montava
   `/guia/{slug}` fixo, e a Black Friday não mora em `/guia`.
 

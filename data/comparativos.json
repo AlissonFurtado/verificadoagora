@@ -1312,6 +1312,206 @@
         }
       ],
       "escrito_em": "2026-09-18"
+    },
+    {
+      "meli_id": "MLB55027908",
+      "titulo": "Galaxy A07 vale a pena? Comparamos com 4 celulares da mesma faixa",
+      "resumo": "O A07 está a {preco}, com {desconto}% de desconto. Ele é o Samsung mais barato do nosso catálogo, e a dúvida de quem chega aqui costuma ser uma só: compensa pagar isso num Samsung de entrada em vez de levar um Motorola por perto do mesmo dinheiro? Pusemos a ficha dele ao lado do Moto G06 e do Realme C73 — que também estão aqui na página — e de dois rivais diretos da faixa. As especificações vêm dos fabricantes; os preços, só dos que nosso robô confere todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Quer que o celular continue seguro por muitos anos",
+          "chave": "a07",
+          "porque": "A Samsung garante atualização de segurança até 31 de agosto de 2031 — e publica essa data, o que quase ninguém faz nessa faixa."
+        },
+        {
+          "perfil": "Quer a tela mais bonita",
+          "chave": "a16",
+          "porque": "É o único AMOLED da tabela, com Full HD+ e 800 nits. Não acompanhamos o preço dele, mas a diferença de imagem é a mais visível daqui."
+        },
+        {
+          "perfil": "Quer a maior tela pelo menor preço",
+          "chave": "g06",
+          "porque": "São 6,9 polegadas com 120 Hz, contra as 6,7 com 90 Hz do A07. Está aqui no site, e costuma sair por menos."
+        }
+      ],
+      "colunas": [
+        {
+          "chave": "a07",
+          "nome": "Galaxy A07",
+          "meli_id": "MLB55027908"
+        },
+        {
+          "chave": "g06",
+          "nome": "Moto G06",
+          "meli_id": "MLB58353028"
+        },
+        {
+          "chave": "c73",
+          "nome": "Realme C73",
+          "meli_id": "MLB62148588"
+        },
+        {
+          "chave": "g15",
+          "nome": "Moto G15",
+          "meli_id": ""
+        },
+        {
+          "chave": "a16",
+          "nome": "Galaxy A16 5G",
+          "meli_id": ""
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Atualizações do Android",
+          "valores": {
+            "a07": "Segurança até 31/08/2031",
+            "g06": "Não divulgado",
+            "c73": "Não divulgado",
+            "g15": "Não divulgado",
+            "a16": "Até 6 versões"
+          },
+          "vencedores": [
+            "a07",
+            "a16"
+          ],
+          "nota": "As duas promessas não são a mesma coisa, e a diferença importa. O A16 fala em versões novas de Android — recursos novos. O A07 fala em correção de segurança até 2031, que é o que impede o aparelho de virar risco com o tempo, sem trazer novidade nenhuma. Os outros três não prometem nada, e é por isso que estes dois ganham a linha juntos."
+        },
+        {
+          "campo": "Tela",
+          "valores": {
+            "a07": "6,7 pol. PLS LCD, 90 Hz, HD+ (720p)",
+            "g06": "6,9 pol. LCD, 120 Hz, HD+ (720p)",
+            "c73": "6,7 pol. LCD, 120 Hz",
+            "g15": "6,72 pol. LCD, 60 Hz, Full HD+",
+            "a16": "6,7 pol. Super AMOLED, 90 Hz, Full HD+, 800 nits"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "Aqui o A07 perde, e vale saber onde. Os 90 Hz deixam a rolagem macia, mas a resolução é HD+: 720p esticados em 6,7 polegadas ficam menos nítidos que o Full HD+ do G15 e do A16, e isso aparece em texto pequeno. O A16 leva a linha por ser o único AMOLED — preto de verdade e 800 nits para uso no sol."
+        },
+        {
+          "campo": "Processador",
+          "valores": {
+            "a07": "Octa core de 2,2 GHz (modelo não divulgado)",
+            "g06": "MediaTek Helio G81 Extreme",
+            "c73": "Não divulgado",
+            "g15": "MediaTek Helio G81 Ultra (12 nm)",
+            "a16": "Exynos 1330 (5 nm)"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "A Samsung informa a velocidade do A07, mas não diz qual é o chip — então não dá para saber de que geração ele é. O A16 é o único com fabricação em 5 nm, o que costuma significar menos consumo de bateria para o mesmo trabalho."
+        },
+        {
+          "campo": "Memória",
+          "valores": {
+            "a07": "4 a 8 GB · 128 ou 256 GB, microSD até 2 TB",
+            "g06": "4 GB (+8 turbo) · 128 GB, microSD até 1 TB",
+            "c73": "4 GB · 128 GB",
+            "g15": "4 a 8 GB · 128 GB, com microSD",
+            "a16": "4 a 8 GB · até 256 GB, com microSD"
+          },
+          "vencedores": [
+            "a07"
+          ],
+          "nota": "O A07 aceita o maior cartão da tabela, 2 TB, e tem slot próprio para ele — não é preciso abrir mão do segundo chip. O que vendemos aqui é a versão de 128 GB; a de 256 GB existe e custa mais."
+        },
+        {
+          "campo": "Bateria e carregamento",
+          "valores": {
+            "a07": "5.000 mAh (potência de carga não divulgada)",
+            "g06": "5.200 mAh · 10 W",
+            "c73": "6.000 mAh",
+            "g15": "5.200 mAh · 18 W",
+            "a16": "5.000 mAh · 25 W"
+          },
+          "vencedores": [
+            "c73",
+            "a16"
+          ],
+          "nota": "O C73 tem a maior bateria e o A16 a carga mais rápida. A Samsung não publica a potência de carregamento do A07 na ficha do produto, então a célula fica assim: é melhor dizer que não sabemos do que repetir um número de site de terceiro."
+        },
+        {
+          "campo": "Rede",
+          "valores": {
+            "a07": "Só 4G",
+            "g06": "Só 4G",
+            "c73": "Não divulgado",
+            "g15": "Só 4G",
+            "a16": "5G"
+          },
+          "vencedores": [
+            "a16"
+          ],
+          "nota": "O A07 que vendemos é o 4G. Existe um Galaxy A07 5G, de modelo diferente, que é outro aparelho — se você vir a sigla 5G no nome, não é este. Para quem vai ficar anos com o celular, essa linha pesa mais do que parece hoje."
+        },
+        {
+          "campo": "Resistência a água",
+          "valores": {
+            "a07": "IP54 (respingos)",
+            "g06": "IP64 (respingos)",
+            "c73": "Não divulgado",
+            "g15": "Não divulgado",
+            "a16": "IP54 (respingos)"
+          },
+          "vencedores": [
+            "g06"
+          ],
+          "nota": "Nenhum dos três com selo aguenta imersão: os números cobrem chuva e respingo de pia. O G06 leva por pouco, com vedação total contra poeira. Não conte com nenhum deles dentro da piscina."
+        },
+        {
+          "campo": "Câmera principal",
+          "valores": {
+            "a07": "50 MP, f/1.8",
+            "g06": "50 MP, f/1.8",
+            "c73": "Não divulgado",
+            "g15": "50 MP",
+            "a16": "50 MP, f/1.8"
+          },
+          "vencedores": [
+            "a07",
+            "g06",
+            "a16"
+          ],
+          "nota": "Empate técnico no papel: mesma resolução e mesma abertura. Nessa faixa quem decide a foto é o processamento do fabricante, e isso nenhuma ficha mostra — o A07 tem ainda uma segunda câmera de 2 MP para desfoque, que conta pouco."
+        }
+      ],
+      "a_favor": [
+        "A única promessa de atualização com data publicada da tabela: segurança até 31 de agosto de 2031.",
+        "Aceita microSD de até 2 TB, em slot separado do segundo chip.",
+        "Tela de 90 Hz, que deixa a rolagem visivelmente mais macia que os 60 Hz do G15.",
+        "IP54 contra respingo, que nem todo rival dessa faixa tem.",
+        "{desconto}% de desconto de verdade: {preco} contra {preco_original} de tabela, conferido em {data}."
+      ],
+      "contra": [
+        "Tela HD+ (720p): a de menor definição da tabela junto com o G06, e isso aparece em texto pequeno.",
+        "A Samsung não diz qual é o processador nem a potência de carregamento — duas informações que os rivais publicam.",
+        "Não pega 5G.",
+        "A versão vendida aqui tem 4 GB de RAM; a de 8 GB vem com 256 GB, e custa mais."
+      ],
+      "veredito": "O A07 se justifica por uma coisa que não aparece na primeira olhada: é o único da tabela cuja fabricante publica até quando vai mandar correção de segurança, 31 de agosto de 2031. Se o plano é usar o aparelho por quatro ou cinco anos, isso vale mais do que qualquer linha de especificação daqui. Em troca, você aceita a tela menos nítida do grupo e fica sem saber qual chip está comprando. Se o que você quer é tela grande pelo menor preço, o Moto G06 entrega 6,9 polegadas e 120 Hz por menos, e está aqui no site. Se puder pagar um degrau acima, o Galaxy A16 5G resolve de uma vez a tela, o 5G e a atualização — e é nele que o dinheiro rende mais, se ele couber no seu orçamento.",
+      "fontes": [
+        {
+          "titulo": "Galaxy A07 — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/smartphones/galaxy-a/galaxy-a07-green-256gb-sm-a075mzgizto/"
+        },
+        {
+          "titulo": "Moto G06 128 GB — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g06-128-gb/p"
+        },
+        {
+          "titulo": "Moto G15 — página oficial da Motorola Brasil",
+          "url": "https://www.motorola.com.br/smartphone-moto-g15/p"
+        },
+        {
+          "titulo": "Samsung Galaxy A16 5G — especificações (GSMArena)",
+          "url": "https://www.gsmarena.com/samsung_galaxy_a16-13319.php"
+        }
+      ],
+      "escrito_em": "2026-09-20"
     }
   ]
 }
