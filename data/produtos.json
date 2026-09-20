@@ -1374,12 +1374,37 @@
           "resposta": "O tamanho é o mesmo. A diferença é o material: este é borossilicato, que aguenta melhor variação de temperatura; o outro é vidro comum e mais barato. Se você só leva a marmita pronta da geladeira, o vidro comum já dá conta."
         }
       ]
+    },
+    {
+      "id": 36,
+      "nome": "Fone JBL Quantum 100M2 Gamer",
+      "categoria": "Eletrônicos",
+      "preco_original": 229,
+      "preco_atual": 164.1,
+      "desconto_percentual": 28,
+      "preco_no_pix": false,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/1thRJNq",
+      "cupom": "",
+      "descricao": "Headset gamer over-ear com fio, microfone removível e drivers de 40 mm",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_913023-MLA110131689717_042026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB47044981",
+      "disponivel": true,
+      "familia": "Fone de ouvido JBL Quantum 100m2 JBLQTUM100M2BLK",
+      "data_adicionado": "2026-09-20",
+      "verificado_em": "2026-09-20",
+      "analise": [
+        "Este é o oposto dos fones sem fio que a gente costuma listar aqui, e de propósito: ele tem fio, é over-ear (cobre a orelha inteira) e traz um microfone removível na haste. Para jogar, essa combinação resolve dois problemas que o fone de ouvido comum não resolve — a voz sai de um microfone perto da boca, em vez de um furinho no cabo, e não existe atraso de Bluetooth entre o que acontece na tela e o que você escuta. É o modelo mais vendido da categoria no Mercado Livre, com nota 4,8 em mais de 3.700 avaliações.",
+        "Duas coisas para saber antes. **Ele não tem cancelamento de ruído ativo**, e o próprio anúncio diz isso na ficha: o abafamento vem das almofadas de espuma de memória, que é cancelamento passivo. E, por ter fio de 1,2 metro com plugue P2, ele serve para controle de videogame, celular e notebook, mas não é o fone para sair andando na rua — o cabo curto é pensado para quem está sentado.",
+        "Compre se você joga de PS4, PS5, Xbox ou PC e quer ser ouvido com clareza na conversa, gastando pouco. Não compre esperando que ele substitua um fone de academia ou de transporte público: sem bateria, sem Bluetooth e sem cancelamento ativo, ele é excelente na mesa e desconfortável fora dela."
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-09-20",
     "conferido_em": "2026-09-20T14:24:38.624Z",
-    "total_produtos": 35,
+    "total_produtos": 36,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
