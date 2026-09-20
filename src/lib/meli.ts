@@ -36,6 +36,16 @@ export type DadosDoProduto = {
   imagem: string;
   disponivel: boolean;
   permalink: string;
+  /**
+   * A oferta vencedora vem de fora do Brasil (Cross Border Trade).
+   *
+   * ⚠️ Importa porque o preço da API é o da mercadoria, e não o que a pessoa
+   * paga: item importado ainda passa por declaração de importação e impostos
+   * federais e estaduais. Anunciar o preço cru é prometer o que a loja não
+   * cumpre — o mesmo defeito de anunciar preço de Pix como se fosse o do
+   * cartão.
+   */
+  importado: boolean;
 };
 
 class ErroDoMeli extends Error {
@@ -112,6 +122,33 @@ function comoNumero(valor: unknown): number | null {
 }
 
 /**
+ * A oferta é de vendedor de fora do Brasil?
+ *
+ * O Meli chama isso de CBT (Cross Border Trade) e marca de mais de um jeito
+ * conforme o item — por isso aqui qualquer pista positiva basta. **Errar para
+ * o lado de "é importado" custa um PR a conferir; errar para o outro lado põe
+ * na vitrine um preço que ninguém paga.**
+ *
+ * ⚠️ **Não foi possível testar contra a API real**: rodar o robô nesta máquina
+ * invalida o refresh token que a Action usa (veja o CLAUDE.md). As pistas
+ * abaixo vêm da documentação e do que a página do produto mostra; se um
+ * importado passar batido, é aqui que se acrescenta a pista que faltou.
+ */
+function ehImportado(oferta: Record<string, unknown>): boolean {
+  const tags = Array.isArray(oferta.tags) ? oferta.tags.map(comoTexto) : [];
+  if (tags.includes('cbt_item') || tags.includes('international_delivery')) return true;
+
+  const modo = comoTexto(oferta.international_delivery_mode);
+  if (modo && modo !== 'none') return true;
+
+  const endereco = oferta.seller_address as Record<string, unknown> | undefined;
+  const pais = comoTexto((endereco?.country as Record<string, unknown> | undefined)?.id);
+  if (pais && pais !== 'BR') return true;
+
+  return false;
+}
+
+/**
  * Extrai os campos que a landing usa.
  *
  * `bruto` é o produto (catálogo) ou o anúncio; `oferta` é de onde sai o preço.
@@ -153,6 +190,7 @@ function normalizar(
     imagem,
     disponivel: status !== 'paused' && status !== 'closed' && quantidade !== 0,
     permalink: comoTexto(vencedor.permalink) || comoTexto(bruto.permalink),
+    importado: ehImportado(vencedor),
   };
 }
 
@@ -207,6 +245,7 @@ export async function buscarProduto(
       imagem: '',
       disponivel: false,
       permalink: comoTexto(produto.permalink),
+      importado: false,
     };
   }
 

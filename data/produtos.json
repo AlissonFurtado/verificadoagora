@@ -1113,9 +1113,9 @@
       "id": 30,
       "nome": "SSD Externo SanDisk 1TB USB 3.2",
       "categoria": "Informática",
-      "preco_original": 1219.99,
-      "preco_atual": 945,
-      "desconto_percentual": 22,
+      "preco_original": 562.18,
+      "preco_atual": 562.18,
+      "desconto_percentual": 0,
       "preco_no_pix": false,
       "avaliacao": 4.9,
       "link_afiliado": "https://meli.la/1Bwxb7u",
@@ -1125,13 +1125,16 @@
       "plataforma": "mercado-livre",
       "meli_id": "MLB19885932",
       "disponivel": true,
+      "oculto": true,
+      "importado": true,
       "familia": "externo SanDisk Portable SSD SDSSDE30-1T00-G26 SDSSDE30 1TB",
       "data_adicionado": "2026-09-17",
-      "verificado_em": "2026-09-18",
+      "verificado_em": "2026-09-19",
       "analise": [
         "Um SSD externo é a diferença entre esperar meia hora e esperar dois minutos: sem disco girando, a cópia de um vídeo de 20 GB acaba enquanto o HD externo comum ainda está começando. Este SanDisk tem 1 TB, conecta por USB 3.2 Gen 2 e, segundo o anúncio, resiste a água, poeira e queda — o que importa porque este é o tipo de aparelho que vive na mochila.",
         "Duas coisas para conferir antes. A velocidade anunciada, de até 800 MB/s, **só aparece numa porta USB 3.2 Gen 2**; em porta USB antiga ele funciona, mas bem mais devagar. E vale lembrar que ele é um SSD portátil de linha de entrada: quem edita vídeo 4K direto do disco deve olhar os modelos com interface mais rápida.",
-        "Compre para levar projeto, biblioteca de fotos ou jogos entre computadores, e para backup que precisa ser rápido o bastante para você de fato fazer. Não compre esperando que ele substitua backup em nuvem — disco que anda na mochila é o que mais se perde."
+        "Compre para levar projeto, biblioteca de fotos ou jogos entre computadores, e para backup que precisa ser rápido o bastante para você de fato fazer. Não compre esperando que ele substitua backup em nuvem — disco que anda na mochila é o que mais se perde.",
+        "**Tiramos este produto da vitrine em 19/09/2026, e o motivo é o preço.** A oferta mais barata do anúncio passou a vir dos Estados Unidos: são R$ 562,18 de mercadoria, mas o produto entra por declaração de importação e ainda paga impostos federais e estaduais, que não estão nesse valor. A loja oficial da SanDisk, que entrega do Brasil, cobrava R$ 1.215 no mesmo dia. Como não temos como dizer quanto a conta fecha para você, preferimos não anunciar o número menor — ele é verdadeiro e engana ao mesmo tempo. O produto volta para a vitrine se um vendedor nacional retomar o anúncio."
       ]
     },
     {

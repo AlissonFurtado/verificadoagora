@@ -17,8 +17,13 @@ linhas.push(titulo, '');
 linhas.push(`Conferidos ${r.conferidos} produto(s) na API do Mercado Livre.`, '');
 
 if (r.suspeitos.length > 0) {
-  linhas.push('Variação acima de 15% — só estes esperam no PR, o resto já foi pra main:');
-  for (const m of r.suspeitos) linhas.push(`- ${m.nome}: ${real(m.de)} -> ${real(m.para)} (${pct(m.variacao)})`);
+  linhas.push('Esperando revisão — só estes ficaram no PR, o resto já foi pra main:');
+  for (const m of r.suspeitos) {
+    // O motivo só aparece quando não foi o tamanho da variação que segurou —
+    // oferta que passou a vir de fora do Brasil, por exemplo.
+    const porque = m.motivo ? ` — ${m.motivo}` : '';
+    linhas.push(`- ${m.nome}: ${real(m.de)} -> ${real(m.para)} (${pct(m.variacao)})${porque}`);
+  }
   linhas.push('');
 }
 

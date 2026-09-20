@@ -58,19 +58,86 @@ em 11/09/2026, depois da pesquisa.
 ## Onde paramos — 19/09/2026 (noite)
 
 🟢 **O canal do WhatsApp está no ar e é a frente principal agora.**
-`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **9 produtos
-publicados em 19/09**, o reel foi ao ar no Instagram, e o perfil foi arrumado
-(foto, bio e link). A conta que decidiu isso: canal com 200–300 pessoas
-engajadas rende o que o site renderia com 3.000–6.000 visitas/mês, e o site
-tem **0 cliques** de busca.
+`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **14 produtos
+publicados em 19/09** (9 de manhã + 5 à noite), o reel foi ao ar no Instagram,
+e o perfil foi arrumado (foto, bio e link). A conta que decidiu isso: canal com
+200–300 pessoas engajadas rende o que o site renderia com 3.000–6.000
+visitas/mês, e o site tem **0 cliques** de busca.
+⚠️ **O canal tinha 1 seguidor em 19/09 à noite** — é o número que a divulgação
+precisa mover, e é ele que diz se o canal está funcionando, não o catálogo.
 
 | O que ficou pendente | De quem é |
 |---|---|
-| 🔴 **PR 17 do robô: o SSD SanDisk caiu 40%** (R$ 945 → R$ 562,18) e está segurado como suspeito. Não conferi na fonte (o Chrome travou). **Confira e aplique à mão** — e não mergeie o branch, que é anterior aos produtos novos | Minha, na próxima sessão |
-| Publicar 5 por dia no canal — faltam **23 produtos** | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
+| Publicar 5 por dia no canal — **faltam 17 produtos** | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
 | Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar", é recurso de grupo. Quem faz esse papel é a descrição do canal |
-| Divulgar o canal de graça | **Dele**: status do WhatsApp pessoal (o de maior retorno), busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** — é como o número é marcado como spam |
+| Divulgar o canal de graça | **Dele**: busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. 🟢 O status do WhatsApp pessoal **já foi feito em 19/09**. ⚠️ **Nunca jogar link em grupo alheio** — é como o número é marcado como spam |
 | Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. Tentamos os dois, o painel classifica errado sozinho — **ele também tentou e deu o mesmo**. A URL está declarada, que é o que a cláusula 1.3 exige |
+
+### 🔴 O preço que está certo e engana: oferta importada (19/09/2026)
+
+**O caso que criou a regra.** O robô viu o SSD SanDisk cair de R$ 945 para
+R$ 562,18 (−40%) e segurou como suspeito. Conferido na página do Meli, o
+número estava certo e o sentido, errado: **a buy box tinha passado para um
+vendedor dos EUA**. A própria página avisa *"Envio de EUA… o produto vem do
+exterior e será importado. Estará sujeito à declaração de importação e a
+impostos federais e estaduais"* — e a **loja oficial da SanDisk, nacional,
+cobrava R$ 1.215 no mesmo dia**. Quem clicasse no nosso "R$ 562,18" pagaria
+perto do dobro.
+
+**A regra que fica:** *queda grande sem motivo aparente = confira a origem do
+vendedor antes de aplicar.* É irmã da regra do preço no Pix — nos dois casos a
+API devolve um número real que não é o que a pessoa paga.
+
+O que foi feito, e por quê:
+
+- **O SanDisk saiu da vitrine** (`oculto: true`), por decisão dele. O card não
+  tem espaço para explicar imposto de importação, e a alternativa (manter o
+  preço e avisar só na ficha) deixaria a vitrine e o canal mentindo. A ficha
+  ficou no ar com um parágrafo final explicando a decisão e a data.
+- **O preço foi aplicado assim mesmo** (R$ 562,18), com `preco_original` igual
+  e **`desconto_percentual: 0`** — a buy box não anuncia desconto nenhum, e
+  53% contra o preço antigo seria desconto inventado. ⚠️ A ficha sempre mostra
+  o riscado e o selo "% OFF", então 0% é o único valor honesto ali.
+- **Campo `importado` no produto** (`src/lib/produtos.ts`): a curadoria dizendo
+  "eu sei, e a análise explica". Marcado, o robô para de avisar sobre ele.
+- **Trava no robô**: `ehImportado()` em `src/lib/meli.ts` lê `tags`
+  (`cbt_item`, `international_delivery`), `international_delivery_mode` e o
+  país do `seller_address`. Qualquer pista positiva basta — errar para "é
+  importado" custa um PR a conferir; errar para o outro lado põe preço falso
+  na vitrine. Em `conferir-precos.ts`, oferta importada que o produto ainda
+  não admite vira **suspeito mesmo sem o preço ter mudado**, e o corpo do PR
+  passa a dizer o motivo.
+- ⚠️ **A trava não pôde ser testada contra a API real** — rodar o robô nesta
+  máquina invalida o refresh token da Action. As pistas vieram da documentação
+  e da página. **Se um importado passar batido, é em `ehImportado` que se
+  acrescenta a pista que faltou.**
+- 🔴 **O PR 17 deve ser fechado sem merge**: o branch é anterior aos produtos
+  novos e mergear apagaria os publicados em 18–19/09. O valor dele já está
+  aplicado à mão na `main`.
+
+### O que o canal ensinou ao publicar as 5 de 19/09
+
+O método do clipboard (`Set-Clipboard` + `ctrl+v`) continua sendo o que
+funciona, com duas correções medidas nesse dia:
+
+- 🔴 **`Get-Content` sem `-Encoding UTF8` estraga acento e emoji** no
+  PowerShell 5.1 — "PREÇO" virou "PREÃ‡O" no clipboard. Sempre
+  `Get-Content -Raw -Encoding UTF8`.
+- 🔴 **`\r\n` do Windows vira quebra dupla no editor do WhatsApp.** A primeira
+  colagem saiu com linhas em branco a mais. Normalize antes:
+  `(Get-Content …) -replace "`r`n","`n"`.
+- ⚠️ **O `innerText` do campo infla as quebras** (mostra `\n\n\n\n\n` onde há
+  uma linha em branco só): **não dá para conferir formatação por ele**. Use
+  `replace(/\n{2,}/g,'\n')` para conferir o *conteúdo*, e um screenshot para
+  conferir o *espaçamento* — comparado com uma mensagem já publicada.
+- ⚠️ **Clicar no item do canal por JS não abre**: o WhatsApp ignora `.click()`
+  na lista lateral. Tem que ser clique real (`computer`), por `ref` ou
+  coordenada.
+- ⚠️ **`.message-out` não encontra as mensagens do canal** — o seletor devolve
+  0 mesmo com tudo publicado. Para confirmar que saiu, o screenshot é a prova.
+- **Volume:** ele pediu "publica as que faltam" (22) e escolheu **5**, depois
+  do aviso de que 22 notificações num canal de 1 dia é o que faz gente
+  silenciar ou sair. O ritmo de 5/dia do script continua valendo.
 
 ## Onde paramos — 18/09/2026 (madrugada)
 
@@ -96,14 +163,14 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 | Frente | Estado | De quem é a vez |
 |---|---|---|
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
-| Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | **Decisão dele**: alerta de queda por e-mail/push — único item do plano que precisa de infraestrutura nova, e o único que funciona sem depender do Google |
+| Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | Ninguém. ⚠️ **O alerta de queda por e-mail/push foi recusado por ele em 19/09** — era o último item do plano e o único que não dependia do Google. **Não proponha de novo**: quem faz esse papel agora é o canal do WhatsApp, que entrega a queda na notificação sem infraestrutura nova |
 | Indexação ainda pendente | 🟡 Não consegui pedir na mesma sessão (o painel para de trocar de URL depois de dois pedidos): **comparativo do monitor**, **comparativo do A17**… quando existir, a **ficha do A17** e as **4 páginas de Black Friday** | **De quem pegar primeiro** — é 1 minuto por URL no Search Console, e o método pelo Chrome está descrito em "Ser achado" |
 | **SEO: 4 frentes escolhidas, 1 entregue** | Ele pediu **todas as quatro** em 17/09. 🟢 Feita: `guias-relacionados` passou a cobrir toda categoria. 🔴 **Faltam três**: (a) 2 guias de decisão — *"SSD SATA ou NVMe: qual serve no seu PC?"* e *"Quantos lumens um projetor precisa ter?"*, que puxam SSD NV3, SanDisk e HY320; (b) 2 guias de Black Friday — projetor/TV e eletrodoméstico; (c) comparativo do **Galaxy A07** contra G06, C73, G15 e A16 (as fichas desses quatro já estão nos comparativos, é só copiar palavra por palavra) | **Minha** — é só retomar, não depende dele |
-| HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | **Dele**: avisar o cliente para trocar o link no Instagram, no Google Meu Negócio e em cartão |
+| HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | 🟢 **Fechado**: o cliente foi avisado em 19/09. Só resta remover o `ALIAS hrvidros` desta zona por volta de mar/2027 |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
 | Lembrete dos links | 🟢 **Funcionou de verdade em 17/09**: o e-mail das 16h12 chegou, com os 12 candidatos e o bloco de URLs. A rotina está validada de ponta a ponta. ⚠️ **Mas o Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar o e-mail em texto puro (não feito) | **Dele**: dizer se quer que eu ajuste a rotina para texto puro |
 | Perguntas nas fichas | 🟡 **30 de 35 fichas têm, desde 19/09** (rotina das 4h): A36 verde, A07, A17 e os dois kits de potes ganharam perguntas nesse dia. **Faltam 5**: Projetor HY320, Placa-mãe Asus, SSD Externo SanDisk, Liquidificador Oster, Micro-ondas Electrolux | Ninguém — a rotina das 4h pega até 5 por dia sozinha |
-| Conferir no celular | 🟡 Pendente de 16/09: os **3 comparativos novos**, o **filtro do gráfico**, a **tabela da `/black-friday`** (rola de lado). De 17/09: o **comparativo do monitor** (10 linhas de ficha — é o maior até agora nos blocos do celular) e as **perguntas nas fichas** | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
+| Conferir no celular | 🟢 **O filtro do gráfico foi aprovado por ele em 19/09** ("ficou bom no celular"). 🟡 Faltam: os **3 comparativos novos**, a **tabela da `/black-friday`** (rola de lado), o **comparativo do monitor** (10 linhas de ficha — o maior até agora nos blocos do celular) e as **perguntas nas fichas** | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
 | Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
 | Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
 | Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | Ninguém. ⚠️ **Redmi 15C descartado em 16/09, por decisão dele**: tinha link gerado, mas a ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria. Não insista nele |

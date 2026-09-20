@@ -21,7 +21,15 @@ import { registrarPreco, type Historico } from '../src/lib/historico';
 /** Acima disso o preço não vai pro ar sozinho: vira PR. */
 const VARIACAO_SUSPEITA = 0.15;
 
-type Mudanca = { id: number; nome: string; de: number; para: number; variacao: number };
+type Mudanca = {
+  id: number;
+  nome: string;
+  de: number;
+  para: number;
+  variacao: number;
+  /** Por que virou suspeito, quando não foi só o tamanho da variação. */
+  motivo?: string;
+};
 type Relatorio = {
   rodado_em: string;
   conferidos: number;
@@ -144,18 +152,31 @@ async function main(): Promise<void> {
       novo,
     );
 
-    if (novo !== anterior) {
+    // ⚠️ A buy box troca de vendedor sem o produto trocar de id, e o preço de
+    // um vendedor de fora do Brasil não inclui o imposto de importação que a
+    // pessoa ainda vai pagar. Em 19/09/2026 o SSD SanDisk "caiu" 40% assim: a
+    // oferta vencedora passou a vir dos EUA a R$ 562,18 enquanto a loja
+    // oficial nacional cobrava R$ 1.215. A variação sozinha não distingue
+    // queda de preço de troca de origem — só este campo distingue.
+    const virouImportado = dados.importado && !produto.importado && !produto.oculto;
+
+    if (novo !== anterior || virouImportado) {
       const mudanca: Mudanca = {
         id: produto.id,
         nome: produto.nome,
         de: anterior,
         para: novo,
-        variacao: arredondar((novo - anterior) / anterior),
+        variacao: anterior > 0 ? arredondar((novo - anterior) / anterior) : 0,
       };
-      relatorio.mudancas.push(mudanca);
+      if (novo !== anterior) relatorio.mudancas.push(mudanca);
+
       // Produto oculto não aparece na vitrine: preço estranho nele não engana
       // ninguém e não segura a rodada.
-      if (Math.abs(mudanca.variacao) > VARIACAO_SUSPEITA && !produto.oculto) {
+      if (virouImportado) {
+        mudanca.motivo =
+          'a oferta vencedora passou a vir de fora do Brasil — o preço não inclui o imposto de importação';
+        relatorio.suspeitos.push(mudanca);
+      } else if (Math.abs(mudanca.variacao) > VARIACAO_SUSPEITA && !produto.oculto) {
         relatorio.suspeitos.push(mudanca);
       }
     }

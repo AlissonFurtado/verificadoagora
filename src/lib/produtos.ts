@@ -27,6 +27,20 @@ export type Produto = {
    * manda em `disponivel`; só a curadoria mexe aqui, e ele nunca toca.
    */
   oculto?: boolean;
+  /**
+   * A curadoria já sabe que a oferta vencedora vem de fora do Brasil.
+   *
+   * ⚠️ **Existe porque o preço da API não conta a história toda.** Em
+   * 19/09/2026 o SSD SanDisk "caiu" de R$ 945 para R$ 562,18: a buy box tinha
+   * passado para um vendedor dos EUA, e quem comprasse pagaria imposto de
+   * importação por cima — a loja oficial nacional cobrava R$ 1.215. O número
+   * estava certo e o sentido, errado.
+   *
+   * O robô marca a rodada como suspeita quando vê uma oferta importada que
+   * este campo ainda não admite. Marcar aqui é a curadoria dizendo "eu sei, e
+   * a `analise` explica" — a partir daí o robô para de avisar.
+   */
+  importado?: boolean;
   /** Agrupador do Meli, usado pra não sugerir de novo o que já está aqui com outro id. */
   familia: string;
   data_adicionado: string;
