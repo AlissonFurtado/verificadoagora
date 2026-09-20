@@ -164,7 +164,7 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 |---|---|---|
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
 | Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | Ninguém. ⚠️ **O alerta de queda por e-mail/push foi recusado por ele em 19/09** — era o último item do plano e o único que não dependia do Google. **Não proponha de novo**: quem faz esse papel agora é o canal do WhatsApp, que entrega a queda na notificação sem infraestrutura nova |
-| Indexação ainda pendente | 🟡 Não consegui pedir na mesma sessão (o painel para de trocar de URL depois de dois pedidos): **comparativo do monitor**, **comparativo do A17**… quando existir, a **ficha do A17** e as **4 páginas de Black Friday** | **De quem pegar primeiro** — é 1 minuto por URL no Search Console, e o método pelo Chrome está descrito em "Ser achado" |
+| Indexação ainda pendente | 🟢 **Zerada em 20/09/2026**: as 6 que faltavam foram pedidas de uma vez — comparativo do monitor, os **3 guias de Black Friday**, a **`/black-friday`** e a **ficha do A17**. ⚠️ O **comparativo do A17 não existe** (não está em `comparativos.json`); quando existir, pedir | Ninguém — é esperar o Google, semanas |
 | **SEO: 4 frentes escolhidas, 1 entregue** | Ele pediu **todas as quatro** em 17/09. 🟢 Feita: `guias-relacionados` passou a cobrir toda categoria. 🔴 **Faltam três**: (a) 2 guias de decisão — *"SSD SATA ou NVMe: qual serve no seu PC?"* e *"Quantos lumens um projetor precisa ter?"*, que puxam SSD NV3, SanDisk e HY320; (b) 2 guias de Black Friday — projetor/TV e eletrodoméstico; (c) comparativo do **Galaxy A07** contra G06, C73, G15 e A16 (as fichas desses quatro já estão nos comparativos, é só copiar palavra por palavra) | **Minha** — é só retomar, não depende dele |
 | HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | 🟢 **Fechado**: o cliente foi avisado em 19/09. Só resta remover o `ALIAS hrvidros` desta zona por volta de mar/2027 |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
@@ -1419,10 +1419,18 @@ caminho é o campo "Inspecionar qualquer URL" no topo do Search Console.
 - **Clicar no botão por coordenada falha quando a página entra em zoom** (o
   mesmo defeito visto no GitHub). Clicar pelo elemento (`botao.click()`)
   resolve.
-- 🔴 **Depois de dois pedidos seguidos o painel para de responder à troca de
-  URL** — provável cota de inspeções por minuto. **Não insista**: volte depois
-  ou faça o resto à mão. Reenviar a mesma página não muda a prioridade dela,
-  segundo o próprio Google.
+- 🟢 **A trava dos dois pedidos não é cota — era o modo de preencher o campo.**
+  Em 20/09/2026 saíram **6 pedidos seguidos, sem recusa nenhuma**, usando o
+  setter nativo em todas as URLs (não só na segunda) e este laço:
+  **Dispensar o balão → setter + `input` + `Enter` → esperar ~10 s → achar o
+  `SOLICITAR INDEXAÇÃO` pelo texto e chamar `.click()` no ancestral clicável →
+  esperar ~9 s → conferir que a tela diz "Indexação solicitada"**. Nunca
+  digitando, nunca por coordenada.
+- ⚠️ **O `id=` da URL da aba mente**: depois de um pedido ele às vezes volta ao
+  da inspeção anterior. **Não conclua nada por ele** — quem diz a verdade é a
+  URL escrita acima do título "Inspeção de URL" (e um screenshot confirma).
+- **Reenviar a mesma página não muda a prioridade dela**, segundo o próprio
+  Google — o balão de confirmação diz isso em letras miúdas.
 
 🔴 **Snippet de produto: o guia gerava 6 entidades inválidas** — todo perfil
 virava `Product` sem `offers`, e 4 dos 6 aparelhos não são nossos, então não
