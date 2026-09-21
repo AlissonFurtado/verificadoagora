@@ -437,7 +437,8 @@
           "pergunta": "Pode molhar?",
           "resposta": "Tem IP67, que é imersão, não só respingo — cair na pia ele sobrevive."
         }
-      ]
+      ],
+      "oculto": true
     },
     {
       "id": 12,
