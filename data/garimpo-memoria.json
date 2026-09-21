@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-20",
+  "atualizado_em": "2026-09-21",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -684,6 +684,36 @@
       "sugerido_em": "2026-09-20",
       "familia": "interno Western Digital Purple 1TB 1TB",
       "preco_sugerido": 435,
+      "vezes": 1
+    },
+    "MLB17978326": {
+      "sugerido_em": "2026-09-21",
+      "familia": "interno Kingston SA400S37 SATA III 480GB",
+      "preco_sugerido": 432.74,
+      "vezes": 1
+    },
+    "MLB36218073": {
+      "sugerido_em": "2026-09-21",
+      "familia": "Monitor Brazil PC com tela de 20\" e resolução HD",
+      "preco_sugerido": 237.99,
+      "vezes": 1
+    },
+    "MLB29473724": {
+      "sugerido_em": "2026-09-21",
+      "familia": "Texfine Cortina Blackout",
+      "preco_sugerido": 113.9,
+      "vezes": 1
+    },
+    "MLB55762063": {
+      "sugerido_em": "2026-09-21",
+      "familia": "Moto G06 Dual SIM",
+      "preco_sugerido": 813.26,
+      "vezes": 1
+    },
+    "MLB29217644": {
+      "sugerido_em": "2026-09-21",
+      "familia": "Filme instantâneo fotográfico Fujifilm FILME",
+      "preco_sugerido": 149.9,
       "vezes": 1
     }
   }
