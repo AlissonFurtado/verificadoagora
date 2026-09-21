@@ -68,7 +68,8 @@ precisa mover, e é ele que diz se o canal está funcionando, não o catálogo.
 
 | O que ficou pendente | De quem é |
 |---|---|
-| Publicar 5 por dia no canal — **faltam 14 produtos** (18 dos 32 já foram, em 19 e 20/09) | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
+| Publicar 5 por dia no canal — **faltam 13 produtos** (19 dos 32 já foram, em 19, 20 e 21/09) | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
+| 🔴 **O garimpo anota desconto que não confere com a página** | Ninguém ainda. Em 21/09, **3 dos 5 candidatos** tinham número diferente do anúncio: o Instax marcava 25% e estava com **5%**; o SSD A400 dizia R$ 432,74 e estava **R$ 490,93**. **Confira sempre na página antes de aprovar candidato** — o número do garimpo serve para ordenar a fila, não para publicar |
 | Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar", é recurso de grupo. Quem faz esse papel é a descrição do canal |
 | Divulgar o canal de graça | **Dele**: busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. 🟢 O status do WhatsApp pessoal **já foi feito em 19/09**. ⚠️ **Nunca jogar link em grupo alheio** — é como o número é marcado como spam |
 | Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. Tentamos os dois, o painel classifica errado sozinho — **ele também tentou e deu o mesmo**. A URL está declarada, que é o que a cláusula 1.3 exige |
@@ -1694,6 +1695,14 @@ Chrome logado, pelo método do clipboard (abaixo).
 - ⚠️ **Queda de R$ 6 não é manchete.** Só vira "🔻 CAIU HOJE" a partir de **3%
   ou R$ 20**; a primeira versão gritava por qualquer centavo, o que ensina o
   seguidor a ignorar o canal.
+  🔴 **Mas o limiar de 3% ainda deixa passar o que a regra proíbe** — medido em
+  21/09: o liquidificador gerou "CAIU HOJE… Caiu **R$ 6,00**" (3,17% sobre
+  R$ 189) e o GameSir G7 SE, "Caiu **R$ 7,99**" (3,1%). É literalmente o
+  exemplo que esta regra usa como contraexemplo. **Nesse dia as duas foram
+  puladas à mão** e só 3 das 5 saíram. **Decisão pendente do Alisson**: trocar
+  o `ou` por um piso em reais também — algo como *3% **e** pelo menos R$ 15*,
+  ou subir para *5% ou R$ 20*. Enquanto não mudar, confira o valor em reais
+  antes de publicar.
 - Quando não houver nada novo, o script diz isso — e **é uma resposta
   legítima**, na mesma linha da `/quedas-de-preco` que admite quando nada caiu.
 
@@ -1712,6 +1721,25 @@ com `shift+Enter` insere quebras a mais, imprevisível.
 com o texto (here-string `@'...'@`, que preserva acento e emoji) e depois
 `ctrl+v` no campo. A formatação sai exata e o preview do link carrega sozinho
 — e o preview usa a `og:image` da ficha, que fica ótimo.
+
+🟢 **Plano B, e é melhor que o A: evento de `paste` sintético.** Descoberto em
+21/09/2026, quando o `Set-Clipboard` passou a falhar com *"A operação de Área
+de Transferência solicitada não foi bem-sucedida"* (alguma aplicação segurando
+o clipboard; 5 tentativas com espera não resolveram, nem a API do WinForms,
+nem `navigator.clipboard.writeText`, que dá `NotAllowedError` no contexto da
+extensão). O que funcionou:
+
+```js
+const dt = new DataTransfer();
+dt.setData('text/plain', txt);            // txt com \n de verdade
+campo.dispatchEvent(new ClipboardEvent('paste',
+  { clipboardData: dt, bubbles: true, cancelable: true }));
+```
+
+**A formatação sai idêntica à do `ctrl+v`** — quebra de linha, acento, emoji e
+preview do link. É o mesmo Lexical que ignora `execCommand('insertText')`, mas
+ele escuta o evento de `paste`. **Não depende do clipboard do Windows**, então
+é o caminho mais confiável dos dois.
 
 ⚠️ **Confira o campo antes de enviar** (`innerText` do
 `div[contenteditable][role=textbox]`): resíduo de tentativa anterior fica lá e
