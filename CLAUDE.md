@@ -762,6 +762,14 @@ Actions → Conferir preços → *Run workflow*. O botão verde de confirmação
 aparece por `find`: pegue-o pelo `read_page` com `filter: interactive` (é o
 `button type="submit"` logo abaixo do genérico "Run workflow").
 
+🔴 **Suspeito não revisado deixa a vitrine mentindo barato — e isso é pior
+que o PR velho.** Em 21/09 o monitor S3 27" foi marcado suspeito (+16%) e o
+site ficou anunciando **R$ 603,90 enquanto a loja cobrava R$ 821,25**, por
+dias. A trava protege contra preço errado que entra sozinho, mas **congela o
+preço antigo até alguém olhar** — e preço congelado para baixo é exatamente o
+erro que queima a confiança. **Revise o PR de suspeitos no mesmo dia**, nem
+que seja para aplicar o valor à mão como foi feito aqui.
+
 🔴 **O PR de suspeitos pode ficar velho e virar armadilha.** Em 18/09 o robô
 abriu o PR 15 com três preços de variação grande. **Mergear teria apagado os
 três produtos publicados naquele dia** (A17 e os dois kits de potes), porque o
@@ -915,6 +923,24 @@ recebe comissão.
 ⚠️ **A ficha do anúncio é fonte para `analise`, não para tabela de
 comparativo.** Comparativo continua exigindo a página do fabricante: o anúncio
 erra e se contradiz (veja a câmera "4K" abaixo).
+
+### 🔴 Não confira preço pelo JSON-LD da página (21/09/2026)
+
+Custou meia sessão e quase virou um alarme falso de que o catálogo inteiro
+estava errado. **O `"offers":{"price":...}` do JSON-LD do Meli é o preço do
+Pix**, e o nosso é o do cartão — medido no Wap GTW 10, em que o JSON-LD
+devolveu exatamente os R$ 251,91 do Pix contra os R$ 279,90 do cartão que o
+site mostra. Comparar os dois acusa "divergência" em quase todo produto que
+tem desconto no Pix, que são quase todos.
+
+⚠️ **E raspar a página por `fetch` + `DOMParser` também não serve para preço.**
+O HTML traz os produtos relacionados junto, e `querySelector('.ui-pdp-price…')`
+pega o primeiro que aparecer — no teste, o fone P30i "custava" R$ 109,90, que
+era de outro anúncio na mesma página. **Só vale o que se lê na página
+navegada**, com a primeira dobra renderizada, um produto por vez.
+
+**O jeito certo, quando precisar conferir preço de verdade:** navegar até a
+página e ler o bloco `R$ X no Pix ou R$ Y em outros meios`. O **Y** é o nosso.
 
 ### 🔴 O preço da API não é o preço que a loja anuncia
 
