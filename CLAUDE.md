@@ -921,6 +921,17 @@ bloco de preço (`.ui-pdp-price`).
 mesmo risco que levou 429 no Reddit em 10/09 — e aqui a conta em jogo é a que
 recebe comissão.
 
+🔴 **E o aviso virou fato em 21/09/2026: o Meli respondeu com CAPTCHA.** Depois
+de ~15 conferências de preço numa sessão (uma amostra de 8 produtos em lote
+mais as conferências avulsas), a navegação passou a cair em
+`mercadolivre.com.br/captcha/wall/logged` — "Segurança — Mercado Livre". **Eu
+não resolvo CAPTCHA**, então o trabalho parou ali.
+
+**O limite prático, até prova em contrário: poucas conferências por sessão, e
+2 s entre elas.** Conferir o catálogo inteiro de uma vez não é uma opção —
+custa a sessão e arrisca a conta. Quando precisar de muitas, peça a ele
+espalhar ao longo do dia ou aceite conferir só o que decide alguma coisa.
+
 ⚠️ **A ficha do anúncio é fonte para `analise`, não para tabela de
 comparativo.** Comparativo continua exigindo a página do fabricante: o anúncio
 erra e se contradiz (veja a câmera "4K" abaixo).
