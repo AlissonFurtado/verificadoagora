@@ -68,7 +68,7 @@ precisa mover, e é ele que diz se o canal está funcionando, não o catálogo.
 
 | O que ficou pendente | De quem é |
 |---|---|
-| Publicar 5 por dia no canal — **faltam 13 produtos** (19 dos 32 já foram, em 19, 20 e 21/09) | Minha, quando ele abrir sessão. A rotina das 8h manda os textos por e-mail |
+| Publicar 5 por dia no canal — **faltam 7 produtos** (25 dos 32 já foram, de 19 a 22/09). O canal tem **3 seguidores** | Minha, quando ele abrir sessão. ⚠️ **A rotina das 8h roda antes do robô de preços**, então a fila dela sai com o histórico de ontem — gerar a fila de novo depois das ~15h dá um resultado diferente e correto |
 | 🔴 **O garimpo anota desconto que não confere com a página** | Ninguém ainda. Em 21/09, **3 dos 5 candidatos** tinham número diferente do anúncio: o Instax marcava 25% e estava com **5%**; o SSD A400 dizia R$ 432,74 e estava **R$ 490,93**. **Confira sempre na página antes de aprovar candidato** — o número do garimpo serve para ordenar a fila, não para publicar |
 | Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar", é recurso de grupo. Quem faz esse papel é a descrição do canal |
 | Divulgar o canal de graça | **Dele**: busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. 🟢 O status do WhatsApp pessoal **já foi feito em 19/09**. ⚠️ **Nunca jogar link em grupo alheio** — é como o número é marcado como spam |
@@ -688,6 +688,33 @@ destaque, e foi de lá que saíram as primeiras imagens do JSON.
 
 Toda manhã, `conferir-precos.yml` reconfere cada produto na API do Meli.
 Rodar na mão: `npm run precos:conferir`.
+
+### 🔴 O histórico gravava preço que o site nunca mostrou (corrigido em 22/09)
+
+**O bug mais sério achado até agora, porque contaminava o ativo central.**
+`conferir-precos.ts` gravava o `historico.json` **antes** de decidir se o preço
+era suspeito. Como suspeito volta ao valor de ontem no `produtos.json`, o
+gráfico ficava com um ponto que nenhum visitante viu.
+
+O caso que revelou: o **Wap GTW 10** ficou com **R$ 370,77 em 21/09** (valor de
+outra variação, que eu tinha rejeitado depois de conferir na página) enquanto o
+site mostrava R$ 279,90. No dia seguinte o canal ia anunciar *"Ontem estava
+R$ 370,77. Caiu R$ 97,87"* — **uma queda de 26% que nunca aconteceu**; a real
+foi de R$ 7,00.
+
+**Seis pontos falsos foram encontrados e corrigidos à mão** (Wap, monitor S3
+27", DualSense em dois dias, A36 verde e GameSir G7 SE). A regra agora é:
+**o histórico grava o preço que o site mostra** — suspeito entra com o valor
+anterior, não com o da API.
+
+⚠️ **Isso afetava tudo o que se apoia no histórico:** o gráfico da ficha, o selo
+de menor preço, a `/quedas-de-preco` e as mensagens do canal. Se aparecer um
+pico inexplicável num gráfico, é aqui que se procura.
+
+⚠️ **Produto novo não tem o preço de estreia no histórico.** Ele só entra na
+primeira rodada do robô, então o valor com que o produto apareceu na vitrine
+não está lá — foi por isso que o JBL, cadastrado a R$ 164,10, quase foi
+anunciado como "menor preço que já vi" a R$ 170,90.
 
 ⚠️ **Ele escreve três arquivos**: `produtos.json`, `historico.json` e o
 `relatorio.json` que a Action lê. Entre 07 e 08/09/2026 faltava o
@@ -1703,6 +1730,18 @@ Chrome logado, pelo método do clipboard (abaixo).
 - `data/canal-publicados.json` guarda **quem já foi e por quanto**. Produto só
   volta se o preço tiver mudado — mesma lógica da memória do garimpo, e pela
   mesma razão: repetir a mesma oferta é o que faz alguém sair do canal.
+  🔴 **E só volta se tiver ficado mais barato** (desde 22/09): repetir para
+  dizer que a oferta piorou não serve a ninguém.
+- 🔴 **Produto que a última rodada não conferiu não entra na fila** (22/09).
+  Suspeito fica com o preço de ontem e `verificado_em` atrasado — tolerável na
+  ficha, que mostra a data do lado, inaceitável numa mensagem que grita "MENOR
+  PREÇO QUE JÁ VI" no celular de alguém. O filtro compara `verificado_em` com
+  `metadata.ultima_atualizacao`.
+- ⚠️ **"Menor preço que já vi" exige 3 pontos de histórico.** Com um ou dois,
+  qualquer preço é o menor e o selo vira enfeite.
+- ⚠️ **"Está acima do menor preço" só aparece se a diferença for de 3% ou
+  R$ 20.** O G17 gerou *"Já vi por R$ 887,77 — hoje está acima disso"* com **um
+  centavo** de diferença; agora diz que está praticamente no menor preço.
 - ⚠️ **Queda de R$ 6 não é manchete.** Só vira "🔻 CAIU HOJE" a partir de **3%
   ou R$ 20**; a primeira versão gritava por qualquer centavo, o que ensina o
   seguidor a ignorar o canal.

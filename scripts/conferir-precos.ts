@@ -144,14 +144,6 @@ async function main(): Promise<void> {
     // Preenche a família em quem entrou antes de o campo existir.
     if (!produto.familia && dados.familia) produto.familia = dados.familia;
 
-    // Só entra no histórico preço que a API confirmou hoje. Preço não
-    // conferido não vira dado histórico — senão o "menor preço" mente depois.
-    historico.produtos[produto.meli_id] = registrarPreco(
-      historico.produtos[produto.meli_id],
-      hoje(),
-      novo,
-    );
-
     // ⚠️ A buy box troca de vendedor sem o produto trocar de id, e o preço de
     // um vendedor de fora do Brasil não inclui o imposto de importação que a
     // pessoa ainda vai pagar. Em 19/09/2026 o SSD SanDisk "caiu" 40% assim: a
@@ -180,6 +172,22 @@ async function main(): Promise<void> {
         relatorio.suspeitos.push(mudanca);
       }
     }
+
+    // 🔴 **O histórico grava o preço que o site MOSTRA, não o que a API disse.**
+    // Até 22/09/2026 ele era escrito antes desta decisão, e por isso todo
+    // produto suspeito deixava no gráfico um ponto que nunca existiu para o
+    // visitante: o Wap GTW 10 ficou com R$ 370,77 em 21/09 enquanto a página
+    // mostrava R$ 279,90, e no dia seguinte o canal ia anunciar uma queda de
+    // R$ 97,87 que não aconteceu (a real foi de R$ 7,00). Como o suspeito volta
+    // ao preço de ontem no `produtos.json`, é esse o valor que entra aqui.
+    // Contaminava tudo o que se apoia no histórico: o gráfico da ficha, o selo
+    // de menor preço, a /quedas-de-preco e as mensagens do canal.
+    const ehSuspeito = relatorio.suspeitos.some((s) => s.id === produto.id);
+    historico.produtos[produto.meli_id] = registrarPreco(
+      historico.produtos[produto.meli_id],
+      hoje(),
+      ehSuspeito ? anterior : novo,
+    );
   }
 
   catalogo.metadata.ultima_atualizacao = hoje();

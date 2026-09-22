@@ -38,9 +38,21 @@ function avaliar(produto) {
   const queda = anterior !== null ? anterior - produto.preco_atual : 0;
   const caiuHoje =
     anterior !== null && (queda / anterior >= 0.03 || queda >= 20);
-  const noMenor = menor !== null && produto.preco_atual <= menor.preco;
+  // ⚠️ **"Menor preço que já vi" exige ter visto alguma coisa.** Com um ou dois
+  // pontos no histórico qualquer preço é o menor, e o selo vira enfeite: em
+  // 22/09/2026 o JBL tinha exatamente dois pontos iguais e levaria a manchete
+  // — sendo que o site o anunciara dois dias antes por R$ 164,10, mais barato
+  // que o "menor preço" da mensagem. ⚠️ Produto recém-cadastrado só entra no
+  // histórico na primeira rodada do robô, então o preço com que ele estreou na
+  // vitrine não está lá.
+  const noMenor = menor !== null && pontos.length >= 3 && produto.preco_atual <= menor.preco;
 
   const jaFoi = publicados.itens[produto.meli_id];
+
+  // 🔴 **Produto que já foi ao canal e ficou MAIS CARO não volta.** Repetir uma
+  // oferta para dizer que ela piorou não serve a ninguém e gasta a paciência
+  // de quem segue — o canal promete queda de preço, não boletim de variação.
+  if (jaFoi && produto.preco_atual > jaFoi.preco) return null;
 
   // ⚠️ **Produto recém-cadastrado não tem histórico, e sem isto ele nunca
   // entrava na fila** — não caiu de preço nem está "no menor que já vi",
@@ -99,7 +111,16 @@ function escrever({ produto, pontos, anterior, menor, caiuHoje, noMenor, estreia
   } else if (noMenor && pontos.length > 2) {
     linhas.push(`Acompanho esse preço há ${pontos.length} dias, e hoje está no menor que já vi.`, '');
   } else if (menor && menor.preco < p.preco_atual) {
-    linhas.push(`Já vi por ${real(menor.preco)} em ${dia(menor.dia)} — hoje está acima disso.`, '');
+    // ⚠️ Só vale dizer "está acima" quando a diferença significa alguma coisa.
+    // Em 22/09/2026 o G17 gerou "Já vi por R$ 887,77 — hoje está acima disso"
+    // com **um centavo** de diferença: a frase é verdadeira e ridícula, e
+    // desanima a compra por nada. Mesma régua da queda: 3% ou R$ 20.
+    const acima = p.preco_atual - menor.preco;
+    if (acima / menor.preco >= 0.03 || acima >= 20) {
+      linhas.push(`Já vi por ${real(menor.preco)} em ${dia(menor.dia)} — hoje está acima disso.`, '');
+    } else {
+      linhas.push(`Está praticamente no menor preço que já vi (${real(menor.preco)}, em ${dia(menor.dia)}).`, '');
+    }
   }
 
   if (repetido) linhas.push('(já mandei esse aqui antes, mas o preço mudou)', '');
@@ -118,8 +139,17 @@ function gerarSlug(p) {
   return `${base}-${p.meli_id.toLowerCase()}`;
 }
 
+// 🔴 **Produto que a última rodada não conferiu não vai para o canal.** Quando
+// o robô marca um preço como suspeito, ele devolve o produto ao valor de
+// ontem e deixa `verificado_em` para trás — o site mostra um preço que pode
+// já não existir na loja. Isso é tolerável numa ficha, que diz a data da
+// conferência do lado; é inaceitável numa mensagem que grita "MENOR PREÇO QUE
+// JÁ VI" no celular de alguém. Em 22/09/2026 dois dos cinco da fila estavam
+// nessa situação (DualSense, parado desde 20/09, e o GameSir G7 SE).
+const conferidoEm = catalogo.metadata.ultima_atualizacao;
+
 const avaliados = catalogo.produtos
-  .filter((p) => p.disponivel && !p.oculto)
+  .filter((p) => p.disponivel && !p.oculto && p.verificado_em === conferidoEm)
   .map(avaliar)
   .filter(Boolean)
   .sort((a, b) => b.nota - a.nota);
