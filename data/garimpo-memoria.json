@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-21",
+  "atualizado_em": "2026-09-22",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -714,6 +714,18 @@
       "sugerido_em": "2026-09-21",
       "familia": "Filme instantâneo fotográfico Fujifilm FILME",
       "preco_sugerido": 149.9,
+      "vezes": 1
+    },
+    "MLB27080589": {
+      "sugerido_em": "2026-09-22",
+      "familia": "Electrolux PE12",
+      "preco_sugerido": 170,
+      "vezes": 1
+    },
+    "MLB19795010": {
+      "sugerido_em": "2026-09-22",
+      "familia": "Amazon Dot Echo Dot 5th Gen com assistente virtual Alexa 127/220V",
+      "preco_sugerido": 409.42,
       "vezes": 1
     }
   }
