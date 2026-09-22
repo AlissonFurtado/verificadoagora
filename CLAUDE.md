@@ -1714,6 +1714,14 @@ Chrome logado, pelo método do clipboard (abaixo).
   o `ou` por um piso em reais também — algo como *3% **e** pelo menos R$ 15*,
   ou subir para *5% ou R$ 20*. Enquanto não mudar, confira o valor em reais
   antes de publicar.
+  ⚠️ **E o mesmo par voltou idêntico em 22/09** — não é um novo caso, é o
+  mesmo: a rotina das 8h roda `canal.mjs` **antes** do robô de preços do dia
+  (que costuma sair só à tarde, ver "Toda manhã, não às 8h"), então ela ainda
+  está comparando 20→21/09 outra vez. Sinal de que a comparação é véspera
+  repetida, não queda nova: `data/historico.json.atualizado_em` ainda igual
+  ao dia anterior. E-mail desse dia avisou para pular as duas até o robô
+  rodar. Enquanto o limiar não mudar, quem lê o e-mail da manhã confere a
+  data de `atualizado_em` antes de confiar em qualquer "CAIU HOJE".
 - Quando não houver nada novo, o script diz isso — e **é uma resposta
   legítima**, na mesma linha da `/quedas-de-preco` que admite quando nada caiu.
 
@@ -1823,17 +1831,24 @@ prontas para colar no canal**, escreve as `perguntas` que faltam em até 5
 produtos, roda `npm run verificar` e commita se passar.
 
 ⚠️ **O container nasce sem `node_modules`** (medido em 19/09): `npm run
-verificar` falha com `Cannot find module 'react'` se não rodar `npm ci` antes.
-Não é erro de tipo — é dependência que nunca foi instalada.
+verificar` falha com `Cannot find module 'react'/'next'` se não rodar `npm ci`
+antes — não é erro de tipo, é dependência nunca instalada. `npm ci` primeiro
+resolve, leva ~10s.
+
+🔴 **E às vezes nasce com a branch `main` local desatualizada** (medido em
+22/09/2026): o `HEAD` do container estava numa versão recente e correta, mas
+a ref local `main` (e `origin/main` em cache) apontava para um commit de
+~16/09 — histórico sem ancestral comum com o `HEAD` atual, sinal de que o
+repo já passou por uma reescrita de histórico em algum momento. `git fetch
+origin main` mostra a verdade (`origin/main` real do GitHub), e como a
+`main` local não tinha nenhum commit próprio de valor (era só a ref velha),
+`git reset --hard origin/main` resolveu sem perder nada. **Sempre confira
+`git log --oneline -3` contra o que o CLAUDE.md diz que já está no ar** antes
+de commitar — se a data não bater, é isso.
 
 🔴 **Ela não gera vídeo, e isso não tem conserto pelo lado dela**: roda na
 nuvem, sem a máquina do Alisson, sem ffmpeg e sem o site local. Vídeo só sai
 em sessão aberta, na máquina dele.
-
-⚠️ **O container da rotina nasce sem `node_modules`.** Medido em 19/09/2026:
-`npm run verificar` falhava com `Cannot find module 'react'/'next'` — não era
-erro de tipo, era dependência nunca instalada. `npm ci` primeiro resolve, leva
-~10s. Rodar isso antes de `npm run verificar` em toda execução desta rotina.
 
 ## Instagram: agora é o canal de volume
 
