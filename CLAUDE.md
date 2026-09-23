@@ -55,24 +55,48 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 19/09/2026 (noite)
+## Onde paramos — 22/09/2026
 
-🟢 **O canal do WhatsApp está no ar e é a frente principal agora.**
-`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **14 produtos
-publicados em 19/09** (9 de manhã + 5 à noite), o reel foi ao ar no Instagram,
-e o perfil foi arrumado (foto, bio e link). A conta que decidiu isso: canal com
-200–300 pessoas engajadas rende o que o site renderia com 3.000–6.000
-visitas/mês, e o site tem **0 cliques** de busca.
-⚠️ **O canal tinha 1 seguidor em 19/09 à noite** — é o número que a divulgação
-precisa mover, e é ele que diz se o canal está funcionando, não o catálogo.
+🟢 **O canal do WhatsApp é a frente principal.**
+`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **25 dos 32 produtos
+publicados** entre 19 e 22/09, e o canal saiu de **1 para 3 seguidores**. A
+conta que decidiu isso: canal com 200–300 pessoas engajadas rende o que o site
+renderia com 3.000–6.000 visitas/mês, e o site tem **0 cliques** de busca.
+⚠️ **O número que importa é o de seguidores**, não o de produtos publicados.
+Com 3 seguidores, publicar mais não muda nada — **divulgar muda.**
 
-| O que ficou pendente | De quem é |
+**O catálogo tem 36 produtos (32 visíveis).** Dois estão ocultos de propósito:
+o SSD SanDisk (oferta virou importada) e o A36 preto (voltou mais caro que o
+verde); o terceiro é o suporte de monitor.
+
+### O que fazer na próxima sessão, em ordem
+
+| O quê | De quem é |
 |---|---|
-| Publicar 5 por dia no canal — **faltam 7 produtos** (25 dos 32 já foram, de 19 a 22/09). O canal tem **3 seguidores** | Minha, quando ele abrir sessão. ⚠️ **A rotina das 8h roda antes do robô de preços**, então a fila dela sai com o histórico de ontem — gerar a fila de novo depois das ~15h dá um resultado diferente e correto |
-| 🔴 **O garimpo anota desconto que não confere com a página** | Ninguém ainda. Em 21/09, **3 dos 5 candidatos** tinham número diferente do anúncio: o Instax marcava 25% e estava com **5%**; o SSD A400 dizia R$ 432,74 e estava **R$ 490,93**. **Confira sempre na página antes de aprovar candidato** — o número do garimpo serve para ordenar a fila, não para publicar |
-| Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar", é recurso de grupo. Quem faz esse papel é a descrição do canal |
-| Divulgar o canal de graça | **Dele**: busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. 🟢 O status do WhatsApp pessoal **já foi feito em 19/09**. ⚠️ **Nunca jogar link em grupo alheio** — é como o número é marcado como spam |
-| Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. Tentamos os dois, o painel classifica errado sozinho — **ele também tentou e deu o mesmo**. A URL está declarada, que é o que a cláusula 1.3 exige |
+| **Publicar os 7 que faltam no canal** — 2 ou 3 por dia, não todos de uma vez | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
+| 🔴 **Conferir os 4 suspeitos parados** — Aspirador Electrolux, GameSir G7 SE, DualSense e A36 verde estão com preço congelado (`verificado_em` atrasado) e **fora do canal** por isso | Minha, **mas só quando o Meli deixar** (ver CAPTCHA abaixo) |
+| 🔴 **CAPTCHA do Mercado Livre** — em 21/09 o Meli passou a responder `captcha/wall/logged` depois de ~15 conferências de preço numa sessão. **Não resolvo CAPTCHA.** Pode ter passado sozinho; teste com **uma** navegação antes de planejar qualquer conferência em série | Minha para testar; **dele** se precisar resolver o desafio |
+| **Decidir o limiar do "CAIU HOJE"** — hoje é `3% ou R$ 20`, e o `ou` deixa passar manchete de R$ 6. Sugestão: `3% e pelo menos R$ 15`, ou `5% ou R$ 20`. Enquanto não mudar, produto barato gera manchete boba | **Decisão dele** |
+| **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
+| **Reddit: o primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md`. A conta está aquecida desde 12/09 | **Dele** |
+| **Conferir no celular** — 3 comparativos novos, tabela da `/black-friday`, comparativo do monitor, e as 4 páginas novas de 20/09 | **Dele**. Daqui não dá: o `resize_window` não funciona |
+| **Pedir indexação das 4 páginas de 20/09** — comparativo do A07, `/guia/meu-pc-aceita-ssd-nvme` e os 2 guias de BF novos | De quem pegar primeiro. O laço que funciona está em "Ser achado" |
+| Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar". Quem faz esse papel é a descrição do canal |
+| Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. O painel classifica errado sozinho, e ele também tentou. A URL está declarada, que é o que a cláusula 1.3 exige |
+
+### O que entrou em 20–22/09
+
+- 🟢 **As 4 frentes de SEO fechadas**: comparativo do **Galaxy A07**,
+  `/guia/meu-pc-aceita-ssd-nvme`, `/guia/vale-esperar-black-friday-eletrodomestico`
+  e `-fone-de-ouvido`. A `/black-friday` lista **5 guias** e os acha sozinha
+  pelo prefixo do slug.
+- 🟢 **Indexação pedida para 6 páginas** em 20/09, todas aceitas.
+- 🟢 **Fone JBL Quantum 100M2** no catálogo (36 produtos).
+- 🔴 **Um bug sério corrigido**: o histórico gravava preço que o site nunca
+  mostrou. Seção própria em "O robô de preços" — **leia antes de mexer em
+  preço ou histórico**.
+- 🟢 **Quatro travas novas no canal**, todas de casos reais. Ver "A fila do
+  canal".
 
 ### 🔴 O preço que está certo e engana: oferta importada (19/09/2026)
 
@@ -144,9 +168,10 @@ funciona, com duas correções medidas nesse dia:
   do aviso de que 22 notificações num canal de 1 dia é o que faz gente
   silenciar ou sair. O ritmo de 5/dia do script continua valendo.
 
-## Onde paramos — 18/09/2026 (madrugada)
+## As frentes, e o estado de cada uma
 
-Atualize esta seção sempre; é por ela que a próxima sessão sabe retomar.
+⚠️ **A seção de retomada é a de cima.** Esta aqui guarda o estado das frentes
+que não mudam todo dia — atualize quando uma delas virar.
 
 **Meta:** uma venda até 03/11/2026. O gargalo é visita, não catálogo — mas em
 16/09 entrou uma segunda aposta com prazo próprio: **a Black Friday de
@@ -169,30 +194,25 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 |---|---|---|
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
 | Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | Ninguém. ⚠️ **O alerta de queda por e-mail/push foi recusado por ele em 19/09** — era o último item do plano e o único que não dependia do Google. **Não proponha de novo**: quem faz esse papel agora é o canal do WhatsApp, que entrega a queda na notificação sem infraestrutura nova |
-| Indexação ainda pendente | 🟢 **Zerada em 20/09/2026**: as 6 que faltavam foram pedidas de uma vez — comparativo do monitor, os **3 guias de Black Friday**, a **`/black-friday`** e a **ficha do A17**. ⚠️ O **comparativo do A17 não existe** (não está em `comparativos.json`); quando existir, pedir | Ninguém — é esperar o Google, semanas |
-| **SEO: as 4 frentes entregues** | 🟢 **20/09**: comparativo do **Galaxy A07** (contra G06, C73, G15, A16), **`/guia/meu-pc-aceita-ssd-nvme`**, **`/guia/vale-esperar-black-friday-eletrodomestico`** e **`/guia/vale-esperar-black-friday-fone-de-ouvido`**. Antes disso, `guias-relacionados` passou a cobrir toda categoria | **Dele**: pedir indexação das 4 páginas novas quando quiser acelerar (o laço que funciona está em "Ser achado") |
-| HR Vidros | 🟢 **Migrado em 18/09** para `hrvidros.afdesousa.com.br`, com 301 no antigo. Ver "A migração do HR Vidros" | 🟢 **Fechado**: o cliente foi avisado em 19/09. Só resta remover o `ALIAS hrvidros` desta zona por volta de mar/2027 |
-| Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria** (ver "O que reprova um candidato"), mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH` | Ninguém — só se ele discordar de alguma reprovação |
-| Lembrete dos links | 🟢 **Funcionou de verdade em 17/09**: o e-mail das 16h12 chegou, com os 12 candidatos e o bloco de URLs. A rotina está validada de ponta a ponta. ⚠️ **Mas o Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar o e-mail em texto puro (não feito) | **Dele**: dizer se quer que eu ajuste a rotina para texto puro |
-| Perguntas nas fichas | 🟡 **30 de 35 fichas têm, desde 19/09** (rotina das 4h): A36 verde, A07, A17 e os dois kits de potes ganharam perguntas nesse dia. **Faltam 5**: Projetor HY320, Placa-mãe Asus, SSD Externo SanDisk, Liquidificador Oster, Micro-ondas Electrolux | Ninguém — a rotina das 4h pega até 5 por dia sozinha |
-| Conferir no celular | 🟢 **O filtro do gráfico foi aprovado por ele em 19/09** ("ficou bom no celular"). 🟡 Faltam: os **3 comparativos novos**, a **tabela da `/black-friday`** (rola de lado), o **comparativo do monitor** (10 linhas de ficha — o maior até agora nos blocos do celular) e as **perguntas nas fichas** | **Dele**: olhar no aparelho. Daqui não dá — o `resize_window` não funciona |
-| Reddit `r/CelularesBR` | Conta `u/a_f_de_sousa` criada; **aquecimento completo — dias 1, 2 e 3 postados** (dia 3 em 12/09, na thread "Celular gamer de até 2.500"). A conta tem histórico: o rascunho 1 está liberado | **Dele**: o **primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md` ("Indicação com urgência", leva o comparativo e a declaração de afiliado). É a primeira vez que o site aparece no Reddit |
-| Guia `/guia/celulares-ate-1500` | No ar, medido, indexação pedida no Search Console | Ninguém — é esperar o Google, semanas |
+| Indexação | 🟢 **Em dia.** 6 páginas pedidas em 20/09 (comparativo do monitor, 3 guias de BF, `/black-friday`, ficha do A17), todas aceitas. ⚠️ O **comparativo do A17 não existe** (não está em `comparativos.json`); quando existir, pedir | Faltam as 4 páginas novas de 20/09 — está na seção de retomada |
+| SEO | 🟢 **As 4 frentes pedidas em 17/09 estão entregues.** O formato provado neste domínio é **guia de decisão** — foi o que indexou em ~1 dia e o que aparece em consulta real | Ninguém. O próximo guia é quando houver assunto, não por cota |
+| HR Vidros | 🟢 **Fechado.** Migrado em 18/09 para `hrvidros.afdesousa.com.br` com 301, e o cliente avisado em 19/09 | Só resta remover o `ALIAS hrvidros` da zona por volta de mar/2027 |
+| Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria**, mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH`. ⚠️ **Não esvazie essa lista no Meli** sem tirar os produtos daqui | Ninguém — só se ele discordar de alguma reprovação |
+| Lembrete dos links (16h12) | 🟢 Validado de ponta a ponta em 17/09. ⚠️ **O Gmail reescreve as URLs como `google.com/url?q=...` ao copiar** — coladas assim, o Linkbuilder não reconhece. Ou se copia só o texto, ou a rotina passa a mandar em texto puro (não feito) | **Dele**: dizer se quer o e-mail em texto puro |
+| Perguntas nas fichas | 🟢 **Zerado: as 36 fichas têm perguntas** (a rotina das 4h fechou o JBL em 22/09) | Ninguém — a rotina pega até 5 por dia sozinha |
 | Garimpo | 🔄 **Sem foco desde 11/09** — fila ordenada só por desconto. `MLB1055` segue na lista e rende celular | Ninguém. ⚠️ **Redmi 15C descartado em 16/09, por decisão dele**: tinha link gerado, mas a ficha da Xiaomi dá 403 e o anúncio não diz memória nem bateria. Não insista nele |
-| Comparativos | 🟢 **6 desde 17/09**: A36, G17, **Edge 60 Fusion** (contra A36, Poco X7, G86), **DualSense** (contra os dois GameSir), **Moto G06** (contra G17, C73, G15, A16) e **Monitor S3 27" 120 Hz** (contra o S3 24" do catálogo, o S3 de 100 Hz e o AOC 27B35HM) — o primeiro fora de celular e controle | **Dele**: pedir indexação do comparativo do monitor |
-| Black Friday | 🟢 **`/black-friday` + 3 guias por categoria no ar em 16/09** (ver seção própria). Em **17/09** a página passou a **linkar os 3 guias** e cada guia a linkar de volta pela trilha, e a tabela passou a dizer **quantos dias de preço cada produto tem** | **Dele**: pedir indexação das 4 quando quiser acelerar |
+| Comparativos | 🟢 **8**: A36, G17, Edge 60 Fusion, DualSense, Moto G06, Monitor S3 27", kit de potes e **Galaxy A07** (20/09) | Ninguém — comparativo é sempre pedido explícito dele |
+| Black Friday | 🟢 **`/black-friday` + 5 guias por categoria.** A página **acha os guias sozinha** pelo prefixo `vale-esperar-black-friday` do slug | Ninguém |
 | Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
-| A36: dois cadastros | 🟢 **Resolvido em 17/09.** O anúncio antigo (`MLB47115842`) saiu do ar e ficou `disponivel: false`; o novo, verde-limão (`MLB47111438`), entrou a R$ 1.544,32. O comparativo **mantém a URL antiga** (a que o Google conhece) e tira preço, botão e foto do anúncio vivo, via o campo `tambem` — ver "Quando o anúncio morre e a página fica" | Ninguém |
-| Catálogo | 🟢 **32 produtos desde 17/09** — entraram A36 verde, Galaxy A07, Projetor HY320, Placa-mãe Asus TUF B550M-PLUS, SSD Externo SanDisk 1TB, Liquidificador Oster e Micro-ondas Electrolux, todos com `analise` escrita à mão e ficha lida no anúncio. **Os 7 estão sem `perguntas`** | Ninguém — perguntas quando sobrar fôlego |
+| A36: dois cadastros | 🟢 **Resolvido, em duas etapas.** Em 17/09 o anúncio antigo (`MLB47115842`) saiu do ar e o verde-limão (`MLB47111438`) entrou; o comparativo **mantém a URL antiga** e tira preço e botão do anúncio vivo pelo campo `tambem`. Em **21/09 o antigo voltou a vender, a R$ 2.189** contra R$ 1.507 do verde — e foi marcado **`oculto: true`**, senão o robô o religaria e a vitrine mostraria o mesmo celular por dois preços | Ninguém |
+| Catálogo | 🟢 **36 produtos, 32 visíveis.** Ocultos: SSD SanDisk (virou importado), A36 preto (voltou mais caro) e o suporte de monitor | Ninguém — catálogo grande nunca foi meta |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
 | Instagram | 🔴 **O 1º post não saiu sozinho em 12/09: a notificação do Metricool nunca chegou no celular dele.** Veja "A notificação que não chega", abaixo. A arte e a legenda do G17 foram entregues pelo chat pra ele publicar à mão — **não confirmado se chegou a sair: pergunte** | **Dele**: publicar o G17 se ainda não saiu, e conferir a permissão de notificação do app do Metricool — senão o A36 (13/09, 10h) para no mesmo lugar. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
 | Pinterest (revisão humana) | Post publicado por ele em 11/09 na Business Community | Ninguém — esperar ~3 semanas. Sem resposta, o canal morreu |
-| Os 3 guias de decisão de celular (`quanto-de-memoria`, `tela-amoled-ou-lcd`, `quantos-anos-de-atualizacao`) | No ar desde 10–11/09, indexação pedida em 11/09, **todos indexados em ~1 dia** — e o de memória já aparece em consulta real (ver "O primeiro retrato de busca") | Ninguém |
+| Os 3 guias de decisão de celular (`quanto-de-memoria`, `tela-amoled-ou-lcd`, `quantos-anos-de-atualizacao`) | No ar desde 10–11/09, **todos indexados em ~1 dia** — e o de memória já aparece em consulta real (ver "O primeiro retrato de busca"). **É a prova de qual formato funciona aqui** | Ninguém |
 | Guia de faixa até R$ 2.500 | 🔴 **Parado**, e a razão importa | Decisão dele: ver abaixo |
-| Comparativo no celular | Blocos por critério no ar desde 11/09 (era tabela deslizante com a coluna fixa vazando por cima do texto) | **Dele**: conferir no aparelho |
-| Home no celular | Atalhos viraram tira que rola de lado em 11/09 | **Dele**: conferir no aparelho |
 
 🟢 **O guia até R$ 2.500 está destravado desde 16/09**: o Edge 60 Fusion
 entrou no catálogo com ficha oficial conferida e já é coluna de comparativo.
