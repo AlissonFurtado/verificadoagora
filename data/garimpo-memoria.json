@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-22",
+  "atualizado_em": "2026-09-23",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -726,6 +726,18 @@
       "sugerido_em": "2026-09-22",
       "familia": "Amazon Dot Echo Dot 5th Gen com assistente virtual Alexa 127/220V",
       "preco_sugerido": 409.42,
+      "vezes": 1
+    },
+    "MLB49653023": {
+      "sugerido_em": "2026-09-23",
+      "familia": "Headset gamer sem fio Redragon Zeus X H510 Pro H510-PRO com luz LED",
+      "preco_sugerido": 334,
+      "vezes": 1
+    },
+    "MLB56425611": {
+      "sugerido_em": "2026-09-23",
+      "familia": "Xiaomi POCO C85 Dual SIM",
+      "preco_sugerido": 1019,
       "vezes": 1
     }
   }

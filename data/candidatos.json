@@ -1,36 +1,36 @@
 {
-  "garimpado_em": "2026-09-22",
+  "garimpado_em": "2026-09-23",
   "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB27080589",
-      "familia": "Electrolux PE12",
+      "meli_id": "MLB49653023",
+      "familia": "Headset gamer sem fio Redragon Zeus X H510 Pro H510-PRO com luz LED",
       "tipo": "produto",
-      "nome": "Kit 2 Refil De Água Acqua Pure Electrolux Pe12a Pe12b Pe12g PC01X, Cor Marrom-claro",
-      "categoria": "Eletrodomésticos",
-      "preco": 170,
-      "preco_original": 260,
-      "desconto_percentual": 34,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_764049-MLA114244626520_082026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB27080589",
+      "nome": "Fones de ouvido para jogos sem fio Redragon H510-PRO H510-PRO pretos com luz LED",
+      "categoria": "Games",
+      "preco": 334,
+      "preco_original": 489.66,
+      "desconto_percentual": 31,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_685800-MLA95634757877_102025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB49653023",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-22"
+      "garimpado_em": "2026-09-23"
     },
     {
-      "meli_id": "MLB19795010",
-      "familia": "Amazon Dot Echo Dot 5th Gen com assistente virtual Alexa 127/220V",
+      "meli_id": "MLB56425611",
+      "familia": "Xiaomi POCO C85 Dual SIM",
       "tipo": "produto",
-      "nome": "Amazon Echo Dot, Echo Dot 5, Echo Dot 5a Geração, Alexa, Amazon Alexa, Assistente Virtual, Smart Speaker, Caixa de Som Inteligente, Wi-Fi, Bluetooth, Bivolt, 127/220V, Casa Inteligente, Controle voz",
-      "categoria": "Eletrônicos, Áudio e Vídeo",
-      "preco": 409.42,
-      "preco_original": 545.9,
-      "desconto_percentual": 25,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_806598-MLA116383652042_092026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB19795010",
+      "nome": "Xiaomi POCO C85 6GB+128GB Black",
+      "categoria": "Celulares e Smartphones",
+      "preco": 1019,
+      "preco_original": 1399,
+      "desconto_percentual": 27,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_634067-MLA99461655120_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB56425611",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-22"
+      "garimpado_em": "2026-09-23"
     }
   ]
 }
