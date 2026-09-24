@@ -28,6 +28,28 @@ export type Produto = {
    */
   oculto?: boolean;
   /**
+   * Produto que vale a pena mandar no canal do WhatsApp, mas não no site.
+   *
+   * ⚠️ **Existe porque o canal e o site vendem de jeitos diferentes.** O canal
+   * é oferta com preço e link: funciona com roupa, beleza, brinquedo de Natal.
+   * O site vive de guia e comparativo, que exigem **ficha de fabricante** — e
+   * roupa não tem. Somar essas categorias à vitrine seria mais URL fina num
+   * domínio onde o Google já recusa dezenas (a regra do *thin affiliate*).
+   *
+   * Decisão do Alisson em 24/09/2026, depois da pesquisa que mostrou a
+   * comissão do afiliado: **16% em calçados/roupas/bolsas, beleza e esportes
+   * contra 5% em eletrônicos, celulares e informática** — o catálogo inteiro
+   * estava na pior faixa.
+   *
+   * O que o campo faz: tira da vitrine, do sitemap e de toda página do site,
+   * **mantém na fila do canal**, e põe `noindex` na ficha — que continua no ar
+   * porque é o destino do link da mensagem. Nunca mandamos `meli.la` no canal.
+   *
+   * ⚠️ **Não é o mesmo que `oculto`**: oculto some do canal também. Um produto
+   * nunca deve ter os dois.
+   */
+  so_no_canal?: boolean;
+  /**
    * A curadoria já sabe que a oferta vencedora vem de fora do Brasil.
    *
    * ⚠️ **Existe porque o preço da API não conta a história toda.** Em
@@ -110,9 +132,17 @@ export function formatarData(iso: string): string {
   return `${dia}/${mes}/${ano}`;
 }
 
-/** Só o que pode ser mostrado: produto fora do ar some da página em vez de mentir. */
+/**
+ * Só o que pode ser mostrado: produto fora do ar some da página em vez de
+ * mentir. `so_no_canal` também fica de fora — é produto de outra categoria,
+ * que existe para a mensagem do WhatsApp e não para a vitrine.
+ *
+ * ⚠️ **É o ponto único de visibilidade do site**, e é de propósito: vitrine,
+ * sitemap, `/black-friday`, `/entrar`, `/instagram`, guias e comparativos
+ * passam todos por aqui. Filtro novo entra nesta linha, não espalhado.
+ */
 export function produtosVisiveis(produtos: Produto[]): Produto[] {
-  return produtos.filter((p) => p.disponivel && !p.oculto);
+  return produtos.filter((p) => p.disponivel && !p.oculto && !p.so_no_canal);
 }
 
 /**

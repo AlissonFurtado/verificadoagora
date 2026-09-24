@@ -1407,6 +1407,67 @@ clique vindo do site.
   Influenciadores) em todo conteúdo com link — "Link de afiliado" na legenda
   pode não bastar; CONAR costuma pedir `#publi`/"publicidade".
 
+## 🔴 A comissão do afiliado muda por categoria — e nós estávamos na pior
+
+Pesquisado em 24/09/2026, quando ele perguntou sobre ampliar o portfólio para
+roupas no fim de ano. **É o dado mais importante sobre dinheiro que este
+projeto tinha em falta:**
+
+| Categoria | Venda direta | Indireta |
+|---|---|---|
+| **Beleza · Calçados, roupas e bolsas · Esportes e fitness** | **16%** | 8% |
+| Maioria das categorias | 12% | 6% |
+| **Eletrônicos, celulares e informática** | **5%** | 2,5% |
+| Alimentos e bebidas | 0% | — |
+
+**O catálogo inteiro está na faixa de 5%.** Uma roupa de R$ 200 rende R$ 32;
+o Moto G17 de R$ 843 rende R$ 42 — quase o mesmo por um produto 4× mais caro.
+⚠️ **Não foi confirmado em qual faixa caem os eletrodomésticos** que já
+vendemos (micro-ondas, aspirador, cafeteira); a fonte que decide é o painel de
+afiliado da conta dele, não blog de terceiro. **Conferir antes de qualquer
+conta séria.**
+
+⚠️ **Venda indireta paga metade** e acontece quando a pessoa clica no link,
+navega e compra outra coisa em até 24h. Como o nosso `meli.la` cai no
+**perfil social** com um "Ir para produto" no meio do caminho, vale medir se
+as vendas estão entrando como direta ou indireta quando a primeira acontecer.
+
+**Sazonalidade, medida na Black Friday 2025:** por faturamento lideram TVs
+(R$ 868 mi), smartphones (R$ 791 mi) e geladeiras (R$ 557 mi) — eletrônicos
+cresceram 16,1% e passaram Moda. Por **número de pedidos** lideram moda e
+beleza/perfumaria (+16%). Dezembro é outro jogo: brinquedo atinge o pico do
+ano, com decoração, utensílio de cozinha e fone TWS. **Ticket alto domina o
+faturamento, ticket baixo domina o volume — e o percentual está do lado do
+ticket baixo.**
+
+### `so_no_canal`: o canal e o site deixaram de ter o mesmo catálogo
+
+**Decisão dele em 24/09/2026**, escolhida contra "abrir moda no site também".
+O campo `so_no_canal: true` em `src/lib/produtos.ts` marca produto que vale a
+mensagem do WhatsApp mas não a vitrine.
+
+- **Some** da vitrine, do sitemap e de toda página do site — o filtro está em
+  `produtosVisiveis()`, que é o **ponto único de visibilidade**: vitrine,
+  sitemap, `/black-friday`, `/entrar`, `/instagram`, guias e comparativos
+  passam por lá. Filtro novo entra nessa linha, nunca espalhado.
+- **Fica** na fila do canal (`canal.mjs` filtra por `oculto`, não por este).
+- **A ficha continua no ar, com `noindex`** — ela é o destino do link da
+  mensagem, e **nunca mandamos `meli.la` no canal**. O `noindex` existe porque
+  roupa não tem ficha de fabricante: sem ela não há comparativo nem guia, e
+  ficha solta de commodity é a URL fina que este domínio já é penalizado por
+  ter. Mesma razão do `noindex` da `/instagram`.
+- ⚠️ **`oculto` e `so_no_canal` são opostos e não se combinam** — oculto some
+  do canal também. O `canal.mjs` avisa se alguém marcar os dois.
+
+Medido no dev local com um produto de teste: 0 menções na vitrine, 0 no
+sitemap, ficha respondendo 200 com `noindex, follow`.
+
+⚠️ **O que ainda não foi feito:** o `data/garimpo.json` continua só com as
+categorias de tecnologia e casa. Para a fila trazer candidato de moda, beleza
+ou esporte, é lá que se acrescenta a categoria — e aí vale o mesmo cuidado de
+sempre com subcategoria (o topo de uma categoria guarda-chuva vem cheio de
+acessório barato).
+
 ## Dinheiro
 
 Três regras que não são de estilo:

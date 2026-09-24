@@ -60,6 +60,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: titulo,
     description: descricao,
     alternates: { canonical: caminhoDoProduto(produto) },
+    // ⚠️ Produto que só existe para o canal fica fora do índice, e a ficha
+    // continua no ar: ela é o destino do link da mensagem do WhatsApp — nunca
+    // mandamos `meli.la` para lá. Sem ficha de fabricante não há comparativo
+    // nem guia, e ficha solta de commodity é exatamente a URL fina que este
+    // domínio vem sendo penalizado por ter. Mesma razão do `noindex` da
+    // `/instagram`.
+    robots: produto.so_no_canal ? { index: false, follow: true } : undefined,
     openGraph: {
       title: titulo,
       description: descricao,

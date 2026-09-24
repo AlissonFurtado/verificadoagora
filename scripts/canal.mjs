@@ -187,7 +187,22 @@ function gerarSlug(p) {
 // conferência do lado; é inaceitável numa mensagem que grita "MENOR PREÇO QUE
 // JÁ VI" no celular de alguém. Em 22/09/2026 dois dos cinco da fila estavam
 // nessa situação (DualSense, parado desde 20/09, e o GameSir G7 SE).
+//
+// ⚠️ **`so_no_canal` passa por aqui de propósito** — é o produto que existe
+// para a mensagem e não para a vitrine (roupa, beleza, brinquedo), justamente
+// onde a comissão do afiliado é 16% em vez de 5%. Quem some do canal é
+// `oculto`, que é outra coisa.
 const conferidoEm = catalogo.metadata.ultima_atualizacao;
+
+const confusos = catalogo.produtos.filter((p) => p.oculto && p.so_no_canal);
+if (confusos.length) {
+  console.log(
+    `⚠️  ${confusos.length} produto(s) com 'oculto' E 'so_no_canal' — são opostos, ` +
+      `e o 'oculto' ganha (some do canal também): ` +
+      confusos.map((p) => p.nome).join(', '),
+    '\n',
+  );
+}
 
 const avaliados = catalogo.produtos
   .filter((p) => p.disponivel && !p.oculto && p.verificado_em === conferidoEm)
