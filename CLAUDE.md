@@ -74,7 +74,7 @@ verde) e o suporte de monitor.
 
 | O quê | De quem é |
 |---|---|
-| **Publicar os 7 que faltam no canal** — 2 ou 3 por dia, não todos de uma vez. Em 23/09 saíram A17 e Buds Core, as duas maiores quedas do dia | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
+| **Publicar os 6 que faltam estrear no canal** — 2 ou 3 por dia. Em 23/09 saíram A17 e Buds Core; em 24/09, G17, micro-ondas e projetor (27 no total) | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
 | 🔴 **OPPO A6t: achar o `meli_id` do anúncio vencedor.** A API responde 404 em `/products/MLB75697401/items` desde 15/09, então **o robô nunca confere este produto** — ele congelou e em 23/09 o site anunciava R$ 799,90 com a loja cobrando R$ 887,78. Corrigido à mão, mas **vai congelar de novo**: enquanto o id não mudar, ele fica fora da conferência diária | Minha |
 | 🟢 ~~Conferir os 5 suspeitos parados~~ — **feito em 23/09**, os cinco na página do Meli. Ver "O que a conferência de 23/09 ensinou" | — |
 | ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Em 23/09 não apareceu**: 5 páginas de produto abriram normalmente, com 2 s entre elas. A trava parece ser de volume por sessão, não um bloqueio que ficou. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
@@ -1818,8 +1818,20 @@ Chrome logado, pelo método do clipboard (abaixo).
   ficha, que mostra a data do lado, inaceitável numa mensagem que grita "MENOR
   PREÇO QUE JÁ VI" no celular de alguém. O filtro compara `verificado_em` com
   `metadata.ultima_atualizacao`.
-- ⚠️ **"Menor preço que já vi" exige 3 pontos de histórico.** Com um ou dois,
-  qualquer preço é o menor e o selo vira enfeite.
+- 🔴 **Corrigir preço à mão cria uma manchete falsa no dia seguinte** (trava
+  desde 24/09). O histórico grava o que o **site** mostra — e isso é certo —,
+  então um suspeito destravado à mão aparece como queda enorme na manhã
+  seguinte: em 24/09 o Aspirador gerou *"Caiu R$ 57,04 de um dia para o
+  outro"*, e a loja já cobrava R$ 199,90 **desde 22/09**. O sinal é o preço de
+  **anteontem ser igual ao de hoje**: o preço não foi a lugar nenhum, só a
+  nossa página tinha se perdido. ⚠️ **Isto é irmão do bug de 22/09, não o
+  mesmo**: lá o histórico gravava um preço que ninguém viu; aqui ele grava
+  certo e a *comparação* é que mente.
+- ⚠️ **"Menor preço que já vi" exige 3 pontos de histórico e que o preço tenha
+  se movido alguma vez.** Com um ou dois pontos, qualquer preço é o menor.
+  **E numa série plana todo dia é o menor**: em 24/09 o DualSense levaria o
+  selo com oito pontos idênticos de R$ 430. O selo só diz alguma coisa quando
+  existe um preço maior para comparar.
 - ⚠️ **"Está acima do menor preço" só aparece se a diferença for de 3% ou
   R$ 20.** O G17 gerou *"Já vi por R$ 887,77 — hoje está acima disso"* com **um
   centavo** de diferença; agora diz que está praticamente no menor preço.

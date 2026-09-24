@@ -46,8 +46,23 @@ function avaliar(produto) {
   const QUEDA_MINIMA_PORCENTO = 0.03;
   const QUEDA_MINIMA_REAIS = 15;
   const queda = anterior !== null ? anterior - produto.preco_atual : 0;
+
+  // 🔴 **Zigue-zague não é queda: é correção manual voltando ao lugar.**
+  // Em 24/09/2026 o Aspirador Electrolux gerou "Caiu R$ 57,04 de um dia para o
+  // outro" — e a loja já cobrava R$ 199,90 desde 22/09. O que subiu e desceu
+  // foi o preço que **o site mostrava**: ele ficou travado em R$ 256,94
+  // enquanto o suspeito esperava revisão, e voltou ao valor certo quando
+  // alguém aplicou à mão. Como o histórico grava o que o site mostra (e é
+  // certo que grave), a correção vira uma "queda" no dia seguinte.
+  //
+  // O sinal é o preço de **anteontem** ser igual ao de hoje: o preço não foi
+  // a lugar nenhum, só a nossa página é que tinha se perdido.
+  const anteontem = pontos.length > 2 ? pontos[pontos.length - 3].preco : null;
+  const voltouAoQueEra = anteontem !== null && Math.abs(anteontem - produto.preco_atual) < 0.01;
+
   const caiuHoje =
     anterior !== null &&
+    !voltouAoQueEra &&
     queda / anterior >= QUEDA_MINIMA_PORCENTO &&
     queda >= QUEDA_MINIMA_REAIS;
   // ⚠️ **"Menor preço que já vi" exige ter visto alguma coisa.** Com um ou dois
@@ -57,7 +72,15 @@ function avaliar(produto) {
   // que o "menor preço" da mensagem. ⚠️ Produto recém-cadastrado só entra no
   // histórico na primeira rodada do robô, então o preço com que ele estreou na
   // vitrine não está lá.
-  const noMenor = menor !== null && pontos.length >= 3 && produto.preco_atual <= menor.preco;
+  //
+  // 🔴 **E exige que o preço tenha se movido alguma vez.** Em 24/09/2026 o
+  // DualSense levaria "MENOR PREÇO QUE JÁ VI — acompanho há 8 dias" com os
+  // oito pontos idênticos (R$ 430). A frase é verdadeira e vazia: numa série
+  // plana todo dia é o menor. O selo só significa alguma coisa quando existe
+  // um preço maior para comparar.
+  const variou = new Set(pontos.map((p) => p.preco)).size > 1;
+  const noMenor =
+    menor !== null && pontos.length >= 3 && variou && produto.preco_atual <= menor.preco;
 
   const jaFoi = publicados.itens[produto.meli_id];
 
