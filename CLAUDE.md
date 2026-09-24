@@ -55,27 +55,29 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 22/09/2026
+## Onde paramos — 23/09/2026
 
 🟢 **O canal do WhatsApp é a frente principal.**
-`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **25 dos 32 produtos
-publicados** entre 19 e 22/09, e o canal saiu de **1 para 3 seguidores**. A
-conta que decidiu isso: canal com 200–300 pessoas engajadas rende o que o site
-renderia com 3.000–6.000 visitas/mês, e o site tem **0 cliques** de busca.
+`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **26 dos 33 produtos
+publicados** entre 19 e 23/09. ⚠️ **O canal está com 2 seguidores** (o
+`CLAUDE.md` dizia 3 — conferido no topo do canal em 23/09; alguém saiu). A
+conta que decidiu a aposta: canal com 200–300 pessoas engajadas rende o que o
+site renderia com 3.000–6.000 visitas/mês, e o site tem **0 cliques** de busca.
 ⚠️ **O número que importa é o de seguidores**, não o de produtos publicados.
-Com 3 seguidores, publicar mais não muda nada — **divulgar muda.**
+Com 2 seguidores, publicar mais não muda nada — **divulgar muda.**
 
-**O catálogo tem 36 produtos (32 visíveis).** Dois estão ocultos de propósito:
-o SSD SanDisk (oferta virou importada) e o A36 preto (voltou mais caro que o
-verde); o terceiro é o suporte de monitor.
+**O catálogo tem 36 produtos (33 visíveis).** Três estão ocultos de propósito:
+o SSD SanDisk (oferta virou importada), o A36 preto (voltou mais caro que o
+verde) e o suporte de monitor.
 
 ### O que fazer na próxima sessão, em ordem
 
 | O quê | De quem é |
 |---|---|
-| **Publicar os 7 que faltam no canal** — 2 ou 3 por dia, não todos de uma vez | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
-| 🔴 **Conferir os 4 suspeitos parados** — Aspirador Electrolux, GameSir G7 SE, DualSense e A36 verde estão com preço congelado (`verificado_em` atrasado) e **fora do canal** por isso | Minha, **mas só quando o Meli deixar** (ver CAPTCHA abaixo) |
-| 🔴 **CAPTCHA do Mercado Livre** — em 21/09 o Meli passou a responder `captcha/wall/logged` depois de ~15 conferências de preço numa sessão. **Não resolvo CAPTCHA.** Pode ter passado sozinho; teste com **uma** navegação antes de planejar qualquer conferência em série | Minha para testar; **dele** se precisar resolver o desafio |
+| **Publicar os 7 que faltam no canal** — 2 ou 3 por dia, não todos de uma vez. Em 23/09 saíram A17 e Buds Core, as duas maiores quedas do dia | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
+| 🔴 **OPPO A6t: achar o `meli_id` do anúncio vencedor.** A API responde 404 em `/products/MLB75697401/items` desde 15/09, então **o robô nunca confere este produto** — ele congelou e em 23/09 o site anunciava R$ 799,90 com a loja cobrando R$ 887,78. Corrigido à mão, mas **vai congelar de novo**: enquanto o id não mudar, ele fica fora da conferência diária | Minha |
+| 🟢 ~~Conferir os 5 suspeitos parados~~ — **feito em 23/09**, os cinco na página do Meli. Ver "O que a conferência de 23/09 ensinou" | — |
+| ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Em 23/09 não apareceu**: 5 páginas de produto abriram normalmente, com 2 s entre elas. A trava parece ser de volume por sessão, não um bloqueio que ficou. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
 | **Decidir o limiar do "CAIU HOJE"** — hoje é `3% ou R$ 20`, e o `ou` deixa passar manchete de R$ 6. Sugestão: `3% e pelo menos R$ 15`, ou `5% ou R$ 20`. Enquanto não mudar, produto barato gera manchete boba | **Decisão dele** |
 | **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
 | **Reddit: o primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md`. A conta está aquecida desde 12/09 | **Dele** |
@@ -97,6 +99,40 @@ verde); o terceiro é o suporte de monitor.
   preço ou histórico**.
 - 🟢 **Quatro travas novas no canal**, todas de casos reais. Ver "A fila do
   canal".
+
+### O que a conferência de 23/09 ensinou
+
+Os 5 travados foram conferidos um a um na página navegada e aplicados à mão
+na `main` (o PR do dia seria mergeado em cima de um catálogo velho, a regra de
+sempre). O que ficou de regra:
+
+- 🟢 **A trava `ehImportado()` pegou o primeiro caso real: o GameSir G7 SE.**
+  Ela nasceu do SanDisk em 19/09 sem poder ser testada contra a API, e
+  funcionou — a página confirmou *"Envio de EUA"*, *"o produto vem do exterior
+  e será importado"* e *"este preço não inclui impostos de importação"*.
+  ⚠️ **Decisão dele, diferente da do SanDisk: manter na vitrine com
+  `importado: true`**, e a `analise` ganhou um parágrafo final avisando da
+  importação — o card não tem onde dizer isso, então quem só vê a vitrine não
+  fica sabendo. Se a dúvida voltar, é este o precedente: ocultar não é
+  obrigatório, avisar é.
+- 🔴 **Suspeito abaixo de 15% quase sempre é importado, não variação.** Dos 4
+  do dia, dois (GameSir +2,4%, DualSense −0,7%) não bateriam no limiar de
+  variação — só o caminho `virouImportado` explica. **Variação pequena num
+  suspeito é sinal de troca de origem do vendedor, e a página resolve em uma
+  navegação.** (O DualSense deu falso positivo: a página não tinha pista
+  nenhuma de importação e o preço estava certo. Se ele repetir todo dia, é em
+  `ehImportado` que se afina.)
+- ⚠️ **Preço da API × preço da página divergem em centavos a reais**, e isso é
+  normal (GameSir: API R$ 256,90, página R$ 269,05; DualSense: R$ 428,59 contra
+  R$ 430). **Aplique o da API onde as duas veem a mesma oferta** — o robô
+  reescreveria o outro na manhã seguinte. A exceção é produto que a API não
+  enxerga, como o OPPO.
+- 🔴 **`git fetch` antes de commitar, sempre — e confira o log.** Nesta sessão
+  o primeiro fetch devolveu um `origin/main` velho (sem a rodada do robô do
+  próprio dia) e o commit saiu em cima dele. **O sintoma é o mesmo do container
+  da rotina das 8h**: `git log --oneline -3 origin/main` contra o que este
+  arquivo diz que já está no ar. Refazer o fetch e reaplicar resolveu sem
+  perda, porque as mudanças eram pontuais e estavam num script.
 
 ### 🔴 O preço que está certo e engana: oferta importada (19/09/2026)
 
@@ -206,7 +242,7 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 | Campanhas do Meli | 🔍 Conferido em 16/09: **"Campanhas exclusivas" e "Campanhas com incentivos" estão vazias**. As exclusivas são por convite (dependem de recomendar produto e **fazer vídeo**); nas de incentivo, só se participa de **uma campanha de todas as categorias por período** | Ninguém — reconferir em outubro, antes da BF |
 | Gráfico de preço | 🟢 **Filtro Tudo/7/30/60/90 desde 16/09** (`produto/[slug]/grafico-precos.tsx`, client component). Período sem histórico fica desligado e liga sozinho | Ninguém |
 | A36: dois cadastros | 🟢 **Resolvido, em duas etapas.** Em 17/09 o anúncio antigo (`MLB47115842`) saiu do ar e o verde-limão (`MLB47111438`) entrou; o comparativo **mantém a URL antiga** e tira preço e botão do anúncio vivo pelo campo `tambem`. Em **21/09 o antigo voltou a vender, a R$ 2.189** contra R$ 1.507 do verde — e foi marcado **`oculto: true`**, senão o robô o religaria e a vitrine mostraria o mesmo celular por dois preços | Ninguém |
-| Catálogo | 🟢 **36 produtos, 32 visíveis.** Ocultos: SSD SanDisk (virou importado), A36 preto (voltou mais caro) e o suporte de monitor | Ninguém — catálogo grande nunca foi meta |
+| Catálogo | 🟢 **36 produtos, 33 visíveis.** Ocultos: SSD SanDisk (virou importado), A36 preto (voltou mais caro) e o suporte de monitor. O GameSir ficou visível com `importado: true` (23/09) | Ninguém — catálogo grande nunca foi meta |
 | Instagram (formato) | 🔴 **15/09: ele não está feliz** — "perfil feio, fotos não viralizam, alcance melhor se for reels". **Nada agendado depois de 13/09**; `autoPublish: true` foi aceito por ele, mas a fila de 12 posts em foto **não** foi agendada por causa disso | **Decisão dele**: como fazer reels (ver seção Instagram). Não há `ffmpeg` nem `moviepy` na máquina |
 | Pinterest | 🔴 **Apelação recusada em 11/09**. Revisão humana pedida no mesmo dia | Ninguém — ver a linha abaixo |
 | Instagram | 🔴 **O 1º post não saiu sozinho em 12/09: a notificação do Metricool nunca chegou no celular dele.** Veja "A notificação que não chega", abaixo. A arte e a legenda do G17 foram entregues pelo chat pra ele publicar à mão — **não confirmado se chegou a sair: pergunte** | **Dele**: publicar o G17 se ainda não saiu, e conferir a permissão de notificação do app do Metricool — senão o A36 (13/09, 10h) para no mesmo lugar. ⚠️ **A trava do 3º celular caiu com a reabertura do escopo**: há 14 legendas prontas de todas as categorias, então o feed pode seguir sem aparelho novo — decidir com ele se agenda a partir do dia 3 |
