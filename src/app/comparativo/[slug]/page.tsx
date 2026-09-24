@@ -5,7 +5,7 @@ import { notFound } from 'next/navigation';
 import { lerCatalogo, lerComparativos, lerGuias } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
 import { acharComparativo, comTextoDeHoje, type Comparativo } from '@/lib/comparativos';
-import { acharPorSlug, caminhoDoComparativo, gerarSlug } from '@/lib/slug';
+import { acharPorSlug, caminhoDoComparativo, caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { descreverConferencia } from '@/lib/relogio';
 import { SeloDeConferencia } from '../../selo-de-conferencia';
 import { GuiasRelacionados } from '../../guias-relacionados';
@@ -93,11 +93,41 @@ function DadosEstruturados({
   comparativo,
   oferta,
   url,
+  porMeliId,
+  base,
 }: {
   comparativo: Comparativo;
   oferta: Produto;
   url: string;
+  porMeliId: Map<string, Produto>;
+  base: string;
 }) {
+  // ⚠️ Coluna que não é nossa entra como `Thing`, não como `Product`.
+  // Até 23/09/2026 **toda** coluna virava `Product` sem `offers`, e o Search
+  // Console acusou "Snippet do produto: 5 itens inválidos detectados" no
+  // comparativo do A07 — produto sem preço não é produto pro Google. É o mesmo
+  // defeito que os guias tinham e que foi corrigido em 16/09: a correção não
+  // tinha alcançado esta página. Preço a gente só tem de quem está no
+  // catálogo, e inventar o dos outros é o que este site existe pra não fazer.
+  const itemDaColuna = (coluna: { nome: string; meli_id: string }) => {
+    const produto = coluna.meli_id ? porMeliId.get(coluna.meli_id) : undefined;
+    if (!produto) return { '@type': 'Thing', name: coluna.nome };
+    return {
+      '@type': 'Product',
+      name: coluna.nome,
+      url: `${base}${caminhoDoProduto(produto)}`,
+      offers: {
+        '@type': 'Offer',
+        price: produto.preco_atual,
+        priceCurrency: 'BRL',
+        availability: produto.disponivel
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/OutOfStock',
+        url: produto.link_afiliado,
+      },
+    };
+  };
+
   const dados = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -108,7 +138,7 @@ function DadosEstruturados({
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     author: { '@type': 'Organization', name: 'Verificado Agora' },
     publisher: { '@type': 'Organization', name: 'A F DE SOUSA' },
-    about: comparativo.colunas.map((coluna) => ({ '@type': 'Product', name: coluna.nome })),
+    about: comparativo.colunas.map(itemDaColuna),
     citation: comparativo.fontes.map((f) => ({ '@type': 'CreativeWork', name: f.titulo, url: f.url })),
   };
 
@@ -166,6 +196,15 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
       .filter((par): par is readonly [string, Produto] => Boolean(par[1])),
   );
 
+  /** O mesmo mapa, endereçado por `meli_id`, que é como os dados estruturados
+   *  pedem. Sai de `noCatalogo` de propósito: assim a regra da oferta
+   *  substituta vale também no JSON-LD, e não há duas listas para divergir. */
+  const porMeliId = new Map(
+    comparativo.colunas
+      .map((c) => [c.meli_id, noCatalogo.get(c.chave)] as const)
+      .filter((par): par is readonly [string, Produto] => Boolean(par[0] && par[1])),
+  );
+
   /**
    * A ficha inteira numa lista só — a linha de preço na frente das linhas do
    * arquivo do comparativo.
@@ -214,6 +253,8 @@ export default function PaginaDoComparativo({ params }: { params: { slug: string
         comparativo={comparativo}
         oferta={oferta}
         url={`${base}${caminhoDoComparativo(produto)}`}
+        porMeliId={porMeliId}
+        base={base}
       />
 
       <div className="mx-auto max-w-5xl px-4 py-8">
