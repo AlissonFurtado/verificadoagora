@@ -78,11 +78,12 @@ verde) e o suporte de monitor.
 | 🔴 **OPPO A6t: achar o `meli_id` do anúncio vencedor.** A API responde 404 em `/products/MLB75697401/items` desde 15/09, então **o robô nunca confere este produto** — ele congelou e em 23/09 o site anunciava R$ 799,90 com a loja cobrando R$ 887,78. Corrigido à mão, mas **vai congelar de novo**: enquanto o id não mudar, ele fica fora da conferência diária | Minha |
 | 🟢 ~~Conferir os 5 suspeitos parados~~ — **feito em 23/09**, os cinco na página do Meli. Ver "O que a conferência de 23/09 ensinou" | — |
 | ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Em 23/09 não apareceu**: 5 páginas de produto abriram normalmente, com 2 s entre elas. A trava parece ser de volume por sessão, não um bloqueio que ficou. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
-| **Decidir o limiar do "CAIU HOJE"** — hoje é `3% ou R$ 20`, e o `ou` deixa passar manchete de R$ 6. Sugestão: `3% e pelo menos R$ 15`, ou `5% ou R$ 20`. Enquanto não mudar, produto barato gera manchete boba | **Decisão dele** |
+| 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999, os dois conferidos em 23/09. Ele foi ocultado em 21/09 justamente por estar **mais caro**; a situação inverteu e agora a vitrine esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
+| ~~Decidir o limiar do "CAIU HOJE"~~ | 🟢 **Decidido em 23/09: `3% E pelo menos R$ 15`**, e já está no `canal.mjs` |
 | **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
 | **Reddit: o primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md`. A conta está aquecida desde 12/09 | **Dele** |
 | **Conferir no celular** — 3 comparativos novos, tabela da `/black-friday`, comparativo do monitor, e as 4 páginas novas de 20/09 | **Dele**. Daqui não dá: o `resize_window` não funciona |
-| **Pedir indexação das 4 páginas de 20/09** — comparativo do A07, `/guia/meu-pc-aceita-ssd-nvme` e os 2 guias de BF novos | De quem pegar primeiro. O laço que funciona está em "Ser achado" |
+| ~~Pedir indexação das 4 páginas de 20/09~~ | 🟢 **Feito em 23/09.** Duas já estavam indexadas (comparativo do A07 e o guia de eletrodoméstico) e **não se pede de novo**; as outras duas foram solicitadas |
 | Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar". Quem faz esse papel é a descrição do canal |
 | Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. O painel classifica errado sozinho, e ele também tentou. A URL está declarada, que é o que a cláusula 1.3 exige |
 
@@ -127,6 +128,30 @@ sempre). O que ficou de regra:
   R$ 430). **Aplique o da API onde as duas veem a mesma oferta** — o robô
   reescreveria o outro na manhã seguinte. A exceção é produto que a API não
   enxerga, como o OPPO.
+- 🔴 **O bug do snippet de produto não tinha sido corrigido no comparativo.**
+  Em 16/09 o guia foi consertado (aparelho de fora vira `Thing`, não `Product`
+  sem `offers`) e **a mesma linha continuou errada em
+  `comparativo/[slug]/page.tsx`**: o `about` transformava *toda* coluna em
+  `Product` sem preço, inclusive as do próprio catálogo. O Search Console
+  acusou **"Snippet do produto: 5 itens inválidos detectados"** na inspeção do
+  comparativo do A07 — somando os 8 comparativos eram ~31 entidades inválidas.
+  Corrigido em 23/09, medido com o dev local em todos eles: zero.
+  ⚠️ **A lição é sobre a correção, não sobre o schema:** quando um defeito
+  desses for corrigido num tipo de página, **procure o mesmo `'@type':
+  'Product'` nas outras** — `grep` resolve em segundos e foi o que faltou.
+- ⚠️ **O estado de indexação se lê antes de pedir.** Das 4 páginas de 20/09,
+  duas já estavam indexadas — e o próprio Google diz que reenviar não muda a
+  prioridade. **Inspecione, leia "Indexação das páginas", e só peça para
+  "Rastreada, mas não indexada" ou "Detectada".**
+- ⚠️ **O campo de inspeção não tem `placeholder`, e sim `aria-label`**
+  ("Inspecionar qualquer URL de verificadoagora.com.br"). Procurar por
+  `placeholder` devolve "campo não achado". O resto do laço de 20/09 continua
+  valendo, com uma correção: **`Escape` dispensa o balão** e o teste em tempo
+  real leva **~1 minuto**, não 9 segundos — e durante ele `Indexação
+  solicitada` some e volta, então confirme por screenshot, não por regex.
+- 🟢 **`verificadoagora.vercel.app` responde 200 e aparece no Search Console
+  como "Página de referência"** — mas declara `canonical` para o domínio
+  próprio e aponta o sitemap de lá. **Não é conteúdo duplicado; não mexa.**
 - 🔴 **`git fetch` antes de commitar, sempre — e confira o log.** Nesta sessão
   o primeiro fetch devolveu um `origin/main` velho (sem a rodada do robô do
   próprio dia) e o commit saiu em cima dele. **O sintoma é o mesmo do container
@@ -230,7 +255,7 @@ se estiver com o Chrome logado, dá para eu gerar e publicar na mesma sessão.
 |---|---|---|
 | Conversão (18/09) | 🟢 **Duas melhorias no ar, vindas de pesquisa**: a **barra fixa de oferta no celular** (`barra-de-oferta.tsx`, aparece só quando o botão principal sai da tela — estudo Contentsquare 2026, 58 M de sessões: +31%) e **"A escolha em 5 segundos"** no topo dos 7 comparativos (campo `escolha_rapida`). Os cliques entram separados na medição, como `barra-fixa` e `escolha-rapida` | Ninguém — é medir daqui a duas semanas no painel do Meli |
 | Plano de retenção | 🟢 **Os três primeiros itens entraram em 18/09**: (a) **histórico em números** no topo da ficha (`historico-em-numeros.tsx` + `resumoDoHistorico`); (b) **zebra** na tabela do comparativo no desktop; (c) **`/quedas-de-preco`**, no sitemap e como primeiro atalho da home. **Indexação de `/quedas-de-preco` e do comparativo dos potes pedida em 18/09** e aceita | Ninguém. ⚠️ **O alerta de queda por e-mail/push foi recusado por ele em 19/09** — era o último item do plano e o único que não dependia do Google. **Não proponha de novo**: quem faz esse papel agora é o canal do WhatsApp, que entrega a queda na notificação sem infraestrutura nova |
-| Indexação | 🟢 **Em dia.** 6 páginas pedidas em 20/09 (comparativo do monitor, 3 guias de BF, `/black-friday`, ficha do A17), todas aceitas. ⚠️ O **comparativo do A17 não existe** (não está em `comparativos.json`); quando existir, pedir | Faltam as 4 páginas novas de 20/09 — está na seção de retomada |
+| Indexação | 🟢 **29 páginas indexadas em 23/09** — eram 12 em 16/09 e 1 em 10/09. 38 não indexadas. As 4 de 20/09 foram resolvidas em 23/09 (2 já estavam dentro, 2 pedidas). ⚠️ O **comparativo do A17 não existe** (não está em `comparativos.json`); quando existir, pedir | Ninguém — reconferir em ~1 semana se as 2 pedidas entraram |
 | SEO | 🟢 **As 4 frentes pedidas em 17/09 estão entregues.** O formato provado neste domínio é **guia de decisão** — foi o que indexou em ~1 dia e o que aparece em consulta real | Ninguém. O próximo guia é quando houver assunto, não por cota |
 | HR Vidros | 🟢 **Fechado.** Migrado em 18/09 para `hrvidros.afdesousa.com.br` com 301, e o cliente avisado em 19/09 | Só resta remover o `ALIAS hrvidros` da zona por volta de mar/2027 |
 | Links gerados e não publicados | 5 dos 12 de 17/09 foram **reprovados na curadoria**, mas os `meli.la` existem e os produtos estão na lista de recomendações do perfil: câmera `1tXvPsp`, mochila `1ehDCm4`, liquidificador Mondial `1go5SQY`, SSD Macrovip `32AwToA`, suporte de monitor `2u7P9CH`. ⚠️ **Não esvazie essa lista no Meli** sem tirar os produtos daqui | Ninguém — só se ele discordar de alguma reprovação |
