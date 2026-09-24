@@ -1,36 +1,21 @@
 {
-  "garimpado_em": "2026-09-23",
-  "total": 2,
+  "garimpado_em": "2026-09-24",
+  "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB49653023",
-      "familia": "Headset gamer sem fio Redragon Zeus X H510 Pro H510-PRO com luz LED",
+      "meli_id": "MLB51857731",
+      "familia": "Microfones Hollyland Lark A1 Mini USB-C Condensador Omnidirecional",
       "tipo": "produto",
-      "nome": "Fones de ouvido para jogos sem fio Redragon H510-PRO H510-PRO pretos com luz LED",
-      "categoria": "Games",
-      "preco": 334,
-      "preco_original": 489.66,
-      "desconto_percentual": 31,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_685800-MLA95634757877_102025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB49653023",
+      "nome": "Microfone Lark A1 Hollyland Mini Usb-c Preto",
+      "categoria": "Câmeras e Acessórios",
+      "preco": 292.94,
+      "preco_original": 409.9,
+      "desconto_percentual": 28,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_836376-MLA99418800236_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB51857731",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-23"
-    },
-    {
-      "meli_id": "MLB56425611",
-      "familia": "Xiaomi POCO C85 Dual SIM",
-      "tipo": "produto",
-      "nome": "Xiaomi POCO C85 6GB+128GB Black",
-      "categoria": "Celulares e Smartphones",
-      "preco": 1019,
-      "preco_original": 1399,
-      "desconto_percentual": 27,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_634067-MLA99461655120_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB56425611",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-09-23"
+      "garimpado_em": "2026-09-24"
     }
   ]
 }
