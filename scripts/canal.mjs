@@ -34,10 +34,22 @@ function avaliar(produto) {
   const menor = pontos.length ? pontos.reduce((a, b) => (b.preco < a.preco ? b : a)) : null;
   // ⚠️ **Queda de R$ 6 não é notícia.** A primeira versão anunciava "CAIU
   // HOJE" para 2% de variação — e canal que grita por qualquer centavo ensina
-  // o seguidor a ignorar. Só vira manchete a partir de 3% ou R$ 20.
+  // o seguidor a ignorar.
+  //
+  // 🔴 O limiar era `3% ou R$ 20`, e o `ou` deixava passar exatamente o que a
+  // regra proíbe: o liquidificador gerou "Caiu R$ 6,00" (3,17% sobre R$ 189)
+  // em 21/09, o GameSir "Caiu R$ 7,99" (3,1%) no mesmo dia, e o JBL "Caiu
+  // R$ 10,91" (3,1%) em 23/09 — as três puladas à mão. Desde 23/09/2026 são
+  // **as duas condições juntas: 3% E pelo menos R$ 15** (decisão do Alisson).
+  // Percentual sozinho não protege produto barato; valor sozinho não protege
+  // produto caro.
+  const QUEDA_MINIMA_PORCENTO = 0.03;
+  const QUEDA_MINIMA_REAIS = 15;
   const queda = anterior !== null ? anterior - produto.preco_atual : 0;
   const caiuHoje =
-    anterior !== null && (queda / anterior >= 0.03 || queda >= 20);
+    anterior !== null &&
+    queda / anterior >= QUEDA_MINIMA_PORCENTO &&
+    queda >= QUEDA_MINIMA_REAIS;
   // ⚠️ **"Menor preço que já vi" exige ter visto alguma coisa.** Com um ou dois
   // pontos no histórico qualquer preço é o menor, e o selo vira enfeite: em
   // 22/09/2026 o JBL tinha exatamente dois pontos iguais e levaria a manchete
@@ -114,7 +126,13 @@ function escrever({ produto, pontos, anterior, menor, caiuHoje, noMenor, estreia
     // ⚠️ Só vale dizer "está acima" quando a diferença significa alguma coisa.
     // Em 22/09/2026 o G17 gerou "Já vi por R$ 887,77 — hoje está acima disso"
     // com **um centavo** de diferença: a frase é verdadeira e ridícula, e
-    // desanima a compra por nada. Mesma régua da queda: 3% ou R$ 20.
+    // desanima a compra por nada. Régua: 3% **ou** R$ 20.
+    //
+    // ⚠️ **A assimetria com o limiar da queda é de propósito, não esquecimento.**
+    // A manchete "CAIU HOJE" exige as duas condições juntas (3% E R$ 15) porque
+    // ela grita no celular de alguém; este aviso mantém o `ou` porque erra para
+    // o lado seguro — avisar demais que o preço já esteve menor custa uma venda,
+    // esconder isso custa a confiança, que é o único ativo do canal.
     const acima = p.preco_atual - menor.preco;
     if (acima / menor.preco >= 0.03 || acima >= 20) {
       linhas.push(`Já vi por ${real(menor.preco)} em ${dia(menor.dia)} — hoje está acima disso.`, '');
