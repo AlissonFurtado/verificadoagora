@@ -88,12 +88,25 @@ async function main(): Promise<void> {
       continue;
     }
 
+    // 🔴 **O id que a API consulta pode não ser o id da nossa URL.** O Mercado
+    // Livre funde e aposenta produto de catálogo: em 24/09/2026 descobrimos
+    // que `/p/MLB75697401` (o OPPO A6t) **redireciona** para `MLB75697418`, e
+    // era por isso que a API respondia 404 em `/products/{id}/items` desde
+    // 15/09 — o produto estava à venda o tempo todo, e o preço do site
+    // congelou R$ 88 abaixo do que a loja cobrava.
+    //
+    // Trocar o `meli_id` resolveria a conferência e quebraria duas coisas: o
+    // slug da ficha (que leva o id no fim justamente para ser estável) e a
+    // chave do histórico. Por isso `confere_por` é um campo à parte: a
+    // identidade continua sendo `meli_id`, só a consulta muda.
+    const idDeConsulta = produto.confere_por || produto.meli_id;
+
     let dados;
     try {
-      dados = await buscarProduto(produto.meli_id, accessToken);
+      dados = await buscarProduto(idDeConsulta, accessToken);
     } catch (err) {
       const erro = err instanceof Error ? err.message : String(err);
-      console.error('[conferir]', produto.meli_id, erro);
+      console.error('[conferir]', idDeConsulta, erro);
 
       // 404 é produto que deixou de existir: desliga. Qualquer outro erro pode
       // ser instabilidade da API — nesse caso não se mexe em nada.

@@ -75,7 +75,7 @@ verde) e o suporte de monitor.
 | O quê | De quem é |
 |---|---|
 | **Publicar os 6 que faltam estrear no canal** — 2 ou 3 por dia. Em 23/09 saíram A17 e Buds Core; em 24/09, G17, micro-ondas e projetor (27 no total) | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
-| 🔴 **OPPO A6t: achar o `meli_id` do anúncio vencedor.** A API responde 404 em `/products/MLB75697401/items` desde 15/09, então **o robô nunca confere este produto** — ele congelou e em 23/09 o site anunciava R$ 799,90 com a loja cobrando R$ 887,78. Corrigido à mão, mas **vai congelar de novo**: enquanto o id não mudar, ele fica fora da conferência diária | Minha |
+| 🟢 ~~OPPO A6t: o `meli_id` morto~~ — **resolvido em 24/09.** ⚠️ **Confira amanhã o preço que o robô aplicar nele:** em 15/09 a API deu R$ 799,90, que é o valor do **Pix** de hoje (a página cobra R$ 887,78 no cartão). Se ele voltar para ~R$ 799, a API está devolvendo preço de Pix neste produto e o site passa a mentir barato de novo | Minha, amanhã |
 | 🟢 ~~Conferir os 5 suspeitos parados~~ — **feito em 23/09**, os cinco na página do Meli. Ver "O que a conferência de 23/09 ensinou" | — |
 | ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Em 23/09 não apareceu**: 5 páginas de produto abriram normalmente, com 2 s entre elas. A trava parece ser de volume por sessão, não um bloqueio que ficou. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
 | 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999, os dois conferidos em 23/09. Ele foi ocultado em 21/09 justamente por estar **mais caro**; a situação inverteu e agora a vitrine esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
@@ -841,6 +841,31 @@ As travas, que são o motivo de ele poder commitar sozinho:
 | 404 em `/products/{id}/items` | "sem oferta ativa" — a página existe, ninguém vende |
 | API instável ou erro | **Não mexe em nada** e a Action fica vermelha |
 | Sem `meli_id` | Não confere, avisa no relatório |
+
+### 🔴 404 permanente: o produto de catálogo virou redirect (24/09/2026)
+
+**O terceiro sentido possível de um 404, e o mais caro até agora.** O OPPO A6t
+respondia 404 em `/products/MLB75697401/items` **desde 15/09** — nove dias sem
+conferência, com o site anunciando R$ 799,90 enquanto a loja cobrava
+R$ 887,78. Não era API instável nem oferta encerrada: **`/p/MLB75697401`
+redireciona para `/p/MLB75697418`**, porque o Meli funde e aposenta produto de
+catálogo. O produto esteve à venda o tempo todo.
+
+**Como distinguir dos outros dois 404:** abra `/p/{meli_id}` no navegador e
+olhe o `canonical`. Se ele mostra **outro id**, é fusão de catálogo; se a
+página diz "produto indisponível, escolha outra variação", a oferta acabou
+mesmo; se a rodada seguinte traz o produto de volta, era instabilidade.
+
+**A correção é o campo `confere_por`** (`src/lib/produtos.ts`), não trocar o
+`meli_id`: a identidade continua sendo o `meli_id` — que sustenta o **slug da
+ficha** e a **chave do histórico** —, e só a consulta da API muda.
+`conferir-precos.ts` lê `produto.confere_por || produto.meli_id`.
+⚠️ **Trocar o `meli_id` teria jogado fora a série de preços** do produto, que
+é o ativo central deste site.
+
+⚠️ **Sintoma para procurar em outros produtos:** histórico com **um ponto só**
+e `verificado_em` parado há dias. O do OPPO tinha exatamente 1 ponto, de
+15/09, e ninguém reparou porque o gráfico simplesmente não aparecia.
 
 🔴 **404 da API não prova que o produto acabou.** Em 16/09 a rodada das 15h
 desligou o **A36** e o **OPPO A6t** dizendo "sumiu do Meli", e os dois estavam

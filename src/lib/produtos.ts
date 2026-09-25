@@ -50,6 +50,24 @@ export type Produto = {
    */
   so_no_canal?: boolean;
   /**
+   * O id que o robô consulta, quando não é o mesmo da URL.
+   *
+   * ⚠️ **Existe porque o Mercado Livre funde e aposenta produto de catálogo.**
+   * Em 24/09/2026 `/p/MLB75697401` (o OPPO A6t) passou a **redirecionar** para
+   * `MLB75697418`: a API respondia 404 desde 15/09, o robô parou de conferir e
+   * o site ficou anunciando R$ 799,90 enquanto a loja cobrava R$ 887,78 — nove
+   * dias R$ 88 abaixo do preço real, sem ninguém perceber.
+   *
+   * Trocar o `meli_id` custaria duas coisas que não valem a pena: o **slug da
+   * ficha**, que carrega o id no fim justamente para sobreviver a mudanças de
+   * título, e a **chave do histórico**, que jogaria fora a série de preços do
+   * produto. Aqui só a consulta muda; a identidade fica.
+   *
+   * Como descobrir que é o caso: a página `/p/{meli_id}` redireciona para
+   * outro `/p/`, e o `canonical` dela mostra o id novo.
+   */
+  confere_por?: string;
+  /**
    * A curadoria já sabe que a oferta vencedora vem de fora do Brasil.
    *
    * ⚠️ **Existe porque o preço da API não conta a história toda.** Em

@@ -560,9 +560,9 @@
       "id": 15,
       "nome": "Mixer Elgin Turbo Chef 3 em 1",
       "categoria": "Casa",
-      "preco_original": 138.9,
-      "preco_atual": 122.8,
-      "desconto_percentual": 11,
+      "preco_original": 124,
+      "preco_atual": 124,
+      "desconto_percentual": 0,
       "preco_no_pix": false,
       "avaliacao": 0,
       "link_afiliado": "https://meli.la/1pAANJq",
@@ -574,7 +574,7 @@
       "disponivel": true,
       "familia": "Elgin 3 en 1 Turbo Chef",
       "data_adicionado": "2026-09-08",
-      "verificado_em": "2026-09-23",
+      "verificado_em": "2026-09-24",
       "analise": [
         "Mixer de mão para o serviço de todo dia: bater sopa direto na panela, fazer vitamina, triturar molho. Os 200 W dão conta do que é mole e do que é líquido, e o formato de bastão dispensa transferir comida quente para o copo do liquidificador — que é a parte chata da sopa.",
         "Não espere que ele substitua liquidificador ou processador em serviço pesado. Gelo, castanha e massa dura estão fora do que 200 W entregam, e forçar aí é o caminho mais rápido para queimar o motor. Se a sua cozinha precisa moer grão ou quebrar gelo, este não é o aparelho."
@@ -651,7 +651,7 @@
       "disponivel": false,
       "familia": "Oppo A6 T OPPO A6t Dual SIM",
       "data_adicionado": "2026-09-15",
-      "verificado_em": "2026-09-23",
+      "verificado_em": "2026-09-24",
       "analise": [
         "O A6t tem a maior bateria do catálogo: 6.500 mAh, segundo a OPPO. Somada à tela grande de 6,75 polegadas com 120 Hz, faz dele um bom aparelho para vídeo e redes sociais por muitas horas seguidas, sem procurar tomada no meio da tarde.",
         "Agora o que o anúncio não deixa claro: os \"12 GB de RAM\" são **4 GB reais** mais 8 GB emprestados do armazenamento. O processador é o Snapdragon 685, um chip antigo de entrada, e **ele é só 4G**. A câmera traseira é de 13 MP, abaixo dos 50 MP comuns na faixa. A OPPO não divulga quantos anos de atualização ele recebe.",
@@ -670,7 +670,8 @@
           "pergunta": "Vale a pena pela bateria de 6.500 mAh?",
           "resposta": "Vale se bateria e tela grande são o que você mais usa e o orçamento é curto — são os 6.500 mAh da OPPO, a maior bateria do catálogo. Não vale se câmera ou jogo são prioridade: a traseira é de 13 MP e o processador é um Snapdragon 685 de entrada."
         }
-      ]
+      ],
+      "confere_por": "MLB75697418"
     },
     {
       "id": 18,
