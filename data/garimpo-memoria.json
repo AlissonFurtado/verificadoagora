@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-24",
+  "atualizado_em": "2026-09-25",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -745,6 +745,12 @@
       "familia": "Microfones Hollyland Lark A1 Mini USB-C Condensador Omnidirecional",
       "preco_sugerido": 292.94,
       "vezes": 1
+    },
+    "MLB51856257": {
+      "sugerido_em": "2026-09-25",
+      "familia": "Microfones Hollyland Lark A1 USB-C Usb-c Omnidirecional",
+      "preco_sugerido": 319,
+      "vezes": 2
     }
   }
 }

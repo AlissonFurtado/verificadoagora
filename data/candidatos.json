@@ -1,21 +1,36 @@
 {
-  "garimpado_em": "2026-09-24",
-  "total": 1,
+  "garimpado_em": "2026-09-25",
+  "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB51857731",
-      "familia": "Microfones Hollyland Lark A1 Mini USB-C Condensador Omnidirecional",
+      "meli_id": "MLB51856257",
+      "familia": "Microfones Hollyland Lark A1 USB-C Usb-c Omnidirecional",
       "tipo": "produto",
-      "nome": "Microfone Lark A1 Hollyland Mini Usb-c Preto",
-      "categoria": "Câmeras e Acessórios",
-      "preco": 292.94,
-      "preco_original": 409.9,
-      "desconto_percentual": 28,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_836376-MLA99418800236_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB51857731",
+      "nome": "Microfone Hollyland Lark A1 Duo Usb-c cor Preto",
+      "categoria": "Games",
+      "preco": 319,
+      "preco_original": 403.8,
+      "desconto_percentual": 21,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_939138-MLA99956854929_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB51856257",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-24"
+      "garimpado_em": "2026-09-25"
+    },
+    {
+      "meli_id": "MLB51856257",
+      "familia": "Microfones Hollyland Lark A1 USB-C Usb-c Omnidirecional",
+      "tipo": "produto",
+      "nome": "Microfone Hollyland Lark A1 Duo Usb-c cor Preto",
+      "categoria": "Câmeras e Acessórios",
+      "preco": 319,
+      "preco_original": 403.8,
+      "desconto_percentual": 21,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_939138-MLA99956854929_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB51856257",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-09-25"
     }
   ]
 }
