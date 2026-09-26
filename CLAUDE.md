@@ -55,14 +55,14 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 23/09/2026
+## Onde paramos — 26/09/2026
 
 🟢 **O canal do WhatsApp é a frente principal.**
-`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **26 dos 33 produtos
-publicados** entre 19 e 23/09. ⚠️ **O canal está com 2 seguidores** (o
-`CLAUDE.md` dizia 3 — conferido no topo do canal em 23/09; alguém saiu). A
-conta que decidiu a aposta: canal com 200–300 pessoas engajadas rende o que o
-site renderia com 3.000–6.000 visitas/mês, e o site tem **0 cliques** de busca.
+`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **27 dos 33 produtos
+já passaram por lá.** ⚠️ **O canal está com 2 seguidores** (era 3; alguém saiu,
+conferido no topo do canal em 23/09). A conta que decidiu a aposta: canal com
+200–300 pessoas engajadas rende o que o site renderia com 3.000–6.000
+visitas/mês, e o site tem **0 cliques** de busca.
 ⚠️ **O número que importa é o de seguidores**, não o de produtos publicados.
 Com 2 seguidores, publicar mais não muda nada — **divulgar muda.**
 
@@ -70,37 +70,40 @@ Com 2 seguidores, publicar mais não muda nada — **divulgar muda.**
 o SSD SanDisk (oferta virou importada), o A36 preto (voltou mais caro que o
 verde) e o suporte de monitor.
 
+**Publicados no canal nesta semana:** 23/09 A17 e Buds Core · 24/09 G17,
+micro-ondas e projetor · 25/09 gimbal e Edge 60 Fusion.
+
 ### O que fazer na próxima sessão, em ordem
 
 | O quê | De quem é |
 |---|---|
-| **Publicar os 6 que faltam estrear no canal** — 2 ou 3 por dia. 23/09: A17 e Buds Core · 24/09: G17, micro-ondas e projetor · 25/09: gimbal e Edge 60 Fusion. **27 produtos já passaram pelo canal** | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
-| 🔴 **Os 6 que faltam estrear estão todos emperrados, e vale saber por quê** — Aspirador e Mixer com preço corrigido à mão (a trava do zigue-zague os segura por um dia), GameSir importado, OPPO e DualSense com mensagem fraca ("está acima do menor preço"), SSD Kingston sem queda. **Nenhum é esquecimento**: o canal está funcionando como projetado, e é o catálogo que não tem novidade boa para eles | Minha, quando o preço deles mudar |
-| 🟢 ~~OPPO A6t: o `meli_id` morto~~ — **resolvido e confirmado em 25/09.** O robô conferiu o produto pela primeira vez em 10 dias e trouxe **R$ 887,78**, igual ao que a página cobra no cartão: o `confere_por` funciona e a API não devolveu preço de Pix. O histórico dele voltou a crescer (2 pontos) | — |
-| 🟢 ~~Conferir os 5 suspeitos parados~~ — **feito em 23/09**, os cinco na página do Meli. Ver "O que a conferência de 23/09 ensinou" | — |
-| ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Em 23/09 não apareceu**: 5 páginas de produto abriram normalmente, com 2 s entre elas. A trava parece ser de volume por sessão, não um bloqueio que ficou. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
-| 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999, os dois conferidos em 23/09. Ele foi ocultado em 21/09 justamente por estar **mais caro**; a situação inverteu e agora a vitrine esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
-| ~~Decidir o limiar do "CAIU HOJE"~~ | 🟢 **Decidido em 23/09: `3% E pelo menos R$ 15`**, e já está no `canal.mjs` |
-| **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, comentário fixado no reel, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
+| **Rodar `node scripts/canal.mjs` e publicar 2 ou 3** — é o trabalho diário. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem. Confira a série no `historico.json` antes de confiar em qualquer manchete | Minha |
+| 🔴 **O suspeito parado é o A36 verde** (travado desde 24/09; em 26/09 o robô abriu mais um). Conferir na página do Meli e aplicar à mão na `main` — **nunca mergear o PR**, que parte de um `main` velho | Minha |
+| 🔴 **9 branches `robo/precos-*` abertos** (18 a 26/09). Todos devem ser **fechados sem merge**: o valor já está aplicado à mão. ⚠️ **Não consigo fazer isso** — `github.com` está bloqueado na extensão do Chrome | **Dele**, ou liberar o github.com para mim |
+| 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999 em 23/09. Ele foi ocultado em 21/09 por estar **mais caro**; a situação inverteu e a vitrine agora esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
+| **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
 | **Reddit: o primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md`. A conta está aquecida desde 12/09 | **Dele** |
-| **Conferir no celular** — 3 comparativos novos, tabela da `/black-friday`, comparativo do monitor, e as 4 páginas novas de 20/09 | **Dele**. Daqui não dá: o `resize_window` não funciona |
-| ~~Pedir indexação das 4 páginas de 20/09~~ | 🟢 **Feito em 23/09.** Duas já estavam indexadas (comparativo do A07 e o guia de eletrodoméstico) e **não se pede de novo**; as outras duas foram solicitadas |
+| **Instagram** — dizer se o post do G17 chegou a sair à mão, e conferir a permissão de notificação do app do Metricool. Sem isso, todo post agendado morre igual | **Dele** |
+| **Conferir no celular** — 3 comparativos novos, tabela da `/black-friday`, comparativo do monitor, e as 4 páginas de 20/09 | **Dele**. Daqui não dá: o `resize_window` não funciona |
+| **Garimpo de moda/beleza/esporte** — o `data/garimpo.json` só tem tecnologia e casa. Para a fila trazer candidato das categorias de 16%, é lá que se acrescenta (e vale o cuidado de sempre com subcategoria) | Minha, quando ele pedir |
+| ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Não apareceu mais em 23, 24 e 25/09**, com 2 s entre navegações e poucas por sessão. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
 | Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar". Quem faz esse papel é a descrição do canal |
 | Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. O painel classifica errado sozinho, e ele também tentou. A URL está declarada, que é o que a cláusula 1.3 exige |
 
-### O que entrou em 20–22/09
+### O que entrou nesta quinzena, e onde está escrito
 
-- 🟢 **As 4 frentes de SEO fechadas**: comparativo do **Galaxy A07**,
-  `/guia/meu-pc-aceita-ssd-nvme`, `/guia/vale-esperar-black-friday-eletrodomestico`
-  e `-fone-de-ouvido`. A `/black-friday` lista **5 guias** e os acha sozinha
-  pelo prefixo do slug.
-- 🟢 **Indexação pedida para 6 páginas** em 20/09, todas aceitas.
-- 🟢 **Fone JBL Quantum 100M2** no catálogo (36 produtos).
-- 🔴 **Um bug sério corrigido**: o histórico gravava preço que o site nunca
-  mostrou. Seção própria em "O robô de preços" — **leia antes de mexer em
-  preço ou histórico**.
-- 🟢 **Quatro travas novas no canal**, todas de casos reais. Ver "A fila do
-  canal".
+| O quê | Seção |
+|---|---|
+| 🔴 **A comissão do afiliado é 16% em moda/beleza/esporte e 5% no nosso catálogo** — o dado mais importante sobre dinheiro que faltava aqui | "A comissão do afiliado muda por categoria" |
+| 🟢 **`so_no_canal`** — o canal e o site deixaram de ter o mesmo catálogo | idem |
+| 🟢 **`confere_por`** — quando o produto de catálogo do Meli vira redirect e a API dá 404 para sempre | "404 permanente" |
+| 🟢 **Três travas novas no canal**: zigue-zague de correção manual, série plana, oferta importada | "A fila do canal" |
+| 🟢 **Snippet de produto do comparativo corrigido** (~31 entidades inválidas) | "O que a conferência de 23/09 ensinou" |
+| 🟢 **29 páginas indexadas** (eram 12 em 16/09) | "Indexação", nas frentes |
+| 🟢 **Briefing de divulgação**, com o que funciona e as regras que nenhum canal pode quebrar: <https://claude.ai/artifact/H4V3pqswv4XvFBzBKVYUpj> | — |
+| 🔴 **O histórico gravava preço que o site nunca mostrou** (22/09) — leia **antes de mexer em preço ou histórico** | "O robô de preços" |
+| 🟢 **4 frentes de SEO** (20/09): comparativo do A07, `/guia/meu-pc-aceita-ssd-nvme` e 2 guias de BF. A `/black-friday` lista 5 guias e os acha sozinha pelo prefixo do slug | "Black Friday 2026" |
+| 🟢 **Fone JBL Quantum 100M2** no catálogo — 36 produtos | — |
 
 ### O que a conferência de 23/09 ensinou
 
@@ -1929,28 +1932,27 @@ Chrome logado, pelo método do clipboard (abaixo).
   **E numa série plana todo dia é o menor**: em 24/09 o DualSense levaria o
   selo com oito pontos idênticos de R$ 430. O selo só diz alguma coisa quando
   existe um preço maior para comparar.
-- ⚠️ **"Está acima do menor preço" só aparece se a diferença for de 3% ou
+- ⚠️ **"Está acima do menor preço" só aparece se a diferença for de 3% **ou**
   R$ 20.** O G17 gerou *"Já vi por R$ 887,77 — hoje está acima disso"* com **um
   centavo** de diferença; agora diz que está praticamente no menor preço.
-- ⚠️ **Queda de R$ 6 não é manchete.** Só vira "🔻 CAIU HOJE" a partir de **3%
-  ou R$ 20**; a primeira versão gritava por qualquer centavo, o que ensina o
-  seguidor a ignorar o canal.
-  🔴 **Mas o limiar de 3% ainda deixa passar o que a regra proíbe** — medido em
-  21/09: o liquidificador gerou "CAIU HOJE… Caiu **R$ 6,00**" (3,17% sobre
-  R$ 189) e o GameSir G7 SE, "Caiu **R$ 7,99**" (3,1%). É literalmente o
-  exemplo que esta regra usa como contraexemplo. **Nesse dia as duas foram
-  puladas à mão** e só 3 das 5 saíram. **Decisão pendente do Alisson**: trocar
-  o `ou` por um piso em reais também — algo como *3% **e** pelo menos R$ 15*,
-  ou subir para *5% ou R$ 20*. Enquanto não mudar, confira o valor em reais
-  antes de publicar.
-  ⚠️ **E o mesmo par voltou idêntico em 22/09** — não é um novo caso, é o
-  mesmo: a rotina das 8h roda `canal.mjs` **antes** do robô de preços do dia
-  (que costuma sair só à tarde, ver "Toda manhã, não às 8h"), então ela ainda
-  está comparando 20→21/09 outra vez. Sinal de que a comparação é véspera
-  repetida, não queda nova: `data/historico.json.atualizado_em` ainda igual
-  ao dia anterior. E-mail desse dia avisou para pular as duas até o robô
-  rodar. Enquanto o limiar não mudar, quem lê o e-mail da manhã confere a
-  data de `atualizado_em` antes de confiar em qualquer "CAIU HOJE".
+  ⚠️ **O `ou` daqui contra o `E` da manchete é assimetria de propósito, não
+  esquecimento** (está comentado no código para ninguém "corrigir"): a
+  manchete grita no celular de alguém e precisa de barra alta; este aviso erra
+  para o lado seguro — avisar demais que o preço já esteve menor custa uma
+  venda, esconder isso custa a confiança, que é o único ativo do canal.
+- ⚠️ **Queda de R$ 6 não é manchete.** Só vira "🔻 CAIU HOJE" com **3% E pelo
+  menos R$ 15** — as duas condições juntas, decisão do Alisson em 23/09/2026.
+  O limiar era `3% ou R$ 20`, e o `ou` deixava passar exatamente o que a regra
+  proíbe: liquidificador "Caiu R$ 6,00" (3,2%) e GameSir "Caiu R$ 7,99" (3,1%)
+  em 21/09, JBL "Caiu R$ 10,91" (3,1%) em 23/09 — as três puladas à mão.
+  Percentual sozinho não protege produto barato; valor sozinho não protege
+  produto caro.
+  ⚠️ **A rotina das 8h roda `canal.mjs` antes do robô do dia** (que costuma
+  sair à tarde, ver "Toda manhã, não às 8h"), então o e-mail da manhã compara
+  a véspera outra vez. O sinal é `data/historico.json.atualizado_em` ainda
+  igual ao dia anterior. **Quem lê o e-mail da manhã confere essa data antes
+  de confiar em qualquer "CAIU HOJE"** — e por isso a fila se gera depois
+  das ~15h.
 - Quando não houver nada novo, o script diz isso — e **é uma resposta
   legítima**, na mesma linha da `/quedas-de-preco` que admite quando nada caiu.
 
