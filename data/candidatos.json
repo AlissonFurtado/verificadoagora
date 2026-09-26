@@ -1,36 +1,36 @@
 {
-  "garimpado_em": "2026-09-25",
+  "garimpado_em": "2026-09-26",
   "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB51856257",
-      "familia": "Microfones Hollyland Lark A1 USB-C Usb-c Omnidirecional",
+      "meli_id": "MLB18010993",
+      "familia": "Controle joystick sem fio Sony PlayStation DualSense CFI-ZCT1W",
       "tipo": "produto",
-      "nome": "Microfone Hollyland Lark A1 Duo Usb-c cor Preto",
+      "nome": "Controle Joystick Sem Fio Sony PlayStation 5 DualSense Midnight Black",
       "categoria": "Games",
-      "preco": 319,
-      "preco_original": 403.8,
-      "desconto_percentual": 21,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_939138-MLA99956854929_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB51856257",
+      "preco": 414,
+      "preco_original": 695,
+      "desconto_percentual": 40,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_759059-MLA99508283678_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB18010993",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-25"
+      "garimpado_em": "2026-09-26"
     },
     {
-      "meli_id": "MLB51856257",
-      "familia": "Microfones Hollyland Lark A1 USB-C Usb-c Omnidirecional",
+      "meli_id": "MLB55758628",
+      "familia": "Mochila passeio Romantic Crown Romantic Crown 30L-42L 42L",
       "tipo": "produto",
-      "nome": "Microfone Hollyland Lark A1 Duo Usb-c cor Preto",
-      "categoria": "Câmeras e Acessórios",
-      "preco": 319,
-      "preco_original": 403.8,
-      "desconto_percentual": 21,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_939138-MLA99956854929_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB51856257",
+      "nome": "Mochila Passeio Romantic Crown de 42L Com Compartimento Para Notebook e Entrada USB, Impermeável",
+      "categoria": "Portáteis e Acessórios",
+      "preco": 104.3,
+      "preco_original": 149,
+      "desconto_percentual": 30,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_722710-MLA116315762615_082026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB55758628",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-25"
+      "garimpado_em": "2026-09-26"
     }
   ]
 }

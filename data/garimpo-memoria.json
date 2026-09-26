@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-25",
+  "atualizado_em": "2026-09-26",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -751,6 +751,18 @@
       "familia": "Microfones Hollyland Lark A1 USB-C Usb-c Omnidirecional",
       "preco_sugerido": 319,
       "vezes": 2
+    },
+    "MLB18010993": {
+      "sugerido_em": "2026-09-26",
+      "familia": "Controle joystick sem fio Sony PlayStation DualSense CFI-ZCT1W",
+      "preco_sugerido": 414,
+      "vezes": 1
+    },
+    "MLB55758628": {
+      "sugerido_em": "2026-09-26",
+      "familia": "Mochila passeio Romantic Crown Romantic Crown 30L-42L 42L",
+      "preco_sugerido": 104.3,
+      "vezes": 1
     }
   }
 }
