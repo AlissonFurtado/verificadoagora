@@ -166,6 +166,19 @@ function escrever({ produto, pontos, anterior, menor, caiuHoje, noMenor, estreia
 
   if (repetido) linhas.push('(já mandei esse aqui antes, mas o preço mudou)', '');
 
+  // 🔴 **Oferta importada avisa na mensagem, não só na ficha.** Em 25/09/2026 o
+  // GameSir G7 SE apareceu na fila por R$ 271,65 sem uma palavra sobre vir dos
+  // EUA — a `analise` da ficha explicava, mas quem lê o canal decide pelo
+  // celular, no preço grande, e pode nunca abrir o link. O imposto de
+  // importação entra por fora e a pessoa descobre no checkout.
+  //
+  // A série mostra a virada acontecendo: R$ 249,90 enquanto a buy box era
+  // nacional, R$ 270,61 quando passou para fora. Sem o aviso, o canal estaria
+  // anunciando o preço pior como se fosse o mesmo produto de antes.
+  if (p.importado) {
+    linhas.push('⚠️ Vem do exterior: o preço não inclui o imposto de importação.', '');
+  }
+
   linhas.push(p.descricao, '', `https://www.verificadoagora.com.br/produto/${gerarSlug(p)}`);
   return linhas.join('\n');
 }

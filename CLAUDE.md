@@ -74,8 +74,9 @@ verde) e o suporte de monitor.
 
 | O quê | De quem é |
 |---|---|
-| **Publicar os 6 que faltam estrear no canal** — 2 ou 3 por dia. Em 23/09 saíram A17 e Buds Core; em 24/09, G17, micro-ondas e projetor (27 no total) | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
-| 🟢 ~~OPPO A6t: o `meli_id` morto~~ — **resolvido em 24/09.** ⚠️ **Confira amanhã o preço que o robô aplicar nele:** em 15/09 a API deu R$ 799,90, que é o valor do **Pix** de hoje (a página cobra R$ 887,78 no cartão). Se ele voltar para ~R$ 799, a API está devolvendo preço de Pix neste produto e o site passa a mentir barato de novo | Minha, amanhã |
+| **Publicar os 6 que faltam estrear no canal** — 2 ou 3 por dia. 23/09: A17 e Buds Core · 24/09: G17, micro-ondas e projetor · 25/09: gimbal e Edge 60 Fusion. **27 produtos já passaram pelo canal** | Minha. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem |
+| 🔴 **Os 6 que faltam estrear estão todos emperrados, e vale saber por quê** — Aspirador e Mixer com preço corrigido à mão (a trava do zigue-zague os segura por um dia), GameSir importado, OPPO e DualSense com mensagem fraca ("está acima do menor preço"), SSD Kingston sem queda. **Nenhum é esquecimento**: o canal está funcionando como projetado, e é o catálogo que não tem novidade boa para eles | Minha, quando o preço deles mudar |
+| 🟢 ~~OPPO A6t: o `meli_id` morto~~ — **resolvido e confirmado em 25/09.** O robô conferiu o produto pela primeira vez em 10 dias e trouxe **R$ 887,78**, igual ao que a página cobra no cartão: o `confere_por` funciona e a API não devolveu preço de Pix. O histórico dele voltou a crescer (2 pontos) | — |
 | 🟢 ~~Conferir os 5 suspeitos parados~~ — **feito em 23/09**, os cinco na página do Meli. Ver "O que a conferência de 23/09 ensinou" | — |
 | ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Em 23/09 não apareceu**: 5 páginas de produto abriram normalmente, com 2 s entre elas. A trava parece ser de volume por sessão, não um bloqueio que ficou. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
 | 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999, os dois conferidos em 23/09. Ele foi ocultado em 21/09 justamente por estar **mais caro**; a situação inverteu e agora a vitrine esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
@@ -1904,6 +1905,16 @@ Chrome logado, pelo método do clipboard (abaixo).
   ficha, que mostra a data do lado, inaceitável numa mensagem que grita "MENOR
   PREÇO QUE JÁ VI" no celular de alguém. O filtro compara `verificado_em` com
   `metadata.ultima_atualizacao`.
+- 🔴 **Oferta importada avisa na mensagem, não só na ficha** (trava desde
+  25/09). O GameSir G7 SE apareceu na fila por R$ 271,65 sem uma palavra sobre
+  vir dos EUA: a `analise` explicava, mas **quem lê o canal decide pelo preço
+  grande no celular e pode nunca abrir o link**. A série mostra a virada —
+  R$ 249,90 com a buy box nacional, R$ 270,61 depois que passou para fora —,
+  então sem o aviso o canal anunciaria o preço **pior** como se fosse a mesma
+  oferta de antes. A mensagem agora carrega *"⚠️ Vem do exterior: o preço não
+  inclui o imposto de importação"*. ⚠️ **Campo de curadoria que muda o sentido
+  do preço precisa chegar à mensagem** — `canal.mjs` não lia `importado`
+  nenhum até esse dia.
 - 🔴 **Corrigir preço à mão cria uma manchete falsa no dia seguinte** (trava
   desde 24/09). O histórico grava o que o **site** mostra — e isso é certo —,
   então um suspeito destravado à mão aparece como queda enorme na manhã
