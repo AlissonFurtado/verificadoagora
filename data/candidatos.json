@@ -1,36 +1,21 @@
 {
-  "garimpado_em": "2026-09-26",
-  "total": 2,
+  "garimpado_em": "2026-09-28",
+  "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB18010993",
-      "familia": "Controle joystick sem fio Sony PlayStation DualSense CFI-ZCT1W",
+      "meli_id": "MLB53924359",
+      "familia": "Alto-falante JBL Boombox 4 portátil com bluetooth waterproof",
       "tipo": "produto",
-      "nome": "Controle Joystick Sem Fio Sony PlayStation 5 DualSense Midnight Black",
-      "categoria": "Games",
-      "preco": 414,
-      "preco_original": 695,
-      "desconto_percentual": 40,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_759059-MLA99508283678_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB18010993",
+      "nome": "Caixa De Som Bluetooth JBL Boombox 4 PRETA",
+      "categoria": "Periféricos para PC",
+      "preco": 2340,
+      "preco_original": 4569.9,
+      "desconto_percentual": 48,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_682250-MLA99395859458_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB53924359",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-26"
-    },
-    {
-      "meli_id": "MLB55758628",
-      "familia": "Mochila passeio Romantic Crown Romantic Crown 30L-42L 42L",
-      "tipo": "produto",
-      "nome": "Mochila Passeio Romantic Crown de 42L Com Compartimento Para Notebook e Entrada USB, Impermeável",
-      "categoria": "Portáteis e Acessórios",
-      "preco": 104.3,
-      "preco_original": 149,
-      "desconto_percentual": 30,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_722710-MLA116315762615_082026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB55758628",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-09-26"
+      "garimpado_em": "2026-09-28"
     }
   ]
 }
