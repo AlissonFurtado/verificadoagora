@@ -1,21 +1,21 @@
 {
-  "garimpado_em": "2026-09-28",
+  "garimpado_em": "2026-09-29",
   "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB53924359",
-      "familia": "Alto-falante JBL Boombox 4 portátil com bluetooth waterproof",
+      "meli_id": "MLB22511808",
+      "familia": "Aspirador Wap Home High Speed Plus 1.2L FW009",
       "tipo": "produto",
-      "nome": "Caixa De Som Bluetooth JBL Boombox 4 PRETA",
-      "categoria": "Periféricos para PC",
-      "preco": 2340,
-      "preco_original": 4569.9,
-      "desconto_percentual": 48,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_682250-MLA99395859458_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB53924359",
+      "nome": "Aspirador de Pó Vertical e Portátil WAP High Speed Plus 1350W 3 em 1",
+      "categoria": "Eletrodomésticos",
+      "preco": 156.74,
+      "preco_original": 326,
+      "desconto_percentual": 51,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_841093-MLA116669740751_082026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB22511808",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-28"
+      "garimpado_em": "2026-09-29"
     }
   ]
 }
