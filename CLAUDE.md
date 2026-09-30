@@ -78,8 +78,8 @@ micro-ondas e projetor · 25/09 gimbal e Edge 60 Fusion.
 | O quê | De quem é |
 |---|---|
 | **Rodar `node scripts/canal.mjs` e publicar 2 ou 3** — é o trabalho diário. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem. Confira a série no `historico.json` antes de confiar em qualquer manchete | Minha |
-| 🔴 **O suspeito parado é o A36 verde** (travado desde 24/09; em 26/09 o robô abriu mais um). Conferir na página do Meli e aplicar à mão na `main` — **nunca mergear o PR**, que parte de um `main` velho | Minha |
-| 🔴 **9 branches `robo/precos-*` abertos** (18 a 26/09). Todos devem ser **fechados sem merge**: o valor já está aplicado à mão. ⚠️ **Não consigo fazer isso** — `github.com` está bloqueado na extensão do Chrome | **Dele**, ou liberar o github.com para mim |
+| **Suspeito do dia**: conferir na página do Meli e aplicar à mão na `main` — **nunca mergear o PR**. Em 29/09 estava tudo conferido (o A36 verde destravou sozinho; a Philco ganhou `confere_por`). **Conferir amanhã se a Philco passou limpa** | Minha |
+| 🟢 **PRs do robô: todos fechados sem merge em 29/09** (#15 a #36, 12 no total), e os branches apagados — dá pra restaurar pelo botão "Restore branch" do PR. **O `github.com` está liberado na extensão desde 29/09**: dá pra fechar os próximos na mesma sessão. O caminho: página do PR → `Close pull request` → `Delete branch`, pegos pelo texto do botão | Minha |
 | 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999 em 23/09. Ele foi ocultado em 21/09 por estar **mais caro**; a situação inverteu e a vitrine agora esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
 | **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
 | **Reddit: o primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md`. A conta está aquecida desde 12/09 | **Dele** |
