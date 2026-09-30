@@ -867,6 +867,18 @@ ficha** e a **chave do histórico** —, e só a consulta da API muda.
 ⚠️ **Trocar o `meli_id` teria jogado fora a série de preços** do produto, que
 é o ativo central deste site.
 
+🔴 **O `confere_por` também serve para o outro defeito do catálogo: o robô
+pega o vendedor errado** (29/09/2026). A Philco P32VIK virou suspeita em 28 e
+29/09 com R$ 1.085,87 → R$ 1.999 (+84%), e a página mostrava **R$ 1.085,87 em
+outros meios** — o site estava certo. O catálogo tem 7 vendedores, o
+`buy_box_winner` vem nulo e `buscarProduto` pega `/products/{id}/items`
+`results[0]`, **que não é a buy box**. Decisão dele: **fixar o anúncio da buy
+box** (`confere_por: "MLB-4367472233"`, loja oficial Vikings), só nesse
+produto. ⚠️ O custo aceito: se a Vikings parar de vender, a TV some da
+vitrine mesmo com outros vendedores ativos. O id da buy box sai da página
+navegada: `name="item_id" value="MLB…"`. **Mudar o `results[0]` para todos
+foi recusado** — mexe nos 36 e não dá para testar contra a API daqui.
+
 ⚠️ **Sintoma para procurar em outros produtos:** histórico com **um ponto só**
 e `verificado_em` parado há dias. O do OPPO tinha exatamente 1 ponto, de
 15/09, e ninguém reparou porque o gráfico simplesmente não aparecia.
