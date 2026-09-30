@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-29",
+  "atualizado_em": "2026-09-30",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -774,6 +774,18 @@
       "sugerido_em": "2026-09-29",
       "familia": "Aspirador Wap Home High Speed Plus 1.2L FW009",
       "preco_sugerido": 156.74,
+      "vezes": 1
+    },
+    "MLB44320380": {
+      "sugerido_em": "2026-09-30",
+      "familia": "Monitor Bettdow com tela de 15.6\"",
+      "preco_sugerido": 415,
+      "vezes": 1
+    },
+    "MLB46053181": {
+      "sugerido_em": "2026-09-30",
+      "familia": "Liquidificador Mondial Liquidificador L-93-BG - Inclui 1 acessórios",
+      "preco_sugerido": 109.99,
       "vezes": 1
     }
   }

@@ -1,21 +1,36 @@
 {
-  "garimpado_em": "2026-09-29",
-  "total": 1,
+  "garimpado_em": "2026-09-30",
+  "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB22511808",
-      "familia": "Aspirador Wap Home High Speed Plus 1.2L FW009",
+      "meli_id": "MLB44320380",
+      "familia": "Monitor Bettdow com tela de 15.6\"",
       "tipo": "produto",
-      "nome": "Aspirador de Pó Vertical e Portátil WAP High Speed Plus 1350W 3 em 1",
-      "categoria": "Eletrodomésticos",
-      "preco": 156.74,
-      "preco_original": 326,
-      "desconto_percentual": 51,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_841093-MLA116669740751_082026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB22511808",
+      "nome": "Monitor Portátil Gamer Bettdow 15.6'' Full HD 60Hz IPS Compatível 4K Preto",
+      "categoria": "Monitores e Acessórios",
+      "preco": 415,
+      "preco_original": 799,
+      "desconto_percentual": 48,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_660084-MLA99977469865_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB44320380",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-29"
+      "garimpado_em": "2026-09-30"
+    },
+    {
+      "meli_id": "MLB46053181",
+      "familia": "Liquidificador Mondial Liquidificador L-93-BG - Inclui 1 acessórios",
+      "tipo": "produto",
+      "nome": "Liquidificador Pratic Turbo III, Mondial, 550W - L-93-BG",
+      "categoria": "Eletrodomésticos",
+      "preco": 109.99,
+      "preco_original": 154.9,
+      "desconto_percentual": 28,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_856315-MLA99920847933_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB46053181",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-09-30"
     }
   ]
 }
