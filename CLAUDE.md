@@ -2011,6 +2011,21 @@ preview do link. É o mesmo Lexical que ignora `execCommand('insertText')`, mas
 ele escuta o evento de `paste`. **Não depende do clipboard do Windows**, então
 é o caminho mais confiável dos dois.
 
+🔴 **A foto da prévia só carrega com a aba VISÍVEL** (medido em 01/10/2026).
+Com o Chrome minimizado, coberto ou a tela bloqueada, `document.visibilityState`
+é `hidden`: a prévia traz título e descrição, mas **a foto nunca chega** — e os
+5 posts de 29/09 saíram assim. O print também trava (timeout de 30 s), que é o
+sintoma que denuncia. **Antes de colar, confira `document.visibilityState ===
+'visible'`; se não for, peça a ele para deixar a janela à vista.** Depois
+disso, **só envie quando a foto estiver carregada**: o `img` com
+`naturalWidth > 0` dentro do bloco cujo texto começa com `"{nome} por R$"`
+(sobe 6 pais a partir do título). Leva 2 a 5 s com a aba visível.
+
+⚠️ **`canal.mjs` escreve "Ontem estava…" mesmo quando o ponto anterior é de
+dias atrás** — em 01/10 o robô tinha ficado 2 dias fora e a manchete diria
+"de um dia para o outro" sobre uma queda de 29/09. Corrigido à mão na
+mensagem ("Em 29/09 estava…"); **o script não foi corrigido**.
+
 ⚠️ **Confira o campo antes de enviar** (`innerText` do
 `div[contenteditable][role=textbox]`): resíduo de tentativa anterior fica lá e
 vai junto.
