@@ -78,7 +78,7 @@ micro-ondas e projetor · 25/09 gimbal e Edge 60 Fusion.
 | O quê | De quem é |
 |---|---|
 | **Rodar `node scripts/canal.mjs` e publicar 2 ou 3** — é o trabalho diário. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem. Confira a série no `historico.json` antes de confiar em qualquer manchete | Minha |
-| **Suspeito do dia**: conferir na página do Meli e aplicar à mão na `main` — **nunca mergear o PR**. Em 29/09 estava tudo conferido (o A36 verde destravou sozinho; a Philco ganhou `confere_por`). **Conferir amanhã se a Philco passou limpa** | Minha |
+| **Suspeito do dia**: conferir na página do Meli e aplicar à mão na `main` — **nunca mergear o PR**. 🔴 **Toda sessão: conferir se existe commit `Preços de <hoje>` na `main`** depois das ~15h — em 30/09 e 01/10 o robô caiu (ver "pega o vendedor errado") e ninguém percebeu por 2 dias. A Philco vira suspeita todo dia com o preço certo na vitrine: ignorar até ele decidir o `results[0]` | Minha |
 | 🟢 **PRs do robô: todos fechados sem merge em 29/09** (#15 a #36, 12 no total), e os branches apagados — dá pra restaurar pelo botão "Restore branch" do PR. **O `github.com` está liberado na extensão desde 29/09**: dá pra fechar os próximos na mesma sessão. O caminho: página do PR → `Close pull request` → `Delete branch`, pegos pelo texto do botão | Minha |
 | 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999 em 23/09. Ele foi ocultado em 21/09 por estar **mais caro**; a situação inverteu e a vitrine agora esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
 | **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
@@ -867,17 +867,25 @@ ficha** e a **chave do histórico** —, e só a consulta da API muda.
 ⚠️ **Trocar o `meli_id` teria jogado fora a série de preços** do produto, que
 é o ativo central deste site.
 
-🔴 **O `confere_por` também serve para o outro defeito do catálogo: o robô
-pega o vendedor errado** (29/09/2026). A Philco P32VIK virou suspeita em 28 e
-29/09 com R$ 1.085,87 → R$ 1.999 (+84%), e a página mostrava **R$ 1.085,87 em
-outros meios** — o site estava certo. O catálogo tem 7 vendedores, o
-`buy_box_winner` vem nulo e `buscarProduto` pega `/products/{id}/items`
-`results[0]`, **que não é a buy box**. Decisão dele: **fixar o anúncio da buy
-box** (`confere_por: "MLB-4367472233"`, loja oficial Vikings), só nesse
-produto. ⚠️ O custo aceito: se a Vikings parar de vender, a TV some da
-vitrine mesmo com outros vendedores ativos. O id da buy box sai da página
-navegada: `name="item_id" value="MLB…"`. **Mudar o `results[0]` para todos
-foi recusado** — mexe nos 36 e não dá para testar contra a API daqui.
+🔴 **O robô pega o vendedor errado em catálogo com vários vendedores — e
+fixar o anúncio da buy box QUEBROU O ROBÔ** (29/09 a 01/10/2026). A Philco
+P32VIK virou suspeita com R$ 1.085,87 → R$ 1.999 (+84%), e a página mostrava
+**R$ 1.085,87 em outros meios** — o site estava certo. O catálogo tem 7
+vendedores, o `buy_box_winner` vem nulo e `buscarProduto` pega
+`/products/{id}/items` `results[0]`, **que não é a buy box**.
+Tentei `confere_por: "MLB-4367472233"` (o anúncio da buy box) e
+**`/items/MLB4367472233` respondeu 403** na Action. Erro de API faz a rodada
+inteira parar sem mexer em nada: **o site ficou 2 dias sem conferir preço
+nenhum** até alguém reparar. Revertido em 01/10.
+- ⚠️ **`confere_por` só aponta para id que a API já respondeu.** Não dá para
+  testar daqui (rodar o robô local mata o token), então qualquer mudança de
+  `meli_id`/`confere_por` exige **olhar a Action do dia seguinte** — commit
+  `Preços de DD/MM` na `main`. Sem ele, o robô caiu.
+- 🔴 **Um produto com erro derruba os 36.** Esse é o defeito de fundo, e não
+  foi corrigido: a trava "API instável → não mexe em nada" foi pensada para
+  queda geral da API, não para um id ruim.
+- A Philco segue virando suspeita todo dia, com o preço certo na vitrine. A
+  correção de verdade é no `results[0]` — **decisão dele**, pendente.
 
 ⚠️ **Sintoma para procurar em outros produtos:** histórico com **um ponto só**
 e `verificado_em` parado há dias. O do OPPO tinha exatamente 1 ponto, de
