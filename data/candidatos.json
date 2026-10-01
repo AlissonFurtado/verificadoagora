@@ -1,36 +1,21 @@
 {
-  "garimpado_em": "2026-09-30",
-  "total": 2,
+  "garimpado_em": "2026-10-01",
+  "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB44320380",
-      "familia": "Monitor Bettdow com tela de 15.6\"",
+      "meli_id": "MLB61622474",
+      "familia": "Ventilador ventilador de coluna oscilante Ventisol 14138 EX 8235 turbo",
       "tipo": "produto",
-      "nome": "Monitor Portátil Gamer Bettdow 15.6'' Full HD 60Hz IPS Compatível 4K Preto",
-      "categoria": "Monitores e Acessórios",
-      "preco": 415,
-      "preco_original": 799,
-      "desconto_percentual": 48,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_660084-MLA99977469865_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB44320380",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-09-30"
-    },
-    {
-      "meli_id": "MLB46053181",
-      "familia": "Liquidificador Mondial Liquidificador L-93-BG - Inclui 1 acessórios",
-      "tipo": "produto",
-      "nome": "Liquidificador Pratic Turbo III, Mondial, 550W - L-93-BG",
+      "nome": "Ventilado De Coluna Turbo 6 Pás 40cm Preto Ventisol Diâmetro 40 Cm Frequência 80 Watts",
       "categoria": "Eletrodomésticos",
-      "preco": 109.99,
-      "preco_original": 154.9,
-      "desconto_percentual": 28,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_856315-MLA99920847933_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB46053181",
+      "preco": 229.99,
+      "preco_original": 499.99,
+      "desconto_percentual": 54,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_813236-MLA97022833631_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB61622474",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-09-30"
+      "garimpado_em": "2026-10-01"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-30",
+  "atualizado_em": "2026-10-01",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -786,6 +786,12 @@
       "sugerido_em": "2026-09-30",
       "familia": "Liquidificador Mondial Liquidificador L-93-BG - Inclui 1 acessórios",
       "preco_sugerido": 109.99,
+      "vezes": 1
+    },
+    "MLB61622474": {
+      "sugerido_em": "2026-10-01",
+      "familia": "Ventilador ventilador de coluna oscilante Ventisol 14138 EX 8235 turbo",
+      "preco_sugerido": 229.99,
       "vezes": 1
     }
   }
