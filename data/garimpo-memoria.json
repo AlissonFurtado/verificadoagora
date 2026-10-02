@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-01",
+  "atualizado_em": "2026-10-02",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -792,6 +792,24 @@
       "sugerido_em": "2026-10-01",
       "familia": "Ventilador ventilador de coluna oscilante Ventisol 14138 EX 8235 turbo",
       "preco_sugerido": 229.99,
+      "vezes": 1
+    },
+    "MLB65319818": {
+      "sugerido_em": "2026-10-02",
+      "familia": "Moto G67 Dual SIM",
+      "preco_sugerido": 1312.19,
+      "vezes": 1
+    },
+    "MLB27291667": {
+      "sugerido_em": "2026-10-02",
+      "familia": "Ventilador mesa/parede Britânia Turbo BVT400 turbo",
+      "preco_sugerido": 158.62,
+      "vezes": 1
+    },
+    "MLB19694427": {
+      "sugerido_em": "2026-10-02",
+      "familia": "Escova secadora/alisadora/volumizadora Britânia Bec07r3",
+      "preco_sugerido": 105.27,
       "vezes": 1
     }
   }

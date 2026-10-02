@@ -1,21 +1,51 @@
 {
-  "garimpado_em": "2026-10-01",
-  "total": 1,
+  "garimpado_em": "2026-10-02",
+  "total": 3,
   "candidatos": [
     {
-      "meli_id": "MLB61622474",
-      "familia": "Ventilador ventilador de coluna oscilante Ventisol 14138 EX 8235 turbo",
+      "meli_id": "MLB65319818",
+      "familia": "Moto G67 Dual SIM",
       "tipo": "produto",
-      "nome": "Ventilado De Coluna Turbo 6 Pás 40cm Preto Ventisol Diâmetro 40 Cm Frequência 80 Watts",
-      "categoria": "Eletrodomésticos",
-      "preco": 229.99,
-      "preco_original": 499.99,
-      "desconto_percentual": 54,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_813236-MLA97022833631_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB61622474",
+      "nome": "Smartphone Motorola Moto G67 5g - 128gb 4gb Ram + 8gb Ram Boost, Camera 50mp Sony Lytia 600, Tela 1.5k Extreme Amoled 120hz, Ultrarresistente - Chumbo",
+      "categoria": "Celulares e Smartphones",
+      "preco": 1312.19,
+      "preco_original": 2299,
+      "desconto_percentual": 42,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_635893-MLA106048486992_022026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB65319818",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-01"
+      "garimpado_em": "2026-10-02"
+    },
+    {
+      "meli_id": "MLB27291667",
+      "familia": "Ventilador mesa/parede Britânia Turbo BVT400 turbo",
+      "tipo": "produto",
+      "nome": "Ventilador Bvt400 Maxx Force 2 Em 1 150w Preto Britânia",
+      "categoria": "Eletrodomésticos",
+      "preco": 158.62,
+      "preco_original": 224.45,
+      "desconto_percentual": 29,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_957387-MLA95501959460_102025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB27291667",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-10-02"
+    },
+    {
+      "meli_id": "MLB19694427",
+      "familia": "Escova secadora/alisadora/volumizadora Britânia Bec07r3",
+      "tipo": "produto",
+      "nome": "Escova Secadora 4 Em 1 Britânia Bec07r Cerâmica 1300w Bivolt Rosa",
+      "categoria": "Eletrodomésticos",
+      "preco": 105.27,
+      "preco_original": 139.9,
+      "desconto_percentual": 24,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_734805-MLA114128393951_072026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB19694427",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-10-02"
     }
   ]
 }
