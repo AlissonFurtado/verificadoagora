@@ -2019,12 +2019,15 @@ sintoma que denuncia. **Antes de colar, confira `document.visibilityState ===
 'visible'`; se não for, peça a ele para deixar a janela à vista.** Depois
 disso, **só envie quando a foto estiver carregada**: o `img` com
 `naturalWidth > 0` dentro do bloco cujo texto começa com `"{nome} por R$"`
-(sobe 6 pais a partir do título). Leva 2 a 5 s com a aba visível.
+(sobe 6 pais a partir do título). Leva 2 a 5 s com a aba visível. ⚠️ Em 02/10 a foto carregou mesmo com a aba `hidden` — o
+estado oculto atrasa ou impede, não impede sempre. **Quem decide é a checagem
+da foto, não a visibilidade.**
 
 ⚠️ **`canal.mjs` escreve "Ontem estava…" mesmo quando o ponto anterior é de
 dias atrás** — em 01/10 o robô tinha ficado 2 dias fora e a manchete diria
 "de um dia para o outro" sobre uma queda de 29/09. Corrigido à mão na
-mensagem ("Em 29/09 estava…"); **o script não foi corrigido**.
+mensagem ("Em 29/09 estava…"). 🟢 **Corrigido no script em 02/10**: com
+buraco no histórico a manchete passa a dizer "Em DD/MM estava…".
 
 ⚠️ **Confira o campo antes de enviar** (`innerText` do
 `div[contenteditable][role=textbox]`): resíduo de tentativa anterior fica lá e

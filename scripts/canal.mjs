@@ -132,8 +132,15 @@ function escrever({ produto, pontos, anterior, menor, caiuHoje, noMenor, estreia
   linhas.push(p.nome, `${real(p.preco_original)} → ${real(p.preco_atual)} (${p.desconto_percentual}% OFF)`, '');
 
   if (caiuHoje) {
+    // O ponto anterior só é "ontem" se o robô rodou ontem. Em 01/10/2026 ele
+    // tinha ficado 2 dias fora e a mensagem diria "de um dia para o outro"
+    // sobre uma queda que vinha de 29/09.
+    const diaAnterior = pontos[pontos.length - 2].dia;
+    const dias = Math.round((Date.parse(pontos[pontos.length - 1].dia) - Date.parse(diaAnterior)) / 864e5);
     linhas.push(
-      `Ontem estava ${real(anterior)}. Caiu ${real(anterior - p.preco_atual)} de um dia para o outro.`,
+      dias === 1
+        ? `Ontem estava ${real(anterior)}. Caiu ${real(anterior - p.preco_atual)} de um dia para o outro.`
+        : `Em ${dia(diaAnterior)} estava ${real(anterior)}. Caiu ${real(anterior - p.preco_atual)}.`,
       '',
     );
   } else if (estreia) {
