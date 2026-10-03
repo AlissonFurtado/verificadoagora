@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-02",
+  "atualizado_em": "2026-10-03",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -810,6 +810,30 @@
       "sugerido_em": "2026-10-02",
       "familia": "Escova secadora/alisadora/volumizadora Britânia Bec07r3",
       "preco_sugerido": 105.27,
+      "vezes": 1
+    },
+    "MLB44783010": {
+      "sugerido_em": "2026-10-03",
+      "familia": "Monitor Fmaxx com tela de 24\"",
+      "preco_sugerido": 439,
+      "vezes": 1
+    },
+    "MLB18914706": {
+      "sugerido_em": "2026-10-03",
+      "familia": "Memória RAM ValueRAM 8GB 1 Kingston KVR16N11/8",
+      "preco_sugerido": 110.88,
+      "vezes": 1
+    },
+    "MLB26208174": {
+      "sugerido_em": "2026-10-03",
+      "familia": "Climatizador portátil frio Ventisol CLIN 16 BR/CZ",
+      "preco_sugerido": 399,
+      "vezes": 1
+    },
+    "MLB21252460": {
+      "sugerido_em": "2026-10-03",
+      "familia": "interno Western Digital WD Purple WD10PURZ 1TB",
+      "preco_sugerido": 473,
       "vezes": 1
     }
   }
