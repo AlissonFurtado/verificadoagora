@@ -1417,12 +1417,134 @@
           "resposta": "Sim, em PS4, PS5, Xbox, PC e celular com entrada P2 — é a vantagem de vir com fio: sem parear e sem atraso de Bluetooth entre a tela e o som."
         }
       ]
+    },
+    {
+      "id": 37,
+      "nome": "Motorola Moto G67 5G 128GB",
+      "categoria": "Celulares",
+      "preco_original": 2299,
+      "preco_atual": 1312.19,
+      "desconto_percentual": 42,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/21Uc3mM",
+      "descricao": "5G, tela AMOLED 1.5K de 120 Hz, câmera de 50MP Sony LYTIA 600, bateria de 5200 mAh",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_635893-MLA106048486992_022026-F.jpg",
+      "meli_id": "MLB65319818",
+      "familia": "Moto G67 Dual SIM",
+      "analise": [
+        "O G67 é o degrau logo acima do G17 na linha da Motorola, e resolve justamente o que pesa contra o irmão mais barato: ele é **5G**, e a tela é **AMOLED de 120 Hz** em resolução 1.5K, com rolagem fluida e preto de verdade. Junta a isso a câmera principal de 50 MP com sensor Sony LYTIA 600, NFC para pagar por aproximação, eSIM e a bateria de 5.200 mAh.",
+        "Dois pontos merecem atenção antes da compra. **A memória RAM real é de 4 GB** — os outros 8 GB do anúncio são emprestados do armazenamento, a mesma \"RAM boost\" do G17, que ajuda a manter aplicativo aberto mas não é memória de verdade. E o processador é o Dimensity 6300, de entrada: dá conta do dia a dia e de jogo leve, não de jogo pesado com gráfico no máximo. Os 128 GB aceitam cartão microSD, e não tem entrada de fone de 3,5 mm.",
+        "Compre se você quer 5G e tela boa sem passar de R$ 1.500. Se o orçamento é o do G17, a diferença é exatamente 5G e tela — vale pesar se você usa uma das duas. Se dá para chegar no Galaxy A36, ele tem mais memória real e a promessa de anos de atualização da Samsung; a Motorola não diz no anúncio quantas atualizações o G67 vai receber."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O Moto G67 tem 12 GB de RAM de verdade?",
+          "resposta": "Não. São 4 GB reais mais 8 GB emprestados do armazenamento, a \"RAM boost\" da Motorola. Ajuda a manter aplicativo aberto em segundo plano, mas não é memória de verdade."
+        },
+        {
+          "pergunta": "Qual a diferença para o Moto G17?",
+          "resposta": "O G67 é 5G e tem tela AMOLED de 120 Hz; o G17 é só 4G, com tela LCD de 60 Hz. A memória real é a mesma nos dois: 4 GB."
+        },
+        {
+          "pergunta": "Serve para jogo pesado?",
+          "resposta": "Não é o forte dele. O Dimensity 6300 é processador de entrada: roda bem o dia a dia e jogo leve, mas jogo pesado vai precisar de gráfico reduzido."
+        },
+        {
+          "pergunta": "Dá para aumentar o armazenamento?",
+          "resposta": "Dá. Os 128 GB aceitam cartão microSD."
+        }
+      ],
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03"
+    },
+    {
+      "id": 38,
+      "nome": "Ventilador Britânia BVT400 Maxx Force 40 cm",
+      "categoria": "Casa",
+      "preco_original": 224.45,
+      "preco_atual": 158.62,
+      "desconto_percentual": 29,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/161HYEr",
+      "descricao": "Mesa ou parede, 40 cm, 6 pás, 150W, 3 velocidades e função turbo",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_957387-MLA95501959460_102025-F.jpg",
+      "meli_id": "MLB27291667",
+      "familia": "Ventilador mesa/parede Britânia Turbo BVT400 turbo",
+      "analise": [
+        "Um ventilador de 40 cm que serve em dois lugares: fica de pé na mesa ou vai para a parede, o que resolve quarto pequeno em que não sobra superfície livre. São 6 pás, 150 W, três velocidades, função turbo, oscilação e inclinação, e a grade sai para limpar — o detalhe que mais faz diferença depois de um verão inteiro de poeira.",
+        "O que ele não tem: **controle remoto**, timer ou desligamento programado. Para ligar, desligar ou trocar a velocidade é preciso levantar e ir até ele — e preso na parede, isso significa alcançar o botão lá em cima. A grade e as pás são de plástico, o que é normal nessa faixa de preço.",
+        "Compre se você quer um ventilador forte e simples para o verão que está chegando, principalmente se o espaço pede montagem na parede. Se você quer ligar da cama ou programar para desligar de madrugada, procure um modelo com controle."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Dá para pendurar na parede?",
+          "resposta": "Dá. Ele é do tipo mesa/parede: fica de pé na mesa ou vai preso na parede."
+        },
+        {
+          "pergunta": "Ele vem com controle remoto?",
+          "resposta": "Não. Velocidade, oscilação e turbo são todos no botão do próprio aparelho, e ele não tem timer."
+        },
+        {
+          "pergunta": "Dá para limpar as pás?",
+          "resposta": "Dá. A grade é removível, então as pás ficam acessíveis para limpar."
+        }
+      ],
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03"
+    },
+    {
+      "id": 39,
+      "nome": "Escova Secadora Britânia BEC07R 4 em 1",
+      "categoria": "Beleza",
+      "preco_original": 139.9,
+      "preco_atual": 105.27,
+      "desconto_percentual": 24,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/1P9N8uW",
+      "descricao": "Seca, alisa e modela: 1300W, cerâmica com íons, bivolt",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_734805-MLA114128393951_072026-F.jpg",
+      "meli_id": "MLB19694427",
+      "familia": "Escova secadora/alisadora/volumizadora Britânia Bec07r3",
+      "so_no_canal": true,
+      "analise": [
+        "Uma escova que seca, alisa e dá volume ao mesmo tempo, com 1.300 W, cerâmica com íons para reduzir o frizz e controle de temperatura. É bivolt, o que resolve viagem e casa com tomada das duas voltagens, e o cabo de 1,8 m é giratório, então não enrola enquanto você escova.",
+        "O ponto de cuidado é o calor: ela chega a **230 °C** e **não tem desligamento automático** — esquecer ligada é por sua conta. Cabelo muito fino ou danificado pede a temperatura mais baixa e menos passadas. E escova secadora não substitui a chapinha para quem quer o liso bem marcado: ela entrega um escovado.",
+        "Compre se você quer fazer escova em casa com menos trabalho do que secador mais escova redonda. Se o que você procura é alisar fio por fio, a chapinha continua sendo a ferramenta certa."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ela é bivolt?",
+          "resposta": "É. Funciona em 127 V e 220 V."
+        },
+        {
+          "pergunta": "Desliga sozinha se eu esquecer?",
+          "resposta": "Não. Ela não tem desligamento automático, então é preciso desligar na mão depois de usar."
+        },
+        {
+          "pergunta": "Substitui a chapinha?",
+          "resposta": "Não totalmente. Ela entrega um escovado com volume; para o liso bem marcado, a chapinha ainda faz melhor."
+        }
+      ],
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03"
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-02",
     "conferido_em": "2026-10-02T16:27:15.022Z",
-    "total_produtos": 36,
+    "total_produtos": 39,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
