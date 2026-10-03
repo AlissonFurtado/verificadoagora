@@ -1512,6 +1512,318 @@
         }
       ],
       "escrito_em": "2026-09-20"
+    },
+    {
+      "meli_id": "MLB42082681",
+      "titulo": "Gree G-Top Auto 9.000 BTUs vale a pena? Comparamos com TCL BreezeIN e LG Compact",
+      "resumo": "O Gree G-Top Auto de 9.000 BTUs está a {preco}, com {desconto}% de desconto. Pusemos a ficha dele ao lado dos outros dois 9.000 BTUs só frio que acompanhamos: o TCL BreezeIN AI, o mais vendido da categoria, e o LG Dual Inverter Compact. Os três são inverter e 220 V. As especificações vêm dos fabricantes, e onde o fabricante não publica um número, a célula diz isso. Os preços são conferidos pelo nosso robô todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Quer gastar menos de luz no verão",
+          "chave": "tcl",
+          "porque": "Classe A e o maior IDRS dos três (7), o índice que mede frio entregue por energia gasta na estação. Tem Wi-Fi."
+        },
+        {
+          "perfil": "Quer o menor preço com classe A",
+          "chave": "gree",
+          "porque": "Classe A, Wi-Fi e a garantia mais longa nas peças: 5 anos, além dos 10 no compressor."
+        },
+        {
+          "perfil": "Vai dormir com ele ligado",
+          "chave": "lg",
+          "porque": "É o único que declara o ruído: 22 dB(A) no modo mais baixo. Em troca, é classe C e não tem Wi-Fi."
+        }
+      ],
+      "colunas": [
+        {
+          "chave": "gree",
+          "nome": "Gree G-Top Auto",
+          "meli_id": "MLB42082681"
+        },
+        {
+          "chave": "tcl",
+          "nome": "TCL BreezeIN AI",
+          "meli_id": "MLB75342806"
+        },
+        {
+          "chave": "lg",
+          "nome": "LG Compact AI",
+          "meli_id": "MLB55690976"
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Classe de energia (INMETRO)",
+          "valores": {
+            "gree": "A",
+            "tcl": "A",
+            "lg": "C"
+          },
+          "vencedores": [
+            "gree",
+            "tcl"
+          ],
+          "nota": "É a etiqueta colada no aparelho, e vai de A (mais econômico) a E. Num ar que fica ligado horas por dia no verão, a diferença entre A e C aparece na conta de luz todo mês."
+        },
+        {
+          "campo": "IDRS (eficiência na estação)",
+          "valores": {
+            "gree": "6,01",
+            "tcl": "7",
+            "lg": "Não divulgado"
+          },
+          "vencedores": [
+            "tcl"
+          ],
+          "nota": "O IDRS mede quanto frio o aparelho entrega para cada unidade de energia ao longo de uma estação inteira, e não só no pico. Quanto maior, melhor. O TCL lidera; a LG não publica esse número para o Compact."
+        },
+        {
+          "campo": "Ruído da unidade interna",
+          "valores": {
+            "gree": "Não divulgado",
+            "tcl": "Não divulgado",
+            "lg": "22 a 38 dB(A)"
+          },
+          "vencedores": [
+            "lg"
+          ],
+          "nota": "É o que você ouve dentro do quarto. 22 dB(A) é nível de sussurro. Só a LG publica esse número — o que não quer dizer que os outros sejam barulhentos, só que não dá para comparar."
+        },
+        {
+          "campo": "Wi-Fi",
+          "valores": {
+            "gree": "Sim",
+            "tcl": "Sim, com comando de voz",
+            "lg": "Não"
+          },
+          "vencedores": [
+            "gree",
+            "tcl"
+          ],
+          "nota": "Serve para ligar o ar antes de chegar em casa e ajustar sem levantar da cama. A LG informa que a linha Compact fica de fora do app ThinQ."
+        },
+        {
+          "campo": "Garantia",
+          "valores": {
+            "gree": "10 anos no compressor, 5 anos nas demais peças",
+            "tcl": "10 anos no compressor, 2 anos no conjunto",
+            "lg": "10 anos no compressor"
+          },
+          "vencedores": [
+            "gree"
+          ],
+          "nota": "Os três dão 10 anos na peça mais cara, o compressor. A diferença está no resto do aparelho, e aí a Gree cobre mais tempo. A TCL condiciona a garantia à instalação por técnico credenciado."
+        },
+        {
+          "campo": "Tensão",
+          "valores": {
+            "gree": "220 V",
+            "tcl": "220 V",
+            "lg": "220 V"
+          },
+          "vencedores": [],
+          "nota": "Os três são 220 V. Em casa com rede 127 V, nenhum deles serve sem um circuito 220 V."
+        }
+      ],
+      "a_favor": [
+        "Classe A no INMETRO, como o TCL, e duas letras acima do LG Compact.",
+        "A garantia mais longa da tabela nas peças: 5 anos, além dos 10 anos no compressor.",
+        "Wi-Fi de fábrica para controlar pelo celular.",
+        "{desconto}% de desconto: {preco} contra {preco_original} de tabela, conferido em {data}."
+      ],
+      "contra": [
+        "IDRS 6,01, abaixo dos 7 do TCL: gasta um pouco mais de energia pelo mesmo frio ao longo do verão.",
+        "A Gree não publica o ruído da unidade interna, então não dá para compará-lo em silêncio com o LG.",
+        "A instalação é à parte, por técnico, e o custo dela não está no preço."
+      ],
+      "veredito": "O G-Top Auto vale se você quer o 9.000 BTUs classe A mais barato da tabela, com Wi-Fi e a garantia mais longa nas peças — a {preco}, a economia sobre a tabela é de {economia}. Se o que pesa é a conta de luz no verão inteiro, o TCL BreezeIN tem o IDRS maior e também é classe A. Se o ar vai ficar ligado a noite toda num quarto e o barulho incomoda, o LG Compact é o único que prova o silêncio com número, mas é classe C e não tem Wi-Fi. Em qualquer um dos três, some o custo da instalação, que não está no preço.",
+      "fontes": [
+        {
+          "titulo": "Gree G-Top Auto Inverter 9.000 BTU/h Frio R-32 220 V — loja oficial da Gree",
+          "url": "https://loja.gree.com.br/ar-condicionado-split-inverter-gree-g-top-auto-9000-btuh-frio-r-32-220v-9000-frio.html"
+        },
+        {
+          "titulo": "TCL BreezeIN AI (TAC-09CTG3-INV-I) — página oficial da TCL Brasil",
+          "url": "https://www.tcl.com/br/pt/air-conditioners/breezein-cool"
+        },
+        {
+          "titulo": "LG Dual Inverter Compact 9.000 BTUs (S3-Q09AAQAK) — página oficial da LG Brasil",
+          "url": "https://www.lg.com/br/ar-condicionado-residencial/s3-q09aaqak/"
+        }
+      ],
+      "escrito_em": "2026-10-03"
+    },
+    {
+      "meli_id": "MLB66999694",
+      "titulo": "Midea AirVolution Lite 12.000 BTUs vale a pena? Comparamos com Elgin, LG e Samsung",
+      "resumo": "O Midea AirVolution Lite de 12.000 BTUs é o mais vendido da faixa no Mercado Livre e está a {preco}. Pusemos a ficha dele ao lado de três outros 12.000 BTUs só frio, inverter e 220 V que acompanhamos: Elgin Eco Inverter II, LG AI Dual Inverter Voice e Samsung WindFree AI Pro. As especificações vêm dos fabricantes, e onde o fabricante não publica um número, a célula diz isso. Os preços são conferidos pelo nosso robô todo dia.",
+      "escolha_rapida": [
+        {
+          "perfil": "Quer classe A e Wi-Fi gastando pouco",
+          "chave": "elgin",
+          "porque": "Classe A, Wi-Fi e 3 anos de garantia total por um preço perto do Midea, que é classe D."
+        },
+        {
+          "perfil": "Vai dormir com ele ligado",
+          "chave": "lg",
+          "porque": "Classe A, Wi-Fi e ruído declarado de 22 dB(A) no modo mais baixo, por menos que o Samsung."
+        },
+        {
+          "perfil": "Não suporta vento frio direto",
+          "chave": "samsung",
+          "porque": "O modo WindFree solta o ar por microfuros, sem jato. É o mais caro da tabela."
+        },
+        {
+          "perfil": "O orçamento manda e o uso é curto",
+          "chave": "midea",
+          "porque": "O mais barato da tabela, mas classe D e sem Wi-Fi: compensa para quem liga poucas horas por dia."
+        }
+      ],
+      "colunas": [
+        {
+          "chave": "midea",
+          "nome": "Midea AirVolution Lite",
+          "meli_id": "MLB66999694"
+        },
+        {
+          "chave": "elgin",
+          "nome": "Elgin Eco Inverter II",
+          "meli_id": "MLB32442004"
+        },
+        {
+          "chave": "lg",
+          "nome": "LG AI Dual Inverter Voice",
+          "meli_id": "MLB27727511"
+        },
+        {
+          "chave": "samsung",
+          "nome": "Samsung WindFree AI Pro",
+          "meli_id": "MLB75731017"
+        }
+      ],
+      "linhas": [
+        {
+          "campo": "Classe de energia (INMETRO)",
+          "valores": {
+            "midea": "D",
+            "elgin": "A",
+            "lg": "A",
+            "samsung": "A"
+          },
+          "vencedores": [
+            "elgin",
+            "lg",
+            "samsung"
+          ],
+          "nota": "É a etiqueta colada no aparelho, de A (mais econômico) a E. O Midea é o único fora da classe A — e num ar que fica ligado a noite toda, é aqui que o preço mais baixo dele volta na conta de luz."
+        },
+        {
+          "campo": "IDRS (eficiência na estação)",
+          "valores": {
+            "midea": "Não divulgado",
+            "elgin": "Não divulgado",
+            "lg": "Não divulgado",
+            "samsung": "7,0"
+          },
+          "vencedores": [],
+          "nota": "Mede o frio entregue por energia gasta ao longo da estação inteira; quanto maior, melhor. Só a Samsung publica o número deste modelo, então não dá para cravar um vencedor."
+        },
+        {
+          "campo": "Potência nominal (frio)",
+          "valores": {
+            "midea": "Não divulgado",
+            "elgin": "Não divulgado",
+            "lg": "1.130 W",
+            "samsung": "1.150 W"
+          },
+          "vencedores": [],
+          "nota": "É o quanto o aparelho puxa da tomada na potência cheia. LG e Samsung praticamente empatam; Midea e Elgin não publicam."
+        },
+        {
+          "campo": "Ruído da unidade interna",
+          "valores": {
+            "midea": "Não divulgado",
+            "elgin": "Não divulgado",
+            "lg": "22 a 42 dB(A)",
+            "samsung": "21 a 40 dB(A)"
+          },
+          "vencedores": [
+            "lg",
+            "samsung"
+          ],
+          "nota": "É o que você ouve dentro do quarto; 21 ou 22 dB(A) é nível de sussurro. LG e Samsung publicam e ficam praticamente iguais. Os outros dois não publicam — o que não quer dizer que sejam barulhentos."
+        },
+        {
+          "campo": "Wi-Fi",
+          "valores": {
+            "midea": "Não",
+            "elgin": "Sim, com Alexa e Google",
+            "lg": "Sim, com ThinQ, Alexa e Google",
+            "samsung": "Sim, com SmartThings"
+          },
+          "vencedores": [
+            "elgin",
+            "lg",
+            "samsung"
+          ],
+          "nota": "Serve para ligar o ar antes de chegar em casa e ajustar sem levantar. O Midea Lite é o único sem."
+        },
+        {
+          "campo": "Garantia",
+          "valores": {
+            "midea": "Só o prazo legal (90 dias), segundo a loja da Midea",
+            "elgin": "3 anos total, 10 anos no compressor",
+            "lg": "2 anos, 10 anos no compressor",
+            "samsung": "10 anos no compressor"
+          },
+          "vencedores": [
+            "elgin"
+          ],
+          "nota": "O compressor é a peça mais cara, e três deles cobrem 10 anos. A Elgin dá a garantia total mais longa. Para o Midea, a loja oficial informa só o prazo legal — vale confirmar com o vendedor antes de comprar."
+        },
+        {
+          "campo": "Diferencial",
+          "valores": {
+            "midea": "Unidade externa compacta",
+            "elgin": "Opera de 70 V a 300 V",
+            "lg": "Comando de voz",
+            "samsung": "Modo sem vento (WindFree)"
+          },
+          "vencedores": [],
+          "nota": "É o que cada fabricante destaca. O único que muda a experiência de uso de verdade é o modo sem vento do Samsung, para quem não gosta do jato frio."
+        }
+      ],
+      "a_favor": [
+        "O split inverter de marca grande mais barato da tabela: {preco}, conferido em {data}.",
+        "O mais vendido da faixa no Mercado Livre.",
+        "Unidade externa compacta, com a proteção anticorrosão Gold Fin da Midea."
+      ],
+      "contra": [
+        "Classe D no INMETRO: os outros três da tabela são classe A.",
+        "Não tem Wi-Fi.",
+        "A loja da Midea não informa ruído, consumo nem garantia além do prazo legal de 90 dias.",
+        "A instalação é à parte, por técnico, e o custo dela não está no preço."
+      ],
+      "veredito": "O AirVolution Lite vale se o orçamento manda e o ar vai ser usado poucas horas por dia: a {preco}, é o mais barato da tabela. Se ele vai ficar ligado a noite inteira, o Elgin Eco Inverter II custa perto disso e é classe A, com Wi-Fi e 3 anos de garantia total — é a troca que a maioria deveria fazer. Se silêncio para dormir pesa, o LG Voice é classe A, tem Wi-Fi e declara 22 dB(A) no modo mais baixo. E se o vento frio direto incomoda, o Samsung WindFree é o único com modo sem vento, mas é o mais caro. Em todos, some o custo da instalação.",
+      "fontes": [
+        {
+          "titulo": "Midea Ar-Condicionado Split 12000 BTUs Inverter Lite Frio (42EBVCA12M5 / 38TBVCA12M5) — loja oficial da Midea",
+          "url": "https://www.midea.com.br/ar-condicionado-split-12000-btus-inverter-lite-frio/p"
+        },
+        {
+          "titulo": "Elgin Eco Inverter II Wi-Fi 12.000 BTU/h Frio 220 V — página oficial da Elgin",
+          "url": "https://www.elgin.com.br/ar-condicionado-split-high-wall-eco-inverter-ii-12000-btus-frio-wifi-220v/p"
+        },
+        {
+          "titulo": "LG AI Dual Inverter Voice 12.000 BTU Frio 220 V (S3-Q12JA31K) — página oficial da LG Brasil",
+          "url": "https://www.lg.com/br/ar-condicionado-residencial/dual-inverter-split/s3-q12ja31k-1/"
+        },
+        {
+          "titulo": "Samsung WindFree AI Pro 12.000 BTUs Frio (AR60H12D1AW) — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/air-conditioners/wall-mount/air-conditioner-split-inverter-windfree-ai-pro-12000-btus-f-ar60h12d1aw/"
+        }
+      ],
+      "escrito_em": "2026-10-03"
     }
   ]
 }

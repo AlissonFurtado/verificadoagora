@@ -1539,12 +1539,285 @@
       "disponivel": true,
       "data_adicionado": "2026-10-03",
       "verificado_em": "2026-10-03"
+    },
+    {
+      "id": 40,
+      "nome": "Ar-condicionado TCL BreezeIN AI 9.000 BTUs Frio",
+      "categoria": "Ar-condicionado",
+      "preco_original": 2499,
+      "preco_atual": 2060.1,
+      "desconto_percentual": 17,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1besapm",
+      "cupom": "",
+      "descricao": "Split inverter 9.000 BTUs, só frio, 220 V, Wi-Fi e classe A no INMETRO",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_951526-MLA114374608155_072026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB75342806",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03",
+      "analise": [
+        "O BreezeIN AI é o 9.000 BTUs mais vendido da categoria no Mercado Livre, e a ficha da TCL explica parte do motivo: **classe A no INMETRO e IDRS 7**, o índice que mede quanto frio o aparelho entrega por energia gasta ao longo da estação — é o maior entre os três de 9.000 BTUs que comparamos. Tem Wi-Fi com comando de voz e o modo de brisa suave que espalha o ar sem jato direto na cama.",
+        "O que pesa contra: a TCL não publica o nível de ruído nem o consumo em watts deste modelo, então não dá para dizer se ele é mais silencioso que o LG. A garantia é de 10 anos no compressor, mas só 2 anos no restante do aparelho — e a TCL condiciona a garantia à instalação por técnico credenciado. Ar-condicionado split não vem instalado: a instalação é feita por técnico, à parte, e o custo dela não está no preço daqui.",
+        "Compre se você quer o mais econômico da faixa com controle pelo celular. Se o quarto é para dormir e silêncio é prioridade, o LG Compact é o único dos três que declara o ruído (22 dB no mínimo) — em troca, ele não tem Wi-Fi e é classe C."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ele tem Wi-Fi?",
+          "resposta": "Tem. Dá para ligar, desligar e mudar a temperatura pelo celular, e aceita comando de voz."
+        },
+        {
+          "pergunta": "É silencioso?",
+          "resposta": "A TCL não divulga o nível de ruído deste modelo, então não dá para cravar. Dos 9.000 BTUs que comparamos, só o LG publica esse número."
+        },
+        {
+          "pergunta": "Funciona em tomada 127 V?",
+          "resposta": "Não. Este modelo é 220 V. Em casa com rede 127 V é preciso outro modelo ou um circuito 220 V feito por eletricista."
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "nome": "Ar-condicionado Gree G-Top Auto 9.000 BTUs Frio",
+      "categoria": "Ar-condicionado",
+      "preco_original": 2529,
+      "preco_atual": 1889,
+      "desconto_percentual": 25,
+      "preco_no_pix": false,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/1SbZRWv",
+      "cupom": "",
+      "descricao": "Split inverter 9.000 BTUs, só frio, 220 V, Wi-Fi e classe A no INMETRO",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_656796-MLA99930306733_112025-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB42082681",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03",
+      "analise": [
+        "A Gree é a maior fabricante de ar-condicionado do mundo, e o G-Top Auto é o modelo de entrada dela com o que importa: inverter, **classe A no INMETRO**, Wi-Fi e gás R-32. O consumo declarado é de 362,6 kWh por ano no ensaio do INMETRO, e a garantia é a mais longa da faixa: **10 anos no compressor e 5 anos nas demais peças**.",
+        "O IDRS dele é 6,01 — bom, mas abaixo dos 7 do TCL, o que quer dizer que gasta um pouco mais de energia para o mesmo frio ao longo do verão. A Gree também não divulga o ruído da unidade interna. Ar-condicionado split não vem instalado: a instalação é feita por técnico, à parte, e o custo dela não está no preço daqui.",
+        "Compre se você quer o 9.000 BTUs classe A mais barato da nossa lista, com a garantia mais longa nas peças. Se economia de energia no ano todo é o critério, o TCL tem o IDRS maior; se é silêncio, o LG é o único que mostra o número."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a garantia?",
+          "resposta": "10 anos no compressor e 5 anos nas demais peças, segundo a Gree. É a garantia mais longa entre os 9.000 BTUs que comparamos."
+        },
+        {
+          "pergunta": "Ele vem instalado?",
+          "resposta": "Não. A instalação é por técnico, à parte, e o custo não está no preço."
+        },
+        {
+          "pergunta": "Funciona em tomada 127 V?",
+          "resposta": "Não. Este modelo é 220 V. Em casa com rede 127 V é preciso outro modelo ou um circuito 220 V feito por eletricista."
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "nome": "Ar-condicionado LG Dual Inverter Compact AI 9.000 BTUs Frio",
+      "categoria": "Ar-condicionado",
+      "preco_original": 2289,
+      "preco_atual": 2289,
+      "desconto_percentual": 0,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/33ebygG",
+      "cupom": "",
+      "descricao": "Split Dual Inverter 9.000 BTUs, só frio, 220 V, 22 dB no modo mais baixo",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_915000-MLA99433689578_112025-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB55690976",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03",
+      "analise": [
+        "O ponto forte do Compact é o silêncio, e é o único da faixa que prova isso com número: a LG declara **22 dB(A) no modo mais baixo** e 38 dB(A) no mais alto, o que serve bem para quarto de dormir. O compressor Dual Inverter tem 10 anos de garantia, e a unidade externa leva o tratamento anticorrosão da LG.",
+        "Dois pontos contra, e os dois estão na ficha da própria LG: ele é **classe C no INMETRO** — os outros dois que comparamos são A — e **não tem Wi-Fi**, porque a linha Compact fica de fora do app ThinQ. O controle é só pelo remoto. Também é o mais caro dos três, e sem desconto anunciado hoje. Ar-condicionado split não vem instalado: a instalação é feita por técnico, à parte, e o custo dela não está no preço daqui.",
+        "Compre se o ar vai ficar ligado a noite toda num quarto e o barulho é o que mais incomoda. Se a conta de luz pesa mais, o TCL e o Gree são classe A e custam menos."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ele é silencioso?",
+          "resposta": "É o único dos 9.000 BTUs que comparamos que declara o ruído: 22 dB(A) no modo mais baixo e 38 dB(A) no mais alto, segundo a LG."
+        },
+        {
+          "pergunta": "Dá para controlar pelo celular?",
+          "resposta": "Não. A LG informa que a linha Compact não tem conexão com o app ThinQ — o controle é só pelo remoto."
+        },
+        {
+          "pergunta": "É econômico?",
+          "resposta": "Ele é classe C no INMETRO. Gasta menos que um aparelho sem inverter, mas mais que o TCL e o Gree, que são classe A."
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "nome": "Ar-condicionado Midea AirVolution Lite 12.000 BTUs Frio",
+      "categoria": "Ar-condicionado",
+      "preco_original": 2129,
+      "preco_atual": 2129,
+      "desconto_percentual": 0,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1rKPcy7",
+      "cupom": "",
+      "descricao": "Split inverter 12.000 BTUs, só frio, 220 V — o mais vendido da faixa",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_673573-MLA109283375025_032026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB66999694",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03",
+      "analise": [
+        "O AirVolution Lite é o 12.000 BTUs mais vendido do Mercado Livre, e o motivo é o preço: é o split inverter de marca grande mais barato da faixa. A unidade externa é compacta e tem a proteção anticorrosão Gold Fin da Midea.",
+        "O preço baixo tem custo, e ele está na ficha da própria Midea: **classe D no INMETRO**, a pior da nossa comparação — Elgin, LG e Samsung são classe A. Para um aparelho que fica ligado muitas horas no verão, essa diferença volta na conta de luz. Ele também **não tem Wi-Fi**, e a loja da Midea não informa ruído, consumo nem garantia além do prazo legal. Ar-condicionado split não vem instalado: a instalação é feita por técnico, à parte, e o custo dela não está no preço daqui.",
+        "Compre se o orçamento manda e o ar vai ser usado poucas horas por dia. Se ele vai ficar ligado a noite inteira, o Elgin Eco Inverter II custa quase o mesmo e é classe A, com Wi-Fi."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ele é econômico?",
+          "resposta": "É inverter, mas classe D no INMETRO — a pior entre os 12.000 BTUs que comparamos. Elgin, LG e Samsung são classe A."
+        },
+        {
+          "pergunta": "Tem Wi-Fi?",
+          "resposta": "Não. O controle é só pelo controle remoto."
+        },
+        {
+          "pergunta": "Funciona em tomada 127 V?",
+          "resposta": "Não. Este modelo é 220 V. Em casa com rede 127 V é preciso outro modelo ou um circuito 220 V feito por eletricista."
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "nome": "Ar-condicionado Elgin Eco Inverter II 12.000 BTUs Frio Wi-Fi",
+      "categoria": "Ar-condicionado",
+      "preco_original": 3281,
+      "preco_atual": 2296.69,
+      "desconto_percentual": 30,
+      "preco_no_pix": false,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/23tMHuC",
+      "cupom": "",
+      "descricao": "Split inverter 12.000 BTUs, só frio, 220 V, Wi-Fi e classe A no INMETRO",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_946950-MLA99989460377_112025-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB32442004",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03",
+      "analise": [
+        "O Eco Inverter II entrega o pacote completo pelo preço do mais básico da faixa: **classe A no INMETRO**, Wi-Fi de fábrica com Alexa e Google, gás R-32 e serpentina de cobre. A Elgin dá **3 anos de garantia total e 10 no compressor**, e declara que ele opera numa faixa de tensão ampla, de 70 V a 300 V — útil em lugar onde a energia oscila.",
+        "O que falta é informação: a Elgin não publica o ruído nem o consumo em watts deste modelo, então não dá para compará-lo em silêncio com o LG e o Samsung, que publicam. Ar-condicionado split não vem instalado: a instalação é feita por técnico, à parte, e o custo dela não está no preço daqui.",
+        "Compre se você quer classe A e Wi-Fi sem pagar o preço de LG ou Samsung — custa perto do Midea AirVolution Lite, que é classe D e sem Wi-Fi. Se silêncio para dormir é decisivo, o LG e o Samsung declaram o ruído; este não."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a garantia?",
+          "resposta": "3 anos de garantia total e 10 anos no compressor, segundo a Elgin."
+        },
+        {
+          "pergunta": "Aguenta queda e pico de energia?",
+          "resposta": "A Elgin declara operação de 70 V a 300 V. Isso ajuda com oscilação, mas não substitui um bom aterramento e a instalação correta."
+        },
+        {
+          "pergunta": "Funciona em tomada 127 V?",
+          "resposta": "Não. Este modelo é 220 V. Em casa com rede 127 V é preciso outro modelo ou um circuito 220 V feito por eletricista."
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "nome": "Ar-condicionado LG AI Dual Inverter Voice 12.000 BTUs Frio",
+      "categoria": "Ar-condicionado",
+      "preco_original": 2329,
+      "preco_atual": 2329,
+      "desconto_percentual": 0,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2RnMgAb",
+      "cupom": "",
+      "descricao": "Split Dual Inverter 12.000 BTUs, só frio, 220 V, Wi-Fi e classe A",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_642524-MLA107696344688_032026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB27727511",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03",
+      "analise": [
+        "O AI Dual Inverter Voice é o LG completo da faixa: **classe A no INMETRO**, Wi-Fi com o app ThinQ e comando de voz, e o ruído declarado — **22 dB(A) no modo mais baixo**, 42 dB(A) no mais alto. A LG dá 10 anos de garantia no compressor e 2 anos no aparelho, e a unidade externa tem o tratamento anticorrosão GoldFin.",
+        "A potência nominal é de 1.130 W, na mesma faixa do Samsung (1.150 W). O que ele não traz é o IDRS publicado, então a comparação de economia fica na classe do INMETRO, em que ele empata com Elgin e Samsung. Sem desconto anunciado hoje. Ar-condicionado split não vem instalado: a instalação é feita por técnico, à parte, e o custo dela não está no preço daqui.",
+        "Compre se você quer silêncio comprovado e controle pelo celular por menos que o Samsung WindFree. Se o orçamento é o critério, o Elgin é classe A com Wi-Fi e custa menos, mas não declara o ruído."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ele é silencioso?",
+          "resposta": "A LG declara 22 dB(A) no modo mais baixo e 42 dB(A) no mais alto da unidade interna."
+        },
+        {
+          "pergunta": "Funciona com Alexa?",
+          "resposta": "Sim. Tem Wi-Fi e funciona com o app LG ThinQ, Google Assistente e Alexa."
+        },
+        {
+          "pergunta": "Funciona em tomada 127 V?",
+          "resposta": "Não. Este modelo é 220 V. Em casa com rede 127 V é preciso outro modelo ou um circuito 220 V feito por eletricista."
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "nome": "Ar-condicionado Samsung WindFree AI Pro 12.000 BTUs Frio",
+      "categoria": "Ar-condicionado",
+      "preco_original": 3051.58,
+      "preco_atual": 3051.58,
+      "desconto_percentual": 0,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1mGE4GP",
+      "cupom": "",
+      "descricao": "Split inverter 12.000 BTUs, só frio, 220 V, modo sem vento, IDRS 7,0",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_709199-MLA115084029007_072026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB75731017",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-03",
+      "verificado_em": "2026-10-03",
+      "analise": [
+        "O WindFree é o topo da nossa comparação de 12.000 BTUs, e a diferença dele não é número: é o **modo sem vento**, que solta o ar frio por microfuros em vez de jato, para quem não suporta o ar batendo direto. A ficha da Samsung é a mais completa da faixa: **classe A, IDRS 7,0**, ruído de **21 dB(A)** no mínimo e 40 dB(A) no máximo, Wi-Fi com o app SmartThings e 10 anos de garantia no compressor.",
+        "O contra é o preço: custa bem mais que o Elgin, que também é classe A com Wi-Fi. Os números de ruído e potência (1.150 W) são praticamente os mesmos do LG Voice. Quem paga a diferença está pagando pelo modo sem vento. Ar-condicionado split não vem instalado: a instalação é feita por técnico, à parte, e o custo dela não está no preço daqui.",
+        "Compre se o vento frio direto incomoda você ou alguém da casa — é o recurso que nenhum outro da tabela tem. Se não incomoda, o LG Voice entrega silêncio e Wi-Fi parecidos por menos."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O que é o modo WindFree?",
+          "resposta": "É um modo em que o ar frio sai por microfuros em vez de jato, para resfriar sem vento batendo direto. É o diferencial dele na tabela."
+        },
+        {
+          "pergunta": "Vale a diferença de preço para o LG?",
+          "resposta": "Só se o vento direto incomoda. Em ruído, potência e classe de energia os dois são muito parecidos."
+        },
+        {
+          "pergunta": "Funciona em tomada 127 V?",
+          "resposta": "Não. Este modelo é 220 V. Em casa com rede 127 V é preciso outro modelo ou um circuito 220 V feito por eletricista."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-03",
     "conferido_em": "2026-10-03T15:01:33.314Z",
-    "total_produtos": 39,
+    "total_produtos": 46,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }

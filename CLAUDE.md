@@ -332,6 +332,37 @@ Samsung (vale — foi de um `alt` de imagem que saíram os **90 Hz**) e o
 vale como fonte**. O IP54 e os "6 anos" aparecem lá; só use se também
 estiverem no texto da própria Samsung.
 
+### 🟢 Nicho de ar-condicionado (03/10/2026)
+
+Pedido dele: nicho em alta, split de 9.000 e 12.000 BTUs, só no Meli. Entraram
+**7 aparelhos** (categoria nova `Ar-condicionado`, ids 40 a 46) e **2
+comparativos**: o de 9.000 tem o Gree G-Top Auto como assunto (contra TCL
+BreezeIN e LG Compact) e o de 12.000 tem o Midea AirVolution Lite (contra Elgin,
+LG Voice e Samsung WindFree). Todos são só frio, inverter e 220 V.
+
+- 🔴 **A Samsung WindFree 9k foi reprovada pelo vendedor.** O R$ 1.679 da busca
+  era de `AS20260306075752`, conta com nome de cadastro automático, quase
+  R$ 700 abaixo dos outros vendedores do mesmo aparelho. **Preço muito abaixo
+  da faixa + vendedor sem nome = não entra.**
+- ⚠️ **Catálogo que pede voltagem não mostra preço** (a página da Samsung 9k
+  dizia "Voltagem: Escolha"): o robô cairia no `results[0]`, o defeito da
+  Philco. Prefira o anúncio com voltagem fixa no título.
+- **Busca do Meli com a janela minimizada:** a lista não renderiza. O que
+  funciona é `fetch` da URL de busca e ler os blocos `"polycard":` do HTML
+  (desescapando as aspas). O modelo exato de cada anúncio sai do mesmo jeito,
+  pelo par `"Modelo","text":"..."`.
+- **Fontes de ficha de ar-condicionado, medidas:** LG e Samsung abrem completas
+  por `WebFetch`; **Elgin, Midea e TCL só pelo Chrome** (o `WebFetch` vê a
+  página vazia); a Gree, pela **loja** (`loja.gree.com.br`), não pelo site
+  institucional. ⚠️ **LG tem sufixo por lote** (S3-Q09AAQAC × S3-Q09AAQAK, com
+  potência diferente): procure a página do código exato do anúncio.
+- **Ninguém publica tudo:** ruído só LG e Samsung; IDRS só Gree, TCL e Samsung.
+  A tabela diz "Não divulgado" e a nota explica que não é o mesmo que ser pior.
+- ⚠️ **A Midea Lite é classe D** e a loja da Midea só informa garantia legal
+  de 90 dias — está dito no comparativo, e é o ponto fraco do mais vendido.
+- Toda `analise` lembra que **a instalação é à parte** e o custo não está no
+  preço. Não tire: é a primeira surpresa de quem compra split.
+
 ### 🔴 Produto de varejo não tem ficha de fabricante (20/09/2026)
 
 Terceiro caso da mesma armadilha, depois do Realme C73 e da Xiaomi. **A Smart
