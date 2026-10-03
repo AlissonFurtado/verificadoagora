@@ -1517,6 +1517,26 @@ ou esporte, é lá que se acrescenta a categoria — e aí vale o mesmo cuidado 
 sempre com subcategoria (o topo de uma categoria guarda-chuva vem cheio de
 acessório barato).
 
+## 🟡 Shopee: segunda loja de afiliado (decidido em 03/10/2026)
+
+**Decisão dele: adicionar a Shopee ao site, ao lado do Mercado Livre.**
+
+- 🟢 **Inscrição aceita em 03/10/2026** (e-mail `affiliate@mail.shopee.com.br`,
+  "Inscrição aceita - Afiliados Shopee Brasil"). **Já dá para gerar link.**
+- 🔴 **Para receber, falta o cadastro bancário e fiscal no painel** — é dele
+  (dado bancário eu não preencho). Escolha pendente: **PF ou PJ** (a A F DE
+  SOUSA tem CNPJ). A aprovação leva até ~10 dias, e **a comissão só é paga 60
+  dias depois da aprovação**: cada dia sem cadastrar empurra o primeiro
+  pagamento.
+- ⚠️ **Nada do site fala com a Shopee ainda.** O robô de preços, o garimpo, o
+  histórico e o `meli_id` são do Meli. O campo `plataforma` (kebab-case) já
+  existe e vira o rótulo do botão — `shopee` cabe nele —, mas **produto sem
+  conferência diária contradiz o nome do site**. Antes de pôr o primeiro
+  produto: pesquisar se a Shopee tem API de afiliado (preço e link por
+  programa), a comissão por categoria, e **ler os termos** como foi feito com
+  os do Meli (cláusulas de comparativo, de mídia declarada e de rede social).
+- Nada disso foi pesquisado ainda. **É a próxima frente quando ele pedir.**
+
 ## Dinheiro
 
 Três regras que não são de estilo:
