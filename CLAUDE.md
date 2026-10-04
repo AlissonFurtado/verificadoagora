@@ -1803,6 +1803,55 @@ caminho é o campo "Inspecionar qualquer URL" no topo do Search Console.
 - **Reenviar a mesma página não muda a prioridade dela**, segundo o próprio
   Google — o balão de confirmação diz isso em letras miúdas.
 
+### 🔴 04/10/2026: um site de apostas é a "canônica" de duas páginas nossas
+
+Na inspeção, **`/black-friday`** e **`/guia/vale-esperar-black-friday-controle-de-videogame`**
+estão como **"Cópia sem página canônica selecionada pelo usuário"**, e na
+`/black-friday` o **"URL canônico selecionado pelo Google" é
+`https://www.747live.bet/`** — um cassino. A última leitura do Google é de
+**18/09**, e ela registra "canônico declarado: Nenhum", embora a página declare
+canônica própria desde 16/09 (conferido no HTML de produção em 04/10: as duas
+apontam para si mesmas, `index, follow`).
+- Visto de fora, `747live.bet` **não** espelha nada nosso (todo caminho dá
+  "Page Not Found"). O padrão bate com **cloaking**: site de spam servindo
+  cópia só para o IP do Google. **Não deu para provar daqui.**
+- Feito: **novo rastreamento pedido para as duas** em 04/10.
+- **A conferir em ~1 semana:** se a canônica do Google voltou a ser a nossa.
+  Se continuar no cassino, o caminho é o **relatório de spam do Google** e/ou
+  pedido de remoção por direito autoral — **decisão dele**.
+- ⚠️ Vale inspecionar as outras páginas indexadas atrás de "canônica do Google
+  ≠ a própria URL". O regex do laço não pegou esse campo (saía vazio); só a
+  leitura da `/black-friday` feita à mão mostrou o domínio.
+
+### Pedidos de indexação de 04/10/2026, e o laço que funciona
+
+**Cota: o Google cortou no 11º pedido** ("cota foi excedida"). Pedidos aceitos
+em 04/10: comparativos do Gree 9k, do Midea 12k e do G17 (este já estava
+indexado — desperdício da 1ª versão do laço), `/black-friday`, guias de fone e
+de controle, e as fichas dos ar-condicionados Gree, Midea e TCL.
+`/guia/meu-pc-aceita-ssd-nvme` **já está indexado** (rastreado em 02/10).
+
+**Falta pedir (próximo dia, nesta ordem):** ficha do Elgin 12k (pegou a cota),
+LG Compact 9k (Detectada), LG Voice 12k, Samsung WindFree 12k, Moto G67, A36
+verde, A17, A07, G06, ventilador, Fmaxx, monitores S3 27"/24", SSD Kingston,
+placa-mãe, micro-ondas, JBL, os dois GameSir, Roku, HY320, aspirador
+Electrolux, cafeteira, mixer, liquidificador, os dois kits de potes. **Inspecione
+antes**: o relatório de páginas estava parado em 20/09, e parte disso já pode
+ter entrado.
+
+**Como o laço precisa ser, medido nesse dia:**
+- 🔴 **A tela não limpa entre inspeções.** Ler o status logo depois do `Enter`
+  pega o resultado da URL **anterior** — foi assim que o G17 (indexado) levou um
+  pedido. O que funciona: esperar a URL do topo (a linha acima de "Inspeção de
+  URL") ser a nova **e** o bloco do resultado mudar (até 15 s; se não mudar, o
+  estado é igual ao anterior e a leitura vale).
+- **Rode o laço dentro da página** (`(async()=>{...})()` guardando em
+  `window.__log`) e acompanhe com `await` de ~42 s por chamada: uma chamada
+  longa estoura o limite de 45 s do CDP, e várias esperas dentro de um
+  `browser_batch` travaram.
+- Cada pedido leva **~2 min** (inspeção + teste em tempo real); só inspecionar
+  também leva ~1–2 min com a janela minimizada.
+
 🔴 **Snippet de produto: o guia gerava 6 entidades inválidas** — todo perfil
 virava `Product` sem `offers`, e 4 dos 6 aparelhos não são nossos, então não
 têm preço. Corrigido em 16/09: aparelho do catálogo vira `Product` com
