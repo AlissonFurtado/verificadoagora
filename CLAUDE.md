@@ -645,6 +645,16 @@ cortar é bom ("Melhor celular até R$ 1.500: qual comprar em 2026" vira um
 rótulo limpo). Na decisão estraga: "Tela de celular: AMOLED ou LCD?" virava
 "Tela de celular", que não diz pergunta nenhuma.
 
+🟢 **Card compacto no celular (04/10/2026), decisão dele.** As opções eram 2
+colunas, 1 coluna compacta, 3 colunas e deixar como estava; ele escolheu **1
+coluna compacta**, e o desktop (3 a 4 colunas) não mudou. Medido numa `iframe`
+de 390 px: card de 219 → 176 px, **3,6 → 4,5 produtos por tela**, botão com os
+mesmos 40 px. ⚠️ **3 colunas foi descartado**: ~115 px por card, preço ilegível.
+**Como medir layout de celular daqui:** a janela do Chrome não redimensiona,
+mas uma `iframe` de 390×844 numa página do `next dev` (mesma origem) sim —
+mede altura, colunas e rolagem lateral, e o print dela mostra a tela de
+verdade (espere as fotos carregarem antes do print).
+
 **O orçamento da dobra, pra quem for mexer:** cabeçalho ~175px + atalhos ~50px
 + título da vitrine ~80px + filtro ~74px. Tudo que entrar acima da grade sai do
 espaço do primeiro card.
