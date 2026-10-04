@@ -76,15 +76,18 @@ export function CardProduto({
             comparativo ficam todos por cima, e nenhum deles empurra a altura
             do card. Foi assim que o card do comparativo deixou de ser 33px
             mais alto que os outros catorze. */}
-        <div className="relative w-2/5 min-w-0 shrink-0 self-stretch bg-white sm:aspect-square sm:w-full sm:self-auto">
+        {/* No celular o card é compacto (decisão dele em 04/10/2026, contra 2
+            colunas): foto em 34% da largura e menos respiro, para caberem ~4
+            produtos por tela em vez de ~3. Do `sm` pra cima nada muda. */}
+        <div className="relative w-[34%] min-w-0 shrink-0 self-stretch bg-white sm:aspect-square sm:w-full sm:self-auto">
           <Link href={caminho} className="absolute inset-0 block">
             {produto.imagem ? (
               <Image
                 src={produto.imagem}
                 alt={produto.nome}
                 fill
-                sizes="(max-width: 640px) 40vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-contain p-3 transition duration-500 group-hover:scale-105 sm:p-5"
+                sizes="(max-width: 640px) 34vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-contain p-2 transition duration-500 group-hover:scale-105 sm:p-5"
               />
             ) : (
               <div className="flex h-full items-center justify-center p-4 text-center text-xs text-slate-400">
@@ -110,7 +113,7 @@ export function CardProduto({
           )}
         </div>
 
-        <div className="flex min-w-0 flex-1 flex-col gap-1.5 p-3 sm:border-t sm:border-slate-100 sm:p-4">
+        <div className="flex min-w-0 flex-1 flex-col gap-1 p-2.5 sm:gap-1.5 sm:border-t sm:border-slate-100 sm:p-4">
           <div className="flex min-w-0 items-center justify-between gap-2">
             <span
               className="shrink-0 rounded px-1.5 py-0.5 text-[9px] font-extrabold uppercase tracking-wider text-white"
@@ -126,7 +129,7 @@ export function CardProduto({
           {/* Altura mínima de duas linhas: título curto e título longo ocupam
               o mesmo espaço, e é o que mantém todos os cards do mesmo tamanho
               mesmo em linhas diferentes da grade. */}
-          <h2 className="min-h-[2.2rem] min-w-0">
+          <h2 className="min-w-0 sm:min-h-[2.2rem]">
             <Link
               href={caminho}
               className="line-clamp-2 text-sm font-bold leading-tight text-slate-800 transition-colors hover:text-marca"
@@ -144,7 +147,7 @@ export function CardProduto({
               </span>
               {tendencia && <MiniGrafico tendencia={tendencia} />}
             </div>
-            <p className="flex flex-wrap items-baseline gap-x-2 text-[26px] font-black tracking-[-0.5px] text-marca">
+            <p className="flex flex-wrap items-baseline gap-x-2 text-[22px] font-black tracking-[-0.5px] text-marca sm:text-[26px]">
               {formatarReal(produto.preco_atual)}
               {produto.preco_no_pix && (
                 <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
@@ -153,7 +156,7 @@ export function CardProduto({
               )}
             </p>
             {/* Reserva a linha mesmo sem selo, pelo mesmo motivo do título. */}
-            <p className="flex min-h-[1.1rem] min-w-0 flex-wrap items-baseline gap-x-1.5 text-[11px] font-bold text-economia">
+            <p className="flex min-w-0 flex-wrap items-baseline gap-x-1.5 text-[11px] font-bold text-economia sm:min-h-[1.1rem]">
               {economia > 0 && <span>economiza {formatarReal(economia)}</span>}
               {selo && <span className="text-amber-700">· {selo}</span>}
             </p>
@@ -170,12 +173,14 @@ export function CardProduto({
             data-categoria={produto.categoria}
             data-preco={produto.preco_atual}
             data-onde={onde}
-            className="mt-1.5 block rounded-lg bg-marca-acao px-3 py-2.5 text-center text-[13px] font-extrabold uppercase tracking-wider text-white transition-colors hover:bg-marca"
+            className="mt-1 block rounded-lg bg-marca-acao px-3 py-2.5 text-center text-[13px] font-extrabold uppercase tracking-wider text-white transition-colors hover:bg-marca sm:mt-1.5"
           >
             Ver oferta
           </a>
 
-          <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 text-[10px] font-medium text-slate-400">
+          {/* No celular esta linha some: a data já está no topo do card, e foto
+              e nome já levam à ficha. É a linha que mais custava altura. */}
+          <div className="hidden flex-wrap items-center justify-between gap-x-2 gap-y-1 text-[10px] font-medium text-slate-400 sm:flex">
             <span className="min-w-0">Conferido em {formatarData(produto.verificado_em)}</span>
             <Link href={caminho} className="shrink-0 underline transition-colors hover:text-marca">
               detalhes
