@@ -362,6 +362,15 @@ LG Voice e Samsung WindFree). Todos são só frio, inverter e 220 V.
   de 90 dias — está dito no comparativo, e é o ponto fraco do mais vendido.
 - Toda `analise` lembra que **a instalação é à parte** e o custo não está no
   preço. Não tire: é a primeira surpresa de quem compra split.
+- 🔴 **Climatizador Ventisol CLIN 16 reprovado em 04/10**, por regra dele: só
+  entraria perto dos R$ 399 do garimpo. No dia seguinte o catálogo estava a
+  R$ 529 sem desconto e pedindo voltagem, e o anúncio mais barato de voltagem
+  fixa (R$ 410,20) era **preço de Pix** — no cartão, R$ 500,25. **Preço de
+  garimpo é de ontem: confira na página antes de prometer.**
+- **Fmaxx FT24 (monitor 24") entrou em 04/10** sem ficha de fabricante (a
+  marca não publica) — então **não vira comparativo**. A `analise` diz que o
+  "de" do anúncio não foi confirmado e que o anúncio não fala em sintonizador,
+  apesar do nome "TV-monitor".
 
 ### 🔴 Produto de varejo não tem ficha de fabricante (20/09/2026)
 

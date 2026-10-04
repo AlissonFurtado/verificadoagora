@@ -1812,12 +1812,55 @@
           "resposta": "Não. Este modelo é 220 V. Em casa com rede 127 V é preciso outro modelo ou um circuito 220 V feito por eletricista."
         }
       ]
+    },
+    {
+      "id": 47,
+      "nome": "Monitor Fmaxx FT24 24\" Full HD",
+      "categoria": "Informática",
+      "preco_original": 799,
+      "preco_atual": 439,
+      "desconto_percentual": 45,
+      "preco_no_pix": false,
+      "avaliacao": 4.7,
+      "link_afiliado": "https://meli.la/17f4cAV",
+      "cupom": "",
+      "descricao": "24 polegadas Full HD, 60 Hz, entradas HDMI e VGA, bivolt",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_776895-MLA99998769959_112025-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB44783010",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-04",
+      "verificado_em": "2026-10-04",
+      "analise": [
+        "Um monitor de 24 polegadas Full HD pelo preço de entrada da categoria: resolve escritório, estudo, planilha e série no quarto. Tem entrada HDMI e VGA — a VGA é o que salva quem ainda usa computador ou notebook antigo —, encaixe VESA para braço ou suporte de parede, e é bivolt. São mais de 5 mil vendidos, com nota 4,7 em mais de mil opiniões.",
+        "O que ele não é: **monitor de jogo**. A taxa é de 60 Hz, a do monitor comum; para jogo de tiro ou corrida, o Samsung S3 de 24 polegadas com 120 Hz aqui do site é outra categoria de fluidez. O anúncio também não diz o tipo de painel nem se ele tem sintonizador de TV, apesar do nome \"TV-monitor\" — não conte com antena sem confirmar com o vendedor. E a Fmaxx não publica ficha técnica num site próprio: tudo o que sabemos sai do anúncio, que promete 12 meses de garantia de fábrica.",
+        "Sobre o desconto: o desconto é calculado sobre o preço \"de\" do anúncio, um valor de tabela que não conseguimos confirmar em outro lugar. O que dá para dizer é o preço de hoje e o que o nosso robô vai registrar daqui em diante. Compre se você quer uma segunda tela ou um monitor de trabalho gastando pouco; se joga, vá de 120 Hz."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Serve para jogar?",
+          "resposta": "Para jogo casual, sim; para jogo competitivo, não. Ele é 60 Hz, a taxa do monitor comum. O Samsung S3 de 24 polegadas com 120 Hz, aqui do site, é bem mais fluido."
+        },
+        {
+          "pergunta": "Pega canal de TV com antena?",
+          "resposta": "O anúncio não informa sintonizador de TV, apesar do nome \"TV-monitor\". Confirme com o vendedor antes de comprar se é isso que você precisa."
+        },
+        {
+          "pergunta": "Funciona com computador antigo?",
+          "resposta": "Sim, desde que ele tenha saída VGA ou HDMI: o monitor tem as duas entradas."
+        },
+        {
+          "pergunta": "Qual a garantia?",
+          "resposta": "O anúncio informa 12 meses de garantia de fábrica."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-03",
     "conferido_em": "2026-10-03T15:01:33.314Z",
-    "total_produtos": 46,
+    "total_produtos": 47,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
