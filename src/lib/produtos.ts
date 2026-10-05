@@ -13,6 +13,16 @@ export type Produto = {
   cupom: string;
   descricao: string;
   imagem: string;
+  /**
+   * Fotos extras para a galeria da ficha, na ordem em que aparecem depois da
+   * `imagem`. Opcional: sem este campo a ficha mostra a foto de sempre.
+   *
+   * Curadoria, e o robô nunca toca. Entram só fotos **do aparelho** (frente,
+   * costas, detalhe, conteúdo da caixa): banner de marketing com texto e foto
+   * de acessório que não vem na caixa ficam de fora, porque a galeria não
+   * pode prometer o que a compra não entrega.
+   */
+  imagens?: string[];
   plataforma: string;
   /** Id do Meli (`MLB24076624` catálogo, `MLB-7547729432` anúncio). Vazio = o robô não confere. */
   meli_id: string;

@@ -757,6 +757,16 @@ Regras do arquivo:
   pra colar no buscador do Meli — **não é cupom**. O catálogo original tinha
   esse ID no campo `cupom` e a página anunciava "Cupom: HDDAJQ-ZYTV" pra quem
   nunca conseguiria usar. Não repita.
+- 🟢 **`imagens` (opcional, desde 05/10/2026) liga a galeria da ficha.** Pedido
+  dele para o iPhone 17 ("página com imagens chamativas"), escolhido contra
+  bloco de destaques e comparativo. É lista de fotos **extras**, depois da
+  `imagem`; sem o campo a ficha fica como sempre
+  (`produto/[slug]/galeria-de-fotos.tsx`, client component). **Só foto do
+  aparelho**: banner de marketing com texto e foto de acessório que não vem
+  na caixa ficam de fora — das 11 fotos do anúncio do iPhone entraram 5. As
+  fotos saem de `.ui-pdp-gallery img` na página do Meli (troque o sufixo por
+  `-F.jpg`). ⚠️ Mantenha até **5 fotos**: com miniatura de 56 px é o que cabe
+  em 390 px sem rolar. O robô não toca no campo.
 - `cupom` e `imagem` são string vazia quando não tem. Nunca `null`, nunca
   ausente. Sem `imagem`, o card mostra "Sem foto do produto" e continua de pé.
 - `desconto_percentual` é o que a loja anuncia. Pode dar 1 ponto de diferença

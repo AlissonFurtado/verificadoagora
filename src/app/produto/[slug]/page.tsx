@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { GaleriaDeFotos } from './galeria-de-fotos';
 import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import { formatarData, formatarReal, NOME_PLATAFORMA, type Produto } from '@/lib/produtos';
@@ -92,7 +93,9 @@ function DadosEstruturados({ produto }: { produto: Produto }) {
     '@type': 'Product',
     name: produto.nome,
     description: produto.descricao || undefined,
-    image: produto.imagem || undefined,
+    image: produto.imagens?.length
+      ? [produto.imagem, ...produto.imagens]
+      : produto.imagem || undefined,
     category: produto.categoria,
     offers: {
       '@type': 'Offer',
@@ -215,6 +218,9 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
         )}
 
         <div className="grid min-w-0 gap-8 md:grid-cols-2">
+          {produto.imagem && produto.imagens?.length ? (
+            <GaleriaDeFotos fotos={[produto.imagem, ...produto.imagens]} nome={produto.nome} />
+          ) : (
           <div className="relative aspect-square min-w-0 overflow-hidden rounded-2xl bg-white border border-slate-200/80 shadow-md">
             {produto.imagem ? (
               <Image
@@ -231,6 +237,7 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
               </div>
             )}
           </div>
+          )}
 
           <div className="flex min-w-0 flex-col justify-center">
             {/* O aviso vem antes do preço de propósito: quem chegou por uma

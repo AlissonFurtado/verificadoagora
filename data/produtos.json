@@ -1855,12 +1855,61 @@
           "resposta": "O anúncio informa 12 meses de garantia de fábrica."
         }
       ]
+    },
+    {
+      "id": 48,
+      "nome": "iPhone 17 256GB Sálvia",
+      "categoria": "Celulares",
+      "preco_original": 7999,
+      "preco_atual": 6015.39,
+      "desconto_percentual": 24,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1ssQ2Cu",
+      "cupom": "",
+      "descricao": "Tela OLED de 6,3\" com 120 Hz, chip A19, duas câmeras de 48 MP, até 30 h de vídeo, IP68",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_764583-MLA96087649261_102025-F.jpg",
+      "imagens": [
+        "https://http2.mlstatic.com/D_NQ_NP_855971-MLA92147418805_092025-F.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_669630-MLA91746636518_092025-F.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_902996-MLA92147448029_092025-F.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_917509-MLA92147273329_092025-F.jpg"
+      ],
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB1055308843",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-05",
+      "verificado_em": "2026-10-05",
+      "analise": [
+        "O iPhone 17 é o primeiro iPhone \"comum\" que não obriga a pagar pelo Pro para ter o que mais se sente no dia a dia: a tela de 6,3 polegadas agora é **ProMotion de 120 Hz**, com pico de 3.000 nits ao ar livre e o vidro Ceramic Shield 2. Junta o chip A19, duas câmeras traseiras de **48 MP** (principal e ultra-angular), câmera frontal de 18 MP com Center Stage e bateria para até 30 horas de reprodução de vídeo, segundo a Apple. O modelo de entrada já sai com **256 GB**, o dobro do que os anteriores traziam.",
+        "O que pesa contra, e está tudo na ficha da própria Apple: **não vem carregador na caixa**, só o cabo USB-C — e a recarga rápida de 50% em 20 minutos pede um adaptador de 40 W ou mais, comprado à parte. A porta USB-C é **USB 2**, lenta para passar vídeo grande para o computador. Não tem lente teleobjetiva: o zoom de 2x sai do recorte do sensor principal, e para zoom óptico de verdade o caminho é o Pro. E é um aparelho caro mesmo em oferta.",
+        "Compre se você quer ficar muitos anos com o mesmo celular e está vindo de um iPhone 13 ou mais antigo: tela de 120 Hz, bateria e câmera fazem diferença visível. Se o seu é um iPhone 15 ou 16, a troca é conforto, não necessidade. Este anúncio é de revendedor autorizado Apple, na cor Sálvia (verde-claro); confira a cor antes de fechar."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Vem carregador na caixa?",
+          "resposta": "Não. Na caixa vêm o iPhone e o cabo USB-C de 1 metro. O adaptador de tomada é comprado à parte, e para a recarga rápida a Apple pede um de 40 W ou mais."
+        },
+        {
+          "pergunta": "Qual a diferença para o iPhone 17 Pro?",
+          "resposta": "O 17 comum não tem lente teleobjetiva e a porta USB-C é USB 2. A tela de 120 Hz, que antes era só do Pro, ele já tem."
+        },
+        {
+          "pergunta": "É resistente à água?",
+          "resposta": "Sim. A classificação é IP68: até seis metros de profundidade por até 30 minutos, segundo a Apple. Dano por líquido não costuma ser coberto pela garantia."
+        },
+        {
+          "pergunta": "Aceita chip físico?",
+          "resposta": "Sim. No Brasil ele é Dual SIM, com um nano SIM físico e eSIM."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-04",
     "conferido_em": "2026-10-04T15:36:18.507Z",
-    "total_produtos": 47,
+    "total_produtos": 48,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
