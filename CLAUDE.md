@@ -1851,13 +1851,24 @@ indexado — desperdício da 1ª versão do laço), `/black-friday`, guias de fo
 de controle, e as fichas dos ar-condicionados Gree, Midea e TCL.
 `/guia/meu-pc-aceita-ssd-nvme` **já está indexado** (rastreado em 02/10).
 
-**Falta pedir (próximo dia, nesta ordem):** ficha do Elgin 12k (pegou a cota),
-LG Compact 9k (Detectada), LG Voice 12k, Samsung WindFree 12k, Moto G67, A36
-verde, A17, A07, G06, ventilador, Fmaxx, monitores S3 27"/24", SSD Kingston,
-placa-mãe, micro-ondas, JBL, os dois GameSir, Roku, HY320, aspirador
-Electrolux, cafeteira, mixer, liquidificador, os dois kits de potes. **Inspecione
-antes**: o relatório de páginas estava parado em 20/09, e parte disso já pode
-ter entrado.
+**Segunda rodada, 05/10/2026 — a cota cortou no 12º pedido.** Aceitos (11):
+iPhone 17, Elgin 12k, LG Compact 9k, LG Voice 12k, Moto G67, A36 verde, A17,
+Fmaxx, monitor S3 24", SSD Kingston e micro-ondas. **Já estavam indexados**
+(a inspeção poupou o pedido): Samsung WindFree 12k, A07, G06, ventilador,
+monitor S3 27", placa-mãe e JBL.
+
+**Falta pedir (próximo dia, nesta ordem):** GameSir G7 SE (Detectada; pegou a
+cota), GameSir T4, Roku, HY320, aspirador Electrolux, cafeteira, mixer,
+liquidificador e os dois kits de potes. **Inspecione antes**, como sempre.
+
+⚠️ **Dois achados da rodada de 05/10, ainda sem investigar:**
+- **A ficha do micro-ondas também está como "Cópia sem página canônica
+  selecionada pelo usuário"** — é a 3ª página com o sintoma do cassino (ver
+  acima). Novo rastreamento pedido. Não é mais caso isolado de guia.
+- **5 fichas aparecem como "O URL está no Google, mas tem problemas"**
+  (Samsung WindFree, A07, ventilador, placa-mãe, JBL): estão indexadas, e o
+  "problema" costuma ser aviso de snippet de produto. **Abrir uma delas e ler
+  qual é o aviso** antes de concluir qualquer coisa.
 
 **Como o laço precisa ser, medido nesse dia:**
 - 🔴 **A tela não limpa entre inspeções.** Ler o status logo depois do `Enter`
