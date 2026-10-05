@@ -1,66 +1,21 @@
 {
-  "garimpado_em": "2026-10-03",
-  "total": 4,
+  "garimpado_em": "2026-10-05",
+  "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB44783010",
-      "familia": "Monitor Fmaxx com tela de 24\"",
+      "meli_id": "MLB19035706",
+      "familia": "interno Kingston SA400S37/240G Sa400s 240GB",
       "tipo": "produto",
-      "nome": "Tv-Monitor Fmaxx Ft24'' Led Full HD Cor Preto",
-      "categoria": "Monitores e Acessórios",
-      "preco": 439,
-      "preco_original": 799,
-      "desconto_percentual": 45,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_776895-MLA99998769959_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB44783010",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-10-03"
-    },
-    {
-      "meli_id": "MLB18914706",
-      "familia": "Memória RAM ValueRAM 8GB 1 Kingston KVR16N11/8",
-      "tipo": "produto",
-      "nome": "Memória RAM Kingston 8GB Ddr3 Pc3 12800 KVR16N11/8 PC",
-      "categoria": "Portáteis e Acessórios",
-      "preco": 110.88,
-      "preco_original": 159.99,
-      "desconto_percentual": 30,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_811331-MLA104781725270_012026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB18914706",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-10-03"
-    },
-    {
-      "meli_id": "MLB26208174",
-      "familia": "Climatizador portátil frio Ventisol CLIN 16 BR/CZ",
-      "tipo": "produto",
-      "nome": "Climatizador Ar Frio Portátil Evaporativo 16 Litros Umidificador Ventisol Clin 16",
-      "categoria": "Eletrodomésticos",
-      "preco": 399,
-      "preco_original": 553.9,
-      "desconto_percentual": 27,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_665541-MLA91981620699_092025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB26208174",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-10-03"
-    },
-    {
-      "meli_id": "MLB21252460",
-      "familia": "interno Western Digital WD Purple WD10PURZ 1TB",
-      "tipo": "produto",
-      "nome": "Disco rígido de vigilância Sata Western Digital Dvr roxo de 1 TB",
+      "nome": "SSD 240GB Kingston Sa400s37/240g",
       "categoria": "Armazenamento",
-      "preco": 473,
-      "preco_original": 599.37,
-      "desconto_percentual": 21,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_730188-MLA31351450077_072019-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB21252460",
+      "preco": 324.72,
+      "preco_original": 850,
+      "desconto_percentual": 61,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_893707-MLA84846929763_052025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB19035706",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-03"
+      "garimpado_em": "2026-10-05"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-03",
+  "atualizado_em": "2026-10-05",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -834,6 +834,12 @@
       "sugerido_em": "2026-10-03",
       "familia": "interno Western Digital WD Purple WD10PURZ 1TB",
       "preco_sugerido": 473,
+      "vezes": 1
+    },
+    "MLB19035706": {
+      "sugerido_em": "2026-10-05",
+      "familia": "interno Kingston SA400S37/240G Sa400s 240GB",
+      "preco_sugerido": 324.72,
       "vezes": 1
     }
   }
