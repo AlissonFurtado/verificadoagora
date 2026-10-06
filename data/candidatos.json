@@ -1,21 +1,21 @@
 {
-  "garimpado_em": "2026-10-05",
+  "garimpado_em": "2026-10-06",
   "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB19035706",
-      "familia": "interno Kingston SA400S37/240G Sa400s 240GB",
+      "meli_id": "MLB48468943",
+      "familia": "Headset gamer Redragon Zeus Lite H510-LIT H510 - LIT",
       "tipo": "produto",
-      "nome": "SSD 240GB Kingston Sa400s37/240g",
-      "categoria": "Armazenamento",
-      "preco": 324.72,
-      "preco_original": 850,
-      "desconto_percentual": 61,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_893707-MLA84846929763_052025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB19035706",
+      "nome": "Headset Gamer Redragon Zeus Lite Preto Drivers 53mm com Microfone Removível",
+      "categoria": "Games",
+      "preco": 160,
+      "preco_original": 255.79,
+      "desconto_percentual": 37,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_743438-MLA105468591979_012026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB48468943",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-05"
+      "garimpado_em": "2026-10-06"
     }
   ]
 }

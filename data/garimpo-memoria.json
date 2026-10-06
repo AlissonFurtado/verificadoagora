@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-05",
+  "atualizado_em": "2026-10-06",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -840,6 +840,12 @@
       "sugerido_em": "2026-10-05",
       "familia": "interno Kingston SA400S37/240G Sa400s 240GB",
       "preco_sugerido": 324.72,
+      "vezes": 1
+    },
+    "MLB48468943": {
+      "sugerido_em": "2026-10-06",
+      "familia": "Headset gamer Redragon Zeus Lite H510-LIT H510 - LIT",
+      "preco_sugerido": 160,
       "vezes": 1
     }
   }
