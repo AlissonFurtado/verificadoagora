@@ -1904,12 +1904,61 @@
           "resposta": "Sim. No Brasil ele é Dual SIM, com um nano SIM físico e eSIM."
         }
       ]
+    },
+    {
+      "id": 49,
+      "nome": "iPhone 17e 256GB Branco",
+      "categoria": "Celulares",
+      "preco_original": 5799,
+      "preco_atual": 4776.67,
+      "desconto_percentual": 17,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1tAyjxe",
+      "cupom": "",
+      "descricao": "Tela OLED de 6,1\", chip A19, câmera de 48 MP, MagSafe, até 26 h de vídeo, IP68",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_789505-MLA107970974897_032026-F.jpg",
+      "imagens": [
+        "https://http2.mlstatic.com/D_NQ_NP_842516-MLA107971502153_032026-F.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_892378-MLA107265569912_032026-F.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_672308-MLA107265194154_032026-F.jpg",
+        "https://http2.mlstatic.com/D_NQ_NP_634854-MLA107265629486_032026-F.jpg"
+      ],
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB1066130045",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-05",
+      "verificado_em": "2026-10-05",
+      "analise": [
+        "O 17e é a porta de entrada da linha: o mesmo chip **A19** do iPhone 17, 256 GB já no modelo básico, tela OLED de 6,1 polegadas com o vidro Ceramic Shield 2 e uma câmera traseira de **48 MP** com estabilização óptica. Tem recarga sem fio **MagSafe** de até 15 W, resistência à água IP68 e bateria para até 26 horas de reprodução de vídeo, segundo a Apple. É o caminho mais barato para um iPhone novo.",
+        "O preço menor vem de cortes que estão na ficha da própria Apple, e vale conhecê-los antes: é **uma câmera só** — não tem ultra-angular, então foto de grupo apertado ou de paisagem ampla fica de fora, e o zoom de 2x sai do recorte do sensor. A ficha **não lista ProMotion nem 120 Hz**, que o iPhone 17 tem; o brilho máximo é de 1.200 nits em HDR, bem abaixo do irmão; e a câmera frontal é de 12 MP, sem o Center Stage. Como nos outros, **não vem carregador na caixa**, só o cabo, e a porta USB-C é USB 2.",
+        "Compre se você quer um iPhone novo gastando o mínimo e usa o celular para o básico bem-feito: mensagens, redes, banco, fotos do dia a dia. Se fotografia importa ou você repara em tela mais fluida, o iPhone 17 aqui do site entrega a segunda câmera, os 120 Hz e mais bateria — a diferença de preço compra exatamente isso. Este anúncio é de revendedor autorizado Apple, na cor branca."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a diferença para o iPhone 17?",
+          "resposta": "O 17e tem uma câmera traseira em vez de duas, tela de 6,1\" sem os 120 Hz do ProMotion, brilho menor e bateria para 26 horas de vídeo contra 30. O chip A19 e os 256 GB são os mesmos."
+        },
+        {
+          "pergunta": "Tem câmera ultra-angular?",
+          "resposta": "Não. É uma câmera traseira só, de 48 MP. Quem fotografa paisagem ou grupo em lugar apertado sente falta."
+        },
+        {
+          "pergunta": "Vem carregador na caixa?",
+          "resposta": "Não. Vêm o iPhone e o cabo USB-C de 1 metro. A Apple informa recarga de 50% em 30 minutos com adaptador de 20 W ou mais, comprado à parte."
+        },
+        {
+          "pergunta": "Funciona com MagSafe?",
+          "resposta": "Sim. A recarga sem fio MagSafe e Qi2 vai até 15 W, segundo a Apple."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-05",
     "conferido_em": "2026-10-05T19:33:33.047Z",
-    "total_produtos": 48,
+    "total_produtos": 49,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
