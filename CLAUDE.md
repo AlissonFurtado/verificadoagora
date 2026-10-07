@@ -752,6 +752,18 @@ referência de quais campos existem.
 
 Regras do arquivo:
 
+- 🟢 **O "ID do produto" serve para vídeo, e leva ao mesmo lugar que o link**
+  (medido em 07/10/2026). Buscar `HDDAJQ-JMUD` (iPhone 17) no Meli redireciona
+  para `/social/alisson580` com `matt_word=alisson580` e `ref` — exatamente o
+  destino do `meli.la`. O prefixo `HDDAJQ` é o código dele; o sufixo, o produto.
+  **Onde achar:** na página do produto, logado, barra "GANHOS X%" → botão
+  **Compartilhar** → "Gerar link / ID de produto" (traz link, ID e um texto
+  sugerido). O Linkbuilder não mostra o ID. ⚠️ **Não foi medido se a venda entra
+  como comissão** — só que o caminho é o mesmo; o teste é ver o clique no
+  painel. A mesma barra mostra a **comissão da categoria** ("GANHOS 5%" em
+  celular): é a fonte para a faixa de cada produto, em vez de blog.
+  **Uso:** texto na tela de reel ("ID: … no Mercado Livre"), onde link não
+  clica. Continua **não sendo cupom**.
 - `cupom` é **cupom de desconto de verdade**, e nada mais. O painel de
   afiliados também mostra um "ID do produto" (tipo `HDDAJQ-17AY`), que serve
   pra colar no buscador do Meli — **não é cupom**. O catálogo original tinha
