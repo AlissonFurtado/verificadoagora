@@ -1,21 +1,21 @@
 {
-  "garimpado_em": "2026-10-06",
+  "garimpado_em": "2026-10-07",
   "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB48468943",
-      "familia": "Headset gamer Redragon Zeus Lite H510-LIT H510 - LIT",
+      "meli_id": "MLB18610873",
+      "familia": "Kit de teclado e mouse sem fio Logitech MK345",
       "tipo": "produto",
-      "nome": "Headset Gamer Redragon Zeus Lite Preto Drivers 53mm com Microfone Removível",
-      "categoria": "Games",
-      "preco": 160,
-      "preco_original": 255.79,
-      "desconto_percentual": 37,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_743438-MLA105468591979_012026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB48468943",
+      "nome": "Combo Teclado e Mouse sem fio Logitech MK345 Layout ABNT2",
+      "categoria": "Portáteis e Acessórios",
+      "preco": 185,
+      "preco_original": 308.66,
+      "desconto_percentual": 40,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_744467-MLA99454443828_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB18610873",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-06"
+      "garimpado_em": "2026-10-07"
     }
   ]
 }

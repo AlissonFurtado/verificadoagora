@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-06",
+  "atualizado_em": "2026-10-07",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -846,6 +846,12 @@
       "sugerido_em": "2026-10-06",
       "familia": "Headset gamer Redragon Zeus Lite H510-LIT H510 - LIT",
       "preco_sugerido": 160,
+      "vezes": 1
+    },
+    "MLB18610873": {
+      "sugerido_em": "2026-10-07",
+      "familia": "Kit de teclado e mouse sem fio Logitech MK345",
+      "preco_sugerido": 185,
       "vezes": 1
     }
   }
