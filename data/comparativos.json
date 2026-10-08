@@ -1524,7 +1524,7 @@
           "porque": "Classe A e o maior IDRS dos três (7), o índice que mede frio entregue por energia gasta na estação. Tem Wi-Fi."
         },
         {
-          "perfil": "Quer o menor preço com classe A",
+          "perfil": "Quer a garantia mais longa",
           "chave": "gree",
           "porque": "Classe A, Wi-Fi e a garantia mais longa nas peças: 5 anos, além dos 10 no compressor."
         },
@@ -1636,7 +1636,7 @@
         "A Gree não publica o ruído da unidade interna, então não dá para compará-lo em silêncio com o LG.",
         "A instalação é à parte, por técnico, e o custo dela não está no preço."
       ],
-      "veredito": "O G-Top Auto vale se você quer o 9.000 BTUs classe A mais barato da tabela, com Wi-Fi e a garantia mais longa nas peças — a {preco}, a economia sobre a tabela é de {economia}. Se o que pesa é a conta de luz no verão inteiro, o TCL BreezeIN tem o IDRS maior e também é classe A. Se o ar vai ficar ligado a noite toda num quarto e o barulho incomoda, o LG Compact é o único que prova o silêncio com número, mas é classe C e não tem Wi-Fi. Em qualquer um dos três, some o custo da instalação, que não está no preço.",
+      "veredito": "O G-Top Auto vale se você quer um 9.000 BTUs classe A com Wi-Fi e a garantia mais longa nas peças. Hoje ele está a {preco}: compare com o preço dos outros dois na tabela acima, que o robô atualiza todo dia. Se o que pesa é a conta de luz no verão inteiro, o TCL BreezeIN tem o IDRS maior e também é classe A. Se o ar vai ficar ligado a noite toda num quarto e o barulho incomoda, o LG Compact é o único que prova o silêncio com número, mas é classe C e não tem Wi-Fi. Em qualquer um dos três, some o custo da instalação, que não está no preço.",
       "fontes": [
         {
           "titulo": "Gree G-Top Auto Inverter 9.000 BTU/h Frio R-32 220 V — loja oficial da Gree",
@@ -1659,24 +1659,24 @@
       "resumo": "O Midea AirVolution Lite de 12.000 BTUs é o mais vendido da faixa no Mercado Livre e está a {preco}. Pusemos a ficha dele ao lado de três outros 12.000 BTUs só frio, inverter e 220 V que acompanhamos: Elgin Eco Inverter II, LG AI Dual Inverter Voice e Samsung WindFree AI Pro. As especificações vêm dos fabricantes, e onde o fabricante não publica um número, a célula diz isso. Os preços são conferidos pelo nosso robô todo dia.",
       "escolha_rapida": [
         {
-          "perfil": "Quer classe A e Wi-Fi gastando pouco",
+          "perfil": "Quer classe A, Wi-Fi e garantia longa",
           "chave": "elgin",
-          "porque": "Classe A, Wi-Fi e 3 anos de garantia total por um preço perto do Midea, que é classe D."
+          "porque": "Classe A, Wi-Fi, 3 anos de garantia total e 10 anos no compressor."
         },
         {
           "perfil": "Vai dormir com ele ligado",
           "chave": "lg",
-          "porque": "Classe A, Wi-Fi e ruído declarado de 22 dB(A) no modo mais baixo, por menos que o Samsung."
+          "porque": "Classe A, Wi-Fi e ruído declarado de 22 dB(A) no modo mais baixo."
         },
         {
           "perfil": "Não suporta vento frio direto",
           "chave": "samsung",
-          "porque": "O modo WindFree solta o ar por microfuros, sem jato. É o mais caro da tabela."
+          "porque": "O modo WindFree solta o ar por microfuros, sem jato. É o único da tabela com esse recurso."
         },
         {
-          "perfil": "O orçamento manda e o uso é curto",
+          "perfil": "Vai ligar poucas horas por dia",
           "chave": "midea",
-          "porque": "O mais barato da tabela, mas classe D e sem Wi-Fi: compensa para quem liga poucas horas por dia."
+          "porque": "É o mais vendido da faixa, mas classe D e sem Wi-Fi: só compensa com pouco uso e preço bem abaixo dos classe A."
         }
       ],
       "colunas": [
@@ -1715,7 +1715,7 @@
             "lg",
             "samsung"
           ],
-          "nota": "É a etiqueta colada no aparelho, de A (mais econômico) a E. O Midea é o único fora da classe A — e num ar que fica ligado a noite toda, é aqui que o preço mais baixo dele volta na conta de luz."
+          "nota": "É a etiqueta colada no aparelho, de A (mais econômico) a E. O Midea é o único fora da classe A — e num ar que fica ligado a noite toda, a diferença aparece na conta de luz."
         },
         {
           "campo": "IDRS (eficiência na estação)",
@@ -1794,7 +1794,7 @@
         }
       ],
       "a_favor": [
-        "O split inverter de marca grande mais barato da tabela: {preco}, conferido em {data}.",
+        "Preço de hoje: {preco}, conferido em {data}.",
         "O mais vendido da faixa no Mercado Livre.",
         "Unidade externa compacta, com a proteção anticorrosão Gold Fin da Midea."
       ],
@@ -1804,7 +1804,7 @@
         "A loja da Midea não informa ruído, consumo nem garantia além do prazo legal de 90 dias.",
         "A instalação é à parte, por técnico, e o custo dela não está no preço."
       ],
-      "veredito": "O AirVolution Lite vale se o orçamento manda e o ar vai ser usado poucas horas por dia: a {preco}, é o mais barato da tabela. Se ele vai ficar ligado a noite inteira, o Elgin Eco Inverter II custa perto disso e é classe A, com Wi-Fi e 3 anos de garantia total — é a troca que a maioria deveria fazer. Se silêncio para dormir pesa, o LG Voice é classe A, tem Wi-Fi e declara 22 dB(A) no modo mais baixo. E se o vento frio direto incomoda, o Samsung WindFree é o único com modo sem vento, mas é o mais caro. Em todos, some o custo da instalação.",
+      "veredito": "O AirVolution Lite vale se o ar vai ser usado poucas horas por dia e o preço dele, hoje {preco}, estiver bem abaixo dos classe A da tabela. Se ele vai ficar ligado a noite inteira, o Elgin Eco Inverter II é classe A, com Wi-Fi e 3 anos de garantia total: compare o preço dos dois acima antes de decidir. Se silêncio para dormir pesa, o LG Voice é classe A, tem Wi-Fi e declara 22 dB(A) no modo mais baixo. E se o vento frio direto incomoda, o Samsung WindFree é o único com modo sem vento. Em todos, some o custo da instalação.",
       "fontes": [
         {
           "titulo": "Midea Ar-Condicionado Split 12000 BTUs Inverter Lite Frio (42EBVCA12M5 / 38TBVCA12M5) — loja oficial da Midea",

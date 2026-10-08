@@ -362,6 +362,15 @@ LG Voice e Samsung WindFree). Todos são só frio, inverter e 220 V.
   de 90 dias — está dito no comparativo, e é o ponto fraco do mais vendido.
 - Toda `analise` lembra que **a instalação é à parte** e o custo não está no
   preço. Não tire: é a primeira surpresa de quem compra split.
+- 🔴 **Comparação de preço escrita à mão envelhece igual a preço escrito**
+  (08/10/2026). Eu tinha escrito "o classe A **mais barato** da tabela" (Gree),
+  "o Elgin **custa perto** do Midea", "é o **mais caro** dos três" — e em 5
+  dias o Gree virou o mais caro dos 9k e o Elgin ficou R$ 660 acima do Midea.
+  Foram ~25 frases reescritas em `analise`, `veredito`, `escolha_rapida` e
+  notas. **A regra de "nenhum preço no arquivo" inclui "mais barato", "mais
+  caro", "custa perto", "por menos" e "o orçamento manda":** o texto diz o que
+  o aparelho *tem* e manda comparar o preço do dia, que a tabela já mostra.
+  Um `grep` por essas expressões antes de publicar comparativo resolve.
 - 🔴 **Climatizador Ventisol CLIN 16 reprovado em 04/10**, por regra dele: só
   entraria perto dos R$ 399 do garimpo. No dia seguinte o catálogo estava a
   R$ 529 sem desconto e pedindo voltagem, e o anúncio mais barato de voltagem
@@ -958,6 +967,17 @@ nenhum** até alguém reparar. Revertido em 01/10.
   queda geral da API, não para um id ruim.
 - A Philco segue virando suspeita todo dia, com o preço certo na vitrine. A
   correção de verdade é no `results[0]` — **decisão dele**, pendente.
+
+🔴 **Id de catálogo com 10 dígitos era lido como anúncio** (06 a 08/10/2026).
+`ehCatalogo()` decidia pelo tamanho do número (até 9 dígitos); os ids novos têm
+10 (`MLB1055308843`, o iPhone 17). O robô consultou os dois iPhones em
+`/items/`, levou 404 e **os desligou da vitrine no primeiro dia** — ficaram 3
+dias fora, e só apareceu porque a busca da `/entrar` não os achava. Corrigido
+em 08/10: **sem hífen é catálogo, com hífen é anúncio** (a convenção do
+`produtos.json`). Rodada manual no mesmo dia confirmou: os dois voltaram.
+⚠️ **Produto novo: no dia seguinte, confira se ele continua `disponivel`** —
+"sumiu do Meli (404)" no commit do robô, para algo cadastrado ontem, é bug de
+consulta até prova em contrário.
 
 ⚠️ **Sintoma para procurar em outros produtos:** histórico com **um ponto só**
 e `verificado_em` parado há dias. O do OPPO tinha exatamente 1 ponto, de
@@ -2030,6 +2050,26 @@ abre nas próximas horas" em vez de um botão morto.
 ### `/entrar` — a página de captação
 
 `src/app/entrar/page.tsx`, `noindex`. É o destino do link na bio e dos reels.
+
+🟢 **Reescrita em 08/10/2026, a pedido dele** ("o link da bio só tem um botão
+grande para o canal; quem quer ver produto só acha no rodapé — me surpreenda").
+Agora serve aos **dois caminhos**, nesta ordem: dois botões grandes (canal e
+"ver as ofertas em destaque") → **busca rápida** "Qual produto você viu?"
+(`busca-rapida.tsx`, com chips de categoria) → **oferta principal** com foto
+grande → **carrossel** de até 8 destaques → "ver todos os N produtos" → os
+números de prova. A **barra fixa** (`barra-dupla.tsx`) traz os dois botões de
+volta quando os do topo saem da tela.
+- **Destaque = queda medida, na ordem do canal**: caiu entre as duas últimas
+  conferências, depois caiu na semana, depois maior desconto anunciado. Selo
+  verde só para queda de **3% E R$ 15** (a barra da manchete do canal), sempre
+  com a data ("Era R$ X em DD/MM"); o resto leva o "% OFF" vermelho da loja.
+- Os cliques entram como `entrar-principal`, `entrar-carrossel`,
+  `entrar-canal` e `entrar-canal-barra`.
+- ⚠️ A barra fixa mede pela **posição na rolagem**, não por
+  `IntersectionObserver`: com a aba do Chrome em segundo plano o observer não
+  dispara, e é assim que a página é testada daqui (iframe de 390 px).
+- Medido na iframe: sem rolagem lateral, os dois botões na primeira tela, a
+  busca acha por nome sem acento e por categoria.
 
 ⚠️ **O modelo do mercado promete número; nós prometemos prova.** As landings
 de grupo anunciam "+40.000 membros" — não temos isso e não vamos inventar. A
