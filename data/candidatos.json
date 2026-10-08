@@ -1,21 +1,36 @@
 {
-  "garimpado_em": "2026-10-07",
-  "total": 1,
+  "garimpado_em": "2026-10-08",
+  "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB18610873",
-      "familia": "Kit de teclado e mouse sem fio Logitech MK345",
+      "meli_id": "MLB63708330",
+      "familia": "Monitor LG com tela de 20\" 75Hz e resolução HD",
       "tipo": "produto",
-      "nome": "Combo Teclado e Mouse sem fio Logitech MK345 Layout ABNT2",
-      "categoria": "Portáteis e Acessórios",
-      "preco": 185,
-      "preco_original": 308.66,
-      "desconto_percentual": 40,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_744467-MLA99454443828_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB18610873",
+      "nome": "Monitor LG LED 20\" - HD+, 75Hz, 2ms, HDMI/VGA, Modo Leitura, Flicker Safe, Black Stabilizer, Dynamic Action Sync, Preto- 20U401A",
+      "categoria": "Monitores e Acessórios",
+      "preco": 285,
+      "preco_original": 599,
+      "desconto_percentual": 52,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_699928-MLA105314087580_012026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB63708330",
+      "no_foco": false,
+      "motivo": "ficou mais barato",
+      "garimpado_em": "2026-10-08"
+    },
+    {
+      "meli_id": "MLB45160657",
+      "familia": "Mouse Redragon Cobra M711 V2",
+      "tipo": "produto",
+      "nome": "Mouse Gamer M711 Cobra Chroma Redragon Com fio Para Jogos 12.400 DPI Com Led RGB Preto",
+      "categoria": "Periféricos para PC",
+      "preco": 105.87,
+      "preco_original": 143.43,
+      "desconto_percentual": 26,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_898286-MLA95664298408_102025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB45160657",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-07"
+      "garimpado_em": "2026-10-08"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-07",
+  "atualizado_em": "2026-10-08",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -111,10 +111,10 @@
       "vezes": 1
     },
     "MLB63708330": {
-      "sugerido_em": "2026-09-08",
-      "familia": "LG Monitor 20U401A-B.AWZM 20 \"",
-      "preco_sugerido": 348.05,
-      "vezes": 1
+      "sugerido_em": "2026-10-08",
+      "familia": "Monitor LG com tela de 20\" 75Hz e resolução HD",
+      "preco_sugerido": 285,
+      "vezes": 2
     },
     "MLB51892201": {
       "sugerido_em": "2026-09-08",
@@ -852,6 +852,12 @@
       "sugerido_em": "2026-10-07",
       "familia": "Kit de teclado e mouse sem fio Logitech MK345",
       "preco_sugerido": 185,
+      "vezes": 1
+    },
+    "MLB45160657": {
+      "sugerido_em": "2026-10-08",
+      "familia": "Mouse Redragon Cobra M711 V2",
+      "preco_sugerido": 105.87,
       "vezes": 1
     }
   }
