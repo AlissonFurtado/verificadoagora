@@ -102,15 +102,21 @@ export async function renovarAcesso(cred: Credenciais): Promise<TokensRenovados>
 export type TipoDeId = 'produto' | 'anuncio';
 
 /**
- * Chute quando ninguém disse o tipo: id de catálogo é curto (`MLB24076624`),
- * anúncio é longo ou vem com hífen (`MLB-7547729432`).
+ * Quando ninguém disse o tipo, quem decide é o **hífen**: `MLB24076624` é
+ * produto de catálogo, `MLB-7547729432` é anúncio. É a convenção do
+ * `produtos.json`, e a única pista que não envelhece.
  *
- * É heurística mesmo — os dois são "MLB" + dígitos e as faixas se aproximam
- * com o tempo. Quem souber o tipo (o garimpo sabe, vem do /highlights) deve
- * passar explicitamente em vez de confiar nisto.
+ * 🔴 **Até 08/10/2026 a regra era o tamanho do número** (até 9 dígitos =
+ * catálogo), com um aviso de que "as faixas se aproximam com o tempo". Elas se
+ * encontraram: os ids de catálogo novos têm 10 dígitos (`MLB1055308843`, o
+ * iPhone 17). O robô consultou os dois iPhones em `/items/`, levou 404 e os
+ * desligou da vitrine no primeiro dia — "sumiu do Meli", com o produto à venda.
+ *
+ * Quem souber o tipo (o garimpo sabe, vem do /highlights) continua passando
+ * explicitamente em vez de confiar nisto.
  */
 function ehCatalogo(meliId: string): boolean {
-  return !meliId.includes('-') && /^MLB\d{1,9}$/.test(meliId);
+  return /^MLB\d+$/.test(meliId);
 }
 
 function comoTexto(valor: unknown): string {
