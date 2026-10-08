@@ -55,55 +55,85 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 26/09/2026
+## Onde paramos — 08/10/2026
 
-🟢 **O canal do WhatsApp é a frente principal.**
-`https://whatsapp.com/channel/0029VbDDES76BIEZIB1xRZ2o` — **27 dos 33 produtos
-já passaram por lá.** ⚠️ **O canal está com 2 seguidores** (era 3; alguém saiu,
-conferido no topo do canal em 23/09). A conta que decidiu a aposta: canal com
-200–300 pessoas engajadas rende o que o site renderia com 3.000–6.000
-visitas/mês, e o site tem **0 cliques** de busca.
-⚠️ **O número que importa é o de seguidores**, não o de produtos publicados.
-Com 2 seguidores, publicar mais não muda nada — **divulgar muda.**
+**O catálogo tem 49 produtos (45 na vitrine) e 10 comparativos.** Ocultos de
+propósito: SSD SanDisk (importado), A36 preto e o suporte de monitor. Só no
+canal: a escova Britânia. Entre 29/09 e 08/10 entraram o Moto G67, o
+ventilador Britânia, **7 ar-condicionados** com 2 comparativos, o monitor
+Fmaxx, o **iPhone 17** e o **iPhone 17e**.
 
-**O catálogo tem 36 produtos (33 visíveis).** Três estão ocultos de propósito:
-o SSD SanDisk (oferta virou importada), o A36 preto (voltou mais caro que o
-verde) e o suporte de monitor.
+🟡 **O canal do WhatsApp segue com 2 seguidores** (visto em 01/10). Últimas
+publicações: 5 em 29/09, 5 em 01/10 e 5 em 02/10 — **nada desde então**. O
+número que importa continua sendo o de seguidores: divulgar muda, publicar
+mais não.
 
-**Publicados no canal nesta semana:** 23/09 A17 e Buds Core · 24/09 G17,
-micro-ondas e projetor · 25/09 gimbal e Edge 60 Fusion.
+🔴 **Ele pediu para enxugar este arquivo (05/10) e ficou de pensar em como.**
+Tem ~2.500 linhas e ~150 KB, uns 45 mil tokens por sessão. As três opções
+postas: **(a) dividir por assunto** — este arquivo com ~300 linhas (retomada,
+regras de toda sessão, índice) e o resto em `docs/` lido sob demanda
+(recomendada: não perde regra e corta ~85% do custo); (b) dividir e condensar;
+(c) cortar aqui mesmo para ~700 linhas. **Não mexa sem ele escolher** — e
+pergunte logo no começo da próxima sessão.
 
 ### O que fazer na próxima sessão, em ordem
 
 | O quê | De quem é |
 |---|---|
-| **Rodar `node scripts/canal.mjs` e publicar 2 ou 3** — é o trabalho diário. ⚠️ Gere a fila **depois das ~15h**: a rotina das 8h roda antes do robô e sai com o histórico de ontem. Confira a série no `historico.json` antes de confiar em qualquer manchete | Minha |
-| **Suspeito do dia**: conferir na página do Meli e aplicar à mão na `main` — **nunca mergear o PR**. 🔴 **Toda sessão: conferir se existe commit `Preços de <hoje>` na `main`** depois das ~15h — em 30/09 e 01/10 o robô caiu (ver "pega o vendedor errado") e ninguém percebeu por 2 dias. A Philco vira suspeita todo dia com o preço certo na vitrine: ignorar até ele decidir o `results[0]` | Minha |
-| 🟢 **PRs do robô: todos fechados sem merge em 29/09** (#15 a #36, 12 no total), e os branches apagados — dá pra restaurar pelo botão "Restore branch" do PR. **O `github.com` está liberado na extensão desde 29/09**: dá pra fechar os próximos na mesma sessão. O caminho: página do PR → `Close pull request` → `Delete branch`, pegos pelo texto do botão | Minha |
-| 🔴 **O A36 preto (oculto) está mais barato que o verde (visível)** — R$ 1.586,51 contra R$ 1.999 em 23/09. Ele foi ocultado em 21/09 por estar **mais caro**; a situação inverteu e a vitrine agora esconde o barato e mostra o caro | **Decisão dele**: trocar qual fica oculto, ou deixar os dois visíveis |
-| **Divulgar o canal** — status do WhatsApp (já feito uma vez), busca do app, diretórios de canais, troca com canais pequenos. ⚠️ **Nunca jogar link em grupo alheio** | **Dele**, e é o que destrava tudo |
-| **Reddit: o primeiro comentário com link** — rascunho 1 de `rascunhos/rascunhos-reddit.md`. A conta está aquecida desde 12/09 | **Dele** |
-| **Instagram** — dizer se o post do G17 chegou a sair à mão, e conferir a permissão de notificação do app do Metricool. Sem isso, todo post agendado morre igual | **Dele** |
-| **Conferir no celular** — 3 comparativos novos, tabela da `/black-friday`, comparativo do monitor, e as 4 páginas de 20/09 | **Dele**. Daqui não dá: o `resize_window` não funciona |
-| **Garimpo de moda/beleza/esporte** — o `data/garimpo.json` só tem tecnologia e casa. Para a fila trazer candidato das categorias de 16%, é lá que se acrescenta (e vale o cuidado de sempre com subcategoria) | Minha, quando ele pedir |
-| ⚠️ **CAPTCHA do Mercado Livre** — apareceu em 21/09 depois de ~15 conferências numa sessão. **Não apareceu mais em 23, 24 e 25/09**, com 2 s entre navegações e poucas por sessão. Continue testando com **uma** navegação antes de planejar série | Minha para testar; **dele** se o desafio aparecer |
-| Fixar mensagem no canal | 🚫 **Não existe**: canal do WhatsApp não tem "fixar". Quem faz esse papel é a descrição do canal |
-| Rótulo "X (Twitter)" no cadastro do canal no Meli | Ninguém. O painel classifica errado sozinho, e ele também tentou. A URL está declarada, que é o que a cláusula 1.3 exige |
+| 🔴 **Conferir o robô**: existe commit `Preços de <hoje>` na `main` depois das ~15h? Algum produto **cadastrado ontem** virou `disponivel: false` ("sumiu do Meli")? Suspeito do dia: conferir na página do Meli e aplicar à mão (preço + ponto de hoje no `historico.json`); fechar o PR sem merge e apagar o branch (`/pull/N` → `Close pull request` → `Delete branch`, por JS pelo texto do botão) | Minha |
+| **Canal**: `node scripts/canal.mjs` depois das ~15h e publicar. **Só enviar com a foto da prévia carregada** (ver "Publicar no canal") | Minha, quando ele pedir |
+| **Indexação**: 🟢 **a fila zerou em 08/10** — tudo o que estava fora do índice foi pedido. Falta só **reconferir em ~1 semana** quais entraram, e pedir toda página nova no dia em que ela nasce (a cota é de ~11 pedidos por dia) | Minha |
+| 🔴 **Canônica do cassino**: 3 páginas apareceram como "cópia" de sites sem relação com a gente. A `/black-friday` **já voltou** (indexada, relida em 04/10). Faltam o guia de controle de videogame (última leitura 18/09) e a ficha do micro-ondas (leitura de 02/10): **reinspecionar as duas** e ver se saíram do estado de cópia. Ver "páginas nossas como cópia de sites alheios" | Minha para conferir; **dele** a decisão de denunciar |
+| 🟢 **Fichas "no Google, mas com problemas"**: era a nota sem contagem (`aggregateRating`), tirada do JSON-LD em 08/10. **Rodar o teste ao vivo de uma ficha com nota** e confirmar que "Snippets de avaliação" sumiu | Minha |
+| 🟡 **Samsung WindFree 12k**: caiu de R$ 3.051,58 para R$ 2.473,99 em 08/10, em duas rodadas do robô (−8% e −12%, nenhuma bateu a trava de 15%). **Não foi conferido na página** — conferir vendedor e origem antes de anunciar no canal | Minha |
+| **Vídeo**: em 08/10 ele pediu dois links para **outro agente dele** criar um vídeo. Mandei as fichas do **iPhone 17** (ID `HDDAJQ-JMUD`) e do **LG Compact 9k** (R$ 1.889, queda de R$ 400 conferida na página). O ID do LG não foi buscado. Perguntar se o vídeo saiu e onde foi publicado | **Dele** |
+| **Conferir no celular**: o card compacto da vitrine (04/10), a galeria dos dois iPhones (05/10) e a `/entrar` nova (08/10) — tudo foi medido numa `iframe` de 390 px, não num aparelho | **Dele** |
+| **Enxugar o `CLAUDE.md`** — escolher entre as três opções acima | **Dele** |
+| **Shopee**: cadastrar dados bancários e fiscais no painel (PF ou PJ). A comissão só é paga 60 dias depois da aprovação | **Dele** |
+| **Philco vira suspeita todo dia** com o preço certo na vitrine (`results[0]` não é a buy box). Ignorar até ele decidir mudar a regra para todos | **Decisão dele** |
+| **A36 preto (oculto) × verde (visível)**: em 23/09 o oculto estava mais barato. Reconferir os dois preços e perguntar qual fica | **Decisão dele** |
+| **Comparativo iPhone 17 × 17e** — oferecido em 05/10; a Apple publica a ficha completa dos dois | Só se ele pedir |
+| **Cor da etiqueta `Ar-condicionado`** no card (hoje sai no cinza de reserva) — perguntado em 04/10, sem resposta | **Decisão dele** |
+| **Instagram**: a conta está parada desde setembro. O que ele pesquisou comigo em 07/10 está em "Instagram: link de compra" abaixo | **Dele** |
+| **Divulgar o canal**, Reddit, e o resto que já era dele | **Dele** |
+| ⚠️ **CAPTCHA do Meli**: não apareceu de 23/09 a 08/10, com 2 s entre navegações e até ~12 por sessão | — |
 
-### O que entrou nesta quinzena, e onde está escrito
+### Instagram: link de compra (pesquisado em 07/10/2026)
+
+Ele mandou o print de um reel patrocinado com botão "Comprar agora", "ID: …
+no mercado livre" na tela e "comenta EUQUERO" na legenda. São três mecanismos:
+
+- **Botão "Comprar agora"**: só existe em **anúncio pago**. Aquele era anúncio
+  de parceria com o Mercado Livre assinando junto — o programa de criadores
+  pede **mais de 10 mil seguidores** (fonte: blog, não o Meli). Sem convite, o
+  botão sai impulsionando um reel próprio pelo Meta Ads.
+- **ID na tela**: de graça, e leva ao mesmo destino do link (ver "O contrato do
+  `produtos.json`"). ⚠️ Falta provar que a venda pelo ID conta comissão.
+- **Comentário → link por DM**: automação pela API oficial. **ManyChat grátis
+  caiu para 25 contatos/mês** (era 1.000 até mar/2026; pago desde US$ 14);
+  CreatorFlow diz 500 DMs/mês grátis; Youze (brasileira) desde R$ 29,90. Os
+  dois últimos números vêm do site dos próprios fabricantes.
+- **Minha recomendação, dada a ele:** o gargalo é o vídeo, não a ferramenta —
+  um reel no formato "mão + produto real" com o ID na tela, e automação só
+  quando um vídeo começar a receber comentário.
+
+### O que entrou de 29/09 a 08/10, e onde está escrito
 
 | O quê | Seção |
 |---|---|
-| 🔴 **A comissão do afiliado é 16% em moda/beleza/esporte e 5% no nosso catálogo** — o dado mais importante sobre dinheiro que faltava aqui | "A comissão do afiliado muda por categoria" |
-| 🟢 **`so_no_canal`** — o canal e o site deixaram de ter o mesmo catálogo | idem |
-| 🟢 **`confere_por`** — quando o produto de catálogo do Meli vira redirect e a API dá 404 para sempre | "404 permanente" |
-| 🟢 **Três travas novas no canal**: zigue-zague de correção manual, série plana, oferta importada | "A fila do canal" |
-| 🟢 **Snippet de produto do comparativo corrigido** (~31 entidades inválidas) | "O que a conferência de 23/09 ensinou" |
-| 🟢 **29 páginas indexadas** (eram 12 em 16/09) | "Indexação", nas frentes |
-| 🟢 **Briefing de divulgação**, com o que funciona e as regras que nenhum canal pode quebrar: <https://claude.ai/artifact/H4V3pqswv4XvFBzBKVYUpj> | — |
-| 🔴 **O histórico gravava preço que o site nunca mostrou** (22/09) — leia **antes de mexer em preço ou histórico** | "O robô de preços" |
-| 🟢 **4 frentes de SEO** (20/09): comparativo do A07, `/guia/meu-pc-aceita-ssd-nvme` e 2 guias de BF. A `/black-friday` lista 5 guias e os acha sozinha pelo prefixo do slug | "Black Friday 2026" |
-| 🟢 **Fone JBL Quantum 100M2** no catálogo — 36 produtos | — |
+| 🔴 **O robô caiu 2 dias** por um `confere_por` que dava 403 (30/09–01/10) | "pega o vendedor errado" |
+| 🔴 **Id de catálogo com 10 dígitos** era lido como anúncio: iPhones 3 dias fora da vitrine | "Id de catálogo com 10 dígitos" |
+| 🔴 **Um cassino como canônica** de páginas nossas no Google | "um site de apostas é a canônica" |
+| 🔴 **Comparação de preço escrita envelhece** ("mais barato da tabela") | "Nicho de ar-condicionado" |
+| 🟢 **Foto na prévia do WhatsApp**: só enviar com a foto carregada | "Publicar no canal" |
+| 🟢 **Card compacto no celular** e **como medir layout por `iframe` de 390 px** | "A home no celular" |
+| 🟢 **`imagens`**: galeria de fotos na ficha | "O contrato do `produtos.json`" |
+| 🟢 **ID do produto** e a barra "GANHOS X%" (comissão por produto, na fonte) | idem |
+| 🟢 **`/entrar` reescrita**: canal + busca + destaques + barra fixa | "`/entrar`" |
+| 🟢 **Laço de indexação** que funciona, e a cota de ~11 pedidos/dia | "Pedidos de indexação" |
+| 🟢 **GitHub liberado na extensão**: dá para fechar PR e rodar workflow | "O robô de preços" |
+| 🟡 **Shopee aceita** como segunda loja; nada integrado ainda | "Shopee" |
+| **Fontes de ficha**: Apple abre completa por `WebFetch` (`apple.com/br/<modelo>/specs/`); ar-condicionado, ver o nicho | "Nicho de ar-condicionado" |
 
 ### O que a conferência de 23/09 ensinou
 
@@ -1857,6 +1887,29 @@ caminho é o campo "Inspecionar qualquer URL" no topo do Search Console.
 
 ### 🔴 04/10/2026: um site de apostas é a "canônica" de duas páginas nossas
 
+🟡 **Atualização de 08/10/2026 — não é alguém copiando o site.**
+- A **`/black-friday` voltou**: relida pelo Google em 04/10 (dia do pedido),
+  hoje "A página está indexada". Pedir novo rastreamento **resolve**.
+- A **ficha do micro-ondas** tem como canônica do Google
+  **`https://www.marcustheatres.com/`** — uma rede de cinemas dos EUA —, numa
+  leitura de **02/10**, também com "canônico declarado: Nenhum". Um cassino e
+  um cinema, sem nada nosso e em hospedagens diferentes (o cinema está na
+  Cloudflare): **a hipótese de site de spam copiando a gente caiu.**
+- O servidor devolve a página certa, com `canonical`, para navegador, para
+  `curl` e para o user-agent do Googlebot (medido em 08/10).
+- O **teste ao vivo** da ficha do micro-ondas em 08/10 diz "É possível indexar
+  a página": hoje o Google a enxerga certo. A leitura ruim é a antiga.
+- **Hipótese que sobra, não provada:** naquelas leituras o Google renderizou
+  uma página de erro genérica (o texto padrão de erro do Next.js é idêntico em
+  milhares de sites, e é o tipo de coisa que agrupa páginas sem relação como
+  "cópias"). Para provar: na inspeção, **Ver a página rastreada → HTML e
+  captura de tela** de uma URL que ainda esteja como cópia. ⚠️ O painel de HTML
+  mostrou a página da inspeção **anterior** quando li por script — confira o
+  `<title>` antes de acreditar nele.
+- **O que fazer quando aparecer "Cópia sem página canônica selecionada pelo
+  usuário":** pedir novo rastreamento e reconferir em alguns dias. Não é caso
+  de denúncia de spam.
+
 Na inspeção, **`/black-friday`** e **`/guia/vale-esperar-black-friday-controle-de-videogame`**
 estão como **"Cópia sem página canônica selecionada pelo usuário"**, e na
 `/black-friday` o **"URL canônico selecionado pelo Google" é
@@ -1889,11 +1942,25 @@ Fmaxx, monitor S3 24", SSD Kingston e micro-ondas. **Já estavam indexados**
 (a inspeção poupou o pedido): Samsung WindFree 12k, A07, G06, ventilador,
 monitor S3 27", placa-mãe e JBL.
 
-**Falta pedir (próximo dia, nesta ordem):** GameSir G7 SE (Detectada; pegou a
-cota), GameSir T4, Roku, HY320, aspirador Electrolux, cafeteira, mixer,
-liquidificador e os dois kits de potes. **Inspecione antes**, como sempre.
+**Terceira rodada, 08/10/2026 — a fila zerou, sem bater na cota.** Aceitos
+(10): iPhone 17e, GameSir G7 SE, Roku, HY320, aspirador Electrolux, cafeteira,
+mixer, liquidificador e os dois kits de potes. O GameSir T4 já estava indexado.
+**Os dois comparativos de ar-condicionado estão indexados** (o do Gree foi
+relido no próprio dia do pedido, 04/10; o do Midea em 06/10) — comparativo
+continua sendo o formato que entra rápido. A ficha do iPhone 17, pedida em
+05/10, ainda aparece como "o Google não reconhece o URL".
 
-⚠️ **Dois achados da rodada de 05/10, ainda sem investigar:**
+🔴 **"O URL está no Google, mas tem problemas" era a nota sem contagem**
+(08/10). A ficha declarava `aggregateRating` só com `ratingValue`; o Google
+exige `ratingCount`, e o teste ao vivo acusava **"Snippets de avaliação: 1
+item inválido"** em toda ficha com `avaliacao > 0` (24 das 49). Corrigido
+tirando o `aggregateRating` do JSON-LD: não guardamos a contagem e a nota é
+dos compradores do Meli, não nossa. A nota segue no texto visível. **Se alguém
+quiser devolver a estrela ao resultado de busca, precisa guardar a quantidade
+de avaliações junto** — e conferir a política do Google para nota de terceiro.
+
+⚠️ **Dois achados da rodada de 05/10 — os dois explicados em 08/10** (a
+cópia, na seção do cassino; o "tem problemas", logo acima):
 - **A ficha do micro-ondas também está como "Cópia sem página canônica
   selecionada pelo usuário"** — é a 3ª página com o sintoma do cassino (ver
   acima). Novo rastreamento pedido. Não é mais caso isolado de guia.

@@ -108,15 +108,12 @@ function DadosEstruturados({ produto }: { produto: Produto }) {
       url: produto.link_afiliado,
       seller: { '@type': 'Organization', name: NOME_PLATAFORMA[produto.plataforma] },
     },
-    ...(produto.avaliacao > 0
-      ? {
-          aggregateRating: {
-            '@type': 'AggregateRating',
-            ratingValue: produto.avaliacao,
-            bestRating: 5,
-          },
-        }
-      : {}),
+    // 🔴 Sem `aggregateRating`, de propósito (08/10/2026). A ficha declarava
+    // a nota sem `ratingCount`, que o Google exige: o teste ao vivo acusava
+    // "Snippets de avaliação: 1 item inválido" em toda ficha com nota (24 das
+    // 49), e era esse o "URL está no Google, mas tem problemas". Nós não
+    // guardamos a contagem, e a nota é dos compradores do Mercado Livre, não
+    // nossa — então ela fica só no texto visível, onde sempre esteve.
   };
 
   // O `FAQPage` vai separado do `Product` de propósito: são duas coisas que o
