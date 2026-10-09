@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-08",
+  "atualizado_em": "2026-10-09",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -657,10 +657,10 @@
       "vezes": 1
     },
     "MLB47900489": {
-      "sugerido_em": "2026-09-19",
+      "sugerido_em": "2026-10-09",
       "familia": "Monitor Gamer AOC com tela de 22\" 120Hz e resolução VGA",
-      "preco_sugerido": 459,
-      "vezes": 1
+      "preco_sugerido": 376,
+      "vezes": 2
     },
     "MLB19444510": {
       "sugerido_em": "2026-09-19",
@@ -858,6 +858,12 @@
       "sugerido_em": "2026-10-08",
       "familia": "Mouse Redragon Cobra M711 V2",
       "preco_sugerido": 105.87,
+      "vezes": 1
+    },
+    "MLB65041642": {
+      "sugerido_em": "2026-10-09",
+      "familia": "Moto G17 Dual SIM",
+      "preco_sugerido": 816.9,
       "vezes": 1
     }
   }

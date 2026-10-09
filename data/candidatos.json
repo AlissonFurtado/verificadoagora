@@ -1,36 +1,36 @@
 {
-  "garimpado_em": "2026-10-08",
+  "garimpado_em": "2026-10-09",
   "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB63708330",
-      "familia": "Monitor LG com tela de 20\" 75Hz e resolução HD",
+      "meli_id": "MLB47900489",
+      "familia": "Monitor Gamer AOC com tela de 22\" 120Hz e resolução VGA",
       "tipo": "produto",
-      "nome": "Monitor LG LED 20\" - HD+, 75Hz, 2ms, HDMI/VGA, Modo Leitura, Flicker Safe, Black Stabilizer, Dynamic Action Sync, Preto- 20U401A",
+      "nome": "Monitor AOC 22\" 120Hz 1ms Gaming HDMI 22B35HM23 Preto",
       "categoria": "Monitores e Acessórios",
-      "preco": 285,
-      "preco_original": 599,
-      "desconto_percentual": 52,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_699928-MLA105314087580_012026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB63708330",
+      "preco": 376,
+      "preco_original": 524.59,
+      "desconto_percentual": 28,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_744601-MLA99934274785_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB47900489",
       "no_foco": false,
       "motivo": "ficou mais barato",
-      "garimpado_em": "2026-10-08"
+      "garimpado_em": "2026-10-09"
     },
     {
-      "meli_id": "MLB45160657",
-      "familia": "Mouse Redragon Cobra M711 V2",
+      "meli_id": "MLB65041642",
+      "familia": "Moto G17 Dual SIM",
       "tipo": "produto",
-      "nome": "Mouse Gamer M711 Cobra Chroma Redragon Com fio Para Jogos 12.400 DPI Com Led RGB Preto",
-      "categoria": "Periféricos para PC",
-      "preco": 105.87,
-      "preco_original": 143.43,
-      "desconto_percentual": 26,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_898286-MLA95664298408_102025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB45160657",
+      "nome": "Smartphone Motorola Moto G17 4g - 128gb 4gb Ram + 8gb Ram Boost, Camera 50mp Sony Lytia 600, Tela Fhd+ 60hz, Bateria 5200 Mah - Azul",
+      "categoria": "Celulares e Smartphones",
+      "preco": 816.9,
+      "preco_original": 1089.9,
+      "desconto_percentual": 25,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_773592-MLA105493148200_012026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB65041642",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-08"
+      "garimpado_em": "2026-10-09"
     }
   ]
 }
