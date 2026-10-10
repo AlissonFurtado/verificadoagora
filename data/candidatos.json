@@ -1,36 +1,36 @@
 {
-  "garimpado_em": "2026-10-09",
+  "garimpado_em": "2026-10-10",
   "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB47900489",
-      "familia": "Monitor Gamer AOC com tela de 22\" 120Hz e resolução VGA",
+      "meli_id": "MLB51871232",
+      "familia": "Monitor ViewPro com tela de 19\" 60Hz e resolução HD",
       "tipo": "produto",
-      "nome": "Monitor AOC 22\" 120Hz 1ms Gaming HDMI 22B35HM23 Preto",
+      "nome": "Monitor LED 19\" ViewPro Resolução 1440x900 HDMI VGA VESA Preto",
       "categoria": "Monitores e Acessórios",
-      "preco": 376,
-      "preco_original": 524.59,
-      "desconto_percentual": 28,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_744601-MLA99934274785_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB47900489",
-      "no_foco": false,
-      "motivo": "ficou mais barato",
-      "garimpado_em": "2026-10-09"
-    },
-    {
-      "meli_id": "MLB65041642",
-      "familia": "Moto G17 Dual SIM",
-      "tipo": "produto",
-      "nome": "Smartphone Motorola Moto G17 4g - 128gb 4gb Ram + 8gb Ram Boost, Camera 50mp Sony Lytia 600, Tela Fhd+ 60hz, Bateria 5200 Mah - Azul",
-      "categoria": "Celulares e Smartphones",
-      "preco": 816.9,
-      "preco_original": 1089.9,
-      "desconto_percentual": 25,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_773592-MLA105493148200_012026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB65041642",
+      "preco": 193.03,
+      "preco_original": 399,
+      "desconto_percentual": 51,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_774002-MLA99575745486_122025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB51871232",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-09"
+      "garimpado_em": "2026-10-10"
+    },
+    {
+      "meli_id": "MLB67410010",
+      "familia": "Samsung Galaxy A57 5G 5G Dual SIM",
+      "tipo": "produto",
+      "nome": "Celular Samsung Galaxy A57 5G 128GB, 8GB RAM, Recursos AI",
+      "categoria": "Celulares e Smartphones",
+      "preco": 2110,
+      "preco_original": 3799,
+      "desconto_percentual": 44,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_759289-MLA112991671232_072026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB67410010",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-10-10"
     }
   ]
 }

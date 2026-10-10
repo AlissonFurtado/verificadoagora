@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-09",
+  "atualizado_em": "2026-10-10",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -864,6 +864,18 @@
       "sugerido_em": "2026-10-09",
       "familia": "Moto G17 Dual SIM",
       "preco_sugerido": 816.9,
+      "vezes": 1
+    },
+    "MLB51871232": {
+      "sugerido_em": "2026-10-10",
+      "familia": "Monitor ViewPro com tela de 19\" 60Hz e resolução HD",
+      "preco_sugerido": 193.03,
+      "vezes": 1
+    },
+    "MLB67410010": {
+      "sugerido_em": "2026-10-10",
+      "familia": "Samsung Galaxy A57 5G 5G Dual SIM",
+      "preco_sugerido": 2110,
       "vezes": 1
     }
   }
