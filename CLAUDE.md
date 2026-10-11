@@ -1973,6 +1973,21 @@ relido no próprio dia do pedido, 04/10; o do Midea em 06/10) — comparativo
 continua sendo o formato que entra rápido. A ficha do iPhone 17, pedida em
 05/10, ainda aparece como "o Google não reconhece o URL".
 
+**Quarta rodada, 10/10/2026.** Pedidos aceitos: **Galaxy A57** e **mouse
+Redragon** (as duas fichas do dia) e, de novo, a ficha do **iPhone 17**.
+Reinspeção, sem pedir: **iPhone 17e indexado** (lido em 10/10) e **Moto G67
+indexado** (06/10) — ficha nova entra em ~5 dias com o pedido.
+- 🔴 **A ficha do iPhone 17 seguia como "o Google não reconhece o URL"** cinco
+  dias depois do pedido de 05/10. Ela ficou `disponivel: false` de 06 a 08/10
+  (o bug do id de 10 dígitos) e, com isso, **fora do sitemap** — o pedido
+  antigo deve ter se perdido aí. **Produto que sai e volta da vitrine precisa
+  de pedido novo.**
+- 🟡 **Ainda como "cópia"**, sem nova leitura do Google: o guia
+  `vale-esperar-black-friday-controle-de-videogame` (lido em 18/09) e a ficha
+  do micro-ondas (02/10). Os pedidos de 04 e 05/10 não foram atendidos ainda;
+  **reenviar não muda a prioridade** — reinspecionar por volta de 17/10.
+- A ficha do Gree 9k (pedida em 04/10) segue "Detectada, mas não indexada".
+
 🔴 **"O URL está no Google, mas tem problemas" era a nota sem contagem**
 (08/10). A ficha declarava `aggregateRating` só com `ratingValue`; o Google
 exige `ratingCount`, e o teste ao vivo acusava **"Snippets de avaliação: 1
@@ -2004,6 +2019,10 @@ cópia, na seção do cassino; o "tem problemas", logo acima):
   `browser_batch` travaram.
 - Cada pedido leva **~2 min** (inspeção + teste em tempo real); só inspecionar
   também leva ~1–2 min com a janela minimizada.
+- **Com a aba em segundo plano os temporizadores quase param** (10/10): o laço
+  fica minutos sem andar e as chamadas com `await` longo estouram os 45 s.
+  **Um `screenshot` acorda a aba**; intercale print + espera curta em vez de
+  `await` de 40 s, e leia `window.__log` em chamadas sem espera.
 
 🔴 **Snippet de produto: o guia gerava 6 entidades inválidas** — todo perfil
 virava `Product` sem `offers`, e 4 dos 6 aparelhos não são nossos, então não
