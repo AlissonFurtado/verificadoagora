@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-10",
+  "atualizado_em": "2026-10-11",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -876,6 +876,18 @@
       "sugerido_em": "2026-10-10",
       "familia": "Samsung Galaxy A57 5G 5G Dual SIM",
       "preco_sugerido": 2110,
+      "vezes": 1
+    },
+    "MLB32165545": {
+      "sugerido_em": "2026-10-11",
+      "familia": "Monitor 3Green com tela de 20\" e resolução HD",
+      "preco_sugerido": 215,
+      "vezes": 1
+    },
+    "MLB6309815": {
+      "sugerido_em": "2026-10-11",
+      "familia": "Micro-ondas Electrolux Micro-ondas MTO30 20L",
+      "preco_sugerido": 435.18,
       "vezes": 1
     }
   }
