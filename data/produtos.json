@@ -1953,12 +1953,94 @@
           "resposta": "Sim. A recarga sem fio MagSafe e Qi2 vai até 15 W, segundo a Apple."
         }
       ]
+    },
+    {
+      "id": 50,
+      "nome": "Samsung Galaxy A57 5G 128GB",
+      "categoria": "Celulares",
+      "preco_original": 3799,
+      "preco_atual": 2110,
+      "desconto_percentual": 44,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1XEsQCW",
+      "descricao": "5G, 8GB de RAM, tela Super AMOLED Plus de 6,7\" e 120 Hz, câmera de 50MP com OIS, IP68",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_759289-MLA112991671232_072026-F.jpg",
+      "meli_id": "MLB67410010",
+      "analise": [
+        "O A57 é o intermediário de cima da Samsung: tela **Super AMOLED Plus de 6,7 polegadas a 120 Hz**, 8 GB de RAM de verdade, câmera principal de **50 MP com estabilização óptica** — o que segura foto à noite e vídeo andando — acompanhada de uma ultra-wide de 12 MP e uma macro de 5 MP. A bateria é de 5.000 mAh, com até 29 horas de reprodução de vídeo segundo a Samsung, e o corpo tem resistência à água e poeira **IP68**.",
+        "O argumento mais forte dele não aparece na loja: a Samsung promete **até 6 atualizações do sistema operacional**. Para quem fica quatro, cinco anos com o mesmo celular, é o que evita trocar de aparelho só porque o aplicativo do banco parou de abrir. O que pesa contra: os 128 GB **não aceitam cartão de memória**, então quem grava muito vídeo precisa pensar na versão maior ou na nuvem; não tem entrada de fone de 3,5 mm; e a câmera macro de 5 MP é mais número na ficha do que uso real.",
+        "Compre se você quer um celular para durar anos, com tela grande e boa câmera, sem ir para a linha S. Se a memória é a sua preocupação, veja o nosso guia de quanto armazenamento escolher antes de fechar nos 128 GB. O Galaxy A36 aqui do site é o degrau abaixo na mesma família, e vale comparar o preço dos dois no dia."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Dá para pôr cartão de memória?",
+          "resposta": "Não. O Galaxy A57 não tem entrada para microSD: os 128 GB são o que você terá, e parte deles já vem ocupada pelo sistema."
+        },
+        {
+          "pergunta": "Por quantos anos ele recebe atualização?",
+          "resposta": "A Samsung informa até 6 atualizações do sistema operacional para o Galaxy A57 5G."
+        },
+        {
+          "pergunta": "É à prova d'água?",
+          "resposta": "Tem classificação IP68, de resistência à água e poeira. Não é para mergulho nem água salgada, e dano por líquido costuma ficar fora da garantia."
+        },
+        {
+          "pergunta": "Tem entrada para fone de ouvido?",
+          "resposta": "Não tem a entrada de 3,5 mm. O fone é pela porta USB-C ou por Bluetooth."
+        }
+      ],
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-10",
+      "verificado_em": "2026-10-10"
+    },
+    {
+      "id": 51,
+      "nome": "Mouse Gamer Redragon Cobra M711",
+      "categoria": "Informática",
+      "preco_original": 143.43,
+      "preco_atual": 89.99,
+      "desconto_percentual": 37,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2QnwJES",
+      "descricao": "Com fio, sensor óptico PixArt P3327, 7 botões e iluminação RGB",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_898286-MLA95664298408_102025-F.jpg",
+      "meli_id": "MLB45160657",
+      "analise": [
+        "O Cobra é um dos mouses gamer mais vendidos do país, e a razão é simples: sensor óptico PixArt P3327, sete botões, iluminação RGB e construção que aguenta uso diário, numa marca que tem loja oficial e reposição fácil. São mais de 50 mil vendidos, com nota 4,9 em mais de 13 mil opiniões. Serve tanto para jogo quanto para quem só quer um mouse preciso para trabalhar.",
+        "Antes de comprar, três pontos: ele é **com fio** — não tem versão sem fio neste anúncio; o formato é **para destros**, com os botões laterais do lado esquerdo; e o anúncio lista compatibilidade com Windows. Em Mac e Linux ele funciona como mouse comum, mas o programa de configuração dos botões e das luzes é para Windows. O anúncio também se contradiz na sensibilidade máxima (o título diz um número e a ficha, outro), então não vamos repetir nenhum dos dois aqui.",
+        "Compre se você joga no PC ou quer sair do mouse de escritório. Se você é canhoto, ou precisa de mouse sem fio para notebook, este não é o modelo."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ele é sem fio?",
+          "resposta": "Não. O Cobra M711 deste anúncio é com fio, ligado por USB."
+        },
+        {
+          "pergunta": "Serve para canhoto?",
+          "resposta": "Não é o ideal. O formato e os botões laterais são pensados para a mão direita."
+        },
+        {
+          "pergunta": "Funciona no notebook e no Mac?",
+          "resposta": "Funciona como mouse comum em qualquer computador com USB. O programa para configurar botões e luzes é para Windows."
+        }
+      ],
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-10",
+      "verificado_em": "2026-10-10"
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-10",
     "conferido_em": "2026-10-10T16:04:46.650Z",
-    "total_produtos": 49,
+    "total_produtos": 51,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
