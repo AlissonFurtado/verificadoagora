@@ -55,13 +55,36 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 08/10/2026
+## Onde paramos — 10/10/2026
 
-**O catálogo tem 49 produtos (45 na vitrine) e 10 comparativos.** Ocultos de
+**O catálogo tem 51 produtos (47 na vitrine) e 10 comparativos.** Ocultos de
 propósito: SSD SanDisk (importado), A36 preto e o suporte de monitor. Só no
 canal: a escova Britânia. Entre 29/09 e 08/10 entraram o Moto G67, o
 ventilador Britânia, **7 ar-condicionados** com 2 comparativos, o monitor
 Fmaxx, o **iPhone 17** e o **iPhone 17e**.
+
+**Em 10/10 entraram o Galaxy A57 5G e o mouse Redragon Cobra M711**, do garimpo
+de 08 a 10/10. Reprovados na mesma triagem, com o motivo: **AOC 22" 120 Hz**
+(o garimpo viu R$ 376; no dia custava R$ 470, 5% de desconto), **LG 20" HD+**
+(R$ 285 virou R$ 348,50; "de" de R$ 833 inflado; ficha diz painel TN com 178°
+de visão), **ViewPro 19"** (marca sem ficha) e o **Moto G17 de outra cor**
+(duplicata). Fonte nova: a ficha de celular Samsung abre pelo Chrome em
+`samsung.com/br/smartphones/galaxy-a/<modelo-cor-sku>/` — a URL curta dá 404; o
+`WebSearch` com `allowed_domains: samsung.com` acha a URL certa.
+
+**Preços conferidos na página em 10/10** e aplicados à mão: DualSense R$ 478,
+kit de potes de borossilicato R$ 94,90, LG Compact 9k R$ 2.289 e Elgin 12k
+R$ 2.999,90. O **iPhone 17e saiu da vitrine por um dia** ("sem oferta ativa",
+404 passageiro da API) e voltou sozinho na rodada manual.
+- 🔴 **O DualSense vira suspeito todo dia** como "oferta importada" (API
+  R$ 426,65): a página mostra vendedor nacional a R$ 478. É o falso positivo de
+  `ehImportado` previsto em 23/09 — ignorar, ou afinar a função.
+- ⚠️ **O Elgin 12k passou a ser vendido por conta de nome automático**
+  (`LD20250502074418`) a R$ 2.999,90, sem desconto. Não é golpe de preço baixo,
+  mas a oferta deixou de valer: **não anunciar no canal**; se continuar assim,
+  perguntar a ele se oculta.
+- ⚠️ **O LG Compact 9k do vídeo voltou a R$ 2.289** — o link mandado em 08/10
+  citava R$ 1.889. Se o vídeo ainda não saiu, o preço da arte está velho.
 
 🟡 **O canal do WhatsApp segue com 2 seguidores** (visto em 01/10). Últimas
 publicações: 5 em 29/09, 5 em 01/10 e 5 em 02/10 — **nada desde então**. O
