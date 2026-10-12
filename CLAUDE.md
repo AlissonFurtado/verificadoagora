@@ -86,13 +86,21 @@ R$ 2.999,90. O **iPhone 17e saiu da vitrine por um dia** ("sem oferta ativa",
 - ⚠️ **O LG Compact 9k do vídeo voltou a R$ 2.289** — o link mandado em 08/10
   citava R$ 1.889. Se o vídeo ainda não saiu, o preço da arte está velho.
 
-🔴 **Instagram restringiu a conta em 11/10/2026: "Você não pode compartilhar
+🔴 **Instagram restringiu uma conta em 11/10/2026: "Você não pode compartilhar
 links", até 10/11/2026.** Motivo dado: a conta "pode estar enganando outras
-pessoas para tirar dinheiro" (práticas comerciais proibidas), e a tela cita o
-domínio **verificadoagora.com.br**. É o segundo bloqueio do domínio como
-spam/golpe (o Pinterest foi o primeiro). **Causa não provada.** Hipótese
-minha: o nome "Verificado Agora" parece golpe de selo de verificação, que é o
-phishing mais comum do Instagram. Não sei o que ele fez na conta no dia.
+pessoas para tirar dinheiro" (práticas comerciais proibidas).
+- **A conta restrita NÃO é a `@verificadoagorabr`.** É um perfil que ele tinha
+  criado para o **dogia.com.br** e **renomeou para `verificadoagora.com.br`**
+  (o que a tela mostra é o nome da conta, com a foto do cachorro do Dogia — não
+  é o domínio sendo citado como eu li primeiro). Gatilho provável, não
+  provado: conta nova que troca de identidade para um nome em formato de
+  domínio com "verificado" no meio — o desenho do golpe de selo de verificação.
+- ⚠️ **Não foi conferido** se a `@verificadoagorabr` (a que está no Metricool
+  e nas "Contas vinculadas" do Meli) tem restrição também, nem se o domínio em
+  si ficou marcado na Meta.
+- ⚠️ **Cláusula 1.3 do Meli**: a conta renomeada não está declarada como
+  Mídia. Link de afiliado divulgado por ela não gera pagamento até ser
+  cadastrada no painel.
 - **Não contornar**: nada de encurtador, outro domínio ou conta nova para
   postar o mesmo link — é o que transforma 30 dias em banimento.
 - Contestar é dele (Status da conta no app). Enquanto durar: reel com o **ID
