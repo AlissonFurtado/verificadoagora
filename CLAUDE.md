@@ -55,9 +55,36 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
-## Onde paramos — 10/10/2026
+## Onde paramos — 12/10/2026
 
-**O catálogo tem 51 produtos (47 na vitrine) e 10 comparativos.** Ocultos de
+🟢 **Resumo da sessão de 12/10, para quem chega sem memória** (ele limpou a
+conversa em seguida). O catálogo tem **52 produtos, 48 na vitrine**, 10
+comparativos e **6 guias de categoria** (5 novos, perenes). Feito no dia:
+- **Indexação:** 7 pedidos refeitos + 4 guias novos; a cota cortou no 12º.
+  🔴 **Pedir amanhã:** `/guia/monitor-full-hd` e a ficha
+  `/produto/micro-ondas-electrolux-mto30-20l-220-v-mlb6309816`.
+- **Guias perenes** de ar 9k e 12k, monitor, fone e controle, e o campo
+  `substituto` (ver "Endereço perene").
+- **Home:** só 3 atalhos no topo e os guias em seção depois da vitrine (ver
+  "A home no celular"). Ele confere no monitor e no celular.
+- **Preços:** robô de 12/10 disparado à mão às 15h52 (o agendador não tinha
+  rodado). Mixer a R$ 92; DualSense segue falso positivo; Moto G67 caiu 20%
+  de verdade (R$ 1.068,87, loja oficial) — **bom para o canal**.
+- **Micro-ondas Electrolux MTO30 20 L 220 V** cadastrado (id 52).
+- **Instagram:** restrição de links até 10/11; nome voltou a
+  `verificadoagorabr`. Duas opções de bio foram entregues no chat e se
+  perderam com a limpeza — se ele pedir, gerar de novo (só o campo "Bio",
+  nunca "Links").
+- **Não regerado:** `data/posts.json` e `data/pins.json` (texto velho do
+  P30i). **Não provado:** a causa das 3 páginas "cópia" (ler o HTML
+  rastreado, com a página recarregada e uma inspeção só; reinspecionar ~17/10).
+- **Pendências dele, sem resposta:** como enxugar este arquivo; apelação do
+  Instagram e conferir o Metricool; ocultar o Elgin 12k?; regra da Philco;
+  A36 preto × verde; cor da etiqueta `Ar-condicionado`; Shopee.
+
+### O estado de 10/10, que segue valendo
+
+**Em 10/10 o catálogo tinha 51 produtos (47 na vitrine) e 10 comparativos.** Ocultos de
 propósito: SSD SanDisk (importado), A36 preto e o suporte de monitor. Só no
 canal: a escova Britânia. Entre 29/09 e 08/10 entraram o Moto G67, o
 ventilador Britânia, **7 ar-condicionados** com 2 comparativos, o monitor
