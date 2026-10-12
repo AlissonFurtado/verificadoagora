@@ -2014,6 +2014,32 @@ indexado** (06/10) — ficha nova entra em ~5 dias com o pedido.
   **reenviar não muda a prioridade** — reinspecionar por volta de 17/10.
 - A ficha do Gree 9k (pedida em 04/10) segue "Detectada, mas não indexada".
 
+**Quinta rodada, 12/10/2026.** O relatório "Páginas" (dados de 08/10) dizia
+**47 indexadas, 31 fora** — eram 29 em 23/09. Toda página nossa fora do índice
+já tinha pedido; reinspecionei as 18 e refiz 7 pedidos, todos aceitos: guia de
+fone, Gree 9k, LG Voice 12k e mixer (pedidos de 04 a 08/10 que seguiam sem
+leitura) e as três "cópias" (HY320, micro-ondas, guia de controle).
+- **Entraram no índice:** Galaxy A57 (em 2 dias), Fmaxx, SSD Kingston e os
+  dois kits de potes. **Seguem "Detectada":** aspirador Electrolux, cafeteira,
+  GameSir G7 SE e Roku. **Liquidificador:** lido em 10/10 e "Rastreada, mas
+  não indexada" (julgamento, não fila). iPhone 17 e mouse Redragon: sem
+  leitura ainda.
+- 🔴 **A "cópia" não é leitura velha: o HY320 foi lido em 10/10 e caiu nela.**
+  Mesmo padrão — "canônico declarado: Nenhum", canônica do Google
+  `marcustheatres.com`, "busca de página: com êxito". Ou seja, **o rastreador
+  de indexação ainda recebe, às vezes, uma página sem o nosso `canonical`**,
+  embora o teste ao vivo veja a página certa. São 3 páginas afetadas hoje.
+  **Próximo passo, não feito:** abrir "Ver a página rastreada" de uma delas e
+  ler o HTML que o Google guardou. ⚠️ Tentei em 12/10 e o painel devolveu o
+  HTML do **Fmaxx** (inspeção anterior) — a mesma armadilha de 08/10; precisa
+  ser feito com a página recarregada e uma inspeção só.
+- A "Página de referência" dessas fichas é `verificadoagora.vercel.app/…`.
+- 🟢 **Laço novo, mais simples** (`window.__insp(lista, pedir)`): com a aba
+  **em primeiro plano** cada inspeção leva ~10–20 s e cada pedido ~40 s.
+  ⚠️ O estado "O Google não reconhece o URL" às vezes é só a tela ainda
+  carregando: o mixer saiu assim na 1ª passada e "Detectada" na 2ª. **Não
+  conclua nada de um "não reconhece" lido uma vez só.**
+
 🔴 **"O URL está no Google, mas tem problemas" era a nota sem contagem**
 (08/10). A ficha declarava `aggregateRating` só com `ratingValue`; o Google
 exige `ratingCount`, e o teste ao vivo acusava **"Snippets de avaliação: 1
