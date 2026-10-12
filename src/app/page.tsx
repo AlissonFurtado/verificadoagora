@@ -45,25 +45,44 @@ export default function Home() {
   const historico = lerHistorico();
   const comparativos = lerComparativos();
   const guias = lerGuias();
-  // Os dois formatos de guia entram na mesma fileira: da home, a diferença
-  // entre "por perfil" e "por pergunta" não importa a ninguém. O título do
-  // guia de decisão é longo de propósito (é a busca inteira), então no botão
-  // entra só a parte antes dos dois-pontos.
+  // No topo ficam só três atalhos, numa linha. Eram todos os guias (17 botões
+  // em 12/10/2026), e no monitor viravam 5 ou 6 linhas: quem abria a página
+  // não via produto nenhum sem rolar. Os guias moram na seção `#guias`,
+  // depois da vitrine, separados por assunto. Decisão do Alisson em 12/10.
   const atalhosDeGuia = [
     // Primeiro atalho é o que muda todo dia: é o único motivo que a página
     // oferece para alguém voltar amanhã sem passar pelo Google.
     { href: '/quedas-de-preco', rotulo: 'O que caiu de preço', icone: '↓' },
-    // A Black Friday vem em seguida enquanto a data não passa: é a busca
-    // sazonal, e o histórico de preço é o que respondemos melhor que todo
-    // mundo. Depois de 27/11/2026 ela sai daqui — a página continua no ar.
+    // Depois de 27/11/2026 a Black Friday sai daqui — a página continua no ar.
     { href: '/black-friday', rotulo: 'Black Friday 2026: o desconto é real?', icone: '%' },
-    ...guias.map((g) => ({ href: `/guia/${g.slug}`, rotulo: g.titulo, icone: '☰' })),
-    // O guia de faixa corta no dois-pontos ("Melhor celular até R$ 1.500:
-    // qual comprar em 2026" vira o rótulo bom). Na decisão, cortar assim
-    // estraga: "Tela de celular: AMOLED ou LCD?" virava "Tela de celular",
-    // que não diz pergunta nenhuma. O título inteiro já é curto.
-    ...lerDecisoes().map((d) => ({ href: `/guia/${d.slug}`, rotulo: d.titulo, icone: '?' })),
+    { href: '#guias', rotulo: 'Todos os guias', icone: '☰' },
   ];
+  const decisoes = lerDecisoes();
+  const ehDeBlackFriday = (slug: string) => slug.startsWith('vale-esperar-black-friday');
+  // O guia de faixa corta no dois-pontos ("Monitor Full HD: qual comprar…"
+  // vira o rótulo bom). Na decisão, cortar assim estraga: "Tela de celular:
+  // AMOLED ou LCD?" virava "Tela de celular", que não diz pergunta nenhuma.
+  const gruposDeGuia = [
+    {
+      titulo: 'Qual comprar',
+      itens: guias.map((g) => ({ href: `/guia/${g.slug}`, rotulo: g.titulo.split(':')[0] })),
+    },
+    {
+      titulo: 'Dúvidas antes de comprar',
+      itens: decisoes
+        .filter((d) => !ehDeBlackFriday(d.slug))
+        .map((d) => ({ href: `/guia/${d.slug}`, rotulo: d.titulo })),
+    },
+    {
+      titulo: 'Vale esperar a Black Friday?',
+      itens: decisoes
+        .filter((d) => ehDeBlackFriday(d.slug))
+        .map((d) => ({
+          href: `/guia/${d.slug}`,
+          rotulo: d.titulo.replace('Vale esperar a Black Friday para comprar ', 'Para comprar '),
+        })),
+    },
+  ].filter((grupo) => grupo.itens.length > 0);
   const conferencia = descreverConferencia(metadata.conferido_em, new Date());
 
   return (
@@ -72,7 +91,7 @@ export default function Home() {
           o corpo claro que separa a vitrine de um blog — foi assim que o
           Alisson escolheu em 08/09/2026, entre três cortes de topo. */}
       <header className="faixa-noturna border-b-4 border-corte">
-        <div className="mx-auto max-w-6xl px-4 py-6 sm:py-14">
+        <div className="mx-auto max-w-6xl px-4 py-6 sm:py-8">
           <div className="mb-2">
             {conferencia && (
               <SeloDeConferencia
@@ -97,7 +116,7 @@ export default function Home() {
             verdade.
           </p>
 
-          <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-sky-100/65 sm:mt-6 sm:text-sm">
+          <dl className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-xs text-sky-100/65 sm:mt-4 sm:text-sm">
             {GARANTIAS.map(([titulo, texto]) => (
               <div key={titulo} className="flex min-w-0 items-baseline gap-1.5">
                 <dt className="font-bold text-sky-50">
@@ -116,14 +135,10 @@ export default function Home() {
       {/* Guia acima da grade porque ele responde a dúvida de quem ainda não
           escolheu — e a vitrine sozinha só serve quem já sabe o que quer. */}
       {atalhosDeGuia.length > 0 && (
-        <section className="mx-auto max-w-6xl px-4 pt-5 sm:pt-12">
-          {/* ⚠️ No celular é uma tira que rola de lado, não uma grade que
-              quebra linha: com 4 guias de rótulo longo, o flex-wrap empilhava
-              4 botões de 48px e empurrava o primeiro card pra fora da tela.
-              A tira custa uma linha e **não cresce** quando entrar o 5º guia,
-              que é o que vai acontecer — publicar guia é a frente de SEO.
-              Mesmo gesto da barra de filtro logo abaixo. Do `sm` pra cima
-              volta a quebrar linha: lá sobra largura. */}
+        <section className="mx-auto max-w-6xl px-4 pt-5 sm:pt-6">
+          {/* No celular é uma tira que rola de lado, mesmo gesto da barra de
+              filtro logo abaixo. São três botões e não crescem: guia novo
+              entra na seção `#guias`, não aqui. */}
           <ul className="-mx-4 flex min-w-0 gap-3 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0 sm:pb-0">
             {atalhosDeGuia.map((guia) => (
               <li key={guia.href} className="shrink-0">
@@ -145,8 +160,8 @@ export default function Home() {
         </section>
       )}
 
-      <section className="mx-auto max-w-6xl px-4 py-5 sm:py-12">
-        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 sm:mb-8">
+      <section className="mx-auto max-w-6xl px-4 py-5 sm:pt-6 sm:pb-12">
+        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 sm:mb-5">
           <h2 className="text-xl font-extrabold tracking-tight text-slate-900 sm:text-2xl">
             {produtos.length} {produtos.length === 1 ? 'achado conferido' : 'achados conferidos'}
           </h2>
@@ -179,6 +194,38 @@ export default function Home() {
           })}
         />
       </section>
+
+      {gruposDeGuia.length > 0 && (
+        <section id="guias" className="mx-auto max-w-6xl scroll-mt-6 px-4 pb-8 sm:pb-14">
+          <h2 className="mb-4 text-xl font-extrabold tracking-tight text-slate-900 sm:mb-6 sm:text-2xl">
+            Guias
+          </h2>
+          <div className="grid min-w-0 gap-4 md:grid-cols-3">
+            {gruposDeGuia.map((grupo) => (
+              <div
+                key={grupo.titulo}
+                className="min-w-0 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm"
+              >
+                <h3 className="text-xs font-black uppercase tracking-wide text-marca">
+                  {grupo.titulo}
+                </h3>
+                <ul className="mt-3 space-y-2.5">
+                  {grupo.itens.map((item) => (
+                    <li key={item.href}>
+                      <Link
+                        href={item.href}
+                        className="text-sm font-bold text-slate-700 underline decoration-slate-300 underline-offset-4 transition-colors hover:text-marca hover:decoration-marca/40"
+                      >
+                        {item.rotulo}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* O rodapé usa a mesma faixa do topo: a página abre e fecha no mesmo
           escuro, e a vitrine clara fica emoldurada entre as duas. */}

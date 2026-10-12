@@ -744,6 +744,16 @@ mas uma `iframe` de 390×844 numa página do `next dev` (mesma origem) sim —
 mede altura, colunas e rolagem lateral, e o print dela mostra a tela de
 verdade (espere as fotos carregarem antes do print).
 
+🟢 **No topo da home ficam só 3 atalhos (12/10/2026), decisão dele.** Com 17
+guias, os botões viravam 5 ou 6 linhas no monitor e ele não via produto sem
+rolar. Agora: "O que caiu de preço", "Black Friday" e "Todos os guias" (âncora
+`#guias`). Os guias moram numa seção **depois da vitrine**, em 3 grupos: "Qual
+comprar" (`guias.json`), "Dúvidas antes de comprar" e "Vale esperar a Black
+Friday?" (`decisoes.json`, pelo prefixo do slug). **Guia novo entra sozinho no
+grupo certo; não volte a listar guia no topo.** O cabeçalho encolheu ~15% no
+desktop (400 → 344 px), a pedido dele ("bem sutil"). Medido em iframe de
+1920 px: primeiro card em ~570 px. Vale também no celular (3 botões na tira).
+
 **O orçamento da dobra, pra quem for mexer:** cabeçalho ~175px + atalhos ~50px
 + título da vitrine ~80px + filtro ~74px. Tudo que entrar acima da grade sai do
 espaço do primeiro card.
