@@ -97,10 +97,16 @@ pessoas para tirar dinheiro" (práticas comerciais proibidas).
 - 🟢 **Decisão dele em 11/10: voltar o nome para `verificadoagorabr`.** É o
   nome que está nas "Contas vinculadas" do Meli (cláusula 1.3: mídia não
   declarada não gera pagamento) e no Metricool. **Quem troca é ele, no app.**
-  ⚠️ Não conferido: se a troca de volta foi feita, e se o Metricool continuou
-  conectado depois da mudança de nome.
-- A restrição de links **segue até 10/11 mesmo com o nome antigo** — voltar o
-  nome não a desfaz.
+  🟢 **Feito no mesmo dia** (print do "Editar perfil": nome de usuário
+  `verificadoagorabr`). ⚠️ Não conferido: se o Metricool segue conectado.
+- A restrição é de **adicionar** links por 30 dias, e **o link da bio
+  continua lá** (o perfil mostra "Links: 1"). 🔴 **Não remover nem editar esse
+  link até 10/11**: se sair, não dá para pôr de volta. Voltar o nome não
+  desfaz a restrição.
+- A apelação existe: Status da conta → "Recursos que você não pode usar" →
+  tocar em "Você não poderá adicionar links por 30 dias". É dele.
+- A bio ainda diz "35 produtos" (são 47 na vitrine). Texto da bio não é link,
+  mas mexer no perfil durante a restrição fica para depois da apelação.
 - **Não contornar**: nada de encurtador, outro domínio ou conta nova para
   postar o mesmo link — é o que transforma 30 dias em banimento.
 - Contestar é dele (Status da conta no app). Enquanto durar: reel com o **ID
