@@ -141,7 +141,7 @@ pergunte logo no começo da próxima sessão.
 | **Shopee**: cadastrar dados bancários e fiscais no painel (PF ou PJ). A comissão só é paga 60 dias depois da aprovação | **Dele** |
 | **Philco vira suspeita todo dia** com o preço certo na vitrine (`results[0]` não é a buy box). Ignorar até ele decidir mudar a regra para todos | **Decisão dele** |
 | **A36 preto (oculto) × verde (visível)**: em 23/09 o oculto estava mais barato. Reconferir os dois preços e perguntar qual fica | **Decisão dele** |
-| 🟢 **Guias perenes de ar-condicionado (12/10)**: `/guia/ar-condicionado-12000-btus` e `-9000-btus`, mais `monitor-full-hd`, `fone-de-ouvido` e `controle-de-videogame`. Indexação pedida no dia; reconferir em ~1 semana. Ver "Endereço perene" | Minha |
+| 🟢 **Guias perenes de ar-condicionado (12/10)**: `/guia/ar-condicionado-12000-btus` e `-9000-btus`, mais `monitor-full-hd`, `fone-de-ouvido` e `controle-de-videogame`. 🔴 **Falta pedir a indexação de `/guia/monitor-full-hd`**: a cota cortou no 12º pedido de 12/10. As outras quatro foram pedidas no dia; reconferir em ~1 semana. Ver "Endereço perene" | Minha |
 | **Comparativo iPhone 17 × 17e** — oferecido em 05/10; a Apple publica a ficha completa dos dois | Só se ele pedir |
 | **Cor da etiqueta `Ar-condicionado`** no card (hoje sai no cinza de reserva) — perguntado em 04/10, sem resposta | **Decisão dele** |
 | **Instagram**: a conta está parada desde setembro. O que ele pesquisou comigo em 07/10 está em "Instagram: link de compra" abaixo | **Dele** |
