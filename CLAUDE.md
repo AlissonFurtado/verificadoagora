@@ -101,6 +101,10 @@ pessoas para tirar dinheiro" (práticas comerciais proibidas).
 - ⚠️ **Cláusula 1.3 do Meli**: a conta renomeada não está declarada como
   Mídia. Link de afiliado divulgado por ela não gera pagamento até ser
   cadastrada no painel.
+- 🟢 **Decisão dele em 11/10: a oficial continua sendo a `@verificadoagorabr`.**
+  A renomeada fica parada até a restrição acabar; o que fazer com ela depois
+  é decisão dele. **Dele, pendente:** abrir o Status da conta da
+  `@verificadoagorabr` e confirmar que ela está sem restrição.
 - **Não contornar**: nada de encurtador, outro domínio ou conta nova para
   postar o mesmo link — é o que transforma 30 dias em banimento.
 - Contestar é dele (Status da conta no app). Enquanto durar: reel com o **ID
