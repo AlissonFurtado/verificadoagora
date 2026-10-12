@@ -86,6 +86,28 @@ R$ 2.999,90. O **iPhone 17e saiu da vitrine por um dia** ("sem oferta ativa",
 - ⚠️ **O LG Compact 9k do vídeo voltou a R$ 2.289** — o link mandado em 08/10
   citava R$ 1.889. Se o vídeo ainda não saiu, o preço da arte está velho.
 
+**Em 12/10 entrou o micro-ondas Electrolux MTO30 20 L, só a versão 220 V**
+(id 52, `MLB6309816`), do garimpo de 11/10, por decisão dele. São 52 produtos.
+- ⚠️ **O garimpo trouxe o id do 127 V (`MLB6309815`) com o preço do 220 V**
+  (R$ 435,18). Na página, o 127 V custava R$ 799 sem desconto, de outro
+  vendedor (FERSTORE5); o 220 V, R$ 435,18 pela loja oficial Electrolux. Os
+  dois catálogos mostram "Voltagem: Escolha" — é o risco do `results[0]` (a
+  Philco). 🔴 **Conferir na rodada de 13/10** se o robô manteve ~R$ 435 e
+  `disponivel: true`; se vier ~R$ 799, ele pegou o vendedor errado.
+- Nome, `descricao`, 1º parágrafo da `analise` e a 1ª pergunta dizem 220 V.
+- 🔴 **Falta pedir a indexação da ficha** (cota de 12/10 estourada), junto
+  com a do `/guia/monitor-full-hd`.
+- Reprovado na mesma triagem: **monitor 3Green 20" HD 75 Hz** (marca sem
+  ficha conferida, HD — mesmo caso do ViewPro e do LG 20").
+- **Suspeitos de 11/10, conferidos na página:** mixer Elgin R$ 79,23 → R$ 92
+  (aplicado); DualSense segue R$ 478 nacional (falso positivo de novo). O
+  **Moto G67 caiu 20%** (R$ 1.339 → R$ 1.068,87) e o robô aplicou sozinho:
+  conferido, loja oficial Motorola, sem importação. PR 55 fechado sem merge.
+- ⚠️ O Linkbuilder recusou a URL curta `/p/MLB…` ("Não foi possível gerar
+  seu link") e aceitou a URL completa com o slug. O repositório é
+  `github.com/AlissonFurtado/verificadoagora`; branch de PR fechado se apaga
+  com `git push origin --delete`.
+
 🔴 **Instagram restringiu a conta em 11/10/2026: "Você não pode compartilhar
 links", até 10/11/2026.** Motivo dado: a conta "pode estar enganando outras
 pessoas para tirar dinheiro" (práticas comerciais proibidas).

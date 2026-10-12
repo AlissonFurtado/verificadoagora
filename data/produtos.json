@@ -2035,12 +2035,55 @@
       "familia": "Mouse Redragon Cobra M711 V2",
       "data_adicionado": "2026-10-10",
       "verificado_em": "2026-10-11"
+    },
+    {
+      "id": 52,
+      "nome": "Micro-ondas Electrolux MTO30 20L 220 V",
+      "categoria": "Casa",
+      "preco_original": 599,
+      "preco_atual": 435.18,
+      "desconto_percentual": 27,
+      "preco_no_pix": false,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1bVRxgJ",
+      "cupom": "",
+      "descricao": "Micro-ondas de bancada, 20L, 220 V, com função tira odor, trava de segurança e classificação A de energia",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_818175-MLA108913885928_032026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB6309816",
+      "disponivel": true,
+      "familia": "Micro-ondas Electrolux Micro-ondas MTO30 20L",
+      "data_adicionado": "2026-10-12",
+      "verificado_em": "2026-10-12",
+      "analise": [
+        "**Esta oferta é da versão 220 V.** O mesmo micro-ondas existe em 127 V, e no dia em que conferimos (12/10/2026) cada voltagem tinha um vendedor diferente, e o preço de uma não vale para a outra. Confira a tensão da sua tomada antes de clicar: micro-ondas não é bivolt, e ligar na voltagem errada queima o aparelho.",
+        "Vinte litros é o tamanho de quem mora sozinho, em casal ou tem bancada apertada: o prato giratório tem 24,5 cm, o que recebe um prato raso comum e uma tigela, mas **não uma travessa grande**. O anúncio informa 1,3 kW de potência, 10 níveis, descongelamento por peso e por tempo, as funções tira odor, manter aquecido e mudo, trava de segurança para crianças e **classificação A de eficiência energética**. O aparelho mede 45,5 cm de largura por 26,25 cm de altura e 34,8 cm de profundidade.",
+        "O que ele não tem: **grill, convecção e tecnologia inverter**. Não doura, não gratina e não substitui forno elétrico. Compre para aquecer, descongelar e fazer pipoca numa cozinha pequena com tomada 220 V. Não compre se a sua casa é 127 V, nem se a família usa travessa grande todo dia: aí o de 23 litros que acompanhamos serve melhor."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Ele funciona em tomada 127 V?",
+          "resposta": "Não. Esta oferta é da versão 220 V e micro-ondas não é bivolt. Existe uma versão 127 V do mesmo modelo, vendida em outro anúncio."
+        },
+        {
+          "pergunta": "Ele gratina ou assa?",
+          "resposta": "Não. Não tem grill nem convecção: aquece, descongela e cozinha, mas não doura."
+        },
+        {
+          "pergunta": "Cabe uma travessa grande?",
+          "resposta": "Não. O prato giratório tem 24,5 cm: cabe prato raso comum e tigela. Para travessa, o tamanho indicado é 23 litros ou mais."
+        },
+        {
+          "pergunta": "Tem trava para criança?",
+          "resposta": "Sim, o anúncio informa trava de segurança no painel."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-11",
     "conferido_em": "2026-10-11T16:29:03.582Z",
-    "total_produtos": 51,
+    "total_produtos": 52,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
