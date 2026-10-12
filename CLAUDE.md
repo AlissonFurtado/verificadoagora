@@ -86,6 +86,18 @@ R$ 2.999,90. O **iPhone 17e saiu da vitrine por um dia** ("sem oferta ativa",
 - ⚠️ **O LG Compact 9k do vídeo voltou a R$ 2.289** — o link mandado em 08/10
   citava R$ 1.889. Se o vídeo ainda não saiu, o preço da arte está velho.
 
+🔴 **Instagram restringiu a conta em 11/10/2026: "Você não pode compartilhar
+links", até 10/11/2026.** Motivo dado: a conta "pode estar enganando outras
+pessoas para tirar dinheiro" (práticas comerciais proibidas), e a tela cita o
+domínio **verificadoagora.com.br**. É o segundo bloqueio do domínio como
+spam/golpe (o Pinterest foi o primeiro). **Causa não provada.** Hipótese
+minha: o nome "Verificado Agora" parece golpe de selo de verificação, que é o
+phishing mais comum do Instagram. Não sei o que ele fez na conta no dia.
+- **Não contornar**: nada de encurtador, outro domínio ou conta nova para
+  postar o mesmo link — é o que transforma 30 dias em banimento.
+- Contestar é dele (Status da conta no app). Enquanto durar: reel com o **ID
+  do produto na tela** não precisa de link; o canal do WhatsApp não é afetado.
+
 🟡 **O canal do WhatsApp segue com 2 seguidores** (visto em 01/10). Últimas
 publicações: 5 em 29/09, 5 em 01/10 e 5 em 02/10 — **nada desde então**. O
 número que importa continua sendo o de seguidores: divulgar muda, publicar
