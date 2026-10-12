@@ -92,8 +92,10 @@ R$ 2.999,90. O **iPhone 17e saiu da vitrine por um dia** ("sem oferta ativa",
   (R$ 435,18). Na página, o 127 V custava R$ 799 sem desconto, de outro
   vendedor (FERSTORE5); o 220 V, R$ 435,18 pela loja oficial Electrolux. Os
   dois catálogos mostram "Voltagem: Escolha" — é o risco do `results[0]` (a
-  Philco). 🔴 **Conferir na rodada de 13/10** se o robô manteve ~R$ 435 e
-  `disponivel: true`; se vier ~R$ 799, ele pegou o vendedor errado.
+  Philco). 🟢 **A rodada manual de 12/10 manteve R$ 435,18 e
+  `disponivel: true`**: o robô lê o 220 V certo. O agendador não tinha
+  rodado até 15h50; disparei à mão. Só o DualSense voltou suspeito (PR
+  fechado, branch apagado).
 - Nome, `descricao`, 1º parágrafo da `analise` e a 1ª pergunta dizem 220 V.
 - 🔴 **Falta pedir a indexação da ficha** (cota de 12/10 estourada), junto
   com a do `/guia/monitor-full-hd`.
