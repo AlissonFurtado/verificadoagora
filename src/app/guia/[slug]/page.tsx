@@ -343,6 +343,8 @@ export default function PaginaDoGuia({ params }: { params: { slug: string } }) {
                   {perfil.quando_nao}
                 </p>
 
+                {/* Aparelho sem ficha de fabricante fica sem a tabela: o texto diz por quê. */}
+                {Object.keys(perfil.ficha).length > 0 && (
                 <dl className="mt-5 grid gap-x-6 gap-y-2 border-t border-slate-100 pt-4 text-sm sm:grid-cols-2">
                   {Object.entries(perfil.ficha).map(([campo, valor]) => (
                     <div key={campo} className="flex min-w-0 flex-wrap items-baseline gap-x-2">
@@ -351,6 +353,7 @@ export default function PaginaDoGuia({ params }: { params: { slug: string } }) {
                     </div>
                   ))}
                 </dl>
+                )}
 
                 {produto && comComparativo.has(produto.meli_id) && (
                   <p className="mt-5 text-sm">

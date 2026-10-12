@@ -141,7 +141,7 @@ pergunte logo no começo da próxima sessão.
 | **Shopee**: cadastrar dados bancários e fiscais no painel (PF ou PJ). A comissão só é paga 60 dias depois da aprovação | **Dele** |
 | **Philco vira suspeita todo dia** com o preço certo na vitrine (`results[0]` não é a buy box). Ignorar até ele decidir mudar a regra para todos | **Decisão dele** |
 | **A36 preto (oculto) × verde (visível)**: em 23/09 o oculto estava mais barato. Reconferir os dois preços e perguntar qual fica | **Decisão dele** |
-| 🟢 **Guias perenes de ar-condicionado (12/10)**: `/guia/ar-condicionado-12000-btus` e `-9000-btus`. Indexação pedida no dia; reconferir em ~1 semana. Ver "Endereço perene" | Minha |
+| 🟢 **Guias perenes de ar-condicionado (12/10)**: `/guia/ar-condicionado-12000-btus` e `-9000-btus`, mais `monitor-full-hd`, `fone-de-ouvido` e `controle-de-videogame`. Indexação pedida no dia; reconferir em ~1 semana. Ver "Endereço perene" | Minha |
 | **Comparativo iPhone 17 × 17e** — oferecido em 05/10; a Apple publica a ficha completa dos dois | Só se ele pedir |
 | **Cor da etiqueta `Ar-condicionado`** no card (hoje sai no cinza de reserva) — perguntado em 04/10, sem resposta | **Decisão dele** |
 | **Instagram**: a conta está parada desde setembro. O que ele pesquisou comigo em 07/10 está em "Instagram: link de compra" abaixo | **Dele** |
@@ -1419,9 +1419,19 @@ aviso de substituto".**
   nova para o novo, com pedido de indexação; (2) trocar o perfil no guia da
   categoria; (3) `substituto` no antigo, se ele saiu de linha; (4) a ficha
   antiga fica no ar. Redirect 301 só quando é **o mesmo aparelho**.
-- **Próximos guias de categoria, só se ele pedir:** monitor, fone e controle
-  têm 3+ produtos com ficha de fabricante. Os comparativos seguem presos ao
-  slug de um modelo — não foram migrados.
+- 🟢 **Mais três no mesmo dia, a pedido dele:** `/guia/monitor-full-hd`,
+  `/guia/fone-de-ouvido` e `/guia/controle-de-videogame`. Fichas copiadas dos
+  comparativos do S3 27" e do DualSense e dos exemplos do guia de fone da
+  Black Friday. **Aparelho sem ficha de fabricante conferida entra com
+  `ficha: {}`** (Fmaxx e JBL Quantum): a página esconde a tabela e o texto
+  diz por quê. O AOC 27B35HM entra como aparelho de fora, sem preço.
+  Os comparativos seguem presos ao slug de um modelo — não foram migrados.
+- 🔴 **A análise do soundcore P30i dizia "fone de cabeça"** desde o
+  cadastro; ele é intra-auricular com estojo (o guia de fone da BF já dizia
+  certo: 10 h no fone, 45 h com o estojo). Corrigidas a `analise` e 3
+  `perguntas`. ⚠️ `data/posts.json` e `data/pins.json` ainda trazem o
+  texto antigo — são gerados (`npm run posts` / `npm run pins`) e não
+  foram regerados.
 - 🔴 **Bug achado no caminho, no ar desde 21/09:** o guia `celulares-ate-1500`
   mostrava **`{preco}`, `{desconto}` e `{economia}` crus** no perfil do A36, e
   os 3 guias de decisão tinham perdido o exemplo do A36 — todos apontavam para

@@ -346,6 +346,267 @@
         }
       ],
       "escrito_em": "2026-10-12"
+    },
+    {
+      "slug": "monitor-full-hd",
+      "titulo": "Monitor Full HD: qual comprar, por perfil de uso",
+      "resumo": "Não existe um melhor monitor Full HD: existe o melhor para o que você faz na frente dele. Separamos quatro monitores por perfil de uso, com a ficha conferida no site do fabricante onde ela existe e o preço de três deles conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
+      "descricao": "Monitores Full HD de 24 e 27 polegadas separados por perfil de uso: texto e planilha, jogo e vídeo, jogo competitivo, segunda tela. Ficha conferida no fabricante e preço conferido todo dia.",
+      "perfis": [
+        {
+          "chave": "texto",
+          "perfil": "Trabalho com texto e planilha",
+          "aparelho": "Samsung S3 24\" 120 Hz",
+          "meli_id": "MLB51435621",
+          "porque": [
+            "Full HD em 24 polegadas deixa os pixels menores: texto e planilha saem mais nítidos do que na mesma resolução em 27.",
+            "Os 120 Hz deixam a rolagem e o jogo mais fluidos que num monitor comum de 60 Hz, desde que o computador entregue esses quadros.",
+            "Duas entradas HDMI: dá para deixar computador e console ligados ao mesmo tempo.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se você quer ver duas janelas lado a lado com folga ou vem de uma TV: 24 polegadas é tela de mesa pequena. E ele só inclina, sem ajuste de altura; para subir a tela, o caminho é um braço VESA.",
+          "ficha": {
+            "Tela e painel": "24 pol. IPS, Full HD (1.920 × 1.080)",
+            "Taxa de atualização": "Máx. 120 Hz",
+            "Entradas": "2 × HDMI 1.4",
+            "Suporte e VESA": "Inclinação -2° a 21°, VESA 100 × 100"
+          }
+        },
+        {
+          "chave": "tela-grande",
+          "perfil": "Quero tela grande para jogo e vídeo",
+          "aparelho": "Samsung S3 27\" 120 Hz",
+          "meli_id": "MLB53838786",
+          "porque": [
+            "27 polegadas a 120 Hz, com painel IPS: imagem maior para jogo e vídeo a uma distância normal da mesa.",
+            "Duas entradas HDMI, para computador e console.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se o uso é mais texto do que imagem: os mesmos pixels espalhados em 27 polegadas ficam maiores, e de perto a letra sai menos nítida do que no de 24. A Samsung também não informa se ele tem sincronização com a placa de vídeo.",
+          "ficha": {
+            "Tela e painel": "27 pol. IPS, Full HD (1.920 × 1.080)",
+            "Taxa de atualização": "Máx. 120 Hz",
+            "Sincronização com a placa de vídeo": "Não divulgado",
+            "Entradas": "2 × HDMI 1.4"
+          }
+        },
+        {
+          "chave": "competitivo",
+          "perfil": "Jogo competitivo e quero sincronização",
+          "aparelho": "AOC 27B35HM",
+          "meli_id": "",
+          "porque": [
+            "É o único dos quatro que declara Adaptive Sync, o recurso que casa o monitor com a placa de vídeo e evita a imagem partida ao meio.",
+            "A AOC anuncia 3 anos de garantia na própria página do produto.",
+            "Painel VA, que dá preto mais profundo que o IPS."
+          ],
+          "quando_nao": "Não é a escolha se várias pessoas olham a tela de lado: painel VA tem ângulo de visão pior que o IPS. A AOC também não publica brilho, contraste nem cobertura de cor deste modelo, e ele tem uma HDMI só.",
+          "ficha": {
+            "Tela e painel": "27 pol. VA, Full HD (1.920 × 1.080)",
+            "Taxa de atualização": "120 Hz",
+            "Sincronização com a placa de vídeo": "Adaptive Sync",
+            "Entradas": "1 × HDMI 1.4 e 1 × VGA",
+            "Garantia": "3 anos"
+          }
+        },
+        {
+          "chave": "segunda-tela",
+          "perfil": "Só preciso de uma segunda tela para trabalho",
+          "aparelho": "Fmaxx FT24",
+          "meli_id": "MLB44783010",
+          "porque": [
+            "Segundo o anúncio: 24 polegadas Full HD, entradas HDMI e VGA, encaixe VESA e bivolt. A VGA é o que salva quem ainda usa computador antigo.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre para jogar: a taxa é de 60 Hz, a do monitor comum. E saiba que a Fmaxx não publica ficha técnica em site próprio, então tudo o que sabemos dele vem do anúncio, que não diz o tipo de painel. É por isso que ele aparece aqui sem a tabela de especificações.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Se nenhum perfil acima é exatamente o seu, decida primeiro o tamanho: em Full HD, 24 polegadas é mais nítido de perto e 27 é maior para ver de longe. Depois confira a saída do seu computador, porque nenhum destes tem DisplayPort. O preço muda todo dia, então compare na data em que for comprar.",
+      "fontes": [
+        {
+          "titulo": "Monitor Essential S3 24\" FHD IPS 120 Hz (LS24F320GALMZD) — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/monitors/full-hd-1080p/essential-monitor-s3-s32gf-24-inch-fhd-ips-120hz-ls24f320galmzd/"
+        },
+        {
+          "titulo": "Monitor Essential S3 27\" FHD IPS 120 Hz (LS27F320GALMZD) — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/monitors/full-hd-1080p/essential-monitor-s3-s32gf-27-inch-fhd-ips-120hz-ls27f320galmzd/"
+        },
+        {
+          "titulo": "AOC 27B35HM — página oficial da AOC",
+          "url": "https://www.aoc.com/pt/monitors/27b35hm"
+        }
+      ],
+      "escrito_em": "2026-10-12"
+    },
+    {
+      "slug": "fone-de-ouvido",
+      "titulo": "Fone de ouvido: qual comprar, por perfil de uso",
+      "resumo": "Não existe um melhor fone de ouvido: existe o melhor para onde você vai usar. Separamos por perfil os quatro fones que acompanhamos, com a ficha conferida no site do fabricante onde ela existe e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
+      "descricao": "Fones de ouvido separados por perfil de uso: abafar o barulho da rua, gastar pouco no dia a dia, usar com celular Galaxy, jogar com microfone. Preço conferido todo dia.",
+      "perfis": [
+        {
+          "chave": "barulho",
+          "perfil": "Quero abafar o barulho do ônibus e do escritório",
+          "aparelho": "soundcore P30i",
+          "meli_id": "MLB40556904",
+          "porque": [
+            "Tem cancelamento de ruído ativo com número publicado: até 42 dB, e se ajusta sozinho ao ambiente.",
+            "10 horas no fone e 45 com o estojo, segundo a soundcore.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre só para ouvir música em lugar silencioso: sem precisar do cancelamento, o P20i tem o mesmo driver de 10 mm e as mesmas 10 horas no fone. E quem já tem um fone com cancelamento decente não ganha o bastante para trocar.",
+          "ficha": {
+            "Cancelamento de ruído": "Ativo e adaptativo, até 42 dB",
+            "Bateria": "10 h no fone · 45 h com o estojo",
+            "Driver": "10 mm"
+          }
+        },
+        {
+          "chave": "dia-a-dia",
+          "perfil": "Quero um fone simples para o dia a dia",
+          "aparelho": "soundcore P20i",
+          "meli_id": "MLB38302175",
+          "porque": [
+            "Mesmo driver de 10 mm e as mesmas 10 horas no fone do P30i; o estojo leva 30 horas no total.",
+            "Graves reforçados e Bluetooth 5.3: serve para podcast no trajeto, ligação e música na caminhada.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se o seu problema é o barulho da rua: ele não tem cancelamento de ruído ativo, só tapa o ouvido. E graves puxados costumam vir às custas de detalhe no médio, o que incomoda em música clássica ou edição de áudio.",
+          "ficha": {
+            "Driver": "10 mm",
+            "Bateria": "10 h no fone · 30 h com o estojo"
+          }
+        },
+        {
+          "chave": "galaxy",
+          "perfil": "Tenho celular Galaxy",
+          "aparelho": "Samsung Galaxy Buds Core",
+          "meli_id": "MLB52039200",
+          "porque": [
+            "No ecossistema Galaxy o pareamento é imediato e o ajuste é feito pelo próprio celular, sem aplicativo de terceiro.",
+            "IP54 contra poeira e respingos.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se o seu celular é de outra marca: fora do ecossistema Samsung ele vira um fone Bluetooth comum. E a autonomia cai de cerca de 35 horas com o estojo para perto de 20 com o cancelamento ligado.",
+          "ficha": {
+            "Driver": "6,5 mm",
+            "Bateria": "Até 35 h com o estojo · cerca de 20 h com ANC",
+            "Resistência": "IP54 (poeira e respingos)"
+          }
+        },
+        {
+          "chave": "jogo",
+          "perfil": "Jogo e preciso ser ouvido na conversa",
+          "aparelho": "JBL Quantum 100M2",
+          "meli_id": "MLB47044981",
+          "porque": [
+            "Segundo o anúncio: headset com fio que cobre a orelha inteira, com microfone removível na haste e drivers de 40 mm.",
+            "Com fio não existe atraso de Bluetooth entre a tela e o som, e o microfone fica perto da boca.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre para a rua, a academia ou o transporte: ele não tem bateria, Bluetooth nem cancelamento de ruído ativo, e o cabo é curto, pensado para quem está sentado. Ele aparece aqui sem a tabela de especificações porque não conferimos a ficha dele no site da JBL.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Se nenhum perfil acima é exatamente o seu, a pergunta que separa os fones é onde você vai usar: em lugar barulhento, o cancelamento ativo é o que muda a experiência; em lugar silencioso, ele é dinheiro parado. Para jogo, fio e microfone na haste valem mais que qualquer recurso sem fio. O preço muda todo dia, então compare na data em que for comprar.",
+      "fontes": [
+        {
+          "titulo": "soundcore P30i — página oficial da soundcore",
+          "url": "https://www.soundcore.com/products/soundcore-p30i"
+        },
+        {
+          "titulo": "soundcore P20i — página oficial da soundcore",
+          "url": "https://www.soundcore.com/products/p20i"
+        },
+        {
+          "titulo": "Galaxy Buds Core — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/audio-sound/galaxy-buds/galaxy-buds-core-black-sm-r410nzkazto/"
+        }
+      ],
+      "escrito_em": "2026-10-12"
+    },
+    {
+      "slug": "controle-de-videogame",
+      "titulo": "Controle de videogame: qual comprar para PS5, Xbox e PC",
+      "resumo": "A escolha do controle começa pelo aparelho em que você joga, porque console tem trava de licenciamento e nenhum controle genérico contorna isso. Separamos por plataforma os três controles que acompanhamos, com a ficha conferida no site do fabricante e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
+      "descricao": "Controles de videogame separados por plataforma: PS5, Xbox e PC, Switch ou celular. O que cada um tem, onde funciona e onde perde, com preço conferido todo dia.",
+      "perfis": [
+        {
+          "chave": "ps5",
+          "perfil": "Jogo no PS5",
+          "aparelho": "DualSense PS5",
+          "meli_id": "MLB18910381",
+          "porque": [
+            "No PS5, dos três, só ele funciona.",
+            "Os gatilhos endurecem conforme o jogo e a vibração é detalhada o bastante para distinguir chuva de terra batida, nos jogos de PS5 que usam essas funções.",
+            "Tem microfone embutido: dá para falar com os amigos sem headset.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre para jogar só no PC ou no celular: lá os gatilhos adaptáveis e a vibração fina quase não aparecem. E os analógicos são de potenciômetro, sujeitos ao drift, o movimento fantasma que aparece com o desgaste.",
+          "ficha": {
+            "Onde funciona": "PS5, PC, Android e iOS",
+            "Gatilhos adaptáveis": "Sim, nos jogos de PS5 que usam",
+            "Vibração": "Resposta tátil detalhada",
+            "Analógicos": "Potenciômetro — sujeito a drift",
+            "Conexão": "Sem fio por Bluetooth ou cabo USB-C"
+          }
+        },
+        {
+          "chave": "xbox",
+          "perfil": "Jogo no Xbox",
+          "aparelho": "GameSir G7 SE",
+          "meli_id": "MLB24473062",
+          "porque": [
+            "Dos três, é o único que funciona no Xbox One e no Series S/X; também serve no PC.",
+            "Analógicos Hall Effect, que usam campo magnético e não sofrem o drift por desgaste.",
+            "Com fio: nunca descarrega no meio da partida.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se o sofá fica longe da TV: ele só funciona pelo cabo. E confira a origem da oferta na página antes de fechar: em 23/09/2026 a oferta que vencia no Mercado Livre vinha do exterior, com imposto de importação cobrado à parte e entrega mais demorada.",
+          "ficha": {
+            "Onde funciona": "Xbox One, Series S/X e PC",
+            "Analógicos": "Hall Effect",
+            "Conexão": "Só com fio (USB-C)",
+            "Bateria": "Não tem — funciona pelo cabo"
+          }
+        },
+        {
+          "chave": "pc-switch-celular",
+          "perfil": "Jogo no PC, no Switch ou no celular",
+          "aparelho": "GameSir T4 Nova Lite",
+          "meli_id": "MLB47251297",
+          "porque": [
+            "Funciona em PC, Switch, Android, iOS e Steam: uma peça só para quem joga em mais de um lugar.",
+            "Analógicos Hall Effect, sem o drift por desgaste.",
+            "Sem fio por Bluetooth e 2,4 GHz, ou pelo cabo.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre para console de mesa da Sony ou da Microsoft: ele não funciona em PlayStation nem em Xbox. A vibração é a de motores tradicionais, sem gatilho adaptável.",
+          "ficha": {
+            "Onde funciona": "PC, Switch, Android, iOS e Steam",
+            "Analógicos": "Hall Effect",
+            "Conexão": "Sem fio por Bluetooth e 2,4 GHz, ou cabo",
+            "Vibração": "Motores tradicionais"
+          }
+        }
+      ],
+      "veredito": "A ordem da decisão é sempre a mesma: primeiro onde você joga, depois o resto. No PS5 a resposta é o DualSense; no Xbox, dos três, é o G7 SE; no PC, no Switch e no celular, o T4 cobre tudo. Se você joga muitas horas e já perdeu um controle para o drift, os dois GameSir resolvem isso com o Hall Effect. O preço muda todo dia, então compare na data em que for comprar.",
+      "fontes": [
+        {
+          "titulo": "Controle sem fio DualSense — página oficial da PlayStation Brasil",
+          "url": "https://www.playstation.com/pt-br/accessories/dualsense-wireless-controller/"
+        },
+        {
+          "titulo": "GameSir G7 SE — página oficial",
+          "url": "https://www.gamesir.hk/products/gamesir-g7-se"
+        },
+        {
+          "titulo": "GameSir T4 Nova Lite — página oficial",
+          "url": "https://www.gamesir.hk/products/gamesir-t4-nova-lite"
+        }
+      ],
+      "escrito_em": "2026-10-12"
     }
   ]
 }
