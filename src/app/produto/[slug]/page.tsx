@@ -3,9 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { GaleriaDeFotos } from './galeria-de-fotos';
-import { lerCatalogo, lerComparativos, lerHistorico } from '@/lib/catalogo';
+import { lerCatalogo, lerComparativos, lerGuias, lerHistorico } from '@/lib/catalogo';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
-import { formatarData, formatarReal, NOME_PLATAFORMA, type Produto } from '@/lib/produtos';
+import {
+  formatarData,
+  formatarReal,
+  NOME_PLATAFORMA,
+  produtosVisiveis,
+  type Produto,
+} from '@/lib/produtos';
 import {
   fraseDoHistorico,
   resumoDoHistorico,
@@ -190,6 +196,23 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
   const frasePreco = fraseDoHistorico(pontos, produto.preco_atual, formatarReal, formatarData);
   const resumoPreco = resumoDoHistorico(pontos, produto.preco_atual);
 
+  // Para onde mandar quem caiu numa ficha que acabou: o substituto que a
+  // curadoria apontou e o guia da categoria, que tem endereço perene. Só
+  // produto visível serve de destino — mandar para outra oferta morta seria
+  // trocar um beco por outro.
+  const visiveis = produtosVisiveis(lerCatalogo().produtos);
+  const substituto = produto.disponivel
+    ? undefined
+    : visiveis.find((p) => p.meli_id === produto.substituto);
+  const guiaDaCategoria = produto.disponivel
+    ? undefined
+    : lerGuias().find((g) =>
+        g.perfis.some(
+          (perfil) =>
+            visiveis.find((p) => p.meli_id === perfil.meli_id)?.categoria === produto.categoria,
+        ),
+      );
+
   return (
     <main className="min-h-screen bg-fundo text-slate-800">
       <DadosEstruturados produto={produto} />
@@ -246,6 +269,24 @@ export default function PaginaDoProduto({ params }: { params: { slug: string } }
                 <span className="min-w-0">
                   O último preço conferido foi em {formatarData(produto.verificado_em)}.
                 </span>
+                {substituto && (
+                  <Link
+                    href={caminhoDoProduto(substituto)}
+                    data-onde="substituto"
+                    className="basis-full font-bold text-marca underline decoration-marca/30 underline-offset-4 hover:text-marca-acao"
+                  >
+                    O que acompanhamos hoje no lugar: {substituto.nome} →
+                  </Link>
+                )}
+                {guiaDaCategoria && (
+                  <Link
+                    href={`/guia/${guiaDaCategoria.slug}`}
+                    data-onde="substituto-guia"
+                    className="basis-full font-bold text-marca underline decoration-marca/30 underline-offset-4 hover:text-marca-acao"
+                  >
+                    {guiaDaCategoria.titulo.split(':')[0]}: qual comprar hoje →
+                  </Link>
+                )}
               </p>
             )}
 

@@ -78,6 +78,19 @@ export type Produto = {
    */
   confere_por?: string;
   /**
+   * O `meli_id` do produto que ocupa o lugar deste quando ele sai de linha.
+   *
+   * A ficha de um produto que acabou continua no ar, com o histórico — URL
+   * indexada não morre. Com este campo ela passa a apontar para o modelo
+   * que acompanhamos hoje, em vez de deixar o visitante num beco.
+   *
+   * ⚠️ **Nunca reaproveite a ficha antiga para o produto novo**: o endereço
+   * carrega o nome e o id do antigo, e o histórico de preços misturaria dois
+   * aparelhos. Produto novo ganha ficha nova; quem tem endereço perene é o
+   * guia da categoria. É curadoria: o robô não toca neste campo.
+   */
+  substituto?: string;
+  /**
    * A curadoria já sabe que a oferta vencedora vem de fora do Brasil.
    *
    * ⚠️ **Existe porque o preço da API não conta a história toda.** Em

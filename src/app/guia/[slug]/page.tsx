@@ -68,7 +68,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
   const { guia, porMeliId } = achado;
   const acompanhados = quantosAcompanhados(guia, porMeliId);
-  const descricao = `${guia.perfis.length} celulares de até ${formatarReal(guia.teto)} separados por perfil de uso: durar anos, jogar, fotografar, aguentar tranco. Ficha conferida na fonte do fabricante e ${acompanhados} preços conferidos todos os dias.`;
+  const descricao = guia.descricao ?? `${guia.perfis.length} celulares de até ${formatarReal(guia.teto ?? 0)} separados por perfil de uso: durar anos, jogar, fotografar, aguentar tranco. Ficha conferida na fonte do fabricante e ${acompanhados} preços conferidos todos os dias.`;
 
   return {
     title: guia.titulo,
@@ -128,7 +128,7 @@ function DadosEstruturados({
     headline: guia.titulo,
     description: guia.resumo,
     datePublished: guia.escrito_em,
-    dateModified: guia.escrito_em,
+    dateModified: guia.atualizado_em ?? guia.escrito_em,
     mainEntityOfPage: { '@type': 'WebPage', '@id': url },
     author: { '@type': 'Organization', name: 'Verificado Agora' },
     publisher: { '@type': 'Organization', name: 'A F DE SOUSA' },
@@ -185,6 +185,7 @@ export default function PaginaDoGuia({ params }: { params: { slug: string } }) {
   const conferidoEm = lerCatalogo().metadata.conferido_em;
   const conferencia = descreverConferencia(conferidoEm, new Date());
   const comComparativo = new Set(lerComparativos().map((c) => c.meli_id));
+  const deFora = guia.perfis.length - quantosAcompanhados(guia, porMeliId);
   const base = process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : '';
@@ -227,7 +228,8 @@ export default function PaginaDoGuia({ params }: { params: { slug: string } }) {
           </h1>
           <p className="mt-4 text-lg font-medium leading-relaxed text-slate-600">{guia.resumo}</p>
           <p className="mt-3 text-sm font-semibold text-slate-400">
-            Escrito em {formatarData(guia.escrito_em)} ·{' '}
+            Escrito em {formatarData(guia.escrito_em)}
+            {guia.atualizado_em && ` · atualizado em ${formatarData(guia.atualizado_em)}`} ·{' '}
             {quantosAcompanhados(guia, porMeliId)} de {guia.perfis.length} com preço conferido todo
             dia
           </p>
@@ -413,8 +415,10 @@ export default function PaginaDoGuia({ params }: { params: { slug: string } }) {
 
         <footer className="mt-10 border-t border-slate-200 pt-6 text-center text-sm text-slate-500">
           <p className="mx-auto max-w-2xl text-xs leading-relaxed text-slate-400">
-            Links de afiliado · você paga o mesmo preço, e isso não muda o que escrevemos acima:
-            quatro dos seis aparelhos deste guia não são vendidos por nós.
+            Links de afiliado · você paga o mesmo preço, e isso não muda o que escrevemos acima
+            {deFora > 0 &&
+              `: ${deFora} de ${guia.perfis.length} aparelhos deste guia não são vendidos por nós`}
+            .
           </p>
           <p className="mt-4">
             <Link

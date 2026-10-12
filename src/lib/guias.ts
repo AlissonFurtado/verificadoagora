@@ -52,14 +52,25 @@ export type Guia = {
   slug: string;
   titulo: string;
   resumo: string;
-  /** O teto da faixa, em reais. Aparece no texto e no título da página. */
-  teto: number;
+  /**
+   * O teto da faixa, em reais, nos guias de celular por preço. Guia de
+   * categoria (ar-condicionado por capacidade) não tem teto e usa `descricao`.
+   */
+  teto?: number;
+  /** Descrição da página para o buscador. Sem ela, vale a frase dos guias de celular. */
+  descricao?: string;
   perfis: PerfilDoGuia[];
   /** Fecha o guia dizendo o que fazer se nenhum perfil for o da pessoa. */
   veredito: string;
   fontes: { titulo: string; url: string }[];
   /** Ficha técnica não muda, mas o texto envelhece: a data aparece na página. */
   escrito_em: string;
+  /**
+   * Data da última troca de aparelho ou de texto. Guia de categoria tem
+   * **endereço perene**: quando um modelo sai de linha, troca-se o perfil
+   * aqui dentro e a URL indexada continua a mesma.
+   */
+  atualizado_em?: string;
 };
 
 export type Guias = { guias: Guia[] };

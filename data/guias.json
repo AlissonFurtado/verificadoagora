@@ -11,7 +11,7 @@
           "chave": "durar-anos",
           "perfil": "Quero que dure anos sem ficar obsoleto",
           "aparelho": "Galaxy A36 5G",
-          "meli_id": "MLB47115842",
+          "meli_id": "MLB47111438",
           "porque": [
             "A Samsung promete até 6 versões novas do Android nele — o dobro do segundo colocado desta lista e o triplo da maioria. É a única especificação da faixa que você não consegue melhorar depois com nenhum acessório.",
             "Tela Super AMOLED de 120 Hz e 1.900 nits: dá pra usar no sol sem fazer sombra com a mão.",
@@ -158,6 +158,194 @@
         }
       ],
       "escrito_em": "2026-09-10"
+    },
+    {
+      "slug": "ar-condicionado-12000-btus",
+      "titulo": "Ar-condicionado 12.000 BTUs: qual comprar, por perfil de uso",
+      "resumo": "Não existe um melhor ar-condicionado de 12.000 BTUs: existe o melhor para o jeito que você usa. Separamos por perfil os splits só frio, inverter e 220 V que acompanhamos, com a ficha conferida no site de cada fabricante e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
+      "descricao": "Splits inverter de 12.000 BTUs separados por perfil de uso: dormir com ele ligado, fugir do vento direto, garantia longa, pouco uso. Ficha conferida no fabricante e preço conferido todo dia.",
+      "perfis": [
+        {
+          "chave": "dormir",
+          "perfil": "Vou dormir com ele ligado",
+          "aparelho": "LG AI Dual Inverter Voice",
+          "meli_id": "MLB27727511",
+          "porque": [
+            "A LG declara o ruído da unidade interna: 22 dB(A) no modo mais baixo, nível de sussurro. Só LG e Samsung publicam esse número nesta lista.",
+            "É classe A no INMETRO, o que pesa num aparelho que passa a noite inteira ligado.",
+            "Tem Wi-Fi com o app ThinQ, Alexa e Google: dá para ligar antes de chegar e ajustar sem levantar da cama.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não é a escolha se o que incomoda é o jato de ar frio no corpo: ele é silencioso, mas sopra como um split comum. Para isso existe o modo sem vento do Samsung WindFree.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "Ruído da unidade interna": "22 a 42 dB(A)",
+            "Wi-Fi": "Sim, com ThinQ, Alexa e Google",
+            "Garantia": "2 anos, 10 anos no compressor",
+            "Potência nominal (frio)": "1.130 W"
+          }
+        },
+        {
+          "chave": "sem-vento",
+          "perfil": "Não suporto vento frio direto",
+          "aparelho": "Samsung WindFree AI Pro",
+          "meli_id": "MLB75731017",
+          "porque": [
+            "O modo WindFree solta o ar por microfuros, sem jato. É o único desta lista com esse recurso.",
+            "Também declara o ruído: 21 dB(A) no modo mais baixo.",
+            "É o único que publica o IDRS deste modelo (7,0), o índice de frio entregue por energia gasta ao longo da estação.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre pelo modo sem vento se você nunca se incomodou com o jato do ar: é ele que diferencia este aparelho dos outros classe A com Wi-Fi da lista. Compare o preço do dia antes de decidir.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "IDRS (eficiência na estação)": "7,0",
+            "Ruído da unidade interna": "21 a 40 dB(A)",
+            "Wi-Fi": "Sim, com SmartThings",
+            "Garantia": "10 anos no compressor",
+            "Diferencial": "Modo sem vento (WindFree)"
+          }
+        },
+        {
+          "chave": "garantia",
+          "perfil": "Quero classe A, Wi-Fi e garantia longa",
+          "aparelho": "Elgin Eco Inverter II",
+          "meli_id": "MLB32442004",
+          "porque": [
+            "A garantia total mais longa da lista: 3 anos no aparelho inteiro, além dos 10 anos no compressor.",
+            "Classe A no INMETRO e Wi-Fi com Alexa e Google.",
+            "Opera de 70 V a 300 V, segundo a Elgin: aguenta rede que oscila.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não é a escolha para quem precisa de silêncio comprovado: a Elgin não publica o ruído da unidade interna, então não dá para compará-lo com o LG e o Samsung. Confira também quem é o vendedor do dia antes de fechar.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "Ruído da unidade interna": "Não divulgado",
+            "Wi-Fi": "Sim, com Alexa e Google",
+            "Garantia": "3 anos total, 10 anos no compressor",
+            "Diferencial": "Opera de 70 V a 300 V"
+          }
+        },
+        {
+          "chave": "pouco-uso",
+          "perfil": "Vou ligar poucas horas por dia",
+          "aparelho": "Midea AirVolution Lite",
+          "meli_id": "MLB66999694",
+          "porque": [
+            "É o 12.000 BTUs mais vendido do Mercado Livre: um split inverter de marca grande, simples e direto.",
+            "Unidade externa compacta, com a proteção anticorrosão Gold Fin da Midea.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se ele vai ficar ligado a noite inteira: é classe D no INMETRO, e os outros três desta lista são classe A. Também não tem Wi-Fi, e a loja da Midea só informa a garantia legal de 90 dias.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "D",
+            "Wi-Fi": "Não",
+            "Garantia": "Só o prazo legal (90 dias), segundo a loja da Midea",
+            "Diferencial": "Unidade externa compacta"
+          }
+        }
+      ],
+      "veredito": "Se nenhum perfil acima é exatamente o seu, comece pela classe de energia: num ar que fica ligado horas por dia, é ela que aparece na conta de luz todo mês, e três dos quatro aqui são classe A. Entre esses três, o que separa é o que cada um prova: LG e Samsung publicam o ruído, a Elgin dá a garantia total mais longa e só o Samsung tem modo sem vento. O preço muda todo dia, então compare os quatro na data em que for comprar. Em qualquer um deles, some o custo da instalação por técnico, que não está no preço, e confira a tensão: todos aqui são 220 V.",
+      "fontes": [
+        {
+          "titulo": "LG AI Dual Inverter Voice 12.000 BTU Frio 220 V (S3-Q12JA31K) — página oficial da LG Brasil",
+          "url": "https://www.lg.com/br/ar-condicionado-residencial/dual-inverter-split/s3-q12ja31k-1/"
+        },
+        {
+          "titulo": "Samsung WindFree AI Pro 12.000 BTUs Frio (AR60H12D1AW) — página oficial da Samsung Brasil",
+          "url": "https://www.samsung.com/br/air-conditioners/wall-mount/air-conditioner-split-inverter-windfree-ai-pro-12000-btus-f-ar60h12d1aw/"
+        },
+        {
+          "titulo": "Elgin Eco Inverter II Wi-Fi 12.000 BTU/h Frio 220 V — página oficial da Elgin",
+          "url": "https://www.elgin.com.br/ar-condicionado-split-high-wall-eco-inverter-ii-12000-btus-frio-wifi-220v/p"
+        },
+        {
+          "titulo": "Midea Ar-Condicionado Split 12000 BTUs Inverter Lite Frio (42EBVCA12M5 / 38TBVCA12M5) — loja oficial da Midea",
+          "url": "https://www.midea.com.br/ar-condicionado-split-12000-btus-inverter-lite-frio/p"
+        }
+      ],
+      "escrito_em": "2026-10-12"
+    },
+    {
+      "slug": "ar-condicionado-9000-btus",
+      "titulo": "Ar-condicionado 9.000 BTUs: qual comprar, por perfil de uso",
+      "resumo": "Não existe um melhor ar-condicionado de 9.000 BTUs: existe o melhor para o jeito que você usa. Separamos por perfil os splits só frio, inverter e 220 V que acompanhamos, com a ficha conferida no site de cada fabricante e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
+      "descricao": "Splits inverter de 9.000 BTUs separados por perfil de uso: gastar menos luz, garantia longa, dormir com ele ligado. Ficha conferida no fabricante e preço conferido todo dia.",
+      "perfis": [
+        {
+          "chave": "conta-de-luz",
+          "perfil": "Quero gastar menos luz no verão",
+          "aparelho": "TCL BreezeIN AI",
+          "meli_id": "MLB75342806",
+          "porque": [
+            "Classe A e o maior IDRS dos três (7), o índice que mede frio entregue por energia gasta ao longo da estação inteira.",
+            "Tem Wi-Fi com comando de voz.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não é a escolha para quem quer a garantia mais longa no aparelho todo: são 2 anos no conjunto, e a TCL condiciona a garantia à instalação por técnico credenciado. A TCL também não publica o ruído da unidade interna.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "IDRS (eficiência na estação)": "7",
+            "Wi-Fi": "Sim, com comando de voz",
+            "Garantia": "10 anos no compressor, 2 anos no conjunto",
+            "Ruído da unidade interna": "Não divulgado"
+          }
+        },
+        {
+          "chave": "garantia",
+          "perfil": "Quero a garantia mais longa",
+          "aparelho": "Gree G-Top Auto",
+          "meli_id": "MLB42082681",
+          "porque": [
+            "A garantia mais longa da lista nas peças: 5 anos, além dos 10 anos no compressor.",
+            "Classe A no INMETRO, com Wi-Fi de fábrica.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não é a escolha se a conta de luz é o critério número um: o IDRS dele é 6,01, abaixo dos 7 do TCL. E a Gree não publica o ruído da unidade interna, então não dá para compará-lo em silêncio com o LG.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "IDRS (eficiência na estação)": "6,01",
+            "Wi-Fi": "Sim",
+            "Garantia": "10 anos no compressor, 5 anos nas demais peças",
+            "Ruído da unidade interna": "Não divulgado"
+          }
+        },
+        {
+          "chave": "dormir",
+          "perfil": "Vou dormir com ele ligado",
+          "aparelho": "LG Compact AI",
+          "meli_id": "MLB55690976",
+          "porque": [
+            "É o único dos três que declara o ruído: 22 dB(A) no modo mais baixo, nível de sussurro.",
+            "Compressor com 10 anos de garantia.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se o ar vai ficar ligado o dia todo ou se você quer controlar pelo celular: é classe C no INMETRO, contra classe A dos outros dois, e a LG informa que a linha Compact fica de fora do app ThinQ.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "C",
+            "Ruído da unidade interna": "22 a 38 dB(A)",
+            "Wi-Fi": "Não",
+            "Garantia": "10 anos no compressor",
+            "IDRS (eficiência na estação)": "Não divulgado"
+          }
+        }
+      ],
+      "veredito": "Se nenhum perfil acima é exatamente o seu, comece pela classe de energia: num ar que fica ligado horas por dia, é ela que aparece na conta de luz todo mês, e dois dos três aqui são classe A. Entre esses dois, o TCL gasta menos pelo mesmo frio e o Gree cobre as peças por mais tempo. O LG só faz sentido se o silêncio com número declarado vale mais para você do que a economia e o Wi-Fi. O preço muda todo dia, então compare os três na data em que for comprar. Em qualquer um deles, some o custo da instalação por técnico, que não está no preço, e confira a tensão: todos aqui são 220 V.",
+      "fontes": [
+        {
+          "titulo": "TCL BreezeIN AI (TAC-09CTG3-INV-I) — página oficial da TCL Brasil",
+          "url": "https://www.tcl.com/br/pt/air-conditioners/breezein-cool"
+        },
+        {
+          "titulo": "Gree G-Top Auto Inverter 9.000 BTU/h Frio R-32 220 V — loja oficial da Gree",
+          "url": "https://loja.gree.com.br/ar-condicionado-split-inverter-gree-g-top-auto-9000-btuh-frio-r-32-220v-9000-frio.html"
+        },
+        {
+          "titulo": "LG Dual Inverter Compact 9.000 BTUs (S3-Q09AAQAK) — página oficial da LG Brasil",
+          "url": "https://www.lg.com/br/ar-condicionado-residencial/s3-q09aaqak/"
+        }
+      ],
+      "escrito_em": "2026-10-12"
     }
   ]
 }

@@ -141,6 +141,7 @@ pergunte logo no começo da próxima sessão.
 | **Shopee**: cadastrar dados bancários e fiscais no painel (PF ou PJ). A comissão só é paga 60 dias depois da aprovação | **Dele** |
 | **Philco vira suspeita todo dia** com o preço certo na vitrine (`results[0]` não é a buy box). Ignorar até ele decidir mudar a regra para todos | **Decisão dele** |
 | **A36 preto (oculto) × verde (visível)**: em 23/09 o oculto estava mais barato. Reconferir os dois preços e perguntar qual fica | **Decisão dele** |
+| 🟢 **Guias perenes de ar-condicionado (12/10)**: `/guia/ar-condicionado-12000-btus` e `-9000-btus`. Indexação pedida no dia; reconferir em ~1 semana. Ver "Endereço perene" | Minha |
 | **Comparativo iPhone 17 × 17e** — oferecido em 05/10; a Apple publica a ficha completa dos dois | Só se ele pedir |
 | **Cor da etiqueta `Ar-condicionado`** no card (hoje sai no cinza de reserva) — perguntado em 04/10, sem resposta | **Decisão dele** |
 | **Instagram**: a conta está parada desde setembro. O que ele pesquisou comigo em 07/10 está em "Instagram: link de compra" abaixo | **Dele** |
@@ -1391,6 +1392,44 @@ estava dito em lugar nenhum além do gráfico de cada ficha.
 - `data-onde="quedas"` nos cliques, para dar para medir se a página rende.
 - Primeiro atalho da home, à frente da Black Friday, e no sitemap com
   `changeFrequency: daily` — é a página do site que mais muda.
+
+### 🟢 Endereço perene: como aproveitar a indexação quando o produto muda (12/10/2026)
+
+Pergunta dele: "o ar da Samsung sai de linha, dá para trocar pelo LG na mesma
+página e manter a indexação?". **Não — e a decisão dele foi "página perene +
+aviso de substituto".**
+
+- 🔴 **Nunca reaproveite a ficha (ou o comparativo) de um produto para outro.**
+  O Google não guarda "página indexada" como crédito solto: guarda "esta
+  página responde tal busca". Trocar o conteúdo perde a busca antiga, deixa o
+  nome errado na URL e mistura o histórico de preços de dois aparelhos.
+- 🟢 **Quem tem endereço perene é o guia de categoria**, no molde do guia de
+  faixa (`data/guias.json`, perfil → aparelho): **`/guia/ar-condicionado-12000-btus`**
+  e **`/guia/ar-condicionado-9000-btus`**, sem marca e sem ano no slug. Quando
+  o mercado muda, **troca-se o perfil dentro do guia** (aparelho, `meli_id`,
+  `porque`, `quando_nao`, `ficha`) e preenche-se `atualizado_em` — a URL
+  indexada continua a mesma. `teto` virou opcional e entrou `descricao` (a
+  frase padrão do buscador falava em celular).
+- 🟢 **Campo `substituto`** no produto (`meli_id` do modelo que ocupa o
+  lugar). A ficha de produto que acabou (`disponivel: false`) passa a mostrar,
+  dentro do aviso "Esta oferta acabou", o link para o substituto **e** para o
+  guia da categoria (este aparece sozinho, sem ninguém preencher nada). É
+  curadoria; o robô não toca. Testado com edição temporária no dev.
+- **A rotina, quando um produto novo entra no lugar de um velho:** (1) ficha
+  nova para o novo, com pedido de indexação; (2) trocar o perfil no guia da
+  categoria; (3) `substituto` no antigo, se ele saiu de linha; (4) a ficha
+  antiga fica no ar. Redirect 301 só quando é **o mesmo aparelho**.
+- **Próximos guias de categoria, só se ele pedir:** monitor, fone e controle
+  têm 3+ produtos com ficha de fabricante. Os comparativos seguem presos ao
+  slug de um modelo — não foram migrados.
+- 🔴 **Bug achado no caminho, no ar desde 21/09:** o guia `celulares-ate-1500`
+  mostrava **`{preco}`, `{desconto}` e `{economia}` crus** no perfil do A36, e
+  os 3 guias de decisão tinham perdido o exemplo do A36 — todos apontavam para
+  o `MLB47115842` (preto, `oculto`), que não entra em `produtosVisiveis`.
+  Corrigido apontando para o verde (`MLB47111438`). ⚠️ **Ao ocultar ou trocar
+  um produto, `grep` o `meli_id` em `guias.json` e `decisoes.json`** — o
+  comparativo tem o `tambem`, os guias não. Se o A36 preto voltar a ser o
+  visível, é o caminho inverso.
 
 ### Guias de faixa
 
