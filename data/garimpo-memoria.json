@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-11",
+  "atualizado_em": "2026-10-13",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -888,6 +888,12 @@
       "sugerido_em": "2026-10-11",
       "familia": "Micro-ondas Electrolux Micro-ondas MTO30 20L",
       "preco_sugerido": 435.18,
+      "vezes": 1
+    },
+    "MLB21672188": {
+      "sugerido_em": "2026-10-13",
+      "familia": "Aspirador Tambor Wap GTW 10 10L FW005705",
+      "preco_sugerido": 341.06,
       "vezes": 1
     }
   }

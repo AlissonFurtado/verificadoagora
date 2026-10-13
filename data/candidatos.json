@@ -1,36 +1,21 @@
 {
-  "garimpado_em": "2026-10-11",
-  "total": 2,
+  "garimpado_em": "2026-10-13",
+  "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB32165545",
-      "familia": "Monitor 3Green com tela de 20\" e resolução HD",
+      "meli_id": "MLB21672188",
+      "familia": "Aspirador Tambor Wap GTW 10 10L FW005705",
       "tipo": "produto",
-      "nome": "Monitor Gamer 3Green 20\" LED 75 Hz HD Preto",
-      "categoria": "Monitores e Acessórios",
-      "preco": 215,
-      "preco_original": 379.99,
-      "desconto_percentual": 43,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_664667-MLA100025262889_122025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB32165545",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-10-11"
-    },
-    {
-      "meli_id": "MLB6309815",
-      "familia": "Micro-ondas Electrolux Micro-ondas MTO30 20L",
-      "tipo": "produto",
-      "nome": "Micro-ondas Electrolux 20l Branco MTO30",
+      "nome": "Aspirador Pó E Água Soprador Wap Gtw 10 Maré 1400w Cor Cinza",
       "categoria": "Eletrodomésticos",
-      "preco": 435.18,
-      "preco_original": 599,
-      "desconto_percentual": 27,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_787358-MLA100187065347_122025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB6309815",
+      "preco": 341.06,
+      "preco_original": 460.9,
+      "desconto_percentual": 26,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_627568-MLA108247612641_032026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB21672188",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-11"
+      "garimpado_em": "2026-10-13"
     }
   ]
 }
