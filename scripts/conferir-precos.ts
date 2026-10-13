@@ -40,6 +40,9 @@ type Relatorio = {
   falhas: { id: number; nome: string; erro: string }[];
 };
 
+/** Acima disso (ou de 10% do catálogo) a falha deixa de ser de um produto e passa a ser da API. */
+const MAXIMO_DE_FALHAS_ISOLADAS = 3;
+
 function hoje(): string {
   return new Date().toISOString().slice(0, 10);
 }
@@ -249,8 +252,22 @@ async function main(): Promise<void> {
   console.log(`Sem meli_id: ${resumo(relatorio.sem_id)}`);
   console.log(`Falhas: ${resumo(relatorio.falhas)}`);
 
-  // Falha de API não pode passar batido: a Action precisa ficar vermelha.
-  if (relatorio.falhas.length > 0) process.exit(1);
+  // 🔴 **Um produto com erro não derruba mais a rodada** (13/10/2026). Até
+  // aqui qualquer falha deixava a Action vermelha e nada era publicado: em
+  // 29/09 um único `confere_por` que respondia 403 deixou o site 2 dias sem
+  // conferir preço nenhum. A trava nasceu para queda geral da API, então é
+  // isso que ela passa a medir: poucas falhas isoladas são avisadas (e o
+  // produto fica como estava ontem, com o `verificado_em` antigo — o canal já
+  // não anuncia quem a rodada não conferiu); falha em boa parte do catálogo
+  // continua parando tudo.
+  const comId = catalogo.produtos.length - relatorio.sem_id.length;
+  const falhaGeral =
+    relatorio.falhas.length > MAXIMO_DE_FALHAS_ISOLADAS ||
+    relatorio.falhas.length > comId * 0.1;
+  for (const falha of relatorio.falhas) {
+    console.log(`::warning::Não conferido: ${falha.nome} — ${falha.erro.slice(0, 160)}`);
+  }
+  if (falhaGeral) process.exit(1);
 }
 
 main().catch((err) => {
