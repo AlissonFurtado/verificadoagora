@@ -174,6 +174,17 @@ export function formatarData(iso: string): string {
 }
 
 /**
+ * Ficha que fica no ar mas fora do índice do Google e do sitemap.
+ *
+ * `Moda` entrou na vitrine em 13/10/2026 e não tem ficha de fabricante: sem
+ * ela não há comparativo nem guia, e ficha solta de commodity é a URL fina que
+ * este domínio já foi penalizado por ter. Mesma razão do `so_no_canal`.
+ */
+export function foraDoIndice(produto: Produto): boolean {
+  return Boolean(produto.so_no_canal) || produto.categoria === 'Moda';
+}
+
+/**
  * Só o que pode ser mostrado: produto fora do ar some da página em vez de
  * mentir. `so_no_canal` também fica de fora — é produto de outra categoria,
  * que existe para a mensagem do WhatsApp e não para a vitrine.

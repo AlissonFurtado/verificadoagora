@@ -6,6 +6,7 @@ import { GaleriaDeFotos } from './galeria-de-fotos';
 import { lerCatalogo, lerComparativos, lerGuias, lerHistorico } from '@/lib/catalogo';
 import { acharComparativo, quantosRivais } from '@/lib/comparativos';
 import {
+  foraDoIndice,
   formatarData,
   formatarReal,
   NOME_PLATAFORMA,
@@ -73,7 +74,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     // nem guia, e ficha solta de commodity é exatamente a URL fina que este
     // domínio vem sendo penalizado por ter. Mesma razão do `noindex` da
     // `/instagram`.
-    robots: produto.so_no_canal ? { index: false, follow: true } : undefined,
+    robots: foraDoIndice(produto) ? { index: false, follow: true } : undefined,
     openGraph: {
       title: titulo,
       description: descricao,

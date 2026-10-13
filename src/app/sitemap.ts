@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { lerCatalogo, lerComparativos, lerDecisoes, lerGuias } from '@/lib/catalogo';
-import { produtosVisiveis } from '@/lib/produtos';
+import { foraDoIndice, produtosVisiveis } from '@/lib/produtos';
 import { caminhoDoComparativo, caminhoDoProduto } from '@/lib/slug';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily' as const,
       priority: 0.9,
     },
-    ...visiveis.map((produto) => ({
+    ...visiveis.filter((produto) => !foraDoIndice(produto)).map((produto) => ({
       url: `${base}${caminhoDoProduto(produto)}`,
       lastModified: new Date(produto.verificado_em),
       changeFrequency: 'daily' as const,

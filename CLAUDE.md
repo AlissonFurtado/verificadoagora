@@ -55,6 +55,49 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 13/10/2026
+
+🟢 **Moda, beleza e relógios entraram no SITE, não só no canal** — decisão dele
+em 13/10, revertendo a de 24/09 ("roupa só no canal"). Motivo: ele perguntou
+por que não havia novidade nem link para gerar.
+- **A causa da fila vazia, medida:** a memória do garimpo esgotou as mesmas 10
+  categorias — 10 candidatos/dia em setembro, 1 ou 2 desde 18/09 (e 12/10 nem
+  rodou). **Corrigido no `data/garimpo.json`:** entraram `MLB1430` (Calçados,
+  Roupas e Bolsas), `MLB1246` (Beleza), `MLB3937` (Joias e Relógios) e
+  `MLB1276` (Esportes), e o piso caiu de R$ 100 para **R$ 30**. 🔴 **Conferir
+  a fila de 14/10**: quantos vieram, e se o topo de Esportes (suplemento) e de
+  Beleza (papel higiênico) não está só enchendo de lixo.
+- **7 produtos cadastrados (ids 53 a 59, são 59):** Havaianas Top branco
+  (`Moda`), Casio W-59, G-Shock GA-2100-4A e Redmi Watch 5 Lite (`Relógios`),
+  Cicaplast B5+ 40 mL, Anthelios FPS 80 e escova rotativa Mondial ERB-01
+  (`Beleza`). A escova Britânia perdeu o `so_no_canal`. Links gerados por mim
+  no Linkbuilder, os 7 de uma vez.
+- 🟢 **Comissão lida na barra "GANHOS" da página, logado:** **16%** em chinelo,
+  dermocosmético e escova; **12%** no G-Shock. Confirma a tabela de 24/09.
+- 🔴 **Só entra produto de CATÁLOGO (id sem hífen).** Nenhum produto nosso usa
+  anúncio avulso (`MLB-…`), o garimpo nunca trouxe um, e a única tentativa
+  (`confere_por` da Philco) deu 403 e derrubou o robô 2 dias. `MLBU…` o robô
+  nem conhece. **Por isso ficaram de fora, mesmo ele tendo pedido:** tênis
+  Kappa e Puma, Havaianas Power, cuecas Lupo, kit Sandrini, mom jeans, mochila
+  e o G-Shock DW-5600. Para entrarem, ou se acha o `/p/MLB…` de cada um, ou se
+  prova que `/items/` responde (e que um erro não derruba a rodada).
+- ⚠️ **`foraDoIndice()`** (`src/lib/produtos.ts`): categoria `Moda` e
+  `so_no_canal` ficam com `noindex` e fora do sitemap (sem ficha de
+  fabricante). `Beleza` e `Relógios` indexam. Medido no dev local.
+- ⚠️ **Havaianas Slim reprovado:** a página só mostrava o preço do Pix
+  (R$ 37,92), sem o "em outros meios". E o Havaianas Top tem "Tamanho:
+  Escolha" — é o risco do `results[0]`; **conferir no robô de 14/10** se ele
+  segue `disponivel` e com preço perto de R$ 36.
+- **Ler a página do Meli em lote, o que funcionou:** navegar, extrair por JS
+  e acumular em `sessionStorage`; no fim, trocar o `body` por um
+  `<article><pre>` com o JSON e ler com `get_page_text` (o retorno do
+  `javascript_tool` corta em ~1.000 caracteres). 12 páginas, sem CAPTCHA.
+- 🔴 **Não feito em 13/10:** os **7 suspeitos** do robô do dia (não conferidos
+  — a vitrine está com o preço de ontem neles); pedido de indexação das 6
+  fichas novas indexáveis, do `/guia/monitor-full-hd` e da ficha do
+  micro-ondas; canal (parado desde 02/10). **Decisão dele pendente:** cor da
+  etiqueta de `Moda`, `Beleza` e `Relógios` (saem no cinza de reserva).
+
 ## Onde paramos — 12/10/2026
 
 🟢 **Resumo da sessão de 12/10, para quem chega sem memória** (ele limpou a
