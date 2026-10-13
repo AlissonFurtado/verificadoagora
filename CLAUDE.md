@@ -57,6 +57,12 @@ em 11/09/2026, depois da pesquisa.
 
 ## Onde paramos — 13/10/2026
 
+🟢 **O canal do WhatsApp NÃO é mais afazer meu (dito por ele em 13/10).** Ele
+publica todo dia, com vídeos feitos por outro agente. **Não listar o canal
+como pendência, não rodar `canal.mjs` nem oferecer publicar** — só se ele
+pedir. As seções sobre o canal abaixo ficam como referência técnica; as
+frases "parado desde 02/10" e "2 seguidores" estão velhas.
+
 🟢 **Moda, beleza e relógios entraram no SITE, não só no canal** — decisão dele
 em 13/10, revertendo a de 24/09 ("roupa só no canal"). Motivo: ele perguntou
 por que não havia novidade nem link para gerar.
@@ -67,20 +73,33 @@ por que não havia novidade nem link para gerar.
   `MLB1276` (Esportes), e o piso caiu de R$ 100 para **R$ 30**. 🔴 **Conferir
   a fila de 14/10**: quantos vieram, e se o topo de Esportes (suplemento) e de
   Beleza (papel higiênico) não está só enchendo de lixo.
-- **7 produtos cadastrados (ids 53 a 59, são 59):** Havaianas Top branco
+- **7 produtos cadastrados (ids 53 a 59, são 59; 55 na vitrine):** Havaianas Top branco
   (`Moda`), Casio W-59, G-Shock GA-2100-4A e Redmi Watch 5 Lite (`Relógios`),
   Cicaplast B5+ 40 mL, Anthelios FPS 80 e escova rotativa Mondial ERB-01
   (`Beleza`). A escova Britânia perdeu o `so_no_canal`. Links gerados por mim
   no Linkbuilder, os 7 de uma vez.
 - 🟢 **Comissão lida na barra "GANHOS" da página, logado:** **16%** em chinelo,
   dermocosmético e escova; **12%** no G-Shock. Confirma a tabela de 24/09.
-- 🔴 **Só entra produto de CATÁLOGO (id sem hífen).** Nenhum produto nosso usa
-  anúncio avulso (`MLB-…`), o garimpo nunca trouxe um, e a única tentativa
-  (`confere_por` da Philco) deu 403 e derrubou o robô 2 dias. `MLBU…` o robô
-  nem conhece. **Por isso ficaram de fora, mesmo ele tendo pedido:** tênis
-  Kappa e Puma, Havaianas Power, cuecas Lupo, kit Sandrini, mom jeans, mochila
-  e o G-Shock DW-5600. Para entrarem, ou se acha o `/p/MLB…` de cada um, ou se
-  prova que `/items/` responde (e que um erro não derruba a rodada).
+- 🔴 **Só entra produto de CATÁLOGO (id sem hífen) — PROVADO em 13/10.** Ele
+  pediu para destravar anúncio avulso; cadastrei 3 ocultos (Kappa Park
+  `MLB-4049279695`, kit Lupo `MLB-1010954920`, Havaianas Power
+  `MLB-1858445728`, todos de loja oficial) e rodei o workflow à mão (#45):
+  **`/items/{id}` respondeu 403 `access_denied` nos três.** A API não deixa o
+  nosso app ler anúncio de terceiro. Os três saíram do catálogo no mesmo dia.
+  Os `meli.la` existem: `1heBuRd` (Kappa), `25PTriH` (Lupo), `31sutnG`
+  (Power) — estão na lista de recomendações do perfil. `MLBU…` o robô nem
+  conhece. **Não tente de novo por `/items/`.** Roupa só entra se tiver página
+  `/p/MLB…`, ou se ele aceitar produto sem conferência diária (decisão dele,
+  pendente — contradiz o nome do site).
+- 🟢 **Um produto com erro não derruba mais a rodada** (`conferir-precos.ts`,
+  `MAXIMO_DE_FALHAS_ISOLADAS = 3` e 10% do catálogo): falha isolada vira
+  `::warning::Não conferido` na Action e o resto publica. Provado na rodada
+  #45: 3 falhas, e os commits de preço e histórico saíram. ⚠️ A #45 terminou
+  vermelha mesmo assim — pelo que o workflow mostra, é o `gh pr create` da
+  segunda rodada do dia (o PR do branch `robo/precos-2026-10-13` já existia);
+  **não li o log para confirmar**.
+- 🟢 **O robô leu os 7 de catálogo na mesma rodada** e já corrigiu preço:
+  Mondial R$ 132 (de R$ 258), GA-2100 R$ 403, W-59 R$ 115,66, Redmi R$ 309.
 - ⚠️ **`foraDoIndice()`** (`src/lib/produtos.ts`): categoria `Moda` e
   `so_no_canal` ficam com `noindex` e fora do sitemap (sem ficha de
   fabricante). `Beleza` e `Relógios` indexam. Medido no dev local.
@@ -95,7 +114,7 @@ por que não havia novidade nem link para gerar.
 - 🔴 **Não feito em 13/10:** os **7 suspeitos** do robô do dia (não conferidos
   — a vitrine está com o preço de ontem neles); pedido de indexação das 6
   fichas novas indexáveis, do `/guia/monitor-full-hd` e da ficha do
-  micro-ondas; canal (parado desde 02/10). **Decisão dele pendente:** cor da
+  micro-ondas. **Decisão dele pendente:** cor da
   etiqueta de `Moda`, `Beleza` e `Relógios` (saem no cinza de reserva).
 
 ## Onde paramos — 12/10/2026
@@ -224,7 +243,6 @@ pergunte logo no começo da próxima sessão.
 | O quê | De quem é |
 |---|---|
 | 🔴 **Conferir o robô**: existe commit `Preços de <hoje>` na `main` depois das ~15h? Algum produto **cadastrado ontem** virou `disponivel: false` ("sumiu do Meli")? Suspeito do dia: conferir na página do Meli e aplicar à mão (preço + ponto de hoje no `historico.json`); fechar o PR sem merge e apagar o branch (`/pull/N` → `Close pull request` → `Delete branch`, por JS pelo texto do botão) | Minha |
-| **Canal**: `node scripts/canal.mjs` depois das ~15h e publicar. **Só enviar com a foto da prévia carregada** (ver "Publicar no canal") | Minha, quando ele pedir |
 | **Indexação**: 🟢 **a fila zerou em 08/10** — tudo o que estava fora do índice foi pedido. Falta só **reconferir em ~1 semana** quais entraram, e pedir toda página nova no dia em que ela nasce (a cota é de ~11 pedidos por dia) | Minha |
 | 🔴 **Canônica do cassino**: 3 páginas apareceram como "cópia" de sites sem relação com a gente. A `/black-friday` **já voltou** (indexada, relida em 04/10). Faltam o guia de controle de videogame (última leitura 18/09) e a ficha do micro-ondas (leitura de 02/10): **reinspecionar as duas** e ver se saíram do estado de cópia. Ver "páginas nossas como cópia de sites alheios" | Minha para conferir; **dele** a decisão de denunciar |
 | 🟢 **Fichas "no Google, mas com problemas"**: era a nota sem contagem (`aggregateRating`), tirada do JSON-LD em 08/10. **Rodar o teste ao vivo de uma ficha com nota** e confirmar que "Snippets de avaliação" sumiu | Minha |
@@ -239,7 +257,7 @@ pergunte logo no começo da próxima sessão.
 | **Comparativo iPhone 17 × 17e** — oferecido em 05/10; a Apple publica a ficha completa dos dois | Só se ele pedir |
 | **Cor da etiqueta `Ar-condicionado`** no card (hoje sai no cinza de reserva) — perguntado em 04/10, sem resposta | **Decisão dele** |
 | **Instagram**: a conta está parada desde setembro. O que ele pesquisou comigo em 07/10 está em "Instagram: link de compra" abaixo | **Dele** |
-| **Divulgar o canal**, Reddit, e o resto que já era dele | **Dele** |
+| Reddit, e o resto que já era dele | **Dele** |
 | ⚠️ **CAPTCHA do Meli**: não apareceu de 23/09 a 08/10, com 2 s entre navegações e até ~12 por sessão | — |
 
 ### Instagram: link de compra (pesquisado em 07/10/2026)
