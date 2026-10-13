@@ -111,11 +111,17 @@ por que não havia novidade nem link para gerar.
   e acumular em `sessionStorage`; no fim, trocar o `body` por um
   `<article><pre>` com o JSON e ler com `get_page_text` (o retorno do
   `javascript_tool` corta em ~1.000 caracteres). 12 páginas, sem CAPTCHA.
+- 🟡 **Indexação de 13/10: a cota cortou no 5º pedido** (aviso "A cota foi
+  excedida" lido na tela; os pedidos de 12/10 contam na mesma janela).
+  **Aceitos (4):** `/guia/monitor-full-hd`, ficha do micro-ondas, G-Shock
+  GA-2100 e Redmi Watch 5 Lite. 🔴 **Pedir em 14/10 (5):** Casio W-59,
+  Cicaplast, Anthelios, escova Mondial e escova Britânia (deixou de ser
+  `noindex`). As 9 respondiam 200 sem `noindex` em produção. ⚠️ A ficha do
+  micro-ondas apareceu como "o Google não reconhece o URL", não mais
+  "cópia" — lido uma vez só.
 - 🔴 **Não feito em 13/10:** os **7 suspeitos** do robô do dia (não conferidos
-  — a vitrine está com o preço de ontem neles); pedido de indexação das 6
-  fichas novas indexáveis, do `/guia/monitor-full-hd` e da ficha do
-  micro-ondas. **Decisão dele pendente:** cor da
-  etiqueta de `Moda`, `Beleza` e `Relógios` (saem no cinza de reserva).
+  — a vitrine está com o preço de ontem neles). **Decisão dele pendente:**
+  cor da etiqueta de `Moda`, `Beleza` e `Relógios` (saem no cinza de reserva).
 
 ## Onde paramos — 12/10/2026
 
