@@ -73,7 +73,7 @@ por que não havia novidade nem link para gerar.
   `MLB1276` (Esportes), e o piso caiu de R$ 100 para **R$ 30**. 🔴 **Conferir
   a fila de 14/10**: quantos vieram, e se o topo de Esportes (suplemento) e de
   Beleza (papel higiênico) não está só enchendo de lixo.
-- **7 produtos cadastrados (ids 53 a 59, são 59; 55 na vitrine):** Havaianas Top branco
+- **7 produtos cadastrados (ids 53 a 59, são 59; 56 na vitrine):** Havaianas Top branco
   (`Moda`), Casio W-59, G-Shock GA-2100-4A e Redmi Watch 5 Lite (`Relógios`),
   Cicaplast B5+ 40 mL, Anthelios FPS 80 e escova rotativa Mondial ERB-01
   (`Beleza`). A escova Britânia perdeu o `so_no_canal`. Links gerados por mim
