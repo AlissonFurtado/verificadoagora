@@ -57,6 +57,25 @@ em 11/09/2026, depois da pesquisa.
 
 ## Onde paramos — 13/10/2026
 
+🟢 **Ele limpou a conversa no fim de 13/10. Retomada, em ordem:**
+1. 🔴 **Decisão dele, perguntada duas vezes e sem resposta:** roupa entra
+   **só com página de catálogo** (recomendado) ou **sem conferência diária**
+   (preço do dia do cadastro, com data — contradiz o nome do site)?
+   Perguntar logo no começo, em múltipla escolha.
+2. 🔴 **Pedir a indexação das 5 que a cota cortou:** Casio W-59, Cicaplast,
+   Anthelios, escova Mondial e escova Britânia.
+3. 🔴 **Os 7 suspeitos do robô de 13/10** (PR do branch
+   `robo/precos-2026-10-13`): conferir na página, aplicar à mão, fechar o
+   PR sem merge e apagar o branch.
+4. 🔴 **Conferir o robô e o garimpo de 14/10:** os 7 produtos novos seguem
+   `disponivel`? O Havaianas Top segue perto de R$ 36? Quantos candidatos
+   a fila trouxe com as 4 categorias novas, e quanto é lixo?
+5. Pendências antigas dele, sem resposta: cor das etiquetas novas, enxugar
+   este arquivo, e as da lista de 12/10.
+
+O detalhe de cada item está abaixo.
+
+
 🟢 **O canal do WhatsApp NÃO é mais afazer meu (dito por ele em 13/10).** Ele
 publica todo dia, com vídeos feitos por outro agente. **Não listar o canal
 como pendência, não rodar `canal.mjs` nem oferecer publicar** — só se ele
