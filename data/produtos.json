@@ -2350,12 +2350,51 @@
           "resposta": "Poder, pode, mas demora. O resultado é melhor tirando o excesso de água antes, com o cabelo quase seco."
         }
       ]
+    },
+    {
+      "id": 60,
+      "nome": "Whey Pro Max Titanium 1 kg Morango",
+      "categoria": "Esportes",
+      "preco_original": 199.9,
+      "preco_atual": 92.34,
+      "desconto_percentual": 53,
+      "preco_no_pix": false,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/1FNTDQe",
+      "cupom": "",
+      "descricao": "Whey concentrado sabor morango: 25 porções de 40 g com 15 g de proteína",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_608162-MLA112813208483_062026-F.jpg",
+      "plataforma": "mercado-livre",
+      "meli_id": "MLB6087971",
+      "disponivel": true,
+      "familia": "Max Titanium Whey Pro proteína sabor Morango 1kg",
+      "data_adicionado": "2026-10-14",
+      "verificado_em": "2026-10-14",
+      "analise": [
+        "O Whey Pro é a proteína do soro do leite **concentrada** (WPC) da Max Titanium, em pote de 1 kg, sabor morango, adoçado com sucralose. Segundo o anúncio, cada porção de 40 g traz **15 g de proteína**, 19 g de carboidrato e 150 kcal, e o pote rende 25 porções.",
+        "O ponto que pesa: 15 g de proteína em 40 g é **menos de 40% da porção**, e o pote inteiro soma cerca de **375 g de proteína**. Por isso, antes de comparar com outro whey pelo preço do quilo, faça a conta pelo custo de cada grama de proteína. É o rótulo que diz se a oferta é boa. Ele também **contém lactose** e derivados de leite, soja e ovo. E o anúncio se contradiz na idade: a ficha diz 18 anos no mínimo, e a descrição fala em uso a partir dos 9. Na dúvida, vale a orientação de nutricionista. O preço riscado é o que a loja informa; nós não o confirmamos.",
+        "Compre se você quer um whey de marca conhecida para completar a proteína do dia e não se importa com o carboidrato a mais. Se você tem intolerância à lactose, ou quer o máximo de proteína por grama, procure um whey isolado: custa mais, mas entrega mais proteína em cada porção."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Quanto de proteína tem cada porção?",
+          "resposta": "15 g em cada porção de 40 g, segundo o anúncio. O pote de 1 kg rende 25 porções."
+        },
+        {
+          "pergunta": "Serve para quem tem intolerância à lactose?",
+          "resposta": "Não. O anúncio informa que ele contém lactose. Para isso existe o whey isolado ou o sem lactose."
+        },
+        {
+          "pergunta": "É whey isolado?",
+          "resposta": "Não. É whey concentrado (WPC), que traz mais carboidrato e menos proteína por porção que o isolado."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-14",
     "conferido_em": "2026-10-14T15:40:28.753Z",
-    "total_produtos": 59,
+    "total_produtos": 60,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }

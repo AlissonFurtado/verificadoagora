@@ -55,13 +55,31 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 14/10/2026
+
+- 🟢 **Decidido por ele em 14/10: roupa só entra com página de catálogo**
+  (`/p/MLB…`, conferida pelo robô). Anúncio avulso não entra, nem sem
+  conferência. Assunto encerrado.
+- 🟢 **Fila de 14/10 (20 candidatos): quase tudo lixo**, como previsto: 5
+  suplementos (o topo de `MLB1276` Esportes é suplemento) e acessório sem
+  marca (mousepad, webcam, pen drive, teclado, controle, luz LED). Ele
+  escolheu "só os de marca"; dos 4, **entrou só o Whey Pro Max Titanium**
+  (id 60, categoria nova `Esportes`, `meli.la/1FNTDQe`, buy box da loja
+  oficial Saúde Vitae, **comissão 12%** — suplemento não é 16%). Reprovados,
+  com o motivo:
+  - **Elseve**: o vendedor é ELMI_DIVERSIDADES, não a L'Oréal. Cosmético de
+    vendedor pequeno.
+  - **Creatina Growth**: o catálogo foi fundido em `MLB66637233`, e a buy box
+    era uma conta de nome automático (`MN2026…`, 25 vendas, entrega em 3
+    semanas).
+  - **Fone Dapon H02D**: o título diz 22 h de bateria e a ficha, 35 h.
+- 🔴 **Indexação do whey** e os 5 de 13/10 seguem por pedir. Os 6 suspeitos
+  do robô de 14/10 e os 7 de 13/10 ainda não foram conferidos.
+
 ## Onde paramos — 13/10/2026
 
 🟢 **Ele limpou a conversa no fim de 13/10. Retomada, em ordem:**
-1. 🔴 **Decisão dele, perguntada duas vezes e sem resposta:** roupa entra
-   **só com página de catálogo** (recomendado) ou **sem conferência diária**
-   (preço do dia do cadastro, com data — contradiz o nome do site)?
-   Perguntar logo no começo, em múltipla escolha.
+1. 🟢 Roupa: resolvido em 14/10 (só catálogo).
 2. 🔴 **Pedir a indexação das 5 que a cota cortou:** Casio W-59, Cicaplast,
    Anthelios, escova Mondial e escova Britânia.
 3. 🔴 **Os 7 suspeitos do robô de 13/10** (PR do branch
