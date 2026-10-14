@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-13",
+  "atualizado_em": "2026-10-14",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -345,10 +345,10 @@
       "vezes": 1
     },
     "MLB28562373": {
-      "sugerido_em": "2026-09-12",
+      "sugerido_em": "2026-10-14",
       "familia": "Monitor Brazil PC com tela de 20\" e resolução HD+",
-      "preco_sugerido": 232,
-      "vezes": 1
+      "preco_sugerido": 194,
+      "vezes": 2
     },
     "MLB15749699": {
       "sugerido_em": "2026-09-12",
@@ -894,6 +894,120 @@
       "sugerido_em": "2026-10-13",
       "familia": "Aspirador Tambor Wap GTW 10 10L FW005705",
       "preco_sugerido": 341.06,
+      "vezes": 1
+    },
+    "MLB19140415": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Suplemento en pó Dark Lab Whey protein de Isolate Protein Fuse",
+      "preco_sugerido": 179.9,
+      "vezes": 1
+    },
+    "MLB25980994": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Mochila urbana Woosh Woosh Premium 40L",
+      "preco_sugerido": 37.99,
+      "vezes": 1
+    },
+    "MLB32043715": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Tapete felpudo Casa Laura Enxovais Tapete Médio Para Sala pelo alto",
+      "preco_sugerido": 52.89,
+      "vezes": 1
+    },
+    "MLB6087971": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Max Titanium Whey Pro proteína sabor Morango 1kg",
+      "preco_sugerido": 92.34,
+      "vezes": 1
+    },
+    "MLB46220824": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Câmera web Good Vision Premium USB - 1080P",
+      "preco_sugerido": 36.98,
+      "vezes": 1
+    },
+    "MLB35959035": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Suplemento en pó Bodyaction Nutri Science Minerais/Vitaminas",
+      "preco_sugerido": 43.9,
+      "vezes": 1
+    },
+    "MLB20266125": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Mouse Pad Eddias Speed Slim office Deskpad Office 90 x 40 de couro sintético",
+      "preco_sugerido": 49.9,
+      "vezes": 1
+    },
+    "MLB47407742": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Mouse Pad Titorion Pro Office Topografia",
+      "preco_sugerido": 49.9,
+      "vezes": 1
+    },
+    "MLB22778772": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Controle joystick Redfin REDFIN 360 REDFIN XBOX 360",
+      "preco_sugerido": 45,
+      "vezes": 1
+    },
+    "MLB65974554": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Maquiagem, Porta Joias Grande Maleta Organizador Estojo,expositor QueroCase Porta Joias Grande Maleta",
+      "preco_sugerido": 75.65,
+      "vezes": 1
+    },
+    "MLB24117280": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Fone de ouvido headphone sem fio Dapon Audio H02D H02D",
+      "preco_sugerido": 78.9,
+      "vezes": 1
+    },
+    "MLB79316361": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Panela elétrica de vapor Epsilon Cozedor De Ovos Elétrico EPS-1258",
+      "preco_sugerido": 44.97,
+      "vezes": 1
+    },
+    "MLB26080271": {
+      "sugerido_em": "2026-10-14",
+      "familia": "L'Oréal Paris Elseve Óleo Extraordinário 100ml - Leave In Anti Frizz Protetor Térmico Tratamento Reconstrutor Para Todos Os Tipos De Cabelo",
+      "preco_sugerido": 35.99,
+      "vezes": 1
+    },
+    "MLB18725308": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Suplemento en pó Soldiers Nutrition Suplemento Creatina de Creatina Monohidratada",
+      "preco_sugerido": 44.9,
+      "vezes": 1
+    },
+    "MLB79566827": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Suplemento en pó Growth Supplements Creatina monohidratada de Creatina Monohidratada (500 g)",
+      "preco_sugerido": 78.9,
+      "vezes": 1
+    },
+    "MLB65113053": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Chaleira elétrica ZAZÁ UTILIDADES PARA O SEU LAR Chaleira Elétrica Inox Chaleira Elétrica 1.8L",
+      "preco_sugerido": 45.9,
+      "vezes": 1
+    },
+    "MLB72809998": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Led, Painel, Rgb de luz led AMPRO ACOUSTIC RGB M160 RGB",
+      "preco_sugerido": 31.91,
+      "vezes": 1
+    },
+    "MLB79379664": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Kit de teclado e mouse sem fio RHEAD RED HIGH END STUDIOS Teclado mouse wireless",
+      "preco_sugerido": 45.9,
+      "vezes": 1
+    },
+    "MLB57365099": {
+      "sugerido_em": "2026-10-14",
+      "familia": "Pendrive LIGGI LIGGI Mini Pen Drive LIGGI Super Speed LGG-PEN04 128GB 2.0",
+      "preco_sugerido": 77.99,
       "vezes": 1
     }
   }
