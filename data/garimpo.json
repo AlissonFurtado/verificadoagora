@@ -15,7 +15,9 @@
     "MLB1430",
     "MLB1246",
     "MLB3937",
-    "MLB1276"
+    "MLB1338",
+    "MLB1292",
+    "MLB123103"
   ],
   "limite_diario": 20,
   "filtros": {
@@ -25,5 +27,6 @@
   },
   "_por_que_sem_foco": "O foco em celulares acabou em 11/09/2026, por decisao do Alisson: o catalogo tinha dois celulares e a vitrine parecia vazia. Sem foco, a fila e ordenada so por desconto, como era antes de 09/09. O aviso sobre a leitura de topico do buscador foi dado antes da decisao. MLB1055 (Celulares e Smartphones) fica na lista de categorias: e a subcategoria onde mora o aparelho, e MLB1051 e guarda-chuva de acessorio barato.",
   "_por_que_20_por_dia": "Subiu de 10 para 20 em 16/09/2026: o Alisson topou gerar ate 20 links por dia para engordar o catalogo antes da Black Friday (27/11). O gargalo nunca foi achar oferta, e sim o link de afiliado, que so ele gera. Se a fila voltar a vir curta, o limite nao e o problema: e a memoria fazendo o trabalho dela.",
-  "_por_que_moda_e_piso_de_30": "Em 13/10/2026 a fila vinha com 1 ou 2 candidatos por dia: a memoria tinha esgotado as mesmas 10 categorias. Decisao do Alisson: abrir Calcados, Roupas e Bolsas (MLB1430), Beleza (MLB1246), Joias e Relogios (MLB3937) e Esportes e Fitness (MLB1276), e baixar o piso de R$ 100 para R$ 30. Moda e beleza pagam 16% de comissao (lido na barra GANHOS do Meli), contra 5% de eletronico. Cuidado na curadoria: so entra produto de CATALOGO (id sem hifen); anuncio avulso (MLB-...) e MLBU o robo de precos nunca leu com sucesso."
+  "_por_que_moda_e_piso_de_30": "Em 13/10/2026 a fila vinha com 1 ou 2 candidatos por dia: a memoria tinha esgotado as mesmas 10 categorias. Decisao do Alisson: abrir Calcados, Roupas e Bolsas (MLB1430), Beleza (MLB1246), Joias e Relogios (MLB3937) e Esportes e Fitness (MLB1276), e baixar o piso de R$ 100 para R$ 30. Moda e beleza pagam 16% de comissao (lido na barra GANHOS do Meli), contra 5% de eletronico. Cuidado na curadoria: so entra produto de CATALOGO (id sem hifen); anuncio avulso (MLB-...) e MLBU o robo de precos nunca leu com sucesso.",
+  "_por_que_esportes_por_subcategoria": "Em 14/10/2026 o topo de Esportes e Fitness (MLB1276) trouxe 5 suplementos em 6 candidatos, e so 1 passou na conferencia. Decisao do Alisson: entrar por subcategoria, como Informatica e Celulares. MLB1338 Fitness e Musculacao, MLB1292 Ciclismo, MLB123103 Monitores Esportivos. Suplemento mora em MLB438178 e ficou de fora de proposito."
 }
