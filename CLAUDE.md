@@ -73,8 +73,23 @@ em 11/09/2026, depois da pesquisa.
     era uma conta de nome automático (`MN2026…`, 25 vendas, entrega em 3
     semanas).
   - **Fone Dapon H02D**: o título diz 22 h de bateria e a ficha, 35 h.
-- 🔴 **Indexação do whey** e os 5 de 13/10 seguem por pedir. Os 6 suspeitos
-  do robô de 14/10 e os 7 de 13/10 ainda não foram conferidos.
+- 🟢 **Suspeitos de 13 e 14/10 conferidos na página (lista `/p/{id}/s`) e
+  aplicados à mão**; PRs fechados e branches 12, 13 e 14 apagados. GameSir T4
+  R$ 233,10 (loja oficial), Moto G67 R$ 1.599 (a promoção de R$ 1.068 acabou),
+  TCL 9k R$ 2.060,10, mixer R$ 109, DualSense R$ 459 (nacional; o do robô é
+  dos EUA). ⚠️ **O kit de potes (id 35) vai virar suspeito todo dia**: a
+  oferta mais barata (R$ 47,90) é de revenda com entrega em 3 semanas, e a
+  Rishon, fabricante, segue a R$ 97,62. É o caso do `results[0]` da Philco.
+  🟢 **A lista `/p/{id}/s` mostra todos os vendedores com preço no cartão e
+  prazo**, e resolve suspeito em uma navegação.
+- 🟢 **Garimpo: Esportes trocado por subcategoria** (decisão dele em 14/10):
+  `MLB1338` Fitness e Musculação, `MLB1292` Ciclismo, `MLB123103` Monitores
+  Esportivos. Suplemento (`MLB438178`) ficou fora de propósito.
+- 🔴 **Indexação NÃO confirmada**: whey, Casio W-59, Cicaplast, Anthelios,
+  escova Mondial e escova Britânia. O laço rodou e a aba do Search Console
+  travou no meio, sem dizer quais pedidos saíram. **Reinspecionar as 6** e
+  pedir as que não estiverem "Indexação solicitada". ⚠️ Bug do laço antigo:
+  `/está no Google/` casa com "não está no Google". Use `^O URL está`.
 
 ## Onde paramos — 13/10/2026
 
