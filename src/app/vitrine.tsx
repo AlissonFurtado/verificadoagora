@@ -135,9 +135,10 @@ export function Vitrine({
       <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
         {ativa === null &&
           destaques.map((card, i) => (
-            <CardQueEntra key={`guia-${i}`} atraso={0}>
+            // O banner do guia ocupa a linha inteira da grade.
+            <div key={`guia-${i}`} className="col-span-full min-w-0">
               {card}
-            </CardQueEntra>
+            </div>
           ))}
         {produtos.map((produto, i) =>
           ativa === null || produto.categoria === ativa ? (
