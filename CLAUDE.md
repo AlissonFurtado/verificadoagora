@@ -55,6 +55,68 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 15/10/2026 (guia-card de suplementos)
+
+- 🟢 **Plano novo dele: "guia de tema" que vira UM card na vitrine.** O
+  primeiro é `/guia/suplementos-para-academia`. Os produtos dele **saem da
+  grade da home** e aparecem dentro do guia, e o robô continua conferindo
+  todos. Escolhas dele, por múltipla escolha:
+  - todos os produtos entram no catálogo, conferidos todo dia;
+  - aparecem como card de guia na vitrine;
+  - o critério é preço por dose + marca/loja oficial + mais vendidos.
+- **Como funciona:** o guia em `guias.json` ganha `vitrine: { chamada }`.
+  Com isso, `idsEmGuiaDeVitrine()` (`src/lib/guias.ts`) tira os `meli_id`
+  dos perfis da grade, e `card-guia.tsx` (mosaico de 4 fotos, anel âmbar)
+  entra primeiro na grade, só no filtro "Tudo". Os cliques no card levam
+  `data-onde="card-guia"`. **Tema novo = guia novo com `vitrine`**; não
+  precisa de código.
+- **Marcador `{custo}`:** o perfil ganha `rende: { gramas, de }`, e o
+  marcador vira "R$ X por grama de creatina/proteína", recalculado com o
+  preço do dia.
+  - ⚠️ **Não escreva "mais barato por grama" no texto.** Em 15/10, o Basic
+    Whey (pote barato, 10 g/30 g) saiu o **mais em conta por grama de
+    proteína** (R$ 0,22, contra R$ 0,27 do Growth 100%), e corrigi uma frase
+    que dizia o contrário.
+- **Entraram os ids 61 a 66** (Soldiers 500 g, Growth 250 g, Integralmédica
+  2×300 g, Growth 100% 900 g, Basic Whey, Anabolic Mass), mais o whey Max
+  Titanium (id 60).
+  - Todos são de catálogo, com loja oficial na buy box (`official_store_id`
+    no HTML de `/p/{id}/s`).
+  - Comissão de suplemento: 12%.
+- **Reprovados no guia:** Black Skull e Dark Lab, porque o anúncio não traz
+  a proteína por dose e só agregador publica.
+  - ⚠️ O "Isolate Fuse" da Dark Lab é **blend** (soja, albumina, caseína),
+    não isolado.
+- Fonte da pesquisa: `mercadolivre.com.br/mais-vendidos/MLB438178`,
+  lida com `get_page_text`. Os ids saem dos links da página.
+- **Instagram (carrossel): ele faz as fotos com outra IA. Eu só mexo no
+  site.** No fim mando a lista de links num bloco de código.
+- 🟢 **Linkbuilder com a janela oculta:** o clique em `Gerar` por JS
+  (`button.click()`) funciona. Não precisa de coordenada.
+
+## Onde paramos — 15/10/2026 (achados)
+
+- ⏸️ **Achados EM PAUSA, por pedido dele** ("pensando bem… dê uma pausa, mas
+  guarde os produtos"). Ele vai dizer **como quer a organização** antes de
+  publicar. Ele tinha pedido "quantidade em vez de qualidade, para postar".
+  A primeira versão também tinha: fontes = garimpo largo, ofertas do dia,
+  links que ele mandar e mais vendidos; uma frase + preço; 20/dia.
+- **Tudo guardado no branch LOCAL `pausa/achados`** (commit `3896e9a`, não
+  enviado ao GitHub, `main` intacta):
+  - página `/achados` (`noindex`, fora do sitemap, "preço visto em DD/MM");
+  - `data/achados.json` com os **20 da fila de 15/10** e os `meli.la` já
+    gerados;
+  - link no rodapé da home e na `/entrar`;
+  - garimpo com piso de R$ 10 e Brinquedos, Animais, Bebês e Ferramentas.
+
+  Medido no dev: 200, `noindex`, 20 botões, 0 no sitemap. Para retomar:
+  `git checkout pausa/achados` e ajustar ao que ele decidir.
+- Truque que funcionou: a URL completa (com slug) que o Linkbuilder exige
+  sai do `canonical` de `fetch('/p/{id}')` numa aba do Meli. Com 20 URLs
+  no textarea (setter nativo + `input`), um clique em Gerar devolveu os 20.
+- 🔴 **O robô de 15/10 tem 4 suspeitos** (commit `ccdf2f6`), que ainda não
+  foram conferidos.
+
 ## Onde paramos — 14/10/2026
 
 - 🟢 **Decidido por ele em 14/10: roupa só entra com página de catálogo**

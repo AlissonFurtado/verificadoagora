@@ -607,6 +607,138 @@
         }
       ],
       "escrito_em": "2026-10-12"
+    },
+    {
+      "slug": "suplementos-para-academia",
+      "titulo": "Suplementos para academia: creatina e whey com melhor custo-benefício",
+      "resumo": "Os suplementos mais vendidos do Mercado Livre, separados por perfil de quem treina. O critério é custo-benefício de verdade: quanto custa cada grama de creatina ou de proteína, marca conhecida vendida pela loja oficial e nota de quem comprou. O preço de cada um é conferido pelo nosso robô todo dia, e o custo por grama é recalculado junto. Suplemento não substitui comida nem orientação de nutricionista.",
+      "descricao": "Creatina, whey e hipercalórico separados por perfil, com o custo por grama recalculado todo dia: os mais vendidos do Mercado Livre com melhor custo-benefício.",
+      "vitrine": {
+        "chamada": "Creatina, whey e hipercalórico: os mais vendidos, comparados pelo custo de cada grama."
+      },
+      "perfis": [
+        {
+          "chave": "creatina-rende-mais",
+          "perfil": "Quero a creatina que mais rende pelo que pago",
+          "aparelho": "Creatina Soldiers Nutrition 500 g",
+          "meli_id": "MLB18725308",
+          "rende": {
+            "gramas": 500,
+            "de": "creatina"
+          },
+          "porque": [
+            "Pote de 500 g, com 100 doses de 5 g, segundo o anúncio: o dobro do pote mais comum.",
+            "Hoje sai a {custo}: {preco} o pote, conferido em {data}.",
+            "Monohidratada, sem sabor e sem lactose."
+          ],
+          "quando_nao": "Não compre se você ainda vai testar e pode largar no meio: um pote de 500 g leva mais de três meses para acabar.",
+          "ficha": {}
+        },
+        {
+          "chave": "creatina-mais-vendida",
+          "perfil": "Quero a creatina que mais gente compra",
+          "aparelho": "Creatina Growth Supplements 250 g",
+          "meli_id": "MLB19603205",
+          "rende": {
+            "gramas": 250,
+            "de": "creatina"
+          },
+          "porque": [
+            "A creatina mais vendida da categoria no Mercado Livre na nossa conferência de 15/10/2026: mais de 1 milhão vendidas, nota 4,9.",
+            "Hoje sai a {custo}: {preco} o pote, conferido em {data}.",
+            "50 doses de 5 g: um pote para começar."
+          ],
+          "quando_nao": "Não compre pelo nome se você já toma todo dia: pote pequeno costuma sair mais caro por grama. Compare o custo por grama com o de cima.",
+          "ficha": {}
+        },
+        {
+          "chave": "creatina-estoque",
+          "perfil": "Prefiro marca tradicional e estoque para meses",
+          "aparelho": "Creatina Integralmédica 2 × 300 g",
+          "meli_id": "MLB39230611",
+          "rende": {
+            "gramas": 600,
+            "de": "creatina"
+          },
+          "porque": [
+            "Dois potes de 300 g: 600 g no total.",
+            "Hoje sai a {custo}: {preco} os dois potes, conferido em {data}."
+          ],
+          "quando_nao": "Atenção à dose: o rótulo fala em 3 g. Se você toma 5 g, cada pote rende 60 dias, não 100.",
+          "ficha": {}
+        },
+        {
+          "chave": "whey-mais-proteina",
+          "perfil": "Quero mais proteína em cada dose de whey",
+          "aparelho": "Whey 100% Concentrado Growth 900 g",
+          "meli_id": "MLB67998627",
+          "rende": {
+            "gramas": 630,
+            "de": "proteína"
+          },
+          "porque": [
+            "21 g de proteína em cada dose de 30 g, segundo o anúncio: 70% da porção.",
+            "Hoje sai a {custo}: {preco} o pote, conferido em {data}.",
+            "Cerca de 630 g de proteína no pote, em 30 doses."
+          ],
+          "quando_nao": "Não compre se você tem intolerância à lactose: ele contém. Aí o caminho é um whey isolado ou sem lactose.",
+          "ficha": {}
+        },
+        {
+          "chave": "whey-de-marca",
+          "perfil": "Quero um whey de marca sem gastar muito no pote",
+          "aparelho": "Whey Pro Max Titanium 1 kg",
+          "meli_id": "MLB6087971",
+          "rende": {
+            "gramas": 375,
+            "de": "proteína"
+          },
+          "porque": [
+            "O whey mais vendido da categoria na conferência de 15/10/2026, com nota 4,8.",
+            "15 g de proteína em cada porção de 40 g, segundo o anúncio: cerca de 375 g de proteína no pote.",
+            "Hoje sai a {custo}: {preco} o pote, conferido em {data}."
+          ],
+          "quando_nao": "Não compre pelo preço do quilo: menos de 40% da porção é proteína. Compare o custo por grama de proteína com o whey de cima antes.",
+          "ficha": {}
+        },
+        {
+          "chave": "whey-pote-barato",
+          "perfil": "Quero o shake mais barato e aceito menos proteína",
+          "aparelho": "Basic Whey Growth 1 kg",
+          "meli_id": "MLB18725403",
+          "rende": {
+            "gramas": 330,
+            "de": "proteína"
+          },
+          "porque": [
+            "10 g de proteína em cada porção de 30 g, segundo o anúncio: cerca de 330 g de proteína no pote.",
+            "Hoje sai a {custo}: {preco} o pote, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se o seu objetivo é proteína com pouca caloria: cada dose tem mais carboidrato que proteína, e para chegar a 20 g de proteína são 60 g de pó.",
+          "ficha": {}
+        },
+        {
+          "chave": "hipercalorico",
+          "perfil": "Como pouco e tenho dificuldade de ganhar peso",
+          "aparelho": "Hipercalórico Anabolic Mass 3 kg",
+          "meli_id": "MLB12406685",
+          "porque": [
+            "Hipercalórico: a base é carboidrato, com proteína do soro, colágeno e 3 g de creatina por porção, segundo o anúncio.",
+            "Pote de 3 kg, 20 porções de 150 g.",
+            "Hoje está a {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não compre se você já come bem ou quer perder gordura: é caloria a mais, não músculo a mais. E se já toma creatina à parte, some as doses.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Para quem está começando, o par que mais aparece na lista dos mais vendidos é uma creatina e um whey. Na creatina, pote grande costuma render mais por grama; no whey, olhe quanto de proteína vem em cada dose, e não só o preço do pote. O custo por grama de cada um é recalculado aqui todo dia. Hipercalórico só para quem come pouco. E nenhum suplemento faz o trabalho do treino, do sono e da comida.",
+      "fontes": [
+        {
+          "titulo": "Mercado Livre: mais vendidos em Suplementos e Shakers (conferido em 15/10/2026)",
+          "url": "https://www.mercadolivre.com.br/mais-vendidos/MLB438178"
+        }
+      ],
+      "escrito_em": "2026-10-15"
     }
   ]
 }

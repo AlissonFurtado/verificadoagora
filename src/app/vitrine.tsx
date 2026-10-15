@@ -71,9 +71,12 @@ export function Vitrine({
   produtos,
   cards,
   foco,
+  destaques = [],
 }: {
   produtos: Produto[];
   cards: React.ReactNode[];
+  /** Cards de guia: vêm primeiro na grade, só com o filtro em "Tudo". */
+  destaques?: React.ReactNode[];
   /**
    * A categoria em que o site é especializado. Vem primeira e com peso
    * visual; as outras continuam clicáveis, mas em segundo plano — elas estão
@@ -130,6 +133,12 @@ export function Vitrine({
 
       {/* Uma coluna no celular: o card fica deitado e cabem três por tela. */}
       <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
+        {ativa === null &&
+          destaques.map((card, i) => (
+            <CardQueEntra key={`guia-${i}`} atraso={0}>
+              {card}
+            </CardQueEntra>
+          ))}
         {produtos.map((produto, i) =>
           ativa === null || produto.categoria === ativa ? (
             // O atraso é a posição na linha, não no catálogo: assim a cascata

@@ -16,7 +16,7 @@
  */
 
 import { preencher } from './comparativos';
-import type { Produto } from './produtos';
+import { formatarReal, type Produto } from './produtos';
 
 export type PerfilDoGuia = {
   /** Chave curta e estável: vira o âncora `#` da seção na página. */
@@ -45,6 +45,12 @@ export type PerfilDoGuia = {
    * número novo aqui é número que ninguém verificou na fonte do fabricante.
    */
   ficha: Record<string, string>;
+  /**
+   * Quanto o pote rende do que importa (creatina, proteína), em gramas. Liga o
+   * marcador `{custo}`, que divide o preço do dia por esse número: o custo por
+   * grama envelhece junto com o preço, então nunca é escrito à mão.
+   */
+  rende?: { gramas: number; de: string };
 };
 
 export type Guia = {
@@ -71,6 +77,12 @@ export type Guia = {
    * aqui dentro e a URL indexada continua a mesma.
    */
   atualizado_em?: string;
+  /**
+   * Guia que vira **card na vitrine** (15/10/2026, decisão do Alisson): a home
+   * mostra um card só, e os produtos dos perfis saem da grade e aparecem
+   * dentro do guia. O robô continua conferindo todos.
+   */
+  vitrine?: { chamada: string };
 };
 
 export type Guias = { guias: Guia[] };
@@ -94,7 +106,11 @@ export function comTextoDeHoje(guia: Guia, porMeliId: Map<string, Produto>): Gui
     perfis: guia.perfis.map((p) => {
       const produto = porMeliId.get(p.meli_id);
       if (!produto) return p;
-      const t = (texto: string) => preencher(texto, produto);
+      const custo = p.rende
+        ? `${formatarReal(produto.preco_atual / p.rende.gramas)} por grama de ${p.rende.de}`
+        : null;
+      const t = (texto: string) =>
+        preencher(custo ? texto.split('{custo}').join(custo) : texto, produto);
       return { ...p, porque: p.porque.map(t), quando_nao: t(p.quando_nao) };
     }),
   };
@@ -103,4 +119,9 @@ export function comTextoDeHoje(guia: Guia, porMeliId: Map<string, Produto>): Gui
 /** Quantos aparelhos do guia a gente acompanha o preço de verdade. */
 export function quantosAcompanhados(guia: Guia, porMeliId: Map<string, Produto>): number {
   return guia.perfis.filter((p) => porMeliId.has(p.meli_id)).length;
+}
+
+/** Os `meli_id` que moram num guia de vitrine: saem da grade da home. */
+export function idsEmGuiaDeVitrine(guias: Guia[]): Set<string> {
+  return new Set(guias.filter((g) => g.vitrine).flatMap((g) => g.perfis.map((p) => p.meli_id)));
 }

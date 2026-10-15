@@ -6,6 +6,8 @@ import { caminhoDoComparativo } from '@/lib/slug';
 import Link from 'next/link';
 import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
+import { CardGuia } from './card-guia';
+import { idsEmGuiaDeVitrine } from '@/lib/guias';
 import { SeloDeConferencia } from './selo-de-conferencia';
 import { descreverConferencia } from '@/lib/relogio';
 
@@ -41,10 +43,23 @@ const CATEGORIA_FOCO = undefined;
 
 export default function Home() {
   const { produtos: todos, metadata } = lerCatalogo();
-  const produtos = ordenarPorRecencia(produtosVisiveis(todos));
+  const guias = lerGuias();
+  const visiveis = produtosVisiveis(todos);
+  // Produto de guia de vitrine sai da grade: o guia vira um card só, e os
+  // produtos aparecem dentro dele (decisão do Alisson em 15/10/2026).
+  const emGuia = idsEmGuiaDeVitrine(guias);
+  const produtos = ordenarPorRecencia(visiveis.filter((p) => !emGuia.has(p.meli_id)));
+  const cardsDeGuia = guias
+    .filter((g) => g.vitrine)
+    .map((g) => {
+      const doGuia = g.perfis
+        .map((perfil) => visiveis.find((p) => p.meli_id === perfil.meli_id))
+        .filter((p): p is (typeof visiveis)[number] => p !== undefined);
+      return doGuia.length > 0 ? <CardGuia key={g.slug} guia={g} produtos={doGuia} /> : null;
+    })
+    .filter((c) => c !== null);
   const historico = lerHistorico();
   const comparativos = lerComparativos();
-  const guias = lerGuias();
   // No topo ficam só três atalhos, numa linha. Eram todos os guias (17 botões
   // em 12/10/2026), e no monitor viravam 5 ou 6 linhas: quem abria a página
   // não via produto nenhum sem rolar. Os guias moram na seção `#guias`,
@@ -173,6 +188,7 @@ export default function Home() {
         <Vitrine
           foco={CATEGORIA_FOCO}
           produtos={produtos}
+          destaques={cardsDeGuia}
           cards={produtos.map((produto) => {
             const comparativo = acharComparativo(comparativos, produto.meli_id);
             return (
