@@ -55,6 +55,30 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 15/10/2026 (guia WePink + Lupita)
+
+- 🟢 **Guia-card `/guia/wepink-skin-care-e-perfumes`** (ids 67 a 73,
+  categoria `Beleza`). Escolha dele por múltipla escolha: **"Só WePink"**
+  (a marca da Virginia Fonseca), 7 a 8 produtos.
+  - ⚠️ **Exceção à regra da loja oficial, decidida por ele:** a WePink **não
+    tem loja oficial no Mercado Livre**, só revendedores (lista `/p/{id}/s`
+    do sérum: LIPETECO, GT STORE, Beth Makeup…). Toda `analise` termina
+    com o aviso de revenda.
+  - Mesmo assim, buy box de conta com nome automático (`IB2025…`,
+    `AF2026…`) reprovou o **protetor solar** (`MLB34066507`) e o **body
+    cream VF Golden** (`MLB47067407`). Também saíram o **creme de olhos**
+    (5 vendas e FPS contraditório), o **sérum noturno** (sem preço) e o
+    perfume de 100 mL que não é o Obsessed.
+  - Como não há ficha de fabricante, os produtos entram com `ficha: {}`.
+  - O robô lê o `results[0]`: confira amanhã se os 7 seguem `disponivel`
+    e com preço perto do cadastrado.
+- 🔴 **Pendente (pedido dele em 15/10): a Lupita como capa discreta do site
+  e tirar o "✓ verificado" da imagem do site**, por causa de strike na Meta.
+  - A Lupita mora em `github.com/AlissonFurtado/afdesousa-personagens`
+    (público, tag `v0.2.0`, `src/Lupita.tsx`). É uma coruja verde com uma
+    lupa, em SVG para React.
+  - Perguntar a ele onde ela entra e o que substitui o ✓ antes de mexer.
+
 ## Onde paramos — 15/10/2026 (guia-card de suplementos)
 
 - 🟢 **Plano novo dele: "guia de tema" que vira UM card na vitrine.** O

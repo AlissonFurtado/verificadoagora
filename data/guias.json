@@ -739,6 +739,116 @@
         }
       ],
       "escrito_em": "2026-10-15"
+    },
+    {
+      "slug": "wepink-skin-care-e-perfumes",
+      "titulo": "WePink da Virginia: skin care e perfumes mais vendidos no Mercado Livre",
+      "resumo": "Os produtos da WePink, a marca da Virginia Fonseca, que mais vendem no Mercado Livre, separados por etapa da rotina. Preço conferido todo dia e o aviso que ninguém dá: a marca não tem loja oficial lá.",
+      "descricao": "Sérum 10 em 1, hidratante, espuma, demaquilante, Obsessed e lip tint da WePink, com o preço conferido todo dia e o cuidado com revendedor, já que a marca não tem loja oficial no Mercado Livre.",
+      "vitrine": {
+        "chamada": "Sérum 10 em 1, Obsessed e lip tint: os mais vendidos da marca da Virginia, com o preço conferido todo dia."
+      },
+      "perfis": [
+        {
+          "chave": "serum",
+          "perfil": "Quero um passo só que faça muita coisa",
+          "aparelho": "Sérum Facial 10 em 1 WePink 25 mL",
+          "meli_id": "MLB19784489",
+          "porque": [
+            "O skin care mais vendido da marca no Mercado Livre.",
+            "Uso de dia, sem óleo, sem parabenos e vegano, segundo o anúncio.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não conte com ele como protetor solar: o \"FPS 1\" do anúncio não protege. E se você tem acne ativa ou melasma, prefira um sérum com o ativo e a concentração no rótulo.",
+          "ficha": {}
+        },
+        {
+          "chave": "hidratante",
+          "perfil": "Quero hidratar sem perfume",
+          "aparelho": "Hidratante Facial WePink Hydracare Essential 60 mL",
+          "meli_id": "MLB47015451",
+          "porque": [
+            "Creme de 60 mL para dia e noite.",
+            "Sem fragrância, bom para pele que reage a perfume.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não é a melhor escolha para pele muito oleosa, que costuma se dar melhor com gel. E não tem protetor solar.",
+          "ficha": {}
+        },
+        {
+          "chave": "limpeza",
+          "perfil": "Quero limpar e esfoliar",
+          "aparelho": "Espuma Esfoliante Facial WePink Myskin Essential 120 mL",
+          "meli_id": "MLB22444239",
+          "porque": [
+            "Espuma de 120 mL, sem óleo e sem parabenos.",
+            "Mais de 500 vendas no catálogo.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Esfoliar todo dia pode irritar pele seca ou sensível. Se arder, espace o uso.",
+          "ficha": {}
+        },
+        {
+          "chave": "demaquilante",
+          "perfil": "Uso maquiagem ou protetor à prova d'água",
+          "aparelho": "Demaquilante em Óleo WePink Cleansing Oil 120 mL",
+          "meli_id": "MLB45506260",
+          "porque": [
+            "Demaquilante em óleo: o tipo que melhor remove maquiagem resistente à água.",
+            "Óleo de abacate, de coco e bisabolol, segundo o anúncio.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "O óleo de coco pode entupir poro em pele oleosa ou com acne. É também o produto com menos vendas da lista.",
+          "ficha": {}
+        },
+        {
+          "chave": "splash",
+          "perfil": "Quero conhecer o Obsessed",
+          "aparelho": "Body Splash WePink Obsessed 200 mL",
+          "meli_id": "MLB24341317",
+          "porque": [
+            "A fragrância mais conhecida da marca, em frasco de 200 mL.",
+            "Floral amadeirado e doce: baunilha, caramelo e cereja.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Body splash é leve e pede reaplicação. Quem não gosta de cheiro doce deve passar longe.",
+          "ficha": {}
+        },
+        {
+          "chave": "perfume",
+          "perfil": "Já gosto do Obsessed e quero o perfume",
+          "aparelho": "Perfume WePink Obsessed 100 mL",
+          "meli_id": "MLB22643953",
+          "porque": [
+            "O produto da marca mais vendido no catálogo: mais de 5 mil unidades.",
+            "Mesmas notas do splash, em versão mais concentrada.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "É desodorante colônia, não eau de parfum: a fixação depende da pele. Se nunca sentiu o cheiro, comece pelo splash.",
+          "ficha": {}
+        },
+        {
+          "chave": "lip-tint",
+          "perfil": "Quero cor leve na boca e na bochecha",
+          "aparelho": "Lip Tint WePink Glow Essencial 5,8 mL Rosa",
+          "meli_id": "MLB20972757",
+          "porque": [
+            "Tint líquido rosa com ácido hialurônico e D-pantenol, segundo o anúncio.",
+            "Serve para lábios e maçãs do rosto.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não é para quem quer cor forte e cobertura total: aí um batom matte atende melhor.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Para começar na marca, o par mais vendido é o Sérum 10 em 1 e o Obsessed (em splash, para conhecer, ou perfume, para quem já gosta). Em qualquer produto da WePink no Mercado Livre, olhe o vendedor antes do preço: a marca não tem loja oficial lá, e quem vende são revendedores.",
+      "fontes": [
+        {
+          "titulo": "Mercado Livre: busca por WePink e páginas de catálogo dos produtos (conferido em 15/10/2026)",
+          "url": "https://lista.mercadolivre.com.br/wepink"
+        }
+      ],
+      "escrito_em": "2026-10-15"
     }
   ]
 }

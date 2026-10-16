@@ -2619,12 +2619,285 @@
           "resposta": "Não. Cada porção é grande e rica em carboidrato."
         }
       ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-15",
+      "verificado_em": "2026-10-15",
+      "categoria": "Beleza",
+      "id": 67,
+      "nome": "Sérum Facial 10 em 1 WePink 25 mL",
+      "preco_original": 85.93,
+      "preco_atual": 85.93,
+      "desconto_percentual": 0,
+      "avaliacao": 4.5,
+      "link_afiliado": "https://meli.la/1NEg8bv",
+      "descricao": "Sérum facial de uso diurno, 25 mL, para todo tipo de pele, sem óleo e sem parabenos",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_655783-MLB49636982579_042022-F.jpg",
+      "meli_id": "MLB19784489",
+      "analise": [
+        "É o produto de skin care mais vendido da **WePink**, a marca da Virginia Fonseca, no Mercado Livre: mais de mil unidades vendidas no catálogo que acompanhamos. O frasco tem **25 mL**, a ficha do anúncio diz uso de dia, todo tipo de pele, sem óleo, sem parabenos, vegano e dermatologicamente testado. A proposta é juntar vários cuidados num sérum só.",
+        "⚠️ **Ele não é protetor solar.** O anúncio fala em \"FPS 1\", e FPS 1 não protege do sol na prática. Use protetor de verdade por cima, de manhã. Os benefícios que a marca promete (colágeno, manchas, acne) são da descrição do anúncio, não de teste nosso. Faça um teste numa área pequena da pele antes do primeiro uso, e quem está grávida, amamentando ou em tratamento dermatológico deve falar com o médico antes.",
+        "Compre se você quer uma rotina curta e gosta da marca. Se você tem um problema específico de pele, como acne ativa ou melasma, um sérum com um ativo declarado e a concentração no rótulo é escolha mais segura que um \"10 em 1\". A WePink não tem loja oficial no Mercado Livre: quem vende são revendedores. Antes de comprar, confira na página o nome do vendedor, a quantidade de vendas e a reputação dele, e desconfie de preço muito abaixo dos outros vendedores do mesmo produto."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O Sérum 10 em 1 substitui o protetor solar?",
+          "resposta": "Não. O anúncio fala em FPS 1, que não protege do sol. Use protetor solar por cima."
+        },
+        {
+          "pergunta": "Serve para qualquer tipo de pele?",
+          "resposta": "O anúncio diz todo tipo de pele, sem óleo e sem parabenos. Teste numa área pequena antes."
+        },
+        {
+          "pergunta": "É vendido pela loja oficial da WePink?",
+          "resposta": "Não. A WePink não tem loja oficial no Mercado Livre; quem vende são revendedores."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-15",
+      "verificado_em": "2026-10-15",
+      "categoria": "Beleza",
+      "id": 68,
+      "nome": "Hidratante Facial WePink Hydracare Essential 60 mL",
+      "preco_original": 94.9,
+      "preco_atual": 94.9,
+      "desconto_percentual": 0,
+      "avaliacao": 5.0,
+      "link_afiliado": "https://meli.la/19BfZpc",
+      "descricao": "Creme hidratante facial de dia e noite, 60 mL, sem fragrância, para todo tipo de pele",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_850801-MLA82680487026_032025-F.jpg",
+      "meli_id": "MLB47015451",
+      "analise": [
+        "O **Hydracare Essential** é o hidratante facial da WePink: creme de **60 mL**, para dia e noite, **sem fragrância** e dermatologicamente testado, segundo a ficha do anúncio. A marca promete reforço da barreira da pele e efeito calmante.",
+        "Não ter perfume é o ponto forte para quem tem pele sensível, que costuma reagir a fragrância. Por outro lado, o anúncio não traz a lista de ativos com concentração, então não dá para comparar a fórmula com a de outro hidratante. Ele não tem protetor solar. Faça um teste numa área pequena da pele antes do primeiro uso, e quem está grávida, amamentando ou em tratamento dermatológico deve falar com o médico antes.",
+        "Compre se você quer um hidratante simples e sem cheiro para o rosto. Se a sua pele é muito oleosa, prefira um gel ou um fluido, que costuma pesar menos que creme. A WePink não tem loja oficial no Mercado Livre: quem vende são revendedores. Antes de comprar, confira na página o nome do vendedor, a quantidade de vendas e a reputação dele, e desconfie de preço muito abaixo dos outros vendedores do mesmo produto."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O Hydracare tem perfume?",
+          "resposta": "Não. O anúncio informa que é sem fragrância."
+        },
+        {
+          "pergunta": "Pode usar de dia?",
+          "resposta": "Sim, a ficha diz dia e noite. Mas ele não tem protetor solar: use um por cima."
+        },
+        {
+          "pergunta": "Quantos mL tem?",
+          "resposta": "60 mL."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-15",
+      "verificado_em": "2026-10-15",
+      "categoria": "Beleza",
+      "id": 69,
+      "nome": "Espuma Esfoliante Facial WePink Myskin Essential 120 mL",
+      "preco_original": 78.0,
+      "preco_atual": 78.0,
+      "desconto_percentual": 0,
+      "avaliacao": 4.7,
+      "link_afiliado": "https://meli.la/1oopU9D",
+      "descricao": "Espuma de limpeza e esfoliação facial, 120 mL, para todo tipo de pele, sem óleo e sem parabenos",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_605765-MLB54252972027_032023-F.jpg",
+      "meli_id": "MLB22444239",
+      "analise": [
+        "A **Myskin Essential** é a espuma de limpeza com esfoliação da WePink, frasco de **120 mL**. A ficha do anúncio diz todo tipo de pele, uso de dia e noite, sem óleo, sem parabenos, hipoalergênica e dermatologicamente testada, com função antiacne. Tem mais de 500 vendas no catálogo.",
+        "Atenção ao \"esfoliante\": esfoliar todo dia pode irritar, principalmente pele sensível ou com acne inflamada. Se arder ou avermelhar, espace o uso. O anúncio não diz qual é o agente esfoliante nem a concentração. Faça um teste numa área pequena da pele antes do primeiro uso, e quem está grávida, amamentando ou em tratamento dermatológico deve falar com o médico antes.",
+        "Compre se você quer um passo de limpeza da mesma linha do sérum e do hidratante. Se a sua pele é seca ou muito sensível, um sabonete facial suave, sem esfoliação, costuma ser escolha melhor para o dia a dia. A WePink não tem loja oficial no Mercado Livre: quem vende são revendedores. Antes de comprar, confira na página o nome do vendedor, a quantidade de vendas e a reputação dele, e desconfie de preço muito abaixo dos outros vendedores do mesmo produto."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Posso usar todos os dias?",
+          "resposta": "O anúncio diz dia e noite, mas esfoliar todo dia pode irritar. Se arder ou avermelhar, use menos."
+        },
+        {
+          "pergunta": "Serve para pele com acne?",
+          "resposta": "O anúncio lista função antiacne, mas não diz o ativo. Acne inflamada pede cuidado com esfoliação."
+        },
+        {
+          "pergunta": "Tem óleo na fórmula?",
+          "resposta": "Não, segundo a ficha do anúncio."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-15",
+      "verificado_em": "2026-10-15",
+      "categoria": "Beleza",
+      "id": 70,
+      "nome": "Demaquilante em Óleo WePink Cleansing Oil 120 mL",
+      "preco_original": 79.0,
+      "preco_atual": 79.0,
+      "desconto_percentual": 0,
+      "avaliacao": 0,
+      "link_afiliado": "https://meli.la/11NSu5d",
+      "descricao": "Óleo demaquilante de 120 mL com óleo de abacate, de coco e bisabolol, para todo tipo de pele",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_723777-MLA81965981071_012025-F.jpg",
+      "meli_id": "MLB45506260",
+      "analise": [
+        "O **Cleansing Oil** da WePink é um demaquilante em óleo de **120 mL**. O anúncio cita óleo de abacate, óleo de coco e bisabolol, e diz que serve para todo tipo de pele, sem parabenos. Ele tem perfume.",
+        "Demaquilante em óleo é o tipo que melhor tira maquiagem à prova d'água e protetor solar. O cuidado é que óleo de coco pode entupir poro em quem tem pele oleosa ou com acne. Depois do óleo, lave o rosto com um sabonete ou espuma. É um produto com **poucas vendas** no catálogo, e ainda sem nota de compradores. Faça um teste numa área pequena da pele antes do primeiro uso, e quem está grávida, amamentando ou em tratamento dermatológico deve falar com o médico antes.",
+        "Compre se você usa maquiagem ou protetor resistente à água todo dia. Se você quase não usa maquiagem, a espuma de limpeza sozinha já resolve. A WePink não tem loja oficial no Mercado Livre: quem vende são revendedores. Antes de comprar, confira na página o nome do vendedor, a quantidade de vendas e a reputação dele, e desconfie de preço muito abaixo dos outros vendedores do mesmo produto."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Remove maquiagem à prova d'água?",
+          "resposta": "Demaquilante em óleo é o tipo indicado para isso. Lave o rosto depois."
+        },
+        {
+          "pergunta": "Serve para pele oleosa?",
+          "resposta": "Com cuidado: a fórmula tem óleo de coco, que pode entupir poro em pele oleosa ou com acne."
+        },
+        {
+          "pergunta": "Tem perfume?",
+          "resposta": "Sim. O anúncio informa que não é livre de perfume."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-15",
+      "verificado_em": "2026-10-15",
+      "categoria": "Beleza",
+      "id": 71,
+      "nome": "Body Splash WePink Obsessed 200 mL",
+      "preco_original": 64.9,
+      "preco_atual": 64.9,
+      "desconto_percentual": 0,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/2CjDmFS",
+      "descricao": "Desodorante colônia feminino de 200 mL, floral amadeirado, com baunilha, caramelo e cereja",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_651859-MLU73675143087_122023-F.jpg",
+      "meli_id": "MLB24341317",
+      "analise": [
+        "O **Obsessed** é a fragrância mais conhecida da WePink, e este é o body splash de **200 mL**. A ficha do anúncio descreve um floral amadeirado com notas de baunilha, caramelo, cereja, pêssego, flor de laranjeira, jasmim e patchuli, lançado em 2022. São mais de mil unidades vendidas no catálogo.",
+        "Body splash é mais leve que perfume: o anúncio fala em cerca de 8 horas, mas splash costuma sumir antes disso e pede reaplicação. Em troca, o frasco grande serve para usar sem dó no dia a dia. Quem quer o mesmo cheiro mais concentrado tem a versão de 100 mL.",
+        "Compre se você quer conhecer o Obsessed gastando menos que no perfume, ou se gosta de cheiro doce. Se você prefere fragrância fresca ou cítrica, este não é o seu: o perfil é doce e marcante. A WePink não tem loja oficial no Mercado Livre: quem vende são revendedores. Antes de comprar, confira na página o nome do vendedor, a quantidade de vendas e a reputação dele, e desconfie de preço muito abaixo dos outros vendedores do mesmo produto."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O body splash dura quanto tempo?",
+          "resposta": "O anúncio fala em cerca de 8 horas, mas splash é leve e costuma pedir reaplicação."
+        },
+        {
+          "pergunta": "Qual é o cheiro do Obsessed?",
+          "resposta": "Floral amadeirado e doce, com baunilha, caramelo e cereja, segundo o anúncio."
+        },
+        {
+          "pergunta": "É o mesmo cheiro do perfume Obsessed?",
+          "resposta": "É a mesma fragrância, em versão mais leve e em frasco maior."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-15",
+      "verificado_em": "2026-10-15",
+      "categoria": "Beleza",
+      "id": 72,
+      "nome": "Perfume WePink Obsessed 100 mL",
+      "preco_original": 144.9,
+      "preco_atual": 144.9,
+      "desconto_percentual": 0,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/2myDT2E",
+      "descricao": "Desodorante colônia feminino de 100 mL, chipre, com baunilha, caramelo, cereja e patchuli",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_805405-MLU72637292885_112023-F.jpg",
+      "meli_id": "MLB22643953",
+      "analise": [
+        "É o perfume **Obsessed** da WePink em frasco de **100 mL**, o produto da marca mais vendido no catálogo que acompanhamos: **mais de 5 mil unidades**, nota 4,8. A ficha do anúncio classifica como chipre, com as mesmas notas do body splash: baunilha, caramelo, cereja, pêssego, jasmim e patchuli.",
+        "Repare no tipo: o anúncio diz **desodorante colônia**, não eau de parfum. É a concentração mais leve das duas, então a fixação depende muito da pele. O anúncio fala em cerca de 8 horas.",
+        "Compre se você já gosta do cheiro do splash e quer a versão para sair. Se você nunca sentiu o Obsessed, o body splash de 200 mL é um jeito de conhecer antes. A WePink não tem loja oficial no Mercado Livre: quem vende são revendedores. Antes de comprar, confira na página o nome do vendedor, a quantidade de vendas e a reputação dele, e desconfie de preço muito abaixo dos outros vendedores do mesmo produto."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O perfume Obsessed é eau de parfum?",
+          "resposta": "Não. O anúncio classifica como desodorante colônia, a concentração mais leve."
+        },
+        {
+          "pergunta": "Qual a diferença para o body splash?",
+          "resposta": "Mesma fragrância, frasco de 100 mL e versão mais concentrada que o splash."
+        },
+        {
+          "pergunta": "É vendido pela WePink?",
+          "resposta": "Não diretamente: a marca não tem loja oficial no Mercado Livre e quem vende são revendedores."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-15",
+      "verificado_em": "2026-10-15",
+      "categoria": "Beleza",
+      "id": 73,
+      "nome": "Lip Tint WePink Glow Essencial 5,8 mL Rosa",
+      "preco_original": 54.9,
+      "preco_atual": 52.15,
+      "desconto_percentual": 5,
+      "avaliacao": 5.0,
+      "link_afiliado": "https://meli.la/1c3djyD",
+      "descricao": "Lip tint líquido cor rosa, 5,8 mL, com ácido hialurônico e D-pantenol, também para as bochechas",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_683715-MLB51249494785_082022-F.jpg",
+      "meli_id": "MLB20972757",
+      "analise": [
+        "O **Lip Tint Glow Essencial** é o tint de lábios da WePink, na cor **rosa**, com **5,8 mL**. Segundo o anúncio, tem ácido hialurônico e D-pantenol para hidratar, acabamento glow e longa duração, e também pode ser usado nas bochechas.",
+        "Tint é a opção para quem quer cor leve e natural, sem a cobertura de um batom. ⚠️ A ficha do anúncio diz \"unidades por kit: 15\", mas o título e a descrição dizem **1 unidade**: conte com uma só.",
+        "Compre se você gosta de maquiagem leve e quer um produto que serve para boca e bochecha. Se você quer cor forte e cobertura total, um batom líquido matte atende melhor. A WePink não tem loja oficial no Mercado Livre: quem vende são revendedores. Antes de comprar, confira na página o nome do vendedor, a quantidade de vendas e a reputação dele, e desconfie de preço muito abaixo dos outros vendedores do mesmo produto."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Vem uma unidade ou um kit?",
+          "resposta": "Uma unidade, segundo o título e a descrição. A ficha diz 15, o que parece erro do anúncio."
+        },
+        {
+          "pergunta": "Pode usar nas bochechas?",
+          "resposta": "Sim, o anúncio indica uso nos lábios e nas maçãs do rosto."
+        },
+        {
+          "pergunta": "Tem hidratante na fórmula?",
+          "resposta": "O anúncio cita ácido hialurônico e D-pantenol."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-15",
     "conferido_em": "2026-10-15T15:26:34.775Z",
-    "total_produtos": 66,
+    "total_produtos": 73,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }
