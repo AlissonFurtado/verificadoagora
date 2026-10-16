@@ -55,6 +55,26 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Indexação de 16/10/2026
+
+- 🟢 **Pedidos aceitos (11, a cota cortou no 12º):**
+  - os guias `suplementos-para-academia` e `wepink-skin-care-e-perfumes`;
+  - Casio W-59, escova Mondial e escova Britânia (pendentes desde 13/10);
+  - creatina Growth 250 g, whey Growth 100%, creatina Soldiers e Basic Whey;
+  - sérum 10 em 1 e perfume Obsessed.
+- 🟢 **Já estavam indexados:** whey Max Titanium, Cicaplast e Anthelios.
+  Com isso, a pendência de 13–14/10 está fechada.
+- 🔴 **Pedir em 17/10 (7):**
+  - body splash Obsessed (`mlb24341317`);
+  - creatina Integralmédica (`mlb39230611`);
+  - Anabolic Mass (`mlb12406685`);
+  - Hydracare (`mlb47015451`);
+  - espuma Myskin (`mlb22444239`);
+  - lip tint (`mlb20972757`);
+  - demaquilante (`mlb45506260`).
+- O laço `window.__insp(lista)` roda num `setTimeout` (a chamada volta na
+  hora) e se lê por `window.__log`. Cada pedido levou ~15 s.
+
 ## Onde paramos — 15/10/2026 (guia WePink + Lupita)
 
 - 🟢 **Guia-card `/guia/wepink-skin-care-e-perfumes`** (ids 67 a 73,
@@ -180,7 +200,7 @@ em 11/09/2026, depois da pesquisa.
 - 🟢 **Garimpo: Esportes trocado por subcategoria** (decisão dele em 14/10):
   `MLB1338` Fitness e Musculação, `MLB1292` Ciclismo, `MLB123103` Monitores
   Esportivos. Suplemento (`MLB438178`) ficou fora de propósito.
-- 🔴 **Indexação NÃO confirmada**: whey, Casio W-59, Cicaplast, Anthelios,
+- 🟢 (resolvido em 16/10) **Indexação NÃO confirmada**: whey, Casio W-59, Cicaplast, Anthelios,
   escova Mondial e escova Britânia. O laço rodou e a aba do Search Console
   travou no meio, sem dizer quais pedidos saíram. **Reinspecionar as 6** e
   pedir as que não estiverem "Indexação solicitada". ⚠️ Bug do laço antigo:
