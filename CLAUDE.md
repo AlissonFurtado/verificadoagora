@@ -66,8 +66,11 @@ em 11/09/2026, depois da pesquisa.
   - o critério é preço por dose + marca/loja oficial + mais vendidos.
 - **Como funciona:** o guia em `guias.json` ganha `vitrine: { chamada }`.
   Com isso, `idsEmGuiaDeVitrine()` (`src/lib/guias.ts`) tira os `meli_id`
-  dos perfis da grade, e `card-guia.tsx` (mosaico de 4 fotos, anel âmbar)
-  entra primeiro na grade, só no filtro "Tudo". Os cliques no card levam
+  dos perfis da grade, e `card-guia.tsx` (banner largo no escuro da marca, anel âmbar,
+  3 fotos grandes no celular) entra primeiro na grade, só no filtro "Tudo",
+  e também na `/entrar`, logo depois da busca (link do Instagram).
+  A prévia do link (WhatsApp) é `/capa-guia/{slug}` (1200×630, fotos dos
+  produtos, sem preço), ligada no `openGraph.images` de todo guia de faixa. Os cliques no card levam
   `data-onde="card-guia"`. **Tema novo = guia novo com `vitrine`**; não
   precisa de código.
 - **Marcador `{custo}`:** o perfil ganha `rende: { gramas, de }`, e o

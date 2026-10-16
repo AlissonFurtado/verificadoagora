@@ -74,7 +74,15 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     title: guia.titulo,
     description: descricao,
     alternates: { canonical: `/guia/${guia.slug}` },
-    openGraph: { title: guia.titulo, description: descricao, type: 'article' },
+    // A prévia do link (WhatsApp, Instagram) mostra as fotos dos produtos do
+    // guia: sem isso ela vinha só com o título (15/10/2026).
+    openGraph: {
+      title: guia.titulo,
+      description: descricao,
+      type: 'article',
+      images: [{ url: `/capa-guia/${guia.slug}`, width: 1200, height: 630, alt: guia.titulo }],
+    },
+    twitter: { card: 'summary_large_image', images: [`/capa-guia/${guia.slug}`] },
   };
 }
 

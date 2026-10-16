@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { lerCatalogo, lerHistorico } from '@/lib/catalogo';
+import { lerCatalogo, lerGuias, lerHistorico } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
 import { acharQuedas, type Queda } from '@/lib/quedas';
 import { descreverConferencia } from '@/lib/relogio';
@@ -11,6 +11,7 @@ import { caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { SeloDeConferencia } from '../selo-de-conferencia';
 import { BarraDupla } from './barra-dupla';
 import { BuscaRapida, type ItemDaBusca } from './busca-rapida';
+import { CardGuia } from '../card-guia';
 
 export const revalidate = 3600;
 
@@ -128,6 +129,19 @@ export default function PaginaDeEntrada() {
     incluir({ produto, motivo: `${produto.desconto_percentual}% OFF`, prova: '', medido: false });
   }
 
+  // O guia de vitrine (suplementos, 15/10/2026) também entra aqui, logo depois
+  // da busca: é o destino do link do Instagram, e sem isso quem vinha de lá
+  // não achava o guia. Mesmo banner da home.
+  const cardsDeGuia = lerGuias()
+    .filter((g) => g.vitrine)
+    .map((g) => {
+      const doGuia = g.perfis
+        .map((perfil) => produtos.find((p) => p.meli_id === perfil.meli_id))
+        .filter((p): p is Produto => p !== undefined);
+      return doGuia.length > 0 ? <CardGuia key={g.slug} guia={g} produtos={doGuia} /> : null;
+    })
+    .filter((c) => c !== null);
+
   const [principal, ...resto] = destaques;
   const carrossel = resto.slice(0, 8);
 
@@ -202,6 +216,8 @@ export default function PaginaDeEntrada() {
         </div>
 
         <BuscaRapida itens={itensDaBusca} />
+
+        {cardsDeGuia}
 
         {principal && (
           <section id="destaques" aria-labelledby="titulo-dos-destaques" className="scroll-mt-4 min-w-0">
