@@ -117,8 +117,14 @@ export default function Home() {
             )}
           </div>
 
-          <h1 className="text-3xl font-black tracking-tight text-white sm:text-5xl">
-            Verificado <span className="text-marca-claro">Agora</span>
+          {/* A Lupita, pequena, ao lado do nome (15/10/2026, pedido dele: capa
+              discreta, sem o "✓" de verificado). */}
+          <h1 className="flex items-center gap-2 text-3xl font-black tracking-tight text-white sm:gap-3 sm:text-5xl">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/lupita.svg" alt="" width={36} height={44} className="h-11 w-9 shrink-0 sm:h-16 sm:w-[52px]" />
+            <span>
+              Verificado <span className="text-marca-claro">Agora</span>
+            </span>
           </h1>
           {/* Some no celular: no espaço que ele ocupa cabe metade de um card,
               e o título já diz o que a página é. */}
@@ -136,7 +142,7 @@ export default function Home() {
               <div key={titulo} className="flex min-w-0 items-baseline gap-1.5">
                 <dt className="font-bold text-sky-50">
                   <span aria-hidden="true" className="mr-1 font-black text-corte">
-                    ✓
+                    •
                   </span>
                   {titulo}
                 </dt>

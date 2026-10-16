@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og';
+import { LUPITA_SVG, comoImagem } from '@/lib/lupita';
 
 export const runtime = 'edge';
 export const size = { width: 1200, height: 630 };
@@ -7,11 +8,11 @@ export const contentType = 'image/png';
 // desatualizado até 10/09/2026, dizendo "achadinhos de tech" — o posicionamento
 // de antes do brief de celulares.
 export const alt =
-  'Verificado Agora — celulares intermediários com o preço conferido todo dia';
+  'Verificado Agora — tecnologia, beleza e casa com o preço conferido todo dia';
 
 /**
  * Capa do link quando ele é colado no Instagram, no WhatsApp ou no X.
- * O "✓" é desenhado com bordas: a fonte padrão do next/og não tem o glifo.
+ * Leva a Lupita no lugar do "✓" desde 15/10/2026 (ver `src/lib/lupita.ts`).
  */
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -29,21 +30,12 @@ export default function OpengraphImage() {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <div
-            style={{
-              width: 40,
-              height: 76,
-              marginRight: 36,
-              marginTop: -18,
-              borderRight: '16px solid #4ade80',
-              borderBottom: '16px solid #4ade80',
-              transform: 'rotate(45deg)',
-            }}
-          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={comoImagem(LUPITA_SVG)} width={120} height={147} alt="" style={{ marginRight: 32 }} />
           <div style={{ display: 'flex', fontSize: 84, fontWeight: 700 }}>Verificado Agora</div>
         </div>
         <div style={{ display: 'flex', marginTop: 24, fontSize: 40, color: '#cbd5e1' }}>
-          Celulares intermediários com o preço conferido todo dia
+          Tecnologia, beleza e casa com o preço conferido todo dia
         </div>
         <div style={{ display: 'flex', marginTop: 48, fontSize: 28, color: '#94a3b8' }}>
           Preço conferido no dia · links de afiliado

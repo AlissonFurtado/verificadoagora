@@ -72,12 +72,18 @@ em 11/09/2026, depois da pesquisa.
   - Como não há ficha de fabricante, os produtos entram com `ficha: {}`.
   - O robô lê o `results[0]`: confira amanhã se os 7 seguem `disponivel`
     e com preço perto do cadastrado.
-- 🔴 **Pendente (pedido dele em 15/10): a Lupita como capa discreta do site
-  e tirar o "✓ verificado" da imagem do site**, por causa de strike na Meta.
-  - A Lupita mora em `github.com/AlissonFurtado/afdesousa-personagens`
-    (público, tag `v0.2.0`, `src/Lupita.tsx`). É uma coruja verde com uma
-    lupa, em SVG para React.
-  - Perguntar a ele onde ela entra e o que substitui o ✓ antes de mexer.
+- 🟢 **A Lupita substituiu o "✓ verificado"** (pedido dele em 15/10, por
+  causa de strike na Meta). Escolhas dele: nos 3 lugares (favicon, capa do
+  link `opengraph-image.tsx` e ao lado do título no topo da home); os selos
+  "✓ menor preço" ficam. Os ✓ das garantias do topo viraram "•".
+  - O desenho vem de `github.com/AlissonFurtado/afdesousa-personagens`
+    (tag `v0.2.0`, pose `parado(0)`). Ficou congelado em SVG em
+    `src/lib/lupita.ts` (o `next/og` usa como data URI) e em
+    `public/lupita.svg` (a home).
+  - ⚠️ O modo automático bloqueou "código de fora" ao copiar do repo, e ele
+    liberou no chat. Se o desenho mudar, gere o SVG de novo.
+  - A capa antiga do link segue em cache no WhatsApp e no Instagram por um
+    tempo.
 
 ## Onde paramos — 15/10/2026 (guia-card de suplementos)
 
