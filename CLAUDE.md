@@ -55,6 +55,26 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 16/10/2026 (guia de utensílios de cozinha)
+
+- 🟢 **Terceiro guia-card: `/guia/utensilios-de-cozinha`**, ids 74 a 83,
+  categoria `Casa`, pedido dele ("uns 10 utensílios… que facilitam").
+  - Os itens: facas Tramontina Plenus, tábua Chef D, Multi Cortador Keita,
+    kit de silicone Aristus, bowls Electrolux, afiador Tramontina Profio,
+    ralador Tramontina, 2 tesouras Tramontina, espremedor de alho Mr. Ogro e
+    processador manual Wellmix.
+  - Fonte: mais vendidos `MLB436273` (Utensílios de Preparação) e
+    subcategorias, mais a busca "Tramontina" quando o topo era de marca sem
+    nome.
+  - Reprovado: o mandolin profissional `MLB27072400` (vendedor `wtzbrmqc` e
+    "de" de R$ 368).
+  - Erros de anúncio escritos na `analise`: a ficha do Keita diz "não tem
+    lâmina", e a do afiador diz "pedra/cerâmica" quando são rolos
+    diamantados.
+- 🔴 **Indexação dos 11 novos (guia + 10 fichas) NÃO pedida.** A cota de
+  16/10 já tinha acabado. Somados aos 7 de 17/10, são 18: isso dá 2 dias de
+  cota. Pedir o guia primeiro.
+
 ## Indexação de 16/10/2026
 
 - 🟢 **Pedidos aceitos (11, a cota cortou no 12º):**

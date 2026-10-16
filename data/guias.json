@@ -849,6 +849,155 @@
         }
       ],
       "escrito_em": "2026-10-15"
+    },
+    {
+      "slug": "utensilios-de-cozinha",
+      "titulo": "Utensílios de cozinha: 10 achados que facilitam o dia a dia",
+      "resumo": "Facas, tábua, fatiador, ralador e os utensílios mais vendidos do Mercado Livre para cozinhar com menos trabalho, com o preço conferido todo dia.",
+      "descricao": "Jogo de facas, tábua de corte, fatiador, ralador, tesoura, afiador, espremedor de alho e mais: os utensílios de cozinha mais vendidos, cada um com o caso em que não vale a pena e o preço conferido todo dia.",
+      "vitrine": {
+        "chamada": "Facas, tábua, fatiador, ralador e mais: os mais vendidos para cozinhar com menos trabalho."
+      },
+      "perfis": [
+        {
+          "chave": "facas",
+          "perfil": "Quero um jogo de facas para o dia a dia",
+          "aparelho": "Jogo de Facas Tramontina Plenus 6 Peças com Suporte",
+          "meli_id": "MLB27490685",
+          "porque": [
+            "O mais vendido entre os jogos de facas: mais de 50 mil unidades.",
+            "Lâmina inox, cabo de polipropileno e suporte de madeira.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não é faca de chef forjada: quem cozinha muito tira mais de uma faca boa comprada sozinha.",
+          "ficha": {}
+        },
+        {
+          "chave": "tabua",
+          "perfil": "Quero uma tábua fácil de limpar",
+          "aparelho": "Tábua de Corte Chef D Polipropileno 30 x 20 cm",
+          "meli_id": "MLB67938813",
+          "porque": [
+            "Polipropileno não absorve líquido e vai à lava-louças.",
+            "Antiderrapante, com canaleta para o caldo da carne.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Fica pequena para frango inteiro ou churrasco.",
+          "ficha": {}
+        },
+        {
+          "chave": "fatiador",
+          "perfil": "Quero fatiar e ralar legume rápido",
+          "aparelho": "Multi Cortador Keita 5 em 1 Fatiador e Ralador",
+          "meli_id": "MLB27377854",
+          "porque": [
+            "5 lâminas intercambiáveis, com protetor de mão.",
+            "Encaixa em cima da tigela.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Para quem corta pouco por dia, uma boa faca resolve sem mais um utensílio para lavar. E use sempre o protetor.",
+          "ficha": {}
+        },
+        {
+          "chave": "utensilios",
+          "perfil": "Quero colheres que não risquem a panela",
+          "aparelho": "Kit 12 Utensílios de Silicone Aristus com Cabo de Madeira",
+          "meli_id": "MLB57662272",
+          "porque": [
+            "11 utensílios de silicone e o copo para guardar.",
+            "Aguenta até 220 °C, segundo o anúncio.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "O cabo de madeira não vai à lava-louças.",
+          "ficha": {}
+        },
+        {
+          "chave": "bowls",
+          "perfil": "Quero tigelas para preparar e guardar",
+          "aparelho": "Kit 3 Bowls Electrolux de Aço Inox com Tampa",
+          "meli_id": "MLB25125996",
+          "porque": [
+            "O mais vendido da lista: mais de 100 mil unidades.",
+            "Três tamanhos, com tampa, para geladeira e freezer.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não vai ao micro-ondas: é inox.",
+          "ficha": {}
+        },
+        {
+          "chave": "afiador",
+          "perfil": "Minhas facas perderam o corte",
+          "aparelho": "Afiador de Facas Tramontina Profio de Mesa",
+          "meli_id": "MLB40761902",
+          "porque": [
+            "Rolos diamantados, sem precisar de técnica.",
+            "Loja oficial na página.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não serve para faca de serra nem tesoura serrilhada.",
+          "ficha": {}
+        },
+        {
+          "chave": "ralador",
+          "perfil": "Quero um ralador que não enferruje",
+          "aparelho": "Ralador Tramontina Utilitá em Aço Inox",
+          "meli_id": "MLB24650032",
+          "porque": [
+            "Aço inox com alça, vai à lava-louças.",
+            "Queijo, legume e casca de limão.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "É de uma face: para ralar muito de uma vez, o de quatro faces cansa menos.",
+          "ficha": {}
+        },
+        {
+          "chave": "tesoura",
+          "perfil": "Quero uma tesoura só para a cozinha",
+          "aparelho": "Kit 2 Tesouras de Cozinha Tramontina em Aço Inox",
+          "meli_id": "MLB29485786",
+          "porque": [
+            "Duas tesouras: uma fica só para alimento.",
+            "Lâmina inox de 22,4 cm.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Para osso de frango, uma tesoura de aves, com mola, é mais forte.",
+          "ficha": {}
+        },
+        {
+          "chave": "alho",
+          "perfil": "Uso alho todo dia",
+          "aparelho": "Espremedor de Alho Mr. Ogro em Aço Inox",
+          "meli_id": "MLB38614269",
+          "porque": [
+            "Todo de inox, sem pintura para descascar.",
+            "Abre 160° para limpar.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Ele amassa: quem gosta de alho em lâmina continua na faca.",
+          "ficha": {}
+        },
+        {
+          "chave": "picador",
+          "perfil": "Choro cortando cebola",
+          "aparelho": "Processador Manual Wellmix 500 mL com 3 Lâminas",
+          "meli_id": "MLB67835314",
+          "porque": [
+            "Pica puxando a cordinha, sem tomada.",
+            "O mais vendido do tipo: mais de 10 mil unidades.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "500 mL é pouco para refogado grande, e não vai à lava-louças.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Se for comprar pouco, comece pelo que se usa todo dia: um jogo de facas, uma tábua que limpa fácil e utensílios de silicone que não riscam a panela. Fatiador, picador e espremedor economizam tempo para quem cozinha muito; para quem cozinha pouco, viram gaveta cheia.",
+      "fontes": [
+        {
+          "titulo": "Mercado Livre: mais vendidos em Cozinha e Utensílios de Preparação (conferido em 16/10/2026)",
+          "url": "https://www.mercadolivre.com.br/mais-vendidos/MLB436273"
+        }
+      ],
+      "escrito_em": "2026-10-16"
     }
   ]
 }
