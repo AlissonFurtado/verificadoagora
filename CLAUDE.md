@@ -55,6 +55,21 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Indexação de 17/10/2026
+
+- 🟢 **Pedidos aceitos (11, a cota cortou no 12º):**
+  - os guias `presentes-friends` e `utensilios-de-cozinha`;
+  - os 7 que tinham ficado de 16/10 (splash Obsessed, Integralmédica,
+    Anabolic, Hydracare, Myskin, lip tint, demaquilante);
+  - facas Tramontina e bowls Electrolux.
+- 🔴 **Pedir em 18/10 e 19/10 (18 fichas, ~11 por dia):**
+  - as 8 de cozinha que faltam: tábua `mlb67938813`, Keita `mlb27377854`,
+    Aristus `mlb57662272`, afiador `mlb40761902`, ralador `mlb24650032`,
+    tesouras `mlb29485786`, alho `mlb38614269`, Wellmix `mlb67835314`;
+  - as 10 de Friends (ids 84 a 93), começando pelo Funko do Joey
+    `mlb54150642`, onde a cota cortou.
+- Hoje cada pedido levou ~1 min (ontem, ~15 s).
+
 ## Onde paramos — 17/10/2026 (guia de presentes de Friends)
 
 - 🟢 **Quarto guia-card: `/guia/presentes-friends`**, ids 84 a 93,
@@ -90,7 +105,7 @@ em 11/09/2026, depois da pesquisa.
   - Erros de anúncio escritos na `analise`: a ficha do Keita diz "não tem
     lâmina", e a do afiador diz "pedra/cerâmica" quando são rolos
     diamantados.
-- 🔴 **Indexação dos 11 novos (guia + 10 fichas) NÃO pedida.** A cota de
+- 🟡 (parcial em 17/10, ver acima) **Indexação dos 11 novos (guia + 10 fichas) NÃO pedida.** A cota de
   16/10 já tinha acabado. Somados aos 7 de 17/10, são 18: isso dá 2 dias de
   cota. Pedir o guia primeiro.
 
