@@ -998,6 +998,155 @@
         }
       ],
       "escrito_em": "2026-10-16"
+    },
+    {
+      "slug": "presentes-friends",
+      "titulo": "Presentes de Friends: Funko, canecas do Central Perk e mais",
+      "resumo": "Os produtos de Friends que mais vendem no Mercado Livre, só de marcas licenciadas: Funko, canecas e almofada do Central Perk, luminária do sofá e boneco do Joey.",
+      "descricao": "Funko da Rachel, Phoebe e Joey, canecas e almofada do Central Perk e a luminária do sofá laranja: presentes de Friends de marcas licenciadas, com o preço conferido todo dia e o cuidado com falsificação.",
+      "vitrine": {
+        "chamada": "Funko, canecas do Central Perk e a luminária do sofá: presentes de Friends só de marcas licenciadas."
+      },
+      "perfis": [
+        {
+          "chave": "joey-funko",
+          "perfil": "Quero o Joey mais famoso",
+          "aparelho": "Funko Pop! Sayings Friends Joey \"How You Doin'?\"",
+          "meli_id": "MLB54150642",
+          "porque": [
+            "O bordão \"How you doin'?\" na base.",
+            "Distribuição Candide e registro do Inmetro, segundo o anúncio.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Os Funko de Friends saíram em linhas diferentes: os seis amigos não formam um conjunto igual.",
+          "ficha": {}
+        },
+        {
+          "chave": "phoebe",
+          "perfil": "Quero uma cena marcante",
+          "aparelho": "Funko Pop! Friends Phoebe de Vestido Amarelo",
+          "meli_id": "MLB43201394",
+          "porque": [
+            "O vestido amarelo com o enfeite de Natal do episódio do museu.",
+            "Nota 5,0.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Para quem não coleciona, uma caneca é presente mais útil.",
+          "ficha": {}
+        },
+        {
+          "chave": "rachel-rosa",
+          "perfil": "Sou fã da Rachel",
+          "aparelho": "Funko Pop! Friends Rachel Green de Vestido Rosa #1065",
+          "meli_id": "MLB19551410",
+          "porque": [
+            "O vestido rosa de madrinha.",
+            "Linha Pop! TV, cerca de 10 cm.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Se a pessoa já tem uma Rachel, confira o número na caixa.",
+          "ficha": {}
+        },
+        {
+          "chave": "rachel-703",
+          "perfil": "Quero a Rachel clássica",
+          "aparelho": "Funko Pop! Friends Rachel Green #703",
+          "meli_id": "MLB25898061",
+          "porque": [
+            "O visual do dia a dia da Rachel.",
+            "Mais de 100 vendas.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "A ficha do anúncio traz um número diferente do título: confira a foto da caixa.",
+          "ficha": {}
+        },
+        {
+          "chave": "caneca",
+          "perfil": "Quero um presente de uso diário",
+          "aparelho": "Caneca Buck Central Perk Friends Zona Criativa 400 mL",
+          "meli_id": "MLB68323792",
+          "porque": [
+            "O logo do Central Perk em cerâmica.",
+            "Zona Criativa, fabricante de licenciados.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não vai ao micro-ondas nem à lava-louças.",
+          "ficha": {}
+        },
+        {
+          "chave": "caneca-grande",
+          "perfil": "Tomo café em caneca grande",
+          "aparelho": "Caneca Moma Friends Zona Criativa 500 mL",
+          "meli_id": "MLB45729239",
+          "porque": [
+            "500 mL, estampa em relevo.",
+            "Nota 5,0.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Também não vai ao micro-ondas.",
+          "ficha": {}
+        },
+        {
+          "chave": "cha",
+          "perfil": "Tomo chá",
+          "aparelho": "Caneca com Infusor Central Perk Friends 400 mL",
+          "meli_id": "MLB67930819",
+          "porque": [
+            "Vem com infusor de silicone para chá.",
+            "O logo do Central Perk.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "É a nota mais baixa da lista: leia as opiniões antes.",
+          "ficha": {}
+        },
+        {
+          "chave": "almofada",
+          "perfil": "Quero enfeitar o sofá",
+          "aparelho": "Almofada Central Perk Friends Zona Criativa",
+          "meli_id": "MLB22717894",
+          "porque": [
+            "No formato do logo do Central Perk.",
+            "Capa aveludada.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "É decorativa, não almofada de apoio.",
+          "ficha": {}
+        },
+        {
+          "chave": "luminaria",
+          "perfil": "Quero o presente mais vistoso",
+          "aparelho": "Luminária Sofá Laranja Friends com Moldura Amarela",
+          "meli_id": "MLB40503993",
+          "porque": [
+            "O sofá laranja com a moldura amarela da porta.",
+            "27,5 cm de largura.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "A lâmpada não vem junto.",
+          "ficha": {}
+        },
+        {
+          "chave": "joey-lider",
+          "perfil": "Quero um boneco articulado",
+          "aparelho": "Boneco Joey Friends Fandom Box Líder",
+          "meli_id": "MLB25566537",
+          "porque": [
+            "Articulado, 11 cm.",
+            "Loja oficial da Líder Brinquedos.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Para coleção de estante, o Funko é o mais reconhecido.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Para presente rápido, a caneca do Central Perk é a escolha mais segura: todo fã reconhece o logo e usa todo dia. Para colecionador, o Funko do Joey com o \"How you doin'?\". Em qualquer item de Friends, prefira marca licenciada (Funko, Zona Criativa, Líder) e desconfie de preço muito abaixo dos outros vendedores: estampa e boneco de série são dos produtos mais falsificados.",
+      "fontes": [
+        {
+          "titulo": "Mercado Livre: busca por produtos de Friends e páginas de catálogo (conferido em 17/10/2026)",
+          "url": "https://lista.mercadolivre.com.br/friends-serie"
+        }
+      ],
+      "escrito_em": "2026-10-17"
     }
   ]
 }

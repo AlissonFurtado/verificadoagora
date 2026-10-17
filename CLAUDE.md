@@ -55,6 +55,25 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 17/10/2026 (guia de presentes de Friends)
+
+- 🟢 **Quarto guia-card: `/guia/presentes-friends`**, ids 84 a 93,
+  categoria nova `Presentes`. Pedido dele: "lista de produtos da série
+  Friends".
+  - **Regra aplicada: só marca licenciada.** Entraram Funko (distribuição
+    Candide), Zona Criativa (canecas e almofada), Usare (luminária com a
+    Warner no título) e Líder Fandom Box (loja oficial).
+  - Ficaram de fora: canecas de estampa genérica (JF Brindes, JPS INFO),
+    porta-chaves de MDF, boxes de DVD (risco de pirataria), o LEGO 21319
+    (fora de linha, R$ 1.999 de revenda) e o Funko do Joey de Super-homem
+    (vendedor `GR2025…`).
+  - Friends vende pouco no Meli: os itens têm de 25 a 100+ vendas.
+  - Erros de anúncio escritos na `analise`: a ficha da Rachel #703 traz
+    "5963" e 500 g; a da Phoebe diz 15,88 cm, mas a descrição diz 11 cm.
+- ⚠️ **A home agora tem 4 banners de guia antes do primeiro produto.**
+  Perguntar a ele se quer agrupar os banners (ex.: uma fileira rolável)
+  antes de entrar o 5º.
+
 ## Onde paramos — 16/10/2026 (guia de utensílios de cozinha)
 
 - 🟢 **Terceiro guia-card: `/guia/utensilios-de-cozinha`**, ids 74 a 83,
