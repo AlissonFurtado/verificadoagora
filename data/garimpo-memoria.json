@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-18",
+  "atualizado_em": "2026-10-19",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1197,10 +1197,10 @@
       "vezes": 1
     },
     "MLB50614198": {
-      "sugerido_em": "2026-10-16",
+      "sugerido_em": "2026-10-19",
       "familia": "Pedal LCK Comércio e Importação Fisioterapia e Fitness Bike Ergométrica com visor para braços, pernas",
-      "preco_sugerido": 128.52,
-      "vezes": 1
+      "preco_sugerido": 107.24,
+      "vezes": 2
     },
     "MLB57365312": {
       "sugerido_em": "2026-10-16",
@@ -1404,6 +1404,36 @@
       "sugerido_em": "2026-10-18",
       "familia": "Kit Limpeza e Hidratação CH-01 + OL-01 + GL-02 Principia Dermocosméticos +14 anos",
       "preco_sugerido": 117.6,
+      "vezes": 1
+    },
+    "MLB65153818": {
+      "sugerido_em": "2026-10-19",
+      "familia": "Smartwatch Garmin Forerunner 165 010-02863-20 caixa de 43mm",
+      "preco_sugerido": 1499,
+      "vezes": 1
+    },
+    "MLB56511596": {
+      "sugerido_em": "2026-10-19",
+      "familia": "Controle joystick FGB CROWLEY 103 Para Ps2",
+      "preco_sugerido": 54.9,
+      "vezes": 1
+    },
+    "MLB27282051": {
+      "sugerido_em": "2026-10-19",
+      "familia": "Pneu de bicicleta Levorin Eruption 2.10 de 29\" de diâmetro",
+      "preco_sugerido": 110.46,
+      "vezes": 1
+    },
+    "MLB77835608": {
+      "sugerido_em": "2026-10-19",
+      "familia": "Panela elétrica de vapor Micgeek Cozedor A Vapor Cozidor Cozedor Eletrico Rapido",
+      "preco_sugerido": 34.9,
+      "vezes": 1
+    },
+    "MLB53998755": {
+      "sugerido_em": "2026-10-19",
+      "familia": "Coolcold Base Refrigerada 2 Coolers Base Refrigerada 2 Coolers",
+      "preco_sugerido": 47.19,
       "vezes": 1
     }
   }
