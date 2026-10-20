@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-19",
+  "atualizado_em": "2026-10-20",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1434,6 +1434,60 @@
       "sugerido_em": "2026-10-19",
       "familia": "Coolcold Base Refrigerada 2 Coolers Base Refrigerada 2 Coolers",
       "preco_sugerido": 47.19,
+      "vezes": 1
+    },
+    "MLB62974231": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Smartwatch Bettdow FB050 tela de 1.43\"",
+      "preco_sugerido": 210,
+      "vezes": 1
+    },
+    "MLB65806827": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Bem Casa Cobre leito",
+      "preco_sugerido": 90.89,
+      "vezes": 1
+    },
+    "MLB16016316": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Batedeira com pedestal Mondial Prática B-44-B B-44-B",
+      "preco_sugerido": 75.94,
+      "vezes": 1
+    },
+    "MLB29902763": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Monitor Fmaxx com tela de 19\"",
+      "preco_sugerido": 199.9,
+      "vezes": 1
+    },
+    "MLB77148888": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Moto G56 5G Dual SIM",
+      "preco_sugerido": 1442.27,
+      "vezes": 1
+    },
+    "MLB28263665": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Bicicleta ergométrica BrusFit Spinning X11",
+      "preco_sugerido": 429.9,
+      "vezes": 1
+    },
+    "MLB27078749": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Consul CIX06",
+      "preco_sugerido": 70.19,
+      "vezes": 1
+    },
+    "MLB53816127": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Microfones A'Gold MCF-38D LAVALIER LAPELA PRETO",
+      "preco_sugerido": 54,
+      "vezes": 2
+    },
+    "MLB55574359": {
+      "sugerido_em": "2026-10-20",
+      "familia": "Smartwatch Haylou Solar Solar Ultra (LS23) tela de 1.43\"",
+      "preco_sugerido": 329,
       "vezes": 1
     }
   }
