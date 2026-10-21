@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-20",
+  "atualizado_em": "2026-10-21",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1489,6 +1489,36 @@
       "familia": "Smartwatch Haylou Solar Solar Ultra (LS23) tela de 1.43\"",
       "preco_sugerido": 329,
       "vezes": 1
+    },
+    "MLB51873735": {
+      "sugerido_em": "2026-10-21",
+      "familia": "Monitor ViewPro com tela de 21.5\" 60Hz e resolução Full HD",
+      "preco_sugerido": 290,
+      "vezes": 1
+    },
+    "MLB49652036": {
+      "sugerido_em": "2026-10-21",
+      "familia": "Secador de cabelo PhilcoSecadores de Cabelo PSC3500",
+      "preco_sugerido": 394,
+      "vezes": 1
+    },
+    "MLB75466404": {
+      "sugerido_em": "2026-10-21",
+      "familia": "Chaleira elétrica Genérica Chaleira Elétrica Inox 1.8L",
+      "preco_sugerido": 42.9,
+      "vezes": 1
+    },
+    "MLB56245248": {
+      "sugerido_em": "2026-10-21",
+      "familia": "Kit de teclado e mouse Mega digital eletronicos Teclado Mouse sem fio LEY-171",
+      "preco_sugerido": 67.49,
+      "vezes": 1
+    },
+    "MLB66452309": {
+      "sugerido_em": "2026-10-21",
+      "familia": "Papel Higiênico Folha Dupla 30m L24p22 Personal",
+      "preco_sugerido": 30.09,
+      "vezes": 2
     }
   }
 }
