@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-21",
+  "atualizado_em": "2026-10-22",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -651,10 +651,10 @@
       "vezes": 1
     },
     "MLB40656539": {
-      "sugerido_em": "2026-09-19",
+      "sugerido_em": "2026-10-22",
       "familia": "Starlink Mini omnidirecional",
-      "preco_sugerido": 495,
-      "vezes": 1
+      "preco_sugerido": 399,
+      "vezes": 2
     },
     "MLB47900489": {
       "sugerido_em": "2026-10-09",
@@ -1519,6 +1519,30 @@
       "familia": "Papel Higiênico Folha Dupla 30m L24p22 Personal",
       "preco_sugerido": 30.09,
       "vezes": 2
+    },
+    "MLB13586527": {
+      "sugerido_em": "2026-10-22",
+      "familia": "Cartão Micro Sd 32gb 16tbw Western Digital Purple",
+      "preco_sugerido": 84.05,
+      "vezes": 1
+    },
+    "MLB28465181": {
+      "sugerido_em": "2026-10-22",
+      "familia": "Impressora térmica monocromática Niimbot D110 D110",
+      "preco_sugerido": 117.47,
+      "vezes": 1
+    },
+    "MLB67604701": {
+      "sugerido_em": "2026-10-22",
+      "familia": "Compressor de ar a bateria portátil DeckCasa CZK-3668",
+      "preco_sugerido": 55.48,
+      "vezes": 1
+    },
+    "MLB13409956": {
+      "sugerido_em": "2026-10-22",
+      "familia": "Chaleira elétrica Genérica Genérico 182F 1.8L",
+      "preco_sugerido": 39.38,
+      "vezes": 1
     }
   }
 }
