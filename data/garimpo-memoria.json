@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-22",
+  "atualizado_em": "2026-10-23",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1543,6 +1543,12 @@
       "familia": "Chaleira elétrica Genérica Genérico 182F 1.8L",
       "preco_sugerido": 39.38,
       "vezes": 1
+    },
+    "MLB34016199": {
+      "sugerido_em": "2026-10-23",
+      "familia": "Microfones Hollyland Lark m2 Lark M2 Combo Lapela sem fio",
+      "preco_sugerido": 598.5,
+      "vezes": 2
     }
   }
 }
