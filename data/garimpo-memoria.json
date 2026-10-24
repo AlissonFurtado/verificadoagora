@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-23",
+  "atualizado_em": "2026-10-24",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1549,6 +1549,30 @@
       "familia": "Microfones Hollyland Lark m2 Lark M2 Combo Lapela sem fio",
       "preco_sugerido": 598.5,
       "vezes": 2
+    },
+    "MLB34075437": {
+      "sugerido_em": "2026-10-24",
+      "familia": "Lumi RL-16P Lm-2343",
+      "preco_sugerido": 103,
+      "vezes": 1
+    },
+    "MLB53979422": {
+      "sugerido_em": "2026-10-24",
+      "familia": "Microfones Kaidi Genérica KMF4-C Sem fio Omnidirecional",
+      "preco_sugerido": 49.97,
+      "vezes": 1
+    },
+    "MLB54110734": {
+      "sugerido_em": "2026-10-24",
+      "familia": "Apple Watch SE 3 Watch SE GPS caixa de 40mm",
+      "preco_sugerido": 1905,
+      "vezes": 1
+    },
+    "MLB25904875": {
+      "sugerido_em": "2026-10-24",
+      "familia": "Creme Cicaplast Baume B5+ La Roche-Posay Cicaplast Baume + dia/noite para todos os tipos de pele 3+ anos",
+      "preco_sugerido": 38.89,
+      "vezes": 1
     }
   }
 }
