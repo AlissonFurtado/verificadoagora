@@ -19,6 +19,15 @@ const COR_DA_CATEGORIA: Record<string, string> = {
   Games: '#be123c',
   Casa: '#ff6b00',
   Acessórios: '#0f766e',
+  // As de 25/10/2026, pedido dele ("dar cor a cada uma"). Todas com texto
+  // branco legível, e nenhuma é o azul ou o verde do Mercado Livre.
+  Informática: '#4338ca',
+  'Ar-condicionado': '#0e7490',
+  Esportes: '#4d7c0f',
+  Beleza: '#db2777',
+  Moda: '#a21caf',
+  Relógios: '#854d0e',
+  Presentes: '#0f172a',
 };
 
 /**
