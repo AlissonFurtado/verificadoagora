@@ -55,6 +55,29 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## 25/10/2026 (tarde): preços corrigidos e guias na linha do tempo
+
+- 🟢 **Guias de vitrine mudaram de lugar e de tamanho**, a pedido dele:
+  - entram na grade na posição da data `escrito_em`: depois dos produtos
+    mais novos, antes dos do mesmo dia. Calculado em `page.tsx` como
+    `posicao`, e `vitrine.tsx` intercala;
+  - no PC ocupam uma casa, como um produto (3 fotos + "+N", altura da
+    linha). Medido em 1280 px: guia 265 × 333, produto 265 × 493. No
+    celular continuam da largura da tela (~330 px de altura).
+- 🟢 **14 preços aplicados à mão**, depois de conferir a lista
+  `/p/{id}/s`:
+  - A57 R$ 2.036,69 (loja oficial Samsung) e creatina R$ 47,90 (Soldiers);
+  - aplicado o valor do robô onde o vendedor era sério: Wap, Realme, TCL
+    9k, micro-ondas, Basic Whey, Myskin, facas, ralador, almofada e Joey
+    Líder;
+  - mantido o nacional onde o robô viu importado: Roku R$ 289,90
+    (era 249,90) e DualSense R$ 459;
+  - não aplicado: Phoebe (conta `CF2025…`, 0 vendas) e Anthelios 80 (o
+    site já mostra a loja oficial).
+  - O ponto de 25/10 do `historico.json` foi corrigido junto.
+  - ⚠️ Os branches `robo/precos-2026-10-15` a `-25` seguem abertos (PRs
+    velhos, **não mergear**). Fechar e apagar.
+
 ## Onde paramos — 25/10/2026 (fila do garimpo publicada)
 
 - 🟢 **"Poste o que está na fila" = a fila do GARIMPO**, não o canal nem o
@@ -87,8 +110,7 @@ em 11/09/2026, depois da pesquisa.
   - a **creatina "menor preço" a R$ 43** vem de `GOGU4775453`, quando a
     Soldiers cobra R$ 47,90.
   - Os dois preços da vitrine seguem errados.
-- 🔴 **O robô deixou 14 suspeitos em 25/10 e 12 em 24/10**, não
-  conferidos.
+- 🟢 (conferidos à tarde, ver acima) **O robô deixou 14 suspeitos em 25/10 e 12 em 24/10**.
 - **Indexação de 25/10:** 11 pedidos aceitos, todos fichas novas; a cota
   cortou no 12º. 🔴 **Falta pedir:**
   - liquidificador Mondial, sanduicheira, Hidrabene, Principia e Aiwa;
@@ -211,8 +233,9 @@ em 11/09/2026, depois da pesquisa.
   - o critério é preço por dose + marca/loja oficial + mais vendidos.
 - **Como funciona:** o guia em `guias.json` ganha `vitrine: { chamada }`.
   Com isso, `idsEmGuiaDeVitrine()` (`src/lib/guias.ts`) tira os `meli_id`
-  dos perfis da grade, e `card-guia.tsx` (banner largo no escuro da marca, anel âmbar,
-  3 fotos grandes no celular) entra primeiro na grade, só no filtro "Tudo",
+  dos perfis da grade, e `card-guia.tsx` (escuro da marca, anel âmbar, 3 fotos + "+N") entra
+  na grade **do tamanho de um produto e na data `escrito_em`** (desde 25/10,
+  pedido dele: "linha do tempo, caindo um pouco"), só no filtro "Tudo",
   e também na `/entrar`, logo depois da busca (link do Instagram).
   A prévia do link (WhatsApp) é `/capa-guia/{slug}` (1200×630, fotos dos
   produtos, sem preço), ligada no `openGraph.images` de todo guia de faixa. Os cliques no card levam

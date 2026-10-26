@@ -75,8 +75,12 @@ export function Vitrine({
 }: {
   produtos: Produto[];
   cards: React.ReactNode[];
-  /** Cards de guia: vêm primeiro na grade, só com o filtro em "Tudo". */
-  destaques?: React.ReactNode[];
+  /**
+   * Cards de guia, só com o filtro em "Tudo". Cada um entra na linha do tempo
+   * da grade: `posicao` é quantos produtos vêm antes dele (os mais novos que o
+   * guia), então ele desce sozinho à medida que entram produtos.
+   */
+  destaques?: { card: React.ReactNode; posicao: number }[];
   /**
    * A categoria em que o site é especializado. Vem primeira e com peso
    * visual; as outras continuam clicáveis, mas em segundo plano — elas estão
@@ -133,14 +137,18 @@ export function Vitrine({
 
       {/* Uma coluna no celular: o card fica deitado e cabem três por tela. */}
       <div className="grid min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 xl:grid-cols-4">
-        {ativa === null &&
-          destaques.map((card, i) => (
-            // O banner do guia ocupa a linha inteira da grade.
-            <div key={`guia-${i}`} className="col-span-full min-w-0">
-              {card}
-            </div>
-          ))}
-        {produtos.map((produto, i) =>
+        {produtos.flatMap((produto, i) => [
+          // O guia ocupa uma casa da grade, como um produto, no ponto da linha
+          // do tempo em que foi escrito (pedido do Alisson em 25/10/2026).
+          ...(ativa === null
+            ? destaques
+                .filter((d) => d.posicao === i)
+                .map((d, j) => (
+                  <CardQueEntra key={`guia-${i}-${j}`} atraso={0}>
+                    {d.card}
+                  </CardQueEntra>
+                ))
+            : []),
           ativa === null || produto.categoria === ativa ? (
             // O atraso é a posição na linha, não no catálogo: assim a cascata
             // corre da esquerda pra direita a cada linha e o último card não
@@ -149,7 +157,15 @@ export function Vitrine({
               {cards[i]}
             </CardQueEntra>
           ) : null,
-        )}
+        ])}
+        {ativa === null &&
+          destaques
+            .filter((d) => d.posicao >= produtos.length)
+            .map((d, j) => (
+              <CardQueEntra key={`guia-fim-${j}`} atraso={0}>
+                {d.card}
+              </CardQueEntra>
+            ))}
       </div>
 
       {visiveis.length === 0 && (

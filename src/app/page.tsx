@@ -49,15 +49,20 @@ export default function Home() {
   // produtos aparecem dentro dele (decisão do Alisson em 15/10/2026).
   const emGuia = idsEmGuiaDeVitrine(guias);
   const produtos = ordenarPorRecencia(visiveis.filter((p) => !emGuia.has(p.meli_id)));
+  // Cada guia entra na grade na data em que foi escrito: depois dos produtos
+  // mais novos que ele, antes dos do mesmo dia. Assim ele desce sozinho à
+  // medida que entram produtos, em vez de ficar sempre no topo (25/10/2026).
   const cardsDeGuia = guias
     .filter((g) => g.vitrine)
-    .map((g) => {
+    .sort((a, b) => (a.escrito_em < b.escrito_em ? 1 : a.escrito_em > b.escrito_em ? -1 : 0))
+    .flatMap((g) => {
       const doGuia = g.perfis
         .map((perfil) => visiveis.find((p) => p.meli_id === perfil.meli_id))
         .filter((p): p is (typeof visiveis)[number] => p !== undefined);
-      return doGuia.length > 0 ? <CardGuia key={g.slug} guia={g} produtos={doGuia} /> : null;
-    })
-    .filter((c) => c !== null);
+      if (doGuia.length === 0) return [];
+      const posicao = produtos.filter((p) => p.data_adicionado > g.escrito_em).length;
+      return [{ card: <CardGuia key={g.slug} guia={g} produtos={doGuia} />, posicao }];
+    });
   const historico = lerHistorico();
   const comparativos = lerComparativos();
   // No topo ficam só três atalhos, numa linha. Eram todos os guias (17 botões
