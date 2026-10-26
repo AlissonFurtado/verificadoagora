@@ -89,6 +89,12 @@ em 11/09/2026, depois da pesquisa.
   - Os dois preços da vitrine seguem errados.
 - 🔴 **O robô deixou 14 suspeitos em 25/10 e 12 em 24/10**, não
   conferidos.
+- **Indexação de 25/10:** 11 pedidos aceitos, todos fichas novas; a cota
+  cortou no 12º. 🔴 **Falta pedir:**
+  - liquidificador Mondial, sanduicheira, Hidrabene, Principia e Aiwa;
+  - as 18 de 17/10 (8 de cozinha e 10 de Friends), que não sei se foram
+    pedidas entre 18 e 24/10 (não houve sessão).
+
 
 ## Indexação de 17/10/2026
 
