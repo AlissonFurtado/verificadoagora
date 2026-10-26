@@ -118,6 +118,9 @@ function DadosEstruturados({
       '@type': 'Product',
       name: aparelho,
       url: `${base}${caminhoDoProduto(produto)}`,
+      // Sem foto, o Google marca o item como inválido em "Listagens do
+      // comerciante" (visto nos 4 guias de vitrine em 25/10/2026).
+      image: produto.imagem || undefined,
       offers: {
         '@type': 'Offer',
         price: produto.preco_atual,
