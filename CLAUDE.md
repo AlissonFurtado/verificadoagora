@@ -55,6 +55,21 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## 25/10/2026 (noite): pendências mortas
+
+- 🟢 **As "cópias" sumiram.** A ficha do micro-ondas e o guia de controle da
+  BF estão "A página está indexada".
+  - ⚠️ A URL do HY320 é `projetor-hy320-full-hd-com-android-mlb48959123`
+    (a minha lista tinha outra). Ainda não foi reinspecionada.
+- 🟢 **Os 4 guias de vitrine estão indexados.** O "tem problemas" era
+  **Listagens do comerciante: N itens inválidos**, por falta de `image` no
+  `Product` de dentro do guia (e do comparativo). Corrigido (`abf45d8`).
+  O teste ao vivo do guia WePink deu 7 itens válidos.
+  - ⚠️ Toda página nova que declarar `Product` precisa de `image`.
+- 🔴 **Apagar os 11 branches `robo/precos-2026-10-15..25`**: o modo
+  automático **bloqueou** `git push origin --delete`. Ele roda o comando
+  (`!` no prompt) ou libera a permissão.
+
 ## 25/10/2026 (tarde): preços corrigidos e guias na linha do tempo
 
 - 🟢 **Guias de vitrine mudaram de lugar e de tamanho**, a pedido dele:
