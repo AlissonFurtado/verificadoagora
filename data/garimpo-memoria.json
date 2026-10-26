@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-25",
+  "atualizado_em": "2026-10-26",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1071,10 +1071,10 @@
       "vezes": 1
     },
     "MLB80271897": {
-      "sugerido_em": "2026-10-15",
+      "sugerido_em": "2026-10-26",
       "familia": "Samsung Relogios FIT3 tela de 1.6\"",
-      "preco_sugerido": 254,
-      "vezes": 1
+      "preco_sugerido": 214.48,
+      "vezes": 2
     },
     "MLB69794678": {
       "sugerido_em": "2026-10-15",
@@ -1584,6 +1584,42 @@
       "sugerido_em": "2026-10-25",
       "familia": "Mangueira Marqs Home Jardim Standard",
       "preco_sugerido": 91,
+      "vezes": 1
+    },
+    "MLB15578941": {
+      "sugerido_em": "2026-10-26",
+      "familia": "Liquidificador Philco PH900 PH900 3 L com jarra de acrílico - Inclui 1 acessórios",
+      "preco_sugerido": 109.9,
+      "vezes": 1
+    },
+    "MLB64322156": {
+      "sugerido_em": "2026-10-26",
+      "familia": "Philips OneBlade QP1425/10",
+      "preco_sugerido": 139.99,
+      "vezes": 1
+    },
+    "MLB64368352": {
+      "sugerido_em": "2026-10-26",
+      "familia": "Controle joystick sem fio Sony Interactive Entertainment DualSense Hyperpop",
+      "preco_sugerido": 409,
+      "vezes": 1
+    },
+    "MLB24075966": {
+      "sugerido_em": "2026-10-26",
+      "familia": "Crossover Taramps Processadores de Áudio Taramps Pro 2.4S",
+      "preco_sugerido": 159.08,
+      "vezes": 1
+    },
+    "MLB51166911": {
+      "sugerido_em": "2026-10-26",
+      "familia": "Mochila ciclismo Tumblr Mochila 3 litros hidratação 3L",
+      "preco_sugerido": 55.88,
+      "vezes": 1
+    },
+    "MLB57802650": {
+      "sugerido_em": "2026-10-26",
+      "familia": "Smartwatch Amazfit BIP Bip 6 tela de 1.97\"",
+      "preco_sugerido": 564,
       "vezes": 1
     }
   }
