@@ -8,6 +8,7 @@ import { CardProduto } from './card-produto';
 import { Vitrine } from './vitrine';
 import { CardGuia } from './card-guia';
 import { idsEmGuiaDeVitrine } from '@/lib/guias';
+import { produtosDosVideos } from '@/lib/videos';
 import { SeloDeConferencia } from './selo-de-conferencia';
 import { descreverConferencia } from '@/lib/relogio';
 
@@ -48,7 +49,14 @@ export default function Home() {
   // Produto de guia de vitrine sai da grade: o guia vira um card só, e os
   // produtos aparecem dentro dele (decisão do Alisson em 15/10/2026).
   const emGuia = idsEmGuiaDeVitrine(guias);
-  const produtos = ordenarPorRecencia(visiveis.filter((p) => !emGuia.has(p.meli_id)));
+  // Os produtos dos vídeos do Instagram abrem a grade (26/10/2026): quem vem
+  // do link da bio acha na hora o que viu. Saem da posição normal, sem repetir.
+  const dosVideos = produtosDosVideos(visiveis);
+  const idsDosVideos = new Set(dosVideos.map((p) => p.meli_id));
+  const resto = ordenarPorRecencia(
+    visiveis.filter((p) => !emGuia.has(p.meli_id) && !idsDosVideos.has(p.meli_id)),
+  );
+  const produtos = [...dosVideos, ...resto];
   // Cada guia entra na grade na data em que foi escrito: depois dos produtos
   // mais novos que ele, antes dos do mesmo dia. Assim ele desce sozinho à
   // medida que entram produtos, em vez de ficar sempre no topo (25/10/2026).
@@ -60,7 +68,8 @@ export default function Home() {
         .map((perfil) => visiveis.find((p) => p.meli_id === perfil.meli_id))
         .filter((p): p is (typeof visiveis)[number] => p !== undefined);
       if (doGuia.length === 0) return [];
-      const posicao = produtos.filter((p) => p.data_adicionado > g.escrito_em).length;
+      const posicao =
+        dosVideos.length + resto.filter((p) => p.data_adicionado > g.escrito_em).length;
       return [{ card: <CardGuia key={g.slug} guia={g} produtos={doGuia} />, posicao }];
     });
   const historico = lerHistorico();
@@ -206,6 +215,7 @@ export default function Home() {
               <CardProduto
                 key={produto.id}
                 produto={produto}
+                noVideo={idsDosVideos.has(produto.meli_id)}
                 selo={seloDeMenorPreco(historico.produtos[produto.meli_id], produto.preco_atual)}
                 tendencia={resumirTendencia(historico.produtos[produto.meli_id])}
                 comparativo={

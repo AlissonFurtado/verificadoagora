@@ -50,6 +50,7 @@ export function CardProduto({
   comparativo,
   tendencia,
   onde = 'vitrine',
+  noVideo = false,
 }: {
   produto: Produto;
   /** "Menor preço em N dias", ou null quando não há histórico pra afirmar. */
@@ -69,6 +70,8 @@ export function CardProduto({
    * da home — é a propriedade `onde`, a que responde "esse canal rendeu?".
    */
   onde?: string;
+  /** Está num vídeo do Instagram (`src/lib/videos.ts`): ganha o selo "No vídeo". */
+  noVideo?: boolean;
 }) {
   const economia = produto.preco_original - produto.preco_atual;
   const caminho = caminhoDoProduto(produto);
@@ -108,6 +111,12 @@ export function CardProduto({
           <span className="pointer-events-none absolute left-2 top-2 rounded bg-desconto px-2 py-1 text-[10px] font-black tracking-wide text-white shadow-sm sm:left-3 sm:top-3">
             {produto.desconto_percentual}% OFF
           </span>
+
+          {noVideo && (
+            <span className="pointer-events-none absolute left-2 top-9 rounded bg-slate-900 px-2 py-1 text-[10px] font-black uppercase tracking-wide text-white shadow-sm sm:left-auto sm:right-3 sm:top-3">
+              <span aria-hidden="true">▶ </span>No vídeo
+            </span>
+          )}
 
           {comparativo && (
             <Link

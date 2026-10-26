@@ -55,6 +55,18 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## 26/10/2026: produtos dos vídeos no topo
+
+- 🟢 **Lista em `src/lib/videos.ts` (`IDS_DOS_VIDEOS`)**: um `meli_id` por
+  vídeo do Instagram, o mais novo primeiro. É o único lugar a mexer.
+  - home: viram os primeiros cards da grade, com o selo "▶ No vídeo"
+    (no celular embaixo do "% OFF"; do `sm` pra cima no canto direito);
+  - /entrar: seção "Dos nossos vídeos" **antes dos botões**, lado a lado
+    até 2, carrossel com 3+. O botão leva à **página do produto**
+    (escolha dele), não ao Meli. Saem dos destaques de baixo, sem repetir.
+  - Indisponível some sozinho (testado com o GameSir `disponivel: false`).
+  - Decisões dele por múltipla escolha em 26/10.
+
 ## 25/10/2026 (noite): pendências mortas
 
 - 🟢 **As "cópias" sumiram.** A ficha do micro-ondas e o guia de controle da

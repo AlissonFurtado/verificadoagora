@@ -8,6 +8,7 @@ import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/li
 import { acharQuedas, type Queda } from '@/lib/quedas';
 import { descreverConferencia } from '@/lib/relogio';
 import { caminhoDoProduto, gerarSlug } from '@/lib/slug';
+import { produtosDosVideos } from '@/lib/videos';
 import { SeloDeConferencia } from '../selo-de-conferencia';
 import { BarraDupla } from './barra-dupla';
 import { BuscaRapida, type ItemDaBusca } from './busca-rapida';
@@ -94,8 +95,11 @@ export default function PaginaDeEntrada() {
   // A ordem dos destaques é a mesma da fila do canal: primeiro o que caiu
   // entre as duas últimas conferências, depois o que caiu na semana, depois o
   // maior desconto anunciado. Quem entra por queda leva a data junto.
+  const dosVideos = produtosDosVideos(produtos);
+
+  // Os dos vídeos já têm seção própria no topo: não se repetem nos destaques.
   const destaques: Destaque[] = [];
-  const jaEntrou = new Set<number>();
+  const jaEntrou = new Set<number>(dosVideos.map((p) => p.id));
   const incluir = (d: Destaque) => {
     if (jaEntrou.has(d.produto.id)) return;
     jaEntrou.add(d.produto.id);
@@ -182,6 +186,70 @@ export default function PaginaDeEntrada() {
             ou entre no canal para receber quando cair.
           </p>
         </header>
+
+        {/* Os produtos dos vídeos, antes de tudo: quem vem do reel procura o
+            que acabou de ver (26/10/2026). A lista mora em `src/lib/videos.ts`.
+            Até 2 ficam lado a lado; com mais, a fileira rola de lado. */}
+        {dosVideos.length > 0 && (
+          <section aria-labelledby="titulo-dos-videos" className="min-w-0">
+            <h2
+              id="titulo-dos-videos"
+              className="flex items-center gap-2 text-sm font-black uppercase tracking-widest text-corte"
+            >
+              <span aria-hidden="true">▶</span>
+              Dos nossos vídeos
+            </h2>
+            <ul
+              className={
+                dosVideos.length <= 2
+                  ? 'mt-3 grid grid-cols-2 gap-3'
+                  : '-mx-4 mt-3 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'
+              }
+            >
+              {dosVideos.map((produto) => (
+                <li
+                  key={produto.id}
+                  className={`flex min-w-0 flex-col overflow-hidden rounded-xl bg-white text-slate-900 shadow-lg shadow-black/30 ${
+                    dosVideos.length <= 2 ? '' : 'w-[46%] shrink-0 snap-start'
+                  }`}
+                >
+                  <Link href={caminhoDoProduto(produto)} className="relative block aspect-square bg-white">
+                    {produto.imagem && (
+                      <Image
+                        src={produto.imagem}
+                        alt={produto.nome}
+                        fill
+                        sizes="(max-width: 512px) 46vw, 236px"
+                        className="object-contain p-3"
+                        priority
+                      />
+                    )}
+                  </Link>
+                  <div className="flex min-w-0 flex-1 flex-col gap-1 border-t border-slate-100 p-2.5">
+                    <h3 className="min-h-[2.2rem] min-w-0">
+                      <Link
+                        href={caminhoDoProduto(produto)}
+                        className="line-clamp-2 text-[13px] font-bold leading-tight text-slate-800"
+                      >
+                        {produto.nome}
+                      </Link>
+                    </h3>
+                    <p className="mt-auto text-xl font-black tracking-[-0.5px] text-marca">
+                      {formatarReal(produto.preco_atual)}
+                    </p>
+                    <Link
+                      href={caminhoDoProduto(produto)}
+                      data-onde="entrar-videos"
+                      className="mt-1 block rounded-lg bg-marca-acao px-2 py-2.5 text-center text-xs font-extrabold uppercase tracking-wider text-white"
+                    >
+                      Ver preço e histórico
+                    </Link>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {/* Os dois caminhos da página, do mesmo tamanho: nenhum deles fica no
             rodapé. É o `id` daqui que a barra fixa observa. */}
