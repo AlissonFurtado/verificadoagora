@@ -3672,12 +3672,636 @@
           "resposta": "A loja oficial da Líder Brinquedos."
         }
       ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 94,
+      "categoria": "Beleza",
+      "nome": "Secador e Modelador Philco PSC3500 4 em 1",
+      "preco_original": 829.99,
+      "preco_atual": 417.0,
+      "desconto_percentual": 49,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2okmTtF",
+      "descricao": "Secador dobrável com motor BLDC e acessórios de escova oval, raquete e cacheador; 3 velocidades e 3 temperaturas",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_723697-MLA115636981336_092026-F.jpg",
+      "meli_id": "MLB49652036",
+      "analise": [
+        "O **PSC3500** da Philco é um secador que vira **modelador**: vem com concentrador, escova oval, escova raquete e cacheadores, e o corpo é **dobrável**. O motor é **BLDC** (sem escovas), o tipo que gira mais rápido e dura mais que o motor comum. Tem mais de 50 mil vendas e nota 4,9.",
+        "A ficha diz **1.450 W**, menos que um secador tradicional de 2.000 W: num motor BLDC isso não quer dizer secar mais devagar, porque é a velocidade do ar que seca. Repare que o \"de\" do anúncio é alto; julgue pelo preço de hoje e pelo histórico.",
+        "Compre se você quer um aparelho só para secar e modelar, ocupando pouco espaço na mala ou na gaveta. Se você só seca o cabelo e não usa escova, um secador simples resolve gastando menos."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a potência?",
+          "resposta": "1.450 W, segundo a ficha, com motor BLDC."
+        },
+        {
+          "pergunta": "Quais acessórios vêm?",
+          "resposta": "Concentrador, escova oval, escova raquete e cacheadores, segundo o anúncio."
+        },
+        {
+          "pergunta": "É dobrável?",
+          "resposta": "Sim."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 95,
+      "categoria": "Beleza",
+      "nome": "Secador de Cabelo Taiff Style 2000 W Azul Tiffany",
+      "preco_original": 299.9,
+      "preco_atual": 223.0,
+      "desconto_percentual": 25,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2ZoHvnm",
+      "descricao": "Secador de 2.000 W com motor AC, 2 velocidades, 3 temperaturas, jato frio e filtro removível; 220 V",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_920327-MLA99426456186_112025-F.jpg",
+      "meli_id": "MLB18572380",
+      "analise": [
+        "O **Taiff Style** é o secador tradicional de **2.000 W**, com motor **AC** (o de salão, que dura mais que o motor DC dos secadores baratos), 2 velocidades, 3 temperaturas, jato de ar frio e filtro removível. A cor é azul Tiffany. Tem mais de 10 mil vendas e nota 4,9.",
+        "⚠️ A descrição fala em **220 V**: confira a voltagem antes de comprar, porque secador ligado na tensão errada queima. Vem só com o bico concentrador, sem difusor.",
+        "Compre se você quer um secador forte, simples e de marca conhecida. Se você tem cabelo cacheado e usa difusor, procure um modelo que já venha com ele."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a voltagem?",
+          "resposta": "220 V, segundo a descrição. Confira antes de comprar."
+        },
+        {
+          "pergunta": "Vem com difusor?",
+          "resposta": "Não. Vem com o bico concentrador."
+        },
+        {
+          "pergunta": "O motor é AC ou DC?",
+          "resposta": "AC, segundo a ficha."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 96,
+      "categoria": "Relógios",
+      "nome": "Smartwatch Xiaomi Redmi Watch 5 Active",
+      "preco_original": 230.0,
+      "preco_atual": 230.0,
+      "desconto_percentual": 0,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/27mviYQ",
+      "descricao": "Relógio inteligente com tela de 2\", chamadas por Bluetooth, bateria de até 18 dias e app Mi Fitness",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_900217-MLA116031574344_092026-F.jpg",
+      "meli_id": "MLB43319779",
+      "analise": [
+        "O **Redmi Watch 5 Active** é o relógio inteligente de entrada da Xiaomi: tela de **2 polegadas**, chamadas pelo Bluetooth, notificações e registro de treino pelo app Mi Fitness. A ficha diz bateria de até **18 dias**. Vendido pela loja oficial da Xiaomi, com mais de 50 mil vendas e nota 4,9.",
+        "A tela é **LCD**, não AMOLED: fica menos viva ao sol do que a de relógios mais caros. E ele **não tem GPS** próprio, então para medir corrida precisa do celular junto.",
+        "Compre se você quer ver notificações, atender ligação no pulso e contar passos sem gastar muito. Se você corre na rua sem o celular, procure um modelo com GPS."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Tem GPS?",
+          "resposta": "Não tem GPS próprio. Para medir corrida, leve o celular."
+        },
+        {
+          "pergunta": "Atende ligação?",
+          "resposta": "Sim, pelo Bluetooth, segundo o anúncio."
+        },
+        {
+          "pergunta": "Quanto dura a bateria?",
+          "resposta": "Até 18 dias, segundo a ficha."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 97,
+      "categoria": "Relógios",
+      "nome": "Smartband Samsung Galaxy Fit3 Rosé",
+      "preco_original": 499.0,
+      "preco_atual": 210.0,
+      "desconto_percentual": 57,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2AjJf1A",
+      "descricao": "Pulseira inteligente com tela AMOLED de 1,6\", resistência a 50 m, mais de 100 exercícios e bateria de até 13 dias",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_674204-MLA99446580250_112025-F.jpg",
+      "meli_id": "MLB34506161",
+      "analise": [
+        "A **Galaxy Fit3** é a pulseira inteligente da Samsung: tela **AMOLED de 1,6\"**, resistência à água de **50 metros**, mais de 100 tipos de exercício, sono e frequência cardíaca, e bateria de até **13 dias**, segundo o anúncio. Tem mais de 10 mil vendas e nota 4,9.",
+        "Ela **não tem GPS** nem NFC (não paga por aproximação). Funciona melhor com celular Samsung, que tem o app Samsung Health completo.",
+        "Compre se você quer uma pulseira leve para contar passos, sono e treino, com tela boa. Se você quer pagar com o pulso ou correr sem o celular, ela não faz isso."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Tem GPS?",
+          "resposta": "Não."
+        },
+        {
+          "pergunta": "Pode nadar com ela?",
+          "resposta": "A ficha diz resistência a 50 m."
+        },
+        {
+          "pergunta": "Paga por aproximação?",
+          "resposta": "Não, ela não tem NFC."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 98,
+      "categoria": "Relógios",
+      "nome": "Smartwatch Amazfit Bip Max com GPS",
+      "preco_original": 749.0,
+      "preco_atual": 559.0,
+      "desconto_percentual": 25,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1gHiwvm",
+      "descricao": "Relógio inteligente com tela AMOLED de 2,07\", GPS, mapas offline e caixa de alumínio",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_977223-MLA112104536624_062026-F.jpg",
+      "meli_id": "MLB73633273",
+      "analise": [
+        "O **Bip Max** da Amazfit tem tela **AMOLED de 2,07\"**, **GPS** próprio e mapas offline, com caixa de alumínio. Para quem corre ou pedala sem levar o celular, é o que o diferencia dos relógios mais baratos desta leva. Tem mais de mil vendas e nota 4,9.",
+        "⚠️ A ficha do anúncio diz \"duração da bateria: 20 h\", o que parece erro de preenchimento (a linha Bip é conhecida por durar dias). Confira na página do fabricante antes de comprar contando com isso.",
+        "Compre se você treina ao ar livre e quer o percurso no pulso. Se você só quer notificações e passos, um relógio sem GPS custa bem menos."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Tem GPS?",
+          "resposta": "Sim, e mapas offline, segundo o anúncio."
+        },
+        {
+          "pergunta": "Qual o tamanho da tela?",
+          "resposta": "2,07 polegadas, AMOLED."
+        },
+        {
+          "pergunta": "Quanto dura a bateria?",
+          "resposta": "A ficha diz 20 h, o que parece erro. Confira com o fabricante."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 99,
+      "categoria": "Relógios",
+      "nome": "Relógio Casio Vintage AQ-230A Prata",
+      "preco_original": 299.9,
+      "preco_atual": 134.95,
+      "desconto_percentual": 55,
+      "avaliacao": 4.7,
+      "link_afiliado": "https://meli.la/2ePyhSN",
+      "descricao": "Relógio anadigi de pulseira de aço, hora dupla, cronômetro de 1/100 s e resistência à água",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_633473-MLA115741902361_082026-F.jpg",
+      "meli_id": "MLB19721946",
+      "analise": [
+        "O **AQ-230A** é um Casio da linha **Vintage**: ponteiros e visor digital juntos (anadigi), pulseira de aço, hora dupla e cronômetro de 1/100 de segundo. É o estilo retrô que voltou à moda. Tem mais de 10 mil vendas.",
+        "A ficha fala em resistência de 100 m e em \"bateria de íon de lítio\", o que não bate com a descrição nem com o modelo, que usa bateria comum de relógio. Trate como resistente a respingo e chuva, não a mergulho. O \"de\" do anúncio é alto: julgue pelo preço de hoje.",
+        "Compre se você quer um relógio clássico, barato de manter e que combina com qualquer roupa. Se você quer notificação do celular no pulso, ele não faz isso."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "É analógico ou digital?",
+          "resposta": "Os dois: ponteiros e visor digital."
+        },
+        {
+          "pergunta": "Pode nadar com ele?",
+          "resposta": "Não conte com isso. Trate como resistente a respingo."
+        },
+        {
+          "pergunta": "A pulseira é de aço?",
+          "resposta": "Sim, segundo a ficha."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 100,
+      "categoria": "Beleza",
+      "nome": "Shampoo Anticaspa Vichy Dercos DS 300 g",
+      "preco_original": 153.9,
+      "preco_atual": 119.21,
+      "desconto_percentual": 22,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2f7KqV7",
+      "descricao": "Shampoo anticaspa para cabelos normais a oleosos, 300 g, dermatologicamente testado",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_646464-MLA112810161826_072026-F.jpg",
+      "meli_id": "MLB37257779",
+      "analise": [
+        "O **Dercos DS** é o shampoo anticaspa da **Vichy** para cabelos **normais a oleosos**, frasco de **300 g**, com notificação na Anvisa informada no anúncio. Vendido pela loja oficial Época Cosméticos, com mais de 100 mil vendas e nota 4,9.",
+        "A promessa do anúncio (\"elimina 100% da caspa desde a 1ª lavagem\") é da marca, não de teste nosso. Caspa que não melhora em algumas semanas, ou que vem com feridas e muita coceira, pede dermatologista. Faça um teste numa área pequena antes do primeiro uso.",
+        "Compre se você tem caspa e cabelo oleoso. Se o seu cabelo é seco, a própria Vichy tem uma versão para cabelo seco: esta pode ressecar mais."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Serve para cabelo seco?",
+          "resposta": "Não é a indicação. Este é para cabelos normais a oleosos."
+        },
+        {
+          "pergunta": "Quanto vem?",
+          "resposta": "300 g."
+        },
+        {
+          "pergunta": "Quem vende?",
+          "resposta": "A loja oficial Época Cosméticos."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 101,
+      "categoria": "Beleza",
+      "nome": "Protetor Solar Facial com Cor Anthelios Ultra Cover FPS 60 Cor 3.0",
+      "preco_original": 109.9,
+      "preco_atual": 77.17,
+      "desconto_percentual": 29,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/29NeDea",
+      "descricao": "Protetor solar facial com cor de alta cobertura, FPS 60, 30 g, livre de óleo e resistente à água",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_728452-MLA103883256579_012026-F.jpg",
+      "meli_id": "MLB19767143",
+      "analise": [
+        "O **Anthelios Ultra Cover** é o protetor com cor de **alta cobertura** da La Roche-Posay: **FPS 60**, cor **3.0**, 30 g, livre de óleo e resistente à água. Funciona como base e protetor num passo só. Tem mais de 100 mil vendas e nota 4,9.",
+        "Repare que o título não fala o FPS: é **60**, segundo a ficha. Não confunda com o Anthelios Airlicium FPS 80 do nosso catálogo, que é sem cor. A cor 3.0 é um tom médio; peles muito claras ou muito escuras devem ver as outras cores. Faça um teste numa área pequena antes do primeiro uso.",
+        "Compre se você quer proteger e uniformizar a pele sem passar base. Se você prefere pele natural, um protetor sem cor fica melhor."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual é o FPS?",
+          "resposta": "60, segundo a ficha."
+        },
+        {
+          "pergunta": "Tem cor?",
+          "resposta": "Sim, alta cobertura, cor 3.0."
+        },
+        {
+          "pergunta": "É o mesmo que o Anthelios FPS 80?",
+          "resposta": "Não. Aquele é sem cor; este é com cor e FPS 60."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 102,
+      "categoria": "Beleza",
+      "nome": "Protetor Solar Facial Hidrabene FPS 70 Toque Seco 50 g",
+      "preco_original": 59.9,
+      "preco_atual": 30.62,
+      "desconto_percentual": 48,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/1iZZnoX",
+      "descricao": "Protetor solar facial clareador, FPS 70, toque seco, 50 g, livre de óleo",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_655805-MLA116956226142_092026-F.jpg",
+      "meli_id": "MLB60416809",
+      "analise": [
+        "O protetor facial da **Hidrabene** tem **FPS 70**, toque seco e **50 g**, da linha clareadora: a marca promete prevenir o retorno de manchas causadas pelo sol. É livre de óleo e não tem cor. Tem mais de 10 mil vendas e nota 4,8.",
+        "O \"clareia a pele\" é promessa do fabricante; quem clareia mancha de verdade é o uso diário do protetor, que impede o sol de escurecer de novo. Faça um teste numa área pequena antes do primeiro uso.",
+        "Compre se você quer um FPS alto, sem cor e com bom tamanho de frasco. Se você quer uniformizar a pele, um protetor com cor faz isso no mesmo passo."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual é o FPS?",
+          "resposta": "70."
+        },
+        {
+          "pergunta": "Tem cor?",
+          "resposta": "Não."
+        },
+        {
+          "pergunta": "É bom para pele oleosa?",
+          "resposta": "É toque seco e livre de óleo, segundo o anúncio."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 103,
+      "categoria": "Beleza",
+      "nome": "Kit Principia Limpeza e Hidratação CH-01 + OL-01 + GL-02",
+      "preco_original": 147.0,
+      "preco_atual": 105.84,
+      "desconto_percentual": 28,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2E2rS1M",
+      "descricao": "Kit com hidratante facial, óleo de limpeza e gel de limpeza, para todo tipo de pele",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_609209-MLA94364515810_102025-F.jpg",
+      "meli_id": "MLB59774342",
+      "analise": [
+        "Kit da **Principia** com três produtos: o hidratante **CH-01**, o óleo demaquilante **OL-01** e o gel de limpeza **GL-02**. É a rotina básica de limpar e hidratar, de uma marca que está entre as mais vendidas de skin care do Mercado Livre. Tem mais de 10 mil vendas e nota 4,9.",
+        "Não tem protetor solar: de dia, complete com um. A ficha diz vegano, livre de parabenos e com niacinamida. Faça um teste numa área pequena antes do primeiro uso.",
+        "Compre se você quer começar uma rotina de skin care com o básico de uma vez. Se você já tem um sabonete facial de que gosta, comprar só o hidratante sai mais em conta."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O que vem no kit?",
+          "resposta": "Hidratante CH-01, óleo de limpeza OL-01 e gel de limpeza GL-02."
+        },
+        {
+          "pergunta": "Tem protetor solar?",
+          "resposta": "Não."
+        },
+        {
+          "pergunta": "Serve para pele oleosa?",
+          "resposta": "A ficha diz todo tipo de pele."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 104,
+      "categoria": "Casa",
+      "nome": "Sanduicheira Elétrica Cadence SAN400",
+      "preco_original": 101.0,
+      "preco_atual": 94.5,
+      "desconto_percentual": 6,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1K8nnhT",
+      "descricao": "Sanduicheira grill para 2 lanches, 750 W, placas lisas antiaderentes e trava de segurança",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_633183-MLA99468751756_112025-F.jpg",
+      "meli_id": "MLB25741527",
+      "analise": [
+        "A **SAN400** da Cadence faz **2 sanduíches** de uma vez, com placas lisas tipo grill antiaderentes, **750 W**, trava e luz indicadora. É das mais vendidas da categoria, com mais de 100 mil unidades e nota 4,9.",
+        "As placas **não são removíveis**: para limpar, espere esfriar e passe um pano úmido. Confira a voltagem no anúncio antes de comprar.",
+        "Compre se você faz misto-quente e lanche rápido no dia a dia. Se você quer grelhar carne, uma grill maior, de placas removíveis, serve melhor."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Quantos sanduíches faz?",
+          "resposta": "2 de cada vez."
+        },
+        {
+          "pergunta": "As placas saem para lavar?",
+          "resposta": "Não."
+        },
+        {
+          "pergunta": "Qual a potência?",
+          "resposta": "750 W."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 105,
+      "categoria": "Casa",
+      "nome": "Ducha Eletrônica Lorenzetti Loren Shower Ultra 7500 W 220 V",
+      "preco_original": 107.0,
+      "preco_atual": 107.0,
+      "desconto_percentual": 0,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/1Bmuv8H",
+      "descricao": "Ducha eletrônica de parede com 20 temperaturas, chuveiro de mão e mangueira, 7.500 W, 220 V",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_638677-MLA118516851287_092026-F.jpg",
+      "meli_id": "MLB19590092",
+      "analise": [
+        "A **Loren Shower Ultra** é a ducha eletrônica da Lorenzetti: controle de **20 temperaturas**, **7.500 W**, **220 V**, com chuveiro de mão, mangueira e suporte. O formato é quadrado. Tem mais de 100 mil vendas e nota 4,8.",
+        "⚠️ **É só para 220 V**, e 7.500 W pede fiação e disjuntor à altura: instale com eletricista. A ficha do anúncio escreve \"7,5 W\", que é erro de digitação; o título diz 7.500 W.",
+        "Compre se a sua casa é 220 V e você quer ajustar a temperatura fino. Se a sua rede é 127 V, este modelo não serve."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Serve em 127 V?",
+          "resposta": "Não. Este é 220 V."
+        },
+        {
+          "pergunta": "Quantas temperaturas tem?",
+          "resposta": "20."
+        },
+        {
+          "pergunta": "Vem com chuveiro de mão?",
+          "resposta": "Sim, com mangueira e suporte."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 106,
+      "categoria": "Casa",
+      "nome": "Liquidificador Mondial Turbo Power L-99 550 W",
+      "preco_original": 172.9,
+      "preco_atual": 94.04,
+      "desconto_percentual": 45,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/2Dee4pG",
+      "descricao": "Liquidificador de 2,2 litros, 550 W, 3 velocidades, pulsar e filtro de inox, livre de BPA",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_744049-MLA99539379058_122025-F.jpg",
+      "meli_id": "MLB15578948",
+      "analise": [
+        "O **Turbo Power L-99** da Mondial tem copo de **2,2 litros**, **550 W**, 3 velocidades, função pulsar e vem com **filtro de inox** para coar suco. Pica gelo, segundo a ficha. É um dos liquidificadores mais vendidos do Mercado Livre, com mais de 250 mil unidades.",
+        "O copo é de plástico livre de BPA. A base não vai à lava-louças. O \"de\" do anúncio é alto: julgue pelo preço de hoje e pelo histórico.",
+        "Compre se você quer um liquidificador simples para suco, vitamina e massa. Se você faz muita massa pesada, um modelo de mais potência sofre menos."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a capacidade?",
+          "resposta": "2,2 litros."
+        },
+        {
+          "pergunta": "Pica gelo?",
+          "resposta": "Sim, segundo a ficha."
+        },
+        {
+          "pergunta": "Vem com filtro?",
+          "resposta": "Sim, de inox."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 107,
+      "categoria": "Informática",
+      "nome": "Teclado e Mouse sem Fio Logitech MK235 ABNT2",
+      "preco_original": 219.0,
+      "preco_atual": 165.1,
+      "desconto_percentual": 24,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/2Q5w186",
+      "descricao": "Kit de teclado ABNT2 e mouse sem fio de 2,4 GHz com um receptor USB",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_735713-MLA99973706633_112025-F.jpg",
+      "meli_id": "MLB18610706",
+      "analise": [
+        "O **MK235** é o kit de **teclado e mouse sem fio** da Logitech, com teclado **ABNT2** (tem ç e acentos no lugar certo) e mouse óptico M170, ligados por um único receptor USB de 2,4 GHz. Tem mais de 10 mil vendas e nota 4,8.",
+        "É teclado de membrana, sem iluminação: silencioso e bom para escritório, não para jogo. Funciona com pilhas.",
+        "Compre se você quer tirar os fios da mesa do computador ou do notebook com uma marca que dura. Se você joga, um kit gamer com fio responde mais rápido."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "O teclado tem ç?",
+          "resposta": "Sim, é ABNT2."
+        },
+        {
+          "pergunta": "Precisa de Bluetooth?",
+          "resposta": "Não. Usa um receptor USB."
+        },
+        {
+          "pergunta": "Tem iluminação?",
+          "resposta": "Não."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 108,
+      "categoria": "Eletrônicos",
+      "nome": "Caixa de Som Boombox Aiwa AWS-BBS-01-B 200 W",
+      "preco_original": 1699.0,
+      "preco_atual": 1399.0,
+      "desconto_percentual": 17,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2zfk98u",
+      "descricao": "Caixa de som portátil de 200 W com Bluetooth, IP66 e até 30 horas de bateria",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_864411-MLA99591392870_122025-F.jpg",
+      "meli_id": "MLB34113516",
+      "analise": [
+        "A boombox **AWS-BBS-01-B** da Aiwa tem **200 W**, Bluetooth, entradas USB e P2, proteção **IP66** contra poeira e água, e até **30 horas de bateria**, segundo o anúncio. Tem homologação da Anatel e mais de 10 mil vendas.",
+        "Ela pesa **6 kg** e tem quase meio metro de largura: é portátil no sentido de ter bateria e alça, não de caber na mochila.",
+        "Compre se você quer som forte para churrasco, quintal ou festa sem depender de tomada. Se você quer uma caixa para levar na bolsa, procure uma menor."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Pode molhar?",
+          "resposta": "Tem proteção IP66, segundo o anúncio."
+        },
+        {
+          "pergunta": "Quanto dura a bateria?",
+          "resposta": "Até 30 horas, segundo o anúncio."
+        },
+        {
+          "pergunta": "Quanto pesa?",
+          "resposta": "6 kg."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "familia": "",
+      "data_adicionado": "2026-10-25",
+      "verificado_em": "2026-10-25",
+      "id": 109,
+      "categoria": "Eletrônicos",
+      "nome": "Microfone de Lapela sem Fio Hollyland Lark M2 Combo",
+      "preco_original": 789.0,
+      "preco_atual": 638.0,
+      "desconto_percentual": 19,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1iZENfB",
+      "descricao": "Kit com 2 microfones de lapela sem fio e 3 receptores (USB-C, Lightning e câmera), alcance de até 300 m",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_644387-MLA119786973369_102026-F.jpg",
+      "meli_id": "MLB34016199",
+      "analise": [
+        "O **Lark M2 Combo** da Hollyland vem com **2 microfones** de lapela e **3 receptores**: USB-C, Lightning (iPhone antigo) e saída de 3,5 mm para câmera. Grava em 24 bits/48 kHz, tem redução de ruído e alcance de até 300 m em linha de visão, segundo o anúncio. Tem mais de 100 mil vendas e nota 4,9.",
+        "É o microfone dos criadores de vídeo: para reel, entrevista e vlog, melhora o som muito mais do que trocar de celular. Com dois microfones, grava duas pessoas de uma vez.",
+        "Compre se você grava vídeo falando e o som do celular sai com eco ou ruído. Se você grava sozinho e só no celular, um kit com um microfone e um receptor custa menos."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Funciona no iPhone?",
+          "resposta": "Sim: vem receptor Lightning e USB-C."
+        },
+        {
+          "pergunta": "Quantos microfones vêm?",
+          "resposta": "Dois."
+        },
+        {
+          "pergunta": "Serve para câmera?",
+          "resposta": "Sim, com o receptor de saída 3,5 mm."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-25",
     "conferido_em": "2026-10-25T14:43:19.643Z",
-    "total_produtos": 93,
+    "total_produtos": 109,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }

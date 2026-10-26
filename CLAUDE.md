@@ -55,6 +55,41 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## Onde paramos — 25/10/2026 (fila do garimpo publicada)
+
+- 🟢 **"Poste o que está na fila" = a fila do GARIMPO**, não o canal nem o
+  Instagram. Perguntei duas vezes por múltipla escolha: na primeira ele
+  respondeu "não é o canal", na segunda escolheu o garimpo. **Da próxima vez,
+  "fila" sem contexto: perguntar logo com as 3 opções.**
+- 🟢 **16 produtos entraram (ids 94 a 109)**, dos ~100 candidatos de 15 a
+  25/10 (só os de marca, conferidos na página):
+  - Beleza: secadores Philco PSC3500 e Taiff Style, Vichy Dercos, Anthelios
+    Ultra Cover FPS 60 cor 3.0, Hidrabene FPS 70 e kit Principia;
+  - Relógios: Redmi Watch 5 Active, Galaxy Fit3, Amazfit Bip Max e Casio
+    AQ-230A;
+  - Casa: sanduicheira Cadence SAN400, ducha Lorenzetti 220 V e
+    liquidificador Mondial L-99;
+  - Informática e eletrônicos: Logitech MK235, boombox Aiwa e Hollyland
+    Lark M2.
+- **Reprovados, com o motivo:**
+  - vendedor de nome automático: WD Purple (`blpkf9if`), batedeira Mondial
+    (`CIDYDP…`) e CeraVe (`GOGU4775453`);
+  - preço subiu desde o garimpo: Moto G56 e mouse Logitech M190;
+  - Starlink Mini a R$ 453: barato demais;
+  - sem desconto real: Huawei Band 10, A36 256 GB, Amazfit Active 3 e
+    Garmin 165;
+  - Apple Watch SE 3: vendedor desconhecido e "de" R$ 3.500;
+  - o resto era marca sem nome.
+- 🔴 **Fila do canal de 25/10, conferida na página e NÃO publicada (não era
+  o pedido):**
+  - o **A57 a R$ 1.799 não existe na página**. A loja oficial da Samsung
+    cobra R$ 2.036,69, e o mais barato tem 4 vendas: é o `results[0]`;
+  - a **creatina "menor preço" a R$ 43** vem de `GOGU4775453`, quando a
+    Soldiers cobra R$ 47,90.
+  - Os dois preços da vitrine seguem errados.
+- 🔴 **O robô deixou 14 suspeitos em 25/10 e 12 em 24/10**, não
+  conferidos.
+
 ## Indexação de 17/10/2026
 
 - 🟢 **Pedidos aceitos (11, a cota cortou no 12º):**
