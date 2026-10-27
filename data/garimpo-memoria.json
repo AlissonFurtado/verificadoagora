@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-26",
+  "atualizado_em": "2026-10-27",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1620,6 +1620,18 @@
       "sugerido_em": "2026-10-26",
       "familia": "Smartwatch Amazfit BIP Bip 6 tela de 1.97\"",
       "preco_sugerido": 564,
+      "vezes": 1
+    },
+    "MLB22962407": {
+      "sugerido_em": "2026-10-27",
+      "familia": "Câmera instantânea Fujifilm Instax Mini 12",
+      "preco_sugerido": 413.82,
+      "vezes": 1
+    },
+    "MLB62230579": {
+      "sugerido_em": "2026-10-27",
+      "familia": "Air fryer Britânia Fritadeira Oven de 11L",
+      "preco_sugerido": 329,
       "vezes": 1
     }
   }
