@@ -1,36 +1,36 @@
 {
-  "garimpado_em": "2026-10-27",
+  "garimpado_em": "2026-10-28",
   "total": 2,
   "candidatos": [
     {
-      "meli_id": "MLB22962407",
-      "familia": "Câmera instantânea Fujifilm Instax Mini 12",
+      "meli_id": "MLB37700507",
+      "familia": "Liquidificador portátil Mondial Pratic Turbo L-98-b 1.6 L com jarra de pp",
       "tipo": "produto",
-      "nome": "Câmera Instantânea Fujifilm Instax Mini 12 Cor Azul Candy",
-      "categoria": "Câmeras e Acessórios",
-      "preco": 413.82,
-      "preco_original": 668.33,
-      "desconto_percentual": 38,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_895432-MLA99876821305_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB22962407",
-      "no_foco": false,
-      "motivo": "ficou mais barato",
-      "garimpado_em": "2026-10-27"
-    },
-    {
-      "meli_id": "MLB62230579",
-      "familia": "Air fryer Britânia Fritadeira Oven de 11L",
-      "tipo": "produto",
-      "nome": "Air Fryer Oven Britânia 11L 8 Funções 1800W Painel Digital BAF11A",
+      "nome": "Liquidificador Pratic Turbo, Mondial, 550W - L-98-B",
       "categoria": "Eletrodomésticos",
-      "preco": 329,
-      "preco_original": 473.1,
-      "desconto_percentual": 30,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_866410-MLA106357490185_022026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB62230579",
+      "preco": 94.9,
+      "preco_original": 154.9,
+      "desconto_percentual": 38,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_929681-MLA99450771766_112025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB37700507",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-27"
+      "garimpado_em": "2026-10-28"
+    },
+    {
+      "meli_id": "MLB77562776",
+      "familia": "Pendrive KATELUO Pendrive 32GB Portátil 32GB Memory KA - 32GB 32GB 2.0/3.0",
+      "tipo": "produto",
+      "nome": "Pen Drive 32gb Mini Chaveiro Resistente Rápido Usb Metal Cor Prata Alta Velocidade Compatível Desktop Pc Notebook Som Automotivo Kateluo",
+      "categoria": "Armazenamento",
+      "preco": 37.98,
+      "preco_original": 49.33,
+      "desconto_percentual": 23,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_944962-MLA116961351126_092026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB77562776",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-10-28"
     }
   ]
 }
