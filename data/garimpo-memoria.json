@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-29",
+  "atualizado_em": "2026-10-30",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1668,6 +1668,36 @@
       "sugerido_em": "2026-10-29",
       "familia": "DeckCasa Escova elétrica de limpeza JY-6010",
       "preco_sugerido": 61.89,
+      "vezes": 1
+    },
+    "MLB61376192": {
+      "sugerido_em": "2026-10-30",
+      "familia": "Compressor de ar elétrico portátil B&G Compressor BG-R01 Compressor De Ar 35L 0.109hp",
+      "preco_sugerido": 56.97,
+      "vezes": 1
+    },
+    "MLB66060206": {
+      "sugerido_em": "2026-10-30",
+      "familia": "Pote para alimentos hermético Rishon Pote Hermetico Borossilicato 370mL",
+      "preco_sugerido": 64.7,
+      "vezes": 1
+    },
+    "MLB65105800": {
+      "sugerido_em": "2026-10-30",
+      "familia": "externo Exbom HDD USB 3.0 500GB",
+      "preco_sugerido": 113,
+      "vezes": 1
+    },
+    "MLB16084455": {
+      "sugerido_em": "2026-10-30",
+      "familia": "Papel higiênico Neve Toque da Seda folha dupla 30 m",
+      "preco_sugerido": 33.24,
+      "vezes": 1
+    },
+    "MLB79391660": {
+      "sugerido_em": "2026-10-30",
+      "familia": "Tripé para câmera APFER Tripé Para Celular Tripé / Bastão Até 1,70m de 190cm de diâmetro",
+      "preco_sugerido": 59.9,
       "vezes": 1
     }
   }
