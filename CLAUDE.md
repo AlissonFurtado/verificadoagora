@@ -97,10 +97,39 @@ em 11/09/2026, depois da pesquisa.
   grade da home, como todo produto de guia de vitrine. **Depois do Natal:
   decidir tirar o `vitrine` dele**, e devolver os 8 à grade.
 - 🟢 **/entrar sem o check verde:** Lupita no cabeçalho.
-- 🔴 **Próxima sessão:** indexar os 2 guias novos junto com as 7 fichas.
+- 🔴 **Próxima sessão:** indexar, nesta ordem, o guia de BTUs, o de ar-condicionado na
+  Black Friday, o de Natal e as 7 fichas novas.
 - **Próximos vídeos sugeridos (a decisão é dele):** Instax Mini 12, air fryer
   Britânia, OneBlade, Galaxy A57 e kit de potes Vitrex. Ao gravar, somar o
   `meli_id` em `src/lib/videos.ts`.
+
+### 01/11/2026 (noite): Google, "Caiu hoje" e série de vídeos
+
+- 🔴 **Search Console em 01/11, janela de 28 dias: 0 cliques, 132 impressões,
+  posição 19,3.** Em 3 meses: 0 cliques e 188 impressões. Indexadas 93, não
+  indexadas 42 (25 detectadas, 10 rastreadas, 5 em 404). Links externos: 0.
+  O relatório também dá 0 links internos, então o número pode estar atrasado.
+  - As impressões ainda misturam o `hrvidros.` (redirect antigo do cliente).
+  - **Leitura minha:** o gargalo é autoridade, não indexação.
+- 🟢 **Guia `quantos-btus-preciso-ar-condicionado`** (Consul e LG) responde às
+  consultas de área em que o Google já mostrava o site. Títulos dos guias de
+  9.000 e 12.000 BTUs agora dizem "quantos m² gela".
+  - Produto e comparativo não mudaram: o `vale a pena` já é o formato certo, e
+    há pouca impressão para justificar mexer no molde.
+- 🟢 **Faixa "Caiu hoje"** (`caiu-hoje.tsx`): até 5 quedas de manchete, só com
+  histórico igual à vitrine (`quedasDaFaixa`). Some em dia sem queda.
+- 🟢 **Série "Esse desconto é real?"**: `/reel-prova/{slug}?caso=riscado|queda|
+  mais-alto&cena=...`, com `node scripts/reel.mjs <slug> --caso X --base URL`.
+  A rota devolve 409 se o histórico do dia não sustenta o caso.
+  - 🔴 **Regra dele: cita só o fato.** Sem "golpe" ou "falso", sem citar loja.
+  - ⚠️ **Confira o "de" na página do Meli antes de renderizar.** O Realme C73
+    caiu do lote: nosso `preco_original` estava em 1.599, e a página mostra
+    1.399. **O robô mantém o `preco_original` antigo quando a API não traz
+    outro**, então o % OFF do site pode estar acima do da loja. Não corrigido.
+  - O ✓ saiu dos reels. O `/pin/{slug}` ainda tem, mas o Pinterest está parado.
+- 🟡 **Reddit parado desde o aquecimento.** Os rascunhos são de setembro: reler
+  antes de usar. `u/a_f_de_sousa` traz as iniciais dele: **perguntar se isso
+  conta como "aparecer"** antes de seguir por lá.
 
 ## 26/10/2026: produtos dos vídeos no topo
 
