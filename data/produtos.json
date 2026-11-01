@@ -4297,12 +4297,285 @@
           "resposta": "Sim, com o receptor de saída 3,5 mm."
         }
       ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-11-01",
+      "verificado_em": "2026-11-01",
+      "id": 110,
+      "categoria": "Beleza",
+      "nome": "Barbeador Philips OneBlade QP1425/10",
+      "preco_original": 212.38,
+      "preco_atual": 139.9,
+      "desconto_percentual": 34,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/18jb5K5",
+      "descricao": "Aparador e barbeador sem fio com lâmina dupla face, pente ajustável de 1 a 5 mm, uso seco ou molhado",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_750670-MLA118429558724_102026-F.jpg",
+      "meli_id": "MLB64322156",
+      "familia": "Philips OneBlade QP1425/10",
+      "analise": [
+        "O **OneBlade QP1425/10** da Philips apara, contorna e raspa com a mesma lâmina de **dupla face**. Vem com **pente ajustável de 1 a 5 mm**, é **à prova d'água**, funciona seco ou molhado e não precisa de fio. Tem mais de 100 mil vendas e nota 4,8, e é vendido pela loja da própria Philips.",
+        "A autonomia anunciada é de **até 30 minutos**, e a carga leva cerca de 4 horas. A lâmina é uma peça de reposição: ela gasta com o uso e precisa ser trocada de tempos em tempos, então conte com esse gasto.",
+        "Compre se você mantém a barba curta ou desenhada e quer um aparelho só para isso. Não compre se você busca o rosto liso de lâmina tradicional: o OneBlade corta rente, mas não raspa tão fundo."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Pode usar no banho?",
+          "resposta": "Sim: é à prova d'água e funciona seco ou molhado, segundo o anúncio."
+        },
+        {
+          "pergunta": "Quanto dura a bateria?",
+          "resposta": "Até 30 minutos, segundo o anúncio, com carga de cerca de 4 horas."
+        },
+        {
+          "pergunta": "Quais alturas de corte?",
+          "resposta": "De 1 a 5 mm, com o pente ajustável."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-11-01",
+      "verificado_em": "2026-11-01",
+      "id": 111,
+      "categoria": "Casa",
+      "nome": "Air Fryer Oven Britânia 11 L BAF11A",
+      "preco_original": 473.1,
+      "preco_atual": 349.0,
+      "desconto_percentual": 26,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2gVrS8i",
+      "descricao": "Fritadeira em formato de forno, 11 litros, 1.800 W, 8 funções, painel digital e janela transparente",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_866410-MLA106357490185_022026-F.jpg",
+      "meli_id": "MLB62230579",
+      "familia": "Air fryer Britânia Fritadeira Oven de 11L",
+      "analise": [
+        "A **BAF11A** da Britânia é uma air fryer em formato de **forno**: tem **11 litros**, **1.800 W**, 8 funções pré-programadas no painel digital, temperatura de 40 °C a 200 °C e **janela transparente** para acompanhar o preparo. Tem mais de 10 mil vendas e nota 4,9.",
+        "O formato de forno faz diferença em família: cabe mais comida de uma vez do que no cesto de uma air fryer comum. Em troca, ela ocupa bancada: são cerca de 33 cm de comprimento, 30 cm de largura e 33 cm de altura, e 4,85 kg. A função de programar deixa marcar o início do preparo.",
+        "Compre se você cozinha para três pessoas ou mais e tem espaço na bancada. Não compre se você mora sozinho ou tem cozinha pequena: uma air fryer de cesto resolve e ocupa menos lugar. Confira a voltagem antes de fechar."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a capacidade?",
+          "resposta": "11 litros."
+        },
+        {
+          "pergunta": "Qual a potência?",
+          "resposta": "1.800 W."
+        },
+        {
+          "pergunta": "Dá para ver a comida durante o preparo?",
+          "resposta": "Sim, tem janela transparente."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-11-01",
+      "verificado_em": "2026-11-01",
+      "id": 112,
+      "categoria": "Casa",
+      "nome": "Batedeira Planetária Philco PBP90 900 W 5 L",
+      "preco_original": 379.9,
+      "preco_atual": 299.0,
+      "desconto_percentual": 21,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/2SKasCV",
+      "descricao": "Batedeira planetária de 900 W com tigela de 5 litros, 12 velocidades e turbo, 3 batedores e tampa antirrespingo",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_728713-MLA99416610212_112025-F.jpg",
+      "meli_id": "MLB49822923",
+      "familia": "Batedeira com pedestal Philco Batedeiras PBP90 PBP90-A",
+      "analise": [
+        "A **PBP90** da Philco é uma batedeira **planetária** de **900 W**, com tigela de **5 litros**, **12 velocidades** mais turbo, 3 batedores de metal (para massa leve, massa pesada e clara em neve) e tampa antirrespingo. Tem mais de 10 mil vendas e nota 4,8.",
+        "Planetária é a batedeira em que o batedor gira e também percorre a tigela, então você não precisa ficar segurando nem raspando as bordas. ⚠️ A ficha diz que a tigela é de **plástico**, não de inox: é mais leve, mas risca com o tempo e pega cheiro de gordura.",
+        "Compre se você faz bolo e massa com frequência e quer as mãos livres. Não compre se você assa de vez em quando: uma batedeira simples dá conta e guarda fácil. Confira a voltagem antes de fechar."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a capacidade da tigela?",
+          "resposta": "5 litros."
+        },
+        {
+          "pergunta": "A tigela é de inox?",
+          "resposta": "Não: é de plástico, segundo a ficha."
+        },
+        {
+          "pergunta": "Quantos batedores vêm?",
+          "resposta": "Três, de metal, segundo o anúncio."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-11-01",
+      "verificado_em": "2026-11-01",
+      "id": 113,
+      "categoria": "Casa",
+      "nome": "Liquidificador Philco PH900 1.200 W 3 L",
+      "preco_original": 265.0,
+      "preco_atual": 119.9,
+      "desconto_percentual": 55,
+      "avaliacao": 4.8,
+      "link_afiliado": "https://meli.la/1sbkM5v",
+      "descricao": "Liquidificador de 3 litros, 1.200 W, 12 velocidades e pulsar, 6 lâminas de inox, função gelo e filtro",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_766837-MLA98259429221_112025-F.jpg",
+      "meli_id": "MLB15578941",
+      "familia": "Liquidificador Philco PH900 PH900 3 L com jarra de acrílico - Inclui 1 acessórios",
+      "analise": [
+        "O **PH900** da Philco tem copo de **3 litros** de acrílico, **1.200 W**, **12 velocidades** mais pulsar, **6 lâminas** de inox e função para triturar gelo. Vem com filtro e tem tampa com orifício para pôr ingrediente com o aparelho ligado. Tem mais de 100 mil vendas e nota 4,8.",
+        "A ficha diz que a jarra **não é resistente ao calor**: espere a sopa esfriar antes de bater. As lâminas não saem do copo, então a limpeza é com água e detergente batendo por alguns segundos. O \"de\" do anúncio é alto: julgue pelo preço de hoje e pelo histórico.",
+        "Compre se você faz vitamina, suco e massa em quantidade para a família. Não compre se você costuma bater coisa quente, ou se faz só um copo por vez: 3 litros é grande para isso."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Qual a capacidade?",
+          "resposta": "3 litros."
+        },
+        {
+          "pergunta": "Pode bater líquido quente?",
+          "resposta": "A ficha diz que a jarra não é resistente ao calor. Espere esfriar."
+        },
+        {
+          "pergunta": "Pica gelo?",
+          "resposta": "Sim, tem função própria para isso."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-11-01",
+      "verificado_em": "2026-11-01",
+      "id": 114,
+      "categoria": "Foto e vídeo",
+      "nome": "Câmera Instantânea Fujifilm Instax Mini 12 Azul",
+      "preco_original": 668.33,
+      "preco_atual": 429.0,
+      "desconto_percentual": 36,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/1VC54aA",
+      "descricao": "Câmera instantânea com flash embutido, autofoco, espelho para selfie e foto de 62 x 46 mm; usa pilhas AA",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_895432-MLA99876821305_112025-F.jpg",
+      "meli_id": "MLB22962407",
+      "familia": "Câmera instantânea Fujifilm Instax Mini 12",
+      "analise": [
+        "A **Instax Mini 12** da Fujifilm imprime a foto na hora, em papel de **62 x 46 mm**. Tem **flash embutido**, autofoco, espelho para selfie e funciona com **pilhas AA**. Pesa 306 g. Tem mais de 10 mil vendas e nota 4,9.",
+        "⚠️ O gasto não acaba na compra: cada foto consome um filme instantâneo, vendido à parte, e o custo por foto é alto. Confira no anúncio se vem filme na caixa. Não há tela nem jeito de apagar: a foto que saiu ruim, saiu.",
+        "Compre para presente, festa e viagem, quando o que vale é ter a foto na mão. Não compre se você quer guardar muitas fotos ou editar depois: para isso o celular faz melhor e não gasta filme."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Usa bateria?",
+          "resposta": "Não: funciona com pilhas AA."
+        },
+        {
+          "pergunta": "Qual o tamanho da foto?",
+          "resposta": "62 x 46 mm."
+        },
+        {
+          "pergunta": "O filme vem junto?",
+          "resposta": "Confira no anúncio: o filme é um consumível vendido à parte."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-11-01",
+      "verificado_em": "2026-11-01",
+      "id": 115,
+      "categoria": "Esportes",
+      "nome": "Creatina Vitafor Creafort Creapure 300 g",
+      "preco_original": 289.0,
+      "preco_atual": 154.3,
+      "desconto_percentual": 47,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2WjBWtz",
+      "descricao": "Creatina monohidratada Creapure sem sabor, pote de 300 g, 100 porções de 3 g, sem glúten e sem lactose",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_948551-MLA118285034280_102026-F.jpg",
+      "meli_id": "MLB18947494",
+      "familia": "Suplemento en pó Vitafor Creafort Creapure Vitafor Creatina de Creafort pote 300g vitafor",
+      "analise": [
+        "A **Creafort** da Vitafor é creatina monohidratada **Creapure**, marca de matéria-prima conhecida no mercado. O pote tem **300 g** e rende **100 porções de 3 g**, sem sabor, sem glúten e sem lactose. Tem mais de 100 mil vendas e nota 4,9.",
+        "A ficha lista um ingrediente só, a creatina, e isso é o que se procura neste suplemento. Pela ficha, não é indicada para gestantes nem lactantes, e a idade mínima recomendada é 19 anos. Quem tem doença renal deve falar com um médico antes de usar.",
+        "Compre se você treina e faz questão da matéria-prima Creapure. Não compre se você só quer creatina monohidratada: compare o preço por grama com os outros potes da vitrine antes de decidir."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Quantas porções vêm?",
+          "resposta": "100 porções de 3 g."
+        },
+        {
+          "pergunta": "Tem sabor?",
+          "resposta": "Não, é sem sabor."
+        },
+        {
+          "pergunta": "Tem lactose ou glúten?",
+          "resposta": "Não, segundo a ficha."
+        }
+      ]
+    },
+    {
+      "preco_no_pix": false,
+      "cupom": "",
+      "plataforma": "mercado-livre",
+      "disponivel": true,
+      "data_adicionado": "2026-11-01",
+      "verificado_em": "2026-11-01",
+      "id": 116,
+      "categoria": "Casa",
+      "nome": "Kit 10 Potes de Vidro Vitrex Hermético 640 ml",
+      "preco_original": 197.77,
+      "preco_atual": 96.9,
+      "desconto_percentual": 51,
+      "avaliacao": 4.9,
+      "link_afiliado": "https://meli.la/2FkWs9e",
+      "descricao": "Dez potes retangulares de vidro borossilicato com tampa hermética, 640 ml, para micro-ondas e lava-louças",
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_932662-MLA114564682923_072026-F.jpg",
+      "meli_id": "MLB65269789",
+      "familia": "Pote para alimentos hermético Vitrex Pote Hermetico Borossilicato 640mL",
+      "analise": [
+        "O kit da **Vitrex** traz **10 potes de vidro borossilicato** de **640 ml**, retangulares, com tampa hermética. Cada um mede cerca de 18 x 10 x 7 cm. Vão ao micro-ondas e à lava-louças, segundo a ficha. Quem vende é a **Rishon**, com mais de 750 mil vendas, e o produto soma mais de 250 mil vendidos, com nota 4,9.",
+        "Borossilicato é o vidro que aguenta melhor a mudança de temperatura, e o formato retangular aproveita a prateleira do freezer. Mesmo assim, evite levar o pote congelado direto ao calor. Vidro pesa: dez potes cheios exigem uma prateleira firme, e não são boa ideia na mochila.",
+        "Compre para marmita da semana e para congelar comida em casa. Não compre se você leva a marmita na bolsa todo dia: pote de plástico pesa menos e não quebra na queda."
+      ],
+      "perguntas": [
+        {
+          "pergunta": "Vai ao micro-ondas?",
+          "resposta": "Sim, segundo a ficha."
+        },
+        {
+          "pergunta": "Vai à lava-louças?",
+          "resposta": "Sim, segundo a ficha."
+        },
+        {
+          "pergunta": "Qual o tamanho de cada pote?",
+          "resposta": "Cerca de 18 x 10 x 7 cm, com 640 ml."
+        }
+      ]
     }
   ],
   "metadata": {
     "ultima_atualizacao": "2026-10-31",
     "conferido_em": "2026-10-31T15:56:02.078Z",
-    "total_produtos": 109,
+    "total_produtos": 116,
     "comissao_media_ml": 12,
     "moeda": "BRL"
   }

@@ -55,6 +55,40 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## 01/11/2026: retomada depois de 6 dias sem sessão
+
+- 🟢 **13 suspeitos de 31/10 conferidos em `/p/{id}/s`.** Aplicados à mão:
+  DualSense (nacional), potes, Elgin, Fmaxx, Casio W-59, Whey Max Titanium,
+  Myskin, ralador, Phoebe, Redmi Watch e Hidrabene. Mantidos: Roku e
+  Havaianas.
+  - A 1ª linha da lista é a **buy box**; as outras vêm em ordem de preço.
+    Vendedor "Mercado Livre" é venda direta, e vale.
+  - Phoebe: só dois vendedores sem vendas. Usei o de nome humano, e é o
+    preço mais fraco do lote.
+- 🟡 **A57: o Meli unificou o catálogo.** `MLB67410010` redireciona para
+  `MLB73209637`, daí o 404 do robô desde 29/10. Pus
+  `confere_por: "MLB73209637"` e religuei o produto.
+  - 🔴 **Olhar a Action seguinte**: confirmar o commit `Preços de DD/MM`,
+    e o A57 `disponivel`. A rodada de 01/11 não tinha começado às 16:04 UTC.
+    Se o robô parar, o primeiro suspeito é este `confere_por`.
+- 🟢 **WindFree (id 46) está mesmo indisponível** no Meli.
+- 🟢 **Indexação: fila zerada.** Das 24 inspecionadas, 13 já estavam
+  indexadas (HY320 incluída) e 11 foram pedidas, sem bater na cota.
+  🔴 Falta pedir as 7 fichas novas (ids 110 a 116).
+- 🟢 **Fila do garimpo de 26 a 31/10: 7 entraram (ids 110 a 116)**, dos 23:
+  OneBlade, air fryer Britânia, batedeira e liquidificador Philco, Instax
+  Mini 12, creatina Creafort e potes Vitrex.
+  - Fora: Puma (sem oferta), DualSense Remix (buy box importada), Bip 6 e
+    Mondial L-98 (já há parecidos), Fit3 repetido e os sem marca.
+- 🟡 **Potes id 35 (Rishon) ficou sem vendedor sério**: só contas de nome
+  automático, e a Rishon saiu. Mostra o preço da buy box. Não ocultei
+  porque está num comparativo. **Decisão dele:** trocar pelo Vitrex (id 116)
+  no comparativo e ocultar.
+- ⚠️ `javascript_tool`: saída com `chave=valor` volta `[BLOCKED: Cookie/query
+  string data]`. Devolva JSON.stringify de arrays e em fatias (corta ~1.000
+  caracteres). Em `browser_batch`, no máximo ~8 esperas de 10 s.
+- 🔴 **Branches `robo/precos-*`: 17 agora.** Segue valendo o item abaixo.
+
 ## 26/10/2026: produtos dos vídeos no topo
 
 - 🟢 **Lista em `src/lib/videos.ts` (`IDS_DOS_VIDEOS`)**: um `meli_id` por
@@ -148,7 +182,7 @@ em 11/09/2026, depois da pesquisa.
   - Os dois preços da vitrine seguem errados.
 - 🟢 (conferidos à tarde, ver acima) **O robô deixou 14 suspeitos em 25/10 e 12 em 24/10**.
 - **Indexação de 25/10:** 11 pedidos aceitos, todos fichas novas; a cota
-  cortou no 12º. 🔴 **Falta pedir:**
+  cortou no 12º. 🟢 (resolvido em 01/11) **Faltava pedir:**
   - liquidificador Mondial, sanduicheira, Hidrabene, Principia e Aiwa;
   - as 18 de 17/10 (8 de cozinha e 10 de Friends), que não sei se foram
     pedidas entre 18 e 24/10 (não houve sessão).
