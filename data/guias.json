@@ -161,9 +161,9 @@
     },
     {
       "slug": "ar-condicionado-12000-btus",
-      "titulo": "Ar-condicionado 12.000 BTUs: qual comprar, por perfil de uso",
-      "resumo": "Não existe um melhor ar-condicionado de 12.000 BTUs: existe o melhor para o jeito que você usa. Separamos por perfil os splits só frio, inverter e 220 V que acompanhamos, com a ficha conferida no site de cada fabricante e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
-      "descricao": "Splits inverter de 12.000 BTUs separados por perfil de uso: dormir com ele ligado, fugir do vento direto, garantia longa, pouco uso. Ficha conferida no fabricante e preço conferido todo dia.",
+      "titulo": "Ar-condicionado 12.000 BTUs: quantos m² gela e qual comprar",
+      "resumo": "Um ar de 12.000 BTUs atende de 15 a 20 m² com sombra ou sol da manhã, e de 12 a 15 m² com sol da tarde, segundo a Consul. Não existe um melhor ar-condicionado de 12.000 BTUs: existe o melhor para o jeito que você usa. Separamos por perfil os splits só frio, inverter e 220 V que acompanhamos, com a ficha conferida no site de cada fabricante e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
+      "descricao": "Quantos m² gela um ar de 12.000 BTUs, e quais splits inverter comprar por perfil: dormir com ele ligado, fugir do vento direto, garantia longa, pouco uso. Ficha conferida no fabricante e preço conferido todo dia.",
       "perfis": [
         {
           "chave": "dormir",
@@ -262,15 +262,23 @@
         {
           "titulo": "Midea Ar-Condicionado Split 12000 BTUs Inverter Lite Frio (42EBVCA12M5 / 38TBVCA12M5) — loja oficial da Midea",
           "url": "https://www.midea.com.br/ar-condicionado-split-12000-btus-inverter-lite-frio/p"
+        },
+        {
+          "titulo": "Como escolher os BTUs certos do seu ar-condicionado — Consul",
+          "url": "https://www.consul.com.br/facilita-consul/ihhh-agora/como-escolher-os-btus-certos-do-seu-ar-condicionado"
+        },
+        {
+          "titulo": "Quantos BTUs preciso? A conta passo a passo — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/guia/quantos-btus-preciso-ar-condicionado"
         }
       ],
       "escrito_em": "2026-10-12"
     },
     {
       "slug": "ar-condicionado-9000-btus",
-      "titulo": "Ar-condicionado 9.000 BTUs: qual comprar, por perfil de uso",
-      "resumo": "Não existe um melhor ar-condicionado de 9.000 BTUs: existe o melhor para o jeito que você usa. Separamos por perfil os splits só frio, inverter e 220 V que acompanhamos, com a ficha conferida no site de cada fabricante e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
-      "descricao": "Splits inverter de 9.000 BTUs separados por perfil de uso: gastar menos luz, garantia longa, dormir com ele ligado. Ficha conferida no fabricante e preço conferido todo dia.",
+      "titulo": "Ar-condicionado 9.000 BTUs: quantos m² gela e qual comprar",
+      "resumo": "Um ar de 9.000 BTUs atende até cerca de 12 m² com sombra ou sol da manhã, e até cerca de 10 m² com sol da tarde, segundo a Consul. Não existe um melhor ar-condicionado de 9.000 BTUs: existe o melhor para o jeito que você usa. Separamos por perfil os splits só frio, inverter e 220 V que acompanhamos, com a ficha conferida no site de cada fabricante e o preço conferido pelo nosso robô todo dia. Esta página é atualizada quando um modelo sai de linha ou aparece um melhor.",
+      "descricao": "Quantos m² gela um ar de 9.000 BTUs, e quais splits inverter comprar por perfil: gastar menos luz, garantia longa, dormir com ele ligado. Ficha conferida no fabricante e preço conferido todo dia.",
       "perfis": [
         {
           "chave": "conta-de-luz",
@@ -343,6 +351,14 @@
         {
           "titulo": "LG Dual Inverter Compact 9.000 BTUs (S3-Q09AAQAK) — página oficial da LG Brasil",
           "url": "https://www.lg.com/br/ar-condicionado-residencial/s3-q09aaqak/"
+        },
+        {
+          "titulo": "Como escolher os BTUs certos do seu ar-condicionado — Consul",
+          "url": "https://www.consul.com.br/facilita-consul/ihhh-agora/como-escolher-os-btus-certos-do-seu-ar-condicionado"
+        },
+        {
+          "titulo": "Quantos BTUs preciso? A conta passo a passo — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/guia/quantos-btus-preciso-ar-condicionado"
         }
       ],
       "escrito_em": "2026-10-12"

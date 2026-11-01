@@ -1288,6 +1288,142 @@
         }
       ],
       "escrito_em": "2026-11-01"
+    },
+    {
+      "slug": "quantos-btus-preciso-ar-condicionado",
+      "titulo": "Quantos BTUs preciso? Quantos m² gela um ar de 9.000 e de 12.000",
+      "resumo": "A conta básica é simples: 600 BTUs por metro quadrado, ou 800 se o cômodo pega sol direto, mais 600 por pessoa extra e por eletrônico ligado. Abaixo, a resposta direta para 9.000 e 12.000 BTUs, a conta passo a passo e o erro de comprar um aparelho grande demais. Os números são os publicados pela Consul; a LG também parte de 600 a 800 BTUs por metro quadrado.",
+      "perguntas": [
+        {
+          "chave": "9000-btus",
+          "pergunta": "Um ar de 9.000 BTUs gela quantos metros quadrados?",
+          "resposta_curta": "Até cerca de 12 m² com sombra ou sol da manhã, e até cerca de 10 m² com sol da tarde, para até duas pessoas.",
+          "opcoes": [
+            {
+              "rotulo": "Serve bem",
+              "para_quem": "Quarto de 3 x 4 m sem sol forte",
+              "explicacao": "É o caso típico do quarto de casal padrão, segundo o guia da Consul, com pé-direito de até 2,70 m."
+            },
+            {
+              "rotulo": "Pode faltar",
+              "para_quem": "Quarto de 12 m² com sol da tarde",
+              "explicacao": "A mesma tabela sobe esse quarto para 12.000 BTUs. Sol forte na parede ou na janela pesa tanto quanto a metragem."
+            }
+          ],
+          "detalhe": [
+            "As tabelas dos fabricantes não são iguais, e as faixas se sobrepõem: de 12 a 15 m² com sombra, a Consul aceita de 9.000 a 12.000 BTUs. Quando o cômodo ficar no limite, faça a conta da pergunta 3."
+          ],
+          "cuidado": "Metragem sozinha não decide. Confira o sol, quantas pessoas ficam no cômodo e o que fica ligado nele."
+        },
+        {
+          "chave": "12000-btus",
+          "pergunta": "Um ar de 12.000 BTUs gela quantos metros quadrados?",
+          "resposta_curta": "De 15 a 20 m² com sombra ou sol da manhã, e de 12 a 15 m² com sol da tarde, para até duas pessoas.",
+          "opcoes": [
+            {
+              "rotulo": "Serve bem",
+              "para_quem": "Suíte grande ou sala de TV sem sol forte",
+              "explicacao": "O guia da Consul coloca salas de TV e suítes de 15 a 20 m² nessa faixa."
+            },
+            {
+              "rotulo": "Pode faltar",
+              "para_quem": "Sala de 20 m² com sol da tarde",
+              "explicacao": "A tabela pede 18.000 BTUs para esse caso. Com sala integrada à cozinha, conte a área toda."
+            }
+          ],
+          "detalhe": [
+            "Essas tabelas consideram pé-direito de até 2,70 m e até duas pessoas. Com teto alto ou mais gente, o número sobe."
+          ],
+          "cuidado": "Para comércio, ou cômodo com muita gente ou muito eletrônico, a Consul orienta usar a coluna de sol da tarde ou consultar um técnico."
+        },
+        {
+          "chave": "como-calcular",
+          "pergunta": "Como calcular os BTUs do meu cômodo?",
+          "resposta_curta": "Multiplique os metros quadrados por 600 (ou 800 com sol direto), some 600 por pessoa além da primeira e 600 por eletrônico ligado. Depois, escolha o tamanho comercial logo acima.",
+          "opcoes": [
+            {
+              "rotulo": "Quarto de 12 m² sem sol direto",
+              "para_quem": "Duas pessoas e uma TV",
+              "explicacao": "12 x 600 = 7.200. Mais 600 da segunda pessoa e 600 da TV dá 8.400 BTUs. O tamanho logo acima é 9.000."
+            },
+            {
+              "rotulo": "O mesmo quarto com sol direto",
+              "para_quem": "Duas pessoas e uma TV",
+              "explicacao": "12 x 800 = 9.600. Com os mesmos 1.200 de pessoa e TV, dá 10.800 BTUs. O tamanho logo acima é 12.000."
+            }
+          ],
+          "detalhe": [
+            "Os tamanhos residenciais mais comuns são 9.000, 12.000, 15.000, 18.000 e 24.000 BTUs.",
+            "A conta é uma referência, não medição. Teto, janelas e isolamento também contam, e por isso os fabricantes oferecem simuladores mais detalhados."
+          ],
+          "cuidado": "BTU não é watt: BTU diz quanto o aparelho refrigera, e watt diz quanta energia ele consome. Para saber o consumo, olhe a potência e a classe de energia na ficha do modelo."
+        },
+        {
+          "chave": "maior-e-melhor",
+          "pergunta": "Comprar um aparelho maior é mais seguro?",
+          "resposta_curta": "Não. A LG avisa que potência menor ou maior que a necessária pode gastar mais energia, refrigerar mal ou encurtar a vida útil do aparelho.",
+          "opcoes": [
+            {
+              "rotulo": "A conta deu no limite",
+              "para_quem": "Resultado muito perto do tamanho comercial",
+              "explicacao": "Se o cômodo tem sol forte ou recebe gente com frequência, faz sentido subir um tamanho. Peça a opinião do técnico que vai instalar."
+            },
+            {
+              "rotulo": "A conta deu folgada",
+              "para_quem": "Resultado bem abaixo do tamanho comercial",
+              "explicacao": "Fique no tamanho menor que atende à conta. Subir sem motivo não traz vantagem e pesa no preço."
+            }
+          ],
+          "detalhe": [
+            "Se um aparelho do tamanho certo não está gelando, a LG lembra que o problema pode não ser falta de BTU, e sim instalação, vedação ou posição do aparelho."
+          ],
+          "cuidado": "Antes de fechar a compra, mostre o cômodo ao técnico: é ele quem vê sol, parede e parte elétrica ao vivo."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB75342806",
+          "nota": "Exemplo de 9.000 BTUs: classe A, para quarto de cerca de 12 m² sem sol forte. Está a {preco}, conferido em {data}. A instalação não está nesse valor.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "IDRS (eficiência na estação)": "7",
+            "Garantia": "10 anos no compressor, 2 anos no conjunto"
+          }
+        },
+        {
+          "meli_id": "MLB27727511",
+          "nota": "Exemplo de 12.000 BTUs: classe A, com 1.130 W de potência nominal em frio, o número de watts da pergunta 3. Está a {preco}, conferido em {data}. A instalação não está nesse valor.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "Potência nominal (frio)": "1.130 W",
+            "Ruído da unidade interna": "22 a 42 dB(A)"
+          }
+        }
+      ],
+      "veredito": "Comece pela conta: metros quadrados vezes 600, ou vezes 800 com sol direto, mais 600 por pessoa extra e por eletrônico ligado. Na maior parte dos quartos, a resposta fica em 9.000 ou 12.000 BTUs. Ficou no limite? Leve em conta o sol da tarde e ouça o técnico. Depois de definir o tamanho, compare os modelos pela classe de energia e pela garantia, e some a instalação, que não vem no preço do anúncio.",
+      "fontes": [
+        {
+          "titulo": "Como escolher os BTUs certos do seu ar-condicionado — Consul",
+          "url": "https://www.consul.com.br/facilita-consul/ihhh-agora/como-escolher-os-btus-certos-do-seu-ar-condicionado"
+        },
+        {
+          "titulo": "Como calcular BTUs por m² e escolher o ar-condicionado ideal — LG Brasil",
+          "url": "https://www.lg.com/br/sobre-a-lg/press-media/como-calcular-btus-por-m-e-escolher-o-ar-condicionado-ideal/"
+        },
+        {
+          "titulo": "Ar-condicionado 9.000 BTUs: qual comprar, por perfil de uso — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/guia/ar-condicionado-9000-btus"
+        },
+        {
+          "titulo": "Ar-condicionado 12.000 BTUs: qual comprar, por perfil de uso — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/guia/ar-condicionado-12000-btus"
+        },
+        {
+          "titulo": "Vale esperar a Black Friday para comprar ar-condicionado? — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/guia/vale-esperar-black-friday-ar-condicionado"
+        }
+      ],
+      "escrito_em": "2026-11-01"
     }
   ]
 }
