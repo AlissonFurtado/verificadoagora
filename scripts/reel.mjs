@@ -2,6 +2,10 @@
 // num MP4 vertical com movimento e transição.
 //
 // Uso:  node scripts/reel.mjs <slug> [--base http://localhost:3111]
+//       node scripts/reel.mjs <slug> --caso riscado|mais-alto|queda [--base ...]
+//
+// Com `--caso`, sai um vídeo da série "Esse desconto é real?" (/reel-prova).
+// A rota recusa o caso que o histórico do dia não sustenta, e o script para.
 //
 // ⚠️ **O vídeo sai em `rascunhos/reels/`, que está fora do Git.** O repositório
 // é público e vídeo com preço do dia não é material de código — além de pesar.
@@ -19,7 +23,6 @@ import { existsSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { join } from 'node:path';
 
-const CENAS = ['gancho', 'produto', 'prova', 'chamada'];
 /** Segundos por cena. Curto: reel de oferta que passa de 20s perde retenção. */
 const DURACAO = 4;
 const FPS = 30;
@@ -52,14 +55,21 @@ if (!slug) {
 }
 const iBase = process.argv.indexOf('--base');
 const base = iBase > 0 ? process.argv[iBase + 1] : 'http://localhost:3111';
+const iCaso = process.argv.indexOf('--caso');
+const caso = iCaso > 0 ? process.argv[iCaso + 1] : null;
+const CENAS = caso
+  ? ['gancho', 'grafico', 'fato', 'chamada']
+  : ['gancho', 'produto', 'prova', 'chamada'];
 
 const ffmpeg = acharFfmpeg();
-const pasta = join('rascunhos', 'reels', slug);
+const pasta = join('rascunhos', 'reels', caso ? `prova-${caso}-${slug}` : slug);
 mkdirSync(pasta, { recursive: true });
 
 // 1. Baixa as cenas.
 for (const cena of CENAS) {
-  const url = `${base}/reel/${slug}?cena=${cena}`;
+  const url = caso
+    ? `${base}/reel-prova/${slug}?caso=${caso}&cena=${cena}`
+    : `${base}/reel/${slug}?cena=${cena}`;
   const resposta = await fetch(url);
   if (!resposta.ok) {
     console.error(`✗ ${cena}: ${resposta.status} em ${url}`);

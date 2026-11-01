@@ -3,6 +3,7 @@ import catalogo from '../../../../data/produtos.json';
 import arquivoDeHistorico from '../../../../data/historico.json';
 import { formatarData, formatarReal, produtosVisiveis, type Catalogo, type Produto } from '@/lib/produtos';
 import { resumoDoHistorico, type PontoDoHistorico } from '@/lib/historico';
+import { comoImagem, LUPITA_SVG } from '@/lib/lupita';
 import { gerarSlug } from '@/lib/slug';
 
 /**
@@ -41,21 +42,12 @@ function acharProduto(slug: string): Produto | undefined {
 
 const fundo = 'linear-gradient(160deg, #0b1220 0%, #172554 100%)';
 
-/** A marca, com o mesmo par de bordas do favicon e da capa do link. */
+/** A marca, com a Lupita: o check de "verificado" saiu de tudo que vai à Meta. */
 function Marca({ tamanho = 44 }: { tamanho?: number }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-      <div
-        style={{
-          width: 24,
-          height: 46,
-          marginRight: 22,
-          marginTop: -10,
-          borderRight: '10px solid #4ade80',
-          borderBottom: '10px solid #4ade80',
-          transform: 'rotate(45deg)',
-        }}
-      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={comoImagem(LUPITA_SVG)} alt="" width={64} height={78} style={{ marginRight: 22 }} />
       <div style={{ display: 'flex', fontSize: tamanho, fontWeight: 700 }}>Verificado Agora</div>
     </div>
   );
