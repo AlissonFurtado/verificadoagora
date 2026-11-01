@@ -38,7 +38,7 @@ export function CaiuHoje({ quedas, hoje }: { quedas: Queda[]; hoje: string }) {
         </Link>
       </div>
 
-      <ul className="-mx-4 flex snap-x snap-mandatory gap-2.5 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
+      <ul className="-mx-4 flex snap-x snap-mandatory scroll-px-4 gap-2.5 overflow-x-auto px-4 pb-2 [scrollbar-width:none] sm:mx-0 sm:scroll-px-0 sm:px-0 [&::-webkit-scrollbar]:hidden">
         {quedas.map(({ produto, para, reais, noMenor }) => (
           <li key={produto.id} className="w-[64%] min-w-0 shrink-0 snap-start sm:w-[260px]">
             <Link
