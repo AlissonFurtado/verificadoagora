@@ -1,51 +1,21 @@
 {
-  "garimpado_em": "2026-10-31",
-  "total": 3,
+  "garimpado_em": "2026-11-01",
+  "total": 1,
   "candidatos": [
     {
-      "meli_id": "MLB65269789",
-      "familia": "Pote para alimentos hermético Vitrex Pote Hermetico Borossilicato 640mL",
+      "meli_id": "MLB56129679",
+      "familia": "Migstore Boné NY Boné",
       "tipo": "produto",
-      "nome": "Kit 10 Pote De Vidro Marmita Hermético 640ml Freezer Fitness Vitrex",
-      "categoria": "Casa, Móveis e Decoração",
-      "preco": 96.9,
-      "preco_original": 197.77,
-      "desconto_percentual": 51,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_932662-MLA114564682923_072026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB65269789",
+      "nome": "Boné Ny New York Masculino Feminino Unissex Fitão Blogueira Cor Branco E Preto Tamanho Un",
+      "categoria": "Calçados, Roupas e Bolsas",
+      "preco": 31.91,
+      "preco_original": 44.99,
+      "desconto_percentual": 29,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_918468-MLA92439464901_092025-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB56129679",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-10-31"
-    },
-    {
-      "meli_id": "MLB18947494",
-      "familia": "Suplemento en pó Vitafor Creafort Creapure Vitafor Creatina de Creafort pote 300g vitafor",
-      "tipo": "produto",
-      "nome": "Creatina Vitafor Creafort Creapure Creafort pote 300g Sem sabor x 300g",
-      "categoria": "Fitness e Musculação",
-      "preco": 154.3,
-      "preco_original": 289,
-      "desconto_percentual": 46,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_948551-MLA118285034280_102026-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB18947494",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-10-31"
-    },
-    {
-      "meli_id": "MLB29229840",
-      "familia": "Freio Disco Hidraulico Traseiro Altus Bl-mt200/br-mt200 1700",
-      "tipo": "produto",
-      "nome": "Freio Disco Hidraulico Traseiro Altus Bl-mt200/br-mt200 1700",
-      "categoria": "Ciclismo",
-      "preco": 138.61,
-      "preco_original": 201.13,
-      "desconto_percentual": 31,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_962695-MLA99937455629_112025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB29229840",
-      "no_foco": false,
-      "motivo": "inédito",
-      "garimpado_em": "2026-10-31"
+      "garimpado_em": "2026-11-01"
     }
   ]
 }

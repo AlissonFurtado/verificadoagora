@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-31",
+  "atualizado_em": "2026-11-01",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1716,6 +1716,12 @@
       "sugerido_em": "2026-10-31",
       "familia": "Freio Disco Hidraulico Traseiro Altus Bl-mt200/br-mt200 1700",
       "preco_sugerido": 138.61,
+      "vezes": 1
+    },
+    "MLB56129679": {
+      "sugerido_em": "2026-11-01",
+      "familia": "Migstore Boné NY Boné",
+      "preco_sugerido": 31.91,
       "vezes": 1
     }
   }
