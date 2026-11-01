@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { lerCatalogo, lerGuias, lerHistorico } from '@/lib/catalogo';
 import { formatarData, formatarReal, produtosVisiveis, type Produto } from '@/lib/produtos';
-import { acharQuedas, type Queda } from '@/lib/quedas';
+import { acharQuedas, ehManchete } from '@/lib/quedas';
 import { descreverConferencia } from '@/lib/relogio';
 import { caminhoDoProduto, gerarSlug } from '@/lib/slug';
 import { produtosDosVideos } from '@/lib/videos';
@@ -47,15 +47,6 @@ type Destaque = {
 };
 
 const ID_DOS_BOTOES = 'botoes-do-topo';
-
-/**
- * A mesma barra da manchete do canal ("CAIU HOJE"): 3% **e** R$ 15, as duas
- * juntas. Queda de R$ 10 num fone existe, mas não é o que se grita num selo;
- * esse produto ainda pode entrar pelo desconto anunciado.
- */
-function ehManchete(q: Queda): boolean {
-  return q.porcento >= 3 && q.reais >= 15;
-}
 
 /**
  * A página de entrada — o destino do "link na bio" do Instagram e dos reels.

@@ -9,6 +9,8 @@ import { Vitrine } from './vitrine';
 import { CardGuia } from './card-guia';
 import { idsEmGuiaDeVitrine } from '@/lib/guias';
 import { produtosDosVideos } from '@/lib/videos';
+import { acharQuedas, quedasDaFaixa } from '@/lib/quedas';
+import { CaiuHoje } from './caiu-hoje';
 import { SeloDeConferencia } from './selo-de-conferencia';
 import { descreverConferencia } from '@/lib/relogio';
 
@@ -74,6 +76,8 @@ export default function Home() {
     });
   const historico = lerHistorico();
   const comparativos = lerComparativos();
+  const quedasDeHoje = quedasDaFaixa(acharQuedas(visiveis, historico.produtos).ontem);
+  const hoje = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Sao_Paulo' });
   // No topo ficam só três atalhos, numa linha. Eram todos os guias (17 botões
   // em 12/10/2026), e no monitor viravam 5 ou 6 linhas: quem abria a página
   // não via produto nenhum sem rolar. Os guias moram na seção `#guias`,
@@ -194,6 +198,8 @@ export default function Home() {
           </ul>
         </section>
       )}
+
+      <CaiuHoje quedas={quedasDeHoje} hoje={hoje} />
 
       <section className="mx-auto max-w-6xl px-4 py-5 sm:pt-6 sm:pb-12">
         <div className="mb-4 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 sm:mb-5">

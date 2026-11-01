@@ -101,6 +101,26 @@ export function acharQuedas(
   return { ontem: ontem.sort(maiorPrimeiro), semana: semana.sort(maiorPrimeiro) };
 }
 
+/**
+ * A barra de manchete: 3% **e** R$ 15, as duas juntas. Queda de R$ 10 num fone
+ * existe, mas não é o que se grita num selo.
+ */
+export function ehManchete(q: Queda): boolean {
+  return q.porcento >= 3 && q.reais >= 15;
+}
+
+/**
+ * As quedas da faixa "Caiu hoje": manchete, e só onde histórico e vitrine
+ * concordam. ⚠️ O histórico grava o que o robô viu mesmo quando o preço ficou
+ * retido como suspeito; sem esta trava, a faixa anunciaria o `results[0]` de um
+ * vendedor ruim enquanto a ficha mostra outro valor.
+ */
+export function quedasDaFaixa(ontem: Queda[], limite = 5): Queda[] {
+  return ontem
+    .filter((q) => ehManchete(q) && q.para.preco === q.produto.preco_atual)
+    .slice(0, limite);
+}
+
 /** Quem está hoje no menor preço de todo o histórico, tendo caído ou não. */
 export function noMenorPrecoDeSempre(
   produtos: Produto[],
