@@ -105,6 +105,14 @@ em 11/09/2026, depois da pesquisa.
 
 ### 01/11/2026 (noite): Google, "Caiu hoje" e série de vídeos
 
+- 🔴 **A rodada de preços de 01/11 falhou em "Publicar o que mudou"** (run
+  `41329001009`, partiu do `581f8df`). A conferência passou, então o
+  `confere_por` do A57 não derrubou o robô, mas o resultado do A57 não foi
+  visto. Causa provável, sem log (GitHub deslogado no Chrome): commits meus na
+  main durante a rodada recusaram o push. Workflow corrigido com `git pull
+  --rebase` antes de cada push. **Evite push na main perto das 16 h às 18 h
+  UTC.** O dia 01/11 só tem no histórico os 12 pontos que apliquei à mão.
+  - 🔴 **Próxima sessão:** confirmar `Preços de 02/11` e o A57 `disponivel`.
 - 🔴 **Search Console em 01/11, janela de 28 dias: 0 cliques, 132 impressões,
   posição 19,3.** Em 3 meses: 0 cliques e 188 impressões. Indexadas 93, não
   indexadas 42 (25 detectadas, 10 rastreadas, 5 em 404). Links externos: 0.

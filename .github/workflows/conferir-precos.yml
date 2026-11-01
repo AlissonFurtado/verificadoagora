@@ -70,6 +70,9 @@ jobs:
           git add data/historico.json
           if ! git diff --cached --quiet; then
             git commit -m "Histórico de preços de $(date +%d/%m/%Y)"
+            # A main pode ter andado durante a rodada: em 01/11/2026 um commit
+            # feito nesse intervalo recusou o push e o dia inteiro se perdeu.
+            git pull --rebase origin main
             git push origin main
           fi
 
@@ -79,6 +82,7 @@ jobs:
           git add data/produtos.json
           if ! git diff --cached --quiet; then
             git commit -F corpo.md
+            git pull --rebase origin main
             git push origin main
             echo "Preços normais atualizados direto na main."
           fi
