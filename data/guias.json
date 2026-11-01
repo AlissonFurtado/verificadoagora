@@ -1147,6 +1147,137 @@
         }
       ],
       "escrito_em": "2026-10-17"
+    },
+    {
+      "slug": "presentes-de-natal",
+      "titulo": "Presentes de Natal: 8 ideias de marca, por perfil de quem vai ganhar",
+      "resumo": "Oito presentes de marca para o Natal, separados pelo jeito de quem vai ganhar, cada um com o cuidado que costuma virar arrependimento. O preço é conferido todo dia, e dá para ver o histórico antes de comprar.",
+      "descricao": "Oito ideias de presente de Natal de marcas conhecidas, por perfil: câmera instantânea, relógio, smartband, barbeador, secador, fone, controle e TV box, com o preço conferido todo dia.",
+      "vitrine": {
+        "chamada": "Oito presentes de marca, por perfil de quem vai ganhar, com o cuidado que evita a troca."
+      },
+      "perfis": [
+        {
+          "chave": "foto",
+          "perfil": "Para quem adora guardar momentos",
+          "aparelho": "Câmera Instantânea Fujifilm Instax Mini 12",
+          "meli_id": "MLB22962407",
+          "porque": [
+            "Imprime a foto na hora, e é o tipo de presente que se usa já na ceia.",
+            "Flash embutido, autofoco e espelho para selfie.",
+            "Nota 4,9.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Cada foto gasta filme, vendido à parte. Confira se vem filme na caixa e, se não vier, compre junto.",
+          "ficha": {}
+        },
+        {
+          "chave": "relogio",
+          "perfil": "Para quem gosta de relógio clássico",
+          "aparelho": "Relógio Casio Vintage AQ-230A Prata",
+          "meli_id": "MLB19721946",
+          "porque": [
+            "Ponteiros e visor digital juntos, no estilo retrô que voltou à moda.",
+            "Pulseira de aço, hora dupla e cronômetro.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não mostra notificação do celular. Trate como resistente a respingo e chuva, não a mergulho.",
+          "ficha": {}
+        },
+        {
+          "chave": "pulseira",
+          "perfil": "Para quem começou a se exercitar",
+          "aparelho": "Smartband Samsung Galaxy Fit3 Rosé",
+          "meli_id": "MLB34506161",
+          "porque": [
+            "Tela AMOLED de 1,6 polegada e mais de 100 tipos de exercício.",
+            "Bateria de até 13 dias, segundo o anúncio.",
+            "Nota 4,9.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não tem GPS nem pagamento por aproximação, e funciona melhor com celular Samsung.",
+          "ficha": {}
+        },
+        {
+          "chave": "barba",
+          "perfil": "Para quem cuida da barba",
+          "aparelho": "Barbeador Philips OneBlade QP1425/10",
+          "meli_id": "MLB64322156",
+          "porque": [
+            "Apara, contorna e raspa com a mesma lâmina.",
+            "À prova d'água, com pente ajustável de 1 a 5 mm.",
+            "Vendido pela loja da Philips.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "A lâmina é peça de reposição, e o OneBlade não raspa tão fundo quanto a lâmina tradicional.",
+          "ficha": {}
+        },
+        {
+          "chave": "cabelo",
+          "perfil": "Para quem seca e modela o cabelo",
+          "aparelho": "Secador e Modelador Philco PSC3500 4 em 1",
+          "meli_id": "MLB49652036",
+          "porque": [
+            "Secador dobrável que vira modelador, com escovas e cacheadores.",
+            "Motor BLDC, sem escovas.",
+            "Nota 4,9.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Para quem só seca o cabelo, um secador simples resolve. Confira a voltagem antes de comprar.",
+          "ficha": {}
+        },
+        {
+          "chave": "fone",
+          "perfil": "Para quem ouve música o dia todo",
+          "aparelho": "Fone Bluetooth soundcore P20i",
+          "meli_id": "MLB38302175",
+          "porque": [
+            "Fone sem fio com Bluetooth 5.3 e graves reforçados.",
+            "Serve para música, podcast e ligação no dia a dia.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Não tem cancelamento de ruído ativo: ele só tapa o ouvido.",
+          "ficha": {}
+        },
+        {
+          "chave": "games",
+          "perfil": "Para quem joga no PS5",
+          "aparelho": "Controle DualSense PS5",
+          "meli_id": "MLB18910381",
+          "porque": [
+            "É o controle oficial do PS5, com gatilhos adaptáveis e vibração detalhada.",
+            "Um segundo controle também libera o jogo a dois no sofá.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "Só vale para quem tem PS5: no PC, essas funções aparecem em poucos jogos. Na compra, prefira vendedor nacional.",
+          "ficha": {}
+        },
+        {
+          "chave": "tv",
+          "perfil": "Para quem tem uma TV antiga em casa",
+          "aparelho": "Roku Streaming Stick (3ª geração)",
+          "meli_id": "MLB54014512",
+          "porque": [
+            "Dá Netflix, YouTube e Globoplay a uma TV com entrada HDMI que não é smart.",
+            "Tem controle por voz.",
+            "Hoje: {preco}, conferido em {data}."
+          ],
+          "quando_nao": "É para TV HD ou Full HD. Numa TV 4K a imagem sai em Full HD, e em TV com Roku de fábrica ele não acrescenta nada.",
+          "ficha": {}
+        }
+      ],
+      "veredito": "Comece por quem vai ganhar, não pelo produto: um presente bom é o que a pessoa vai usar. Para acertar sem conhecer bem o gosto dela, a Instax é a escolha mais segura, porque funciona como diversão da noite toda. Em qualquer um dos oito, compre com folga para a entrega chegar antes do Natal, confira a política de troca e veja no gráfico de preço se o desconto de hoje é real.",
+      "fontes": [
+        {
+          "titulo": "Mercado Livre: páginas de catálogo dos produtos acompanhados",
+          "url": "https://www.mercadolivre.com.br/"
+        },
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        }
+      ],
+      "escrito_em": "2026-11-01"
     }
   ]
 }

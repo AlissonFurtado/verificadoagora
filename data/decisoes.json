@@ -1145,6 +1145,149 @@
         }
       ],
       "escrito_em": "2026-09-20"
+    },
+    {
+      "slug": "vale-esperar-black-friday-ar-condicionado",
+      "titulo": "Vale esperar a Black Friday para comprar ar-condicionado?",
+      "resumo": "A Black Friday de 2026 é em 27 de novembro, quando o calor já chegou em boa parte do Brasil. Ar-condicionado é diferente de outro eletrodoméstico: a data cai justo na época em que todo mundo procura, e o preço do anúncio não inclui a instalação. Abaixo, quatro perguntas respondidas em uma frase cada, incluindo a conta que quase ninguém faz antes de comprar.",
+      "perguntas": [
+        {
+          "chave": "ar-cai-mesmo",
+          "pergunta": "Ar-condicionado cai de preço na Black Friday?",
+          "resposta_curta": "Pode cair, mas não conte com isso: a data chega junto com o calor, e é difícil a loja cortar fundo o que está saindo sozinho.",
+          "opcoes": [
+            {
+              "rotulo": "Você já escolheu o modelo",
+              "para_quem": "Quem sabe os BTUs, a marca e a classe de energia",
+              "explicacao": "Acompanhe o preço desse modelo a partir de hoje. Se ele chegar ao menor valor que já vimos, a compra está boa, seja em novembro ou antes."
+            },
+            {
+              "rotulo": "Você vai escolher pelo desconto",
+              "para_quem": "Quem pretende decidir na hora, pela maior porcentagem",
+              "explicacao": "É o caminho do arrependimento. O maior desconto da vitrine costuma estar no modelo que sobrou, e num aparelho que vai ligado por anos a escolha errada pesa todo mês."
+            }
+          ],
+          "detalhe": [
+            "Começamos a guardar o preço dos ares deste site em outubro, então ainda não temos um ano inteiro para mostrar. O que os dados já mostram é que o preço anda sem precisar de data nenhuma: o gráfico de cada produto traz os altos e baixos dia a dia.",
+            "A disponibilidade também conta. Em onda de calor, o modelo que você quer pode sumir, e o vendedor que sobra nem sempre é o melhor."
+          ],
+          "cuidado": "Modelo com outra voltagem é outro anúncio e outro histórico. Todos os ares que acompanhamos aqui são 220 V: confira a tomada antes de aproveitar qualquer oferta."
+        },
+        {
+          "chave": "calor-chegou",
+          "pergunta": "Está quente agora. Espero até 27 de novembro?",
+          "resposta_curta": "Se o quarto já tira o seu sono, não. Se você só quer se adiantar ao verão, dá para esperar olhando o preço.",
+          "opcoes": [
+            {
+              "rotulo": "O calor já atrapalha",
+              "para_quem": "Quem dorme mal, trabalha em casa ou tem bebê ou idoso no quarto",
+              "explicacao": "Compre quando o preço estiver bom para aquele modelo. Semanas de noite mal dormida não voltam, e a economia da espera é incerta."
+            },
+            {
+              "rotulo": "Ainda dá para aguentar",
+              "para_quem": "Quem está se planejando para o verão",
+              "explicacao": "Aqui esperar não custa nada. Comece a olhar o preço agora, para reconhecer um desconto de verdade quando ele aparecer."
+            }
+          ],
+          "detalhe": [
+            "Lembre que a compra não termina na entrega: ainda falta instalar. Em época de calor, o técnico pode demorar a ter agenda, então a data em que o ar gela é sempre depois da data da compra.",
+            "O direito de arrependimento em compra pela internet é de sete dias, contados do recebimento. Abrir e instalar pode complicar a devolução, então decida antes de chamar o técnico."
+          ],
+          "cuidado": "Se a página mostra cronômetro ou diz que restam poucas unidades, isso é motivo para desconfiar, não para correr."
+        },
+        {
+          "chave": "instalacao",
+          "pergunta": "O preço do anúncio é o preço final?",
+          "resposta_curta": "Não. A instalação por técnico fica de fora, e ela pode mudar a conta inteira. Peça o orçamento antes de comprar.",
+          "opcoes": [
+            {
+              "rotulo": "Já tem ponto pronto",
+              "para_quem": "Quem vai trocar um split antigo no mesmo lugar",
+              "explicacao": "É o caso simples: a tubulação e a parte elétrica podem ser reaproveitadas, se o técnico confirmar que servem para o aparelho novo."
+            },
+            {
+              "rotulo": "Vai instalar do zero",
+              "para_quem": "Quem nunca teve split naquele cômodo",
+              "explicacao": "Entra furo na parede, tubulação, suporte da unidade externa e, muitas vezes, um circuito elétrico novo. Em prédio, pode ser preciso pedir autorização ao condomínio."
+            }
+          ],
+          "detalhe": [
+            "Antes de comprar, pergunte ao técnico três coisas: quanto fica o serviço, se a sua rede elétrica aguenta e onde a unidade externa vai ficar.",
+            "Leia as condições de garantia do fabricante antes de escolher quem instala. Instalação malfeita é um dos motivos clássicos de problema na garantia."
+          ],
+          "cuidado": "Compare sempre o preço do aparelho mais a instalação. Um desconto pequeno no anúncio pode sumir num serviço fora de conta."
+        },
+        {
+          "chave": "classe-de-energia",
+          "pergunta": "O que pesa mais: o desconto ou a classe de energia?",
+          "resposta_curta": "Em aparelho que fica ligado horas por dia, a classe de energia. O desconto você vê uma vez; a conta de luz, todo mês.",
+          "opcoes": [
+            {
+              "rotulo": "Usa muitas horas por dia",
+              "para_quem": "Quem liga toda noite ou trabalha no cômodo",
+              "explicacao": "Priorize a classe A. É aí que a eficiência se paga, e vale aceitar um desconto menor para ficar com ela."
+            },
+            {
+              "rotulo": "Usa só em dias muito quentes",
+              "para_quem": "Quarto de hóspedes ou uso ocasional",
+              "explicacao": "Com poucas horas de uso, a diferença na conta demora a aparecer, e os outros critérios ganham peso: garantia, ruído e vendedor."
+            }
+          ],
+          "detalhe": [
+            "Classe de energia é o selo do INMETRO, e vem na ficha do fabricante. Quando existe o IDRS, ele mede a eficiência ao longo da estação: quanto maior, melhor.",
+            "Olhe também a garantia. A maioria dos fabricantes destaca os 10 anos do compressor, mas o prazo das demais peças varia bastante entre as marcas."
+          ],
+          "cuidado": "Ficha que não informa ruído nem IDRS não quer dizer que o aparelho é pior: muitos fabricantes não publicam esses números. Nos nossos guias, isso aparece como \"Não divulgado\"."
+        }
+      ],
+      "exemplos": [
+        {
+          "meli_id": "MLB27727511",
+          "nota": "Classe A, com o ruído declarado pelo fabricante, que é o que a pergunta 4 pede para olhar em quem usa toda noite. Está a {preco}, conferido em {data}. Some a instalação, que não está nesse valor.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "Ruído da unidade interna": "22 a 42 dB(A)",
+            "Garantia": "2 anos, 10 anos no compressor"
+          }
+        },
+        {
+          "meli_id": "MLB75342806",
+          "nota": "Para quarto menor: 9.000 BTUs, classe A e IDRS 7, o número de eficiência que nem todo fabricante publica. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "A",
+            "IDRS (eficiência na estação)": "7",
+            "Garantia": "10 anos no compressor, 2 anos no conjunto"
+          }
+        },
+        {
+          "meli_id": "MLB66999694",
+          "nota": "O caso que a pergunta 4 alerta: é classe D, e a loja da Midea só informa a garantia legal de 90 dias. Pode fazer sentido para uso ocasional; para ficar ligado toda noite, compare antes com os classe A. Está a {preco}, conferido em {data}.",
+          "ficha": {
+            "Classe de energia (INMETRO)": "D",
+            "Garantia": "Só o prazo legal (90 dias), segundo a loja da Midea"
+          }
+        }
+      ],
+      "veredito": "Juntando as quatro respostas: se o calor já atrapalha, não espere uma data que pode não trazer desconto nenhum. Se dá para esperar, escolha o modelo agora, pelos BTUs do cômodo e pela classe de energia, e acompanhe o preço dele. Quando o valor chegar ao menor que já vimos, compre, seja antes de 27 de novembro ou depois. E antes de fechar, peça o orçamento da instalação: é ele que diz quanto o ar vai custar de verdade.",
+      "fontes": [
+        {
+          "titulo": "LG AI Dual Inverter Voice 12.000 BTU Frio 220 V (S3-Q12JA31K) — página oficial da LG Brasil",
+          "url": "https://www.lg.com/br/ar-condicionado-residencial/dual-inverter-split/s3-q12ja31k-1/"
+        },
+        {
+          "titulo": "TCL BreezeIN AI (TAC-09CTG3-INV-I) — página oficial da TCL Brasil",
+          "url": "https://www.tcl.com/br/pt/air-conditioners/breezein-cool"
+        },
+        {
+          "titulo": "Midea Ar-Condicionado Split 12000 BTUs Inverter Lite Frio (42EBVCA12M5 / 38TBVCA12M5) — loja oficial da Midea",
+          "url": "https://www.midea.com.br/ar-condicionado-split-12000-btus-inverter-lite-frio/p"
+        },
+        {
+          "titulo": "Como conferimos os preços — Verificado Agora",
+          "url": "https://www.verificadoagora.com.br/como-conferimos"
+        }
+      ],
+      "escrito_em": "2026-11-01"
     }
   ]
 }

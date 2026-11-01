@@ -88,6 +88,20 @@ em 11/09/2026, depois da pesquisa.
   caracteres). Em `browser_batch`, no máximo ~8 esperas de 10 s.
 - 🟢 **Os 17 branches `robo/precos-*` foram apagados** em 01/11, a pedido dele.
 
+### 01/11/2026 (tarde, ele no celular): Black Friday e Natal
+
+- 🟢 **Black Friday revisada:** a página e os 5 guias estavam sãos. Entrou
+  `/guia/vale-esperar-black-friday-ar-condicionado` (o sexto), que a
+  `/black-friday` acha sozinha pelo prefixo.
+- 🟢 **Guia de vitrine `presentes-de-natal`** (8 produtos). ⚠️ Eles saíram da
+  grade da home, como todo produto de guia de vitrine. **Depois do Natal:
+  decidir tirar o `vitrine` dele**, e devolver os 8 à grade.
+- 🟢 **/entrar sem o check verde:** Lupita no cabeçalho.
+- 🔴 **Próxima sessão:** indexar os 2 guias novos junto com as 7 fichas.
+- **Próximos vídeos sugeridos (a decisão é dele):** Instax Mini 12, air fryer
+  Britânia, OneBlade, Galaxy A57 e kit de potes Vitrex. Ao gravar, somar o
+  `meli_id` em `src/lib/videos.ts`.
+
 ## 26/10/2026: produtos dos vídeos no topo
 
 - 🟢 **Lista em `src/lib/videos.ts` (`IDS_DOS_VIDEOS`)**: um `meli_id` por

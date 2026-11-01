@@ -164,10 +164,10 @@ export default function PaginaDeEntrada() {
         <header className="flex flex-col gap-3">
           <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
             <div className="flex items-center gap-2.5">
-              <span
-                aria-hidden="true"
-                className="inline-block h-5 w-2.5 -translate-y-1 rotate-45 border-b-4 border-r-4 border-economia"
-              />
+              {/* A Lupita no lugar do check verde, como na home: o selo de
+                  "verificado" deu problema com a Meta (25/10/2026). */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/lupita.svg" alt="" width={24} height={29} className="h-7 w-6 shrink-0" />
               <span className="text-sm font-black uppercase tracking-widest text-corte">
                 Verificado Agora
               </span>
