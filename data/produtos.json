@@ -1377,7 +1377,8 @@
           "pergunta": "Qual a diferença para o outro kit de potes do site?",
           "resposta": "O tamanho é o mesmo. A diferença é o material: este é borossilicato, que aguenta melhor variação de temperatura; o outro é vidro comum e mais barato. Se você só leva a marmita pronta da geladeira, o vidro comum já dá conta."
         }
-      ]
+      ],
+      "oculto": true
     },
     {
       "id": 36,

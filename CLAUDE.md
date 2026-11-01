@@ -74,20 +74,19 @@ em 11/09/2026, depois da pesquisa.
 - 🟢 **WindFree (id 46) está mesmo indisponível** no Meli.
 - 🟢 **Indexação: fila zerada.** Das 24 inspecionadas, 13 já estavam
   indexadas (HY320 incluída) e 11 foram pedidas, sem bater na cota.
-  🔴 Falta pedir as 7 fichas novas (ids 110 a 116).
+  🔴 **Próxima sessão:** pedir as 7 fichas novas (ids 110 a 116).
 - 🟢 **Fila do garimpo de 26 a 31/10: 7 entraram (ids 110 a 116)**, dos 23:
   OneBlade, air fryer Britânia, batedeira e liquidificador Philco, Instax
   Mini 12, creatina Creafort e potes Vitrex.
   - Fora: Puma (sem oferta), DualSense Remix (buy box importada), Bip 6 e
     Mondial L-98 (já há parecidos), Fit3 repetido e os sem marca.
-- 🟡 **Potes id 35 (Rishon) ficou sem vendedor sério**: só contas de nome
-  automático, e a Rishon saiu. Mostra o preço da buy box. Não ocultei
-  porque está num comparativo. **Decisão dele:** trocar pelo Vitrex (id 116)
-  no comparativo e ocultar.
+- 🟢 **Potes: id 35 oculto, Vitrex (id 116) no comparativo.** Decisão dele
+  em 01/11. O id 35 ficou só com contas de nome automático. O comparativo
+  perdeu o "custa menos": com o Vitrex a frase virou falsa.
 - ⚠️ `javascript_tool`: saída com `chave=valor` volta `[BLOCKED: Cookie/query
   string data]`. Devolva JSON.stringify de arrays e em fatias (corta ~1.000
   caracteres). Em `browser_batch`, no máximo ~8 esperas de 10 s.
-- 🔴 **Branches `robo/precos-*`: 17 agora.** Segue valendo o item abaixo.
+- 🟢 **Os 17 branches `robo/precos-*` foram apagados** em 01/11, a pedido dele.
 
 ## 26/10/2026: produtos dos vídeos no topo
 
@@ -121,9 +120,6 @@ em 11/09/2026, depois da pesquisa.
   - **CLAUDE.md dividido por assunto:** este arquivo tem a retomada, as
     regras e o índice, e o resto foi movido sem cortes para `docs/`.
     Conferido por script: 0 linhas perdidas.
-- 🔴 **Apagar os 11 branches `robo/precos-2026-10-15..25`**: o modo
-  automático **bloqueou** `git push origin --delete`. Ele roda o comando
-  (`!` no prompt) ou libera a permissão.
 
 ## 25/10/2026 (tarde): preços corrigidos e guias na linha do tempo
 
@@ -145,8 +141,6 @@ em 11/09/2026, depois da pesquisa.
   - não aplicado: Phoebe (conta `CF2025…`, 0 vendas) e Anthelios 80 (o
     site já mostra a loja oficial).
   - O ponto de 25/10 do `historico.json` foi corrigido junto.
-  - ⚠️ Os branches `robo/precos-2026-10-15` a `-25` seguem abertos (PRs
-    velhos, **não mergear**). Fechar e apagar.
 
 ## Onde paramos — 25/10/2026 (fila do garimpo publicada)
 

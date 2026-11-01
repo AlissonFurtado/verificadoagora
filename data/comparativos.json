@@ -1180,12 +1180,12 @@
     {
       "meli_id": "MLB53222689",
       "titulo": "Kit de 10 potes de vidro 640 ml vale a pena? Comparamos os dois do site",
-      "resumo": "Este kit está a {preco}, com {desconto}% de desconto. Temos dois kits quase gêmeos aqui: mesma capacidade, mesma quantidade, mesma tampa — e um deles custa menos. A diferença que decide é uma só, e não aparece na foto: **o tipo de vidro**. Quem tira pote do freezer e põe no micro-ondas precisa ler a primeira linha da tabela antes de escolher.",
+      "resumo": "Este kit está a {preco}, com {desconto}% de desconto. Temos dois kits quase gêmeos aqui: mesma capacidade, mesma quantidade, mesma tampa. A diferença que decide é uma só, e não aparece na foto: **o tipo de vidro**. Quem tira pote do freezer e põe no micro-ondas precisa ler a primeira linha da tabela antes de escolher.",
       "escolha_rapida": [
         {
           "perfil": "Congela a marmita e esquenta direto",
           "chave": "rishon",
-          "porque": "Borossilicato aguenta a mudança brusca de temperatura que trinca vidro comum — e, neste caso, ainda sai mais barato."
+          "porque": "Borossilicato aguenta a mudança brusca de temperatura que trinca vidro comum."
         },
         {
           "perfil": "Guarda na geladeira e esquenta no dia seguinte",
@@ -1201,8 +1201,8 @@
         },
         {
           "chave": "rishon",
-          "nome": "Kit borossilicato",
-          "meli_id": "MLB63904966"
+          "nome": "Kit Vitrex",
+          "meli_id": "MLB65269789"
         }
       ],
       "linhas": [
@@ -1255,13 +1255,13 @@
           "campo": "Tampa",
           "valores": {
             "starhouse": "Hermética, com trava lateral",
-            "rishon": "Hermética, com trava lateral"
+            "rishon": "Hermética"
           },
           "vencedores": [
             "starhouse",
             "rishon"
           ],
-          "nota": "As duas travam com clipes e vedação de borracha, o que permite transportar o pote deitado. ⚠️ **Nenhuma das duas vai ao micro-ondas** — aquece só o pote, com a tampa fora. Vale para toda tampa plástica com borracha."
+          "nota": "Os dois anúncios declaram tampa hermética, e só o Starhouse fala em trava lateral. ⚠️ **Nenhuma das duas vai ao micro-ondas** — aquece só o pote, com a tampa fora. Vale para toda tampa plástica com borracha."
         },
         {
           "campo": "Micro-ondas, freezer e lava-louças",
@@ -1297,10 +1297,10 @@
       "contra": [
         "O anúncio não diz de que vidro o pote é feito, e isso decide a ida do freezer ao micro-ondas.",
         "Também não informa as medidas do pote — quem precisa saber se cabe na marmiteira fica no escuro.",
-        "Sai mais caro que o kit de borossilicato daqui do lado, que informa as duas coisas.",
+        "O kit de borossilicato daqui do lado informa as duas coisas.",
         "A tampa não vai ao micro-ondas. Nenhuma desta categoria vai, mas é o erro mais comum de quem nunca usou."
       ],
-      "veredito": "Se você congela a marmita e esquenta direto no micro-ondas, **o kit de borossilicato é a escolha**, e não é questão de gosto: o material foi feito para aguentar a mudança brusca de temperatura que quebra vidro comum, e ainda custa menos. Se a sua rotina é montar a marmita, guardar na geladeira e esquentar no dia seguinte, a diferença de material praticamente não aparece — aí este kit resolve igual, a {preco}, e você economiza {economia} sobre o preço de tabela. O que não muda em nenhum dos dois: a tampa sai antes de ir ao micro-ondas.",
+      "veredito": "Se você congela a marmita e esquenta direto no micro-ondas, **o kit de borossilicato é a escolha**, e não é questão de gosto: o material foi feito para aguentar a mudança brusca de temperatura que quebra vidro comum. Se a sua rotina é montar a marmita, guardar na geladeira e esquentar no dia seguinte, a diferença de material praticamente não aparece — aí este kit resolve igual, a {preco}, e você economiza {economia} sobre o preço de tabela. O que não muda em nenhum dos dois: a tampa sai antes de ir ao micro-ondas.",
       "fontes": [
         {
           "titulo": "Borosilicate glass — propriedades e resistência a choque térmico (Wikipedia)",
