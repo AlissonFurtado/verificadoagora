@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-01",
+  "atualizado_em": "2026-11-02",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1722,6 +1722,30 @@
       "sugerido_em": "2026-11-01",
       "familia": "Migstore Boné NY Boné",
       "preco_sugerido": 31.91,
+      "vezes": 1
+    },
+    "MLB77754884": {
+      "sugerido_em": "2026-11-02",
+      "familia": "Mouse Davely Gamer G330",
+      "preco_sugerido": 30.99,
+      "vezes": 1
+    },
+    "MLB80854232": {
+      "sugerido_em": "2026-11-02",
+      "familia": "Mala Falcon Line Dubai de Bordo ANAC",
+      "preco_sugerido": 144.9,
+      "vezes": 1
+    },
+    "MLB79827488": {
+      "sugerido_em": "2026-11-02",
+      "familia": "Tripé para câmera Weport Tripé De Mesa WEPR7S de 170cm de diâmetro",
+      "preco_sugerido": 34.57,
+      "vezes": 1
+    },
+    "MLB57944667": {
+      "sugerido_em": "2026-11-02",
+      "familia": "Smartwatch Bon Vivant Digital Series 9 T900 ULTRA tela de 49\"",
+      "preco_sugerido": 48.43,
       "vezes": 1
     }
   }

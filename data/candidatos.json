@@ -1,21 +1,66 @@
 {
-  "garimpado_em": "2026-11-01",
-  "total": 1,
+  "garimpado_em": "2026-11-02",
+  "total": 4,
   "candidatos": [
     {
-      "meli_id": "MLB56129679",
-      "familia": "Migstore Boné NY Boné",
+      "meli_id": "MLB77754884",
+      "familia": "Mouse Davely Gamer G330",
       "tipo": "produto",
-      "nome": "Boné Ny New York Masculino Feminino Unissex Fitão Blogueira Cor Branco E Preto Tamanho Un",
-      "categoria": "Calçados, Roupas e Bolsas",
-      "preco": 31.91,
-      "preco_original": 44.99,
-      "desconto_percentual": 29,
-      "imagem": "https://http2.mlstatic.com/D_NQ_NP_918468-MLA92439464901_092025-F.jpg",
-      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB56129679",
+      "nome": "Mouse Gamer RGB USB Com Fio 3200 DPI Ajustável 7 Botões Fire Button LED 7 Cores Para PC Ergonômico",
+      "categoria": "Periféricos para PC",
+      "preco": 30.99,
+      "preco_original": 99,
+      "desconto_percentual": 68,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_977554-MLA118323419098_102026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB77754884",
       "no_foco": false,
       "motivo": "inédito",
-      "garimpado_em": "2026-11-01"
+      "garimpado_em": "2026-11-02"
+    },
+    {
+      "meli_id": "MLB80854232",
+      "familia": "Mala Falcon Line Dubai de Bordo ANAC",
+      "tipo": "produto",
+      "nome": "Mala De Viagem Bordo Mão Pequena 10kg Abs Cadeado 360 Azul",
+      "categoria": "Calçados, Roupas e Bolsas",
+      "preco": 144.9,
+      "preco_original": 349.9,
+      "desconto_percentual": 58,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_940651-MLA118415001690_102026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB80854232",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-11-02"
+    },
+    {
+      "meli_id": "MLB79827488",
+      "familia": "Tripé para câmera Weport Tripé De Mesa WEPR7S de 170cm de diâmetro",
+      "tipo": "produto",
+      "nome": "Tripé Para Celular Bastão De Selfie Bluetooth 1,70m Extensível Luz Led Rotação 360° Portátil Pau De Selfie Foto Vídeo Preto 4 Em 1 Weport",
+      "categoria": "Câmeras e Acessórios",
+      "preco": 34.57,
+      "preco_original": 69.9,
+      "desconto_percentual": 50,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_987070-MLA116881626548_092026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB79827488",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-11-02"
+    },
+    {
+      "meli_id": "MLB57944667",
+      "familia": "Smartwatch Bon Vivant Digital Series 9 T900 ULTRA tela de 49\"",
+      "tipo": "produto",
+      "nome": "Relogio Smartwatch T900 Serie 9 Ultra 49mm Whats Gps Nfc Caixa Prateado Pulseira Laranja Bisel Prateado Desenho Da Pulseira Oceano",
+      "categoria": "Monitores Esportivos",
+      "preco": 48.43,
+      "preco_original": 65,
+      "desconto_percentual": 25,
+      "imagem": "https://http2.mlstatic.com/D_NQ_NP_871328-MLA106071872184_022026-F.jpg",
+      "url_do_produto": "https://www.mercadolivre.com.br/p/MLB57944667",
+      "no_foco": false,
+      "motivo": "inédito",
+      "garimpado_em": "2026-11-02"
     }
   ]
 }
