@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-02",
+  "atualizado_em": "2026-11-03",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1746,6 +1746,24 @@
       "sugerido_em": "2026-11-02",
       "familia": "Smartwatch Bon Vivant Digital Series 9 T900 ULTRA tela de 49\"",
       "preco_sugerido": 48.43,
+      "vezes": 1
+    },
+    "MLB54102936": {
+      "sugerido_em": "2026-11-03",
+      "familia": "Xiaomi Redmi 15 Dual SIM",
+      "preco_sugerido": 1212,
+      "vezes": 1
+    },
+    "MLB29303249": {
+      "sugerido_em": "2026-11-03",
+      "familia": "Filme instantâneo fotográfico Fujifilm FILMEMINI20",
+      "preco_sugerido": 118.9,
+      "vezes": 1
+    },
+    "MLB54982411": {
+      "sugerido_em": "2026-11-03",
+      "familia": "Samsung Galaxy A17 4G",
+      "preco_sugerido": 1216.78,
       "vezes": 1
     }
   }
