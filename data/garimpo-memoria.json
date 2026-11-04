@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-03",
+  "atualizado_em": "2026-11-04",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -891,10 +891,10 @@
       "vezes": 1
     },
     "MLB21672188": {
-      "sugerido_em": "2026-10-13",
+      "sugerido_em": "2026-11-04",
       "familia": "Aspirador Tambor Wap GTW 10 10L FW005705",
-      "preco_sugerido": 341.06,
-      "vezes": 1
+      "preco_sugerido": 259.99,
+      "vezes": 2
     },
     "MLB19140415": {
       "sugerido_em": "2026-10-14",
@@ -945,10 +945,10 @@
       "vezes": 1
     },
     "MLB22778772": {
-      "sugerido_em": "2026-10-14",
+      "sugerido_em": "2026-11-04",
       "familia": "Controle joystick Redfin REDFIN 360 REDFIN XBOX 360",
-      "preco_sugerido": 45,
-      "vezes": 1
+      "preco_sugerido": 38.08,
+      "vezes": 2
     },
     "MLB65974554": {
       "sugerido_em": "2026-10-14",
@@ -1764,6 +1764,24 @@
       "sugerido_em": "2026-11-03",
       "familia": "Samsung Galaxy A17 4G",
       "preco_sugerido": 1216.78,
+      "vezes": 1
+    },
+    "MLB78889321": {
+      "sugerido_em": "2026-11-04",
+      "familia": "Moto G37 Dual SIM",
+      "preco_sugerido": 1099,
+      "vezes": 1
+    },
+    "MLB33997846": {
+      "sugerido_em": "2026-11-04",
+      "familia": "Controle joystick sem fio Sony PlayStation DualSense Dualsense",
+      "preco_sugerido": 409,
+      "vezes": 1
+    },
+    "MLB51340616": {
+      "sugerido_em": "2026-11-04",
+      "familia": "Moto G86 Dual SIM",
+      "preco_sugerido": 1899.05,
       "vezes": 1
     }
   }
