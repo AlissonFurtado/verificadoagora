@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-05",
+  "atualizado_em": "2026-11-06",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -1806,6 +1806,42 @@
       "sugerido_em": "2026-11-05",
       "familia": "Mouse sem fio Logitech Pebble M350S M350S",
       "preco_sugerido": 79.9,
+      "vezes": 1
+    },
+    "MLB39016247": {
+      "sugerido_em": "2026-11-06",
+      "familia": "Boticário Quasar Blue para masculino",
+      "preco_sugerido": 75.95,
+      "vezes": 1
+    },
+    "MLB18347134": {
+      "sugerido_em": "2026-11-06",
+      "familia": "Smartwatch Garmin Forerunner Forerunner 55 tela de 1.04\"",
+      "preco_sugerido": 1057,
+      "vezes": 1
+    },
+    "MLB25834979": {
+      "sugerido_em": "2026-11-06",
+      "familia": "Relógio de pulso Oupinke 6010",
+      "preco_sugerido": 79,
+      "vezes": 1
+    },
+    "MLB63281934": {
+      "sugerido_em": "2026-11-06",
+      "familia": "TOPSAND Activewear Kit 20 Elastico Para Treino",
+      "preco_sugerido": 39.97,
+      "vezes": 1
+    },
+    "MLB19508984": {
+      "sugerido_em": "2026-11-06",
+      "familia": "Protetor solar Isdin Fotoprotector ISDIN Fusion Water FPS 60 60FPS en gel creme",
+      "preco_sugerido": 77.62,
+      "vezes": 1
+    },
+    "MLB65017673": {
+      "sugerido_em": "2026-11-06",
+      "familia": "TOPSAND Activewear Kit 18 Elastico Para Treino",
+      "preco_sugerido": 34.97,
       "vezes": 1
     }
   }
