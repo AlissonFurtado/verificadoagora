@@ -70,9 +70,11 @@ jobs:
           git add data/historico.json
           if ! git diff --cached --quiet; then
             git commit -m "Histórico de preços de $(date +%d/%m/%Y)"
-            # A main pode ter andado durante a rodada: em 01/11/2026 um commit
-            # feito nesse intervalo recusou o push e o dia inteiro se perdeu.
-            git pull --rebase origin main
+            # A main pode ter andado durante a rodada, então rebase antes do push.
+            # ⚠️ `--autostash` é obrigatório: o produtos.json ainda está
+            # modificado aqui, e sem ele o pull morre com código 128 ("You have
+            # unstaged changes"). Foi o que parou o robô de 02 a 06/11/2026.
+            git pull --rebase --autostash origin main
             git push origin main
           fi
 
@@ -82,7 +84,7 @@ jobs:
           git add data/produtos.json
           if ! git diff --cached --quiet; then
             git commit -F corpo.md
-            git pull --rebase origin main
+            git pull --rebase --autostash origin main
             git push origin main
             echo "Preços normais atualizados direto na main."
           fi

@@ -99,9 +99,7 @@ em 11/09/2026, depois da pesquisa.
 - 🟢 **/entrar sem o check verde:** Lupita no cabeçalho.
 - 🔴 **Próxima sessão:** indexar, nesta ordem, o guia de BTUs, o de ar-condicionado na
   Black Friday, o de Natal e as 7 fichas novas.
-- **Próximos vídeos sugeridos (a decisão é dele):** Instax Mini 12, air fryer
-  Britânia, OneBlade, Galaxy A57 e kit de potes Vitrex. Ao gravar, somar o
-  `meli_id` em `src/lib/videos.ts`.
+- **Vídeo novo do outro agente:** somar o `meli_id` em `src/lib/videos.ts`.
 
 ### 01/11/2026 (noite): Google, "Caiu hoje" e série de vídeos
 
@@ -112,7 +110,15 @@ em 11/09/2026, depois da pesquisa.
   main durante a rodada recusaram o push. Workflow corrigido com `git pull
   --rebase` antes de cada push. **Evite push na main perto das 16 h às 18 h
   UTC.** O dia 01/11 só tem no histórico os 12 pontos que apliquei à mão.
-  - 🔴 **Próxima sessão:** confirmar `Preços de 02/11` e o A57 `disponivel`.
+  - 🔴 **E o meu conserto parou o robô de 02 a 06/11** (código 128 todo dia):
+    `git pull --rebase` recusa rodar com o `produtos.json` ainda modificado.
+    Trocado por `--autostash` em 07/11, testado num clone. **De 02 a 06/11 não
+    há histórico.** A causa de 01/11 (também 128, antes do conserto) segue
+    sem log.
+  - 🔴 **Próxima sessão:** confirmar o commit `Histórico de preços de 07/11`
+    e o A57 `disponivel`. Se falhar de novo, pedir o log a ele (GitHub
+    deslogado aqui; a API pública dá só o passo e o código de saída:
+    `api.github.com/repos/AlissonFurtado/verificadoagora/actions/workflows/conferir-precos.yml/runs`).
 - 🔴 **Search Console em 01/11, janela de 28 dias: 0 cliques, 132 impressões,
   posição 19,3.** Em 3 meses: 0 cliques e 188 impressões. Indexadas 93, não
   indexadas 42 (25 detectadas, 10 rastreadas, 5 em 404). Links externos: 0.
@@ -126,9 +132,14 @@ em 11/09/2026, depois da pesquisa.
     há pouca impressão para justificar mexer no molde.
 - 🟢 **Faixa "Caiu hoje"** (`caiu-hoje.tsx`): até 5 quedas de manchete, só com
   histórico igual à vitrine (`quedasDaFaixa`). Some em dia sem queda.
-- 🟢 **Série "Esse desconto é real?"**: `/reel-prova/{slug}?caso=riscado|queda|
+- 🔴 **Vídeo não é comigo: quem faz é o outro agente dele** (ordem dele em
+  01/11). Os 3 da série saíram com 410,8 s (6:51) em vez dos 14,8 s que informei,
+  e ele reprovou. Não renderize nem sugira vídeo a partir daqui. **Duração só se
+  informa medindo o arquivo final com `ffprobe`.**
+- 🔴 **Série "Esse desconto é real?": reprovada, não publicar.** `/reel-prova/{slug}?caso=riscado|queda|
   mais-alto&cena=...`, com `node scripts/reel.mjs <slug> --caso X --base URL`.
-  A rota devolve 409 se o histórico do dia não sustenta o caso.
+  A rota devolve 409 se o histórico do dia não sustenta o caso. Rota e `--caso`
+  seguem no código, sem uso.
   - 🔴 **Regra dele: cita só o fato.** Sem "golpe" ou "falso", sem citar loja.
   - ⚠️ **Confira o "de" na página do Meli antes de renderizar.** O Realme C73
     caiu do lote: nosso `preco_original` estava em 1.599, e a página mostra
