@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-06",
+  "atualizado_em": "2026-11-07",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -123,10 +123,10 @@
       "vezes": 1
     },
     "MLB16211422": {
-      "sugerido_em": "2026-09-08",
-      "familia": "Logitech G G Series G203 Lightsync G203",
-      "preco_sugerido": 102,
-      "vezes": 1
+      "sugerido_em": "2026-11-07",
+      "familia": "Mouse Gamer G203 Lightsync Rgb 8.000 Dpi Ciano Logitech G",
+      "preco_sugerido": 89.9,
+      "vezes": 2
     },
     "MLB75624193": {
       "sugerido_em": "2026-09-08",
@@ -1842,6 +1842,30 @@
       "sugerido_em": "2026-11-06",
       "familia": "TOPSAND Activewear Kit 18 Elastico Para Treino",
       "preco_sugerido": 34.97,
+      "vezes": 1
+    },
+    "MLB36136752": {
+      "sugerido_em": "2026-11-07",
+      "familia": "Boticário Perfume Liz Flora Água de colônia para feminino",
+      "preco_sugerido": 71.9,
+      "vezes": 1
+    },
+    "MLB52170796": {
+      "sugerido_em": "2026-11-07",
+      "familia": "Monitor Gamer TCL com tela de 25\" 300Hz e resolução FHD",
+      "preco_sugerido": 1249,
+      "vezes": 1
+    },
+    "MLB53639627": {
+      "sugerido_em": "2026-11-07",
+      "familia": "Colchonete BPF Equipamentos e Acessórios Colchonete academia exercícios",
+      "preco_sugerido": 33.99,
+      "vezes": 1
+    },
+    "MLB62870125": {
+      "sugerido_em": "2026-11-07",
+      "familia": "Monitor AOC com tela de 27\" 144Hz e resolução Full HD",
+      "preco_sugerido": 699,
       "vezes": 1
     }
   }
