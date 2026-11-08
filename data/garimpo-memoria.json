@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-07",
+  "atualizado_em": "2026-11-08",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -147,10 +147,10 @@
       "vezes": 1
     },
     "MLB50243717": {
-      "sugerido_em": "2026-09-09",
+      "sugerido_em": "2026-11-08",
       "familia": "Suporte Zinnia ZNO-ZNNBO110-WH01",
-      "preco_sugerido": 103.9,
-      "vezes": 1
+      "preco_sugerido": 105.63,
+      "vezes": 3
     },
     "MLB46560669": {
       "sugerido_em": "2026-09-09",
@@ -1866,6 +1866,42 @@
       "sugerido_em": "2026-11-07",
       "familia": "Monitor AOC com tela de 27\" 144Hz e resolução Full HD",
       "preco_sugerido": 699,
+      "vezes": 1
+    },
+    "MLB75638604": {
+      "sugerido_em": "2026-11-08",
+      "familia": "Samsung Galaxy A27 5G 5G Dual SIM",
+      "preco_sugerido": 1475,
+      "vezes": 1
+    },
+    "MLB19466433": {
+      "sugerido_em": "2026-11-08",
+      "familia": "Sabão líquido Tixan Ypê Primavera antibacterial galão",
+      "preco_sugerido": 49.99,
+      "vezes": 1
+    },
+    "MLB69247468": {
+      "sugerido_em": "2026-11-08",
+      "familia": "Smartwatch FAMILAR Xiaomi HyperOS Redmi Watch 5 active tela de 2.07\"",
+      "preco_sugerido": 243.78,
+      "vezes": 1
+    },
+    "MLB19907986": {
+      "sugerido_em": "2026-11-08",
+      "familia": "Fonte de alimentação para PC Fortrek ATX Crusader 500W",
+      "preco_sugerido": 101.99,
+      "vezes": 1
+    },
+    "MLB79921161": {
+      "sugerido_em": "2026-11-08",
+      "familia": "Reloj de mesa digital Davely Relogio Medidor Temperatura -",
+      "preco_sugerido": 30.22,
+      "vezes": 1
+    },
+    "MLB56979786": {
+      "sugerido_em": "2026-11-08",
+      "familia": "Compressor de ar a bateria, USB tipo C portátil VERUNTO Compressor VER-A15 Compressor VER-B15 50L 0.02hp",
+      "preco_sugerido": 63.19,
       "vezes": 1
     }
   }
