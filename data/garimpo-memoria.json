@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-09",
+  "atualizado_em": "2026-11-10",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -321,10 +321,10 @@
       "vezes": 1
     },
     "MLB15200666": {
-      "sugerido_em": "2026-09-11",
+      "sugerido_em": "2026-11-10",
       "familia": "Suporte ELG F80N",
-      "preco_sugerido": 150.99,
-      "vezes": 1
+      "preco_sugerido": 123.74,
+      "vezes": 2
     },
     "MLB51541501": {
       "sugerido_em": "2026-09-12",
@@ -1539,10 +1539,10 @@
       "vezes": 1
     },
     "MLB13409956": {
-      "sugerido_em": "2026-10-22",
+      "sugerido_em": "2026-11-10",
       "familia": "Chaleira elétrica Genérica Genérico 182F 1.8L",
-      "preco_sugerido": 39.38,
-      "vezes": 1
+      "preco_sugerido": 31.26,
+      "vezes": 2
     },
     "MLB34016199": {
       "sugerido_em": "2026-10-23",
@@ -1908,6 +1908,48 @@
       "sugerido_em": "2026-11-09",
       "familia": "Mouse Logitech M196 910-007458",
       "preco_sugerido": 49.9,
+      "vezes": 1
+    },
+    "MLB78457348": {
+      "sugerido_em": "2026-11-10",
+      "familia": "Pote para alimentos hermético Vitrex 370mL",
+      "preco_sugerido": 68.9,
+      "vezes": 1
+    },
+    "MLB62797467": {
+      "sugerido_em": "2026-11-10",
+      "familia": "O Boticário Floratta Flores Secretas EDT para feminino",
+      "preco_sugerido": 84.89,
+      "vezes": 1
+    },
+    "MLB79982642": {
+      "sugerido_em": "2026-11-10",
+      "familia": "Pendrive Bahrein Dual Premium OTG Dual Premium OTG 32GB BAH32GB 32GB 2.0",
+      "preco_sugerido": 51.94,
+      "vezes": 1
+    },
+    "MLB64256647": {
+      "sugerido_em": "2026-11-10",
+      "familia": "Pisca-pisca de natal LuvinCo Luvin cortina led bivolt 3x3m pisca",
+      "preco_sugerido": 31.79,
+      "vezes": 1
+    },
+    "MLB54961455": {
+      "sugerido_em": "2026-11-10",
+      "familia": "Samsung Galaxy A17 5G Dual SIM",
+      "preco_sugerido": 1499,
+      "vezes": 1
+    },
+    "MLB42456000": {
+      "sugerido_em": "2026-11-10",
+      "familia": "Máscara Acidificante Amend Equilíbrio do pH 250g",
+      "preco_sugerido": 33.98,
+      "vezes": 1
+    },
+    "MLB18238727": {
+      "sugerido_em": "2026-11-10",
+      "familia": "Aspirador Vertical, De mão Electrolux STKs VERTICAIS STK15 1.6L 3015AKG0504",
+      "preco_sugerido": 170,
       "vezes": 1
     }
   }
