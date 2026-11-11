@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-10",
+  "atualizado_em": "2026-11-11",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -363,10 +363,10 @@
       "vezes": 1
     },
     "MLB42420279": {
-      "sugerido_em": "2026-09-12",
+      "sugerido_em": "2026-11-11",
       "familia": "Monitor Gamer AOC com tela de 23.8\" 100Hz e resolução Full HD",
-      "preco_sugerido": 528.37,
-      "vezes": 1
+      "preco_sugerido": 499,
+      "vezes": 2
     },
     "MLB75627274": {
       "sugerido_em": "2026-09-13",
@@ -1950,6 +1950,60 @@
       "sugerido_em": "2026-11-10",
       "familia": "Aspirador Vertical, De mão Electrolux STKs VERTICAIS STK15 1.6L 3015AKG0504",
       "preco_sugerido": 170,
+      "vezes": 1
+    },
+    "MLB26885943": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Rádio 9 Xtrad Radio analógico portátil",
+      "preco_sugerido": 69.56,
+      "vezes": 1
+    },
+    "MLB24061510": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Monitor LG com tela de 31.5\"",
+      "preco_sugerido": 1098,
+      "vezes": 1
+    },
+    "MLB37987022": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Monitor VXpro com tela de 19\"",
+      "preco_sugerido": 192,
+      "vezes": 1
+    },
+    "MLB58519492": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Fone de ouvido in-ear sem fio PRO PHONE SEE Foninho Geracao USB Esporte Acadmeia com luz LED",
+      "preco_sugerido": 49.7,
+      "vezes": 1
+    },
+    "MLB73588329": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Suporte bastão de selfie RSAM 3 em 1 com LED e Bluetooth Bastão Celular 360° Controle",
+      "preco_sugerido": 31.43,
+      "vezes": 1
+    },
+    "MLB62870034": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Monitor LG com tela de 34\" 160Hz e resolução WQHD",
+      "preco_sugerido": 1789,
+      "vezes": 1
+    },
+    "MLB27341794": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Ventilador de pé Mondial VSP-40C-NB",
+      "preco_sugerido": 199,
+      "vezes": 1
+    },
+    "MLB52052995": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Air fryer Philco Air Fryer PAF65A de 6.5L",
+      "preco_sugerido": 294,
+      "vezes": 1
+    },
+    "MLB76917276": {
+      "sugerido_em": "2026-11-11",
+      "familia": "Smartwatch Google Fitbit Air Google Fitbit Air caixa de 4mm",
+      "preco_sugerido": 768.07,
       "vezes": 1
     }
   }
