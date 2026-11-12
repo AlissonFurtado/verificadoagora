@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-11",
+  "atualizado_em": "2026-11-12",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -381,10 +381,10 @@
       "vezes": 1
     },
     "MLB50200257": {
-      "sugerido_em": "2026-09-13",
+      "sugerido_em": "2026-11-12",
       "familia": "Monitor Gamer AOC com tela de 21.5\" 120Hz e resolução Full HD",
-      "preco_sugerido": 424,
-      "vezes": 1
+      "preco_sugerido": 383,
+      "vezes": 2
     },
     "MLB25860033": {
       "sugerido_em": "2026-09-13",
@@ -2004,6 +2004,54 @@
       "sugerido_em": "2026-11-11",
       "familia": "Smartwatch Google Fitbit Air Google Fitbit Air caixa de 4mm",
       "preco_sugerido": 768.07,
+      "vezes": 1
+    },
+    "MLB44117615": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Air fryer Mondial Air Fryer Air Fryer Oven",
+      "preco_sugerido": 466.76,
+      "vezes": 1
+    },
+    "MLB75627272": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Mochila para notebook jiesipote 9243 40L",
+      "preco_sugerido": 99.99,
+      "vezes": 1
+    },
+    "MLB55232692": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Loção hidratante Cetaphil para pele normal a seca x 1 L",
+      "preco_sugerido": 109.9,
+      "vezes": 1
+    },
+    "MLB77599086": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Huawei Watch GT7 Watch GT 7 PRO tela de 1.47\"",
+      "preco_sugerido": 1499,
+      "vezes": 1
+    },
+    "MLB34459465": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Detergente Lava Louças em Pó para Máquina Ypê 1Kg 3em1 Com Secante",
+      "preco_sugerido": 36.99,
+      "vezes": 1
+    },
+    "MLB79391475": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Monitor LG com tela de 27\" 144Hz e resolução Full HD",
+      "preco_sugerido": 789,
+      "vezes": 1
+    },
+    "MLB18717798": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Fraldas para adultos descartáveis Bigfral Derma Plus",
+      "preco_sugerido": 30.94,
+      "vezes": 1
+    },
+    "MLB55899529": {
+      "sugerido_em": "2026-11-12",
+      "familia": "Selins de bicicleta para SIGN BK-0170 -",
+      "preco_sugerido": 37.99,
       "vezes": 1
     }
   }
