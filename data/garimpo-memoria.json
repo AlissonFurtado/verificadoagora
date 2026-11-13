@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-12",
+  "atualizado_em": "2026-11-13",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -315,10 +315,10 @@
       "vezes": 1
     },
     "MLB43534649": {
-      "sugerido_em": "2026-09-11",
-      "familia": "Fone de ouvido JBL TWS JBLWBUDS2BLK JBLWBUDS2BLK",
-      "preco_sugerido": 253.04,
-      "vezes": 1
+      "sugerido_em": "2026-11-13",
+      "familia": "Fone de ouvido in-ear sem fio JBL TWS JBLWBUDS2BLK JBLWBUDS2PIK",
+      "preco_sugerido": 271.26,
+      "vezes": 2
     },
     "MLB15200666": {
       "sugerido_em": "2026-11-10",
@@ -2052,6 +2052,42 @@
       "sugerido_em": "2026-11-12",
       "familia": "Selins de bicicleta para SIGN BK-0170 -",
       "preco_sugerido": 37.99,
+      "vezes": 1
+    },
+    "MLB67714382": {
+      "sugerido_em": "2026-11-13",
+      "familia": "Huawei Watch Fit Watch Fit 5 tela de 1.82\"",
+      "preco_sugerido": 699,
+      "vezes": 1
+    },
+    "MLB47519001": {
+      "sugerido_em": "2026-11-13",
+      "familia": "Fone de ouvido sem fio Aiwa Earbuds AWS-EB-05 EB-05",
+      "preco_sugerido": 90.9,
+      "vezes": 1
+    },
+    "MLB19766716": {
+      "sugerido_em": "2026-11-13",
+      "familia": "Cartão de memória Intelbras 64GB 32TBW 4600163 32TBW",
+      "preco_sugerido": 125.9,
+      "vezes": 2
+    },
+    "MLB19620491": {
+      "sugerido_em": "2026-11-13",
+      "familia": "Gel De Limpeza Effaclar Concentrado La Roche-Posay dia/noite para pele oleosa 30+ anos",
+      "preco_sugerido": 76.79,
+      "vezes": 1
+    },
+    "MLB59323822": {
+      "sugerido_em": "2026-11-13",
+      "familia": "Monitor Gamer AOC com tela de 27\" 180Hz e resolução QHD",
+      "preco_sugerido": 1136,
+      "vezes": 1
+    },
+    "MLB59323651": {
+      "sugerido_em": "2026-11-13",
+      "familia": "Monitor Gamer AOC com tela de 32\" e resolução QHD",
+      "preco_sugerido": 1082.21,
       "vezes": 1
     }
   }
