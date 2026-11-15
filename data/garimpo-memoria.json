@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-14",
+  "atualizado_em": "2026-11-15",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -2118,6 +2118,30 @@
       "sugerido_em": "2026-11-14",
       "familia": "Mouse Logitech M170 910-006862",
       "preco_sugerido": 44.9,
+      "vezes": 1
+    },
+    "MLB79782650": {
+      "sugerido_em": "2026-11-15",
+      "familia": "Suporte ajustável para portáteis com 6 posições HYTALUX SUPORTE EM ALUMÍNIO LUX-H",
+      "preco_sugerido": 35,
+      "vezes": 1
+    },
+    "MLB80193062": {
+      "sugerido_em": "2026-11-15",
+      "familia": "Pendrive M2XT Pen Drive 128GB Blazer Cruze M2XT Super Speed M2XT Blazer Cruze Z50 128GB 128GB 2.0",
+      "preco_sugerido": 47.51,
+      "vezes": 1
+    },
+    "MLB24588020": {
+      "sugerido_em": "2026-11-15",
+      "familia": "Cartão de memória SanDisk Ultra SDSQUNR-128G-GN3MA Ultra com adaptador SD",
+      "preco_sugerido": 31.15,
+      "vezes": 1
+    },
+    "MLB65276331": {
+      "sugerido_em": "2026-11-15",
+      "familia": "Starlink Mini X omnidirecional",
+      "preco_sugerido": 448.97,
       "vezes": 1
     }
   }
