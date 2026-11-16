@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-15",
+  "atualizado_em": "2026-11-16",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -405,10 +405,10 @@
       "vezes": 1
     },
     "MLB65541449": {
-      "sugerido_em": "2026-09-13",
+      "sugerido_em": "2026-11-16",
       "familia": "Fone de ouvido wireless on ear sem fio JBL Tune 530BT JBLT530BTBLKBR",
-      "preco_sugerido": 199,
-      "vezes": 1
+      "preco_sugerido": 185,
+      "vezes": 2
     },
     "MLB68199804": {
       "sugerido_em": "2026-09-13",
@@ -711,10 +711,10 @@
       "vezes": 1
     },
     "MLB29217644": {
-      "sugerido_em": "2026-09-21",
+      "sugerido_em": "2026-11-16",
       "familia": "Filme instantâneo fotográfico Fujifilm FILME",
-      "preco_sugerido": 149.9,
-      "vezes": 1
+      "preco_sugerido": 119,
+      "vezes": 2
     },
     "MLB27080589": {
       "sugerido_em": "2026-09-22",
@@ -2142,6 +2142,24 @@
       "sugerido_em": "2026-11-15",
       "familia": "Starlink Mini X omnidirecional",
       "preco_sugerido": 448.97,
+      "vezes": 1
+    },
+    "MLB53657642": {
+      "sugerido_em": "2026-11-16",
+      "familia": "Tripé para câmera Coolmusic t01 TRI777 de 210cm de diâmetro",
+      "preco_sugerido": 34.68,
+      "vezes": 1
+    },
+    "MLB20662382": {
+      "sugerido_em": "2026-11-16",
+      "familia": "Smart TV AIWA 43” Android Full HD Borda Ultrafina HDR10 Dolby Áudio AWS-TV-43-BL-02-A",
+      "preco_sugerido": 1168,
+      "vezes": 1
+    },
+    "MLB39962085": {
+      "sugerido_em": "2026-11-16",
+      "familia": "Fone de ouvido in-ear gamer sem fio Xiaomi Redmi Buds 6 Play M2420E1",
+      "preco_sugerido": 57.61,
       "vezes": 1
     }
   }
