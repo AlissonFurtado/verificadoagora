@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-16",
+  "atualizado_em": "2026-11-17",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -213,10 +213,10 @@
       "vezes": 1
     },
     "MLB15248175": {
-      "sugerido_em": "2026-09-10",
+      "sugerido_em": "2026-11-17",
       "familia": "Suporte North Bayou NB F80",
-      "preco_sugerido": 111.55,
-      "vezes": 1
+      "preco_sugerido": 88.45,
+      "vezes": 2
     },
     "MLB38176139": {
       "sugerido_em": "2026-11-09",
@@ -2160,6 +2160,36 @@
       "sugerido_em": "2026-11-16",
       "familia": "Fone de ouvido in-ear gamer sem fio Xiaomi Redmi Buds 6 Play M2420E1",
       "preco_sugerido": 57.61,
+      "vezes": 1
+    },
+    "MLB28014788": {
+      "sugerido_em": "2026-11-17",
+      "familia": "Barra de academia NOHARA 11 puxador",
+      "preco_sugerido": 40.45,
+      "vezes": 1
+    },
+    "MLB63062501": {
+      "sugerido_em": "2026-11-17",
+      "familia": "interno SPREAKER Spreaker Gamer SPKR500/120G 1.0 120GB",
+      "preco_sugerido": 158.6,
+      "vezes": 1
+    },
+    "MLB63424299": {
+      "sugerido_em": "2026-11-17",
+      "familia": "Selins de bicicleta para GTA Banco Macio Praia Urbano MTB -",
+      "preco_sugerido": 35.49,
+      "vezes": 1
+    },
+    "MLB53618239": {
+      "sugerido_em": "2026-11-17",
+      "familia": "Kit Principia para Rotina de Skincare Pele Sensível com Protetor Solar FPS 60",
+      "preco_sugerido": 95,
+      "vezes": 1
+    },
+    "MLB62311864": {
+      "sugerido_em": "2026-11-17",
+      "familia": "Pisca-pisca de natal LuvinCo Luvin cascata 400 led natal luvinco",
+      "preco_sugerido": 69.9,
       "vezes": 1
     }
   }
