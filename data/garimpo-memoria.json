@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-17",
+  "atualizado_em": "2026-11-18",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -339,10 +339,10 @@
       "vezes": 1
     },
     "MLB52027456": {
-      "sugerido_em": "2026-09-12",
+      "sugerido_em": "2026-11-18",
       "familia": "Monitor Sam sung com tela de 32\"",
-      "preco_sugerido": 939.99,
-      "vezes": 1
+      "preco_sugerido": 1048.18,
+      "vezes": 2
     },
     "MLB28562373": {
       "sugerido_em": "2026-10-14",
@@ -663,10 +663,10 @@
       "vezes": 2
     },
     "MLB19444510": {
-      "sugerido_em": "2026-09-19",
+      "sugerido_em": "2026-11-18",
       "familia": "Processador AMD Ryzen 5 5500 3.6GHz 4.2GHz Max Turbo Cache 16MB AM4",
-      "preco_sugerido": 522,
-      "vezes": 1
+      "preco_sugerido": 569,
+      "vezes": 2
     },
     "MLB19119113": {
       "sugerido_em": "2026-09-19",
@@ -2190,6 +2190,18 @@
       "sugerido_em": "2026-11-17",
       "familia": "Pisca-pisca de natal LuvinCo Luvin cascata 400 led natal luvinco",
       "preco_sugerido": 69.9,
+      "vezes": 1
+    },
+    "MLB68956726": {
+      "sugerido_em": "2026-11-18",
+      "familia": "Kit Facial Kokeshi Completo 3 Passos Olhos de Gueixa, Pele de Porcelana e Gota de Colágeno",
+      "preco_sugerido": 49.9,
+      "vezes": 1
+    },
+    "MLB22341315": {
+      "sugerido_em": "2026-11-18",
+      "familia": "Fone de ouvido on-ear Logitech Audio H390 H390",
+      "preco_sugerido": 177.75,
       "vezes": 1
     }
   }
