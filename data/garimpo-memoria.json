@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-18",
+  "atualizado_em": "2026-11-19",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -2202,6 +2202,24 @@
       "sugerido_em": "2026-11-18",
       "familia": "Fone de ouvido on-ear Logitech Audio H390 H390",
       "preco_sugerido": 177.75,
+      "vezes": 1
+    },
+    "MLB53817780": {
+      "sugerido_em": "2026-11-19",
+      "familia": "Câmera de segurança Jortan JT-8177 IP com resolução 2MP",
+      "preco_sugerido": 58.8,
+      "vezes": 1
+    },
+    "MLB15345937": {
+      "sugerido_em": "2026-11-19",
+      "familia": "Fone de ouvido over-ear gamer Havit Gamer H2002d H2002dB",
+      "preco_sugerido": 169.9,
+      "vezes": 1
+    },
+    "MLB79843944": {
+      "sugerido_em": "2026-11-19",
+      "familia": "Câmera web KATELUO Webcam Full Hd Webcam Premium Full HD",
+      "preco_sugerido": 32.53,
       "vezes": 1
     }
   }
