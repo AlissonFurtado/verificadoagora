@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-19",
+  "atualizado_em": "2026-11-20",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -393,10 +393,10 @@
       "vezes": 1
     },
     "MLB57489948": {
-      "sugerido_em": "2026-09-13",
+      "sugerido_em": "2026-11-20",
       "familia": "Monitor LG com tela de 24\" 144Hz e resolução Full HD",
-      "preco_sugerido": 625,
-      "vezes": 1
+      "preco_sugerido": 627.83,
+      "vezes": 2
     },
     "MLB16211423": {
       "sugerido_em": "2026-09-13",
@@ -2220,6 +2220,18 @@
       "sugerido_em": "2026-11-19",
       "familia": "Câmera web KATELUO Webcam Full Hd Webcam Premium Full HD",
       "preco_sugerido": 32.53,
+      "vezes": 1
+    },
+    "MLB20689534": {
+      "sugerido_em": "2026-11-20",
+      "familia": "Kit de teclado e mouse gamer Intelbras CSI 50 Intelbras",
+      "preco_sugerido": 98,
+      "vezes": 1
+    },
+    "MLB67444410": {
+      "sugerido_em": "2026-11-20",
+      "familia": "Motorola Edge 70 Fusion FIFA WC 256GB Dual SIM",
+      "preco_sugerido": 2199,
       "vezes": 1
     }
   }
