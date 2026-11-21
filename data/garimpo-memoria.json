@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-20",
+  "atualizado_em": "2026-11-21",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -717,10 +717,10 @@
       "vezes": 2
     },
     "MLB27080589": {
-      "sugerido_em": "2026-09-22",
+      "sugerido_em": "2026-11-21",
       "familia": "Electrolux PE12",
-      "preco_sugerido": 170,
-      "vezes": 1
+      "preco_sugerido": 152.39,
+      "vezes": 2
     },
     "MLB19795010": {
       "sugerido_em": "2026-09-22",
@@ -957,10 +957,10 @@
       "vezes": 1
     },
     "MLB24117280": {
-      "sugerido_em": "2026-10-14",
+      "sugerido_em": "2026-11-21",
       "familia": "Fone de ouvido headphone sem fio Dapon Audio H02D H02D",
-      "preco_sugerido": 78.9,
-      "vezes": 1
+      "preco_sugerido": 59.9,
+      "vezes": 2
     },
     "MLB79316361": {
       "sugerido_em": "2026-10-14",
@@ -2232,6 +2232,12 @@
       "sugerido_em": "2026-11-20",
       "familia": "Motorola Edge 70 Fusion FIFA WC 256GB Dual SIM",
       "preco_sugerido": 2199,
+      "vezes": 1
+    },
+    "MLB69700673": {
+      "sugerido_em": "2026-11-21",
+      "familia": "Moto G Max Dual SIM",
+      "preco_sugerido": 1873.17,
       "vezes": 1
     }
   }
