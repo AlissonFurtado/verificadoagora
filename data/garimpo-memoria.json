@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-21",
+  "atualizado_em": "2026-11-22",
   "vistos": {
     "MLB40556904": {
       "sugerido_em": "2026-09-07",
@@ -729,10 +729,10 @@
       "vezes": 1
     },
     "MLB49653023": {
-      "sugerido_em": "2026-09-23",
-      "familia": "Headset gamer sem fio Redragon Zeus X H510 Pro H510-PRO com luz LED",
-      "preco_sugerido": 334,
-      "vezes": 1
+      "sugerido_em": "2026-11-22",
+      "familia": "Fone de ouvido over-ear gamer sem fio Redragon Zeus X Zeus H510 Pro H510-PRO com luz LED",
+      "preco_sugerido": 289,
+      "vezes": 2
     },
     "MLB56425611": {
       "sugerido_em": "2026-09-23",
@@ -1191,10 +1191,10 @@
       "vezes": 1
     },
     "MLB21361292": {
-      "sugerido_em": "2026-10-16",
+      "sugerido_em": "2026-11-22",
       "familia": "Loção Hidratante Corporal Sem Perfume, com Ceramidas Essenciais e Ácido Hialurônico, Textura Fluida CeraVe 473ml",
-      "preco_sugerido": 93.73,
-      "vezes": 1
+      "preco_sugerido": 79.65,
+      "vezes": 2
     },
     "MLB50614198": {
       "sugerido_em": "2026-10-19",
@@ -2238,6 +2238,36 @@
       "sugerido_em": "2026-11-21",
       "familia": "Moto G Max Dual SIM",
       "preco_sugerido": 1873.17,
+      "vezes": 1
+    },
+    "MLB19708423": {
+      "sugerido_em": "2026-11-22",
+      "familia": "Suplemento en pó Vitafor Whey protein de Isofort Beauty",
+      "preco_sugerido": 123,
+      "vezes": 1
+    },
+    "MLB70110275": {
+      "sugerido_em": "2026-11-22",
+      "familia": "Smartwatch Amazfit Bip Max tela de 2.07\"",
+      "preco_sugerido": 548,
+      "vezes": 1
+    },
+    "MLB65466400": {
+      "sugerido_em": "2026-11-22",
+      "familia": "Moto G77 Dual SIM",
+      "preco_sugerido": 1726,
+      "vezes": 1
+    },
+    "MLB80772580": {
+      "sugerido_em": "2026-11-22",
+      "familia": "Enfeites para árvores de natal LuvinCo Festão 300 Galhos 270cm",
+      "preco_sugerido": 49.7,
+      "vezes": 1
+    },
+    "MLB65564965": {
+      "sugerido_em": "2026-11-22",
+      "familia": "Suporte ART FLEX SOLUÇÃO DE SUPORTE art 50tri imp",
+      "preco_sugerido": 38.49,
       "vezes": 1
     }
   }
