@@ -55,6 +55,32 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## 25/11/2026: robô bloqueado pelo Mercado Livre desde 23/11
+
+- 🔴 **O robô de preços e o garimpo estão parados há 3 dias** (último commit
+  de qualquer um dos dois: 22/11). As rodadas de 23/11 e 24/11 falharam
+  (`actions/runs/45279066045` e `45486095476`, workflow `conferir-precos.yml`,
+  conclusão `failure`, código de saída 1).
+- 🔴 **Não é o costumeiro suspeito isolado: é bloqueio total.** Todo produto do
+  catálogo (os 116, celular, cozinha, beleza, tudo) recebeu da API do Meli
+  `403 PA_UNAUTHORIZED_RESULT_FROM_POLICIES`, `blocked_by: "PolicyAgent"`, em
+  **ambas** as rodadas. Isso não é token vencido (a renovação do
+  `ML_REFRESH_TOKEN` rodou e teve sucesso nas duas) — é a API recusando a
+  aplicação ou a conta inteira, não um item.
+- 🔴 **Consequência prática:** `data/historico.json` e `metadata.ultima_atualizacao`
+  seguem em 22/11. Qualquer "CAIU HOJE" do `canal.mjs` lido a partir de agora
+  compara contra o ponto de 22/11, não contra hoje — a mensagem do dia
+  25/11 citou o iPhone 17e com dado de 3 dias, não confirmado.
+- 🔴 **Próxima sessão (ou ele): entrar no painel de desenvolvedor do Mercado
+  Livre e ver se a aplicação (`ML_APP_ID`) foi suspensa, sinalizada por
+  fraude/abuso, ou se é um bloqueio de IP do runner do GitHub Actions.**
+  "PolicyAgent" é o nome do sistema antifraude/compliance do Meli — bloqueio
+  de política, não de autenticação. Eu (sessão na nuvem) não tenho acesso ao
+  painel do Meli para confirmar a causa.
+- Esta sessão (rotina das 8h de 25/11) não escreveu nem commitou nada no
+  catálogo: sem produto novo sem `perguntas` (os 116 já têm), e os 5 do
+  canal foram só lidos, não marcados como publicados.
+
 ## 01/11/2026: retomada depois de 6 dias sem sessão
 
 - 🟢 **13 suspeitos de 31/10 conferidos em `/p/{id}/s`.** Aplicados à mão:
