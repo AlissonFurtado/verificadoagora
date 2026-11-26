@@ -77,6 +77,18 @@ em 11/09/2026, depois da pesquisa.
   "PolicyAgent" é o nome do sistema antifraude/compliance do Meli — bloqueio
   de política, não de autenticação. Eu (sessão na nuvem) não tenho acesso ao
   painel do Meli para confirmar a causa.
+- 🔴 **26/11: segue parado** (rodada de 25/11 também falhou em "Conferir
+  preços"). O que vi no painel (developers.mercadolivre.com.br/devcenter):
+  app "Verificado Agora", **"Aplicativo não certificada"**, e o aviso "No
+  tenés permiso para crear aplicaciones. Contactá al equipo de OpenPlatform".
+  A tela de editar o app pede **validação por SMS/WhatsApp**: é dele, parei ali.
+  - Não é só conosco: um issue público de 24/11 (`Maxwbh/Lista_de_Presentes#60`)
+    mostra o mesmo 403 em `/products/{id}/items`, e há reclamação no Reclame
+    Aqui do mesmo bloqueio com token válido. **Leitura minha, não confirmada:**
+    o Meli restringiu esse recurso a app certificado ou com permissão
+    funcional. Sem token, daqui a API dá 403 também, então não testa nada.
+  - Plano B se o Meli não liberar: ler o preço pela página `/p/{id}/s`, como
+    já fazemos à mão. Decisão dele.
 - Esta sessão (rotina das 8h de 25/11) não escreveu nem commitou nada no
   catálogo: sem produto novo sem `perguntas` (os 116 já têm), e os 5 do
   canal foram só lidos, não marcados como publicados.
