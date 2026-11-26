@@ -1,5 +1,5 @@
 {
-  "rodado_em": "2026-11-26T13:40:07.979Z",
+  "rodado_em": "2026-11-26T19:57:01.098Z",
   "meli_id": "MLB27727511",
   "resultados": [
     {
@@ -82,7 +82,7 @@
     {
       "rota": "/products/MLB27727511/items",
       "status": 403,
-      "erro": "{\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"blocked_by\":\"PolicyAgent\",\"message\":\"At least one policy returned UNAUTHORIZED.\",\"status\":403}\n"
+      "erro": "{\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"status\":403,\"blocked_by\":\"PolicyAgent\",\"message\":\"At least one policy returned UNAUTHORIZED.\"}\n"
     },
     {
       "rota": "/sites/MLB/search?product_id=MLB27727511",
@@ -91,13 +91,8 @@
     },
     {
       "rota": "/products/search?status=active&site_id=MLB&q=ar%20condicionado",
-      "status": 200,
-      "campos": [
-        "keywords",
-        "paging",
-        "results",
-        "query_type"
-      ]
+      "status": 429,
+      "erro": "{\"status\":429,\"message\":\"local_rate_limited\"}\n"
     },
     {
       "rota": "/highlights/MLB/category/MLB1051",
@@ -110,7 +105,7 @@
     {
       "rota": "/products/MLB27727511/items?limit=1",
       "status": 403,
-      "erro": "{\"message\":\"At least one policy returned UNAUTHORIZED.\",\"status\":403,\"blocked_by\":\"PolicyAgent\",\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\"}\n"
+      "erro": "{\"blocked_by\":\"PolicyAgent\",\"status\":403,\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"message\":\"At least one policy returned UNAUTHORIZED.\"}\n"
     },
     {
       "rota": "/items/MLB6199322700",
@@ -119,18 +114,20 @@
     },
     {
       "rota": "/items?ids=MLB6199322700",
-      "status": 403,
-      "erro": "{\"message\":\"Resource deprecated - client no longer allowed to consume this resource\",\"error\":\"ResourceDeprecated\",\"status\":403}"
+      "status": 200,
+      "campos": [
+        "0"
+      ]
     },
     {
       "rota": "/items/MLB6199322700/sale_price",
       "status": 403,
-      "erro": "{\"status\":403,\"code\":\"access_denied\",\"error\":\"Access to the requested resource is forbidden\"}"
+      "erro": "{\"code\":\"access_denied\",\"error\":\"Access to the requested resource is forbidden\",\"status\":403}"
     },
     {
       "rota": "/items/MLB6199322700/prices",
       "status": 403,
-      "erro": "{\"error\":\"Access to the requested resource is forbidden\",\"status\":403,\"code\":\"access_denied\"}"
+      "erro": "{\"code\":\"access_denied\",\"error\":\"Access to the requested resource is forbidden\",\"status\":403}"
     }
   ]
 }
