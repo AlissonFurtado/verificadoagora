@@ -55,6 +55,23 @@ leitura antes de opinar sobre o futuro desta landing:
 Um guia ou comparativo por semana, sem esperar que resolva o mês. Decisão dele
 em 11/09/2026, depois da pesquisa.
 
+## 26/11/2026: 19 produtos novos (pisca-pisca e mais vendidos)
+
+- 🟢 **Ids 117 a 135**, pedido dele: 6 pisca-piscas/cascatas (Casa) e 13
+  dos mais vendidos do Meli (Redragon Zeus Lite, SanDisk Ultra 128 GB, Aiwa
+  EB-05, air fryer Philco PAF65A 127 V, batedeira Mondial B-44, ventilador
+  Arno VE2C, Kärcher Compacta, Elseve, Cetaphil 1 L, Galaxy A07, Moto G06,
+  Moto G37, Redmi Buds 6 Play). Soltos na grade, sem guia (escolha dele).
+  - **Decisão dele: pisca-pisca sem marca conhecida vale**, se o vendedor for
+    sério e com muita venda. Ficha de pisca vem do anúncio (não há
+    fabricante), e o texto diz isso.
+  - "De" não usado (desconto 0) onde parecia inflado: Laruno (249,90 por
+    57,90) e Moto G37 (2.099 por 899,10); e onde a página não mostrou "de".
+  - Redmi Buds: vendedor MBECOMMERCE, não a loja oficial. O texto avisa.
+- ⚠️ **Mais vendidos sem API:** `/mais-vendidos` no Chrome, links `/p/MLB…`.
+  Preço e vendedor da ficha `/p/{id}` (`.ui-pdp-price__second-line`,
+  `.ui-pdp-seller-summary__header`); a lista `/s` veio vazia para eles.
+
 ## 25/11/2026: robô bloqueado pelo Mercado Livre desde 23/11
 
 - 🔴 **O robô de preços e o garimpo estão parados há 3 dias** (último commit
