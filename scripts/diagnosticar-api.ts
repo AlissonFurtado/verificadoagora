@@ -26,7 +26,7 @@ async function testar(rota: string, accessToken: string): Promise<{ r: Resultado
     const corpo = await resposta.text();
     if (!resposta.ok) return { r: { rota, status: resposta.status, erro: corpo.slice(0, 200) }, json: null };
     const json = JSON.parse(corpo) as unknown;
-    const campos = json && typeof json === 'object' ? Object.keys(json).slice(0, 15) : [];
+    const campos = json && typeof json === 'object' ? Object.keys(json).slice(0, 40) : [];
     return { r: { rota, status: resposta.status, campos }, json };
   } catch (err) {
     return { r: { rota, status: 0, erro: String(err).slice(0, 200) }, json: null };
@@ -43,18 +43,24 @@ export async function diagnosticarApi(accessToken: string, meliId: string): Prom
     `/products/search?status=active&site_id=MLB&q=ar%20condicionado`,
     '/highlights/MLB/category/MLB1051',
   ];
-  let itemId = '';
+  // Um anúncio do LG 12k lido na página em 26/11, para testar /items/ mesmo
+  // quando o buy_box_winner vem nulo.
+  let itemId = 'MLB6199322700';
+  rotas.push(
+    `/products/${meliId}/items?limit=1`,
+    `/items/${itemId}`,
+    `/items?ids=${itemId}`,
+    `/items/${itemId}/sale_price`,
+    `/items/${itemId}/prices`,
+  );
   for (const rota of rotas) {
     const { r, json } = await testar(rota, accessToken);
     resultados.push(r);
     if (rota === `/products/${meliId}` && json && typeof json === 'object') {
       const vencedor = (json as Record<string, unknown>).buy_box_winner as Record<string, unknown> | undefined;
+      resultados.push({ rota: 'buy_box_winner', status: vencedor ? 1 : 0, campos: vencedor ? Object.keys(vencedor) : [] });
       if (typeof vencedor?.item_id === 'string') itemId = vencedor.item_id;
     }
-  }
-  if (itemId) {
-    resultados.push((await testar(`/items/${itemId}`, accessToken)).r);
-    resultados.push((await testar(`/items?ids=${itemId}`, accessToken)).r);
   }
 
   fs.writeFileSync(
