@@ -14,6 +14,7 @@ import fs from 'fs';
 import path from 'path';
 import { carregarEnv } from './env';
 import { obterAcesso } from './acesso';
+import { diagnosticarApi } from './diagnosticar-api';
 import { buscarProduto } from '../src/lib/meli';
 import type { Catalogo, Produto } from '../src/lib/produtos';
 import { registrarPreco, type Historico } from '../src/lib/historico';
@@ -267,7 +268,11 @@ async function main(): Promise<void> {
   for (const falha of relatorio.falhas) {
     console.log(`::warning::Não conferido: ${falha.nome} — ${falha.erro.slice(0, 160)}`);
   }
-  if (falhaGeral) process.exit(1);
+  if (falhaGeral) {
+    // Antes de parar, descobre quais rotas da API ainda respondem (26/11/2026).
+    await diagnosticarApi(accessToken, 'MLB27727511').catch((err) => console.error('[diagnóstico]', err));
+    process.exit(1);
+  }
 }
 
 main().catch((err) => {

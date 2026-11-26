@@ -91,6 +91,13 @@ em 11/09/2026, depois da pesquisa.
     dadas, "Publicação e sincronização" em Leitura. ⚠️ Lendo a página por JS,
     o botão diz "Selecione o tipo de acesso" no `aria-label` mesmo com valor
     escolhido: não conclua "sem acesso" por ele.
+  - 🔴 **Ler a página fora do navegador não dá:** `curl` em `/p/{id}` cai em
+    `/gz/account-verification` (anti-robô) até daqui. Do GitHub, igual.
+  - **Decisão dele em 26/11:** (1) o robô, quando a rodada inteira falha,
+    testa outras rotas e grava `data/diagnostico-api.json` na main
+    (`scripts/diagnosticar-api.ts`); **ler esse arquivo na próxima sessão** e
+    trocar a rota se alguma responder; (2) enquanto isso, conferência dos
+    116 pelo Chrome dele **só quando ele pedir**.
   - Plano B se o Meli não liberar: ler o preço pela página `/p/{id}/s`, como
     já fazemos à mão. Decisão dele.
 - Esta sessão (rotina das 8h de 25/11) não escreveu nem commitou nada no

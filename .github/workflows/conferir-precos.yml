@@ -56,6 +56,20 @@ jobs:
           rm .meli-refresh
           echo "Segredo ML_REFRESH_TOKEN atualizado."
 
+      # Só existe quando a rodada inteira falhou (26/11/2026: Meli com 403 em
+      # tudo). Vai pra main para ser lido sem login no GitHub.
+      - name: Guardar o diagnóstico da API
+        if: always() && hashFiles('diagnostico-api.json') != ''
+        run: |
+          git config user.name  "robô de preços"
+          git config user.email "contato@afdesousa.com.br"
+          mkdir -p data
+          mv diagnostico-api.json data/diagnostico-api.json
+          git add data/diagnostico-api.json
+          git commit -m "Diagnóstico da API do Meli de $(date +%d/%m/%Y)"
+          git pull --rebase --autostash origin main
+          git push origin main
+
       - name: Publicar o que mudou
         if: steps.conferir.outcome == 'success'
         env:
