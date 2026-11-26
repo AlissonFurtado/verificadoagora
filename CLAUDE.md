@@ -106,6 +106,17 @@ em 11/09/2026, depois da pesquisa.
     `/items?ids=` (este com "Resource deprecated - client no longer allowed
     to consume this resource"). **Não existe rota de preço que funcione.**
     O garimpo depende das mesmas rotas.
+  - 🟢 **Conferência pelo Chrome feita em 26/11** (escolha dele): 112 lidos
+    em `/p/{id}/s`, 62 preços mudaram, ponto de 26/11 no histórico.
+    Procedimento: laço `window.__ler` na aba do Meli (2 s entre pedidos,
+    ~6 min com a aba visível), saída compacta em fatias de ~980 caracteres,
+    e `npx tsx scripts/aplicar-conferencia.ts <lido.json> [--forcar=ids]
+    --aplicar`. Usa a 1ª oferta nacional (a buy box pode ser importada).
+    - Suspeitos aplicados após ver o vendedor: 7, 15, 25, 44, 51, 52, 56, 62,
+      78, 79, 95, 104, 105. **Mantidos no preço antigo:** GameSir (id 14: a
+      lista tem a loja oficial a 328,98 e a 259) e Myskin (id 69: só vendedor
+      sem loja oficial a 67,99).
+    - ⚠️ A lista `/s` **não vem em ordem de preço** depois da 1ª linha.
   - Plano B se o Meli não liberar: ler o preço pela página `/p/{id}/s`, como
     já fazemos à mão. Decisão dele.
 - Esta sessão (rotina das 8h de 25/11) não escreveu nem commitou nada no
