@@ -1,5 +1,5 @@
 {
-  "rodado_em": "2026-11-26T13:38:05.373Z",
+  "rodado_em": "2026-11-26T13:40:07.979Z",
   "meli_id": "MLB27727511",
   "resultados": [
     {
@@ -20,7 +20,21 @@
         "alternative_phone",
         "user_type",
         "tags",
-        "logo"
+        "logo",
+        "points",
+        "site_id",
+        "permalink",
+        "seller_experience",
+        "bill_data",
+        "seller_reputation",
+        "buyer_reputation",
+        "status",
+        "secure_email",
+        "company",
+        "credit",
+        "context",
+        "thumbnail",
+        "registration_identifiers"
       ]
     },
     {
@@ -41,13 +55,34 @@
         "pickers",
         "pictures",
         "description_pictures",
-        "main_features"
+        "main_features",
+        "disclaimers",
+        "attributes",
+        "short_description",
+        "parent_id",
+        "children_ids",
+        "settings",
+        "quality_type",
+        "release_info",
+        "enhanced_content",
+        "tags",
+        "date_created",
+        "authorized_stores",
+        "last_updated",
+        "grouper_id",
+        "experiments",
+        "decoration_partial_content"
       ]
+    },
+    {
+      "rota": "buy_box_winner",
+      "status": 0,
+      "campos": []
     },
     {
       "rota": "/products/MLB27727511/items",
       "status": 403,
-      "erro": "{\"blocked_by\":\"PolicyAgent\",\"message\":\"At least one policy returned UNAUTHORIZED.\",\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"status\":403}\n"
+      "erro": "{\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"blocked_by\":\"PolicyAgent\",\"message\":\"At least one policy returned UNAUTHORIZED.\",\"status\":403}\n"
     },
     {
       "rota": "/sites/MLB/search?product_id=MLB27727511",
@@ -71,6 +106,31 @@
         "query_data",
         "content"
       ]
+    },
+    {
+      "rota": "/products/MLB27727511/items?limit=1",
+      "status": 403,
+      "erro": "{\"message\":\"At least one policy returned UNAUTHORIZED.\",\"status\":403,\"blocked_by\":\"PolicyAgent\",\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\"}\n"
+    },
+    {
+      "rota": "/items/MLB6199322700",
+      "status": 403,
+      "erro": "{\"message\":\"Access to the requested resource is forbidden\",\"error\":\"access_denied\",\"status\":403,\"cause\":null}"
+    },
+    {
+      "rota": "/items?ids=MLB6199322700",
+      "status": 403,
+      "erro": "{\"message\":\"Resource deprecated - client no longer allowed to consume this resource\",\"error\":\"ResourceDeprecated\",\"status\":403}"
+    },
+    {
+      "rota": "/items/MLB6199322700/sale_price",
+      "status": 403,
+      "erro": "{\"status\":403,\"code\":\"access_denied\",\"error\":\"Access to the requested resource is forbidden\"}"
+    },
+    {
+      "rota": "/items/MLB6199322700/prices",
+      "status": 403,
+      "erro": "{\"error\":\"Access to the requested resource is forbidden\",\"status\":403,\"code\":\"access_denied\"}"
     }
   ]
 }
