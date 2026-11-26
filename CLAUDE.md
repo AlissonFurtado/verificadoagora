@@ -87,6 +87,10 @@ em 11/09/2026, depois da pesquisa.
     Aqui do mesmo bloqueio com token válido. **Leitura minha, não confirmada:**
     o Meli restringiu esse recurso a app certificado ou com permissão
     funcional. Sem token, daqui a API dá 403 também, então não testa nada.
+  - 🟢 **Permissões não são a causa** (print dele em 26/11): todas já estavam
+    dadas, "Publicação e sincronização" em Leitura. ⚠️ Lendo a página por JS,
+    o botão diz "Selecione o tipo de acesso" no `aria-label` mesmo com valor
+    escolhido: não conclua "sem acesso" por ele.
   - Plano B se o Meli não liberar: ler o preço pela página `/p/{id}/s`, como
     já fazemos à mão. Decisão dele.
 - Esta sessão (rotina das 8h de 25/11) não escreveu nem commitou nada no
