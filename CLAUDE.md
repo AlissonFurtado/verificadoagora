@@ -98,6 +98,14 @@ em 11/09/2026, depois da pesquisa.
     (`scripts/diagnosticar-api.ts`); **ler esse arquivo na próxima sessão** e
     trocar a rota se alguma responder; (2) enquanto isso, conferência dos
     116 pelo Chrome dele **só quando ele pedir**.
+  - 🔴 **Diagnóstico de 26/11 (2 rodadas manuais): o Meli fechou o preço de
+    anúncio de terceiros para o nosso app.** Respondem 200: `/users/me`,
+    `/products/{id}` (com `buy_box_winner` nulo, sem preço), `/products/search`
+    e `/highlights`. Dão 403: `/products/{id}/items`, `/sites/MLB/search`,
+    `/items/{id}`, `/items/{id}/sale_price`, `/items/{id}/prices` e
+    `/items?ids=` (este com "Resource deprecated - client no longer allowed
+    to consume this resource"). **Não existe rota de preço que funcione.**
+    O garimpo depende das mesmas rotas.
   - Plano B se o Meli não liberar: ler o preço pela página `/p/{id}/s`, como
     já fazemos à mão. Decisão dele.
 - Esta sessão (rotina das 8h de 25/11) não escreveu nem commitou nada no
