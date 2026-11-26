@@ -1,0 +1,76 @@
+{
+  "rodado_em": "2026-11-26T13:38:05.373Z",
+  "meli_id": "MLB27727511",
+  "resultados": [
+    {
+      "rota": "/users/me",
+      "status": 200,
+      "campos": [
+        "id",
+        "nickname",
+        "registration_date",
+        "first_name",
+        "last_name",
+        "gender",
+        "country_id",
+        "email",
+        "identification",
+        "address",
+        "phone",
+        "alternative_phone",
+        "user_type",
+        "tags",
+        "logo"
+      ]
+    },
+    {
+      "rota": "/products/MLB27727511",
+      "status": 200,
+      "campos": [
+        "id",
+        "catalog_product_id",
+        "status",
+        "pdp_types",
+        "domain_id",
+        "permalink",
+        "sanitized_title",
+        "name",
+        "family_name",
+        "type",
+        "buy_box_winner",
+        "pickers",
+        "pictures",
+        "description_pictures",
+        "main_features"
+      ]
+    },
+    {
+      "rota": "/products/MLB27727511/items",
+      "status": 403,
+      "erro": "{\"blocked_by\":\"PolicyAgent\",\"message\":\"At least one policy returned UNAUTHORIZED.\",\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"status\":403}\n"
+    },
+    {
+      "rota": "/sites/MLB/search?product_id=MLB27727511",
+      "status": 403,
+      "erro": "{\"message\":\"forbidden\",\"error\":\"forbidden\",\"status\":403,\"cause\":[]}"
+    },
+    {
+      "rota": "/products/search?status=active&site_id=MLB&q=ar%20condicionado",
+      "status": 200,
+      "campos": [
+        "keywords",
+        "paging",
+        "results",
+        "query_type"
+      ]
+    },
+    {
+      "rota": "/highlights/MLB/category/MLB1051",
+      "status": 200,
+      "campos": [
+        "query_data",
+        "content"
+      ]
+    }
+  ]
+}
