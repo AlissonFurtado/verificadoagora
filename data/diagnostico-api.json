@@ -1,5 +1,5 @@
 {
-  "rodado_em": "2026-11-26T19:57:01.098Z",
+  "rodado_em": "2026-11-27T19:45:49.367Z",
   "meli_id": "MLB27727511",
   "resultados": [
     {
@@ -82,7 +82,7 @@
     {
       "rota": "/products/MLB27727511/items",
       "status": 403,
-      "erro": "{\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"status\":403,\"blocked_by\":\"PolicyAgent\",\"message\":\"At least one policy returned UNAUTHORIZED.\"}\n"
+      "erro": "{\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"message\":\"At least one policy returned UNAUTHORIZED.\",\"blocked_by\":\"PolicyAgent\",\"status\":403}\n"
     },
     {
       "rota": "/sites/MLB/search?product_id=MLB27727511",
@@ -91,8 +91,13 @@
     },
     {
       "rota": "/products/search?status=active&site_id=MLB&q=ar%20condicionado",
-      "status": 429,
-      "erro": "{\"status\":429,\"message\":\"local_rate_limited\"}\n"
+      "status": 200,
+      "campos": [
+        "keywords",
+        "paging",
+        "results",
+        "query_type"
+      ]
     },
     {
       "rota": "/highlights/MLB/category/MLB1051",
@@ -105,7 +110,7 @@
     {
       "rota": "/products/MLB27727511/items?limit=1",
       "status": 403,
-      "erro": "{\"blocked_by\":\"PolicyAgent\",\"status\":403,\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\",\"message\":\"At least one policy returned UNAUTHORIZED.\"}\n"
+      "erro": "{\"message\":\"At least one policy returned UNAUTHORIZED.\",\"blocked_by\":\"PolicyAgent\",\"status\":403,\"code\":\"PA_UNAUTHORIZED_RESULT_FROM_POLICIES\"}\n"
     },
     {
       "rota": "/items/MLB6199322700",
@@ -122,7 +127,7 @@
     {
       "rota": "/items/MLB6199322700/sale_price",
       "status": 403,
-      "erro": "{\"code\":\"access_denied\",\"error\":\"Access to the requested resource is forbidden\",\"status\":403}"
+      "erro": "{\"status\":403,\"error\":\"Access to the requested resource is forbidden\",\"code\":\"access_denied\"}"
     },
     {
       "rota": "/items/MLB6199322700/prices",
